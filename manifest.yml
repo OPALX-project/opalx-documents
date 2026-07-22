@@ -1,0 +1,26 @@
+schema-version: 1
+assets:
+  - title: OPALX overview
+    date: "2026-04-06"
+    category: presentations/features
+    source: Manual/sections/appendices/developer-build/opalx-overview.pdf
+    destination: presentations/2026/features/2026-04-06-opalx-overview.pdf
+    description: Introductory overview of the OPALX project.
+    status: current
+    sha256: 6b48c340207c7d59efa232b5d01472ccf8ed9e71f39da43109bcc86682515013
+  - title: OpalElement layout proposal
+    date: "2026-04-30"
+    category: reports/design
+    source: PhysicsManual/etc/Proposal-Jon-OpalElementLayout.pdf
+    destination: reports/2026/design/2026-04-30-opal-element-layout-proposal.pdf
+    description: Design proposal for the OPALX element layout.
+    status: experimental
+    sha256: cde7ee429c168bee3d2a2945bdf8591007b3767a7973569ba105f56dc275cc5b
+  - title: Gamma-gamma benchmark reference data
+    date: "2026-04-25"
+    category: datasets/gamma-gamma
+    source: PhysicsManual/sections/gamma-gamma/figures/reference-data/*.csv
+    destination: datasets/2026/gamma-gamma/2026-04-25-gamma-gamma-reference-data.tar.gz
+    description: OPALX and CAIN histogram data used by the linear Compton benchmark figures.
+    status: experimental
+    sha256: 3c3384444ffe7cceffb8e7b680205bd4aeef4da368749e80260e59cef692b837
