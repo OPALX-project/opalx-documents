@@ -1,5 +1,13 @@
 schema-version: 1
 assets:
+  - title: A CUDA Extended-Lambda Linkage Bug
+    date: "2026-07-14"
+    category: reports/bugs
+    source: main.pdf
+    destination: reports/2026/bugs/2026-07-14-cuda-extended-lambda-linkage-bug.pdf
+    description: Investigation of an NVCC linkage bug affecting Kokkos extended lambdas instantiated across multiple CUDA translation units.
+    status: current
+    sha256: 1e85cca94d85f999f5162a06aa8b4b2bbb47fd582f358ff21b3841a246c73eea
   - title: OPALX overview
     date: "2026-04-06"
     category: presentations/features
