@@ -1,5 +1,21 @@
 schema-version: 1
 assets:
+  - title: OPALX space-charge class diagram
+    date: "2026-09-07"
+    category: reports/design
+    source: 2026.09.07 Class Diagram Solver Refactor/SpaceCharge Dir Class Diagram.pdf
+    destination: reports/2026/design/2026-09-07-opalx-space-charge-class-diagram.pdf
+    description: Class ownership and dependency diagram for space-charge setup, runtime dispatch, CartesianPIC3D, Poisson adapters, and FFT2D5.
+    status: current
+    sha256: 6c530bf2a74f8837b15f16d6b7bd1f90f472b95d98cc0da412a9a3d568db4f3c
+  - title: OPALX space-charge solver flow
+    date: "2026-09-07"
+    category: reports/design
+    source: 2026.09.07 Class Diagram Solver Refactor/SpaceCharge Program Flow Diagram.pdf
+    destination: reports/2026/design/2026-09-07-opalx-space-charge-solver-flow.pdf
+    description: Per-call execution flow for runtime dispatch through CartesianPIC3D and FFT2D5 space-charge algorithms.
+    status: current
+    sha256: 4fb74ec42d9f2a516ccf4a329e11ad2ad87f2919413e9e4dea3be757dd7355cc
   - title: A CUDA Extended-Lambda Linkage Bug
     date: "2026-07-14"
     category: reports/bugs
