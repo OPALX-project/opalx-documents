@@ -1,5 +1,13 @@
 schema-version: 1
 assets:
+  - title: BeamBeam experiments 1–4 — runnable inputs and scripts
+    date: "2026-10-06"
+    category: examples/beam-beam
+    source: OPALX sandbox experiments 1–4 and shared scripts at 492bd6c08, including local study files identified by the bundled SHA-256 manifest
+    destination: examples/2026/beam-beam/2026-10-06-beam-beam-experiments.tar.gz
+    description: Source-only bundle preserving the shared launcher and cross-experiment helpers; excludes generated results, plots, caches, binaries and Python environments.
+    status: experimental
+    sha256: 34317cc36b2635dfacb325c6ce6fdb7da5231525da510ed07741b174b58bf9b3
   - title: OPALX space-charge class diagram
     date: "2026-09-07"
     category: reports/design
