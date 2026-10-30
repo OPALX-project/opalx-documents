@@ -1,5 +1,13 @@
 schema-version: 1
 assets:
+  - title: Physics Manual chapters 28–35 — recovered sandbox Python scripts
+    date: "2026-10-30"
+    category: examples/physics-audit
+    source: old-opal/opalx sandbox map-2, map-3, cyclotron and DBA-ring studies; exact file hashes in bundled SOURCE-MANIFEST.json
+    destination: examples/2026/physics-audit/2026-10-30-physics-manual-sandbox-python.tar.gz
+    description: 42 unchanged Python scripts and helpers with original directory layout and per-file SHA-256 provenance; no recovered script executed or tested. Inputs, results and executables are excluded.
+    status: experimental
+    sha256: 3a7453f45f203cd849b04f848ad0a06290a0426abbda4bf95f7a9aeaa2705a98
   - title: BeamBeam experiments 1–4 — runnable inputs and scripts
     date: "2026-10-06"
     category: examples/beam-beam
