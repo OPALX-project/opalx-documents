@@ -1,0 +1,3 @@
+Initial compile: MDRange signed bounds required explicit casts; corrected.
+Grid-change unit test exposed existing OPALX initialiser using Field::initialize (one-shot) after mesh dimensions changed. Fixed with existing updateLayout API, no IPPL edits. Green spectrum extents test9vs11 identified failure.
+--help intercepted by IPPL before OPALX; map help aliases to existing -help before initialization so OPALX prints its own full help.

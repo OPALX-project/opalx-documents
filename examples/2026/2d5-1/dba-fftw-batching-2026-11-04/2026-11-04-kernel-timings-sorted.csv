@@ -1,0 +1,139 @@
+name,count,inclusive_s,exclusive_s,max_s
+for:rotateBunchTo,43300,1.7698866730000058,1.7698866730000058,0.000124709
+for:transformBunchTo,14600,0.624012430000009,0.624012430000009,0.000105167
+for:FFT2D5Batch::pack,6400,0.500627508,0.500627508,0.000226958
+for:FFT2D5::prepareParticleProjections,100,0.3934435819999999,0.3934435819999999,0.0051579169999999
+for:FFT2D5Batch::field,6400,0.2409264259999999,0.2409264259999999,8.1375e-05
+for:Boris::spatialCandidates,100,0.225302663,0.225302663,0.00235775
+for:FFT2D5Batch::applyGreen,6400,0.1740921999999995,0.1740921999999995,6.8417e-05
+reduce:computeMoments,601,0.137713577,0.137713577,0.0003103329999999
+for:Kokkos::ViewFill-1D,417,0.1214229149999998,0.1214229149999998,0.0006861249999999
+for:SBend::apply,1200,0.111574797,0.111574797,0.0001415
+for:Solve2d5::scatterToGrid::scatter,100,0.1083642529999999,0.1083642529999999,0.001319833
+for:Solver2d5::GatherFromGrid,100,0.0714285449999999,0.0714285449999999,0.000794916
+for:Solve2d5::solvePoissons::occupancy,100,0.040930008,0.040930008,0.000619084
+reduce:calc moments of particle distr.,660,0.040352656,0.040352656,9.75e-05
+reduce:computeMeans,601,0.0251711749999999,0.0251711749999999,6.5041e-05
+for:Solve2d5::scatterToGrid::scale,100,0.018928421,0.018928421,0.000336583
+for:ParticleAttrib::operator=(),602,0.015504254,0.015504254,5.4584e-05
+for:Multipole::apply(),600,0.0143102079999999,0.0143102079999999,5.775e-05
+reduce:computeMinMaxPosition,301,0.013636997,0.013636997,7.775e-05
+for:kickParticles,100,0.01245096,0.01245096,0.000162416
+for:pushParticles,200,0.008794457,0.008794457,5.4625e-05
+for:Kokkos::Impl::hostspace_parallel_zeromemset,114,0.0081515379999999,0.0081515379999999,0.000904625
+reduce:rel min,330,0.0081457399999999,0.0081457399999999,3.775e-05
+reduce:rel max,330,0.008126757,0.008126757,3.8041e-05
+for:ParticleContainer::switchOffUnitlessPositions,200,0.0066802069999999,0.0066802069999999,6.0792e-05
+for:ParticleContainer::switchToUnitlessPositions,200,0.006661541,0.006661541,4.6875e-05
+reduce:ParticleContainer::markParticlesOutside,100,0.003038166,0.003038166,3.2958e-05
+for:Kokkos::View::initialization [],4,0.0023663739999999,0.0023663739999999,0.0023277079999999
+for:FFT2D5::preparePathGeometry,100,0.002242801,0.002242801,3.1208e-05
+for:ParticleContainer::unscaleDtByCharge(single),100,0.001998916,0.001998916,2.5333e-05
+for:Solve2d5::solvePoissons::ghostClosed,100,0.001957832,0.001957832,3.9625e-05
+for:Solve2d5::scatterToGrid::boundaries,100,0.0018637899999999,0.0018637899999999,4.7208e-05
+for:ParticleContainer::scaleDtByCharge(single),100,0.001814164,0.001814164,2.5625e-05
+for:FFT2D5Batch::green,100,0.001569416,0.001569416,3.675e-05
+fence:Kokkos::fence: Unnamed Global Fence,35687,0.0010979520000001,0.0010979520000001,3.5e-06
+for:Kokkos::View::initialization [ParticleAttrib::dview],4,0.000871833,0.000871833,0.0002282499999999
+fence:Kokkos::create_mirror_view_and_copy: fence before returning src view,37662,0.000787741,0.000787741,4.792e-06
+copy: <- Scalar,300,0.1267298399999999,0.0006484279999999,0.0006900419999999
+for:Kokkos::View::initialization [ParticleAttrib::dview_mirror],2,0.000445416,0.000445416,0.000238333
+for:Kokkos::ViewCopy-1D,38,0.000401498,0.000401498,1.7e-05
+copy:FFT2D5SolveReferencePath <- FFT2D5ReferencePath,101,0.000247827,0.000242446,3.209e-06
+copy:ParticleContainer::MView_m <- Scalar,103,0.0011408699999999,0.000164741,1.4708e-05
+for:GenerateGreensFunction,1,0.000144542,0.000144542,0.000144542
+for:Kokkos::Impl::host_space_deepcopy_double,5,0.0001281659999999,0.0001281659999999,4.075e-05
+copy:Scalar <- ParticleContainer::QView_m,230,0.000137378,0.0001266709999999,1.333e-06
+for:Kokkos::View::destruction [],13,0.000124,0.000124,1.1625e-05
+copy:Scalar <- ParticleContainer::MView_m,103,0.00012721,0.00012237,4.292e-06
+for:FFT_fromTemp,6,0.000105584,0.000105584,2.2834e-05
+for:Kokkos::View::initialization [local domains (device)],10,9.866799999999998e-05,9.866799999999998e-05,1.3042e-05
+copy:FFT2D5LineDensity <- Scalar,100,0.0001029969999999,9.766e-05,1.459e-06
+for:FFT_toTemp,6,9.4249e-05,9.4249e-05,1.775e-05
+copy:ParticleContainer::QView_m <- Scalar,103,0.001059792,6.900299999999996e-05,1.6667e-05
+for:ParticleContainer::createParticles::initializeNewSlots,1,5.6375e-05,5.6375e-05,5.6375e-05
+copy:FFT2D5BatchSlices <- FFT2D5BatchSlices,100,6.424799999999994e-05,5.624700000000002e-05,9.170000000000001e-07
+for:Kokkos::View::initialization [FFT2D5ProjectedPositions],1,5.425e-05,5.425e-05,5.425e-05
+"fence:Kokkos::parallel_reduce: fence due to result being value, not view",1662,5.271399999999954e-05,5.271399999999954e-05,2.5000000000000004e-07
+"fence:Kokkos::deep_copy: scalar copy, post copy fence",943,4.856099999999981e-05,4.856099999999981e-05,2.09e-07
+for:Kokkos::ViewCopy-2D,4,4.4916e-05,4.4916e-05,1.3666e-05
+copy:FFT2D5OccupiedSlices <- Scalar,100,4.8254e-05,4.312900000000002e-05,8.750000000000001e-07
+for:Kokkos::View::destruction [ParticleAttrib::dview],4,3.7708e-05,3.7708e-05,1.1292e-05
+copy:FFT2D5LineDensityGradient <- Scalar,100,4.0788e-05,3.6238000000000015e-05,7.5e-07
+fence:Kokkos::parallel_reduce: fence after copying values back,1562,3.1971999999999985e-05,3.1971999999999985e-05,1.67e-07
+fence:Kokkos::parallel_reduce: fence,1261,3.121300000000001e-05,3.121300000000001e-05,2.08e-07
+for:Kokkos::View::initialization [FFT2D5BatchSpectrum],1,3.0958e-05,3.0958e-05,3.0958e-05
+fence:Timer Fence (stop),953,2.7247000000000032e-05,2.7247000000000032e-05,2.5000000000000004e-07
+fence:Timer Fence (start),939,2.3993000000000033e-05,2.3993000000000033e-05,1.2500000000000002e-07
+"for:ParticleBase<...>::create(size_t,bool)",1,2.3833e-05,2.3833e-05,2.3833e-05
+"fence:Kokkos::deep_copy: scalar copy, pre copy fence",943,2.3827000000000048e-05,2.3827000000000048e-05,1.67e-07
+for:Kokkos::View::initialization [Ring::fieldDescriptors],1,2.1583e-05,2.1583e-05,2.1583e-05
+for:Kokkos::View::destruction [ParticleAttrib::dview_mirror],2,1.8958e-05,1.8958e-05,1.0375e-05
+for:Kokkos::View::destruction [local regions (device)],2,1.8833e-05,1.8833e-05,9.708e-06
+for:Kokkos::View::initialization [local regions (device)],2,1.8584e-05,1.8584e-05,1.0084e-05
+for:Kokkos::View::initialization [FFT2D5ReferencePath],1,1.8458e-05,1.8458e-05,1.8458e-05
+copy:Multipole::Normal <- Scalar,38,0.0001330849999999,1.7215e-05,1.2084e-05
+for:Kokkos::View::destruction [Ring::fieldDescriptors],1,1.6542e-05,1.6542e-05,1.6542e-05
+for:Kokkos::View::initialization [FFT2D5BatchGreen],1,1.175e-05,1.175e-05,1.175e-05
+for:Kokkos::View::initialization [FFT2D5OccupiedSlices] via memset,100,1.1745e-05,1.1745e-05,2.91e-07
+for:Kokkos::View::initialization [fft_rc_complex],1,1.1708e-05,1.1708e-05,1.1708e-05
+for:Kokkos::View::destruction [FFT2D5ProjectedPositions],1,1.1083e-05,1.1083e-05,1.1083e-05
+fence:Kokkos::HostSpace::impl_deallocate before free,395,1.0839000000000026e-05,1.0839000000000026e-05,2.5000000000000004e-07
+for:Kokkos::View::destruction [FFT2D5SolveReferencePath],1,1.075e-05,1.075e-05,1.075e-05
+"fence:Kokkos::deep_copy: copy between contiguous views, fence due to same spans",199,1.0669000000000007e-05,1.0669000000000007e-05,2.08e-07
+for:Kokkos::View::initialization [FFT2D5SolveReferencePath],1,9.625e-06,9.625e-06,9.625e-06
+"fence:Kokkos::deep_copy: copy into scalar, pre copy fence",373,9.284000000000015e-06,9.284000000000015e-06,8.4e-08
+for:Kokkos::View::destruction [FFT2D5ReferencePath],1,8.708e-06,8.708e-06,8.708e-06
+fence:Kokkos::View::initialization via memset,391,8.665000000000008e-06,8.665000000000008e-06,1.67e-07
+"fence:Kokkos::deep_copy: copy into scalar, post copy fence",373,8.552000000000006e-06,8.552000000000006e-06,1.2500000000000002e-07
+copy:Multipole::Skew <- Scalar,38,9.501e-06,7.708999999999999e-06,5.420000000000001e-07
+for:Kokkos::View::initialization [ParticleAttrib::dview] via memset,5,0.0002415429999999,7.5440000000000094e-06,9.1167e-05
+copy:Scalar <- Multipole::Normal,28,8.915999999999999e-06,7.335e-06,1.625e-06
+copy:ParticleAttrib::dview <- ParticleAttrib::dview_mirror,5,0.000135167,6.709000000000005e-06,4.2542e-05
+copy:Multipole::NormalErr <- Scalar,30,8.421000000000001e-06,6.667e-06,4.58e-07
+copy: <- ,13,5.916e-06,5.500000000000001e-06,1.667e-06
+copy:Multipole::SkewErr <- Scalar,30,6.833000000000001e-06,5.458e-06,3.3300000000000003e-07
+copy:SBend::normal <- SBend::normal,27,5.169000000000002e-06,4.584000000000001e-06,3.75e-07
+for:Kokkos::View::initialization [Boris::activeElements] via memset,100,4.3350000000000025e-06,4.3350000000000025e-06,1.67e-07
+"fence:Kokkos::deep_copy: copy between contiguous views, post deep copy fence",160,4.172000000000005e-06,4.172000000000005e-06,8.3e-08
+"fence:Kokkos::deep_copy: copy between contiguous views, pre view equality check",160,4.1660000000000055e-06,4.1660000000000055e-06,1.2500000000000002e-07
+for:Kokkos::View::initialization [] via memset,18,0.000937502,3.459999999999911e-06,0.0009055419999999
+fence:Kokkos::resize(View),42,3.4540000000000007e-06,3.4540000000000007e-06,3.34e-07
+copy:SBend::skew <- SBend::skew,27,3.790000000000001e-06,3.0829999999999995e-06,1.67e-07
+copy:Scalar <- Multipole::Skew,12,3.293e-06,2.585e-06,2.92e-07
+copy:local domains (device) <- local domains (device),5,2.75e-06,2.5839999999999997e-06,8.750000000000001e-07
+copy:efm::Tanh::lambdaPower <- efm::Tanh::lambdaPower,19,3.165e-06,2.579999999999999e-06,3.75e-07
+copy:Multipole::Normal <- Multipole::Normal,12,3.085e-06,2.459e-06,3.75e-07
+copy:Multipole::Skew <- Multipole::Skew,12,2.917e-06,2.3330000000000004e-06,3.34e-07
+copy:Multipole::SkewErr <- Multipole::SkewErr,12,2.792e-06,2.2100000000000004e-06,2.92e-07
+for:Kokkos::View::initialization [ParticleAttrib::dview_mirror] via memset,3,0.000193375,2.167999999999997e-06,8.7125e-05
+copy:Multipole::NormalErr <- Multipole::NormalErr,12,2.8319999999999997e-06,2.166e-06,2.91e-07
+copy:FFT2D5ProjectedSegments <- Scalar,1,1.5584e-05,1.7919999999999974e-06,1.5584e-05
+copy:ParticleAttrib::dview <- ParticleAttrib::dview,4,1.833e-06,1.75e-06,7.09e-07
+for:Kokkos::View::initialization [FFT2D5BatchReal] via memset,1,3.6333e-05,9.990000000000018e-07,3.6333e-05
+for:Kokkos::View::initialization [Multipole::Normal] via memset,27,9.550000000000002e-07,9.550000000000002e-07,1.2500000000000002e-07
+for:Kokkos::View::initialization [Multipole::SkewErr] via memset,27,9.189999999999998e-07,9.189999999999998e-07,8.4e-08
+for:Kokkos::View::initialization [efm::Tanh::lambdaPower] via memset,19,8.739999999999999e-07,8.739999999999999e-07,1.2500000000000002e-07
+for:Kokkos::View::initialization [FFT2D5SegmentBounds] via memset,1,1.675e-05,8.330000000000004e-07,1.675e-05
+for:Kokkos::View::initialization [Multipole::Skew] via memset,27,7.939999999999999e-07,7.939999999999999e-07,1.66e-07
+for:Kokkos::View::initialization [Multipole::NormalErr] via memset,27,7.479999999999999e-07,7.479999999999999e-07,8.3e-08
+copy:FFT2D5ReferencePath <- FFT2D5ReferencePath,1,7.5e-07,6.67e-07,7.5e-07
+copy:Ring::fieldDescriptors <- Ring::fieldDescriptors,1,7.08e-07,6.660000000000002e-07,7.08e-07
+for:Kokkos::View::initialization [SBend::skew] via memset,27,6.660000000000001e-07,6.660000000000001e-07,4.2e-08
+for:Kokkos::View::initialization [SBend::normal] via memset,27,6.61e-07,6.61e-07,4.2e-08
+fence:Kokkos::View::initialization,19,6.240000000000001e-07,6.240000000000001e-07,8.3e-08
+copy:RBend::normal <- RBend::normal,3,7.08e-07,5.82e-07,3.34e-07
+copy:local regions (device) <- local regions (device),1,5.420000000000001e-07,5.009999999999999e-07,5.420000000000001e-07
+for:Kokkos::View::initialization [FFT2D5SegmentGeometry] via memset,1,5.000000000000001e-07,5.000000000000001e-07,5.000000000000001e-07
+fence:Kokkos::View::destruction before deallocate,25,5.000000000000001e-07,5.000000000000001e-07,4.2e-08
+for:Kokkos::View::initialization [FFT2D5ProjectedSegments] via memset,1,2.3458e-05,4.580000000000014e-07,2.3458e-05
+copy:RBend::skew <- RBend::skew,3,4.58e-07,4.1700000000000004e-07,1.67e-07
+for:Kokkos::View::initialization [fft_rc_real] via memset,1,1.5833e-05,4.1599999999999737e-07,1.5833e-05
+copy:ParticleContainer::QView_m <- ParticleContainer::QView_m,1,2.5000000000000004e-07,2.5000000000000004e-07,2.5000000000000004e-07
+for:Kokkos::View::initialization [FFT2D5BatchSlices] via memset,1,2.09e-07,2.09e-07,2.09e-07
+for:Kokkos::View::initialization [RBend::normal] via memset,3,1.67e-07,1.67e-07,8.4e-08
+for:Kokkos::View::initialization [FFT2D5LineDensity] via memset,1,1.2500000000000002e-07,1.2500000000000002e-07,1.2500000000000002e-07
+for:Kokkos::View::initialization [RBend::skew] via memset,3,8.4e-08,8.4e-08,4.2e-08
+for:Kokkos::View::initialization [FFT2D5LineDensityGradient] via memset,1,8.3e-08,8.3e-08,8.3e-08
+for:Kokkos::View::initialization [ParticleContainer::MView_m] via memset,1,0.0,0.0,0.0
+for:Kokkos::View::initialization [ParticleContainer::QView_m] via memset,1,0.0,0.0,0.0

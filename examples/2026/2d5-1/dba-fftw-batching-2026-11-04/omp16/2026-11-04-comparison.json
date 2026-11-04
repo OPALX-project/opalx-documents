@@ -1,0 +1,82 @@
+{
+  "build": {
+    "head": "a1ad007c8f3a761c39827ea0e06f19feefcc8f74",
+    "binary_sha256": "4d627521ac4f33e2ba54d7e5b605a5fc536a41673b69c58fc28e3b04cb17e1ec",
+    "source_diff_sha256": "f049d6ae288487c2e8874da79a3e7e23dbc46045ab87f9acdeef5292d77167b2",
+    "preserved_serial_sha256": "d2c0add433c40f47557d354323093f1d3949835defff5945bcb7337e7223f4d1",
+    "build_type": "Release",
+    "fftw": true,
+    "omp": true,
+    "default_batch_size": 0,
+    "cli": "--2D5BatchSize <positive integer>",
+    "ippl_source_changes": false
+  },
+  "baseline": {
+    "case": "batch-0-1",
+    "argv": [
+      "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "case.in",
+      "--restart",
+      "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility/initial-state.h5",
+      "--info",
+      "1"
+    ],
+    "batch_size": 0,
+    "repeat": 1,
+    "profile": false,
+    "binary_sha256": "4d627521ac4f33e2ba54d7e5b605a5fc536a41673b69c58fc28e3b04cb17e1ec",
+    "source_head": "a1ad007c8f3a761c39827ea0e06f19feefcc8f74",
+    "source_diff_sha256": "f049d6ae288487c2e8874da79a3e7e23dbc46045ab87f9acdeef5292d77167b2",
+    "input_sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38",
+    "initial_state_sha256": "4d6adf38da35d9168f9cdb10847786eb1ea64d27e13e521211173901037e19f5",
+    "mpi_ranks": 1,
+    "omp_threads": 4,
+    "steps": 100,
+    "dt_s": 3e-12,
+    "charge_C": 5.602212333965894e-09,
+    "particles": 100000,
+    "mesh": [
+      64,
+      64,
+      512
+    ],
+    "scope": "100step timing/numerical comparison only; no16turnrun",
+    "returncode": 0,
+    "completed": true,
+    "elapsed_seconds": 21.376163583016023
+  },
+  "reference_sc_kick_scale": 5.3798220478288516e-08,
+  "rows": [
+    {
+      "case": "batch-8-1",
+      "omp_threads": 16,
+      "batch_size": 8,
+      "repeat": 1,
+      "profile": false,
+      "wall_s": 12.358669832989108,
+      "steady_s_per_step": 0.1055316,
+      "speedup": 1.7296492156426446,
+      "max_lab_position_difference_m": 4.1361608827832356e-13,
+      "max_lab_momentum_difference_betagamma": 1.4465226650779258e-12,
+      "momentum_difference_percent_sc_kick": 0.002688792774589455,
+      "charge_C": 5.602212333965893e-09,
+      "particles": 100000
+    },
+    {
+      "case": "batch-8-2",
+      "omp_threads": 16,
+      "batch_size": 8,
+      "repeat": 2,
+      "profile": false,
+      "wall_s": 12.404903625021689,
+      "steady_s_per_step": 0.1058584,
+      "speedup": 1.7232027131511591,
+      "max_lab_position_difference_m": 3.475342290149579e-13,
+      "max_lab_momentum_difference_betagamma": 1.0931704798553211e-12,
+      "momentum_difference_percent_sc_kick": 0.002031982601165209,
+      "charge_C": 5.602212333965893e-09,
+      "particles": 100000
+    }
+  ],
+  "qa": "All100kIDs/charge/finitearrays,100steps300ps/globalstep99; endpointbounds1e-9m,1e-10beta-gamma,0.1%SCkick;statbound1e-8relative. No physics tolerance changed."
+}
