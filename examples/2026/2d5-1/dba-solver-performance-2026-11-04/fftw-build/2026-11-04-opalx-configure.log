@@ -1,0 +1,152 @@
+-- 🔧 OPALX unit tests: ON
+-- [36mℹ️  Host-only backend (SERIAL/OPENMP) - OPALX_DEVICE_COMPILATION not defined[m
+-- 🔧 HIP profiler (OPALX_ENABLE_HIP_PROFILER): OFF
+-- [32m✅ Kokkos math constants enabled (OPALX_USE_KOKKOS_MATH_CONSTANTS)[m
+-- 📦 Configuring OPALX Version: 1.0 : "OPALX v1.0.0"
+-- [32m🔧 OPALX will be built as a STATIC library[m
+-- [32mBuild type is: Release[m
+-- ✅ Project setup complete
+-- 🔧 OPALX_USE_STANDARD_FOLDERS=OFF: using CMake default output directories
+-- [32m✅ gen_OPALXrevision completed successfully.[m
+-- ✅ Compiler options configured
+-- Checking if build type is 'Coverage'
+-- Checking if build type is 'Coverage': 0
+-- Build Index-64 API as extended API with _64 suffix: OFF
+-- Build tests: OFF
+-- Build deprecated routines: OFF
+-- Build single precision real: OFF
+-- Build double precision real: ON
+-- Build single precision complex: OFF
+-- Build double precision complex: OFF
+-- Using supplied NETLIB BLAS implementation
+-- Reducing RELEASE optimization level to O2
+-- Using supplied NETLIB LAPACK implementation
+-- Reducing RELEASE optimization level to O2
+-- Looking for Fortran NONE - found
+-- Looking for Fortran INT_CPU_TIME - found
+-- Looking for Fortran EXT_ETIME - not found
+-- Looking for Fortran EXT_ETIME_ - not found
+-- Looking for Fortran INT_ETIME - found
+-- --> Will use second_INT_ETIME.f and dsecnd_INT_ETIME.f as timing function.
+-- LAPACKE enabled
+-- Build LAPACKE single precision real: OFF
+-- Build LAPACKE double precision real: ON
+-- Build LAPACKE single precision complex: OFF
+-- Build LAPACKE double precision complex: OFF
+-- Build html documentation: OFF
+-- Build man documentation: OFF
+-- Found MPI: TRUE (found version "3.1") found components: CXX
+-- [32m✅ MPI found 3.1[m
+-- Found OpenMP_C: -fopenmp=libomp
+-- Found OpenMP_CXX: -fopenmp=libomp
+-- Found OpenMP_Fortran: -fopenmp (found version "4.5")
+-- Found OpenMP: TRUE (found version "4.5")
+-- [32m✅ OpenMP platform requested OpenMP found [m
+-- Fetching IPPL ref: d6216553e39dcf4405849c027517cc3401fefee5
+-- IPPL shallow fetch: FALSE
+-- 📦 Configuring IPPL Version: 3.4 : "IPPL v3.4.0"
+-- [32m🔧IPPL will be built as a STATIC library[m
+-- [32mBuild type is: Release[m
+-- ✅ Project setup complete
+-- ✅ Compiler options configured
+-- [32m✅ MPI found 3.1[m
+-- Found OpenMP_C: -fopenmp=libomp
+-- Found OpenMP_CXX: -fopenmp=libomp
+-- Found OpenMP_Fortran: -fopenmp (found version "4.5")
+-- [32m✅ OpenMP platform requested OpenMP found [m
+-- [32m✅ Kokkos 5.2.0 building from source[m
+-- IPPL_PLATFORM set: Kokkos_ENABLE_SERIAL 'OFF'
+-- IPPL_PLATFORM set: Kokkos_ENABLE_OPENMP 'ON'
+-- IPPL_PLATFORM set: Kokkos_ENABLE_CUDA 'OFF'
+-- IPPL_PLATFORM set: Kokkos_ENABLE_HIP 'OFF'
+-- IPPL_PLATFORM set: Kokkos_ENABLE_SYCL 'OFF'
+-- Setting default Kokkos CXX standard to 20
+-- Kokkos version: 5.2.0
+-- The project name is: Kokkos
+-- Kokkos is configured for CMake languages CXX compilation (using Clang version 21.1.8)
+-- Using -std=c++20 for C++20 standard as feature
+-- Built-in Execution Spaces:
+--     Device Parallel: NoTypeDefined
+--     Host Parallel: Kokkos::OpenMP
+--       Host Serial: NONE
+-- 
+-- Architectures:
+-- Found OpenMP_CXX: -fopenmp=libomp (Required is at least version "3.0")
+-- Found OpenMP: TRUE (Required is at least version "3.0") found components: CXX
+-- Using bundled desul_atomics copy (desul/desul@83d26f34db50b4fefe30ed4db38b10e04c7a9384)
+-- Performing Test KOKKOS_LINK_OPTIONS_CHECK
+-- Performing Test KOKKOS_LINK_OPTIONS_CHECK - Success
+-- Using bundled mdspan copy (kokkos/mdspan@5d4eb209c77f4744980c0b0c2af44636cc81b08b)
+-- Kokkos Backends: OPENMP
+-- [32m✅ Heffte 2.4.0 building from source[m
+-- Found MPI: TRUE (found version "3.1")
+-- Found OpenMP_C: -fopenmp=libomp
+-- Found OpenMP_CXX: -fopenmp=libomp
+-- Found OpenMP_Fortran: -fopenmp (found version "4.5")
+-- Found OpenMP: TRUE (found version "4.5")
+-- FFTW_LIBRARIES = /Users/adelmann/git/fftw/lib/libfftw3_omp.dylib;/Users/adelmann/git/fftw/lib/libfftw3f_omp.dylib;/Users/adelmann/git/fftw/lib/libfftw3.dylib;/Users/adelmann/git/fftw/lib/libfftw3f.dylib;OpenMP::OpenMP_CXX
+-- Found HeffteFFTW: /Users/adelmann/git/fftw/include
+-- Setting Heffte INSTALL_RPATH = /opt/homebrew/Cellar/open-mpi/5.0.8/lib;/Users/adelmann/git/fftw/lib
+-- 🔗 Created ALIAS Heffte::Heffte for Heffte target.
+-- 📊 IPPL auto-tune presets: none for openmp (drop CSVs in /Users/adelmann/git/opalx/build-omp/_deps/ippl-src/cmake/auto_tune/openmp)
+-- 📄 Generating IpplVersions.h
+-- 🔧 Target 'ippl': type=STATIC, POSITION_INDEPENDENT_CODE=_ippl_pic-NOTFOUND
+-- Adding Solver subdirectories
+-- Adding Stream subdirectory
+-- ⏱️  Kokkos_DEVICES not set — defaulting to TimerFences = true.
+-- Configuring demos/
+-- IPPL fetched ref: d6216553e39dcf4405849c027517cc3401fefee5
+-- IPPL include path: /Users/adelmann/git/opalx/build-omp/_deps/ippl-src/src
+-- Found IPPL_DIR: 
+-- ⚙ Building HDF5 from source (FetchContent)
+-- GNU: share/doc/OPALX
+-- Checking if complex number support is available
+-- Using C99 complex number types
+-- Checking if _Float16 support is available
+-- ....All Warnings are enabled
+-- Found MPI: TRUE (found version "3.1") found components: C
+HDF5_FOUND and dir are TRUE /Users/adelmann/git/opalx/build-omp/_deps/hdf5-build and hdf5::hdf5 and 2.2.0
+-- HDF5 libraries: hdf5::hdf5
+-- HDF5 include dir: 
+-- ⚙ Building H5Hut from source (FetchContent)
+-- Found MPI: TRUE (found version "3.1")
+-- H5hut cmake building from source in /Users/adelmann/git/opalx/build-omp/_deps/h5hut-src
+-- H5HUT include dir: 
+-- ⚙ Building GoogleTest from source (FetchContent)
+-- ✅ GoogleTest built from source ()
+-- ✅ ZLIB linked via target ZLIB::ZLIB (/opt/local/lib/libz.dylib)
+-- 📄 Generating BuildInfo.h
+-- 🔧 OPALX_EMBED_BUILD_METADATA: OFF
+-- 🧩 Not embedding build metadata into BuildInfo.h
+-- 🔧 Target 'opalx': type=STATIC, POSITION_INDEPENDENT_CODE=_opalx_pic-NOTFOUND
+-- ⏱️  Kokkos_DEVICES not set — defaulting to TimerFences = true.
+-- Adding unit tests found in unit_tests/AbsBeamline
+-- Adding unit tests found in unit_tests/AbsBeamline/EndFieldModel
+-- Adding unit tests found in unit_tests/BeamlineCore
+-- Adding unit tests found in unit_tests/BeamlineGeometry
+-- Adding unit tests found in unit_tests/Distribution
+-- Adding unit tests found in unit_tests/Fields
+-- Adding unit tests found in unit_tests/Physics
+-- Adding unit tests found in unit_tests/Utilities
+-- Adding unit tests found in unit_tests/Structure
+-- Adding unit tests found in unit_tests/Algorithms
+-- Adding unit tests found in unit_tests/PartBunch
+-- Adding unit tests found in unit_tests/PartBunch/Binning
+-- Adding unit tests found in unit_tests/SpaceCharge
+-- Adding unit tests found in unit_tests/BasicActions
+-- Adding unit tests found in unit_tests/Elements
+-- Adding unit tests found in unit_tests/Lines
+-- Adding unit tests found in unit_tests/Processes
+-- Adding unit tests found in unit_tests/Processes/GlobalProcesses
+-- Adding unit tests found in unit_tests/Steppers
+-- Adding unit tests found in unit_tests/Track
+-- Project Name OPALX
+-- IPPL_INC: 
+-- IPPL_LIB: ippl
+-- HDF5 libraries: hdf5::hdf5
+-- HDF5 include dir: 
+-- H5HUT libraries: 
+-- H5HUT include dir: 
+-- Configuring done (4.8s)
+-- Generating done (0.9s)
+-- Build files have been written to: /Users/adelmann/git/opalx/build-omp

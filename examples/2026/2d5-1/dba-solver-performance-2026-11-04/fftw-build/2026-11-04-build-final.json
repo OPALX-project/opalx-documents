@@ -1,0 +1,24 @@
+{
+  "head": "01bb3835ab7442c00f71cac5fb49bf77cba85661",
+  "build_type": "Release",
+  "cxx_flags": "-O3 -DNDEBUG -fopenmp=libomp",
+  "build_directory": "/Users/adelmann/git/opalx/build-omp",
+  "binary": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+  "binary_sha256": "9b4a00eae1cd121dbcb00dfed6cdd46c1f34f7131f597e72973a56686f77a2c2",
+  "preserved_stock": "/Users/adelmann/git/opalx/build-omp/previous/opalx-a38391aa99db-stock",
+  "stock_binary_sha256": "a38391aa99db0cf5e6813ca96bd03dac68246e6ad1b4c204857df314edc261a3",
+  "fftw_version": "3.3.11",
+  "fftw_prefix": "/Users/adelmann/git/fftw",
+  "Heffte_ENABLE_FFTW": true,
+  "fftw_build_flags": "clang21 -O3 -mcpu=native;NEON;shared/static;OpenMP;double+float",
+  "fftw_make_check": {
+    "double": "passed",
+    "float": "passed"
+  },
+  "ctest_omp1": "4/4 passed",
+  "ctest_omp4": "4/4 passed",
+  "mpi2_rejection": "passed",
+  "source_changes": "none",
+  "unrelated_changes": "hash-verified unchanged",
+  "linkage": "/Users/adelmann/git/opalx/build-omp/src/opalx:\n\t/opt/homebrew/opt/libomp/lib/libomp.dylib (compatibility version 5.0.0, current version 5.0.0)\n\t/Users/adelmann/git/fftw/lib/libfftw3_omp.3.dylib (compatibility version 11.0.0, current version 11.11.0)\n\t/Users/adelmann/git/fftw/lib/libfftw3f_omp.3.dylib (compatibility version 11.0.0, current version 11.11.0)\n\t/Users/adelmann/git/fftw/lib/libfftw3.3.dylib (compatibility version 11.0.0, current version 11.11.0)\n\t/Users/adelmann/git/fftw/lib/libfftw3f.3.dylib (compatibility version 11.0.0, current version 11.11.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n\t/opt/homebrew/opt/open-mpi/lib/libmpi.40.dylib (compatibility version 81.0.0, current version 81.7.0)\n\t/opt/local/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.3.2)\n\t/opt/homebrew/opt/gcc/lib/gcc/current/libgfortran.5.dylib (compatibility version 6.0.0, current version 6.0.0)\n\t/opt/homebrew/opt/gcc/lib/gcc/current/libquadmath.0.dylib (compatibility version 1.0.0, current version 1.0.0)\n\t/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 2000.67.0)\n"
+}
