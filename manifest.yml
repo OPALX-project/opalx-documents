@@ -72,3 +72,174 @@ assets:
     description: OPALX and CAIN histogram data used by the linear Compton benchmark figures.
     status: experimental
     sha256: 3c3384444ffe7cceffb8e7b680205bd4aeef4da368749e80260e59cef692b837
+
+  - title: "FFT2D5 benchmark \u2014 analytic_zero_sc.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/analytic_zero_sc.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 5cbe319724ec63b522d4459cb39f0e72ff8055ed5c61ae3e0522f442ff2644e1
+
+  - title: "FFT2D5 benchmark \u2014 emittance.png"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/emittance.png
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: c07b9d9568fc7b73273d2c87438f8ad6f1362d0020dbb318d8f36ea143b8310d
+
+  - title: "FFT2D5 benchmark \u2014 inputs/check_bend_kinematics.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/check_bend_kinematics.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 90aef6151ab1f3783587e7d5669b2021ff49880dbb769bfa02d2f8c7904a73b6
+
+  - title: "FFT2D5 benchmark \u2014 inputs/integer-roll-check.json"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/integer-roll-check.json
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 681ffdd8db74600d726530d6a01e5f250393d30e08c48ae420c68f906ea27ef0
+
+  - title: "FFT2D5 benchmark \u2014 inputs/opalx-10pC-100steps.in"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/opalx-10pc-100steps.in
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 86c07aed2d0467c4775ca4edb857e785821853c40c7c29052788379c9adf0500
+
+  - title: "FFT2D5 benchmark \u2014 inputs/provenance.json"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/provenance.json
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 72ee1af7216af026b410a15db89cd2adc9d301afb0e0d7bb6be8c3ad6e94c8b8
+
+  - title: "FFT2D5 benchmark \u2014 inputs/pyorbit-10pC-100steps.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/pyorbit-10pc-100steps.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 153f1811b82084914c9f29cde09f21172a4861334cc04ae5ad955fa7fc8284bc
+
+  - title: "FFT2D5 benchmark \u2014 inputs/pyorbit-command.json"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/pyorbit-command.json
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: c690982a9985471755444c2502690eddd6894f5ecfcd342ff38c789a720641fd
+
+  - title: "FFT2D5 benchmark \u2014 inputs/readme.md"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/readme.md
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 8aea0c52cd4ee193eed829357280493b1ec2d3bcf05580ea4cefe5d7f2867125
+
+  - title: "FFT2D5 benchmark \u2014 inputs/source.json"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/source.json
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 05e2b4556bc8dd2b57cb3e828be3800463d09908755c4b43e336855aa462ef86
+
+  - title: "FFT2D5 benchmark \u2014 plot_results.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/plot_results.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 56e957a72b8fbd6064b94ca9b9533e1be6ad123f56ac97df280994b4b6969358
+
+  - title: "FFT2D5 benchmark \u2014 readme.md"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/readme.md
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: a01abccf2979f75b49903bcea8486b49a51ed488ca45d6cd2c4964c58469b84a
+
+  - title: "FFT2D5 benchmark \u2014 results.csv"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/results.csv
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 971318196299035cadf6274be60717464e96ae96aeb28a1a643e9833e4e9ca7b
+
+  - title: "FFT2D5 benchmark \u2014 rms.png"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/rms.png
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: ea9453b69b833c990d2236af099bdc5810b7556851f9174c6589fd5b0164c24e
+
+  - title: "FFT2D5 benchmark \u2014 sampling-audit/check.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/sampling-audit/check.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: c25967eee554f0d65277edb3467961484887188d875bc8d0742d09f16271ec80
+
+  - title: "FFT2D5 benchmark \u2014 sampling-audit/plot.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/sampling-audit/plot.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 2af7ebe42f1ccc40d779310257f1741fce4f4429123ce88a2a3386e4c9b9b155
+
+  - title: "FFT2D5 benchmark \u2014 sampling-audit/references.csv"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/sampling-audit/references.csv
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 6dccab464bf57fbb92227540ec6c6b8d92a44dd0904ffe4fd52cc7bf3e362f76
+
+  - title: "FFT2D5 benchmark \u2014 sampling-audit/zero-sc-conventions.png"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/sampling-audit/zero-sc-conventions.png
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: f99acdc0273039026195a956b7e9b2ed5825291d3333a66168c90f82321d6779
+
+  - title: "FFT2D5 benchmark \u2014 series.csv"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/series.csv
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 4c23813f576712ae766ace1a992a329f0662d77749b48e1ee3597cd6e7c96694
