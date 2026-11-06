@@ -10500,3 +10500,597 @@ assets:
     status: experimental
     sha256: b8c3093527cd708fd194146ba515d2687b358b478205e94b071a4532a55351e7
 
+
+  - title: FFT2D5 row-batching profile — analyze.py
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/analyze.py
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: aebe58b9bf6d03d7455e140a0cce18aa43e0481fa4906abc9875091f8c85563d
+
+  - title: FFT2D5 row-batching profile — calibration.csv
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/calibration.csv
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 2dcc6be8a4a481b0829e204bec0b563ec49fe8d625bd7e5fd9e3dcfc22b0cbfd
+
+  - title: FFT2D5 row-batching profile — cuda-api.csv
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/cuda-api.csv
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: e5e92b0afac000b8519da75aae446742a091f5872865568bfe8aa1de8b64addb
+
+  - title: FFT2D5 row-batching profile — gpu-activity.csv
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/gpu-activity.csv
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 0a1c21575c85e31c0a3e991f5a95af7b8ffb097d7afb1dccc6c782dbb266fb91
+
+  - title: FFT2D5 row-batching profile — gpu-profile.pdf
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/gpu-profile.pdf
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: ce7978a4d81a0aa1439afc48fa4e58b26022602c92377d99de1ce441bda3aaad
+
+  - title: FFT2D5 row-batching profile — gpu-profile.png
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/gpu-profile.png
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 25fed8ffd237538c62c2cf7714452b8d582fd03bcd8c32aece34a225e420fd3c
+
+  - title: FFT2D5 row-batching profile — kernel-groups.csv
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/kernel-groups.csv
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: c0f930c1a80c51d70af5b6ba47df4fe2999357706ba5d56020c2798c9a18d231
+
+  - title: FFT2D5 row-batching profile — launch-shapes.csv
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/launch-shapes.csv
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 61eb1b345e4e29678bab56713caaae5849ae00148bfadf2641b3250e7387980d
+
+  - title: FFT2D5 row-batching profile — mpi-api.csv
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/mpi-api.csv
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: e15e0f1043ab3dd7419306c71a97a5bc4fa18925928aa6fce9f0466aaeba7d60
+
+  - title: FFT2D5 row-batching profile — one-hour-budget.pdf
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/one-hour-budget.pdf
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 93c0de7344e3a8b5bf5e90be06d3b1db1dcf2a383e5c9fa655dad77ba3755b29
+
+  - title: FFT2D5 row-batching profile — one-hour-budget.png
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/one-hour-budget.png
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 4eadb0301637f5b1595c399783e7f0e46dc11fedbee6e74651d1ea2bc4ee4b5d
+
+  - title: FFT2D5 row-batching profile — profile-physics-audit.csv
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/profile-physics-audit.csv
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 7461e4989a79c01c4f37a0dc8549d0f38bf2bd21d4a982f3973c4114a2549164
+
+  - title: FFT2D5 row-batching profile — provenance/calibrate-100/case.in
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/calibrate-100/case.in
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: FFT2D5 row-batching profile — provenance/calibrate-100/case.out
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/calibrate-100/case.out
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: dfd255735bf0e48f023fe2ba94236b1329b53929293e9613ec5924bb6559da46
+
+  - title: FFT2D5 row-batching profile — provenance/calibrate-100/case.stat
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/calibrate-100/case.stat
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 993cb100d70981fce65311d15b0d584813a99b65360b854c78354e0e9cf20646
+
+  - title: FFT2D5 row-batching profile — provenance/calibrate-100/run.json
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/calibrate-100/run.json
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: c47453ea1f29771d4f35f39cd38a5a047191461a2571c639083d6652acc9845f
+
+  - title: FFT2D5 row-batching profile — provenance/calibrate-100/timing.dat
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/calibrate-100/timing.dat
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 6f425d5722c727d78afc822b10f6223fe77790aac80bfba3558c372ed77c32ce
+
+  - title: FFT2D5 row-batching profile — provenance/calibrate-1000/case.in
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/calibrate-1000/case.in
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 7511728b538981dfcceb0867ca467a7878a7de931e54b5d70143a43d6ec2630f
+
+  - title: FFT2D5 row-batching profile — provenance/calibrate-1000/case.out
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/calibrate-1000/case.out
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: cbfff016d62c1609d0660665709e77d45b7def1613452fbfe02403a8331c4e70
+
+  - title: FFT2D5 row-batching profile — provenance/calibrate-1000/case.stat
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/calibrate-1000/case.stat
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: f72be77a18abf87203dd387d93b823a7c10e034963ea12ef0ed770c63029d202
+
+  - title: FFT2D5 row-batching profile — provenance/calibrate-1000/run.json
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/calibrate-1000/run.json
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 19b44766d2d93a75443abfb4e4c0e7a03284e73540e4c2aa25520ecad9e76118
+
+  - title: FFT2D5 row-batching profile — provenance/calibrate-1000/timing.dat
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/calibrate-1000/timing.dat
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 2f3fa6612942b4ed98d950e755cbbe40eca5f865500f2363a079d47c2658f54b
+
+  - title: FFT2D5 row-batching profile — provenance/calibrate-355043.out
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/calibrate-355043.out
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: e15ffd5523859f106561d32d3d4591245e3a135fc22882418f304d89f20716a5
+
+  - title: FFT2D5 row-batching profile — provenance/calibrate.py
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/calibrate.py
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: b5bd572aaacb1c2f63847bf20e175087a422799df4501e9d9e1743c993c7b5b4
+
+  - title: FFT2D5 row-batching profile — provenance/calibrate.sbatch
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/calibrate.sbatch
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 3d0fa9d1c6b6a592a799b8e647535983dde2f450f0c9c1cb94207427d3123c01
+
+  - title: FFT2D5 row-batching profile — provenance/external-files.json
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/external-files.json
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: b2b77a0b3d23639b9481393418c3277629117e82c122f75fb3b0feb5429fe1d0
+
+  - title: FFT2D5 row-batching profile — provenance/gpu-1-nsys/case.in
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/gpu-1-nsys/case.in
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: FFT2D5 row-batching profile — provenance/gpu-1-nsys/case.out
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/gpu-1-nsys/case.out
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 4e414864fe1551349805a9019acf712c624e4dd17bdf5051570e8c687f837d5d
+
+  - title: FFT2D5 row-batching profile — provenance/gpu-1-nsys/run.json
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/gpu-1-nsys/run.json
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 6c128135c2212f9cbd872a0db4e34b23893268bd31ee4e094015e00f3027f6d1
+
+  - title: FFT2D5 row-batching profile — provenance/gpu-2-nsys/case.in
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/gpu-2-nsys/case.in
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: FFT2D5 row-batching profile — provenance/gpu-2-nsys/case.out
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/gpu-2-nsys/case.out
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: eabffcf53eb43a3c2a8e277082217d22d8e42b3ffb4c744ba909ccf944088d29
+
+  - title: FFT2D5 row-batching profile — provenance/gpu-2-nsys/run.json
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/gpu-2-nsys/run.json
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: c2146ff81e1acf332adc294f9e47d924740a5c01e8b5814b05c3303e15270ba4
+
+  - title: FFT2D5 row-batching profile — provenance/gpu-identity.txt
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/gpu-identity.txt
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 4a0303c14ac3ea8d1dca03ae1fd953441583f5c005f8c79343fce5d92dbb37a0
+
+  - title: FFT2D5 row-batching profile — provenance/job-355041.out
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/job-355041.out
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: e15ffd5523859f106561d32d3d4591245e3a135fc22882418f304d89f20716a5
+
+  - title: FFT2D5 row-batching profile — provenance/metrics-probe.txt
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/metrics-probe.txt
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: b7ba410314d9a76dc74c469d0963b43007e1383d087f3ffd227741b13ee5fef9
+
+  - title: FFT2D5 row-batching profile — provenance/ncu-355042.out
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/ncu-355042.out
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 16021374fb20beef06becdebe6232564f2005ed3799240b9e9dc834f39b15990
+
+  - title: FFT2D5 row-batching profile — provenance/ncu-geometry/case.in
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/ncu-geometry/case.in
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: FFT2D5 row-batching profile — provenance/ncu-geometry/case.out
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/ncu-geometry/case.out
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: de3fee43851b62c5334e183f18cf7ef7c1e45c779dfcb5cee4783201d39b3136
+
+  - title: FFT2D5 row-batching profile — provenance/ncu-geometry/case.stat
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/ncu-geometry/case.stat
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: ae4253349f1e890b93069cab7a0b822f96f3b1ac77e9ff377e63ad0141e6b7d1
+
+  - title: FFT2D5 row-batching profile — provenance/ncu-geometry/metrics.csv
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/ncu-geometry/metrics.csv
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: e2b9527dee464d8e9442e7c8eb8197cfa20d3ba2a3fc7f6c3983cd5ae9103457
+
+  - title: FFT2D5 row-batching profile — provenance/ncu-geometry/run.json
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/ncu-geometry/run.json
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 9429a69fe74ed77a545e12a5a14cb7ada07a2680b11987de5182b0fa24357248
+
+  - title: FFT2D5 row-batching profile — provenance/ncu-line-density/case.in
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/ncu-line-density/case.in
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: FFT2D5 row-batching profile — provenance/ncu-line-density/case.out
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/ncu-line-density/case.out
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: b90aad5842e3d7a530b86a52e2863feff38e926764ea05790c28a76bec02985b
+
+  - title: FFT2D5 row-batching profile — provenance/ncu-line-density/metrics.csv
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/ncu-line-density/metrics.csv
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: c276ff97917cd80f83da91e36072ce709a4c50952d9914ac2177432548142a68
+
+  - title: FFT2D5 row-batching profile — provenance/ncu-line-density/run.json
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/ncu-line-density/run.json
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: ac675517d02b1bfd5510376491c748aad8795dff7b28b42194f901dd16507c8a
+
+  - title: FFT2D5 row-batching profile — provenance/ncu.py
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/ncu.py
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 2e668b47fb8eed92f0b08c54d0fa593fb8a180660890a836385fd3ad6e70b2aa
+
+  - title: FFT2D5 row-batching profile — provenance/ncu.sbatch
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/ncu.sbatch
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 7e248295f8ea52cf90efd7bcfe0f14bbab38c13d8cb80936c1869b3b2a034c3a
+
+  - title: FFT2D5 row-batching profile — provenance/profile.py
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/profile.py
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 859199f4d2f210a3281bd721c6bfa47a008f8958b9886a04efcb7d63e40f7928
+
+  - title: FFT2D5 row-batching profile — provenance/profile.sbatch
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/profile.sbatch
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 1359fcfbd7c3bb4385a98891bba95c9fe76ca1a5f8743d696f974715cc34661a
+
+  - title: FFT2D5 row-batching profile — provenance/profile_rank.sh
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/profile_rank.sh
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: be5a64b4843344a785526a313ca3fea4f2a5f85755f7e1cda7290da41d2c7a03
+
+  - title: FFT2D5 row-batching profile — provenance/profiler-versions.txt
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/profiler-versions.txt
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 1c359be0ad684ef45f8c60fb667a7acb4ea7c1945b0b52400532780b897865eb
+
+  - title: FFT2D5 row-batching profile — provenance/telemetry.csv
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/provenance/telemetry.csv
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 416063906cd1a11ce5ae6e4813cacf27bf27c16327a265ee0d86ff23fdea9947
+
+  - title: FFT2D5 row-batching profile — readme.md
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/readme.md
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 90839ea7f13a50e8bd6f308733ab071d9fa163abcef7cd07738e3e2482a47eac
+
+  - title: FFT2D5 row-batching profile — turn-estimate.json
+    date: null
+    category: examples/2d5-1
+    source: Nsight Systems job355041, failed hardware-counter job355042 and unprofiled two-A100 calibration job355043; native data at
+      /psi/home/adelmann/opalx-dev/dba/validation-row-profile-20261106
+    destination: examples/2026/2d5-1/row-batching-profile-2026-11-06/turn-estimate.json
+    description: GPU activity, launch geometry, remaining bottlenecks and sub-one-hour-turn budget; study dated2026-11-06, canonical supporting
+      filenames retained; raw traces and particle snapshots external.
+    status: experimental
+    sha256: 9d4f45a36a46340b1d469e48aa38c3d5b494df1ba8f3cc69d29c6acd2f6d20f9
