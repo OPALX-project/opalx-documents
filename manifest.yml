@@ -12507,3 +12507,1632 @@ assets:
     description: "Study dated 2026-11-06; canonical supporting filenames retained; particle snapshots external."
     status: "experimental"
     sha256: e6e0ae83361b5373ab88e6cecffabf54ab6b202cba9565fdbbaef1daf0030a5e
+
+  - title: "FFT2D5 parallel geometry CPU validation — analyze.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/analyze.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 1641acd20cc509d725bbc21180012ef7f9def875229b030914b4b2d63f0ca8b9
+
+  - title: "FFT2D5 parallel geometry CPU validation — physics-audit.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/physics-audit.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: f5a288dd87e276e29848613d5ad17ebc80e590397e4a40b1595687278aebfbb8
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp1-after/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp1-after/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp1-after/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp1-after/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 9a2626ad678a56d7d6b8d618a82d36fa3dc9c777a9b02eb1a881ba8ca6200ee4
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp1-after/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp1-after/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 3ff39bbcab2cfc8679e1d121482242a3dfda2be1bf5a4acc4b80e61bc58dc2b0
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp1-after/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp1-after/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 07c76a388d9b4e5da5787fe07bb64eb837605ef707856d3ab8788edea03bd6ce
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp1-after/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp1-after/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 4ad2caa5c5044be84513b91afec632d12c9614e386aec49eedb605bd256ea3d4
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp1-before/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp1-before/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp1-before/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp1-before/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: e7fd9f8586f638f759f22642721b41f6c27119262dcd275ff26b45f7cdfebc4a
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp1-before/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp1-before/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: f6bacdd7315bdeeb5a57da04adeaaf88f45c7481a3dd78e0ddc379edb43dfb7f
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp1-before/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp1-before/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 7f5d988aba86e9a1a3ff824af91d7e7601e2e89d146e342d999b371a62854674
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp1-before/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp1-before/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: bb5e205f7d145c1cfc4d91cb3bab4a6e49bab554c4145bf84be769bc3abbbb46
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp4-after/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp4-after/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp4-after/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp4-after/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 947857ecb817ec87d1da2ad7e7230820f8b54456b04954ec648ac396f474f4ad
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp4-after/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp4-after/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 4160d59d700dd73c63e1d6ef77b4c380f4fe3c22abc4182f8efba9a40b9619c4
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp4-after/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp4-after/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 70d985f32a287a2675aa3afb3e64a1821cbd8b171ba48e03eac0784bd7b3e5c3
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp4-after/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp4-after/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 08e504412dcac67b741584b42b5ea1016f4af0914b1c64c78d05ea1bbf02fcc3
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp4-before/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp4-before/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp4-before/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp4-before/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 2c215ab2d1f1f64ca1958aae54b4453853bd01467dd532aeb1d76fe85e7ce15a
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp4-before/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp4-before/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 934c1b0da0ff9abaddd1e6e891f02ce674779fca21fd4f5434f7e7d931d3f9db
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp4-before/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp4-before/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 9da407142a6794c3a5d7552b3f0b2081c5bff0ab0f4833e475c9d9b7331ca920
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-1-omp4-before/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-1-omp4-before/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: dad5b1d1c6e3c565f49508b26d809740c6b8820ac92901f9112a26ca64883c3a
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp1-after/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp1-after/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp1-after/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp1-after/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 4cf96690f46fb481778cfe7105702eb4b9f08b8861fe41c8066978a15b65335c
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp1-after/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp1-after/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 1793068b55dd8756e283c8828c40739c3ea78435360eda0be12832bd3607db15
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp1-after/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp1-after/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 5969ff3c4209f15393ad069b44a6d4265bcd8bab2f3ba3f4c30ae383cf3bdab4
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp1-after/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp1-after/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 9540732dcb9e61e12a4299534a76807df08f3f74df35908f31b29d5d1602ee80
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp1-before/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp1-before/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp1-before/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp1-before/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 8d8a1f8c0007fbdca6246332c16d46df45f66f01d37529e0091a9650e5c6545a
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp1-before/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp1-before/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 00de6baa13d872fe66ded33b4c442b7ebaa9c979f40ad8c5f48deebe3ef3a089
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp1-before/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp1-before/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: a68afc354c2327ada6ba225692609cb7385a5d2f32fa00d885388d6d9d361e9e
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp1-before/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp1-before/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 63795e4c63705088f95783583a09963a2a98b8a2d73bd035f9158ab319a151fb
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-after/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-after/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-after/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-after/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 7b96f986d0578557cd4306a2c836333628643e5841584dd4264d05410c9a5f83
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-after/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-after/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 94725e62aea8ba98c0496a72f804219c116ec5b1f6147e61130c3ce518b60f33
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-after/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-after/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: aab04bdcef1ea734eb1ef8de6ab6a2c8467fee816d111b60d2ac8ad31f7e3933
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-after/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-after/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 5e0008774784d2e0e871845b1099f4e13d519c696a75bf8eb5cf864397cace96
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-after-repeat/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-after-repeat/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-after-repeat/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-after-repeat/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: b6bc36f22daf02787c61775334b7dce6063de9dc96e237cbe6f2adbc93f8493d
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-after-repeat/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-after-repeat/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: c606c0f3ba7019b3bd9db1c55d26040d688f65c6bee82dba138255a84ae14f7d
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-after-repeat/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-after-repeat/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: f94d72ce36099823aca1aea03ae6c80a2a65c4a461c1b317dbfa02e50a568dd6
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-after-repeat/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-after-repeat/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 5ca1d19e88d0e44ed2cbdc16824e89464cf0282215bc3db1402da4d9398d9723
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-before/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-before/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-before/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-before/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 5f41a8ceab43ccab6ce9fb6841986eec6980911e6016984f0fbd748aac75df9e
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-before/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-before/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: b66e0f71eddc5e766d0f5fef3cdae2f16d7177f9884fad62e6ef48c6b3319d8c
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-before/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-before/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 355c09e61cdb09adb2c47a436b4b272039a80ccd6aa5f729c1b9bd87c12b9567
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-before/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-before/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 9f72c71ee1298fc9cd88813382f1d90e24864987b5fe8cb571abe3e97d0fbfb9
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-before-repeat/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-before-repeat/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-before-repeat/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-before-repeat/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: ec03f4fdfa6a40209ef2da0cc38b7eb4d297abf06000ca6c00524059a3c80c73
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-before-repeat/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-before-repeat/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 7bd3d7c38ff6de7a7306085d5295fc8973f0c1b7fbc8052835992a7e92e0a93e
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-before-repeat/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-before-repeat/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: a48904d45d154f5a21b7edfc8ebc3a9d9bd8bba1443e0c09bf03e26086fa5c01
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-2-omp4-before-repeat/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-2-omp4-before-repeat/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 299a5c4c6e778b395b3f30537c899498907c5fe6c8fb21d9972f36ae36db8d16
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp1-after/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp1-after/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp1-after/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp1-after/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: ad49ece7cc8f07684c6a5455b144ecc89423ce75ff8e1bf170e8a69c45da8440
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp1-after/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp1-after/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 6e3b7eed2c116ce57c8da3deb952e0cd72b70cf302d2492f81d9dc82662712bb
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp1-after/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp1-after/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: ccb2a2874d59741c0a3e94ef8a8c133cce05d52ebc76a8e99bce196e8a0a885b
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp1-after/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp1-after/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: ee78f3cbb4b85c55a33f4c5fe3b5db78ff4f4f225eb523d0f001ecd5b27e0708
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp1-before/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp1-before/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp1-before/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp1-before/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: b8a62bb3e41c596d7cf8e25e08d37bf0344400e287e82ec1075b92fca49b9de1
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp1-before/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp1-before/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: b4f37bf4639f76ef501121882e5b3aec5ff83296afe05c10596ecee8f8936a5a
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp1-before/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp1-before/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: fbd3501878770dc32a9715ac8bcabfdd238f4132fe5e7ed468e12e696ef9b7e5
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp1-before/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp1-before/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: c00c088e42c33c1e8c9e43b60dcf096e34d6102bf0a8a80c81946031549fc4ab
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp4-after/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp4-after/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp4-after/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp4-after/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: ed078434d0477fb660240b5488599c881f734f3c13171ab7845181af064170f6
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp4-after/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp4-after/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 9c93c2672face4f43c9b8e43345d4c7428217d10c0aafe901f924401a2bc69dd
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp4-after/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp4-after/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: ac777d3a841b71903b7956672dd16e7dfe41832834d02bf8603b0e9fa665f104
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp4-after/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp4-after/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: e4886b585430b7f83f161be2bae63e8cbba05682eae16f8669e89767ff2e3a5c
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp4-before/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp4-before/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp4-before/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp4-before/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 2f16d4cba625ddd82af1ff15435965842d6a54cd8511fd6e17fc7aa47ee63245
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp4-before/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp4-before/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 666b1b71cb7456b0735e09ef59aaabae488f5ebc08d5ffb3011dcc64d3553deb
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp4-before/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp4-before/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 5400c5506e8489839285059d7a55bd9d43303197b41f0705d61e35f94477cd6e
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/cpu-4-omp4-before/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/cpu-4-omp4-before/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 672af35ea9bf2930fe3efdc7cee3d76069a86fde6aa1c3f4878d51f704c34ed2
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/native-locations.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/native-locations.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 0248c5f591433cb2f5fbdf07148941e9645040d3f08332081c7466363a18c661
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/repeat_pair.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/repeat_pair.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 78a5bac6b9abb8924f4241586791e654626987c3c676ae9fe17f80b75497cdb2
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/run_pilots.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/run_pilots.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: d2bdaabc7b9eb4c4cff626baa98743147e9bd5e7d9873bc579817b588b62bcdc
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/run_tests.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/run_tests.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 1ecd0749c38aca1924d5c8e7638696ac4e7238d33be930b6b2e814da41f21ca1
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/unit-parallel-rank1-omp1.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/unit-parallel-rank1-omp1.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: f4db715d6f1cfdbe1a4573d1c53dfdae03fdc6a31be7ebce4205f910148e9e2f
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/unit-parallel-rank1-omp4.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/unit-parallel-rank1-omp4.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 9a196574af64ea4bc3640093474e952b74dc239aaf72905b087012fb41faf310
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/unit-parallel-rank2-omp1.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/unit-parallel-rank2-omp1.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: f2a8caf7b7248f3014b171936a64eee57a7983312fb7e54740cc0c33e079edee
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/unit-parallel-rank2-omp4.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/unit-parallel-rank2-omp4.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 421e50a26c0ee6e1983c866b6b5af47734dbb9aa7b021d5168e169549aab576c
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/unit-parallel-rank4-omp1.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/unit-parallel-rank4-omp1.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 855a3e4cb2938f9804bec6620020af7fa63f59a3864d1e9582eeb1172d1853bd
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/unit-parallel-rank4-omp4.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/unit-parallel-rank4-omp4.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 7c4c6a0c6df9493ff5847dd8368f5b48d6094c66d5a0960726efd80fef730dae
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/unit-testfft2d5algorithm-omp1.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/unit-testfft2d5algorithm-omp1.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 01501aafdbe3323483e8c4cee536392c0bd4d4b3157e5a41db1144ee83e00263
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/unit-testfft2d5algorithm-omp4.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/unit-testfft2d5algorithm-omp4.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 09dab4a9853000ad3facad601bd2a5e8b1ef8a28b979cd83c5b7c3130a3f0008
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/unit-testfft2d5numerics-omp1.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/unit-testfft2d5numerics-omp1.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 06c5c55916dc558d4839f61f2397677a0a158fe9d6e9d823e079738351228cc4
+
+  - title: "FFT2D5 parallel geometry CPU validation — provenance/unit-testfft2d5numerics-omp4.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/provenance/unit-testfft2d5numerics-omp4.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: f422e01462fa949ed56952c291f0adaf9aed8964b41ed0f42ab4551557192383
+
+  - title: "FFT2D5 parallel geometry CPU validation — readme.md"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/readme.md"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 8353861b607843ba5f383671cbdd54b2eb609f1881d7afc935ce379518d88bac
+
+  - title: "FFT2D5 parallel geometry CPU validation — repeat-audit.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/repeat-audit.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: c45a3233e924feb7f8f2d6702dbf3a37fa32ff9027a2010762ed891e53a4342b
+
+  - title: "FFT2D5 parallel geometry CPU validation — repeat-timings.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/repeat-timings.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: b96d3e47aaa0db9e5c5918ad1d8aecb30323fca6d97d49b85d67324d2a42c6df
+
+  - title: "FFT2D5 parallel geometry CPU validation — timings.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/timings.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 6f420852337f7ccbf76c545ffe31e8ce14e84bd82f71c841a1520c7e9c0e8fd9
+
+  - title: "FFT2D5 parallel geometry CPU validation — timings.pdf"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/timings.pdf"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: 99044f693dfae9377256dadfe95b6425c789f52eef12545bbbfed1d5c20624d9
+
+  - title: "FFT2D5 parallel geometry CPU validation — timings.png"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU before/after 100-step pilots and exact serial-build/exhaustive projection unit checks; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/parallel-geometry-cpu-2026-11-06/timings.png"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots remain external. Subsequent CUDA validation is recorded in the companion A100 report."
+    status: "experimental"
+    sha256: a2069af355c5837619cfbc2c674d315cc440600777d900492abe139772928c3e
+
+  - title: "FFT2D5 parallel geometry A100 validation — analyze.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/analyze.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 901109e39917f9bef70dfce1454136f50bb21ded19ec2e9102073ffafced509e
+
+  - title: "FFT2D5 parallel geometry A100 validation — cross-rank-stat-audit.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/cross-rank-stat-audit.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 6ddf96c304aaad53e2492820ead06d197d6787eb1c4855dbd9857e5c1fd534f2
+
+  - title: "FFT2D5 parallel geometry A100 validation — geometry-kernels.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/geometry-kernels.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: f4e485d8a43b6ea2bf72643b52fa4ca2249b2aaaaec123d7a2384c896758c6c0
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/after-binary.sha256"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/after-binary.sha256"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 857a7dabf8ecb47f2b8eefeb075e95712516cb1bc34dbc4d383425a733d4e7df
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/archive_metadata.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/archive_metadata.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 7e9b2f00baf727940d8c06c0a88a8b24ddd72ec586ae1938f2a5fd05abf92147
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/audit_cross_rank.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/audit_cross_rank.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 8755079c8c92fbfbc0bcd7b9ddf07136a45a4f22d08290b5817aec8106d4f280
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/audit_particles.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/audit_particles.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: bcdf06ff36e270f2a079bc4bcbf808c3eb1344ad75f0b6eb4ff3648d8ca14532
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/baseline-binary.sha256"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/baseline-binary.sha256"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 3dc1fab47a86e128b67a065e0437e4bb7cb7f1ff76e9503ee90749d5bc6bdba1
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/build-gpu.sbatch"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/build-gpu.sbatch"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 1aa8b0a3a9c14beb102865379aaa5022beccde7306fe730a3b845794041d2813
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/cross-rank-particle-audit.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/cross-rank-particle-audit.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 75af34f8852fc0cd04c39147731efcc694d64f41e537f3a0d68c4a29a0077743
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-after/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-after/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-after/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-after/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 69f5c2ec0b36fe45cad02096ae3bbbf54bcc2ddb0774bdb281dd4e10c0f4ba67
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-after/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-after/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: dcd9064afc93aebcad37464fc441ce0bd3aeff053c64cc27a2c0ab73ed9ebdac
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-after/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-after/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: af7eb280cfa26bf24f07e1416c67753bb0e9872585732fb6944476b5add58ff9
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-after/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-after/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 515aff16767f07dfa6e0ff1ac093b760da4b18700dca1b7a134fc6c90b03acb9
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-after-profile/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-after-profile/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-after-profile/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-after-profile/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: e9c34b37a78696a124ef8356f905e9a3d41414c1bae93d0c181938d78f0a303f
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-after-profile/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-after-profile/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: a5e8a87daa8f9979e0932469009dc48578092adce256e25b857e63d95f2f104a
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-after-profile/geometry-kernels.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-after-profile/geometry-kernels.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4569435961dfc5ce2b4aa244f1ace32a5eeadd61d05ad59ae7a236362c16bb74
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-after-profile/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-after-profile/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 2394e92f8f7ff2d8fa05a892d405711d6cd17606684bce55816899c59cc3c0e9
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-after-profile/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-after-profile/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: e36da687fd66783b46a485df82d49015eff8b6e33894d149534ad77e0ba77e4a
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-before/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-before/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-before/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-before/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: a46c711764e01239f75808d433ab46274e692eabd9cd5b8f083781526cbaa677
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-before/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-before/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 6f7f97b4134540fd9d182d094c7bfc95109d03ea3e73aef76d07407dd37a9586
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-before/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-before/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 09ad78506bd1a420d938f183ae077dc5d87bc6c3f17860f0ba97669c2ffb1001
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-before/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-before/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 549ff0fb0ad3861b4ae9a79dc257c6b73604b68087fc7caa9059025d18705617
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-before-profile/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-before-profile/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-before-profile/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-before-profile/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: a4f9bff20b3bc38e4f35de99e644b458a69d83d8ba460c514ace0f0d34f1d23d
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-before-profile/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-before-profile/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 8c8d63dd86d34c4aef7e08a63ad4adb63ef6c4a7aa7bdaf0e3993c33eaa5080e
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-before-profile/geometry-kernels.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-before-profile/geometry-kernels.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 1c835d72007c0dc1d452bd446721bcd42d082fe851f4b6891c3bff081d2077e6
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-before-profile/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-before-profile/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: b4ce7f95379a7907d2bfbd7f96c9655257d7fd523aa7446a70487df6714038bd
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-1-before-profile/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-before-profile/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 2d3a5b376c04ae630823d54d0fb59efa112b252d8a6f5ad69c4b296c01096a85
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-after/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-after/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-after/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-after/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: b1aa8581c39922f743b5c354e44586654d97977da62ef365243f27d5af61ed4f
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-after/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-after/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 88cc1e655fa331456cbfb9cfa85ebfddd0218be916fc2e1757eb7be896a48eaf
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-after/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-after/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 16b420f1a5d375628d4c3e2289c175440d2219b435001fedc8c9b62cba4cf422
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-after/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-after/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 50ca710b0e0e95921ff32a416717f5c3bf06b5af13f13a578588eb2b0a5cb1e1
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-after-profile/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-after-profile/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-after-profile/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-after-profile/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 6808439beadcd1bc8a6de02a76e24c3476c1265fc51f13b1be1d253f7b40837b
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-after-profile/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-after-profile/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 40f2ede67528196e38410528c3e8c6a2e4cf760213dc5bc7e8401ce244f801f9
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-after-profile/geometry-kernels.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-after-profile/geometry-kernels.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: ccd40ecdd9f94655d1d87b1f61cace068bb30d8f65104cf347f1c6108327a1b6
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-after-profile/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-after-profile/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 681ee251fa599e396c4e3ab4a161a08b3fe60751659c0c1b9912de7698f84ab5
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-after-profile/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-after-profile/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 3d919037385a82d67c56b4e312d0598b5ab8734239c4e122840276a2133281ec
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-before/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-before/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-before/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-before/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 3c53a0632c2a26c7d4cbbd91740b37878a15e1e5f05006cd261f3d255a821e09
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-before/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-before/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: df4caf6cb49d4b46f8142c24b0ba444189b7983b0990902d210ed388965f423f
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-before/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-before/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 47a75a213d7602efab34694cd84189aa1b3ef8675421297efb833749ee534e46
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-before/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-before/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: f19d283d1dbb72931e85fdb59890d8d7a33e1cc7d593470f2a4a2042dbfe2e4f
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-before-profile/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-before-profile/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-before-profile/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-before-profile/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 16a9b57e99c2ce508099a3ee9663b8d3bc40a35361833cb65d5529029dbb9cf4
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-before-profile/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-before-profile/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 76d51a02c3e1cf5d854d24ece91984e296e263821c5a0b3a1424f70b4b21fa79
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-before-profile/geometry-kernels.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-before-profile/geometry-kernels.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 69eb2ae1dccf8edbc71b9e71ba8eaa05b81f63dbd8a0537dc2304fe9168b9a57
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-before-profile/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-before-profile/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 36e2ff0d29599349a3e6f60143211c8add76b3b2669efac0f57f2dfabb275f59
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu-2-before-profile/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-2-before-profile/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: d9534198474983c1f320d3e18939c1aa0972e70d5c48aa160cd7d7e32c2852af
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu2.sbatch"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu2.sbatch"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 9ed9d9cfda404fb15827597ba974cff1782ded285ef545dbb2e41fa4c07f94cf
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/gpu3.sbatch"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu3.sbatch"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 82b4cff5b34735fed93a7a033d7780183bc5cbf4c6c543f897d016fe745d201c
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/job-status.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/job-status.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 0282142f14703363154b0c37903896529d23ca0c3e7322a8dc5cb10a69f2498f
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/jobs.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/jobs.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 5effeb4e05cb49355df963b363f4d5bad3ed7a2a22f5c6a07dd6f1c79836031c
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/native-locations.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/native-locations.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 0ed94de403f2bb51fe156ba4691052d1e1cb3a2fc5d0c6d337d97c2fc570ae46
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/particle-audit-1.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/particle-audit-1.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 8f293dabcdc3e841e14eb2c9669282c46aaec44a6700cc9bf3a1f6e8b1d8d69c
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/particle-audit-2.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/particle-audit-2.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: a924fe78aefc38f54c633ec0df173ab680251219471676294eeb02306bb7dee8
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/probe-1.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/probe-1.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 0393111cfb99df29c0ab6481c916d82b242ea86c41fb96fbc3d097bac1606181
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/probe-2.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/probe-2.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 05ca4ab00273f6e0196b24cca87244d67ada5edde085eff6a5a17a26c13586fe
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/profile_rank.sh"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/profile_rank.sh"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: ccdfa57cebe321ffd890de24b1b39f8c14f0f57dfa5027924b9ae12fceca4323
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/run_gpu.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/run_gpu.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: f7875bf6a40615c1191b3d68c28cf60045ae9b1153e68b191c0eb6b4746f274a
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/source-base.txt"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/source-base.txt"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 06bdf147a053c85012f9d49339f34821de51412f6954ff934c4b0375c49180ed
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/source-files.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/source-files.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: e6492377759e7ec0b91cb2db910b8cb846882a188668bdf478bc3e2106890c7b
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/source.patch"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/source.patch"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: af7bf0145ec6f87061acb99813c312f7ba401aa674ce31f0f2376c555b7df8cd
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/unit-parallel-rank2.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/unit-parallel-rank2.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: e1cdba8fcf28ef16775bffcbd238a7c8535c0b276730befa18b56b7cb736fd61
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/unit-testfft2d5algorithm-rank1.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/unit-testfft2d5algorithm-rank1.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4bc0c1a1a37ce491b8c749bf3f5b05c62b9788a52744fc30017338cd55be5e04
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/unit-testfft2d5numerics-rank1.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/unit-testfft2d5numerics-rank1.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: b71b56b3e12336e2abd27e8cf09f612a8ab9f6fccbf7a9ca29044bf47a7eea75
+
+  - title: "FFT2D5 parallel geometry A100 validation — provenance/unit-testfft2d5parallel-rank1.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/unit-testfft2d5parallel-rank1.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: b28314f66448cc6f237b703bfc7e4bf77c832fdc94222cc4ba37e5f1683b258a
+
+  - title: "FFT2D5 parallel geometry A100 validation — readme.md"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/readme.md"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: e56adc40016279ac5544aee2491218bb9a2b7ace5f962bf5f73c7e484a1a781a
+
+  - title: "FFT2D5 parallel geometry A100 validation — stat-audit.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/stat-audit.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 158de4ff290acadb560fd67fbe5ffa6e702d745e07dd34c5001d5d6690bee824
+
+  - title: "FFT2D5 parallel geometry A100 validation — timings.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/timings.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: c515d03446a332b89eef04c9154f6e7176533b2b8ed22a82433e65c3bb313d8b
+
+  - title: "FFT2D5 parallel geometry A100 validation — timings.pdf"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/timings.pdf"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 76faa9f69f5abf6e68d4f23d8a04d25ee2c758faee5affab13c45b3c0efbabe3
+
+  - title: "FFT2D5 parallel geometry A100 validation — timings.png"
+    date: null
+    category: "examples/2d5-1"
+    source: "Paired one/two-A100 100-step pilots, exact CUDA geometry tests and per-rank Nsight traces; three-A100 job cancelled before start"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/timings.png"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Raw particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 68c828d7de2c80b3ea9bb6f7f23759d31e141c2c2019207dc154e50a4b845399
+
+  - title: "FFT2D5 parallel geometry \u2014 updated one-turn estimate"
+    date: null
+    category: "examples/2d5-1"
+    source: "Prior whole-step calibration minus measured steady SC saving from paired 100-step A100 pilots"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/turn-estimates.csv"
+    description: "Study dated 2026-11-06; extrapolation assuming unchanged non-SC work; no full-turn run."
+    status: "experimental"
+    sha256: 530000c6221dd76f6b54a74acce6105069b3baca506da92c67a5de8f2f6e184c
+
+  - title: "FFT2D5 parallel geometry runtime analysis — plot_profile.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "Completed one/two-A100 pilots and existing one-A100 CUDA trace; three-A100 job cancelled"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/plot_profile.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained; raw particles and trace databases external."
+    status: "experimental"
+    sha256: "b15a3b876376441156c845eb93154c141cb61be39f8e272bcd1f9f63e2830f64"
+
+  - title: "FFT2D5 parallel geometry runtime analysis — cuda-api.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Completed one/two-A100 pilots and existing one-A100 CUDA trace; three-A100 job cancelled"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-after-profile/cuda-api.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained; raw particles and trace databases external."
+    status: "experimental"
+    sha256: "7113f7f5b594dfc53e417da9d62ebe8c0596625145df24351d96e5dee36b6f81"
+
+  - title: "FFT2D5 parallel geometry runtime analysis — kernel-groups.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Completed one/two-A100 pilots and existing one-A100 CUDA trace; three-A100 job cancelled"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-after-profile/kernel-groups.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained; raw particles and trace databases external."
+    status: "experimental"
+    sha256: "84e2eacfd00a5285c98f992b5c9e8267dfefb3a71939cf9026641e9132e79712"
+
+  - title: "FFT2D5 parallel geometry runtime analysis — kernel-names.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Completed one/two-A100 pilots and existing one-A100 CUDA trace; three-A100 job cancelled"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-after-profile/kernel-names.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained; raw particles and trace databases external."
+    status: "experimental"
+    sha256: "2ee1ecb4b2bbba33e949e30adbdfa41dc444f411df1fd97aa22138f021d81d2c"
+
+  - title: "FFT2D5 parallel geometry runtime analysis — runtime-breakdown.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Completed one/two-A100 pilots and existing one-A100 CUDA trace; three-A100 job cancelled"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/gpu-1-after-profile/runtime-breakdown.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained; raw particles and trace databases external."
+    status: "experimental"
+    sha256: "544b48fa77003465c3ea7f198807aa2da7ba08748910a78139de3dfbb54f8812"
+
+  - title: "FFT2D5 parallel geometry runtime analysis — profile_breakdown.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "Completed one/two-A100 pilots and existing one-A100 CUDA trace; three-A100 job cancelled"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/provenance/profile_breakdown.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained; raw particles and trace databases external."
+    status: "experimental"
+    sha256: "7598628d5543339887e93594b0c984ffa8df86e111d4d0b59a83d09b5befbded"
+
+  - title: "FFT2D5 parallel geometry runtime analysis — runtime-breakdown.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Completed one/two-A100 pilots and existing one-A100 CUDA trace; three-A100 job cancelled"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/runtime-breakdown.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained; raw particles and trace databases external."
+    status: "experimental"
+    sha256: "544b48fa77003465c3ea7f198807aa2da7ba08748910a78139de3dfbb54f8812"
+
+  - title: "FFT2D5 parallel geometry runtime analysis — runtime-breakdown.pdf"
+    date: null
+    category: "examples/2d5-1"
+    source: "Completed one/two-A100 pilots and existing one-A100 CUDA trace; three-A100 job cancelled"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/runtime-breakdown.pdf"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained; raw particles and trace databases external."
+    status: "experimental"
+    sha256: "075fd61ff28e2e22bf8c6b9a2f7e1d5ebdd97cedc908c1fdc118ba4e4a684136"
+
+  - title: "FFT2D5 parallel geometry runtime analysis — runtime-breakdown.png"
+    date: null
+    category: "examples/2d5-1"
+    source: "Completed one/two-A100 pilots and existing one-A100 CUDA trace; three-A100 job cancelled"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/runtime-breakdown.png"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained; raw particles and trace databases external."
+    status: "experimental"
+    sha256: "573372444b7aeaf6986dde5db95d8617787e9ddf6f6b82a3ebaf45aadd9dc391"
+
+  - title: "FFT2D5 parallel geometry runtime analysis — runtime-cuda-api.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Completed one/two-A100 pilots and existing one-A100 CUDA trace; three-A100 job cancelled"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/runtime-cuda-api.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained; raw particles and trace databases external."
+    status: "experimental"
+    sha256: "7113f7f5b594dfc53e417da9d62ebe8c0596625145df24351d96e5dee36b6f81"
+
+  - title: "FFT2D5 parallel geometry runtime analysis — runtime-kernel-groups.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Completed one/two-A100 pilots and existing one-A100 CUDA trace; three-A100 job cancelled"
+    destination: "examples/2026/2d5-1/parallel-geometry-gpu-2026-11-06/runtime-kernel-groups.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained; raw particles and trace databases external."
+    status: "experimental"
+    sha256: "b4d12a17c3d440429a7e336633b938d556e3b61bf17bbc13dc80a65bd19236f5"
