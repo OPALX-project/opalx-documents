@@ -1,0 +1,144 @@
+{
+  "status": "Retained one-turn DBA reference; keep this directory and its native outputs in place",
+  "source_fix_commit": "8cf0239d0f7b0c65465ccf6fd66272189e46aeca",
+  "executed_source": {
+    "head": "daaf914b0cd1bc28de3b57812fad899e09badc3e",
+    "binary_sha256": "6bd5c3a499e54c8201ac788e6c036e56d6add6c77b76967e2ce156e937f21d65",
+    "source_patch_sha256": "6ec1004cfd31f34b83d3dc81404a1edcf17204226d4da946d5f03afeb0a82b90",
+    "uncommitted_fix": "Named occupancy functor; validated CUDA launch fix",
+    "dependencies": {
+      "ippl": "d6216553e39dcf4405849c027517cc3401fefee5",
+      "heffte": "4d8d4597b479d1e4709a2b1b4cd7d8922600045f",
+      "kokkos": "d9397f95a04a0334d327647e64ab7f1882ca0664"
+    }
+  },
+  "input_note": "case.in was reformatted after completion. reference-input.in and case.in~ reproduce the executed input hash; current case.in is preserved unchanged.",
+  "completion": {
+    "case": "dba-one-turn",
+    "status": "complete",
+    "binary": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/opalx",
+    "binary_sha256": "6bd5c3a499e54c8201ac788e6c036e56d6add6c77b76967e2ce156e937f21d65",
+    "source_identity": {
+      "head": "daaf914b0cd1bc28de3b57812fad899e09badc3e",
+      "binary_sha256": "6bd5c3a499e54c8201ac788e6c036e56d6add6c77b76967e2ce156e937f21d65",
+      "source_patch_sha256": "6ec1004cfd31f34b83d3dc81404a1edcf17204226d4da946d5f03afeb0a82b90",
+      "uncommitted_fix": "Named occupancy functor; validated CUDA launch fix",
+      "dependencies": {
+        "ippl": "d6216553e39dcf4405849c027517cc3401fefee5",
+        "heffte": "4d8d4597b479d1e4709a2b1b4cd7d8922600045f",
+        "kokkos": "d9397f95a04a0334d327647e64ab7f1882ca0664"
+      }
+    },
+    "input_sha256": "77f430eba10d1aa6fb215e83cdf6aad1200425c451d0409ae5cb341c99adce39",
+    "job_id": "354991",
+    "hostname": "merlin-g-100.psi.ch",
+    "mpi_ranks": 1,
+    "batch_size": 64,
+    "omp_threads": 1,
+    "dt_s": 3e-12,
+    "nominal_period_s": 1.1797187197141108e-06,
+    "nominal_steps": 393240,
+    "circumference_m": 25.766370614359165,
+    "requested_turns": 1,
+    "stop_convention": "One reference circumference using ZSTOP; explicit TURNS does not support checkpoint restart",
+    "estimated_tracking_hours": 9.418862633333333,
+    "particles": 100000,
+    "mesh": [
+      64,
+      64,
+      512
+    ],
+    "charge_C": 5.602212333965894e-09,
+    "longitudinal": "NONE: uniform coasting beam",
+    "checkpoint_sha256": "4d6adf38da35d9168f9cdb10847786eb1ea64d27e13e521211173901037e19f5",
+    "argv": [
+      "srun",
+      "--ntasks=1",
+      "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/opalx",
+      "case.in",
+      "--info",
+      "1",
+      "--2D5BatchSize",
+      "64",
+      "--restart",
+      "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/dba-initial-state.h5"
+    ],
+    "native_returncode": 0,
+    "elapsed_s": 32907.89772573882,
+    "completed": true,
+    "final_time_s": 1.1797200000009117e-06,
+    "final_s_m": 25.766398575530726,
+    "final_global_step": 393240,
+    "retained_snapshots": 40,
+    "retained_particles": 100000,
+    "retained_charge_C": 5.602212333965893e-09
+  },
+  "analysis": "analysis/summary.json; analysis/readme.md",
+  "files": [
+    {
+      "path": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/dba-one-turn/reference-input.in",
+      "sha256": "77f430eba10d1aa6fb215e83cdf6aad1200425c451d0409ae5cb341c99adce39",
+      "bytes": 7188
+    },
+    {
+      "path": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/dba-one-turn/case.in",
+      "sha256": "7144822aa3093c08cd0a5658f727f9f8b25916f6b94edba59476f59a219af8be",
+      "bytes": 7211
+    },
+    {
+      "path": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/dba-one-turn/case.in~",
+      "sha256": "77f430eba10d1aa6fb215e83cdf6aad1200425c451d0409ae5cb341c99adce39",
+      "bytes": 7188
+    },
+    {
+      "path": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/dba-one-turn/case.h5",
+      "sha256": "cb5ad7c0c6121e538dd3ca0ae693d412d1c9cc21694daccd83951a867499267c",
+      "bytes": 288326357
+    },
+    {
+      "path": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/dba-one-turn/case.stat",
+      "sha256": "6880dd30bd6cf427f10870bd969509e190195006341e9067730965bdde65c19a",
+      "bytes": 562176
+    },
+    {
+      "path": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/dba-one-turn/case_checkpoint.h5",
+      "sha256": "b438ca5a06404d0285409e4d3724a6b84d1ae4f87ece0ad2cc01df56eae5370e",
+      "bytes": 8407272
+    },
+    {
+      "path": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/dba-one-turn/manifest.json",
+      "sha256": "1b620b07cc8c550c2ce1d02b00d38b6dee20cee5899dd7714c29ccef5739064f",
+      "bytes": 2161
+    },
+    {
+      "path": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/dba-one-turn/run.log",
+      "sha256": "848f90be4a9293dd5504f39df800cee82f13416c35659167d19180a12e87560d",
+      "bytes": 57474
+    },
+    {
+      "path": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/dba-one-turn/timing.dat",
+      "sha256": "9476ccd288b0513a6347471f6a239110bde61a4edc1751bd3b43d8d032e8ba3b",
+      "bytes": 1043
+    },
+    {
+      "path": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/opalx",
+      "sha256": "6bd5c3a499e54c8201ac788e6c036e56d6add6c77b76967e2ce156e937f21d65",
+      "bytes": 56740200
+    },
+    {
+      "path": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/dba-initial-state.h5",
+      "sha256": "4d6adf38da35d9168f9cdb10847786eb1ea64d27e13e521211173901037e19f5",
+      "bytes": 8413184
+    },
+    {
+      "path": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/dba-reference.dat",
+      "sha256": "562590c1ca8b167affb53f662843f7a0618212bac66bd1ea5b103e6c88c4f121",
+      "bytes": 377106
+    },
+    {
+      "path": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/dba-particles.txt",
+      "sha256": "e4ed5735e21af00d116690d0a623f13545475a3435776e52c4a4abdc4a89f9e3",
+      "bytes": 12892608
+    }
+  ]
+}
