@@ -1,0 +1,10 @@
+{
+  "density_kernels": [
+    [
+      "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<opalx::spacecharge::fft2d5_detail::SliceDensitySumFunctor, Kokkos::TeamPolicy<>, Kokkos::Cuda>>(T1)",
+      100,
+      4.059744
+    ]
+  ],
+  "total_kernels": 73155
+}

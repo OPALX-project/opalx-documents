@@ -50,3 +50,8 @@ charged trajectories require separate care when comparing sampling conventions.
 Recreate the figures with `python plot_results.py` (NumPy, pandas, Matplotlib).
 
 Archive moved from OPALX PR #667 on 2026-11-04. Original creation dates are not established for individual supporting files; manifest dates are therefore null. The collection contains archived inputs, saved results, plotting scripts and publication figures. Large particle snapshots and field maps remain external as described in inputs/readme.md.
+
+## Latest FFT2D5 performance checks
+
+- [One, two and three A100s before density batching](gpu-scaling-123-2026-11-06/readme.md).
+- [Batched longitudinal density: matched-source CPU/GPU validation and updated turn estimates](longitudinal-density-batch-2026-11-06/readme.md).

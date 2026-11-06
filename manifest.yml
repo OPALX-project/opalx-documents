@@ -187,7 +187,7 @@ assets:
     destination: examples/2026/2d5-1/readme.md
     description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
     status: experimental
-    sha256: a01abccf2979f75b49903bcea8486b49a51ed488ca45d6cd2c4964c58469b84a
+    sha256: 2fe36f724dfdf6f5776df3ad5631f50cb60e041a4ddc869d6b60fb9b46653595
 
   - title: "FFT2D5 benchmark \u2014 results.csv"
     date: null
@@ -11094,3 +11094,1416 @@ assets:
       filenames retained; raw traces and particle snapshots external.
     status: experimental
     sha256: 9d4f45a36a46340b1d469e48aa38c3d5b494df1ba8f3cc69d29c6acd2f6d20f9
+
+  - title: "FFT2D5 one/two/three-A100 scaling — analyze.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/analyze.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 97b67f32fff1b3f795a3ec9b295a2a55d466347314625092f23be8e4298fc031
+
+  - title: "FFT2D5 one/two/three-A100 scaling — calibration3.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/calibration3.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 3cec65352136427e0e65a9e874f09c2004c5c645998d4541b059c3d616354627
+
+  - title: "FFT2D5 one/two/three-A100 scaling — phases.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/phases.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: ff6455526bf191c6897bab16dfb8550f2c66a6849b0ef7bc8733b3ad8bb60407
+
+  - title: "FFT2D5 one/two/three-A100 scaling — physics-audit.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/physics-audit.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 41839348a35a606cf78aebff463ef0202a7dd915e6b1f9ac186a20c3949f7c83
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/calibrate3-100/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/calibrate3-100/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/calibrate3-100/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/calibrate3-100/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: bb5a62d9b50f2d8ed42c3511cfa82738cb4574dd4daaa8d1449204fcfdb41b92
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/calibrate3-100/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/calibrate3-100/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 6844aaf8677b44e20945c09a865d52666eca5ec413a11ed33bb02147ef967103
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/calibrate3-100/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/calibrate3-100/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: a4e82a1776d3ad7aa674985c84a3f36b74f9e240e0db426f7d4cd931329ddfc7
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/calibrate3-100/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/calibrate3-100/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 6427316a05418152eb8385c7971d2c6558695a4750795f52b70d9fed2152e108
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/calibrate3-1000/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/calibrate3-1000/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 7511728b538981dfcceb0867ca467a7878a7de931e54b5d70143a43d6ec2630f
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/calibrate3-1000/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/calibrate3-1000/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 1d3946a34b005189c56eb721c293162fdb76ef4d9439792d71d5a54d67006300
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/calibrate3-1000/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/calibrate3-1000/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: c9dfeb3c8a197e4795a3ad5d319707d28929a10498be89ef0572eba9baa68a8f
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/calibrate3-1000/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/calibrate3-1000/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: d1d7b67fc1aebd440690ae9d925e039ede92635d0d70541712720bcb7a553650
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/calibrate3-1000/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/calibrate3-1000/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: d1e806545d5f17c5746c748327c33941546b479a18e247c4695f8f5313c3b823
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/calibrate3-355045.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/calibrate3-355045.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: e15ffd5523859f106561d32d3d4591245e3a135fc22882418f304d89f20716a5
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/calibrate3.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/calibrate3.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: ecd15d1e070cad92da9f8cd61e6b60b507d847c0d17a118fae35dbb51f379464
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/calibrate3.sbatch"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/calibrate3.sbatch"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 5745e5a462831205e0b7b2116c4aa5d7a50f46222b35f8bdaf868e5cfca02a57
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 0b6ecee254f68b552ed91ca67051b77db14b30fd85326851e0e7d61304957690
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 1eda110e660e99051799051e66c5c3109f262db34fbf2f17d1180cecce98ffba
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/gpu-probe.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/gpu-probe.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: b083c5825a4c55c8882c1067463e0838c9e24c0e55a8985920e610f18d83f7d9
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/gpu3-355044.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/gpu3-355044.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: e15ffd5523859f106561d32d3d4591245e3a135fc22882418f304d89f20716a5
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/run-3gpu.sbatch"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/run-3gpu.sbatch"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: c7943b464f4f01f44177c0b8927e6805a91c7599c33c77164b7dc8fa2c3dff72
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 6b2acb877b015ff004f09e3422bd442420be9ebf9078da841cdf0f6de8653358
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 67c4826111c13cb4e7c1397fd37aaa5283d63fc2d2cd25887ef2d2687ce1ba24
+
+  - title: "FFT2D5 one/two/three-A100 scaling — provenance/unit-parallel3.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/provenance/unit-parallel3.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 3f42afebadb1ceb46064c7ddc558258822558f7634b2c507178ce1af28e1a6a6
+
+  - title: "FFT2D5 one/two/three-A100 scaling — readme.md"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/readme.md"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 7f3fe3d75c3a9ae4ce8b4d12d2aeb2dc487c3b31dd206c6451e785beb4b29a08
+
+  - title: "FFT2D5 one/two/three-A100 scaling — rms-emittance-123.pdf"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/rms-emittance-123.pdf"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 77bad83a4f86bda043493df208c90f3db31855414c7f914f4a37cbd4863482e2
+
+  - title: "FFT2D5 one/two/three-A100 scaling — rms-emittance-123.png"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/rms-emittance-123.png"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: a8de35420f63b71de90c64e428d312ad5d022a28d27256e17d2acf545a2a4e76
+
+  - title: "FFT2D5 one/two/three-A100 scaling — summary.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/summary.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 60063d70cc08c0676836f23f5c5a500a8c5fed8cdd6b8cec265a65ae65e0fdef
+
+  - title: "FFT2D5 one/two/three-A100 scaling — timing-123.pdf"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/timing-123.pdf"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: d8764307de03837a7227b926a24e14dd6a550edffce05a863c7f40572fe8b27f
+
+  - title: "FFT2D5 one/two/three-A100 scaling — timing-123.png"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/timing-123.png"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4abc1c6a4c50fba3975a14cb61599c864800bb182276c39f05327c1abd48f553
+
+  - title: "FFT2D5 one/two/three-A100 scaling — turn-estimate.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/gpu-scaling-123-2026-11-06/turn-estimate.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 0cadbcdb5beb036922065b2519d355bb3c00e38881b4c03d62e37f77aab7864e
+
+  - title: "FFT2D5 batched longitudinal density — analyze.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/analyze.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 31ab589e7027e093a5b221a4d9f5e19a78cce21137e0eb3af164e7e2cea0ee2d
+
+  - title: "FFT2D5 batched longitudinal density — density-timing.pdf"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/density-timing.pdf"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 7e80a3445d4cca9213edb6b7b36e2cf52ba757f6a57e847cfc52fe5fa4027b62
+
+  - title: "FFT2D5 batched longitudinal density — density-timing.png"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/density-timing.png"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 1b86737d63d0bcf8117005e97ec85cf56678a6ea1f3824ab9a8685d662c933e5
+
+  - title: "FFT2D5 batched longitudinal density — phases.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/phases.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 201d4d7ee3292ee445235f68d6e588ca2602aa2bc331e539ce234277bab84136
+
+  - title: "FFT2D5 batched longitudinal density — provenance/after-TestFFT2D5Algorithm.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/after-testfft2d5algorithm.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 065510b6f7b04fcf5db3cade6c1f374c6b23b13291fb918cfff5ac8f8c233937
+
+  - title: "FFT2D5 batched longitudinal density — provenance/after-TestFFT2D5Numerics.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/after-testfft2d5numerics.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 2d7f1139fbeabfab77e17348a029d01978ad5358f8bb622f6af44d5a4924e742
+
+  - title: "FFT2D5 batched longitudinal density — provenance/after-binary.sha256"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/after-binary.sha256"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 5d7a24a46e5e2b627c166c3e3baab61dbfe8b17cbd7fc0631b6b760778eb9b27
+
+  - title: "FFT2D5 batched longitudinal density — provenance/after-gpu.sbatch"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/after-gpu.sbatch"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 751b7e97eec83317853db4f00309c792f62d0bf95ec7e8687bbdb95a7b45c6c8
+
+  - title: "FFT2D5 batched longitudinal density — provenance/after-mpi1.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/after-mpi1.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: ee8b73f4d3f9ea9a1a29baa3716a2c769a81695355a9e2b4aa131769253aa97a
+
+  - title: "FFT2D5 batched longitudinal density — provenance/after-mpi2.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/after-mpi2.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: c40fca36c18fadf74870215eaa02222f9923d46e2d47a2abef778e20d84295ca
+
+  - title: "FFT2D5 batched longitudinal density — provenance/after-mpi3.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/after-mpi3.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 766012ef7a021531eac4ce61c4fc6b0bdbbc24004a214d1c3448f2d345aca0ea
+
+  - title: "FFT2D5 batched longitudinal density — provenance/archive_metadata.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/archive_metadata.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 495fb2f297c3180cd852684b0ec9b83331365de3af0352e20cf907650ae5a057
+
+  - title: "FFT2D5 batched longitudinal density — provenance/audit_particles.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/audit_particles.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 71f1cbff26165146de0c879c7e466ed86443506de60a9b076570d7b20ecb71ac
+
+  - title: "FFT2D5 batched longitudinal density — provenance/baseline-TestFFT2D5Algorithm.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/baseline-testfft2d5algorithm.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: ca3a7857f0b9c063f5ce62388abcd7e7b1a8306b496a9bb6602293db7b90ac47
+
+  - title: "FFT2D5 batched longitudinal density — provenance/baseline-TestFFT2D5Numerics.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/baseline-testfft2d5numerics.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 98b06cdf80173edde15149232f02ff10448242976d6bf7f81cbf74f985a12e06
+
+  - title: "FFT2D5 batched longitudinal density — provenance/baseline-binaries.sha256"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/baseline-binaries.sha256"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 96daac8387c9898986d051f418259377b1d14c0556374aa7e8079aff1f935969
+
+  - title: "FFT2D5 batched longitudinal density — provenance/baseline-gpu.sbatch"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/baseline-gpu.sbatch"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: aa4e8b744c353240c67cea04ca9767b9b35314af4c513b68dbfe30ea7a3759be
+
+  - title: "FFT2D5 batched longitudinal density — provenance/baseline-mpi3.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/baseline-mpi3.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 073f1b00d4c8506dd90f68a9045f32b683930df04e4fc5bb5ede29d93d3a2400
+
+  - title: "FFT2D5 batched longitudinal density — provenance/baseline-source.txt"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/baseline-source.txt"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 3363582c8f4df6a090567bb4fbc940733494589fcb1c3606918bea7750e642e8
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-1-after/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-1-after/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-1-after/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-1-after/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 47348d4a3bdf467513212e93a95210178304259b45520820274dd21cf7fd5556
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-1-after/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-1-after/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: d51a2ecbb1b32579c8f424f04725d8226206546793f6db9040c3c3a7862729c0
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-1-after/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-1-after/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 7fd6f5efab41bac2e29c4a2ce653232a57c3a12f8f15f81af4948c0da46eadeb
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-1-after/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-1-after/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 0b1f93719b56d1ed5a2f405bf994ce365800a0f7188c0fc3b9ccc870e2070310
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-1-before/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-1-before/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-1-before/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-1-before/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: fe498f50faf00ad327232317a891bf0b5f2f89e6b4c96ce4233e3e2393b48d80
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-1-before/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-1-before/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: eccf073deb1c5b2e12c234777546167a3b371e8a72b24392e46405f0eebdbeab
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-1-before/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-1-before/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: b0b3ed1229b665d936ec18acaa59debe729c5a240cf1b008155e04eaef69c1c4
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-1-before/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-1-before/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 1e33a5f6cbe57f72a58206ef011e06921bfe0f4d18e1877049680a3355d0cd16
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-2-after/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-2-after/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-2-after/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-2-after/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 78d96e6bd744cf63efd5f725622f62d2ebb788017bf6d1cc1c44e5ff76cadb45
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-2-after/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-2-after/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 8f5d66eec76b4f3195ccdec7248f1e92e386fa5a42c17ff567f8e1e00c06aefc
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-2-after/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-2-after/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: d83ad8c676e174cf1f242f7e0f5a36cf599079b149afb89691bc3ed33246882a
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-2-after/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-2-after/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 07384def9a896093a8d6bf39eb48d3b87f825db7a4c8b48f306cfc6144cca7e1
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-2-before/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-2-before/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-2-before/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-2-before/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 61f31bd6b4501066e4d5014842da91b0ed8951bf1b3c3304c3bb2d557b461822
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-2-before/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-2-before/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: dd36b377d14b5ae7f6236561a8c95463b3f46cafbf65aa522c0b94267a7f9d48
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-2-before/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-2-before/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 2b2fd8be8a86ec5c18a920f540a9b2906c541ec8f5faecbb691a1594e149c1cc
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-2-before/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-2-before/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: bef19f8682ff4df250f4b172ad39fd0af7a8edf89d2a2c09e54bbc3ba3e39689
+
+  - title: "FFT2D5 batched longitudinal density — provenance/cpu-particle-audit.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/cpu-particle-audit.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: ea0d33a2590e6020828f160943dd591d256d2cef4b9426d213518e67e6736b4b
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-after/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-after/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-after/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-after/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 87928afcf91d7924444d6371b7ffa0a2b449f39704b3b3c5b642ca7a8ae46f4f
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-after/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-after/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 46a865da299d53bcbeb157a9f99485d0bbba6bf9092a13ce69b16472da038f76
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-after/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-after/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: bc3c2f1c783d285e5e02b3e7dd39df329104e9495ed9cc9a1ff7734e2a076160
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-after/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-after/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 69860c3f2bcd332530b44db25e8ed816ae88956d769c060ed4880c1479069f11
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-after1000/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-after1000/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 7511728b538981dfcceb0867ca467a7878a7de931e54b5d70143a43d6ec2630f
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-after1000/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-after1000/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 3ff67f919be862e03ce5c1c1c94078513edb0e431b534a15e88c928838a5b1c9
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-after1000/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-after1000/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 70883c669c7de6cbe8a7ebd96a999961af40725ce4561952e1bf0e1767ac4318
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-after1000/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-after1000/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: ffd288c904e958b1f56e4b296abeda53fb1b81e83dd31009f56cde98f2d192c3
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-after1000/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-after1000/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 8157bba57e3f6edc560456972b4d4c3bd9852a54e1a771d910083131863acede
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-before/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-before/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-before/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-before/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4173414e3419d7c88fc4378fe4a5312d19c966696e6e4d4940a8ee2a0ca64bd8
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-before/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-before/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 86739f56bdfd393b7d86acea3e92a8431ddb7dad04be39382f37661b49a6dba7
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-before/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-before/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: a9a052a08f7bddc5c1cb817a578f55d46afef1ea15c08e76e5c331be30b0911d
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-before/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-before/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: e77c2e388a189eedb4d33147c48e0f7e27ef9e0aa1fceb5db7786b5fc9c7cbf4
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-before1000/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-before1000/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 7511728b538981dfcceb0867ca467a7878a7de931e54b5d70143a43d6ec2630f
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-before1000/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-before1000/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 71766f0ae6e801225bb29154492428f6fb08b67c9e02155480a1f052edccd9de
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-before1000/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-before1000/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: a17e7fd8bbd7a7bc26c7ae1d00a3347bfda46be3e9c06f50cd88c05dcbf5d276
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-before1000/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-before1000/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: c445cb904c1ca02f3b106222e79fc6d6fe433c4cf791338733acaf8fcf616678
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-before1000/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-before1000/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 7fc885f8ee60d870e8d49042bedf1bfcd71696002978a388aa6f04cbeeae4e19
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-profile/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-profile/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-profile/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-profile/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: c845da0060e101b8d416572732899693ffa56fec71a7c3bfcedad978ca35ff01
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-profile/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-profile/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: fb6a4964adb83870a35a69eac38f35227e277bf3ce97fa65d53ff14553fcfe4d
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-profile/density-launches.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-profile/density-launches.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 38ad246455c24dc2d5ef2af7d74f577dd5c841afc07af2228623dcb1f22a1852
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-profile/export.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-profile/export.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: cfa4da26f7940a47b5385c9cc76d0ca3fb51cc8bdb784c850c8e71da8fc91a98
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-profile/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-profile/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 585b9080997f0d37cf6923cfa3cf91261a9f14968ce14ee64c4346b812e5d5b9
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-1-profile/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-1-profile/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 40e5c23582d54b7a4447f7ef29c5026fbf169c200200decff0ec7d5d315630d6
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-after/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-after/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-after/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-after/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 66f137b8af2103b160254dee8d9733987cdd832f630e850d9c3fc3b1689bdb1f
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-after/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-after/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 35d0a45d12e7f7d0f40c01cccb1a99e5727d598bfc691fce68c1276d7867c3bf
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-after/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-after/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: db4b52902cf333fec399acfeefb8a2dd5e347b9c3798a81c7f24cd67b1cf3695
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-after/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-after/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 64f871854c2a132bce5250736c65f8e07089e12c54660796c2ebc31dfeba1a3f
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-after1000/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-after1000/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 7511728b538981dfcceb0867ca467a7878a7de931e54b5d70143a43d6ec2630f
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-after1000/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-after1000/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 7a1c2b7e3dd03064770277f329b0762014df070fbc3de9fb8d0393e2749e58ef
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-after1000/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-after1000/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 43ddc6d5be5376d5d1927c6aa3dc34fb6890cf19ab381aeb1c78c3e965964cbf
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-after1000/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-after1000/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 5d00403d8a095af61dcf87af3a1c6c1086fe983f1b99a838305a018ec3d3c98f
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-after1000/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-after1000/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: f685d1d1b8599783f1d09308dd6184fc46522b897fd6ccd72ddcdc53b2fb0db5
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-before/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-before/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-before/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-before/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 111bb798ab59a08edd9784d95d5f36077a51e83f86cabdcf234236a3893a2d99
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-before/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-before/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 54f3efbcb021fa86866a859b255ee6cfbfb3f43464d68fa4233ae5e70c4030ad
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-before/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-before/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 1be2ddb8943211d05be042ef7941ecd96b21b3af5c219e0073ab911ba8c31840
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-before/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-before/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 38986ddbe14252a574689b6495533a8a8b0a791155d6d718c3f107113926b3f4
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-before1000/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-before1000/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 7511728b538981dfcceb0867ca467a7878a7de931e54b5d70143a43d6ec2630f
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-before1000/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-before1000/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4ab485737af8f70729b5756a52fdbc47b8d9b6e7e8aeb8511cbdc62e3f35f6cb
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-before1000/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-before1000/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: f4bc57b566ad753c59287808fb51b85c85c3c6b04e412eb985784edae97097e0
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-before1000/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-before1000/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 2943854eeed9ea9d04dcf8d94868201ef3f73445391bc5242d915054bf0bb912
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-2-before1000/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-2-before1000/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: f15f3d363752953d061df04f1cadb3993cc7ea38a552ffc5ca39996e04996292
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-after/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-after/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-after/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-after/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 1429bf3e03f2c8d4846eedf88385384ca9c6890d509abc9d7b498611b1a1c399
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-after/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-after/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4d967e1901868297c82ee7441612e2628d93b5c69a13bf8cf6038a544de66b0d
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-after/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-after/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 0c5cf7d5e346a0b69a41d7de3b3e6a25e2c8e13c4858c1c635e510029c9e66bd
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-after/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-after/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 7bba13168958a99974da290d68c2d98c05bbda26cc8fddd0fc5f603b3c7c7887
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-after1000/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-after1000/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 7511728b538981dfcceb0867ca467a7878a7de931e54b5d70143a43d6ec2630f
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-after1000/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-after1000/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 52c72b515e849bfd0be0f9d81b93771a39b9813e1c0bb7dc414531bfe7139039
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-after1000/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-after1000/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 778165ff09c21265d39e99cf6282344504b08059076af69ab63af589dbc7f124
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-after1000/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-after1000/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 8b2a04ad37931a1c7a9437151e3644ec899b5323fc00ac10ffb4c5a04747961c
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-after1000/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-after1000/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 081a6791c581262c611d4f31c4280f272533ad602bacf3b7f6f9f03b4ceed120
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-before/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-before/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4c00fd0d08ca76eb31975883f464aa5ba3978734827c3a849477a7d332ff7113
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-before/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-before/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 5a13745a73c5d1956918393bc0bc327634cf6a85c6dfdde1d011dc60df49290e
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-before/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-before/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 28ed37221128c23ffebee3cdbd936c6e13fa051fd0875033b434cbb5afde0a46
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-before/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-before/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: d42c4248b174e9553a6a747e2ca220d06ef5952a44e6223c220cb977de534586
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-before/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-before/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: c80dc37649c514f5bf7f530026882b2ca848fa0aab5b66be131d17c3b9ec0a0e
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-before1000/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-before1000/case.in"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 7511728b538981dfcceb0867ca467a7878a7de931e54b5d70143a43d6ec2630f
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-before1000/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-before1000/case.out"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 4e8ba2156db5152cba499539ec54532c21e1e29e39441acac0e2121401b76016
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-before1000/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-before1000/case.stat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: ec596abe26cf81aa928d72d5fb815cc9bace2e76f29cbdc800ab3f4c97f13715
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-before1000/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-before1000/run.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: e67e7f9c04d443c453163cc6892e7625cd589f027856f74d1128e0eb4196e19e
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-3-before1000/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-3-before1000/timing.dat"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: f058c022a65ed7e6c36f6cbf1cc2e112088da240c34007f1e6957c335d3f0b61
+
+  - title: "FFT2D5 batched longitudinal density — provenance/gpu-particle-audit.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/gpu-particle-audit.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: dd65b8cc619722338e6dc6bbc588d6d7afc168c3c0c9cf525bbf216652fe66dc
+
+  - title: "FFT2D5 batched longitudinal density — provenance/native-locations.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/native-locations.json"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: d94b791e2e5fe3f3749809cbf3deea3c13a17b05b13ec1f0b179b568a970950b
+
+  - title: "FFT2D5 batched longitudinal density — provenance/profile_after.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/profile_after.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: caca5e7ebfdf2c630e644b66bb660db19ace13d3a12b2adf01faf1caa5962446
+
+  - title: "FFT2D5 batched longitudinal density — provenance/run_cpu.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/run_cpu.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: fe793f22c9ac6d8e789d9e6a12d9afa4c85471ccbba60b3ff65b1d2f4458255d
+
+  - title: "FFT2D5 batched longitudinal density — provenance/run_gpu.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/run_gpu.py"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 84aa62875c7e7ea4a1d8e1736ff924090734d6c39b822fd9a4236de0f854bd78
+
+  - title: "FFT2D5 batched longitudinal density — provenance/unit-algorithm-omp4.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/unit-algorithm-omp4.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: b7ccef5ee6fa0644e72619e81e7ef8a847136c06192d254c63a6df98821d180e
+
+  - title: "FFT2D5 batched longitudinal density — provenance/unit-algorithm.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/unit-algorithm.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 51b06cd70e18fb5ce794ba32e8c4f4a9678836ef017594a3b6b93bbcbd91ecce
+
+  - title: "FFT2D5 batched longitudinal density — provenance/unit-mpi2.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/unit-mpi2.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 127f5dbb98f331f35da033c1518534c4ba91983f1796186e23598957ac5ba131
+
+  - title: "FFT2D5 batched longitudinal density — provenance/unit-mpi3.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/unit-mpi3.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: c30ddf62d050a839b17a0730c339f4b96ab9a4c30fabe8efb7186bccefa1ccad
+
+  - title: "FFT2D5 batched longitudinal density — provenance/unit-numerics.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/unit-numerics.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: fcd903c394937c6c500204c5a23b4d6923fff7f20f948582648923789155dc7e
+
+  - title: "FFT2D5 batched longitudinal density — provenance/unit-omp4.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/provenance/unit-omp4.log"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 12b201b46565be38e64708a557cd56c1d341c5cbaf7cf6115884a49570254e56
+
+  - title: "FFT2D5 batched longitudinal density — readme.md"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/readme.md"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 8d7c5c9f65cef1a150e1bc37ced27ec2f348f8de21a124c2253849fdcd144af6
+
+  - title: "FFT2D5 batched longitudinal density — stat-audit.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/stat-audit.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 95e746038dad53ba4d82f580d711433afc6cf4e2ea3fbb6f44aaa3ffcc1e7e2e
+
+  - title: "FFT2D5 batched longitudinal density — timings.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/timings.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: 1eb6cdc7eba95ced6d7daa23401f47509e252e2f9bdb8536796ce8b3cd2ba123
+
+  - title: "FFT2D5 batched longitudinal density — turn-estimates.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "Native CPU/GPU pilot results; run locations and executable identities recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/turn-estimates.csv"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained. Particle snapshots and trace databases remain external."
+    status: "experimental"
+    sha256: cc5414adf83ecba379e5c39be2a00e46cf170b666cae62f31319ad6bd6352209
+
+  - title: "FFT2D5 longitudinal density — rms-emittance.pdf"
+    date: null
+    category: "examples/2d5-1"
+    source: "Matched-source CPU/GPU pilot results; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/rms-emittance.pdf"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained; particle snapshots external."
+    status: "experimental"
+    sha256: eaba30bbb72e31676cc5e2fd1ea997f655774ba195f29305822091a3b166c08a
+
+  - title: "FFT2D5 longitudinal density — rms-emittance.png"
+    date: null
+    category: "examples/2d5-1"
+    source: "Matched-source CPU/GPU pilot results; native locations recorded with the study"
+    destination: "examples/2026/2d5-1/longitudinal-density-batch-2026-11-06/rms-emittance.png"
+    description: "Study dated 2026-11-06; canonical supporting filenames retained; particle snapshots external."
+    status: "experimental"
+    sha256: e6e0ae83361b5373ab88e6cecffabf54ab6b202cba9565fdbbaef1daf0030a5e

@@ -1,0 +1,428 @@
+OPAL-X>               ____  _____        _       __   __
+OPAL-X> [1;32m
+OPAL-X> 
+OPAL-X>   ██████  ██████   █████  ██      ██   ██
+OPAL-X>  ██    ██ ██   ██ ██   ██ ██       ██ ██
+OPAL-X>  ██    ██ ██████  ███████ ██        ███
+OPAL-X>  ██    ██ ██      ██   ██ ██       ██ ██
+OPAL-X>   ██████  ██      ██   ██ ███████ ██   ██
+OPAL-X> 
+OPAL-X>          This is OPALX (Object Oriented Parallel Accelerator Library for Exascale)
+OPAL-X> 
+OPAL-X> [0m
+OPAL-X> 
+OPAL-X> OPALX is the performance portable version of OPAL :: Version 1.0.0
+OPAL-X>             git rev. 57f3997293fb0994267804257a825ded2b909f73
+OPAL-X> 
+OPAL-X> 
+OPAL-X>              (c) PSI, https://github.com/OPALX-project/OPALX
+OPAL-X> 
+OPAL-X> 
+OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
+OPAL-X> 
+OPAL-X> Time: 15:19:12 date: 06/11/2026
+OPAL-X> 
+OPAL-X> * Executable: /Users/adelmann/git/opalx/build-omp/src/opalx
+OPAL-X> * Build configuration: Release
+OPAL-X> * Compiler: Clang 21.1.8
+OPAL-X> * CMake C++ flags (configure-time):  -O3 -DNDEBUG
+OPAL-X> * MPI ranks: 1
+OPAL-X> * C++ assertions: disabled (NDEBUG)
+OPAL-X> * OpenMP max threads: 1; dynamic teams: 0
+OPAL-X> * Kokkos host concurrency: 1
+OPAL-X> * Host:   OpenMP
+OPAL-X> * Device: OpenMP
+OPAL-X> 
+OPAL-X> * Reading input stream 'case.in'
+OPAL-X> * ************* F I E L D S O L V E R ********************************************** 
+OPAL-X> * FIELDSOLVER  FS
+OPAL-X> * BINS         NONE
+OPAL-X> * TYPE         FFT2D5
+OPAL-X> * RANKS        1
+OPAL-X> * NX           64
+OPAL-X> * NY           64
+OPAL-X> * NZ           512
+OPAL-X> * BBOXINCR     2
+OPAL-X> * GREENSF      INTEGRATED
+OPAL-X> * FFT2D5MODEL  ORIGINAL
+OPAL-X> * XDIM         serial  
+OPAL-X> * YDIM         serial  
+OPAL-X> * ZDIM         parallel  
+OPAL-X> * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> * RUN resolved beams: BEAM1
+OPAL-X> * ************* B E A M ************************************************************ 
+OPAL-X> * BEAM        BEAM1
+OPAL-X> * PARTICLE    PROTON
+OPAL-X> * REST MASS   0.938272 [GeV]
+OPAL-X> * CHARGE      +e * 1 
+OPAL-X> * MOMENTUM    0.0685391 [GeV/c]
+OPAL-X> * BCHARGE     5.60221e-09 [C]
+OPAL-X> * NALLOC      100000
+OPAL-X> * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> 
+OPAL-X> * Creating new file for data: 'case.stat'
+OPAL-X> * Creating new file for data: 'case.lbal'
+OPAL-X> * Restored checkpoint '/Users/adelmann/git/opalx/tmp/2026-11-05-merlin6-a100/payload/assets/dba-initial-state.h5' at global step 0, t = 0.000 [fs].
+OPAL-X> 
+OPAL-X> * ************** B U N C H ********************************************************* 
+OPAL-X> * CONTAINER       = 0
+OPAL-X> * PARTICLES       = 100000
+OPAL-X> * CHARGE          = 5.602212e-09 (Cb) 
+OPAL-X> * QM STORAGE MODE = SINGLE
+OPAL-X> * <EKIN>          = 2.500 [MeV]
+OPAL-X> * <dEKIN>         = 0.000 [eV]
+OPAL-X> * INTEGRATOR      = LF2
+OPAL-X> * LB Threshold    = 5.000000e-02
+OPAL-X> * MIN R (origin)  = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
+OPAL-X> * MAX R (max ext) = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
+OPAL-X> * RMS R           = (      2.86613 ,      0.00289 ,      2.86613 ) [m]
+OPAL-X> * RMS P           = ( 5.165286e-02 , 9.236709e-05 , 5.165285e-02 ) [beta gamma]
+OPAL-X> * Mean R          = ( -4.200000e+00 , 0.000000e+00 , 8.337980e-15 ) [m]
+OPAL-X> * Mean P          = ( -1.900658e-15 , 0.000000e+00 , 1.666097e-08 ) [beta gamma]
+OPAL-X> * MESH SPACING    = (     93.75000 ,     93.75000 ,     11.71875 ) [mm]
+OPAL-X> * COMPDOM INCR    = 2.000000e+00 (%) 
+OPAL-X> * FIELD LAYOUT    = Domain = {[0:63:1],[0:63:1],[0:511:1]}
+OPAL-X> Total number of boxes = 1
+OPAL-X>     Box 0 {[0:63:1],[0:63:1],[0:511:1]}
+OPAL-X> 
+OPAL-X> * Centroid : 
+OPAL-X> * -4.200000e+05 -1.900658e-10 0.000000e+00 0.000000e+00 8.337980e-10 1.666097e-03 
+OPAL-X> * Cov Matrix : 
+OPAL-X> * 8.214676e+00 -2.062321e-17 -5.538578e-22 3.186642e-23 -7.218996e-15 1.461198e-01 
+OPAL-X> * -2.062321e-17 2.668018e-03 1.698330e-23 5.751383e-25 -1.461198e-01 5.732930e-18 
+OPAL-X> * -5.538578e-22 1.698330e-23 8.339387e-06 -3.540465e-16 2.969561e-22 5.447871e-24 
+OPAL-X> * 3.186642e-23 5.751383e-25 -3.540465e-16 8.531678e-09 4.845479e-23 4.032877e-25 
+OPAL-X> * -7.218996e-15 -1.461198e-01 2.969561e-22 4.845479e-23 8.214676e+00 -1.981549e-16 
+OPAL-X> * 1.461198e-01 5.732930e-18 5.447871e-24 4.032877e-25 -1.981549e-16 2.668017e-03 
+OPAL-X> * * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> * OrbitThreader settings: design_beam=1 maps=0 dt_s=3e-12 integrator=BORIS richardson_levels=1 period_m=25.7664; reference and map rays execute serially on the host.
+OPAL-X> 
+OPAL-X> * OrbitThreader dt_m= 3e-12
+OPAL-X> * RING design circumference = 25.7663706144 m
+OPAL-X> * RING reference return length = 25.7663705239 m
+OPAL-X> * RING return displacement = 1.10305077469e-08 m; relative momentum mismatch = 1.61805639027e-09
+OPAL-X> * RING return is not a closed-orbit solve.
+OPAL-X> 
+OPAL-X> * Size of map 35 sections 
+OPAL-X> * Key: ( 0.000000 -  1.047198) number of overlapping elements 1
+OPAL-X> *                              C1_B1
+OPAL-X> * Key: ( 1.047198 -  2.047198) number of overlapping elements 1
+OPAL-X> *                              C1_D1
+OPAL-X> * Key: ( 2.047198 -  2.247198) number of overlapping elements 1
+OPAL-X> *                              C1_Q
+OPAL-X> * Key: ( 2.247198 -  3.247198) number of overlapping elements 1
+OPAL-X> *                              C1_D2
+OPAL-X> * Key: ( 3.247198 -  4.294395) number of overlapping elements 1
+OPAL-X> *                              C1_B2
+OPAL-X> * Key: ( 4.294395 -  5.341593) number of overlapping elements 1
+OPAL-X> *                              C2_B1
+OPAL-X> * Key: ( 5.341593 -  6.341593) number of overlapping elements 1
+OPAL-X> *                              C2_D1
+OPAL-X> * Key: ( 6.341593 -  6.341593) number of overlapping elements 0
+OPAL-X> * Key: ( 6.341593 -  6.541593) number of overlapping elements 1
+OPAL-X> *                              C2_Q
+OPAL-X> * Key: ( 6.541593 -  7.541593) number of overlapping elements 1
+OPAL-X> *                              C2_D2
+OPAL-X> * Key: ( 7.541593 -  8.588790) number of overlapping elements 1
+OPAL-X> *                              C2_B2
+OPAL-X> * Key: ( 8.588790 -  9.635988) number of overlapping elements 1
+OPAL-X> *                              C3_B1
+OPAL-X> * Key: ( 9.635988 -  9.635988) number of overlapping elements 2
+OPAL-X> *                              C3_D1
+OPAL-X> *                              C3_B1
+OPAL-X> * Key: ( 9.635988 - 10.635988) number of overlapping elements 1
+OPAL-X> *                              C3_D1
+OPAL-X> * Key: (10.635988 - 10.835988) number of overlapping elements 1
+OPAL-X> *                              C3_Q
+OPAL-X> * Key: (10.835988 - 10.835988) number of overlapping elements 0
+OPAL-X> * Key: (10.835988 - 11.835988) number of overlapping elements 1
+OPAL-X> *                              C3_D2
+OPAL-X> * Key: (11.835988 - 12.883185) number of overlapping elements 1
+OPAL-X> *                              C3_B2
+OPAL-X> * Key: (12.883185 - 13.930383) number of overlapping elements 1
+OPAL-X> *                              C4_B1
+OPAL-X> * Key: (13.930383 - 14.930383) number of overlapping elements 1
+OPAL-X> *                              C4_D1
+OPAL-X> * Key: (14.930383 - 14.930383) number of overlapping elements 2
+OPAL-X> *                              C4_Q
+OPAL-X> *                              C4_D1
+OPAL-X> * Key: (14.930383 - 15.130383) number of overlapping elements 1
+OPAL-X> *                              C4_Q
+OPAL-X> * Key: (15.130383 - 16.130383) number of overlapping elements 1
+OPAL-X> *                              C4_D2
+OPAL-X> * Key: (16.130383 - 17.177580) number of overlapping elements 1
+OPAL-X> *                              C4_B2
+OPAL-X> * Key: (17.177580 - 18.224778) number of overlapping elements 1
+OPAL-X> *                              C5_B1
+OPAL-X> * Key: (18.224778 - 19.224778) number of overlapping elements 1
+OPAL-X> *                              C5_D1
+OPAL-X> * Key: (19.224778 - 19.424778) number of overlapping elements 1
+OPAL-X> *                              C5_Q
+OPAL-X> * Key: (19.424778 - 20.424778) number of overlapping elements 1
+OPAL-X> *                              C5_D2
+OPAL-X> * Key: (20.424778 - 21.471975) number of overlapping elements 1
+OPAL-X> *                              C5_B2
+OPAL-X> * Key: (21.471975 - 21.471975) number of overlapping elements 2
+OPAL-X> *                              C5_B2
+OPAL-X> *                              C6_B1
+OPAL-X> * Key: (21.471975 - 22.519173) number of overlapping elements 1
+OPAL-X> *                              C6_B1
+OPAL-X> * Key: (22.519173 - 23.519173) number of overlapping elements 1
+OPAL-X> *                              C6_D1
+OPAL-X> * Key: (23.519173 - 23.719173) number of overlapping elements 1
+OPAL-X> *                              C6_Q
+OPAL-X> * Key: (23.719173 - 24.719173) number of overlapping elements 1
+OPAL-X> *                              C6_D2
+OPAL-X> * Key: (24.719173 - 25.766371) number of overlapping elements 1
+OPAL-X> *                              C6_B2
+OPAL-X> 
+OPAL-X> * Creating new file for data: 'data/case_ElementPositions.sdds'
+OPAL-X> * OrbitThreader work (this pass, rank 0 local; accepted includes localization trials):
+OPAL-X> * OT reference: nominal_steps=393240 advances=393244 trials=395290 accepted_steps=394267 cap_splits=0 support_splits=1023 max_depth=36 min_accepted_dt_s=2.18279e-23 step_cap_s=1.66782e-10
+OPAL-X> * OT reference: support_lookups=1970828 body_lookups=0 element_tests=59124840 field_samples=395290 element_fields=395291 membership_reuses=1986
+OPAL-X> * OT reference: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=131419 log_write_s=0.331511
+OPAL-X> * OT segmentation: nominal_steps=0 advances=0 trials=0 accepted_steps=0 cap_splits=0 support_splits=0 max_depth=0 min_accepted_dt_s=0 step_cap_s=0
+OPAL-X> * OT segmentation: support_lookups=0 body_lookups=0 element_tests=0 field_samples=0 element_fields=0 membership_reuses=0
+OPAL-X> * OT segmentation: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=0 log_write_s=0
+OPAL-X> * OT maps: nominal_steps=0 advances=0 trials=0 accepted_steps=0 cap_splits=0 support_splits=0 max_depth=0 min_accepted_dt_s=0 step_cap_s=0
+OPAL-X> * OT maps: support_lookups=0 body_lookups=0 element_tests=0 field_samples=0 element_fields=0 membership_reuses=0
+OPAL-X> * OT maps: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=0 log_write_s=0
+OPAL-X> * OT output: nominal_steps=0 advances=0 trials=0 accepted_steps=0 cap_splits=0 support_splits=0 max_depth=0 min_accepted_dt_s=0 step_cap_s=0
+OPAL-X> * OT output: support_lookups=0 body_lookups=0 element_tests=0 field_samples=0 element_fields=0 membership_reuses=0
+OPAL-X> * OT output: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=0 log_write_s=0
+OPAL-X> 
+ParallelTracker::execute> Ring tracking: spatial device field selection with fixed ordinary Boris/PIC steps. Boundary refinement is disabled by: checkpoint restart; solver, binning, or image-charge configuration;
+OPAL-X> * Track start at: 15:19:13, t= 0.000 [fs]; sStart at: 0.000 [um]
+OPAL-X> * Initial dt = 3.000 [ps]
+OPAL-X> * Max integration steps = 100, next step = 0
+OPAL-X>                dt [ns]           sStop [m]        num Steps [1]
+OPAL-X> ->         3.000000e-12        1.000000e+06                 100
+Ippl> FFT2D5: --2D5BatchSize 64 (independent transverse slices)
+OPAL-X> * 15:19:13 Step      0 container[0] Turn 1, angle=0.001 [deg], t= 3.000 [ps], E=2.500 [MeV]
+OPAL-X> * 15:19:15 Step     10 container[0] Turn 1, angle=0.010 [deg], t= 33.000 [ps], E=2.500 [MeV]
+OPAL-X> * 15:19:16 Step     20 container[0] Turn 1, angle=0.019 [deg], t= 63.000 [ps], E=2.500 [MeV]
+OPAL-X> * 15:19:18 Step     30 container[0] Turn 1, angle=0.028 [deg], t= 93.000 [ps], E=2.500 [MeV]
+OPAL-X> * 15:19:19 Step     40 container[0] Turn 1, angle=0.038 [deg], t= 123.000 [ps], E=2.500 [MeV]
+OPAL-X> * 15:19:21 Step     50 container[0] Turn 1, angle=0.047 [deg], t= 153.000 [ps], E=2.500 [MeV]
+OPAL-X> * 15:19:22 Step     60 container[0] Turn 1, angle=0.056 [deg], t= 183.000 [ps], E=2.500 [MeV]
+OPAL-X> * 15:19:23 Step     70 container[0] Turn 1, angle=0.065 [deg], t= 213.000 [ps], E=2.500 [MeV]
+OPAL-X> * 15:19:25 Step     80 container[0] Turn 1, angle=0.074 [deg], t= 243.000 [ps], E=2.500 [MeV]
+OPAL-X> * 15:19:26 Step     90 container[0] Turn 1, angle=0.083 [deg], t= 273.000 [ps], E=2.500 [MeV]
+OPAL-X> Boris boundary trials=0, rejected=0
+OPAL-X> 
+OPAL-X> * Done executing ParallelTracker at 15:19:28
+OPAL-X> 
+OPAL-X> * End of input stream 'case.in'
+Timings> ---------------------------------------------
+Timings>      Timing results for 1 rank(s):
+Timings> ---------------------------------------------
+Timings> mainTimer........... Wall tot =    15.3001
+Timings> 
+Timings> H5 open close....... Wall max = 0.00508475
+Timings>                      Wall avg = 0.00508475
+Timings>                      Wall min = 0.00508475
+Timings> 
+Timings> H5 total step....... Wall max = 0.00267154
+Timings>                      Wall avg = 0.00267154
+Timings>                      Wall min = 0.00267154
+Timings> 
+Timings> H5 step header...... Wall max = 0.00011475
+Timings>                      Wall avg = 0.00011475
+Timings>                      Wall min = 0.00011475
+Timings> 
+Timings> H5 device host copy. Wall max =   1.75e-06
+Timings>                      Wall avg =   1.75e-06
+Timings>                      Wall min =   1.75e-06
+Timings> 
+Timings> H5 dataset write.... Wall max = 0.000653751
+Timings>                      Wall avg = 0.000653751
+Timings>                      Wall min = 0.000653751
+Timings> 
+Timings> Write Stat.......... Wall max =  0.0158759
+Timings>                      Wall avg =  0.0158759
+Timings>                      Wall min =  0.0158759
+Timings> 
+Timings> 2D5 Initialize...... Wall max = 0.00831333
+Timings>                      Wall avg = 0.00831333
+Timings>                      Wall min = 0.00831333
+Timings> 
+Timings> 2D5 Warmup.......... Wall max =  0.0135134
+Timings>                      Wall avg =  0.0135134
+Timings>                      Wall min =  0.0135134
+Timings> 
+Timings> 2D5 Plan............ Wall max = 0.00325108
+Timings>                      Wall avg = 0.00325108
+Timings>                      Wall min = 0.00325108
+Timings> 
+Timings> 2D5 Green Init...... Wall max = 0.000582583
+Timings>                      Wall avg = 0.000582583
+Timings>                      Wall min = 0.000582583
+Timings> 
+Timings> 2D5 First Solve..... Wall max =   0.081741
+Timings>                      Wall avg =   0.081741
+Timings>                      Wall min =   0.081741
+Timings> 
+Timings> 2D5 Solve........... Wall max =    7.62417
+Timings>                      Wall avg =    7.62417
+Timings>                      Wall min =    7.62417
+Timings> 
+Timings> 2D5 Geometry........ Wall max =     1.4839
+Timings>                      Wall avg =     1.4839
+Timings>                      Wall min =     1.4839
+Timings> 
+Timings> 2D5 Migration....... Wall max =          0
+Timings>                      Wall avg =          0
+Timings>                      Wall min =          0
+Timings> 
+Timings> 2D5 Scatter......... Wall max =   0.290756
+Timings>                      Wall avg =   0.290756
+Timings>                      Wall min =   0.290756
+Timings> 
+Timings> 2D5 Rho Halo........ Wall max =          0
+Timings>                      Wall avg =          0
+Timings>                      Wall min =          0
+Timings> 
+Timings> 2D5 Poisson......... Wall max =    5.36472
+Timings>                      Wall avg =    5.36472
+Timings>                      Wall min =    5.36472
+Timings> 
+Timings> 2D5 Line density.... Wall max =   0.168414
+Timings>                      Wall avg =   0.168414
+Timings>                      Wall min =   0.168414
+Timings> 
+Timings> 2D5 E Halo.......... Wall max =          0
+Timings>                      Wall avg =          0
+Timings>                      Wall min =          0
+Timings> 
+Timings> 2D5 Gather.......... Wall max =   0.240769
+Timings>                      Wall avg =   0.240769
+Timings>                      Wall min =   0.240769
+Timings> 
+Timings> 2D5 Pack............ Wall max =    1.02883
+Timings>                      Wall avg =    1.02883
+Timings>                      Wall min =    1.02883
+Timings> 
+Timings> 2D5 FFT Rho......... Wall max =    1.47297
+Timings>                      Wall avg =    1.47297
+Timings>                      Wall min =    1.47297
+Timings> 
+Timings> 2D5 Convolution..... Wall max =   0.394575
+Timings>                      Wall avg =   0.394575
+Timings>                      Wall min =   0.394575
+Timings> 
+Timings> 2D5 FFT Back........ Wall max =    1.47652
+Timings>                      Wall avg =    1.47652
+Timings>                      Wall min =    1.47652
+Timings> 
+Timings> 2D5 Extract......... Wall max =          0
+Timings>                      Wall avg =          0
+Timings>                      Wall min =          0
+Timings> 
+Timings> 2D5 Field........... Wall max =   0.529303
+Timings>                      Wall avg =   0.529303
+Timings>                      Wall min =   0.529303
+Timings> 
+Timings> computeMoments...... Wall max =   0.571849
+Timings>                      Wall avg =   0.571849
+Timings>                      Wall min =   0.571849
+Timings> 
+Timings> TIntegration1....... Wall max =  0.0176172
+Timings>                      Wall avg =  0.0176172
+Timings>                      Wall min =  0.0176172
+Timings> 
+Timings> TIntegration2....... Wall max =  0.0604289
+Timings>                      Wall avg =  0.0604289
+Timings>                      Wall min =  0.0604289
+Timings> 
+Timings> External field eval. Wall max =    4.62533
+Timings>                      Wall avg =    4.62533
+Timings>                      Wall min =    4.62533
+Timings> 
+Timings> OrbThreader......... Wall max =   0.785827
+Timings>                      Wall avg =   0.785827
+Timings>                      Wall min =   0.785827
+Timings> 
+Timings> OT reference........ Wall max =   0.782171
+Timings>                      Wall avg =   0.782171
+Timings>                      Wall min =   0.782171
+Timings> 
+Timings> OT output........... Wall max = 0.00348667
+Timings>                      Wall avg = 0.00348667
+Timings>                      Wall min = 0.00348667
+Timings> 
+Timings> ---------------------------------------------
+Timings>      Measurement counts:
+Timings> ---------------------------------------------
+Timings> mainTimer........... Count =          1
+Timings> H5 open close....... Count =          6
+Timings> H5 total step....... Count =          1
+Timings> H5 step header...... Count =          1
+Timings> H5 device host copy. Count =          5
+Timings> H5 dataset write.... Count =         11
+Timings> Write Stat.......... Count =         10
+Timings> 2D5 Initialize...... Count =          1
+Timings> 2D5 Warmup.......... Count =          1
+Timings> 2D5 Plan............ Count =          3
+Timings> 2D5 Green Init...... Count =          1
+Timings> 2D5 First Solve..... Count =          1
+Timings> 2D5 Solve........... Count =         99
+Timings> 2D5 Geometry........ Count =        100
+Timings> 2D5 Migration....... Count =          0
+Timings> 2D5 Scatter......... Count =        100
+Timings> 2D5 Rho Halo........ Count =          0
+Timings> 2D5 Poisson......... Count =        100
+Timings> 2D5 Line density.... Count =        100
+Timings> 2D5 E Halo.......... Count =          0
+Timings> 2D5 Gather.......... Count =        100
+Timings> 2D5 Pack............ Count =        800
+Timings> 2D5 FFT Rho......... Count =        800
+Timings> 2D5 Convolution..... Count =        800
+Timings> 2D5 FFT Back........ Count =        800
+Timings> 2D5 Extract......... Count =          0
+Timings> 2D5 Field........... Count =        800
+Timings> computeMoments...... Count =        601
+Timings> TIntegration1....... Count =        100
+Timings> TIntegration2....... Count =        100
+Timings> External field eval. Count =        100
+Timings> OrbThreader......... Count =          1
+Timings> OT reference........ Count =          1
+Timings> OT output........... Count =          1
+Timings> ---------------------------------------------
+Timings> ---------------------------------------------
+Timings>      Per-occurrence statistics:
+Timings> ---------------------------------------------
+Timings> mainTimer........... n=    1  mean=   15.3001  std=         0  min=   15.3001  max=   15.3001
+Timings> H5 open close....... n=    6  mean=0.000847458  std=0.000973678  min=   7.8e-05  max=0.00265283
+Timings> H5 total step....... n=    1  mean=0.00267154  std=         0  min=0.00267154  max=0.00267154
+Timings> H5 step header...... n=    1  mean=0.00011475  std=         0  min=0.00011475  max=0.00011475
+Timings> H5 device host copy. n=    5  mean=   3.5e-07  std=1.04384e-07  min=  1.67e-07  max=  4.17e-07
+Timings> H5 dataset write.... n=   11  mean=5.94319e-05  std=2.77453e-05  min= 1.875e-06  max=0.000120917
+Timings> Write Stat.......... n=   10  mean=0.00158759  std=0.000109098  min=0.00152179  max=0.00189054
+Timings> 2D5 Initialize...... n=    1  mean=0.00831333  std=         0  min=0.00831333  max=0.00831333
+Timings> 2D5 Warmup.......... n=    1  mean= 0.0135134  std=         0  min= 0.0135134  max= 0.0135134
+Timings> 2D5 Plan............ n=    3  mean=0.00108369  std=0.00151567  min=  7.92e-07  max=0.00281583
+Timings> 2D5 Green Init...... n=    1  mean=0.000582583  std=         0  min=0.000582583  max=0.000582583
+Timings> 2D5 First Solve..... n=    1  mean=  0.081741  std=         0  min=  0.081741  max=  0.081741
+Timings> 2D5 Solve........... n=   99  mean= 0.0770118  std=  0.001226  min= 0.0752341  max= 0.0803704
+Timings> 2D5 Geometry........ n=  100  mean=  0.014839  std=0.000521629  min= 0.0143206  max= 0.0189568
+Timings> 2D5 Scatter......... n=  100  mean=0.00290756  std=7.60539e-05  min=0.00279642  max=0.00309375
+Timings> 2D5 Poisson......... n=  100  mean= 0.0536472  std=0.000966085  min= 0.0520375  max= 0.0565117
+Timings> 2D5 Line density.... n=  100  mean=0.00168414  std=8.03792e-05  min=0.00155142  max=0.00188333
+Timings> 2D5 Gather.......... n=  100  mean=0.00240769  std=5.91276e-05  min=0.00232325  max=0.00260546
+Timings> 2D5 Pack............ n=  800  mean=0.00128603  std=8.61088e-05  min=0.00112363  max=0.00158779
+Timings> 2D5 FFT Rho......... n=  800  mean=0.00184121  std=4.68773e-05  min=0.00176763  max=0.00204967
+Timings> 2D5 Convolution..... n=  800  mean=0.000493219  std=1.71552e-05  min=0.000470459  max= 0.0005645
+Timings> 2D5 FFT Back........ n=  800  mean=0.00184565  std=7.75282e-05  min=0.00175546  max=0.00223038
+Timings> 2D5 Field........... n=  800  mean=0.000661629  std=3.5557e-05  min=0.000599916  max=  0.001152
+Timings> computeMoments...... n=  601  mean=0.000951495  std=2.49732e-05  min=0.000900458  max=0.00106163
+Timings> TIntegration1....... n=  100  mean=0.000176172  std=7.2074e-06  min=0.000165959  max=0.000202042
+Timings> TIntegration2....... n=  100  mean=0.000604289  std=2.09892e-05  min=0.000571292  max=0.000698041
+Timings> External field eval. n=  100  mean= 0.0462533  std=0.000463411  min= 0.0453094  max= 0.0481066
+Timings> OrbThreader......... n=    1  mean=  0.785827  std=         0  min=  0.785827  max=  0.785827
+Timings> OT reference........ n=    1  mean=  0.782171  std=         0  min=  0.782171  max=  0.782171
+Timings> OT output........... n=    1  mean=0.00348667  std=         0  min=0.00348667  max=0.00348667
+Timings> ---------------------------------------------
