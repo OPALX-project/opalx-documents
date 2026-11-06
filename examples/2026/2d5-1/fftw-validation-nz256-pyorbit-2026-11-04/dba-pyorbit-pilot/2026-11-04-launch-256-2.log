@@ -1,0 +1,43 @@
+STEP 10 tracking_s 3.2309305839589797
+STEP 20 tracking_s 6.466230541991536
+STEP 30 tracking_s 9.691643416997977
+STEP 40 tracking_s 12.936683416948654
+STEP 50 tracking_s 16.162190124974586
+STEP 60 tracking_s 19.387992708943784
+STEP 70 tracking_s 22.61103720898973
+STEP 80 tracking_s 25.85579995898297
+STEP 90 tracking_s 29.08688799996162
+STEP 100 tracking_s 32.31757962499978
+{
+  "completed": true,
+  "code": "PyORBIT",
+  "steps": 100,
+  "dt_s": 3e-12,
+  "reference_flight_m": 0.0065523340904355505,
+  "particles": 100000,
+  "charge_C": 5.602212333965894e-09,
+  "mesh": [
+    64,
+    64,
+    256
+  ],
+  "mpi_ranks": 1,
+  "omp_threads": 4,
+  "setup_s": 0.06514500000048429,
+  "tracking_s": 32.317627124954015,
+  "native_sc_s": 1.3509035388706252,
+  "native_body_maps_s": 0.08965468901442364,
+  "python_grouping_copy_s": 30.861767260124907,
+  "diagnostics_s": 0.006883085006847978,
+  "elapsed_seconds": 32.45518874999834,
+  "hard_edge_crossing_particles": 766,
+  "source_sha256": "97943097cf785f64019b7092bd52bbf57eca77bdfbe07cdef288d9ac5732d923",
+  "driver_sha256": "150a3bb05edba7bc3ca156c12fca4864303a64a89fa9806fae16c577cb4b00eb",
+  "native_library": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/teapot_base.cpython-311-darwin.so",
+  "native_library_sha256": "0a06f175d8ff7203bb690aefebff6d149445ef188a5797d3e3458aa0c31a9695",
+  "longitudinal_SC": false,
+  "transverse_boundary": "open",
+  "longitudinal": "coasting phase labels, periodic native Grid3D, zero-charge extent guards; NGP slice deposition and TSC transverse deposition versus OPALX CIC",
+  "sampling": "common reference s, distributed ring phases and local matched envelope; OPALX common time",
+  "scope": "100-step timing pilot; no turns or tunes; Python grouping is separately reported, native code unchanged"
+}

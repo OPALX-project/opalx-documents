@@ -1,0 +1,143 @@
+{
+  "run": {
+    "case": "dba-one-turn",
+    "status": "complete",
+    "binary": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/opalx",
+    "binary_sha256": "6bd5c3a499e54c8201ac788e6c036e56d6add6c77b76967e2ce156e937f21d65",
+    "source_identity": {
+      "head": "daaf914b0cd1bc28de3b57812fad899e09badc3e",
+      "binary_sha256": "6bd5c3a499e54c8201ac788e6c036e56d6add6c77b76967e2ce156e937f21d65",
+      "source_patch_sha256": "6ec1004cfd31f34b83d3dc81404a1edcf17204226d4da946d5f03afeb0a82b90",
+      "uncommitted_fix": "Named occupancy functor; validated CUDA launch fix",
+      "dependencies": {
+        "ippl": "d6216553e39dcf4405849c027517cc3401fefee5",
+        "heffte": "4d8d4597b479d1e4709a2b1b4cd7d8922600045f",
+        "kokkos": "d9397f95a04a0334d327647e64ab7f1882ca0664"
+      }
+    },
+    "input_sha256": "77f430eba10d1aa6fb215e83cdf6aad1200425c451d0409ae5cb341c99adce39",
+    "job_id": "354991",
+    "hostname": "merlin-g-100.psi.ch",
+    "mpi_ranks": 1,
+    "batch_size": 64,
+    "omp_threads": 1,
+    "dt_s": 3e-12,
+    "nominal_period_s": 1.1797187197141108e-06,
+    "nominal_steps": 393240,
+    "circumference_m": 25.766370614359165,
+    "requested_turns": 1,
+    "stop_convention": "One reference circumference using ZSTOP; explicit TURNS does not support checkpoint restart",
+    "estimated_tracking_hours": 9.418862633333333,
+    "particles": 100000,
+    "mesh": [
+      64,
+      64,
+      512
+    ],
+    "charge_C": 5.602212333965894e-09,
+    "longitudinal": "NONE: uniform coasting beam",
+    "checkpoint_sha256": "4d6adf38da35d9168f9cdb10847786eb1ea64d27e13e521211173901037e19f5",
+    "argv": [
+      "srun",
+      "--ntasks=1",
+      "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/opalx",
+      "case.in",
+      "--info",
+      "1",
+      "--2D5BatchSize",
+      "64",
+      "--restart",
+      "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/dba-initial-state.h5"
+    ],
+    "native_returncode": 0,
+    "elapsed_s": 32907.89772573882,
+    "completed": true,
+    "final_time_s": 1.1797200000009117e-06,
+    "final_s_m": 25.766398575530726,
+    "final_global_step": 393240,
+    "retained_snapshots": 40,
+    "retained_particles": 100000,
+    "retained_charge_C": 5.602212333965893e-09
+  },
+  "model": {
+    "charge_C": 5.602212333965894e-09,
+    "current_A": 0.0047487695501886385,
+    "perveance": 7.78527376215725e-07,
+    "initial_envelope": [
+      0.010669745200049579,
+      2.2888504508497716e-15,
+      0.004771027790331786,
+      -1.9946656945966922e-15
+    ],
+    "edge_emittances_m_rad": [
+      1.2e-05,
+      1.2e-05
+    ],
+    "geometric_rms_emittances_m_rad": [
+      3e-06,
+      3e-06
+    ],
+    "normalized_rms_emittances_m_rad": [
+      2.1914469253174867e-07,
+      2.1914469253174867e-07
+    ],
+    "periodicity_residual": 1.2856109659406158e-13,
+    "analytic_tunes": [
+      0.6239401113300406,
+      1.5895363970113854
+    ]
+  },
+  "source_projection_errors": {
+    "position_m": 2.6182398263352447e-15,
+    "slope": 1.0446694507712517e-15,
+    "path_s_m": 1.7763568394002505e-15
+  },
+  "initial": {
+    "step": 0.0,
+    "time_s": 0.0,
+    "reference_s_m": 0.0,
+    "reference_turns": 0.0,
+    "sigma_equivalent_x_m": 0.005334872600024816,
+    "emit_equivalent_x_m_rad": 2.9999999999999997e-06,
+    "sigma_x_error_percent": 5.10702591327572e-13,
+    "emit_x_error_percent": -1.1102230246251565e-14,
+    "normalized_centroid_x": -6.870276569870271e-16,
+    "normalized_momentum_centroid_x": 1.5925909063740917e-14,
+    "sigma_equivalent_y_m": 0.0023855138951658925,
+    "emit_equivalent_y_m_rad": 3.0000000000000005e-06,
+    "sigma_y_error_percent": -2.220446049250313e-14,
+    "emit_y_error_percent": 2.220446049250313e-14,
+    "normalized_centroid_y": 0.0,
+    "normalized_momentum_centroid_y": 0.0
+  },
+  "final": {
+    "step": 393240.0,
+    "time_s": 1.1797200000009117e-06,
+    "reference_s_m": 25.766398575530726,
+    "reference_turns": 1.0000010851808343,
+    "sigma_equivalent_x_m": 0.005325864539172727,
+    "emit_equivalent_x_m_rad": 3.0093495165441134e-06,
+    "sigma_x_error_percent": -0.16885240805977197,
+    "emit_x_error_percent": 0.31165055147044374,
+    "normalized_centroid_x": -0.0008119621049082087,
+    "normalized_momentum_centroid_x": 0.0010840426405871958,
+    "sigma_equivalent_y_m": 0.002384055918211458,
+    "emit_equivalent_y_m_rad": 3.002213799613335e-06,
+    "sigma_y_error_percent": -0.06111794013814453,
+    "emit_y_error_percent": 0.07379332044450404,
+    "normalized_centroid_y": -3.8673156513985287e-13,
+    "normalized_momentum_centroid_y": 1.4477360120619676e-12
+  },
+  "max_abs_evolution_difference_percent": {
+    "sigma_x_error_percent": 0.19672753952730826,
+    "emit_x_error_percent": 0.31165055147044374,
+    "sigma_y_error_percent": 0.08520005468853897,
+    "emit_y_error_percent": 0.11519548777858546
+  },
+  "all_snapshots_audited": 40,
+  "finite_bin_profile_max_difference_percent": {
+    "x": 1.583311492561812,
+    "y": 1.440507507556732
+  },
+  "limits": "Section-equivalent moments pool all ring phases after the analytic unit-determinant Twiss map. Residual slice-centroid differences remain included. Profiles use 96 finite spatial bins; model rms is particle-weighted over the same bin. Analytic KV is paraxial linear focusing, uniform coasting density and free-space linear transverse self-fields, with no dispersion or longitudinal force. This one-turn check is not mesh/timestep convergence or a tune measurement."
+}

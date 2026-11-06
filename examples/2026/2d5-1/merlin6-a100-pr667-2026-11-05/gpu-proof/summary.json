@@ -1,0 +1,36 @@
+{
+  "kernel_launches": 1447837,
+  "summed_kernel_time_s": 9.656121377,
+  "categories": [
+    {
+      "category": "FFT2D5 Kokkos kernels",
+      "total_ns": 1205261725,
+      "launches": 308001,
+      "gpu_kernel_time_percent": 12.481841082391771
+    },
+    {
+      "category": "IPPL FFT device copies",
+      "total_ns": 986477687,
+      "launches": 409612,
+      "gpu_kernel_time_percent": 10.216086236754437
+    },
+    {
+      "category": "Other CUDA kernels",
+      "total_ns": 404991198,
+      "launches": 64604,
+      "gpu_kernel_time_percent": 4.194139470581346
+    },
+    {
+      "category": "cuFFT",
+      "total_ns": 951648684,
+      "launches": 307209,
+      "gpu_kernel_time_percent": 9.855392728044412
+    },
+    {
+      "category": "heFFTe CUDA rearrangement/scaling",
+      "total_ns": 6107742083,
+      "launches": 358411,
+      "gpu_kernel_time_percent": 63.252540482228035
+    }
+  ]
+}

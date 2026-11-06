@@ -1,0 +1,163 @@
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp
+@@ -261,6 +261,9 @@
+             batchPlan_m = std::make_unique<BatchPlan>(
+                     inbox, outbox, 0, MPI_COMM_SELF,
+                     ippl::fft::makeHeffteOptions<BatchBackend::backend_t>(params_m));
++            batchXRows_m.clear();
++            batchYRows_m.clear();
++            batchColumns_m = decltype(batchColumns_m)("FFT2D5BatchColumns", nc * capacity);
+             batchWorkspace_m  = BatchWorkspace(batchPlan_m->size_workspace() * capacity);
+             batchReal_m       = decltype(batchReal_m)("FFT2D5BatchReal", nr * capacity);
+             batchSpectrum_m   = decltype(batchSpectrum_m)("FFT2D5BatchSpectrum", nc * capacity);
+@@ -309,13 +312,54 @@
+     const auto real     = batchReal_m;
+     const auto spectrum = batchSpectrum_m;
+     const auto slices   = batchSlices_m;
++    const auto columns  = batchColumns_m;
+     const auto ghost = density.getNghost(), eg = electric.getNghost();
+     const auto nx2 = nx2_, ny2 = ny2_;
+-    const auto scaling  = nx2_ * ny2_ * dr_[0] * dr_[1];
++    const auto scaling  = dr_[0] * dr_[1];
+     const double inv2dx = 1. / (2 * dr_[0]), inv2dy = 1. / (2 * dr_[1]);
+     using Policy = Kokkos::MDRangePolicy<Kokkos::Rank<3>>;
+     for (size_t first = 0; first < occupied.size(); first += capacity) {
+         const int count = static_cast<int>(std::min(size_t(capacity), occupied.size() - first));
++        if (!batchXRows_m.contains(count)) {
++            opalx::spacecharge::fft2d5_detail::timed("2D5 Plan", [&] {
++                // Keep only the full batch and the current final remainder: changing
++                // occupied counts must not accumulate backend workspaces over tracking.
++                for (auto it = batchXRows_m.begin(); it != batchXRows_m.end();) {
++                    if (it->first != capacity) {
++                        batchYRows_m.erase(it->first);
++                        it = batchXRows_m.erase(it);
++                    } else ++it;
++                }
++                using Backend = BatchBackend::backend_t;
++                using Stream = typename heffte::backend::device_instance<
++                        typename heffte::backend::buffer_traits<Backend>::location>::stream_type;
++#ifdef KOKKOS_ENABLE_CUDA
++                Stream stream = Kokkos::DefaultExecutionSpace().cuda_stream();
++#else
++                Stream stream = nullptr;
++#endif
++                const heffte::box3d<long long> xRows(
++                        {0, 0, 0}, {static_cast<long long>(nx2 - 1),
++                                    static_cast<long long>(ny2 * count - 1), 0});
++                const heffte::box3d<long long> yRows(
++                        {0, 0, 0}, {static_cast<long long>(ny2 - 1),
++                                    static_cast<long long>(ncx * count - 1), 0});
++                auto x = heffte::make_executor_r2c<Backend>(stream, xRows, 0);
++                auto y = heffte::make_executor<Backend>(stream, yRows, 0);
++                const size_t workspace = std::max({size_t(1), x->workspace_size(), y->workspace_size()});
++                if (batchRowScratch_m.extent(0) < workspace)
++                    batchRowScratch_m = decltype(batchRowScratch_m)("FFT2D5RowScratch", workspace);
++                batchXRows_m.emplace(count, std::move(x));
++                batchYRows_m.emplace(count, std::move(y));
++            });
++        }
++        auto& xRows = *batchXRows_m.at(count);
++        auto& yRows = *batchYRows_m.at(count);
++        // heFFTe's native complex ABI is shared with the Kokkos complex buffers.
++        static_assert(sizeof(Complex) == sizeof(std::complex<double>));
++        auto* rowData = reinterpret_cast<std::complex<double>*>(spectrum.data());
++        auto* columnData = reinterpret_cast<std::complex<double>*>(columns.data());
++        auto* scratch = reinterpret_cast<std::complex<double>*>(batchRowScratch_m.data());
+         timedPhase("2D5 Pack", [&] {
+             Kokkos::parallel_for(
+                     "FFT2D5Batch::pack",
+@@ -331,21 +375,34 @@
+             Kokkos::fence();
+         });
+         timedPhase("2D5 FFT Rho", [&] {
+-            batchPlan_m->forward(
+-                    count, real.data(), spectrum.data(), batchWorkspace_m.data(),
+-                    heffte::scale::full);
++            xRows.forward(real.data(), rowData, scratch);
++            Kokkos::parallel_for(
++                    "FFT2D5Batch::columns", size_t(count) * nc,
++                    KOKKOS_LAMBDA(size_t p) {
++                        const size_t b = p / nc, k = p % nc;
++                        columns(b * nc + (k % ncx) * ny2 + k / ncx) = spectrum(p);
++                    });
++            yRows.forward(columnData, scratch);
+             Kokkos::fence();
+         });
+         timedPhase("2D5 Convolution", [&] {
+             Kokkos::parallel_for(
+                     "FFT2D5Batch::applyGreen", size_t(count) * nc,
+-                    KOKKOS_LAMBDA(size_t p) { spectrum(p) *= green(p % nc) * scaling; });
++                    KOKKOS_LAMBDA(size_t p) {
++                        const size_t k = p % nc;
++                        columns(p) *= green(k / ny2 + ncx * (k % ny2)) * scaling;
++                    });
+             Kokkos::fence();
+         });
+         timedPhase("2D5 FFT Back", [&] {
+-            batchPlan_m->backward(
+-                    count, spectrum.data(), real.data(), batchWorkspace_m.data(),
+-                    heffte::scale::none);
++            yRows.backward(columnData, scratch);
++            Kokkos::parallel_for(
++                    "FFT2D5Batch::rows", size_t(count) * nc,
++                    KOKKOS_LAMBDA(size_t p) {
++                        const size_t b = p / nc, k = p % nc;
++                        spectrum(p) = columns(b * nc + (k % ncx) * ny2 + k / ncx);
++                    });
++            xRows.backward(rowData, real.data(), scratch);
+             Kokkos::fence();
+         });
+         timedPhase("2D5 Field", [&] {
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Poisson.h
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Poisson.h
+@@ -32,6 +32,8 @@
+ #include "Ippl.h"
+ #include "FFT/FFT.h"
+ #include <span>
++#include <map>
++#include <complex>
+ #include "FFT/Backend/Heffte.h"
+ #include <Kokkos_MathematicalConstants.hpp>
+ #include <Kokkos_MathematicalFunctions.hpp>
+@@ -137,8 +139,8 @@
+     /**
+      * @brief Solve independent transverse slices in bounded batches using existing heFFTe R2C.
+      * @details Only x and y are transformed; slice indices are independent batch slots.
+-     * Reuses the serial solver's cell-averaged Green spectrum, full forward/unscaled
+-     * inverse normalization and source-cell-area scaling. The input density is unchanged.
++     * Reuses the serial solver's normalized cell-averaged Green spectrum with unscaled
++     * source/inverse transforms and source-cell-area scaling. The input density is unchanged.
+      * Coupling is applied while packing physical cells into zero-padded contiguous buffers.
+      * One batched Green multiplication and centered-gradient kernel replace per-slice
+      * staging. Negative transverse neighbours wrap into the doubled potential, preserving
+@@ -153,10 +155,13 @@
+      * on all batch slots in device kernels on CUDA. Fences before/after heFFTe calls preserve
+      * ordering across Kokkos and the backend stream; no host staging of density or fields is
+      * performed. Only the occupied-slice index list is copied from the host once per solve.
+-     * heFFTe can still execute native FFT stages sequentially across slots; the batch size
+-     * bounds temporary memory and groups OPALX kernels, rather than promising a proportional
+-     * reduction in FFT launches. MPI ranks own disjoint z slabs; each rank uses MPI_COMM_SELF for
+-     * its transverse plans.
++     * Existing heFFTe executor factories batch all x rows across the selected slices in
++     * one R2C operation. A device transpose makes every y column contiguous for one C2C
++     * operation; inverse transforms reverse these steps. This avoids the public plan's
++     * per-slice executor loop without changing IPPL or heFFTe. Actual-count plans are cached
++     * for the full batch and final remainder; geometry/capacity changes invalidate them.
++     * MPI ranks own disjoint z slabs and never transform z. The public MPI_COMM_SELF plan
++     * is retained solely to initialize the normalized Green spectrum on each rank.
+      * @pre On one rank, initialiseViews() has received a matching transverse workspace.
+      * @pre Unique occupied local slice indices; complete x-y planes and matching source/output
+      * grids.
+@@ -220,6 +225,12 @@
+     using Complex        = Kokkos::complex<double>;
+     std::unique_ptr<BatchPlan> batchPlan_m;
+     BatchWorkspace batchWorkspace_m;
++    using RowExecutor = heffte::one_dim_backend<BatchBackend::backend_t>::executor;
++    using RealRowExecutor = heffte::one_dim_backend<BatchBackend::backend_t>::executor_r2c;
++    // A full batch and its final remainder each have a native backend plan.
++    std::map<int, std::unique_ptr<RealRowExecutor>> batchXRows_m;
++    std::map<int, std::unique_ptr<RowExecutor>> batchYRows_m;
++    Kokkos::View<Complex*, MemSpace> batchColumns_m, batchRowScratch_m;
+     Kokkos::View<double*, MemSpace> batchReal_m;
+     Kokkos::View<Complex*, MemSpace> batchSpectrum_m, batchGreen_m;
+     Kokkos::View<size_t*, MemSpace> batchSlices_m;

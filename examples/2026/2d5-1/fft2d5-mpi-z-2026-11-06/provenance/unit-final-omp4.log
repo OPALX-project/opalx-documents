@@ -1,0 +1,17 @@
+Internal ctest changing into directory: /Users/adelmann/git/opalx/build-omp
+Test project /Users/adelmann/git/opalx/build-omp
+    Start  99: TestSpaceChargeConfig
+1/4 Test  #99: TestSpaceChargeConfig ............   Passed    0.06 sec
+    Start 100: TestFFT2D5Algorithm
+2/4 Test #100: TestFFT2D5Algorithm ..............   Passed    0.15 sec
+    Start 101: TestFFT2D5Numerics
+3/4 Test #101: TestFFT2D5Numerics ...............   Passed    0.82 sec
+    Start 111: TestFFT2D5Parallel
+4/4 Test #111: TestFFT2D5Parallel ...............   Passed    0.17 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Label Time Summary:
+unit    =   1.21 sec*proc (4 tests)
+
+Total Test time (real) =   1.22 sec

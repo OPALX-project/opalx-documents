@@ -1,0 +1,140 @@
+{
+  "completed": true,
+  "timing_rows": [
+    {
+      "code": "OPALX",
+      "nz": 512,
+      "repeat": 1,
+      "launch_wall_s": 10.843892666976899,
+      "tracking_s": null,
+      "native_sc_s": null,
+      "python_grouping_copy_s": 0.0
+    },
+    {
+      "code": "OPALX",
+      "nz": 512,
+      "repeat": 2,
+      "launch_wall_s": 11.003828500048257,
+      "tracking_s": null,
+      "native_sc_s": null,
+      "python_grouping_copy_s": 0.0
+    },
+    {
+      "code": "OPALX",
+      "nz": 256,
+      "repeat": 2,
+      "launch_wall_s": 8.343149374995846,
+      "tracking_s": null,
+      "native_sc_s": null,
+      "python_grouping_copy_s": 0.0
+    },
+    {
+      "code": "OPALX",
+      "nz": 256,
+      "repeat": 1,
+      "launch_wall_s": 8.413035750039853,
+      "tracking_s": null,
+      "native_sc_s": null,
+      "python_grouping_copy_s": 0.0
+    },
+    {
+      "code": "PyORBIT",
+      "nz": 256,
+      "repeat": 1,
+      "launch_wall_s": 32.25413870799821,
+      "tracking_s": 31.775793334003538,
+      "native_sc_s": 1.3660095020313747,
+      "native_body_maps_s": 0.0894859786494635,
+      "python_grouping_copy_s": 30.30461426283
+    },
+    {
+      "code": "PyORBIT",
+      "nz": 256,
+      "repeat": 2,
+      "launch_wall_s": 32.77847008401295,
+      "tracking_s": 32.317627124954015,
+      "native_sc_s": 1.3509035388706252,
+      "native_body_maps_s": 0.08965468901442364,
+      "python_grouping_copy_s": 30.861767260124907
+    },
+    {
+      "code": "PyORBIT",
+      "nz": 512,
+      "repeat": 1,
+      "launch_wall_s": 33.75021183403442,
+      "tracking_s": 33.269032249983866,
+      "native_sc_s": 2.530282746127341,
+      "native_body_maps_s": 0.08956598595250398,
+      "python_grouping_copy_s": 30.63245737669058
+    },
+    {
+      "code": "PyORBIT",
+      "nz": 512,
+      "repeat": 2,
+      "launch_wall_s": 33.03203141700942,
+      "tracking_s": 32.58126012503635,
+      "native_sc_s": 2.4691278343088925,
+      "native_body_maps_s": 0.08959816413698718,
+      "python_grouping_copy_s": 30.00557757023489
+    }
+  ],
+  "moment_rows": [
+    {
+      "nz": 512,
+      "field": "sigma_x_m",
+      "opalx": 0.004608230251572077,
+      "pyorbit": 0.004608230162878949,
+      "pyorbit_minus_opalx_percent": -1.9246679028306346e-06
+    },
+    {
+      "nz": 512,
+      "field": "sigma_y_m",
+      "opalx": 0.002887799676542892,
+      "pyorbit": 0.0028877995572426105,
+      "pyorbit_minus_opalx_percent": -4.131182729238958e-06
+    },
+    {
+      "nz": 512,
+      "field": "emit_n_x_m",
+      "opalx": 3.865487393035365e-07,
+      "pyorbit": 3.8654820217894356e-07,
+      "pyorbit_minus_opalx_percent": -0.00013895391145490876
+    },
+    {
+      "nz": 512,
+      "field": "emit_n_y_m",
+      "opalx": 2.6673772983119765e-07,
+      "pyorbit": 2.6673765239156964e-07,
+      "pyorbit_minus_opalx_percent": -2.9032123827210654e-05
+    },
+    {
+      "nz": 256,
+      "field": "sigma_x_m",
+      "opalx": 0.004608230255949517,
+      "pyorbit": 0.004608230167123591,
+      "pyorbit_minus_opalx_percent": -1.927549664326733e-06
+    },
+    {
+      "nz": 256,
+      "field": "sigma_y_m",
+      "opalx": 0.0028877996801735684,
+      "pyorbit": 0.0028877995598923095,
+      "pyorbit_minus_opalx_percent": -4.165152445168019e-06
+    },
+    {
+      "nz": 256,
+      "field": "emit_n_x_m",
+      "opalx": 3.865487170536138e-07,
+      "pyorbit": 3.8654824593666446e-07,
+      "pyorbit_minus_opalx_percent": -0.00012187776818883833
+    },
+    {
+      "nz": 256,
+      "field": "emit_n_y_m",
+      "opalx": 2.6673771889380626e-07,
+      "pyorbit": 2.667376508539185e-07,
+      "pyorbit_minus_opalx_percent": -2.5508161372034266e-05
+    }
+  ],
+  "limitations": "Timing pilot only. Same source, reference flight and boundaries. PyORBIT native NGP slice/TSC transverse deposition, OPALX CIC; common-s versus common-time transport. Python phase grouping cost reported separately; total times include this driver overhead and must not be read as an intrinsic code speed ratio."
+}

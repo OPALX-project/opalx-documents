@@ -1,0 +1,18 @@
+Test project /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda
+    Start  30: TestGaussian
+1/5 Test  #30: TestGaussian .....................   Passed    4.48 sec
+    Start  99: TestSpaceChargeConfig
+2/5 Test  #99: TestSpaceChargeConfig ............   Passed    1.57 sec
+    Start 100: TestFFT2D5Algorithm
+3/5 Test #100: TestFFT2D5Algorithm ..............   Passed    4.35 sec
+    Start 101: TestFFT2D5Numerics
+4/5 Test #101: TestFFT2D5Numerics ...............   Passed    5.51 sec
+    Start 109: TestPoissonSolver
+5/5 Test #109: TestPoissonSolver ................   Passed    3.97 sec
+
+100% tests passed out of 5
+
+Label Time Summary:
+unit    =  19.89 sec*proc (5 tests)
+
+Total Test time (real) =  19.94 sec

@@ -1,0 +1,662 @@
+[
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/comparison.csv",
+    "destination": "dba-fftw-threads/2026-11-04-comparison.csv",
+    "sha256": "005bb00cd4febfb0ec4d2b7fe27bf9ab621371425e92fa9aeac55566191337ba"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/comparison.json",
+    "destination": "dba-fftw-threads/2026-11-04-comparison.json",
+    "sha256": "1ef3382ba748ec6e97293a96f0452c522b276618a90da3c92dd3ab417ee233fc"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/stat-comparison.csv",
+    "destination": "dba-fftw-threads/2026-11-04-stat-comparison.csv",
+    "sha256": "cefd9e8794900b59eb774647cf06247712e218d03be668ffb52f3b0fb8d103f8"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/runtime.png",
+    "destination": "dba-fftw-threads/2026-11-04-runtime.png",
+    "sha256": "503c85817de77e45b9658080d7747406a1cc641d77849dad6c66b22acaec24e6"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/runtime.pdf",
+    "destination": "dba-fftw-threads/2026-11-04-runtime.pdf",
+    "sha256": "5be3065c81011ede9d95ab9afa61d97510cc62dbfa51254e7ac08fbe7a2fa796"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-fftw-repeat/overlay-series.csv",
+    "destination": "pr-fftw-repeat/2026-11-04-overlay-series.csv",
+    "sha256": "71cf256a9b700a4df69aeb3a2c4f6436e3c421f0a6e042fc40dc99d9517b2de4"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-fftw-repeat/published-retention.csv",
+    "destination": "pr-fftw-repeat/2026-11-04-published-retention.csv",
+    "sha256": "a3d845650f2ce26f20fdb1240f3b38e547f8bb39cf57758267178528d97fd522"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-fftw-repeat/published-retention.json",
+    "destination": "pr-fftw-repeat/2026-11-04-published-retention.json",
+    "sha256": "be673f6b1c9ac97f816dff81782aea69c96a3ddd471691ff53e60465c1ab9c08"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-fftw-repeat/analytic-retention.json",
+    "destination": "pr-fftw-repeat/2026-11-04-analytic-retention.json",
+    "sha256": "78d3ee26f7c183c360fbafec76e980914ec615662292148d37641e166567ea33"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-fftw-repeat/current-vs-published.csv",
+    "destination": "pr-fftw-repeat/2026-11-04-current-vs-published.csv",
+    "sha256": "6648e1d900be392fb55fb8adc246a2c682c7f0c6b377e31da3e880c891a05510"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-fftw-repeat/audit.json",
+    "destination": "pr-fftw-repeat/2026-11-04-audit.json",
+    "sha256": "c02924408986d6dc0b1ebbf7374221cc51fc47f7d215e72ab7aa6ce274f13115"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-fftw-repeat/rms-current-vs-pr.png",
+    "destination": "pr-fftw-repeat/2026-11-04-rms-current-vs-pr.png",
+    "sha256": "9665ff74b5cd5d2a99c20c2ed43d44865ca1f86b3644bd8fc4a1514ecc3405ae"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-fftw-repeat/rms-current-vs-pr.pdf",
+    "destination": "pr-fftw-repeat/2026-11-04-rms-current-vs-pr.pdf",
+    "sha256": "0b3ae463a8364f54b51527ee7b384cb8be55bba9caa06c589fd0cc7931705879"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-fftw-repeat/emittance-current-vs-pr.png",
+    "destination": "pr-fftw-repeat/2026-11-04-emittance-current-vs-pr.png",
+    "sha256": "97802faa6dc69fff46a16dc42b2c0e1d6772ba5a3751e703006fbaf9e27aa94d"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-fftw-repeat/emittance-current-vs-pr.pdf",
+    "destination": "pr-fftw-repeat/2026-11-04-emittance-current-vs-pr.pdf",
+    "sha256": "0608eab2cf372563b1ad97dc08234850f0ca745fe74a3b12456bf992375a964c"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-fftw-repeat/phase1-complete.json",
+    "destination": "pr-fftw-repeat/2026-11-04-phase1-complete.json",
+    "sha256": "ad36ad0f1de907f7e6c0642908a9347c2cfb176e2c512d6cc02a68c15fb862f1"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/comparison.csv",
+    "destination": "dba-fftw-pr-recheck/2026-11-04-comparison.csv",
+    "sha256": "14fc6bc8433376fbb20952a175fded286fb41eb32e28be4c61e9fbca7ae3829d"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/comparison.json",
+    "destination": "dba-fftw-pr-recheck/2026-11-04-comparison.json",
+    "sha256": "9358cb734c51ceaee2514c5054175fea643f4d7791479d64fd9b9b2850ecd15c"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/stat-comparison.csv",
+    "destination": "dba-fftw-pr-recheck/2026-11-04-stat-comparison.csv",
+    "sha256": "bfbcc077bee9aa73ff0d69d236cf29ddfe0e704b85436f72348a54d35d7b5b9d"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/published-retention.csv",
+    "destination": "dba-fftw-pr-recheck/2026-11-04-published-retention.csv",
+    "sha256": "7137bc315388ea70082ae05246d3a0770905b9432778493499dbd8c6c99db1a1"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-nz256/comparison.csv",
+    "destination": "dba-nz256/2026-11-04-comparison.csv",
+    "sha256": "ab775adf4fc68fdf310c2b9b22cda75320f32f5855ebd61367e03d63b7284750"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-nz256/summary.json",
+    "destination": "dba-nz256/2026-11-04-summary.json",
+    "sha256": "76bd7c714567e8f0e56acbe1b5b212aa58548ca5ced7b6ae63f4b2dcf94955ae"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/timing-comparison.csv",
+    "destination": "dba-pyorbit-pilot/2026-11-04-timing-comparison.csv",
+    "sha256": "5878f70ee51331c3e0d002559c171e7eddf2cf5d17cba5a8c225fa159a116be4"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/local-moment-comparison.csv",
+    "destination": "dba-pyorbit-pilot/2026-11-04-local-moment-comparison.csv",
+    "sha256": "7f6557ac2b5df06a26b905be895d70a4093f728b62e4239679674f0540ff4496"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/moment-differences.csv",
+    "destination": "dba-pyorbit-pilot/2026-11-04-moment-differences.csv",
+    "sha256": "2b17954bba511b86f53beac8d0c5ecc360fee476c132bb1dbd3e2a9a04fa2d55"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/summary.json",
+    "destination": "dba-pyorbit-pilot/2026-11-04-summary.json",
+    "sha256": "e03bd7c23db6db551fa879c9a24cf4f406f14c3ab12fc7afe21c04395e0b0903"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/runtime-comparison.png",
+    "destination": "dba-pyorbit-pilot/2026-11-04-runtime-comparison.png",
+    "sha256": "7a71a22a1c526d19303344c9d40ed1e8496894a82193482ba1d8ca7d97ebec3c"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/runtime-comparison.pdf",
+    "destination": "dba-pyorbit-pilot/2026-11-04-runtime-comparison.pdf",
+    "sha256": "a793000336258a35b9b2a7f222cae9450e57a499014932963eee9bb41c2e8d2e"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/pilot-comparison.png",
+    "destination": "dba-pyorbit-pilot/2026-11-04-pilot-comparison.png",
+    "sha256": "fcae282947576d6dc740ef7df9b7b3b0f46831c1c6d07f1a47b6ddf841377308"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/pilot-comparison.pdf",
+    "destination": "dba-pyorbit-pilot/2026-11-04-pilot-comparison.pdf",
+    "sha256": "9cc9f7331ee9a82be92394cf027b7bf038e2211bf8a1c0004fddf09d48b8c7ff"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-1-1/manifest.json",
+    "destination": "dba-fftw-threads/fftw-1-1/2026-11-04-manifest.json",
+    "sha256": "b13166ef4ffc1b4a8176ffc9ffbc4beb7f447855781cbffe3440a3ed20443e9d"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-1-1/case.in",
+    "destination": "dba-fftw-threads/fftw-1-1/2026-11-04-case.in",
+    "sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-1-1/run.log",
+    "destination": "dba-fftw-threads/fftw-1-1/2026-11-04-run.log",
+    "sha256": "ddf7344a50cbc3242d094962926f818de2201da5c2f6ec4d867b7edfd1ba8c86"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-1-2/manifest.json",
+    "destination": "dba-fftw-threads/fftw-1-2/2026-11-04-manifest.json",
+    "sha256": "ea2d876389540f883c56e67ae3870f531c8aac75112741c3c88de42705a98a39"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-1-2/case.in",
+    "destination": "dba-fftw-threads/fftw-1-2/2026-11-04-case.in",
+    "sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-1-2/run.log",
+    "destination": "dba-fftw-threads/fftw-1-2/2026-11-04-run.log",
+    "sha256": "39728afdbe29b43244b6800607533cd71c3e5c0c9485dde5ee2fd6a022051e82"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-16-1/manifest.json",
+    "destination": "dba-fftw-threads/fftw-16-1/2026-11-04-manifest.json",
+    "sha256": "63f640f8b5e36d2734faf6b549e4b1b4aeab157c834b98a63a020fb4ab151da4"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-16-1/case.in",
+    "destination": "dba-fftw-threads/fftw-16-1/2026-11-04-case.in",
+    "sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-16-1/run.log",
+    "destination": "dba-fftw-threads/fftw-16-1/2026-11-04-run.log",
+    "sha256": "cc96e79e48b148b9fd6ba0db7638483a07534684a9d694278233a061aa17ef7e"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-16-2/manifest.json",
+    "destination": "dba-fftw-threads/fftw-16-2/2026-11-04-manifest.json",
+    "sha256": "ae87fa4ab419257cacf542cc8a40ba433905919997520895a2f397b86056a36c"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-16-2/case.in",
+    "destination": "dba-fftw-threads/fftw-16-2/2026-11-04-case.in",
+    "sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-16-2/run.log",
+    "destination": "dba-fftw-threads/fftw-16-2/2026-11-04-run.log",
+    "sha256": "fc02dc6f8e8fca1343bb681ec8dd3a050f7c740ea536069a6518d351140c2b2e"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-4-1/manifest.json",
+    "destination": "dba-fftw-threads/fftw-4-1/2026-11-04-manifest.json",
+    "sha256": "59e18ad3b2fe7535f79dc3a87c5865ec5458ffd6dc9059ca70e19a98da0a99e9"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-4-1/case.in",
+    "destination": "dba-fftw-threads/fftw-4-1/2026-11-04-case.in",
+    "sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-4-1/run.log",
+    "destination": "dba-fftw-threads/fftw-4-1/2026-11-04-run.log",
+    "sha256": "11e02383511d634ed5eea7e0e2339821c8450a4adee38d22cc8cde6be30095ef"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-4-2/manifest.json",
+    "destination": "dba-fftw-threads/fftw-4-2/2026-11-04-manifest.json",
+    "sha256": "780b92e3eedc2897636fd57bf0ed4d39f7d5cc860013fe831913a40eccdb4c03"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-4-2/case.in",
+    "destination": "dba-fftw-threads/fftw-4-2/2026-11-04-case.in",
+    "sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/fftw-4-2/run.log",
+    "destination": "dba-fftw-threads/fftw-4-2/2026-11-04-run.log",
+    "sha256": "4df77fbd96ccfdedfbacabec8cf30765f7451994554b8c33cf14b449edcd6056"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/batch-0-1/manifest.json",
+    "destination": "dba-fftw-pr-recheck/batch-0-1/2026-11-04-manifest.json",
+    "sha256": "40ce94b75f66eb7aecb6fb2677afd686a15c581be68c1859594b8e12a9f7b0a3"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/batch-0-1/case.in",
+    "destination": "dba-fftw-pr-recheck/batch-0-1/2026-11-04-case.in",
+    "sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/batch-0-1/run.log",
+    "destination": "dba-fftw-pr-recheck/batch-0-1/2026-11-04-run.log",
+    "sha256": "5da324c0542c65e516136fbf0bb6f7c33eec7cea5f1607c5e864eabe031443a6"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/batch-1-1/manifest.json",
+    "destination": "dba-fftw-pr-recheck/batch-1-1/2026-11-04-manifest.json",
+    "sha256": "f2dcbd24808d315048f426eca476ee8cc2e7d8f90d727314884351583c1ce1e8"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/batch-1-1/case.in",
+    "destination": "dba-fftw-pr-recheck/batch-1-1/2026-11-04-case.in",
+    "sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/batch-1-1/run.log",
+    "destination": "dba-fftw-pr-recheck/batch-1-1/2026-11-04-run.log",
+    "sha256": "ecfe3c85e380a77f8bc8c01fb4565d89ac6434f5118a05df408b83d8a56d2747"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/batch-32-1/manifest.json",
+    "destination": "dba-fftw-pr-recheck/batch-32-1/2026-11-04-manifest.json",
+    "sha256": "90604553188e0905da14d7a0973388d1e12298dce19c061662909e8af02f4da5"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/batch-32-1/case.in",
+    "destination": "dba-fftw-pr-recheck/batch-32-1/2026-11-04-case.in",
+    "sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/batch-32-1/run.log",
+    "destination": "dba-fftw-pr-recheck/batch-32-1/2026-11-04-run.log",
+    "sha256": "77637edb0e9b99784a58d5b4f87f3ebf8783e4da919c3b9f7ee18f68e0a5fad2"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/batch-64-1/manifest.json",
+    "destination": "dba-fftw-pr-recheck/batch-64-1/2026-11-04-manifest.json",
+    "sha256": "a5422e651cbe0823f9d4ab162a79e4cca536e73860105e89c2747ef6b177b555"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/batch-64-1/case.in",
+    "destination": "dba-fftw-pr-recheck/batch-64-1/2026-11-04-case.in",
+    "sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/batch-64-1/run.log",
+    "destination": "dba-fftw-pr-recheck/batch-64-1/2026-11-04-run.log",
+    "sha256": "e612fd1d2b1b4d6fa536cdfb8eb7b36b4d51abdede856d966daf0bdcb7c021a9"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/batch-8-1/manifest.json",
+    "destination": "dba-fftw-pr-recheck/batch-8-1/2026-11-04-manifest.json",
+    "sha256": "05b9370440b0c1de825f0b298be36c01f3c354b52b2f4308f06433ee7fd1578e"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/batch-8-1/case.in",
+    "destination": "dba-fftw-pr-recheck/batch-8-1/2026-11-04-case.in",
+    "sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-pr-recheck/batch-8-1/run.log",
+    "destination": "dba-fftw-pr-recheck/batch-8-1/2026-11-04-run.log",
+    "sha256": "a5a6103c608546fe780fcc45a50c8152f261fd4791999d5a39d1e60bb2162404"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-nz256/nz-256-1/manifest.json",
+    "destination": "dba-nz256/nz-256-1/2026-11-04-manifest.json",
+    "sha256": "1880a9e2cc3a1027cf1dcc605622b8026e0b8ae27d22cbfb9f3e3df960f7eac5"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-nz256/nz-256-1/case.in",
+    "destination": "dba-nz256/nz-256-1/2026-11-04-case.in",
+    "sha256": "0c3cf6691e978998845e4dffd128f162144ceaa2f7e2c8dfe7f0d17cc4e2b4c2"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-nz256/nz-256-1/run.log",
+    "destination": "dba-nz256/nz-256-1/2026-11-04-run.log",
+    "sha256": "bfedd0cf8dffef0645c8a179a35923574ac92e2e0a744d8e030e06be3771174d"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-nz256/nz-256-2/manifest.json",
+    "destination": "dba-nz256/nz-256-2/2026-11-04-manifest.json",
+    "sha256": "81247ecb00e1c043009e963bb92ff3c396dd3972735cf15ea5f0f93362994408"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-nz256/nz-256-2/case.in",
+    "destination": "dba-nz256/nz-256-2/2026-11-04-case.in",
+    "sha256": "0c3cf6691e978998845e4dffd128f162144ceaa2f7e2c8dfe7f0d17cc4e2b4c2"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-nz256/nz-256-2/run.log",
+    "destination": "dba-nz256/nz-256-2/2026-11-04-run.log",
+    "sha256": "c30e24e761afb6b4134614a660de07af6a7b376f0ebb628a5598e71b2ed87905"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-fftw-repeat/ZeroSC/manifest.json",
+    "destination": "pr-fftw-repeat/zerosc/2026-11-04-manifest.json",
+    "sha256": "5c1ee8cd7b035f90999f1720a987bf3bf7439c6ba3b130ea8e653b90c94142fa"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-fftw-repeat/ZeroSC/track.in",
+    "destination": "pr-fftw-repeat/zerosc/2026-11-04-track.in",
+    "sha256": "957a74c7e8bc24ce80e630840a0ace988e7daa040d3649ea01e08459eed3cb83"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-fftw-repeat/10pC/manifest.json",
+    "destination": "pr-fftw-repeat/10pc/2026-11-04-manifest.json",
+    "sha256": "3f25cd15bba2f58afbab53c7f8a3b149e70b71a0468fd60112eebd7ebc8dcae2"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-fftw-repeat/10pC/track.in",
+    "destination": "pr-fftw-repeat/10pc/2026-11-04-track.in",
+    "sha256": "86c07aed2d0467c4775ca4edb857e785821853c40c7c29052788379c9adf0500"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/nz-256-1/manifest.json",
+    "destination": "dba-pyorbit-pilot/nz-256-1/2026-11-04-manifest.json",
+    "sha256": "4c058596ac5061e977e2ffe31794faa41dbcbded4095c711a78bf0b1a8976693"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/nz-256-1/moments.csv",
+    "destination": "dba-pyorbit-pilot/nz-256-1/2026-11-04-moments.csv",
+    "sha256": "9adb32344aff251787565089f757f1bd5af4ed6dd5b1c483b7b9be4938965f2e"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/nz-256-2/manifest.json",
+    "destination": "dba-pyorbit-pilot/nz-256-2/2026-11-04-manifest.json",
+    "sha256": "56ce6c3b6993e6497d911cef89655008f6c9cdd4e27d069ae481b4b98993e6be"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/nz-256-2/moments.csv",
+    "destination": "dba-pyorbit-pilot/nz-256-2/2026-11-04-moments.csv",
+    "sha256": "9adb32344aff251787565089f757f1bd5af4ed6dd5b1c483b7b9be4938965f2e"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/nz-512-1/manifest.json",
+    "destination": "dba-pyorbit-pilot/nz-512-1/2026-11-04-manifest.json",
+    "sha256": "dbed7a4150d3392d4e07a43d57d1bea03e3725c83d0c7b6bb6f6e7c249cae479"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/nz-512-1/moments.csv",
+    "destination": "dba-pyorbit-pilot/nz-512-1/2026-11-04-moments.csv",
+    "sha256": "8e0dad63a1f8af2fe1e9280e90e649fdc4fea57654ceb2601471fae79308550c"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/nz-512-2/manifest.json",
+    "destination": "dba-pyorbit-pilot/nz-512-2/2026-11-04-manifest.json",
+    "sha256": "229b8c2de942d7351429f5ff8af3287d25c0a0ba278d53dc8429bb9708d1fb74"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/nz-512-2/moments.csv",
+    "destination": "dba-pyorbit-pilot/nz-512-2/2026-11-04-moments.csv",
+    "sha256": "8e0dad63a1f8af2fe1e9280e90e649fdc4fea57654ceb2601471fae79308550c"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/launch-256-1.json",
+    "destination": "dba-pyorbit-pilot/2026-11-04-launch-256-1.json",
+    "sha256": "3398bf05bec764a24e1fb73cf2d3219fab65d3a0df046564dfe2612dec738f6b"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/launch-256-1.log",
+    "destination": "dba-pyorbit-pilot/2026-11-04-launch-256-1.log",
+    "sha256": "708a704208724bdd881a03f5c5ffcd019caaa03c932d92df982ca449b31d1418"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/launch-256-2.json",
+    "destination": "dba-pyorbit-pilot/2026-11-04-launch-256-2.json",
+    "sha256": "e21d75c9ebbd56ad27c71ce44d42783a76c9a0281abe295cf1239cd7c4c1dd36"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/launch-256-2.log",
+    "destination": "dba-pyorbit-pilot/2026-11-04-launch-256-2.log",
+    "sha256": "133e100313f077ff4865e2976035c069f9a09bd51104e9e8d708da9f96839e56"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/launch-512-1.json",
+    "destination": "dba-pyorbit-pilot/2026-11-04-launch-512-1.json",
+    "sha256": "acff3ec374dd4322e600b30199043afc9a4edf84c08dd06224d4526334e177d7"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/launch-512-1.log",
+    "destination": "dba-pyorbit-pilot/2026-11-04-launch-512-1.log",
+    "sha256": "f4604a7fe6fa5e4a5e3634f9f37922c86380151229c2b80814fb9ec0b1d40c07"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/launch-512-2.json",
+    "destination": "dba-pyorbit-pilot/2026-11-04-launch-512-2.json",
+    "sha256": "63a49c70f6680d7ff305098aa11b9620545c298d66814926586efc548a5d04cf"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-pyorbit-pilot/launch-512-2.log",
+    "destination": "dba-pyorbit-pilot/2026-11-04-launch-512-2.log",
+    "sha256": "ed39e5613c12f8fa21d7898ad9efb4302cce932228b652edb9bab65d54f098b0"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/sample/cpu-sample.txt",
+    "destination": "worker-verification/2026-11-04-cpu-sample.txt",
+    "sha256": "b509f4301c22560fe58fbb4f0082df1a12b22c92a9ee255f682d5ac918f6feed"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/sample/manifest.json",
+    "destination": "worker-verification/2026-11-04-manifest.json",
+    "sha256": "95ba0a4f20924ded3d35f7ff7199d2598dc6d66a110fccdc52272098fc209e7c"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/worker-verification.json",
+    "destination": "worker-verification/2026-11-04-worker-verification.json",
+    "sha256": "d61155db1440d437c04f8e688f00e0fee442745b2d6178ef14d2fdecaa62962f"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/worker-sample-summary.csv",
+    "destination": "worker-verification/2026-11-04-worker-sample-summary.csv",
+    "sha256": "307b1c30b50d6ca38ec921d24ce8837821f74e375e2b5e9554067545a75baf3c"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fftw-threads/stack-leaves.csv",
+    "destination": "worker-verification/2026-11-04-stack-leaves.csv",
+    "sha256": "73e809e6b2939969a42d49f102d3d8d6b422df4ad602eae3fde264b3342fe7a0"
+  },
+  {
+    "source": "/Users/adelmann/git/opalx/tmp/2026-11-04-fftw-threading/build-final.json",
+    "destination": "provenance/2026-11-04-build-final.json",
+    "sha256": "7d60829405990ee69b7a25f4cbe040fe051af0a5bef884bde5aefb8e2ef02242"
+  },
+  {
+    "source": "/Users/adelmann/git/opalx/tmp/2026-11-04-fftw-threading/ctest-omp1.log",
+    "destination": "provenance/2026-11-04-ctest-omp1.log",
+    "sha256": "19074498bd1a55611d0b56ca3ad49e8b3763c6e5c03ee5332ac4a9ba1bc32d5b"
+  },
+  {
+    "source": "/Users/adelmann/git/opalx/tmp/2026-11-04-fftw-threading/ctest-omp4.log",
+    "destination": "provenance/2026-11-04-ctest-omp4.log",
+    "sha256": "9d38b8dbe4eeb5c03c090836b6ad54d913926bb2fc1c85232a28e2ed69fbe3b9"
+  },
+  {
+    "source": "/Users/adelmann/git/opalx/tmp/2026-11-04-fftw-threading/cli-checks.json",
+    "destination": "provenance/2026-11-04-cli-checks.json",
+    "sha256": "220bbaeff28a5993df39b730eba6c50bce2825bd9e0c412b0cadeb5292762f19"
+  },
+  {
+    "source": "/Users/adelmann/git/opalx/tmp/2026-11-04-fftw-threading/mpi2-rejection-final.log",
+    "destination": "provenance/2026-11-04-mpi2-rejection-final.log",
+    "sha256": "9b74d1fc2c6634cdbb5f74322808ae700e0125f5e0ad14ea0bd728f36e85cea7"
+  },
+  {
+    "source": "/Users/adelmann/git/opalx/tmp/2026-11-04-fftw-threading/doxygen-warnings.log",
+    "destination": "provenance/2026-11-04-doxygen-warnings.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source": "/Users/adelmann/git/opalx/tmp/2026-11-04-fftw-threading/check-final.py",
+    "destination": "provenance/2026-11-04-check-final.py",
+    "sha256": "84714612e586d6cb2e32a0ddd1cfecf428887181fd7c17f2941593aa8298e86b"
+  },
+  {
+    "source": "/Users/adelmann/git/opalx/tmp/2026-11-04-fftw-threading/check-cli.py",
+    "destination": "provenance/2026-11-04-check-cli.py",
+    "sha256": "f685c9f25157c9a0424fe8d380a5f563e39a5aadf36b7e83dd8a2d361a931c65"
+  },
+  {
+    "source": "/Users/adelmann/git/opalx/tmp/2026-11-04-fftw-threading/configure-final.log",
+    "destination": "provenance/2026-11-04-configure-final.log",
+    "sha256": "99ca51a6301b1e44b32d6ce1340221c785781eeb0061f16b4bea05eb511734f7"
+  },
+  {
+    "source": "/Users/adelmann/git/opalx/tmp/2026-11-04-fftw-threading/build-callback-final.log",
+    "destination": "provenance/2026-11-04-build-callback-final.log",
+    "sha256": "c6646c21bdf165d8fe3cd198fa61d93416a6eca80c6560038eb51e67184519ac"
+  },
+  {
+    "source": "/Users/adelmann/git/opalx/tmp/2026-11-04-fftw-threading/pr667.json",
+    "destination": "provenance/2026-11-04-pr667.json",
+    "sha256": "4466b54b610456f633631936e2c538b4a464899a0d41cabcd3a1fde62950dc87"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/run_dba_fftw_threads.py",
+    "destination": "analysis/2026-11-04-run_dba_fftw_threads.py",
+    "sha256": "8b318f59f91a468df99d41a81e8c502595e37b348cbd601072517c884ab1bf0f"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/analyze_dba_fftw_threads.py",
+    "destination": "analysis/2026-11-04-analyze_dba_fftw_threads.py",
+    "sha256": "5cbe02dbd218fd3086836c852415777b357a29bbb0957f65ca3aa143ad410feb"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/plot_fftw_threads.py",
+    "destination": "analysis/2026-11-04-plot_fftw_threads.py",
+    "sha256": "fa3096efc7b3deaf22a489212b29d1c258d30dc4a8ea4582e7e7bacb3f7e2bd7"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/run_fft2d5_fftw16_sample.py",
+    "destination": "analysis/2026-11-04-run_fft2d5_fftw16_sample.py",
+    "sha256": "6a267fcbdcdae3cc91218d0884de79b8fca2e801256a9656a49ec980e267d1a2"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/analyze_fftw_worker_verification.py",
+    "destination": "analysis/2026-11-04-analyze_fftw_worker_verification.py",
+    "sha256": "f72a06a8dcc6d13ff72cee3d5067b9378dfdfee132dac719059db72aed4f62da"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/run_pr_fftw_repeat.py",
+    "destination": "analysis/2026-11-04-run_pr_fftw_repeat.py",
+    "sha256": "ac752fb8e0265c9ee601a22048e516b3fe405b5282395bb21ecf8f41c3450628"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/analyze_pr_fftw_repeat.py",
+    "destination": "analysis/2026-11-04-analyze_pr_fftw_repeat.py",
+    "sha256": "fe12a20d75d2f7fde12e6fba46ba0b2afe0789bd7fb1b1216dbd972135082ec3"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/plot_pr_fftw_overlay.py",
+    "destination": "analysis/2026-11-04-plot_pr_fftw_overlay.py",
+    "sha256": "f903784d108cd193587fdb4084e75f077fc21d0913e82b76596986d36a4bf5c9"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/check_pr_fftw_repeat.py",
+    "destination": "analysis/2026-11-04-check_pr_fftw_repeat.py",
+    "sha256": "b46b8aa321b34cb99b09775219e86433518f58468927f84c9cf092db5c973f22"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/run_dba_pr_recheck.py",
+    "destination": "analysis/2026-11-04-run_dba_pr_recheck.py",
+    "sha256": "93ea3c5c6893c0cbb2bed258e0ce0beb122a6da5d0bf0c679391f961d45621f6"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/analyze_dba_pr_recheck.py",
+    "destination": "analysis/2026-11-04-analyze_dba_pr_recheck.py",
+    "sha256": "19b5a55c2cf3fc3e378e8318146bfe5ff3c060abd0d40cbe6caa3e25b39ec99a"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/continue_after_pr_fftw.py",
+    "destination": "analysis/2026-11-04-continue_after_pr_fftw.py",
+    "sha256": "81e9ded2d9ff1e5ffe137fa4a6bf6fafdf1a06345ac36adb9df33a2aec8c0400"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/run_dba_nz256.py",
+    "destination": "analysis/2026-11-04-run_dba_nz256.py",
+    "sha256": "ba1b0bd953bbc8aab4307a5c8ebd03255334760a221be7ca2e713f4464b0ad86"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/analyze_dba_nz256.py",
+    "destination": "analysis/2026-11-04-analyze_dba_nz256.py",
+    "sha256": "fcdb165f74bc143cfdf485d35dd26eed6d6982fc65458bea97d5feda5354317f"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pilot_local_coordinates.py",
+    "destination": "analysis/2026-11-04-pilot_local_coordinates.py",
+    "sha256": "9172af5fe82d465e45c166ec7c9678e0f8747b6928ac2843b5d62bc46ca769c4"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/run_pyorbit_dba_pilot.py",
+    "destination": "analysis/2026-11-04-run_pyorbit_dba_pilot.py",
+    "sha256": "150a3bb05edba7bc3ca156c12fca4864303a64a89fa9806fae16c577cb4b00eb"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/launch_pyorbit_dba_pilot.py",
+    "destination": "analysis/2026-11-04-launch_pyorbit_dba_pilot.py",
+    "sha256": "14f18cbf35c003b71623d46d9755608805ea25b909b803474561c14aabac235b"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/analyze_pyorbit_dba_pilot.py",
+    "destination": "analysis/2026-11-04-analyze_pyorbit_dba_pilot.py",
+    "sha256": "a2d48b7988513345563232901315674f503a84b09c8015f89ec8c72094650ed7"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/plot_followup_pilot.py",
+    "destination": "analysis/2026-11-04-plot_followup_pilot.py",
+    "sha256": "156b343b5764fefe081cb7ee1c0373624fb62d9685b9cbe4e55c522c29f513bc"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/archive_fftw_followup.py",
+    "destination": "analysis/2026-11-04-archive_fftw_followup.py",
+    "sha256": "373d9a263fe41a386046c3ec286ea69873ab8369f2bddf231011bfaa280c8980"
+  },
+  {
+    "source": "/Users/adelmann/git/opalx-documents/examples/2026/2d5-1/analytic_zero_sc.py",
+    "destination": "analysis/2026-11-04-analytic-zero-sc.py",
+    "sha256": "5cbe319724ec63b522d4459cb39f0e72ff8055ed5c61ae3e0522f442ff2644e1"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility/source.json",
+    "destination": "inputs/2026-11-04-source.json",
+    "sha256": "3c52b858fbab63091ab5ef7f69dadc793b00f538a2bb5337d0f927ae732d98b4"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility/reference-path.dat",
+    "destination": "inputs/2026-11-04-reference-path.dat",
+    "sha256": "562590c1ca8b167affb53f662843f7a0618212bac66bd1ea5b103e6c88c4f121"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/model/machine.json",
+    "destination": "inputs/2026-11-04-machine.json",
+    "sha256": "dbb7ca03a7ec857cf53b8c5a1735fb5073489d91e5a4dd5966eaaa8808b04362"
+  },
+  {
+    "source": "/Users/adelmann/git/dba-lattice/tune-shift-ring/config.json",
+    "destination": "inputs/2026-11-04-lattice-config.json",
+    "sha256": "ba2cf6780d10083e7a1911a0cbb747e5321c410d75647b7a606667d255f4c124"
+  },
+  {
+    "source": "/Users/adelmann/git/opalx/tmp/2026-11-04-fftw-threading/followup-readme.md",
+    "destination": "2026-11-04-readme.md",
+    "sha256": "2c0a49ae9e5923705b8d90e60c1cc0c2fe5f80eeadfe51738e7d89c0e572c0a6"
+  },
+  {
+    "source": "/Users/adelmann/git/opalx/tmp/2026-11-04-fftw-threading/final-checks.json",
+    "destination": "provenance/2026-11-04-final-checks.json",
+    "sha256": "ff802f4598f78d095cfad046eda2702b8216f0e34db6287c2e5f7a21ab313a59"
+  }
+]

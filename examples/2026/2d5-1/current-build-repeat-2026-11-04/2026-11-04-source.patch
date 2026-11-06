@@ -1,0 +1,544 @@
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
+index ca2d934e0..9080c5137 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
+@@ -61,29 +61,48 @@ namespace opalx::spacecharge {
+         }
+         ensureInitialized();
+ 
++        // Design-path points are fixed in lab coordinates; particle arrays live in each
++        // container's moving reference frame. Use the primary container to define the
++        // common aligned solve frame, then map both the path and every container into it.
++        const auto labToSolve = context.stepState().frames.trackerToSolve
++                                * particles_m.front()->getToLabTrafo().inverted();
++        Kokkos::deep_copy(solveReferencePath_m, referencePath_m->deviceView());
++        labToSolve.transformBunchTo(solveReferencePath_m, solveReferencePath_m.extent(0));
++
+         for (std::size_t index = 0; index < particles_m.size(); ++index) {
+             if (context.trackingActive()[index] != 0) {
+-                clearSelfFields(*particles_m[index]);
+-                enterSolveFrame(context.stepState().frames, *particles_m[index]);
++                auto& particles           = *particles_m[index];
++                const auto trackerToSolve = labToSolve * particles.getToLabTrafo();
++                clearSelfFields(particles);
++                enterSolveFrame({trackerToSolve, trackerToSolve.inverted()}, particles);
+             }
+         }
+-        SpaceChargeSolveResult result;
+-        doRunSolver(context);
+-        result.backendSolves = sliceCount();
+-        for (std::size_t index = 0; index < particles_m.size(); ++index) {
+-            if (context.trackingActive()[index] == 0) {
+-                continue;
++        const auto restoreFrames = [&] {
++            for (std::size_t index = 0; index < particles_m.size(); ++index) {
++                if (context.trackingActive()[index] == 0) {
++                    continue;
++                }
++                auto& particles           = *particles_m[index];
++                const auto trackerToSolve = labToSolve * particles.getToLabTrafo();
++                leaveSolveFrame({trackerToSolve, trackerToSolve.inverted()}, particles);
++                particles.markMomentsDirty();
++                particles.updateMoments();
+             }
+-            ParticleContainer& particles = *particles_m[index];
+-            leaveSolveFrame(context.stepState().frames, particles);
+-            particles.markMomentsDirty();
+-            particles.updateMoments();
++        };
++        try {
++            doRunSolver(context);
++        } catch (...) {
++            restoreFrames();
++            throw;
+         }
++        restoreFrames();
++        SpaceChargeSolveResult result;
++        result.backendSolves = fieldStorage_m->backendSolves();
+         return result;
+     }
+ 
+     std::size_t FFT2D5Algorithm::sliceCount() const {
+-        return fieldStorage_m == nullptr ? 0 : fieldStorage_m->slices().size();
++        return fieldStorage_m == nullptr ? 0 : fieldStorage_m->meshSize()[2];
+     }
+ 
+     const ReferencePath::View& FFT2D5Algorithm::referencePathView() const {
+@@ -102,11 +121,14 @@ namespace opalx::spacecharge {
+         // Publish dependent storage together only after path loading and allocation succeed.
+         referencePath_m =
+                 std::make_unique<ReferencePath>(ReferencePath::load(config_m.referencePathFile));
++        solveReferencePath_m = ReferenceView_t(
++                "FFT2D5SolveReferencePath", referencePath_m->deviceView().extent(0));
++        Kokkos::deep_copy(solveReferencePath_m, referencePath_m->deviceView());
+         fieldStorage_m = std::make_unique<FFT2D5FieldStorage>(config_m, referencePath_m->length());
+         lineDensity_m  = LineDensityView_t(
+-                "FFT2D5LineDensity", fieldStorage_m->slices().size() + LineDensityGhostCells);
++                "FFT2D5LineDensity", fieldStorage_m->meshSize()[2] + LineDensityGhostCells);
+         lineDensityGradient_m =
+-                LineDensityView_t("FFT2D5LineDensityGradient", fieldStorage_m->slices().size());
++                LineDensityView_t("FFT2D5LineDensityGradient", fieldStorage_m->meshSize()[2]);
+     }
+ 
+ }  // namespace opalx::spacecharge
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
+index 5c9da79e8..32f6522ea 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
+@@ -38,20 +38,21 @@ namespace opalx::spacecharge {
+      * @details
+      * The solver performs the following sequence of operations to account for space charge
+      * in the electric and magnetic fields that particles feel.
+-     * 1. Translate the particle cartesian coordinates into Frenet-Serret coordinates and
+-     *    then boost into the beam reference frame.  The reference orbit can be provided from a file
+-     * or acquired from the OrbitThreader.
++     * 1. Map the fixed laboratory reference path and the particles' moving reference
++     *    coordinates into one aligned spatial frame, then into Frenet-Serret coordinates.
++     *    The reference path is provided by a file or the OrbitThreader. Only diagnostic
++     *    momenta are boosted; source positions and line charge retain laboratory normalization.
+      * 2. Do CiC scatter of charge into the 3D charge density grid.  This spreads the charge out
+      * both transversely and (optionally) longitudinally which should be a help in reducing noise.
+-     * 3. Copy the 3D charge density  grid into a stack of 2D grids along the S coordinate.
+-     * 4. Perform the 2D Poisson solve on each of the 2D grids in the stack to determine the
+-     *    X and Y electric field components.  Initially, the boundary conditions used will be open.
++     * 3. Copy each occupied transverse charge-density slice into one reusable 2D workspace.
++     * 4. Perform the 2D Poisson solve to determine the X and Y electric field components;
++     *    identically empty slices have zero field and need no FFT. Boundary conditions are open.
+      * 5. Calculate the longitudinal S electric field component using the algorithm from PyHEADTAIL.
+      *    This uses the local line density along the reference orbit and a geometry constant that
+      *    encodes the effect of the beam pipe on the longitudinal component.
+      * 6. Do CiC gather of fields for the particle positions.
+-     * 7. Translate from the beam reference frame into the lab frame in Frenet-Serret coodinates and
+-     *    then back into cartesian coordinates.
++     * 7. Rotate the local Frenet-Serret fields into the common Cartesian frame and restore
++     *    each container's moving reference coordinates and fields.
+      */
+     class FFT2D5Algorithm final : public SpaceChargeAlgorithm {
+     public:
+@@ -487,23 +488,19 @@ namespace opalx::spacecharge {
+          * @return Returns the number of slices in the Frenet-Serret domain.
+          * For use only by test cases.
+          */
+-        size_t getNumSlices() const { return fieldStorage_m->slices().size(); }
++        size_t getNumSlices() const { return fieldStorage_m->meshSize()[2]; }
+ 
+         /**
+          * @return Returns the mesh object for the Frenet-Serret domain.
+          * For use only by test cases.
+          */
+-        Mesh2D_t* getSliceMesh() const {
+-            return &fieldStorage_m->slices().front().chargeDensity->get_mesh();
+-        }
++        Mesh2D_t* getSliceMesh() const { return &fieldStorage_m->sliceMesh(); }
+ 
+         /**
+          * @return Returns the slice layout object for the Frenet-Serret domain.
+          * For use only by test cases.
+          */
+-        Layout2D_t* getSliceLayout() const {
+-            return &fieldStorage_m->slices().front().chargeDensity->getLayout();
+-        }
++        Layout2D_t* getSliceLayout() const { return &fieldStorage_m->sliceLayout(); }
+ 
+         /**
+          * @return Returns the reference path view for the Frenet-Serret domain.
+@@ -540,6 +537,7 @@ namespace opalx::spacecharge {
+         std::vector<ParticleContainer*> particles_m;
+         std::shared_ptr<const BunchStateHandler> bunchState_m;
+         std::unique_ptr<ReferencePath> referencePath_m;
++        ReferenceView_t solveReferencePath_m;
+         std::unique_ptr<FFT2D5FieldStorage> fieldStorage_m;
+         LineDensityView_t lineDensity_m;
+         LineDensityView_t lineDensityGradient_m;
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
+index 4fc75558b..b35ea1871 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
+@@ -258,8 +258,8 @@ namespace opalx::spacecharge {
+             const SpaceChargeSolveContext& context, DiagnosticPolicy diagnostic) {
+         using Policy2D_t = Kokkos::MDRangePolicy<Kokkos::Rank<2>>;
+         using Policy3D_t = Kokkos::MDRangePolicy<Kokkos::Rank<3>>;
+-        if (referencePath_m->deviceView().extent(0) > 1) {
+-            const auto ref     = referencePath_m->deviceView();
++        if (solveReferencePath_m.extent(0) > 1) {
++            const auto ref     = solveReferencePath_m;
+             const auto invDr   = 1.0 / fieldStorage_m->spacing();
+             const int nGhost   = fieldStorage_m->chargeDensity().getNghost();
+             const auto lDom    = fieldStorage_m->chargeDensity().getLayout().getLocalNDIndex();
+@@ -530,25 +530,51 @@ namespace opalx::spacecharge {
+ 
+     template <typename DiagnosticPolicy>
+     void FFT2D5Algorithm::solvePoissons(DiagnosticPolicy diagnostic) {
+-        using Policy      = Kokkos::MDRangePolicy<Kokkos::Rank<2>>;
+-        auto e3d          = fieldStorage_m->electricField().getView();
+-        const auto nGhost = fieldStorage_m->electricField().getNghost();
+-        // Copy the 3D charge density grid into the array of 2D grids, solve the 2D poisson on each,
+-        // then copy the E field results into the 3D E field grid.
+-        for (size_t z = 0; z < fieldStorage_m->slices().size(); ++z) {
+-            const auto& s = fieldStorage_m->slices()[z];
++        using Policy         = Kokkos::MDRangePolicy<Kokkos::Rank<2>>;
++        auto e3d             = fieldStorage_m->electricField().getView();
++        const auto rho3d     = fieldStorage_m->chargeDensity().getView();
++        const auto nGhost    = fieldStorage_m->electricField().getNghost();
++        const auto numSlices = fieldStorage_m->meshSize()[2];
++        fieldStorage_m->resetBackendSolves();
++        // Empty slices have exactly zero transverse field. Clear the staging grid first, including
++        // slices that were occupied on the preceding step, so skipping them cannot retain a field.
++        Kokkos::deep_copy(e3d, Vector3D_t(0.0));
++        Kokkos::View<int*> occupiedSlices("FFT2D5OccupiedSlices", numSlices);
++        Kokkos::deep_copy(occupiedSlices, 0);
++        Kokkos::parallel_for(
++                "Solve2d5::solvePoissons::occupancy", Policy({0, 0}, {numSlices, rho3d.extent(0)}),
++                KOKKOS_LAMBDA(const size_t z, const size_t x) {
++                    for (size_t y = 0; y < rho3d.extent(1); ++y) {
++                        // Check nonzero density, rather than signed total charge: opposite charges
++                        // may have zero net charge while still producing a nonzero slice field.
++                        if (rho3d(x, y, z + nGhost) != T(0)) {
++                            Kokkos::atomic_max(&occupiedSlices(z), 1);
++                            break;
++                        }
++                    }
++                });
++        auto occupiedHost =
++                Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), occupiedSlices);
++        // All ranks must execute the same FFT calls, even if their local sources differ.
++        ippl::Comm->allreduce(occupiedHost.data(), numSlices, std::greater<int>());
++        // Copy each source into the same 2D workspace, solve, and copy the resulting field back.
++        // Independent slices need neither separate FFT plans nor separate solver buffers.
++        const auto& s = fieldStorage_m->workspace();
++        auto rho2d    = s.chargeDensity->getView();
++        for (size_t z = 0; z < numSlices; ++z) {
+             // Do the 2D solve to get Ex and Ey
+-            auto rho2d = s.chargeDensity->getView();
+             Kokkos::deep_copy(
+-                    rho2d, Kokkos::subview(
+-                                   fieldStorage_m->chargeDensity().getView(), Kokkos::ALL(),
+-                                   Kokkos::ALL(), z + nGhost));
++                    rho2d, Kokkos::subview(rho3d, Kokkos::ALL(), Kokkos::ALL(), z + nGhost));
++            if (occupiedHost(z) == 0) {
++                diagnostic.potential(rho2d, z + nGhost);
++                continue;
++            }
+             // Scale by the coupling constant then solve
+             Kokkos::parallel_for(
+                     "Solve2d5::solvePoissons::coupling",
+                     Policy({0, 0}, {rho2d.extent(0), rho2d.extent(1)}),
+                     fft2d5_detail::PoissonCouplingFunctor{rho2d});
+-            fieldStorage_m->solveSlice(z);
++            fieldStorage_m->solveSlice();
+             Kokkos::fence();
+             diagnostic.potential(rho2d, z + nGhost);
+             auto e2d = s.electricField->getView();
+@@ -580,7 +606,7 @@ namespace opalx::spacecharge {
+     template <typename DiagnosticPolicy>
+     void FFT2D5Algorithm::gatherFromGrid(
+             const SpaceChargeSolveContext& context, DiagnosticPolicy diagnostic) {
+-        if (referencePath_m->deviceView().extent(0) > 1) {
++        if (solveReferencePath_m.extent(0) > 1) {
+             for (std::size_t container = 0; container < particles_m.size(); ++container) {
+                 if (context.trackingActive()[container] == 0) {
+                     continue;
+@@ -588,7 +614,7 @@ namespace opalx::spacecharge {
+                 auto* pc                       = particles_m[container];
+                 const auto r                   = pc->R.getView();
+                 const auto p                   = pc->P.getView();
+-                const auto ref                 = referencePath_m->deviceView();
++                const auto ref                 = solveReferencePath_m;
+                 const auto meanPs              = pc->getMeanP().data_m[2];
+                 const auto e                   = pc->E.getView();
+                 const auto b                   = pc->B.getView();
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp b/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp
+index e9f8fde86..9538ccc1d 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp
+@@ -96,28 +96,25 @@ namespace opalx::spacecharge {
+         solverParameters_m.add("algorithm", OpenSolver2::HOCKNEY);
+         solverParameters_m.add("output_type", OpenSolver2::SOL_AND_GRAD);
+ 
+-        slices_m.resize(meshSize_m[2]);
+-        for (Slice& slice : slices_m) {
+-            slice.electricField = std::make_unique<VectorField2>(sliceMesh_m, sliceLayout_m);
+-            slice.chargeDensity = std::make_unique<ScalarField2>(sliceMesh_m, sliceLayout_m);
++        workspace_m.electricField = std::make_unique<VectorField2>(sliceMesh_m, sliceLayout_m);
++        workspace_m.chargeDensity = std::make_unique<ScalarField2>(sliceMesh_m, sliceLayout_m);
+ #if OPALX_FFT2D5_ALGORITHM_USE_IPPL_2D_POISSON_SOLVER
+-            slice.solver = std::make_unique<OpenSolver2>(
+-                    *slice.electricField, *slice.chargeDensity, solverParameters_m);
++        workspace_m.solver = std::make_unique<OpenSolver2>(
++                *workspace_m.electricField, *workspace_m.chargeDensity, solverParameters_m);
+ #else
+-            slice.solver2 = std::make_unique<FFT2D5Poisson>();
++        workspace_m.solver2 = std::make_unique<FFT2D5Poisson>();
+ #endif
+-        }
+     }
+ 
+     FFT2D5FieldStorage::~FFT2D5FieldStorage() = default;
+ 
+-    void FFT2D5FieldStorage::solveSlice(std::size_t sliceIndex) const {
++    void FFT2D5FieldStorage::solveSlice() {
+ #if OPALX_FFT2D5_ALGORITHM_USE_IPPL_2D_POISSON_SOLVER
+-        slices_m.at(sliceIndex).solver->solve();
++        workspace_m.solver->solve();
+ #else
+-        auto& slice = slices_m[sliceIndex];
+-        slice.solver2->solve(*slice.chargeDensity, *slice.electricField);
++        workspace_m.solver2->solve(*workspace_m.chargeDensity, *workspace_m.electricField);
+ #endif
++        ++backendSolves_m;
+     }
+ 
+ }  // namespace opalx::spacecharge
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h b/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h
+index 79d5c6cc1..dff23fe80 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h
++++ b/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h
+@@ -15,7 +15,7 @@
+ //
+ /**
+  * @file FFT2D5FieldStorage.h
+- * @brief Owns persistent 3D staging fields and the FFT2D5 slice solver array.
++ * @brief Owns persistent 3D staging fields and one reusable FFT2D5 slice solver.
+  */
+ 
+ #ifndef OPALX_SPACE_CHARGE_FFT2D5_FIELD_STORAGE_H
+@@ -27,25 +27,20 @@
+ 
+ #include <cstddef>
+ #include <memory>
+-#include <vector>
+ 
+-// Set the switch to true to select the IPPL 2D Poisson solver, false to select the
+-// FFT2D5's 2D Poisson solver.
+-// FFT2D5 has its own version which does not contain all the baggage the IPPL version
+-// has and was thus easier to reason about during development.  It may also provide
+-// the basis for the sine transform solver for the grounded boundary conditions in due
+-// course.  The two versions produce results that are different by a few percent, most
+-// likely due to the E field calculation (Fourier domain for IPPL, central differences
+-// for FFT2D5).  The FFT2D5 version does have an extensive test case.
+-#define OPALX_FFT2D5_ALGORITHM_USE_IPPL_2D_POISSON_SOLVER true
++// The native solver integrates the logarithmic Green function over each source
++// cell. IPPL's point-sampled 2D kernel has a spacing-independent self value,
++// which gives large errors for thin beams. Retain the alternative for comparison.
++#define OPALX_FFT2D5_ALGORITHM_USE_IPPL_2D_POISSON_SOLVER false
+ 
+ namespace opalx::spacecharge {
+ 
+     /**
+-     * @brief Persistent fields and per-slice Poisson solvers for one FFT2D5 run.
++     * @brief Persistent fields and a reusable Poisson workspace for one FFT2D5 run.
+      *
+-     * The 3D fields stage deposition and gathering. Every transverse slice owns separate 2D IPPL
+-     * fields because the Field API cannot use a Kokkos subview as its storage.
++     * The 3D fields stage deposition and gathering. Slices are solved sequentially, so they share
++     * one pair of 2D IPPL fields and one FFT plan. The Field API cannot use a Kokkos subview as
++     * its storage; each source slice is copied into this workspace before solving.
+      */
+     class FFT2D5FieldStorage final {
+     public:
+@@ -88,15 +83,16 @@ namespace opalx::spacecharge {
+         [[nodiscard]] Layout3& layout() { return layout_m; }
+         [[nodiscard]] ScalarField3& chargeDensity() { return chargeDensity_m; }
+         [[nodiscard]] VectorField3& electricField() { return electricField_m; }
+-        [[nodiscard]] std::vector<Slice>& slices() { return slices_m; }
++        [[nodiscard]] Slice& workspace() { return workspace_m; }
++        [[nodiscard]] std::size_t backendSolves() const { return backendSolves_m; }
++        void resetBackendSolves() { backendSolves_m = 0; }
+ 
+         /**
+          * @brief Solve a physical slice using its already scaled charge density.
+-         * @param sliceIndex Zero-based slice index, excluding the 3D field's ghost cells.
+          * @note Native solver construction, execution, and destruction are compiled together
+          * to keep CUDA kernel stubs and their device registration in the same translation unit.
+          */
+-        void solveSlice(std::size_t sliceIndex) const;
++        void solveSlice();
+ 
+     private:
+         std::array<std::size_t, 3> meshSize_m;
+@@ -112,7 +108,8 @@ namespace opalx::spacecharge {
+         Mesh2 sliceMesh_m;
+         Layout2 sliceLayout_m;
+         ippl::ParameterList solverParameters_m;
+-        std::vector<Slice> slices_m;
++        Slice workspace_m;
++        std::size_t backendSolves_m = 0;
+     };
+ 
+ }  // namespace opalx::spacecharge
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp b/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp
+index 459a835f1..41cbaeb36 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp
+@@ -95,12 +95,10 @@ void FFT2D5Poisson::makeGreensFn() {
+                 const size_t iy = j <= ny2 / 2 ? j : ny2 - j;
+                 const double x  = ix * dr[0];
+                 const double y  = iy * dr[1];
+-                const double r  = Kokkos::sqrt(x * x + y * y);
+-                if (r > 0.0) {
+-                    greensFn(i + nGhost, j + nGhost) = -Kokkos::log(r) / (2.0 * M_PI);
+-                } else {
+-                    greensFn(i + nGhost, j + nGhost) = 0.0;
+-                }
++                // Source density is piecewise constant on each rectangular cell.
++                // Integrating the logarithmic singularity also makes the self
++                // value scale correctly for narrow beams and anisotropic cells.
++                greensFn(i + nGhost, j + nGhost) = cellAveragedGreensFunction(x, y, dr[0], dr[1]);
+             });
+     Kokkos::fence();
+     fft_m->transform(ippl::FORWARD, greensFn_m, greensFnTr_m);
+@@ -148,11 +146,17 @@ void FFT2D5Poisson::extractPotential(ScalarField2_t& potential) {
+     const auto nGhostDoubledPhi = doubledRho_m.getNghost();
+     const auto phi              = potential.getView();
+     const auto nGhostPhi        = potential.getNghost();
++    const auto nx2              = static_cast<int>(nx2_);
++    const auto ny2              = static_cast<int>(ny2_);
++    // The doubled convolution also contains the free-space potential just
++    // outside the physical domain. Preserve it in the halo so centered
++    // differences remain valid at the first and last physical cells.
+     Kokkos::parallel_for(
+-            "CopyPotential", Kokkos::MDRangePolicy({0, 0}, {nx2_ / 2, ny2_ / 2}),
+-            KOKKOS_LAMBDA(const size_t i, const size_t j) {
+-                phi(i + nGhostPhi, j + nGhostPhi) =
+-                        doubledPhi(i + nGhostDoubledPhi, j + nGhostDoubledPhi);
++            "CopyPotential", Kokkos::MDRangePolicy({0, 0}, {phi.extent(0), phi.extent(1)}),
++            KOKKOS_LAMBDA(const int i, const int j) {
++                const int ix = (i - nGhostPhi + nx2) % nx2;
++                const int iy = (j - nGhostPhi + ny2) % ny2;
++                phi(i, j)    = doubledPhi(ix + nGhostDoubledPhi, iy + nGhostDoubledPhi);
+             });
+     Kokkos::fence();
+ }
+@@ -170,25 +174,9 @@ void FFT2D5Poisson::determineField(const ScalarField2_t& potential, VectorField2
+         throw OpalException(
+                 "FFT2D5Poisson::determineField", "Phi ghost cells must be greater than zero");
+     }
+-    if (nx <= 2 || ny <= 2) {
+-        throw OpalException("FFT2D5Poisson::determineField", "Domain must be larger than 2x2");
++    if (nx == 0 || ny == 0) {
++        throw OpalException("FFT2D5Poisson::determineField", "Domain must contain physical cells");
+     }
+-    // Extrapolate the boundary cells into the ghost cells
+-    Kokkos::parallel_for(
+-            "CopyTopBottomBoundaries", nx, KOKKOS_LAMBDA(const size_t i) {
+-                phi(i + nGhostPhi, nGhostPhi - 1) =
+-                        2 * phi(i + nGhostPhi, nGhostPhi) - phi(i + nGhostPhi, 1 + nGhostPhi);
+-                phi(i + nGhostPhi, ny + nGhostPhi) = 2 * phi(i + nGhostPhi, ny - 1 + nGhostPhi)
+-                                                     - phi(i + nGhostPhi, ny - 2 + nGhostPhi);
+-            });
+-    Kokkos::parallel_for(
+-            "CopyLeftRightBoundaries", ny, KOKKOS_LAMBDA(const size_t j) {
+-                phi(nGhostPhi - 1, j + nGhostPhi) =
+-                        2 * phi(nGhostPhi, j + nGhostPhi) - phi(1 + nGhostPhi, j + nGhostPhi);
+-                phi(nx + nGhostPhi, j + nGhostPhi) = 2 * phi(nx - 1 + nGhostPhi, j + nGhostPhi)
+-                                                     - phi(nx - 2 + nGhostPhi, j + nGhostPhi);
+-            });
+-    Kokkos::fence();
+     // Now fields by central differences
+     Kokkos::parallel_for(
+             "CentralDifferences", Kokkos::MDRangePolicy({0, 0}, {nx, ny}),
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Poisson.h b/src/SpaceCharge/FFT2D5/FFT2D5Poisson.h
+index 247ce8db5..f136111fd 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Poisson.h
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Poisson.h
+@@ -31,6 +31,8 @@
+ // clang-format off
+ #include "Ippl.h"
+ #include "FFT/FFT.h"
++#include <Kokkos_MathematicalConstants.hpp>
++#include <Kokkos_MathematicalFunctions.hpp>
+ // clang-format on
+ 
+ class FFT2D5Poisson {
+@@ -49,6 +51,50 @@ public:
+     FFT2D5Poisson();
+     void solve(ScalarField2_t& chargeDensity, VectorField2_t& electricField);
+ 
++    /**
++     * @brief Free-space potential of a uniformly charged rectangular source cell.
++     *
++     * Returns the cell average of -log(r)/(2*pi), including its finite value at
++     * the origin. The convolution separately multiplies by the source-cell area.
++     * Positive hx and hy are required. The arbitrary reference length in log(r)
++     * changes only the potential gauge, never the electric field.
++     */
++    KOKKOS_INLINE_FUNCTION static double cellAveragedGreensFunction(
++            const double x, const double y, const double hx, const double hy) {
++        // Scale first so physical units do not enter cancellation of the four
++        // rectangle-corner primitives. Restore the logarithmic gauge afterward.
++        const double scale = hx > hy ? hx : hy;
++        const double u     = x / scale;
++        const double v     = y / scale;
++        const double a     = 0.5 * hx / scale;
++        const double b     = 0.5 * hy / scale;
++        double average;
++        if (u * u + v * v >= 64.0) {
++            // Away from the singularity, 4-point Gauss integration in each
++            // direction avoids subtraction of nearly equal corner primitives.
++            // At r >= 8*max(hx,hy), its log-kernel truncation error is < 1e-13.
++            constexpr double nodes[4] = {
++                    -0.8611363115940525752, -0.3399810435848562648, 0.3399810435848562648,
++                    0.8611363115940525752};
++            constexpr double weights[4] = {
++                    0.3478548451374538574, 0.6521451548625461426, 0.6521451548625461426,
++                    0.3478548451374538574};
++            average = 0.0;
++            for (unsigned i = 0; i < 4; ++i) {
++                for (unsigned j = 0; j < 4; ++j) {
++                    const double dx = u + a * nodes[i];
++                    const double dy = v + b * nodes[j];
++                    average += weights[i] * weights[j] * Kokkos::log(dx * dx + dy * dy) / 8.0;
++                }
++            }
++        } else {
++            average = (logPrimitive(u + a, v + b) - logPrimitive(u - a, v + b)
++                       - logPrimitive(u + a, v - b) + logPrimitive(u - a, v - b))
++                      / (4.0 * a * b);
++        }
++        return -(Kokkos::log(scale) + average) / (2.0 * Kokkos::numbers::pi_v<double>);
++    }
++
+     // Accessors for unit tests
+     const ScalarField2_t& getGreensFn() const { return greensFn_m; }
+     const ComplexField2_t& getGreensFnTr() const { return greensFnTr_m; }
+@@ -64,10 +110,27 @@ public:
+     void makeGreensFn();
+     void placeChargeDensity(const ScalarField2_t& chargeDensity);
+     void performConvolution();
++    /// Copy the physical potential and its halo from the doubled free-space convolution.
+     void extractPotential(ScalarField2_t& potential);
++    /// Centered gradient; potential must include a valid one-cell halo (as extractPotential does).
+     void determineField(const ScalarField2_t& potential, VectorField2_t& electricField);
+ 
+ private:
++    // Mixed primitive of log(sqrt(x*x+y*y)), extended continuously to the axes.
++    // Using atan2 on absolute coordinates preserves the odd symmetry in each
++    // coordinate without branch jumps across the source-cell singularity.
++    KOKKOS_INLINE_FUNCTION static double logPrimitive(const double x, const double y) {
++        const double a = Kokkos::abs(x);
++        const double b = Kokkos::abs(y);
++        if (a == 0.0 || b == 0.0) {
++            return 0.0;
++        }
++        const double value = 0.5 * a * b * Kokkos::log(a * a + b * b) - 1.5 * a * b
++                             + 0.5 * a * a * Kokkos::atan2(b, a)
++                             + 0.5 * b * b * Kokkos::atan2(a, b);
++        return (x < 0.0) != (y < 0.0) ? -value : value;
++    }
++
+     size_t nx2_{};
+     size_t ny2_{};
+     Vector2_t dr_{};
+diff --git a/src/SpaceCharge/FFT2D5/ReferencePath.h b/src/SpaceCharge/FFT2D5/ReferencePath.h
+index f7f518180..38bfdbf27 100644
+--- a/src/SpaceCharge/FFT2D5/ReferencePath.h
++++ b/src/SpaceCharge/FFT2D5/ReferencePath.h
+@@ -15,7 +15,7 @@
+ 
+ namespace opalx::spacecharge {
+ 
+-    /** @brief Immutable reference path used for Cartesian to Frenet mapping. */
++    /** @brief Immutable laboratory-coordinate path used for Cartesian to Frenet mapping. */
+     class ReferencePath final {
+     public:
+         using Vector = Vector_t<double, 3>;

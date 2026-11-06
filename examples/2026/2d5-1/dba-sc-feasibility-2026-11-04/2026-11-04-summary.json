@@ -1,0 +1,73 @@
+{
+  "binary_sha256": "4fd718db8dea11088409158506cd61761eb35f7a0e6a15638fba235c433ba0eb",
+  "period_s": 1.1797187197141108e-06,
+  "scope": "Timing only, full-ring5.602212nC matchedKV,100k,64x64x512,ORIGINAL transverseSC, longitudinalNONE,100steps at3ps. No full turn or tune study.",
+  "momentum_change_due_to_space_charge_betagamma": {
+    "maximum": 5.379822019528447e-08,
+    "median": 3.5477046311124514e-08
+  },
+  "thread_endpoint_difference_betagamma": 7.793599423146134e-13,
+  "method": "steady=(native mainTimer - OrbitThreader)/100; excludes main orbit-threading startup but includes residual startup/I/O. Log progress fit is an independent coarse timestamp check.",
+  "rows": [
+    {
+      "case": "omp1-100steps",
+      "space_charge": true,
+      "omp_threads": 1,
+      "particles": 100000,
+      "steps": 100,
+      "pilot_wall_s": 167.8129570829915,
+      "native_main_s": 167.757,
+      "orbit_threader_s": 1.75953,
+      "steady_s_per_step": 1.6599747,
+      "progress_fit_s_per_step": 1.6633333333330524,
+      "turns_tracked": 0.0002542979059217616,
+      "charge_C": 5.602212333965893e-09,
+      "peak_rss_bytes": null,
+      "estimated_16turn_steps_3ps": 6291834,
+      "estimated_16turn_days_3ps": 120.88291529887746,
+      "estimated_16turn_days_4ps": 90.6621864741581,
+      "all_particle_ids_present": true,
+      "all_coordinates_and_momenta_finite": true
+    },
+    {
+      "case": "omp4-100steps",
+      "space_charge": true,
+      "omp_threads": 4,
+      "particles": 100000,
+      "steps": 100,
+      "pilot_wall_s": 75.424346084008,
+      "native_main_s": 75.3682,
+      "orbit_threader_s": 1.77504,
+      "steady_s_per_step": 0.7359316,
+      "progress_fit_s_per_step": 0.7383333333331635,
+      "turns_tracked": 0.0002542979059217616,
+      "charge_C": 5.602212333965893e-09,
+      "peak_rss_bytes": 130138112,
+      "estimated_16turn_steps_3ps": 6291834,
+      "estimated_16turn_days_3ps": 53.59211635488624,
+      "estimated_16turn_days_4ps": 40.19408726616468,
+      "all_particle_ids_present": true,
+      "all_coordinates_and_momenta_finite": true
+    },
+    {
+      "case": "zerosc-omp4-100steps",
+      "space_charge": false,
+      "omp_threads": 4,
+      "particles": 100000,
+      "steps": 100,
+      "pilot_wall_s": 5.008785249985522,
+      "native_main_s": 4.9528,
+      "orbit_threader_s": 1.8341,
+      "steady_s_per_step": 0.031186999999999996,
+      "progress_fit_s_per_step": 0.030000000000111014,
+      "turns_tracked": 0.0002542979059217616,
+      "charge_C": 5.602212333965893e-09,
+      "peak_rss_bytes": 291160064,
+      "estimated_16turn_steps_3ps": 6291834,
+      "estimated_16turn_days_3ps": 2.271104179736047,
+      "estimated_16turn_days_4ps": 1.7033281348020355,
+      "all_particle_ids_present": true,
+      "all_coordinates_and_momenta_finite": true
+    }
+  ]
+}

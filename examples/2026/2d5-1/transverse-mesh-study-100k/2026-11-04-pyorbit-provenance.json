@@ -1,0 +1,16 @@
+{
+  "series_source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-local-original/analysis/series.csv",
+  "series_source_sha256": "12715bd51ab17da9a0a521faaa768f5c408f040f5a3304fa6a4a5ffd9889ab99",
+  "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps/pyorbit/runs/bend-10pC-10m-100steps/manifest.json",
+  "manifest_sha256": "e362be0e1564a1e88353f1c37e44f903c1a0e54922f569cf3695820e9a4390e8",
+  "steps": 100,
+  "charge_C": 1e-11,
+  "particles": 1048576,
+  "mesh": [
+    512,
+    512,
+    512
+  ],
+  "data_status": "Existing archived native run; no new tracking",
+  "sampling": "PyORBIT station-based; OPALX time-based"
+}

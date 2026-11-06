@@ -1,0 +1,49 @@
+{
+  "binary_sha256": "4fd718db8dea11088409158506cd61761eb35f7a0e6a15638fba235c433ba0eb",
+  "native_wall_s": 73.4608,
+  "measured_wall_groups_s": {
+    "deposition_including_projection": 16.592958713999998,
+    "gather_including_projection": 16.482512373999995,
+    "fft_pack_unpack": 6.613337836000206,
+    "other_kokkos_callbacks": 8.072655186999995,
+    "outside_kokkos_callbacks": 25.699335888999812
+  },
+  "callback_sum_s": 47.761464111000194,
+  "kernel_profile_wall_s": 73.79167187499115,
+  "unprofiled_baseline_wall_s": 75.424346084008,
+  "runtime_change_vs_baseline_percent": -2.1646514604161893,
+  "main_thread_samples": 16467,
+  "sample_categories": [
+    {
+      "category": "Reference-path projection",
+      "samples": 7638,
+      "percent": 46.38367644379669
+    },
+    {
+      "category": "heFFTe stock FFT math/reshapes",
+      "samples": 5568,
+      "percent": 33.813080706868284
+    },
+    {
+      "category": "Other slice-solver / FFT interface",
+      "samples": 2117,
+      "percent": 12.856015060423879
+    },
+    {
+      "category": "Runtime / waiting / unclassified",
+      "samples": 1066,
+      "percent": 6.473553166939941
+    },
+    {
+      "category": "Other deposition / gather",
+      "samples": 63,
+      "percent": 0.38258334851521225
+    },
+    {
+      "category": "Other tracking / host work",
+      "samples": 15,
+      "percent": 0.09109127345600292
+    }
+  ],
+  "note": "Kokkos callbacks are synchronous OpenMP blocking wall durations, exclusive of nested callbacks. CPU-stack percentages classify nonoverlapping main-thread sampled leaves; workers and MPI progress threads are excluded from wall estimates. Stock FFT host work is outside Kokkos callbacks. Separate runs/methods should not be added together."
+}

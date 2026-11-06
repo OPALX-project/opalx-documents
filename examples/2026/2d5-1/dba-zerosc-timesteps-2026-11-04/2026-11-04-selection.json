@@ -1,0 +1,37 @@
+{
+  "largest_tested_full_record_timestep_ps": 4,
+  "conservative_timestep_with_half_record_stability_ps": 3,
+  "reference_timestep_ps": 2,
+  "analytic_tunes": {
+    "x": 0.7701075691328534,
+    "y": 1.689536397020211
+  },
+  "criterion": "All 64 matched KV particles have ordered records at their own cell crossings. In each plane, the 95th percentile of absolute tune error against the analytic lattice, paired tune change against 2 ps, and phase-versus-sinusoid estimator disagreement must each be <=1%. The 10/50 micrometre auxiliary probes are excluded from KV selection.",
+  "additional_stability_criterion": "Requiring the 95th percentile of the first-eight-turn versus last-eight-turn tune change to be <=1% additionally selects 3 ps. The radial values at 4 ps and 2 ps are 2.083% and 1.273%. This diagnostic limits individual weak-signal tune accuracy; it is not included in the full-record timestep-change criterion.",
+  "full_ring_check": {
+    "dt_ps": 4.0,
+    "particles": 96.0,
+    "snapshots": 3073.0,
+    "turns": 7.999998509889617,
+    "runtime_s": 482.2794484579936,
+    "max_relative_momentum_magnitude_change": 3.1816200785073085e-08,
+    "x_count": 96.0,
+    "Qx_median": 0.7697791908439752,
+    "x_95percent_abs_error": 0.6111512079519182,
+    "x_95percent_half_change": 2.1434685314333852,
+    "y_count": 96.0,
+    "Qy_median": 1.6895299617318091,
+    "y_95percent_abs_error": 0.006530942033936,
+    "y_95percent_half_change": 0.0123527717240848
+  },
+  "source_particles": 69,
+  "selection_population": 64,
+  "turns": 16,
+  "omp_threads": 1,
+  "mpi_ranks": 1,
+  "space_charge": false,
+  "binary": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+  "binary_sha256": "4fd718db8dea11088409158506cd61761eb35f7a0e6a15638fba235c433ba0eb",
+  "native_step_guard": "1000ps rejected: ten steps exceed0.2m quadrupole; existinglimitunchanged.",
+  "coarse_step_origin": "Native checkpoint initialization selects ordinary fixed Boris/PIC steps, matching the FFT2D5 tracking path. Fresh ZeroSC boundary subdivision is disabled. No source changes or rebuilds during this study."
+}

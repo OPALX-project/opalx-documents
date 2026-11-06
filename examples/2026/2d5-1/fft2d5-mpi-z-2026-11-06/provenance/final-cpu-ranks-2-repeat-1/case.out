@@ -1,0 +1,397 @@
+OPAL-X{0}>               ____  _____        _       __   __
+OPAL-X{0}> [1;32m
+OPAL-X{0}> 
+OPAL-X{0}>   ██████  ██████   █████  ██      ██   ██
+OPAL-X{0}>  ██    ██ ██   ██ ██   ██ ██       ██ ██
+OPAL-X{0}>  ██    ██ ██████  ███████ ██        ███
+OPAL-X{0}>  ██    ██ ██      ██   ██ ██       ██ ██
+OPAL-X{0}>   ██████  ██      ██   ██ ███████ ██   ██
+OPAL-X{0}> 
+OPAL-X{0}>          This is OPALX (Object Oriented Parallel Accelerator Library for Exascale)
+OPAL-X{0}> 
+OPAL-X{0}> [0m
+OPAL-X{0}> 
+OPAL-X{0}> OPALX is the performance portable version of OPAL :: Version 1.0.0
+OPAL-X{0}>             git rev. 8cf0239d0f7b0c65465ccf6fd66272189e46aeca
+OPAL-X{0}> 
+OPAL-X{0}> 
+OPAL-X{0}>              (c) PSI, https://github.com/OPALX-project/OPALX
+OPAL-X{0}> 
+OPAL-X{0}> 
+OPAL-X{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL-X{0}> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
+OPAL-X{0}> 
+OPAL-X{0}> Time: 09:41:40 date: 06/11/2026
+OPAL-X{0}> 
+OPAL-X{0}> * Executable: /Users/adelmann/git/opalx/tmp/2026-11-06-fft2d5-mpi-z/opalx.cpu-z-validated
+OPAL-X{0}> * Build configuration: Release
+OPAL-X{0}> * Compiler: Clang 21.1.8
+OPAL-X{0}> * CMake C++ flags (configure-time):  -O3 -DNDEBUG
+OPAL-X{0}> * MPI ranks: 2
+OPAL-X{0}> * C++ assertions: disabled (NDEBUG)
+OPAL-X{0}> * OpenMP max threads: 1; dynamic teams: 0
+OPAL-X{0}> * Kokkos host concurrency: 1
+OPAL-X{0}> * Host:   OpenMP
+OPAL-X{0}> * Device: OpenMP
+OPAL-X{0}> 
+OPAL-X{0}> * Reading input stream 'case.in'
+OPAL-X{0}> * ************* F I E L D S O L V E R ********************************************** 
+OPAL-X{0}> * FIELDSOLVER  FS
+OPAL-X{0}> * BINS         NONE
+OPAL-X{0}> * TYPE         FFT2D5
+OPAL-X{0}> * RANKS        2
+OPAL-X{0}> * NX           64
+OPAL-X{0}> * NY           64
+OPAL-X{0}> * NZ           512
+OPAL-X{0}> * BBOXINCR     2
+OPAL-X{0}> * GREENSF      INTEGRATED
+OPAL-X{0}> * FFT2D5MODEL  ORIGINAL
+OPAL-X{0}> * XDIM         serial  
+OPAL-X{0}> * YDIM         serial  
+OPAL-X{0}> * ZDIM         parallel  
+OPAL-X{0}> * ********************************************************************************** 
+OPAL-X{0}> 
+OPAL-X{0}> * RUN resolved beams: BEAM1
+OPAL-X{0}> * ************* B E A M ************************************************************ 
+OPAL-X{0}> * BEAM        BEAM1
+OPAL-X{0}> * PARTICLE    PROTON
+OPAL-X{0}> * REST MASS   0.938272 [GeV]
+OPAL-X{0}> * CHARGE      +e * 1 
+OPAL-X{0}> * MOMENTUM    0.0685391 [GeV/c]
+OPAL-X{0}> * BCHARGE     5.60221e-09 [C]
+OPAL-X{0}> * NALLOC      100000
+OPAL-X{0}> * ********************************************************************************** 
+OPAL-X{0}> 
+OPAL-X{0}> 
+OPAL-X{0}> * Creating new file for data: 'case.stat'
+OPAL-X{0}> * Creating new file for data: 'case.lbal'
+OPAL-X{0}> * Restored checkpoint '/Users/adelmann/git/opalx/tmp/2026-11-05-merlin6-a100/payload/assets/dba-initial-state.h5' at global step 0, t = 0.000 [fs].
+OPAL-X{0}> 
+OPAL-X{0}> * ************** B U N C H ********************************************************* 
+OPAL-X{0}> * CONTAINER       = 0
+OPAL-X{0}> * PARTICLES       = 100000
+OPAL-X{0}> * CHARGE          = 5.602212e-09 (Cb) 
+OPAL-X{0}> * QM STORAGE MODE = SINGLE
+OPAL-X{0}> * <EKIN>          = 2.500 [MeV]
+OPAL-X{0}> * <dEKIN>         = 0.000 [eV]
+OPAL-X{0}> * INTEGRATOR      = LF2
+OPAL-X{0}> * LB Threshold    = 5.000000e-02
+OPAL-X{0}> * MIN R (origin)  = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
+OPAL-X{0}> * MAX R (max ext) = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
+OPAL-X{0}> * RMS R           = (      2.86613 ,      0.00289 ,      2.86613 ) [m]
+OPAL-X{0}> * RMS P           = ( 5.165286e-02 , 9.236709e-05 , 5.165285e-02 ) [beta gamma]
+OPAL-X{0}> * Mean R          = ( -4.200000e+00 , 0.000000e+00 , 1.935405e-14 ) [m]
+OPAL-X{0}> * Mean P          = ( -1.828084e-15 , 0.000000e+00 , 1.666097e-08 ) [beta gamma]
+OPAL-X{0}> * MESH SPACING    = (     93.75000 ,     93.75000 ,     11.71875 ) [mm]
+OPAL-X{0}> * COMPDOM INCR    = 2.000000e+00 (%) 
+OPAL-X{0}> * FIELD LAYOUT    = Domain = {[0:63:1],[0:63:1],[0:511:1]}
+OPAL-X{0}> Total number of boxes = 2
+OPAL-X{0}>     Box 0 {[0:63:1],[0:63:1],[0:255:1]}
+OPAL-X{0}>     Box 1 {[0:63:1],[0:63:1],[256:511:1]}
+OPAL-X{0}> 
+OPAL-X{0}> * Centroid : 
+OPAL-X{0}> * -4.200000e+05 -1.828084e-10 0.000000e+00 0.000000e+00 1.935405e-09 1.666097e-03 
+OPAL-X{0}> * Cov Matrix : 
+OPAL-X{0}> * 8.214676e+00 -7.009050e-17 -5.931727e-23 3.553498e-23 -8.029713e-15 1.461198e-01 
+OPAL-X{0}> * -7.009050e-17 2.668018e-03 1.162712e-23 1.143751e-24 -1.461198e-01 5.439386e-18 
+OPAL-X{0}> * -5.931727e-23 1.162712e-23 8.339387e-06 -3.540465e-16 -4.120657e-23 9.999408e-24 
+OPAL-X{0}> * 3.553498e-23 1.143751e-24 -3.540465e-16 8.531678e-09 -2.867030e-24 2.686818e-25 
+OPAL-X{0}> * -8.029713e-15 -1.461198e-01 -4.120657e-23 -2.867030e-24 8.214676e+00 -1.759807e-16 
+OPAL-X{0}> * 1.461198e-01 5.439386e-18 9.999408e-24 2.686818e-25 -1.759807e-16 2.668017e-03 
+OPAL-X{0}> * * ********************************************************************************** 
+OPAL-X{0}> 
+OPAL-X{0}> * OrbitThreader settings: design_beam=1 maps=0 dt_s=3e-12 integrator=BORIS richardson_levels=1 period_m=25.7664; reference and map rays execute serially on the host.
+OPAL-X{0}> 
+OPAL-X{0}> * OrbitThreader dt_m= 3e-12
+OPAL-X{0}> * RING design circumference = 25.7663706144 m
+OPAL-X{0}> * RING reference return length = 25.7663705239 m
+OPAL-X{0}> * RING return displacement = 1.10305077469e-08 m; relative momentum mismatch = 1.61805639027e-09
+OPAL-X{0}> * RING return is not a closed-orbit solve.
+OPAL-X{0}> 
+OPAL-X{0}> * Size of map 35 sections 
+OPAL-X{0}> * Key: ( 0.000000 -  1.047198) number of overlapping elements 1
+OPAL-X{0}> *                              C1_B1
+OPAL-X{0}> * Key: ( 1.047198 -  2.047198) number of overlapping elements 1
+OPAL-X{0}> *                              C1_D1
+OPAL-X{0}> * Key: ( 2.047198 -  2.247198) number of overlapping elements 1
+OPAL-X{0}> *                              C1_Q
+OPAL-X{0}> * Key: ( 2.247198 -  3.247198) number of overlapping elements 1
+OPAL-X{0}> *                              C1_D2
+OPAL-X{0}> * Key: ( 3.247198 -  4.294395) number of overlapping elements 1
+OPAL-X{0}> *                              C1_B2
+OPAL-X{0}> * Key: ( 4.294395 -  5.341593) number of overlapping elements 1
+OPAL-X{0}> *                              C2_B1
+OPAL-X{0}> * Key: ( 5.341593 -  6.341593) number of overlapping elements 1
+OPAL-X{0}> *                              C2_D1
+OPAL-X{0}> * Key: ( 6.341593 -  6.341593) number of overlapping elements 0
+OPAL-X{0}> * Key: ( 6.341593 -  6.541593) number of overlapping elements 1
+OPAL-X{0}> *                              C2_Q
+OPAL-X{0}> * Key: ( 6.541593 -  7.541593) number of overlapping elements 1
+OPAL-X{0}> *                              C2_D2
+OPAL-X{0}> * Key: ( 7.541593 -  8.588790) number of overlapping elements 1
+OPAL-X{0}> *                              C2_B2
+OPAL-X{0}> * Key: ( 8.588790 -  9.635988) number of overlapping elements 1
+OPAL-X{0}> *                              C3_B1
+OPAL-X{0}> * Key: ( 9.635988 -  9.635988) number of overlapping elements 2
+OPAL-X{0}> *                              C3_B1
+OPAL-X{0}> *                              C3_D1
+OPAL-X{0}> * Key: ( 9.635988 - 10.635988) number of overlapping elements 1
+OPAL-X{0}> *                              C3_D1
+OPAL-X{0}> * Key: (10.635988 - 10.835988) number of overlapping elements 1
+OPAL-X{0}> *                              C3_Q
+OPAL-X{0}> * Key: (10.835988 - 10.835988) number of overlapping elements 0
+OPAL-X{0}> * Key: (10.835988 - 11.835988) number of overlapping elements 1
+OPAL-X{0}> *                              C3_D2
+OPAL-X{0}> * Key: (11.835988 - 12.883185) number of overlapping elements 1
+OPAL-X{0}> *                              C3_B2
+OPAL-X{0}> * Key: (12.883185 - 13.930383) number of overlapping elements 1
+OPAL-X{0}> *                              C4_B1
+OPAL-X{0}> * Key: (13.930383 - 14.930383) number of overlapping elements 1
+OPAL-X{0}> *                              C4_D1
+OPAL-X{0}> * Key: (14.930383 - 14.930383) number of overlapping elements 2
+OPAL-X{0}> *                              C4_D1
+OPAL-X{0}> *                              C4_Q
+OPAL-X{0}> * Key: (14.930383 - 15.130383) number of overlapping elements 1
+OPAL-X{0}> *                              C4_Q
+OPAL-X{0}> * Key: (15.130383 - 16.130383) number of overlapping elements 1
+OPAL-X{0}> *                              C4_D2
+OPAL-X{0}> * Key: (16.130383 - 17.177580) number of overlapping elements 1
+OPAL-X{0}> *                              C4_B2
+OPAL-X{0}> * Key: (17.177580 - 18.224778) number of overlapping elements 1
+OPAL-X{0}> *                              C5_B1
+OPAL-X{0}> * Key: (18.224778 - 19.224778) number of overlapping elements 1
+OPAL-X{0}> *                              C5_D1
+OPAL-X{0}> * Key: (19.224778 - 19.424778) number of overlapping elements 1
+OPAL-X{0}> *                              C5_Q
+OPAL-X{0}> * Key: (19.424778 - 20.424778) number of overlapping elements 1
+OPAL-X{0}> *                              C5_D2
+OPAL-X{0}> * Key: (20.424778 - 21.471975) number of overlapping elements 1
+OPAL-X{0}> *                              C5_B2
+OPAL-X{0}> * Key: (21.471975 - 21.471975) number of overlapping elements 2
+OPAL-X{0}> *                              C5_B2
+OPAL-X{0}> *                              C6_B1
+OPAL-X{0}> * Key: (21.471975 - 22.519173) number of overlapping elements 1
+OPAL-X{0}> *                              C6_B1
+OPAL-X{0}> * Key: (22.519173 - 23.519173) number of overlapping elements 1
+OPAL-X{0}> *                              C6_D1
+OPAL-X{0}> * Key: (23.519173 - 23.719173) number of overlapping elements 1
+OPAL-X{0}> *                              C6_Q
+OPAL-X{0}> * Key: (23.719173 - 24.719173) number of overlapping elements 1
+OPAL-X{0}> *                              C6_D2
+OPAL-X{0}> * Key: (24.719173 - 25.766371) number of overlapping elements 1
+OPAL-X{0}> *                              C6_B2
+OPAL-X{0}> 
+OPAL-X{0}> * Creating new file for data: 'data/case_ElementPositions.sdds'
+OPAL-X{0}> * OrbitThreader work (this pass, rank 0 local; accepted includes localization trials):
+OPAL-X{0}> * OT reference: nominal_steps=393240 advances=393244 trials=395290 accepted_steps=394267 cap_splits=0 support_splits=1023 max_depth=36 min_accepted_dt_s=2.18279e-23 step_cap_s=1.66782e-10
+OPAL-X{0}> * OT reference: support_lookups=1970828 body_lookups=0 element_tests=59124840 field_samples=395290 element_fields=395291 membership_reuses=1986
+OPAL-X{0}> * OT reference: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=131419 log_write_s=0.334837
+OPAL-X{0}> * OT segmentation: nominal_steps=0 advances=0 trials=0 accepted_steps=0 cap_splits=0 support_splits=0 max_depth=0 min_accepted_dt_s=0 step_cap_s=0
+OPAL-X{0}> * OT segmentation: support_lookups=0 body_lookups=0 element_tests=0 field_samples=0 element_fields=0 membership_reuses=0
+OPAL-X{0}> * OT segmentation: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=0 log_write_s=0
+OPAL-X{0}> * OT maps: nominal_steps=0 advances=0 trials=0 accepted_steps=0 cap_splits=0 support_splits=0 max_depth=0 min_accepted_dt_s=0 step_cap_s=0
+OPAL-X{0}> * OT maps: support_lookups=0 body_lookups=0 element_tests=0 field_samples=0 element_fields=0 membership_reuses=0
+OPAL-X{0}> * OT maps: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=0 log_write_s=0
+OPAL-X{0}> * OT output: nominal_steps=0 advances=0 trials=0 accepted_steps=0 cap_splits=0 support_splits=0 max_depth=0 min_accepted_dt_s=0 step_cap_s=0
+OPAL-X{0}> * OT output: support_lookups=0 body_lookups=0 element_tests=0 field_samples=0 element_fields=0 membership_reuses=0
+OPAL-X{0}> * OT output: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=0 log_write_s=0
+OPAL-X{0}> 
+ParallelTracker::execute{0}> Ring tracking: spatial device field selection with fixed ordinary Boris/PIC steps. Boundary refinement is disabled by: checkpoint restart; solver, binning, or image-charge configuration;
+OPAL-X{0}> * Track start at: 09:41:42, t= 0.000 [fs]; sStart at: 0.000 [um]
+OPAL-X{0}> * Initial dt = 3.000 [ps]
+OPAL-X{0}> * Max integration steps = 100, next step = 0
+OPAL-X{0}>                dt [ns]           sStop [m]        num Steps [1]
+OPAL-X{0}> ->         3.000000e-12        1.000000e+06                 100
+Ippl{0}> FFT2D5: --2D5BatchSize 64 (independent transverse slices)
+OPAL-X{0}> * 09:41:42 Step      0 container[0] Turn 1, angle=0.001 [deg], t= 3.000 [ps], E=2.500 [MeV]
+OPAL-X{0}> * 09:41:43 Step     10 container[0] Turn 1, angle=0.010 [deg], t= 33.000 [ps], E=2.500 [MeV]
+OPAL-X{0}> * 09:41:44 Step     20 container[0] Turn 1, angle=0.019 [deg], t= 63.000 [ps], E=2.500 [MeV]
+OPAL-X{0}> * 09:41:45 Step     30 container[0] Turn 1, angle=0.028 [deg], t= 93.000 [ps], E=2.500 [MeV]
+OPAL-X{0}> * 09:41:46 Step     40 container[0] Turn 1, angle=0.038 [deg], t= 123.000 [ps], E=2.500 [MeV]
+OPAL-X{0}> * 09:41:47 Step     50 container[0] Turn 1, angle=0.047 [deg], t= 153.000 [ps], E=2.500 [MeV]
+OPAL-X{0}> * 09:41:48 Step     60 container[0] Turn 1, angle=0.056 [deg], t= 183.000 [ps], E=2.500 [MeV]
+OPAL-X{0}> * 09:41:49 Step     70 container[0] Turn 1, angle=0.065 [deg], t= 213.000 [ps], E=2.500 [MeV]
+OPAL-X{0}> * 09:41:49 Step     80 container[0] Turn 1, angle=0.074 [deg], t= 243.000 [ps], E=2.500 [MeV]
+OPAL-X{0}> * 09:41:50 Step     90 container[0] Turn 1, angle=0.083 [deg], t= 273.000 [ps], E=2.500 [MeV]
+OPAL-X{0}> Boris boundary trials=0, rejected=0
+OPAL-X{0}> 
+OPAL-X{0}> * Done executing ParallelTracker at 09:41:51
+OPAL-X{0}> 
+OPAL-X{0}> * End of input stream 'case.in'
+Timings{0}> ---------------------------------------------
+Timings{0}>      Timing results for 2 rank(s):
+Timings{0}> ---------------------------------------------
+Timings{0}> mainTimer........... Wall tot =     10.957
+Timings{0}> 
+Timings{0}> H5 open close....... Wall max = 0.00639146
+Timings{0}>                      Wall avg = 0.00636571
+Timings{0}>                      Wall min = 0.00633996
+Timings{0}> 
+Timings{0}> H5 total step....... Wall max = 0.00264929
+Timings{0}>                      Wall avg = 0.00264502
+Timings{0}>                      Wall min = 0.00264075
+Timings{0}> 
+Timings{0}> H5 step header...... Wall max = 0.000110125
+Timings{0}>                      Wall avg = 0.000109167
+Timings{0}>                      Wall min = 0.000108209
+Timings{0}> 
+Timings{0}> H5 device host copy. Wall max =  1.834e-06
+Timings{0}>                      Wall avg =   1.77e-06
+Timings{0}>                      Wall min =  1.706e-06
+Timings{0}> 
+Timings{0}> H5 dataset write.... Wall max = 0.000751997
+Timings{0}>                      Wall avg = 0.000750894
+Timings{0}>                      Wall min = 0.00074979
+Timings{0}> 
+Timings{0}> Write Stat.......... Wall max = 0.00909313
+Timings{0}>                      Wall avg =  0.0090925
+Timings{0}>                      Wall min = 0.00909187
+Timings{0}> 
+Timings{0}> findInternal........ Wall max =    7.5e-07
+Timings{0}>                      Wall avg =   7.29e-07
+Timings{0}>                      Wall min =   7.08e-07
+Timings{0}> 
+Timings{0}> findPeriodic........ Wall max =  2.584e-06
+Timings{0}>                      Wall avg =  2.521e-06
+Timings{0}>                      Wall min =  2.458e-06
+Timings{0}> 
+Timings{0}> computeMoments...... Wall max =   0.316427
+Timings{0}>                      Wall avg =   0.308957
+Timings{0}>                      Wall min =   0.301486
+Timings{0}> 
+Timings{0}> TIntegration1....... Wall max = 0.00929854
+Timings{0}>                      Wall avg = 0.00921802
+Timings{0}>                      Wall min = 0.00913751
+Timings{0}> 
+Timings{0}> TIntegration2....... Wall max =    0.03293
+Timings{0}>                      Wall avg =  0.0327612
+Timings{0}>                      Wall min =  0.0325925
+Timings{0}> 
+Timings{0}> External field eval. Wall max =    1.62827
+Timings{0}>                      Wall avg =    1.62807
+Timings{0}>                      Wall min =    1.62786
+Timings{0}> 
+Timings{0}> OrbThreader......... Wall max =    1.84793
+Timings{0}>                      Wall avg =    1.84793
+Timings{0}>                      Wall min =    1.84793
+Timings{0}> 
+Timings{0}> OT reference........ Wall max =    1.84302
+Timings{0}>                      Wall avg =    1.67491
+Timings{0}>                      Wall min =    1.50679
+Timings{0}> 
+Timings{0}> OT output........... Wall max = 0.00475842
+Timings{0}>                      Wall avg = 0.00241496
+Timings{0}>                      Wall min =   7.15e-05
+Timings{0}> 
+Timings{0}> particleBC.......... Wall max = 2.1214e-05
+Timings{0}>                      Wall avg = 1.9354e-05
+Timings{0}>                      Wall min = 1.7494e-05
+Timings{0}> 
+Timings{0}> updateParticle...... Wall max =  0.0125443
+Timings{0}>                      Wall avg =  0.0125034
+Timings{0}>                      Wall min =  0.0124625
+Timings{0}> 
+Timings{0}> locateParticles..... Wall max =  0.0112143
+Timings{0}>                      Wall avg =    0.01119
+Timings{0}>                      Wall min =  0.0111658
+Timings{0}> 
+Timings{0}> sendPreprocess...... Wall max = 0.000625582
+Timings{0}>                      Wall avg = 0.000561001
+Timings{0}>                      Wall min = 0.000496419
+Timings{0}> 
+Timings{0}> particleSend........ Wall max = 7.6794e-05
+Timings{0}>                      Wall avg = 5.7625e-05
+Timings{0}>                      Wall min = 3.8456e-05
+Timings{0}> 
+Timings{0}> particleRecv........ Wall max = 1.6794e-05
+Timings{0}>                      Wall avg = 1.50645e-05
+Timings{0}>                      Wall min = 1.3335e-05
+Timings{0}> 
+Timings{0}> particleDestroy..... Wall max = 7.1285e-05
+Timings{0}>                      Wall avg =  6.414e-05
+Timings{0}>                      Wall min = 5.6995e-05
+Timings{0}> 
+Timings{0}> particleWait........ Wall max = 6.2335e-05
+Timings{0}>                      Wall avg = 5.9334e-05
+Timings{0}>                      Wall min = 5.6333e-05
+Timings{0}> 
+Timings{0}> particleFreeBuffers. Wall max = 3.7622e-05
+Timings{0}>                      Wall avg = 3.63765e-05
+Timings{0}>                      Wall min = 3.5131e-05
+Timings{0}> 
+Timings{0}> particleDeserialize. Wall max = 0.000396499
+Timings{0}>                      Wall avg = 0.00037823
+Timings{0}>                      Wall min = 0.000359961
+Timings{0}> 
+Timings{0}> particleDeserResize. Wall max = 0.000369832
+Timings{0}>                      Wall avg = 0.00035329
+Timings{0}>                      Wall min = 0.000336747
+Timings{0}> 
+Timings{0}> particleDeserCopy... Wall max = 1.1243e-05
+Timings{0}>                      Wall avg = 1.0012e-05
+Timings{0}>                      Wall min =  8.781e-06
+Timings{0}> 
+Timings{0}> ---------------------------------------------
+Timings{0}>      Measurement counts:
+Timings{0}> ---------------------------------------------
+Timings{0}> mainTimer........... Count =          1
+Timings{0}> H5 open close....... Count =          6
+Timings{0}> H5 total step....... Count =          1
+Timings{0}> H5 step header...... Count =          1
+Timings{0}> H5 device host copy. Count =          5
+Timings{0}> H5 dataset write.... Count =         11
+Timings{0}> Write Stat.......... Count =         10
+Timings{0}> findInternal........ Count =          2
+Timings{0}> findPeriodic........ Count =          2
+Timings{0}> computeMoments...... Count =        601
+Timings{0}> TIntegration1....... Count =        100
+Timings{0}> TIntegration2....... Count =        100
+Timings{0}> External field eval. Count =        100
+Timings{0}> OrbThreader......... Count =          1
+Timings{0}> OT reference........ Count =          1
+Timings{0}> OT output........... Count =          1
+Timings{0}> particleBC.......... Count =        100
+Timings{0}> updateParticle...... Count =        100
+Timings{0}> locateParticles..... Count =        100
+Timings{0}> sendPreprocess...... Count =        100
+Timings{0}> particleSend........ Count =        100
+Timings{0}> particleRecv........ Count =        100
+Timings{0}> particleDestroy..... Count =        100
+Timings{0}> particleWait........ Count =        100
+Timings{0}> particleFreeBuffers. Count =        100
+Timings{0}> particleDeserialize. Count =        100
+Timings{0}> particleDeserResize. Count =        100
+Timings{0}> particleDeserCopy... Count =        100
+Timings{0}> ---------------------------------------------
+Timings{0}> ---------------------------------------------
+Timings{0}>      Per-occurrence statistics:
+Timings{0}> ---------------------------------------------
+Timings{0}> mainTimer........... n=    1  mean=    10.957  std=         0  min=    10.957  max=    10.957
+Timings{0}> H5 open close....... n=    6  mean=0.00106524  std=0.00106104  min=0.000108125  max=0.00305563
+Timings{0}> H5 total step....... n=    1  mean=0.00264929  std=         0  min=0.00264929  max=0.00264929
+Timings{0}> H5 step header...... n=    1  mean=0.000110125  std=         0  min=0.000110125  max=0.000110125
+Timings{0}> H5 device host copy. n=    5  mean= 3.668e-07  std=7.44627e-08  min=  2.92e-07  max=  4.59e-07
+Timings{0}> H5 dataset write.... n=   11  mean=6.81627e-05  std=2.70221e-05  min= 2.666e-06  max=0.000112375
+Timings{0}> Write Stat.......... n=   10  mean=0.000909313  std=3.54703e-05  min=0.000863958  max=0.000978875
+Timings{0}> findInternal........ n=    2  mean=  3.54e-07  std=2.06475e-07  min=  2.08e-07  max=     5e-07
+Timings{0}> findPeriodic........ n=    2  mean= 1.229e-06  std=1.73807e-06  min=         0  max= 2.458e-06
+Timings{0}> computeMoments...... n=  601  mean=0.000526501  std=0.000170919  min=0.000483125  max=0.00359671
+Timings{0}> TIntegration1....... n=  100  mean=9.13751e-05  std=4.25513e-06  min=8.8916e-05  max=0.000129916
+Timings{0}> TIntegration2....... n=  100  mean= 0.0003293  std=2.69773e-05  min=0.000307583  max=0.000508917
+Timings{0}> External field eval. n=  100  mean= 0.0162786  std=0.000434771  min= 0.0160514  max= 0.0199439
+Timings{0}> OrbThreader......... n=    1  mean=   1.84793  std=         0  min=   1.84793  max=   1.84793
+Timings{0}> OT reference........ n=    1  mean=   1.84302  std=         0  min=   1.84302  max=   1.84302
+Timings{0}> OT output........... n=    1  mean=0.00475842  std=         0  min=0.00475842  max=0.00475842
+Timings{0}> particleBC.......... n=  100  mean=1.7494e-07  std= 9.469e-07  min=         0  max=   9.5e-06
+Timings{0}> updateParticle...... n=  100  mean=0.000124625  std=4.20417e-05  min=0.000113584  max=0.000509292
+Timings{0}> locateParticles..... n=  100  mean=0.000112143  std=4.14801e-06  min=0.000109583  max=0.000134459
+Timings{0}> sendPreprocess...... n=  100  mean=4.96419e-06  std=3.10254e-06  min= 1.583e-06  max=2.0709e-05
+Timings{0}> particleSend........ n=  100  mean=7.6794e-07  std=6.27385e-06  min=         0  max=6.2875e-05
+Timings{0}> particleRecv........ n=  100  mean=1.3335e-07  std=3.2403e-07  min=         0  max= 3.292e-06
+Timings{0}> particleDestroy..... n=  100  mean=7.1285e-07  std=4.57944e-06  min=   4.1e-08  max=4.6041e-05
+Timings{0}> particleWait........ n=  100  mean=5.6333e-07  std=4.28815e-06  min=         0  max=   4.3e-05
+Timings{0}> particleFreeBuffers. n=  100  mean=3.5131e-07  std=1.30184e-07  min=   4.2e-08  max=  6.67e-07
+Timings{0}> particleDeserialize. n=  100  mean=3.59961e-06  std=3.4022e-05  min=  1.25e-07  max=0.000340417
+Timings{0}> particleDeserResize. n=  100  mean=3.36747e-06  std=3.34225e-05  min=         0  max=0.00033425
+Timings{0}> particleDeserCopy... n=  100  mean= 8.781e-08  std=5.93378e-07  min=         0  max= 5.958e-06
+Timings{0}> ---------------------------------------------

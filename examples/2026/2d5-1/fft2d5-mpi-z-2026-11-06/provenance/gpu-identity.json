@@ -1,0 +1,34 @@
+{
+  "binary_sha256": "b181efbc6bba421f8e1c8907c0f141080e5fdc84f1c5e78f110390f862536abf",
+  "preserved_sha256": "6bd5c3a499e54c8201ac788e6c036e56d6add6c77b76967e2ce156e937f21d65",
+  "base_commit": "8cf0239d0f7b0c65465ccf6fd66272189e46aeca",
+  "source_sha256": {
+    "src/PartBunch/ParticleContainer.hpp": "d050926b33dafa86ce4dd4ef892d0b843e150b0c9f1820e4a0cec3796adba68f",
+    "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp": "479fe39b49eaf9b062be3a14ba5e224bd799bb041a79ce843a3545add2167e1b",
+    "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h": "ccee5dd8b6c497cbe53a637eb93849798775dcb5b15e7f08c953a6125dd45736",
+    "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp": "57b29a022e660c04911159a5fc85544cc6777eb571e3dca399df43eb3a59cd4b",
+    "src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp": "c89f776b236a9ef71b7e85cc17d9362758c47a7df6b53824d1b3464de0972980",
+    "src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h": "f6fa3852437d6bf2862feea6574c466be07c3deb497f913627706f7678ab7741",
+    "src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp": "7df2f18e0aba17ae10045182c2bed7ea8752cebb745a4e5e4ad329a72733402b",
+    "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h": "b7e1660599aab66dd2e1c5b5dc025ea97b8eea5f2857bef0628367ea7e774d44",
+    "src/SpaceCharge/SpaceChargeConfig.cpp": "c9c1284970c02c60a6cec66ceffbd94b8e33f9267bd6814cbce02f89db65667d",
+    "src/SpaceCharge/SpaceChargeConfigBuilder.cpp": "1dc974b75534d7fdaa417430a6fc3cc348e0c09b4d1ae1f88a088cce1ea68c25",
+    "unit_tests/SpaceCharge/CMakeLists.txt": "cd40c1210ad75e0a70c808c300c70bf39f0002e8cf4c03549ca5f54fa2c8d9de",
+    "unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp": "8fd2b5a1a08a13cfdc5395a604fc3814862f337d77cfad2deeacafffc665b171",
+    "unit_tests/SpaceCharge/TestFFT2D5Parallel.cpp": "d2090b39b558c56934bff00eb6a15e4ebd682370da4ea04e732f1c383bd730f0"
+  },
+  "dependencies": {
+    "ippl": {
+      "commit": "d6216553e39dcf4405849c027517cc3401fefee5",
+      "diff": ""
+    },
+    "kokkos": {
+      "commit": "d9397f95a04a0334d327647e64ab7f1882ca0664",
+      "diff": ""
+    },
+    "heffte": {
+      "commit": "4d8d4597b479d1e4709a2b1b4cd7d8922600045f",
+      "diff": ""
+    }
+  }
+}

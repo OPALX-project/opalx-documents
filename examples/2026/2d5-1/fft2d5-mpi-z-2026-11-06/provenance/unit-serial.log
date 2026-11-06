@@ -1,0 +1,251 @@
+Running main() from /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 11 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 11 tests from FFT2D5AlgorithmTest
+[ RUN      ] FFT2D5AlgorithmTest.LazyInitializationSkipsEmptySlices
+[       OK ] FFT2D5AlgorithmTest.LazyInitializationSkipsEmptySlices (27 ms)
+[ RUN      ] FFT2D5AlgorithmTest.RejectsFixedCartesianDomain
+[       OK ] FFT2D5AlgorithmTest.RejectsFixedCartesianDomain (3 ms)
+[ RUN      ] FFT2D5AlgorithmTest.RestoresTrackerFrameMoments
+[       OK ] FFT2D5AlgorithmTest.RestoresTrackerFrameMoments (151 ms)
+[ RUN      ] FFT2D5AlgorithmTest.LabPathFieldsSurviveReferenceFrameChanges
+[       OK ] FFT2D5AlgorithmTest.LabPathFieldsSurviveReferenceFrameChanges (223 ms)
+[ RUN      ] FFT2D5AlgorithmTest.RigidPlanarRotationPreservesLocalFields
+[       OK ] FFT2D5AlgorithmTest.RigidPlanarRotationPreservesLocalFields (49 ms)
+[ RUN      ] FFT2D5AlgorithmTest.ActiveContainersShareLabPathAcrossReferencePoses
+[       OK ] FFT2D5AlgorithmTest.ActiveContainersShareLabPathAcrossReferencePoses (30 ms)
+[ RUN      ] FFT2D5AlgorithmTest.CoverageFailureRestoresReferenceCoordinatesAndTimeSteps
+[       OK ] FFT2D5AlgorithmTest.CoverageFailureRestoresReferenceCoordinatesAndTimeSteps (3 ms)
+[ RUN      ] FFT2D5AlgorithmTest.ExplicitBatchSizesMatchSerialFullSolveAndBoundaryModes
+[       OK ] FFT2D5AlgorithmTest.ExplicitBatchSizesMatchSerialFullSolveAndBoundaryModes (268 ms)
+[ RUN      ] FFT2D5AlgorithmTest.HierarchyMatchesExhaustiveSegmentAndCoordinatesExactly
+[       OK ] FFT2D5AlgorithmTest.HierarchyMatchesExhaustiveSegmentAndCoordinatesExactly (35 ms)
+[ RUN      ] FFT2D5AlgorithmTest.PreparedProjectionsMatchUncachedStagesAfterSourceChanges
+[       OK ] FFT2D5AlgorithmTest.PreparedProjectionsMatchUncachedStagesAfterSourceChanges (72 ms)
+[ RUN      ] FFT2D5AlgorithmTest.RepeatedSolveReplacesFieldsAndPreservesInactiveContainer
+[       OK ] FFT2D5AlgorithmTest.RepeatedSolveReplacesFieldsAndPreservesInactiveContainer (21 ms)
+[----------] 11 tests from FFT2D5AlgorithmTest (889 ms total)
+
+[----------] Global test environment tear-down
+[==========] 11 tests from 1 test suite ran. (3110 ms total)
+[  PASSED  ] 11 tests.
+Running main() from /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 68 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 68 tests from TestSolve2d5
+[ RUN      ] TestSolve2d5.LoadReferencePath_Missing
+[       OK ] TestSolve2d5.LoadReferencePath_Missing (23 ms)
+[ RUN      ] TestSolve2d5.Configuration_SerialLayoutAccepted
+[       OK ] TestSolve2d5.Configuration_SerialLayoutAccepted (1 ms)
+[ RUN      ] TestSolve2d5.Configuration_TransverseParallelLayoutRejected
+[       OK ] TestSolve2d5.Configuration_TransverseParallelLayoutRejected (1 ms)
+[ RUN      ] TestSolve2d5.Configuration_BinningRejected
+[       OK ] TestSolve2d5.Configuration_BinningRejected (1 ms)
+[ RUN      ] TestSolve2d5.Configuration_MultipleRanksRequireZDecomposition
+./unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp:776: Skipped
+This validation requires multiple MPI ranks.
+
+[  SKIPPED ] TestSolve2d5.Configuration_MultipleRanksRequireZDecomposition (1 ms)
+[ RUN      ] TestSolve2d5.LoadReferencePath_ReadFail
+[       OK ] TestSolve2d5.LoadReferencePath_ReadFail (3 ms)
+[ RUN      ] TestSolve2d5.LoadReferencePath_Success
+[       OK ] TestSolve2d5.LoadReferencePath_Success (4 ms)
+[ RUN      ] TestSolve2d5.LoadReferencePath_SpecifiedFile
+[       OK ] TestSolve2d5.LoadReferencePath_SpecifiedFile (3 ms)
+[ RUN      ] TestSolve2d5.SliceSolverSetup
+[       OK ] TestSolve2d5.SliceSolverSetup (3 ms)
+[ RUN      ] TestSolve2d5.ToFrenetSerret_NoParticles
+[       OK ] TestSolve2d5.ToFrenetSerret_NoParticles (6 ms)
+[ RUN      ] TestSolve2d5.ToFrenetSerret_ShortReferencePath
+[       OK ] TestSolve2d5.ToFrenetSerret_ShortReferencePath (3 ms)
+[ RUN      ] TestSolve2d5.ToFrenetSerret_TrivialReferencePath
+[       OK ] TestSolve2d5.ToFrenetSerret_TrivialReferencePath (5 ms)
+[ RUN      ] TestSolve2d5.ToFrenetSerret_Simple
+[       OK ] TestSolve2d5.ToFrenetSerret_Simple (4 ms)
+[ RUN      ] TestSolve2d5.ToFrenetSerret_AtRefCorner
+[       OK ] TestSolve2d5.ToFrenetSerret_AtRefCorner (4 ms)
+[ RUN      ] TestSolve2d5.ToFrenetSerret_DegenerateRefPath
+[       OK ] TestSolve2d5.ToFrenetSerret_DegenerateRefPath (4 ms)
+[ RUN      ] TestSolve2d5.BoostToBeamFrame_Simple
+[       OK ] TestSolve2d5.BoostToBeamFrame_Simple (4 ms)
+[ RUN      ] TestSolve2d5.BoostToBeamFrame_SimpleInvalid
+[       OK ] TestSolve2d5.BoostToBeamFrame_SimpleInvalid (4 ms)
+[ RUN      ] TestSolve2d5.ScatterToGrid_SimpleCharge
+[       OK ] TestSolve2d5.ScatterToGrid_SimpleCharge (4 ms)
+[ RUN      ] TestSolve2d5.ScatterToGrid_ClosedRingChargeLo
+[       OK ] TestSolve2d5.ScatterToGrid_ClosedRingChargeLo (4 ms)
+[ RUN      ] TestSolve2d5.ScatterToGrid_ClosedRingChargeHi
+[       OK ] TestSolve2d5.ScatterToGrid_ClosedRingChargeHi (4 ms)
+[ RUN      ] TestSolve2d5.ScatterToGrid_SimpleChargeDensity
+[       OK ] TestSolve2d5.ScatterToGrid_SimpleChargeDensity (4 ms)
+[ RUN      ] TestSolve2d5.ScatterToGrid_ClosedRingChargeDensityLo
+[       OK ] TestSolve2d5.ScatterToGrid_ClosedRingChargeDensityLo (4 ms)
+[ RUN      ] TestSolve2d5.ScatterToGrid_ClosedRingChargeDensityHi
+[       OK ] TestSolve2d5.ScatterToGrid_ClosedRingChargeDensityHi (4 ms)
+[ RUN      ] TestSolve2d5.TotalDensity_Simple
+
+[       OK ] TestSolve2d5.TotalDensity_Simple (5 ms)
+[ RUN      ] TestSolve2d5.LineDensity_Simple
+
+[       OK ] TestSolve2d5.LineDensity_Simple (5 ms)
+[ RUN      ] TestSolve2d5.LineDensityGradient_Simple
+
+[       OK ] TestSolve2d5.LineDensityGradient_Simple (5 ms)
+[ RUN      ] TestSolve2d5.LineDensity_RingNotClosed
+
+[       OK ] TestSolve2d5.LineDensity_RingNotClosed (5 ms)
+[ RUN      ] TestSolve2d5.LineDensity_RingClosed
+
+[       OK ] TestSolve2d5.LineDensity_RingClosed (5 ms)
+[ RUN      ] TestSolve2d5.SolvePoissons_Simple
+[       OK ] TestSolve2d5.SolvePoissons_Simple (122 ms)
+[ RUN      ] TestSolve2d5.SliceWorkspaceKeepsNeutralSourcesAndClearsVacatedSlices
+[       OK ] TestSolve2d5.SliceWorkspaceKeepsNeutralSourcesAndClearsVacatedSlices (43 ms)
+[ RUN      ] TestSolve2d5.ToFrenetSerretGather_Simple
+[       OK ] TestSolve2d5.ToFrenetSerretGather_Simple (14 ms)
+[ RUN      ] TestSolve2d5.GatherEField_OneParticle
+[       OK ] TestSolve2d5.GatherEField_OneParticle (16 ms)
+[ RUN      ] TestSolve2d5.GatherEField_TwoParticles
+[       OK ] TestSolve2d5.GatherEField_TwoParticles (14 ms)
+[ RUN      ] TestSolve2d5.TransverseLabDensityAndMagneticCancellation
+[       OK ] TestSolve2d5.TransverseLabDensityAndMagneticCancellation (69 ms)
+[ RUN      ] TestSolve2d5.UniformCylinderMatchesGaussLaw
+[       OK ] TestSolve2d5.UniformCylinderMatchesGaussLaw (147 ms)
+[ RUN      ] TestSolve2d5.SmoothGaussianSlicesConvergeWithoutParticleNoise
+SMOOTH_GAUSSIAN mesh=64 radius=0 relative_rms_error=0.0110168
+SMOOTH_GAUSSIAN mesh=128 radius=0 relative_rms_error=0.00277764
+SMOOTH_GAUSSIAN mesh=256 radius=0 relative_rms_error=0.000695845
+SMOOTH_GAUSSIAN mesh=512 radius=0 relative_rms_error=0.000174057
+SMOOTH_GAUSSIAN mesh=64 radius=1 relative_rms_error=0.0110168
+SMOOTH_GAUSSIAN mesh=128 radius=1 relative_rms_error=0.00277764
+SMOOTH_GAUSSIAN mesh=256 radius=1 relative_rms_error=0.000695847
+SMOOTH_GAUSSIAN mesh=512 radius=1 relative_rms_error=0.000174058
+SMOOTH_GAUSSIAN mesh=64 radius=10 relative_rms_error=0.0110168
+SMOOTH_GAUSSIAN mesh=128 radius=10 relative_rms_error=0.00277764
+SMOOTH_GAUSSIAN mesh=256 radius=10 relative_rms_error=0.000695845
+SMOOTH_GAUSSIAN mesh=512 radius=10 relative_rms_error=0.000174057
+SMOOTH_GAUSSIAN mesh=64 radius=100 relative_rms_error=0.0110168
+SMOOTH_GAUSSIAN mesh=128 radius=100 relative_rms_error=0.00277764
+SMOOTH_GAUSSIAN mesh=256 radius=100 relative_rms_error=0.000695845
+SMOOTH_GAUSSIAN mesh=512 radius=100 relative_rms_error=0.000174057
+[       OK ] TestSolve2d5.SmoothGaussianSlicesConvergeWithoutParticleNoise (855 ms)
+[ RUN      ] TestSolve2d5.OpenReferencePathRejectsEndpointPileup
+[       OK ] TestSolve2d5.OpenReferencePathRejectsEndpointPileup (7 ms)
+[ RUN      ] TestSolve2d5.Deboost_TwoStationaryParticles
+[       OK ] TestSolve2d5.Deboost_TwoStationaryParticles (17 ms)
+[ RUN      ] TestSolve2d5.Deboost_TwoRelativisticParticles
+[       OK ] TestSolve2d5.Deboost_TwoRelativisticParticles (18 ms)
+[ RUN      ] TestSolve2d5.ParabolicLineDensityHasCenteredLongitudinalForce
+[       OK ] TestSolve2d5.ParabolicLineDensityHasCenteredLongitudinalForce (19 ms)
+[ RUN      ] TestSolve2d5.ClosedLongitudinalGatherWrapsCellCenters
+[       OK ] TestSolve2d5.ClosedLongitudinalGatherWrapsCellCenters (4 ms)
+[ RUN      ] TestSolve2d5.LongitudinalField_Simple
+
+[       OK ] TestSolve2d5.LongitudinalField_Simple (22 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_Simple
+[       OK ] TestSolve2d5.LabFrameFields_Simple (21 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_SimpleInvalid
+[       OK ] TestSolve2d5.LabFrameFields_SimpleInvalid (21 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_SimpleOutOfBoundsX
+[       OK ] TestSolve2d5.LabFrameFields_SimpleOutOfBoundsX (5 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_SimpleOutOfBoundsY
+[       OK ] TestSolve2d5.LabFrameFields_SimpleOutOfBoundsY (5 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_SimpleOutOfBoundsZ
+[       OK ] TestSolve2d5.LabFrameFields_SimpleOutOfBoundsZ (4 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_ClosedRing
+
+[       OK ] TestSolve2d5.LabFrameFields_ClosedRing (21 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_OpenRing
+
+[       OK ] TestSolve2d5.LabFrameFields_OpenRing (22 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_Pipe
+[       OK ] TestSolve2d5.LabFrameFields_Pipe (24 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_Plates
+[       OK ] TestSolve2d5.LabFrameFields_Plates (22 ms)
+[ RUN      ] TestSolve2d5.LoadReferencePath_Empty
+[       OK ] TestSolve2d5.LoadReferencePath_Empty (3 ms)
+[ RUN      ] TestSolve2d5.LoadReferencePath_EmptyClosedRing
+[       OK ] TestSolve2d5.LoadReferencePath_EmptyClosedRing (3 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_NoParticles
+[       OK ] TestSolve2d5.LabFrameFields_NoParticles (4 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_MainApi
+[       OK ] TestSolve2d5.LabFrameFields_MainApi (23 ms)
+[ RUN      ] TestSolve2d5.MainApiMatchesDirectStagesForScatterAndBoundaryModes
+[       OK ] TestSolve2d5.MainApiMatchesDirectStagesForScatterAndBoundaryModes (82 ms)
+[ RUN      ] TestSolve2d5.KvBeam_Charge
+[       OK ] TestSolve2d5.KvBeam_Charge (120 ms)
+[ RUN      ] TestSolve2d5.KvBeam_ChargeDensity
+[       OK ] TestSolve2d5.KvBeam_ChargeDensity (26 ms)
+[ RUN      ] TestSolve2d5.KvBeam_Potential
+[       OK ] TestSolve2d5.KvBeam_Potential (32 ms)
+[ RUN      ] TestSolve2d5.KvBeam_ElectricField
+[       OK ] TestSolve2d5.KvBeam_ElectricField (34 ms)
+[ RUN      ] TestSolve2d5.BatchedSlicesMatchSerialPotentialHaloAndFields
+[       OK ] TestSolve2d5.BatchedSlicesMatchSerialPotentialHaloAndFields (451 ms)
+[ RUN      ] TestSolve2d5.Poisson_Simple
+[       OK ] TestSolve2d5.Poisson_Simple (19 ms)
+[ RUN      ] TestSolve2d5.IntegratedPoissonHasNoBoundaryCellSelfForce
+[       OK ] TestSolve2d5.IntegratedPoissonHasNoBoundaryCellSelfForce (14 ms)
+[ RUN      ] TestSolve2d5.PoissonGradientUsesProvidedPotentialHalo
+[       OK ] TestSolve2d5.PoissonGradientUsesProvidedPotentialHalo (12 ms)
+[ RUN      ] TestSolve2d5.IntegratedPoissonSupportsSmallTransverseGrids
+[       OK ] TestSolve2d5.IntegratedPoissonSupportsSmallTransverseGrids (117 ms)
+[ RUN      ] TestSolve2d5.IntegratedLogKernelSelfAndAnisotropicCells
+[       OK ] TestSolve2d5.IntegratedLogKernelSelfAndAnisotropicCells (2 ms)
+[ RUN      ] TestSolve2d5.IntegratedLogKernelScaleChangesOnlyPotentialGauge
+[       OK ] TestSolve2d5.IntegratedLogKernelScaleChangesOnlyPotentialGauge (1 ms)
+[ RUN      ] TestSolve2d5.IntegratedPoissonForceConvergesAndIsIndependentOfLengthUnit
+[       OK ] TestSolve2d5.IntegratedPoissonForceConvergesAndIsIndependentOfLengthUnit (50 ms)
+[----------] 68 tests from TestSolve2d5 (2666 ms total)
+
+[----------] Global test environment tear-down
+[==========] 68 tests from 1 test suite ran. (4899 ms total)
+[  PASSED  ] 67 tests.
+[  SKIPPED ] 1 test, listed below:
+[  SKIPPED ] TestSolve2d5.Configuration_MultipleRanksRequireZDecomposition
+Running main() from /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 17 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 12 tests from SpaceChargeConfigTest
+[ RUN      ] SpaceChargeConfigTest.ExplicitOriginalModelPreservesDefaultAndRejectsOtherTypes
+[       OK ] SpaceChargeConfigTest.ExplicitOriginalModelPreservesDefaultAndRejectsOtherTypes (0 ms)
+[ RUN      ] SpaceChargeConfigTest.DerivesP3MParticleLayoutAndBoundaryMode
+[       OK ] SpaceChargeConfigTest.DerivesP3MParticleLayoutAndBoundaryMode (0 ms)
+[ RUN      ] SpaceChargeConfigTest.ValidatesP3MCutoffModes
+[       OK ] SpaceChargeConfigTest.ValidatesP3MCutoffModes (0 ms)
+[ RUN      ] SpaceChargeConfigTest.RejectsInvalidP3MCombinations
+[       OK ] SpaceChargeConfigTest.RejectsInvalidP3MCombinations (0 ms)
+[ RUN      ] SpaceChargeConfigTest.P3MAcceptsAnyBinCount
+[       OK ] SpaceChargeConfigTest.P3MAcceptsAnyBinCount (0 ms)
+[ RUN      ] SpaceChargeConfigTest.PairWeightNeedsP3MAndUnitRange
+[       OK ] SpaceChargeConfigTest.PairWeightNeedsP3MAndUnitRange (0 ms)
+[ RUN      ] SpaceChargeConfigTest.P3MShiftedPlaneRequiresOpenDomain
+[       OK ] SpaceChargeConfigTest.P3MShiftedPlaneRequiresOpenDomain (0 ms)
+[ RUN      ] SpaceChargeConfigTest.DerivesIndependentFFT2D5Domain
+[       OK ] SpaceChargeConfigTest.DerivesIndependentFFT2D5Domain (0 ms)
+[ RUN      ] SpaceChargeConfigTest.RejectsUnsupportedDirichletPlaneCombinations
+[       OK ] SpaceChargeConfigTest.RejectsUnsupportedDirichletPlaneCombinations (0 ms)
+[ RUN      ] SpaceChargeConfigTest.RejectsInvalidEnumValues
+[       OK ] SpaceChargeConfigTest.RejectsInvalidEnumValues (0 ms)
+[ RUN      ] SpaceChargeConfigTest.ValidatesPoissonDomainBoundaryMatrix
+[       OK ] SpaceChargeConfigTest.ValidatesPoissonDomainBoundaryMatrix (0 ms)
+[ RUN      ] SpaceChargeConfigTest.ShiftedGreenIsIndependentOfBinningAndKernelDiscretization
+[       OK ] SpaceChargeConfigTest.ShiftedGreenIsIndependentOfBinningAndKernelDiscretization (0 ms)
+[----------] 12 tests from SpaceChargeConfigTest (0 ms total)
+
+[----------] 5 tests from SpaceChargeConfigBuilderTest
+[ RUN      ] SpaceChargeConfigBuilderTest.BuildsP3MShiftedSourcePlane
+[       OK ] SpaceChargeConfigBuilderTest.BuildsP3MShiftedSourcePlane (0 ms)
+[ RUN      ] SpaceChargeConfigBuilderTest.RejectsRecognizedCGBeforeRuntimeConstruction
+[       OK ] SpaceChargeConfigBuilderTest.RejectsRecognizedCGBeforeRuntimeConstruction (0 ms)
+[ RUN      ] SpaceChargeConfigBuilderTest.ParserDefersCompatibilityAndReadsCurrentAttributes
+[       OK ] SpaceChargeConfigBuilderTest.ParserDefersCompatibilityAndReadsCurrentAttributes (0 ms)
+[ RUN      ] SpaceChargeConfigBuilderTest.SelectsOneP3MCutoffMode
+[       OK ] SpaceChargeConfigBuilderTest.SelectsOneP3MCutoffMode (0 ms)
+[ RUN      ] SpaceChargeConfigBuilderTest.RejectsInvalidMeshValuesBeforeIntegerConversion
+[       OK ] SpaceChargeConfigBuilderTest.RejectsInvalidMeshValuesBeforeIntegerConversion (0 ms)
+[----------] 5 tests from SpaceChargeConfigBuilderTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 17 tests from 2 test suites ran. (1 ms total)
+[  PASSED  ] 17 tests.

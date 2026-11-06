@@ -1,0 +1,41 @@
+{
+  "mode": "sample",
+  "binary": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+  "binary_sha256": "d2c0add433c40f47557d354323093f1d3949835defff5945bcb7337e7223f4d1",
+  "input_sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38",
+  "initial_state_sha256": "4d6adf38da35d9168f9cdb10847786eb1ea64d27e13e521211173901037e19f5",
+  "pilot_manifest": {
+    "binary": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+    "binary_sha256": "4fd718db8dea11088409158506cd61761eb35f7a0e6a15638fba235c433ba0eb",
+    "initial_state_sha256": "4d6adf38da35d9168f9cdb10847786eb1ea64d27e13e521211173901037e19f5",
+    "source_npz_sha256": "97943097cf785f64019b7092bd52bbf57eca77bdfbe07cdef288d9ac5732d923",
+    "source_text_sha256": "e4ed5735e21af00d116690d0a623f13545475a3435776e52c4a4abdc4a89f9e3",
+    "reference_path_sha256": "562590c1ca8b167affb53f662843f7a0618212bac66bd1ea5b103e6c88c4f121",
+    "input_sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38",
+    "charge_C": 5.602212333965894e-09,
+    "dt_s": 3e-12,
+    "steps": 100,
+    "omp_threads": 4,
+    "mpi_ranks": 1,
+    "particles": 100000,
+    "mesh": [
+      64,
+      64,
+      512
+    ],
+    "model": "ORIGINAL",
+    "longitudinal": "NONE: matched transverse-only coasting KV/PyORBIT comparison",
+    "space_charge": true,
+    "scope": "timing pilot only; no full turn or tune validation",
+    "elapsed_seconds": 75.424346084008,
+    "returncode": 0,
+    "completed": true,
+    "peak_rss_bytes": 130138112
+  },
+  "profiler_library_sha256": null,
+  "scope": "100steps only; identical4thread5.602nC100k64x64x5123pspilot; no16turnrun",
+  "start_unix_s": 1793827379.845531,
+  "elapsed_seconds": 22.590373790997546,
+  "completed": true,
+  "returncode": 0
+}

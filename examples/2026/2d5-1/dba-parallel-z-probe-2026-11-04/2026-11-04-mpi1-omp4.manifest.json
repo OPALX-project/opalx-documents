@@ -1,0 +1,28 @@
+{
+  "binary": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+  "binary_sha256": "4fd718db8dea11088409158506cd61761eb35f7a0e6a15638fba235c433ba0eb",
+  "source_commit": "40856f1a28246fb8d137864ca7541f2aede71a7b",
+  "base_input_sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38",
+  "input_sha256": "a957e296ed4057ee686c7c7435cb540e353eb120425244782f7a05080e3da1b5",
+  "mpi_ranks": 1,
+  "omp_threads": 4,
+  "parfftz": true,
+  "mesh": [
+    64,
+    64,
+    512
+  ],
+  "particles": 100000,
+  "charge_C": 5.602212333965894e-09,
+  "dt_s": 3e-12,
+  "max_steps": 100,
+  "initial_state": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility/initial-state.h5",
+  "initial_state_sha256": "4d6adf38da35d9168f9cdb10847786eb1ea64d27e13e521211173901037e19f5",
+  "scope": "Only PARFFTZ changes; probe distributed-support validation before any claimed result comparison",
+  "returncode": 156,
+  "completed": false,
+  "outcome": "configuration_rejected",
+  "tracking_steps": 0,
+  "error": "FFT2D5 uses serial slices; set PARFFTX/PARFFTY/PARFFTZ to FALSE.",
+  "field_comparison_available": false
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "target": "UnifiedValidationSpaceChargeConfig",
+    "omp_threads": 1,
+    "returncode": 0,
+    "log": "/Users/adelmann/git/opalx/tmp/2026-11-04-unified-validation/UnifiedValidationSpaceChargeConfig-omp1.log"
+  },
+  {
+    "target": "UnifiedValidationFFT2D5Frames",
+    "omp_threads": 1,
+    "returncode": 0,
+    "log": "/Users/adelmann/git/opalx/tmp/2026-11-04-unified-validation/UnifiedValidationFFT2D5Frames-omp1.log"
+  },
+  {
+    "target": "UnifiedValidationFFT2D5Numerics",
+    "omp_threads": 1,
+    "returncode": 0,
+    "log": "/Users/adelmann/git/opalx/tmp/2026-11-04-unified-validation/UnifiedValidationFFT2D5Numerics-omp1.log"
+  },
+  {
+    "target": "UnifiedValidationSpaceChargeConfig",
+    "omp_threads": 4,
+    "returncode": 0,
+    "log": "/Users/adelmann/git/opalx/tmp/2026-11-04-unified-validation/UnifiedValidationSpaceChargeConfig-omp4.log"
+  },
+  {
+    "target": "UnifiedValidationFFT2D5Frames",
+    "omp_threads": 4,
+    "returncode": 0,
+    "log": "/Users/adelmann/git/opalx/tmp/2026-11-04-unified-validation/UnifiedValidationFFT2D5Frames-omp4.log"
+  },
+  {
+    "target": "UnifiedValidationFFT2D5Numerics",
+    "omp_threads": 4,
+    "returncode": 0,
+    "log": "/Users/adelmann/git/opalx/tmp/2026-11-04-unified-validation/UnifiedValidationFFT2D5Numerics-omp4.log"
+  }
+]

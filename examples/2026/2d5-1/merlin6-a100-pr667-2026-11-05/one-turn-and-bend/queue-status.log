@@ -1,0 +1,65 @@
+module load: unstable module has been loaded -- openmpi/5.0.10_slurm
+CLUSTER: gmerlin6
+       JOBID        STATE                    NODELIST(REASON)             START_TIME
+      354991      PENDING                      (AssocGrpGRES)    2026-11-07T15:33:09
+      354992      PENDING                      (AssocGrpGRES)    2026-11-07T15:33:09
+JobId=354991 JobName=opalx-dba-one-turn
+   UserId=adelmann(3333) GroupId=unx-nogroup(710) MCS_label=N/A
+   Priority=4015 Nice=0 Account=gwendolen QOS=normal
+   JobState=PENDING Reason=AssocGrpGRES Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:00 TimeLimit=1-00:00:00 TimeMin=N/A
+   SubmitTime=2026-11-05T17:48:23 EligibleTime=2026-11-05T17:48:23
+   AccrueTime=2026-11-05T17:48:23
+   StartTime=2026-11-07T15:33:09 EndTime=2026-11-08T15:33:09 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-05T17:50:12 Scheduler=Main
+   Partition=gwendolen AllocNode:Sid=merlin-l-001:2674510
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=
+   NumNodes=1-1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=8,mem=96G,node=1,billing=8,gres/gpu=1
+   AllocTRES=(null)
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:1 CoreSpec=*
+   MinCPUsNode=8 MinMemoryTRES=124800M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/dba-one-turn.sbatch
+   SubmitLine=sbatch --parsable /psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/dba-one-turn.sbatch
+   WorkDir=/data/user/adelmann/opalx-dev/dba
+   StdErr=/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/dba-one-turn-354991.err
+   StdIn=/dev/null
+   StdOut=/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/dba-one-turn-354991.out
+   MemPerTres=gpu:124800
+   TresPerJob=gres/gpu:1
+   TresPerTask=cpu=8
+
+JobId=354992 JobName=opalx-bend-batch64
+   UserId=adelmann(3333) GroupId=unx-nogroup(710) MCS_label=N/A
+   Priority=4015 Nice=0 Account=gwendolen QOS=normal
+   JobState=PENDING Reason=AssocGrpGRES Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:00 TimeLimit=01:00:00 TimeMin=N/A
+   SubmitTime=2026-11-05T17:48:23 EligibleTime=2026-11-05T17:48:23
+   AccrueTime=2026-11-05T17:48:23
+   StartTime=2026-11-07T15:33:09 EndTime=2026-11-07T16:33:09 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-05T17:50:12 Scheduler=Main
+   Partition=gwendolen AllocNode:Sid=merlin-l-001:2674510
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=
+   NumNodes=1-1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=8,mem=96G,node=1,billing=8,gres/gpu=1
+   AllocTRES=(null)
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:1 CoreSpec=*
+   MinCPUsNode=8 MinMemoryTRES=124800M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/bend-batch64.sbatch
+   SubmitLine=sbatch --parsable /psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/bend-batch64.sbatch
+   WorkDir=/data/user/adelmann/opalx-dev/dba
+   StdErr=/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/bend-batch64-354992.err
+   StdIn=/dev/null
+   StdOut=/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/bend-batch64-354992.out
+   MemPerTres=gpu:124800
+   TresPerJob=gres/gpu:1
+   TresPerTask=cpu=8
+

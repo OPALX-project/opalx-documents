@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "criterion": "Each RMS/emittance absolute curve difference <1e-8 of its published peak; ZeroSC longitudinal roundoff uses absolute1e-12m eV",
+  "rows": [
+    {
+      "mode": "ZeroSC",
+      "field": "sigma_u_m",
+      "max_absolute_difference": 1.5005358067199381e-15,
+      "max_difference_relative_to_published_peak": 1.5005545637689985e-13
+    },
+    {
+      "mode": "ZeroSC",
+      "field": "sigma_y_m",
+      "max_absolute_difference": 4.996003610813204e-16,
+      "max_difference_relative_to_published_peak": 4.996003610813454e-14
+    },
+    {
+      "mode": "ZeroSC",
+      "field": "sigma_s_m",
+      "max_absolute_difference": 1.5945023079666498e-12,
+      "max_difference_relative_to_published_peak": 1.1046770984385094e-12
+    },
+    {
+      "mode": "ZeroSC",
+      "field": "emit_n_u_m",
+      "max_absolute_difference": 4.5281676188742695e-23,
+      "max_difference_relative_to_published_peak": 3.3278707403220673e-13
+    },
+    {
+      "mode": "ZeroSC",
+      "field": "emit_n_y_m",
+      "max_absolute_difference": 0.0,
+      "max_difference_relative_to_published_peak": null
+    },
+    {
+      "mode": "ZeroSC",
+      "field": "emit_sE_m_eV",
+      "max_absolute_difference": 3.540211691266703e-13,
+      "max_difference_relative_to_published_peak": 0.19673982197231416
+    },
+    {
+      "mode": "10pC",
+      "field": "sigma_u_m",
+      "max_absolute_difference": 8.634699726062234e-12,
+      "max_difference_relative_to_published_peak": 8.634807661831348e-10
+    },
+    {
+      "mode": "10pC",
+      "field": "sigma_y_m",
+      "max_absolute_difference": 1.5815959653053824e-12,
+      "max_difference_relative_to_published_peak": 2.950476531852811e-11
+    },
+    {
+      "mode": "10pC",
+      "field": "sigma_s_m",
+      "max_absolute_difference": 1.7410517472171705e-12,
+      "max_difference_relative_to_published_peak": 1.2059529670532424e-12
+    },
+    {
+      "mode": "10pC",
+      "field": "emit_n_u_m",
+      "max_absolute_difference": 1.7590786510605734e-17,
+      "max_difference_relative_to_published_peak": 1.9461858583345612e-09
+    },
+    {
+      "mode": "10pC",
+      "field": "emit_n_y_m",
+      "max_absolute_difference": 5.089254361331492e-18,
+      "max_difference_relative_to_published_peak": 1.9110002359313053e-09
+    },
+    {
+      "mode": "10pC",
+      "field": "emit_sE_m_eV",
+      "max_absolute_difference": 2.2875266125765847e-09,
+      "max_difference_relative_to_published_peak": 9.913196866168999e-10
+    }
+  ],
+  "scope": "Repeated local ORIGINAL curves; committed658 and PyORBIT remain unchanged historical references. Historical implementation timing bars are not rerun using different executables."
+}

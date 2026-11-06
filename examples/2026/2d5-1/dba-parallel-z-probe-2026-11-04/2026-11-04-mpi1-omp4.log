@@ -1,0 +1,82 @@
+Ippl[2]> [AutoTune] seeding built-in scatter/gather defaults for Kokkos::OpenMP (set IPPL_AUTO_TUNE=1 to run the sweep instead)
+OPAL-X>               ____  _____        _       __   __
+OPAL-X> [1;32m
+OPAL-X> 
+OPAL-X>   ██████  ██████   █████  ██      ██   ██
+OPAL-X>  ██    ██ ██   ██ ██   ██ ██       ██ ██
+OPAL-X>  ██    ██ ██████  ███████ ██        ███
+OPAL-X>  ██    ██ ██      ██   ██ ██       ██ ██
+OPAL-X>   ██████  ██      ██   ██ ███████ ██   ██
+OPAL-X> 
+OPAL-X>          This is OPALX (Object Oriented Parallel Accelerator Library for Exascale)
+OPAL-X> 
+OPAL-X> [0m
+OPAL-X> 
+OPAL-X> OPALX is the performance portable version of OPAL :: Version 1.0.0
+OPAL-X>             git rev. ccfdc1055b2721d2308761d45a3030b29ef70e11
+OPAL-X> 
+OPAL-X> 
+OPAL-X>              (c) PSI, https://github.com/OPALX-project/OPALX
+OPAL-X> 
+OPAL-X> 
+OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
+OPAL-X> 
+OPAL-X> Time: 20:34:02 date: 04/11/2026
+OPAL-X> 
+OPAL-X> * Executable: /Users/adelmann/git/opalx/build-omp/src/opalx
+OPAL-X> * Build configuration: Release
+OPAL-X> * Compiler: Clang 21.1.8
+OPAL-X> * CMake C++ flags (configure-time):  -O3 -DNDEBUG
+OPAL-X> * MPI ranks: 1
+OPAL-X> * C++ assertions: disabled (NDEBUG)
+OPAL-X> * OpenMP max threads: 4; dynamic teams: 0
+OPAL-X> * Kokkos host concurrency: 4
+OPAL-X> * Host:   OpenMP
+OPAL-X> * Device: OpenMP
+OPAL-X> 
+OPAL-X> * Reading input stream 'case.in'
+OPAL-X> * ************* F I E L D S O L V E R ********************************************** 
+OPAL-X> * FIELDSOLVER  FS
+OPAL-X> * BINS         NONE
+OPAL-X> * TYPE         FFT2D5
+OPAL-X> * RANKS        1
+OPAL-X> * NX           64
+OPAL-X> * NY           64
+OPAL-X> * NZ           512
+OPAL-X> * BBOXINCR     2
+OPAL-X> * GREENSF      INTEGRATED
+OPAL-X> * FFT2D5MODEL  ORIGINAL
+OPAL-X> * XDIM         serial  
+OPAL-X> * YDIM         serial  
+OPAL-X> * ZDIM         parallel  
+OPAL-X> * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> * RUN resolved beams: BEAM1
+OPAL-X> * ************* B E A M ************************************************************ 
+OPAL-X> * BEAM        BEAM1
+OPAL-X> * PARTICLE    PROTON
+OPAL-X> * REST MASS   0.938272 [GeV]
+OPAL-X> * CHARGE      +e * 1 
+OPAL-X> * MOMENTUM    0.0685391 [GeV/c]
+OPAL-X> * BCHARGE     5.60221e-09 [C]
+OPAL-X> * NALLOC      100000
+OPAL-X> * ********************************************************************************** 
+OPAL-X> 
+OPAL-X[2]> * Beam[0] BEAM1 macro charge per particle [C]: 5.60221e-14
+OPAL-X[2]> * Beam[0] BEAM1 macro mass per particle [GeV/c^2]: 328079
+OPAL-X[2]> * Beam[0] BEAM1 particles per macro particle: 349663
+OPAL-X> 
+Error> 
+Error> *** User error detected by function "validateSpaceChargeConfig"
+Error>     FFT2D5 uses serial slices; set PARFFTX/PARFFTY/PARFFTZ to FALSE.
+Error>     FFT2D5 uses serial slices; set PARFFTX/PARFFTY/PARFFTZ to FALSE.
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD
+  Proc: [[59654,0],0]
+  Errorcode: -100
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------

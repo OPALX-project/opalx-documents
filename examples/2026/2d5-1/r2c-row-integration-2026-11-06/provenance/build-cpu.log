@@ -1,0 +1,86 @@
+[  2%] Built target blas_obj
+[  2%] Built target Heffte
+[  2%] Built target mod_files
+[  2%] Built target blas
+[  3%] Built target kokkoscore
+[ 28%] Built target lapack_obj
+[ 28%] Built target kokkosalgorithms
+[ 28%] Built target kokkossimd
+[ 28%] Built target kokkoscontainers
+[ 28%] Built target lapack
+[ 62%] Built target lapacke_obj
+[ 64%] Built target ippl
+[ 82%] Built target hdf5-static
+[ 82%] Built target lapacke
+[ 84%] Built target H5hut
+[ 84%] Building CXX object src/CMakeFiles/opalx.dir/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp.o
+[ 84%] Building CXX object src/CMakeFiles/opalx.dir/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp.o
+[ 84%] Building CXX object src/CMakeFiles/opalx.dir/SpaceCharge/SpaceChargeFactory.cpp.o
+[ 84%] Building CXX object src/CMakeFiles/opalx.dir/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp.o
+[ 84%] Linking CXX static library libopalx.a
+[ 98%] Built target opalx
+[100%] Linking CXX executable opalx
+[100%] Built target opalx_exe
+[  2%] Built target blas_obj
+[  2%] Built target gtest
+[  2%] Built target Heffte
+[  2%] Built target mod_files
+[  2%] Built target blas
+[  3%] Built target kokkoscore
+[  3%] Built target gtest_main
+[ 10%] Built target kokkossimd
+[ 28%] Built target lapack_obj
+[ 28%] Built target kokkosalgorithms
+[ 28%] Built target kokkoscontainers
+[ 28%] Built target lapack
+[ 63%] Built target lapacke_obj
+[ 64%] Built target ippl
+[ 72%] Built target lapacke
+[ 82%] Built target hdf5-static
+[ 85%] Built target H5hut
+[100%] Built target opalx
+[100%] Building CXX object unit_tests/SpaceCharge/CMakeFiles/TestFFT2D5Algorithm.dir/TestFFT2D5Algorithm.cpp.o
+[100%] Linking CXX executable TestFFT2D5Algorithm
+[100%] Built target TestFFT2D5Algorithm
+[  1%] Built target gtest
+[  2%] Built target blas_obj
+[  2%] Built target Heffte
+[  2%] Built target mod_files
+[  3%] Built target kokkoscore
+[  3%] Built target blas
+[  3%] Built target gtest_main
+[ 28%] Built target lapack_obj
+[ 28%] Built target kokkosalgorithms
+[ 28%] Built target kokkossimd
+[ 28%] Built target kokkoscontainers
+[ 28%] Built target lapack
+[ 63%] Built target lapacke_obj
+[ 64%] Built target ippl
+[ 82%] Built target hdf5-static
+[ 82%] Built target lapacke
+[ 85%] Built target H5hut
+[100%] Built target opalx
+[100%] Building CXX object unit_tests/SpaceCharge/CMakeFiles/TestFFT2D5Numerics.dir/TestFFT2D5Numerics.cpp.o
+[100%] Linking CXX executable TestFFT2D5Numerics
+[100%] Built target TestFFT2D5Numerics
+[  2%] Built target blas_obj
+[  2%] Built target gtest
+[  2%] Built target Heffte
+[  2%] Built target mod_files
+[  2%] Built target blas
+[  3%] Built target kokkoscore
+[  3%] Built target gtest_main
+[ 28%] Built target lapack_obj
+[ 28%] Built target kokkosalgorithms
+[ 28%] Built target kokkossimd
+[ 28%] Built target kokkoscontainers
+[ 28%] Built target lapack
+[ 31%] Built target ippl
+[ 64%] Built target lapacke_obj
+[ 82%] Built target hdf5-static
+[ 82%] Built target lapacke
+[ 85%] Built target H5hut
+[100%] Built target opalx
+[100%] Building CXX object unit_tests/SpaceCharge/CMakeFiles/TestFFT2D5Parallel.dir/TestFFT2D5Parallel.cpp.o
+[100%] Linking CXX executable TestFFT2D5Parallel
+[100%] Built target TestFFT2D5Parallel

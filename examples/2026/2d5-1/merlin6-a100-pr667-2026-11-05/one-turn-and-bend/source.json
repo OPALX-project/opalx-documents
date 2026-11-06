@@ -1,0 +1,33 @@
+{
+  "charge_C": 5.602212333965894e-09,
+  "current_A": 0.0047487695501886385,
+  "circumference_m": 25.766370614359165,
+  "perveance": 7.785273762157249e-07,
+  "beta": 0.07285411307707136,
+  "gamma": 1.002664472308372,
+  "momentum_betagamma": 0.07304823084391622,
+  "particle_count": 100000,
+  "initial_envelope": [
+    0.010669745200049634,
+    2.2912731441709794e-15,
+    0.004771027790331528,
+    -2.057313245366107e-15
+  ],
+  "analytic_tunes": [
+    0.623940111330025,
+    1.5895363970113432
+  ],
+  "initial_global_mean_position": [
+    -4.200000000281066,
+    0.0,
+    8.337979733735734e-15
+  ],
+  "initial_global_mean_momentum": [
+    -1.9006579090544843e-15,
+    0.0,
+    1.6660967747411657e-08
+  ],
+  "shell_error": 8.881784197001252e-16,
+  "quiet_rule": "32pointblocks:8evenparitysigns\u00d74cyclicpermutations; exactfirst/secondmoments perlongitudinalstratum",
+  "source_sha256": "97943097cf785f64019b7092bd52bbf57eca77bdfbe07cdef288d9ac5732d923"
+}

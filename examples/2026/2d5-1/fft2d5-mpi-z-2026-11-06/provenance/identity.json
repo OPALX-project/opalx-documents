@@ -1,0 +1,36 @@
+{
+  "base_commit": "8cf0239d0f7b0c65465ccf6fd66272189e46aeca",
+  "branch": "codex/fft2d5-explicit-original-model",
+  "cpu_binary_sha256": "135d999a84df3676913ebb2716d6de06bc0e9cc0a15f8dcc357ba8119feac5aa",
+  "preserved_cpu_sha256": "d75ea9dda8e438e63182dfa9aec7d0eb0db3fb0ba440f9fb3988aacfee5d8e73",
+  "source_archive_sha256": "b11630e514b5cc660a476947d2527d02b7d5cbda2ae4a38f64d0b84921e2121b",
+  "gpu_remote_root": "/psi/home/adelmann/opalx-dev/dba/validation-mpi-z-20261106",
+  "cpu_raw_root": "/Users/adelmann/git/opalx/tmp/2026-11-06-fft2d5-mpi-z",
+  "physics": "FFT2D5MODEL=ORIGINAL, PIPEMODE=NONE; no curvature or 3D field operator",
+  "steps": 100,
+  "particles": 100000,
+  "mesh": [
+    64,
+    64,
+    512
+  ],
+  "batch_size": 64,
+  "charge_C": 5.602212333965894e-09,
+  "time_step_s": 3e-12,
+  "ippl_commit": "d6216553e39dcf4405849c027517cc3401fefee5",
+  "ippl_modified": false,
+  "source_portability_archive_sha256": "9f2dfe9670b2cccc65d6a1e902b598f3382d21e0a8d5b9daef7ae1ddead93eb7",
+  "gpu_binary_sha256": "b181efbc6bba421f8e1c8907c0f141080e5fdc84f1c5e78f110390f862536abf",
+  "gpu_preserved_sha256": "6bd5c3a499e54c8201ac788e6c036e56d6add6c77b76967e2ce156e937f21d65",
+  "cpu_ranks_tested": [
+    1,
+    2,
+    4
+  ],
+  "gpu_ranks_tested": [
+    1,
+    2
+  ],
+  "gpu4": "Deferred at user request: GPUs unavailable",
+  "gpu_mpi_launcher": "OpenMPI mpirun; explicit local-rank CUDA visibility; independent world-size and unique GPU UUID checks"
+}

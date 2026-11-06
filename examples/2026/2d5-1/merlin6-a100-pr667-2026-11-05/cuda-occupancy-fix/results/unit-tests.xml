@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Linux-g++"
+	tests="5"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname="merlin-g-100.psi.ch"
+	time="19"
+	timestamp="2026-11-05T16:00:45"
+	>
+	<testcase name="TestGaussian" classname="TestGaussian" time="4.48193" status="run">
+		<properties>
+			<property name="cmake_labels" value="unit"/>
+		</properties>
+		<system-out>Warning: program compiled against libxml 210 using older 209
+Running main() from /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 8 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 8 tests from GaussianTest
+[ RUN      ] GaussianTest.meanR_stddevR
+[       OK ] GaussianTest.meanR_stddevR (22 ms)
+[ RUN      ] GaussianTest.cutoffR
+[       OK ] GaussianTest.cutoffR (11 ms)
+[ RUN      ] GaussianTest.meanP_and_steddevP
+[       OK ] GaussianTest.meanP_and_steddevP (6 ms)
+[ RUN      ] GaussianTest.largeCutoffDisablesTruncation
+[       OK ] GaussianTest.largeCutoffDisablesTruncation (12 ms)
+[ RUN      ] GaussianTest.noFixMean_keepsRawSample
+[       OK ] GaussianTest.noFixMean_keepsRawSample (8 ms)
+[ RUN      ] GaussianTest.ZeroWidthAxesPreserveCountOffsetsAndFiniteMomenta
+[       OK ] GaussianTest.ZeroWidthAxesPreserveCountOffsetsAndFiniteMomenta (77 ms)
+[ RUN      ] GaussianTest.ZeroWidthAppendPreservesExistingPart...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="TestSpaceChargeConfig" classname="TestSpaceChargeConfig" time="1.57113" status="run">
+		<properties>
+			<property name="cmake_labels" value="unit"/>
+		</properties>
+		<system-out>Warning: program compiled against libxml 210 using older 209
+Running main() from /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 17 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 12 tests from SpaceChargeConfigTest
+[ RUN      ] SpaceChargeConfigTest.ExplicitOriginalModelPreservesDefaultAndRejectsOtherTypes
+[       OK ] SpaceChargeConfigTest.ExplicitOriginalModelPreservesDefaultAndRejectsOtherTypes (3 ms)
+[ RUN      ] SpaceChargeConfigTest.DerivesP3MParticleLayoutAndBoundaryMode
+[       OK ] SpaceChargeConfigTest.DerivesP3MParticleLayoutAndBoundaryMode (0 ms)
+[ RUN      ] SpaceChargeConfigTest.ValidatesP3MCutoffModes
+[       OK ] SpaceChargeConfigTest.ValidatesP3MCutoffModes (0 ms)
+[ RUN      ] SpaceChargeConfigTest.RejectsInvalidP3MCombinations
+[       OK ] SpaceChargeConfigTest.RejectsInvalidP3MCombinations (0 ms)
+[ RUN      ] SpaceChargeConfigTest.P3MAcceptsAnyBinCount
+[       OK ] SpaceChargeConfigT...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="TestFFT2D5Algorithm" classname="TestFFT2D5Algorithm" time="4.34636" status="run">
+		<properties>
+			<property name="cmake_labels" value="unit"/>
+		</properties>
+		<system-out>Warning: program compiled against libxml 210 using older 209
+Running main() from /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 11 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 11 tests from FFT2D5AlgorithmTest
+[ RUN      ] FFT2D5AlgorithmTest.LazyInitializationSkipsEmptySlices
+[       OK ] FFT2D5AlgorithmTest.LazyInitializationSkipsEmptySlices (23 ms)
+[ RUN      ] FFT2D5AlgorithmTest.RejectsFixedCartesianDomain
+[       OK ] FFT2D5AlgorithmTest.RejectsFixedCartesianDomain (1 ms)
+[ RUN      ] FFT2D5AlgorithmTest.RestoresTrackerFrameMoments
+[       OK ] FFT2D5AlgorithmTest.RestoresTrackerFrameMoments (169 ms)
+[ RUN      ] FFT2D5AlgorithmTest.LabPathFieldsSurviveReferenceFrameChanges
+[       OK ] FFT2D5AlgorithmTest.LabPathFieldsSurviveReferenceFrameChanges (184 ms)
+[ RUN      ] FFT2D5AlgorithmTest.RigidPlanarRotationPreservesLocalFields
+[       OK ] FFT2D5AlgorithmTest.RigidPlanarRotationPreservesLocalF...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="TestFFT2D5Numerics" classname="TestFFT2D5Numerics" time="5.51161" status="run">
+		<properties>
+			<property name="cmake_labels" value="unit"/>
+		</properties>
+		<system-out>Warning: program compiled against libxml 210 using older 209
+Running main() from /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 68 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 68 tests from TestSolve2d5
+[ RUN      ] TestSolve2d5.LoadReferencePath_Missing
+[       OK ] TestSolve2d5.LoadReferencePath_Missing (20 ms)
+[ RUN      ] TestSolve2d5.Configuration_SerialLayoutAccepted
+[       OK ] TestSolve2d5.Configuration_SerialLayoutAccepted (1 ms)
+[ RUN      ] TestSolve2d5.Configuration_ParallelLayoutRejected
+[       OK ] TestSolve2d5.Configuration_ParallelLayoutRejected (1 ms)
+[ RUN      ] TestSolve2d5.Configuration_BinningRejected
+[       OK ] TestSolve2d5.Configuration_BinningRejected (1 ms)
+[ RUN      ] TestSolve2d5.Configuration_MultipleRanksRejected
+./unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp:776: Skipped
+This validation requires multiple MPI ranks.
+
+[  SKIPPED ] TestSolve2d5.Configuration_Multiple...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="TestPoissonSolver" classname="TestPoissonSolver" time="3.97463" status="run">
+		<properties>
+			<property name="cmake_labels" value="unit"/>
+		</properties>
+		<system-out>Warning: program compiled against libxml 210 using older 209
+Running main() from /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from PoissonSolverTest
+[ RUN      ] PoissonSolverTest.FactoryPreservesMetadataAndSolvesEveryBackend
+[       OK ] PoissonSolverTest.FactoryPreservesMetadataAndSolvesEveryBackend (87 ms)
+[ RUN      ] PoissonSolverTest.RestoresOrdinaryKernelAfterShiftedSolve
+[       OK ] PoissonSolverTest.RestoresOrdinaryKernelAfterShiftedSolve (81 ms)
+[ RUN      ] PoissonSolverTest.RebuiltBackendMatchesFreshSolverOnChangedLayout
+[       OK ] PoissonSolverTest.RebuiltBackendMatchesFreshSolverOnChangedLayout (313 ms)
+[ RUN      ] PoissonSolverTest.RejectsUnsupportedRequestsBeforeModifyingFields
+[       OK ] PoissonSolverTest.RejectsUnsupportedRequestsBeforeModifyingFields (25 ms)
+[ RUN      ] PoissonSolverTest.P3MImageMatchesStandardOpenAfte...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+</testsuite>

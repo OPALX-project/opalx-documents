@@ -1,0 +1,81 @@
+[  0%] Built target mod_files
+[  2%] Built target blas_obj
+[  2%] Built target blas
+[ 26%] Built target lapack_obj
+[ 26%] Built target lapack
+[ 28%] Built target Heffte
+[ 62%] Built target lapacke_obj
+[ 80%] Built target hdf5-static
+[ 80%] Built target lapacke
+[ 82%] Built target kokkoscore
+[ 83%] Built target H5hut
+[ 83%] Built target kokkosalgorithms
+[ 83%] Built target kokkossimd
+[ 83%] Built target kokkoscontainers
+[ 84%] Built target ippl
+[ 84%] Building CXX object src/CMakeFiles/opalx.dir/SpaceCharge/SpaceChargeFactory.cpp.o
+[ 84%] Building CXX object src/CMakeFiles/opalx.dir/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp.o
+[ 84%] Building CXX object src/CMakeFiles/opalx.dir/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp.o
+[ 84%] Building CXX object src/CMakeFiles/opalx.dir/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp.o
+/psi/home/adelmann/opalx-dev/dba/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp(215): warning #20013-D: calling a constexpr __host__ function("epsilon") from a __host__ __device__ function("operator()") is not allowed. The experimental flag '--expt-relaxed-constexpr' can be used to allow this.
+                          constexpr T epsilon = std::numeric_limits<T>::epsilon();
+                                                ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/psi/home/adelmann/opalx-dev/dba/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp(217): warning #20013-D: calling a constexpr __host__ function("min") from a __host__ __device__ function("operator()") is not allowed. The experimental flag '--expt-relaxed-constexpr' can be used to allow this.
+                                  256 * epsilon * scale * scale + 256 * std::numeric_limits<T>::min();
+                                                                        ^
+
+[ 84%] Linking CXX static library libopalx.a
+[ 98%] Built target opalx
+[100%] Linking CXX executable opalx
+[100%] Built target opalx_exe
+[  0%] Built target mod_files
+[  2%] Built target blas_obj
+[  2%] Built target gtest
+[  3%] Built target Heffte
+[  3%] Built target blas
+[  4%] Built target kokkoscore
+[  4%] Built target gtest_main
+[ 29%] Built target lapack_obj
+[ 29%] Built target kokkossimd
+[ 29%] Built target kokkosalgorithms
+[ 29%] Built target kokkoscontainers
+[ 29%] Built target lapack
+[ 64%] Built target lapacke_obj
+[ 82%] Built target hdf5-static
+[ 82%] Built target lapacke
+[ 84%] Built target ippl
+[ 85%] Built target H5hut
+[100%] Built target opalx
+[100%] Building CXX object unit_tests/SpaceCharge/CMakeFiles/TestFFT2D5Numerics.dir/TestFFT2D5Numerics.cpp.o
+/psi/home/adelmann/opalx-dev/dba/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp(625): warning #177-D: function "<unnamed>::TestSolve2d5::expectPotential" was declared but never referenced
+          static void expectPotential(
+                      ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+[100%] Linking CXX executable TestFFT2D5Numerics
+[100%] Built target TestFFT2D5Numerics
+[  0%] Built target mod_files
+[  2%] Built target blas_obj
+[  2%] Built target gtest
+[  3%] Built target Heffte
+[  3%] Built target blas
+[  4%] Built target kokkoscore
+[  4%] Built target gtest_main
+[ 29%] Built target lapack_obj
+[ 29%] Built target kokkosalgorithms
+[ 29%] Built target kokkossimd
+[ 29%] Built target kokkoscontainers
+[ 29%] Built target lapack
+[ 64%] Built target lapacke_obj
+[ 82%] Built target hdf5-static
+[ 82%] Built target lapacke
+[ 84%] Built target ippl
+[ 85%] Built target H5hut
+[100%] Built target opalx
+[100%] Building CXX object unit_tests/SpaceCharge/CMakeFiles/TestFFT2D5Algorithm.dir/TestFFT2D5Algorithm.cpp.o
+[100%] Linking CXX executable TestFFT2D5Algorithm
+[100%] Built target TestFFT2D5Algorithm

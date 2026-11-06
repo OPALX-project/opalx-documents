@@ -1,0 +1,23 @@
+Warning: program compiled against libxml 210 using older 209
+Running main() from /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/_deps/gtest-src/googletest/src/gtest_main.cc
+Running main() from /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FFT2D5ParallelTest
+[----------] 1 test from FFT2D5ParallelTest
+[ RUN      ] FFT2D5ParallelTest.MigrationHalosAndFieldsMatchDirectConvolution
+[ RUN      ] FFT2D5ParallelTest.MigrationHalosAndFieldsMatchDirectConvolution
+[       OK ] FFT2D5ParallelTest.MigrationHalosAndFieldsMatchDirectConvolution (2222 ms)
+[       OK ] FFT2D5ParallelTest.MigrationHalosAndFieldsMatchDirectConvolution (2221 ms)
+[----------] 1 test from FFT2D5ParallelTest (2222 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (4600 ms total)
+[  PASSED  ] 1 test.
+[----------] 1 test from FFT2D5ParallelTest (2221 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (4614 ms total)
+[  PASSED  ] 1 test.

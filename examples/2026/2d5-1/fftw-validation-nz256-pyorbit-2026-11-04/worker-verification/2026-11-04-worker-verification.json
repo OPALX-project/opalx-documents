@@ -1,0 +1,9 @@
+{
+  "worker_threads": 15,
+  "worker_fft_arithmetic_leaf_samples": 368,
+  "worker_fft_arithmetic_threads": 15,
+  "max_lab_position_difference_m": 3.2743321136947825e-13,
+  "max_lab_momentum_difference_betagamma": 7.81932440328782e-13,
+  "max_relative_rms_emittance_difference": 1.4248666056630693e-14,
+  "note": "Separate FFTW16 maximum/Kokkos4 diagnostic: actual FFTW arithmetic codelets observed on worker threads; excluded from timing means."
+}

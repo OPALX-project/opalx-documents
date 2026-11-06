@@ -1,0 +1,262 @@
+{
+  "completed": true,
+  "selected_runs": [
+    {
+      "mesh": 32,
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000-same-exe/run/manifest.json",
+      "sha256": "159ead70221b8f597be871fa0e676e108fb1bbc5421efab89a77466e541ebd1e",
+      "binary_sha256": "a2c87276106782554324753c889db203629f1b7f645d35e2f1bd30b00e32fa9e",
+      "source_sha256": "e00ff683cc5df61867d6b9dab7b5fff912a4afc857d8e92e108d83524b190c34"
+    },
+    {
+      "mesh": 64,
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-64x64x512-n100000-same-exe/run/manifest.json",
+      "sha256": "bf2a44c5f195ad55fed85f07839f933c76cd975f57ed167aba65f263181a5fcf",
+      "binary_sha256": "a2c87276106782554324753c889db203629f1b7f645d35e2f1bd30b00e32fa9e",
+      "source_sha256": "e00ff683cc5df61867d6b9dab7b5fff912a4afc857d8e92e108d83524b190c34"
+    },
+    {
+      "mesh": 128,
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-128x128x512-n100000-same-exe/run/manifest.json",
+      "sha256": "2ccfb59524d3f061875b2b3732e18911cc9aaab4e8ff08d1250ee9a3a8afff8f",
+      "binary_sha256": "a2c87276106782554324753c889db203629f1b7f645d35e2f1bd30b00e32fa9e",
+      "source_sha256": "e00ff683cc5df61867d6b9dab7b5fff912a4afc857d8e92e108d83524b190c34"
+    },
+    {
+      "mesh": 64,
+      "particles": 200000,
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-64x64x512-n200000-same-exe/run/manifest.json",
+      "sha256": "027c106438a703803696cbcd00f289e332b4c0ca29a642d426b6c7a9763de501",
+      "binary_sha256": "a2c87276106782554324753c889db203629f1b7f645d35e2f1bd30b00e32fa9e",
+      "source_sha256": "76963e64959b8a83b82fb381755b5dbfb80be61bda85875d3d43d022ce61bae3"
+    }
+  ],
+  "fine_reference_manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-local-original/opalx/runs/bend-10pC-10m-100steps-local-original/manifest.json",
+  "comparison_scope": "32/64/128 use same100k source and change only transverse grid. Fine512reference has1048576particles. All OPALX cases use same executable/4OMPthreads/1MPIrank. Added64-grid200k source doubles longitudinal strata with same transverse quiet disk rule. Timings are end-to-end, sequential new runs; fine runtime historical.",
+  "errors": [
+    {
+      "mesh": 32,
+      "particles": 100000,
+      "field": "sigma_u_m",
+      "endpoint_percent": -17.757977893483996,
+      "max_abs_difference": 0.0025351642058841,
+      "max_abs_difference_over_reference_peak_percent": 25.351958960304948
+    },
+    {
+      "mesh": 32,
+      "particles": 100000,
+      "field": "sigma_y_m",
+      "endpoint_percent": -12.212876391791335,
+      "max_abs_difference": 0.006546683499258597,
+      "max_abs_difference_over_reference_peak_percent": 12.212876391791335
+    },
+    {
+      "mesh": 32,
+      "particles": 100000,
+      "field": "sigma_s_m",
+      "endpoint_percent": 0.003298258712332519,
+      "max_abs_difference": 4.7699238045595393e-05,
+      "max_abs_difference_over_reference_peak_percent": 0.0033039246386103835
+    },
+    {
+      "mesh": 32,
+      "particles": 100000,
+      "field": "emit_n_u_m",
+      "endpoint_percent": 59.91288706723787,
+      "max_abs_difference": 6.002857390970337e-09,
+      "max_abs_difference_over_reference_peak_percent": 66.41360894728567
+    },
+    {
+      "mesh": 32,
+      "particles": 100000,
+      "field": "emit_n_y_m",
+      "endpoint_percent": 71.39731624819,
+      "max_abs_difference": 2.048958407360251e-09,
+      "max_abs_difference_over_reference_peak_percent": 76.93779327733287
+    },
+    {
+      "mesh": 32,
+      "particles": 100000,
+      "field": "emit_sE_m_eV",
+      "endpoint_percent": -2.4125607703822203,
+      "max_abs_difference": 0.05567121324445523,
+      "max_abs_difference_over_reference_peak_percent": 2.4125607703822203
+    },
+    {
+      "mesh": 64,
+      "particles": 100000,
+      "field": "sigma_u_m",
+      "endpoint_percent": -6.668870805024519,
+      "max_abs_difference": 0.0011483459955921003,
+      "max_abs_difference_over_reference_peak_percent": 11.483603501860268
+    },
+    {
+      "mesh": 64,
+      "particles": 100000,
+      "field": "sigma_y_m",
+      "endpoint_percent": -3.705942994889877,
+      "max_abs_difference": 0.001986561975698499,
+      "max_abs_difference_over_reference_peak_percent": 3.705942994889877
+    },
+    {
+      "mesh": 64,
+      "particles": 100000,
+      "field": "sigma_s_m",
+      "endpoint_percent": 0.0014569596378907796,
+      "max_abs_difference": 2.1030374867114787e-05,
+      "max_abs_difference_over_reference_peak_percent": 0.0014566851909930927
+    },
+    {
+      "mesh": 64,
+      "particles": 100000,
+      "field": "emit_n_u_m",
+      "endpoint_percent": 29.589796761174664,
+      "max_abs_difference": 2.9054292580694634e-09,
+      "max_abs_difference_over_reference_peak_percent": 32.144698766238136
+    },
+    {
+      "mesh": 64,
+      "particles": 100000,
+      "field": "emit_n_y_m",
+      "endpoint_percent": 55.646172698738994,
+      "max_abs_difference": 1.3226758583873167e-09,
+      "max_abs_difference_over_reference_peak_percent": 49.66609444094485
+    },
+    {
+      "mesh": 64,
+      "particles": 100000,
+      "field": "emit_sE_m_eV",
+      "endpoint_percent": -0.9324305811196084,
+      "max_abs_difference": 0.02151636649092037,
+      "max_abs_difference_over_reference_peak_percent": 0.9324305811196084
+    },
+    {
+      "mesh": 64,
+      "particles": 200000,
+      "field": "sigma_u_m",
+      "endpoint_percent": -6.665869069687053,
+      "max_abs_difference": 0.0011480854463765,
+      "max_abs_difference_over_reference_peak_percent": 11.480997977135003
+    },
+    {
+      "mesh": 64,
+      "particles": 200000,
+      "field": "sigma_y_m",
+      "endpoint_percent": -3.7055440177673846,
+      "max_abs_difference": 0.0019863481049558,
+      "max_abs_difference_over_reference_peak_percent": 3.7055440177673846
+    },
+    {
+      "mesh": 64,
+      "particles": 200000,
+      "field": "sigma_s_m",
+      "endpoint_percent": 0.0014570210805642798,
+      "max_abs_difference": 2.10312617567876e-05,
+      "max_abs_difference_over_reference_peak_percent": 0.0014567466220926615
+    },
+    {
+      "mesh": 64,
+      "particles": 200000,
+      "field": "emit_n_u_m",
+      "endpoint_percent": 29.591058083412516,
+      "max_abs_difference": 2.9051236291273007e-09,
+      "max_abs_difference_over_reference_peak_percent": 32.141317389715965
+    },
+    {
+      "mesh": 64,
+      "particles": 200000,
+      "field": "emit_n_y_m",
+      "endpoint_percent": 53.35165909405412,
+      "max_abs_difference": 1.2681366582146743e-09,
+      "max_abs_difference_over_reference_peak_percent": 47.61816331002461
+    },
+    {
+      "mesh": 64,
+      "particles": 200000,
+      "field": "emit_sE_m_eV",
+      "endpoint_percent": -0.9395428413364721,
+      "max_abs_difference": 0.02168048594442551,
+      "max_abs_difference_over_reference_peak_percent": 0.9395428413364721
+    },
+    {
+      "mesh": 128,
+      "particles": 100000,
+      "field": "sigma_u_m",
+      "endpoint_percent": -2.1801804240379856,
+      "max_abs_difference": 0.00043429773728650024,
+      "max_abs_difference_over_reference_peak_percent": 4.3430316610994355
+    },
+    {
+      "mesh": 128,
+      "particles": 100000,
+      "field": "sigma_y_m",
+      "endpoint_percent": -1.0366584303170838,
+      "max_abs_difference": 0.0005556982992709,
+      "max_abs_difference_over_reference_peak_percent": 1.0366584303170838
+    },
+    {
+      "mesh": 128,
+      "particles": 100000,
+      "field": "sigma_s_m",
+      "endpoint_percent": 0.0005414392548686609,
+      "max_abs_difference": 7.815364407859349e-06,
+      "max_abs_difference_over_reference_peak_percent": 0.0005413372641752195
+    },
+    {
+      "mesh": 128,
+      "particles": 100000,
+      "field": "emit_n_u_m",
+      "endpoint_percent": 11.74316074118199,
+      "max_abs_difference": 1.1429420955906885e-09,
+      "max_abs_difference_over_reference_peak_percent": 12.645129551158828
+    },
+    {
+      "mesh": 128,
+      "particles": 100000,
+      "field": "emit_n_y_m",
+      "endpoint_percent": 32.57675856289458,
+      "max_abs_difference": 7.743298416753359e-10,
+      "max_abs_difference_over_reference_peak_percent": 29.075860726738647
+    },
+    {
+      "mesh": 128,
+      "particles": 100000,
+      "field": "emit_sE_m_eV",
+      "endpoint_percent": -0.24361014804992043,
+      "max_abs_difference": 0.005621442853210201,
+      "max_abs_difference_over_reference_peak_percent": 0.24361014804992043
+    }
+  ],
+  "runtimes": [
+    {
+      "mesh": 32,
+      "particles": 100000,
+      "wall_seconds": 39.623684457998024,
+      "omp_threads": 4
+    },
+    {
+      "mesh": 64,
+      "particles": 100000,
+      "wall_seconds": 49.13260970800184,
+      "omp_threads": 4
+    },
+    {
+      "mesh": 128,
+      "particles": 100000,
+      "wall_seconds": 87.20726700001978,
+      "omp_threads": 4
+    },
+    {
+      "mesh": 64,
+      "particles": 200000,
+      "wall_seconds": 82.54305637499783,
+      "omp_threads": 4
+    },
+    {
+      "mesh": 512,
+      "particles": 1048576,
+      "wall_seconds": 1301.8812748339842,
+      "omp_threads": 4
+    }
+  ]
+}

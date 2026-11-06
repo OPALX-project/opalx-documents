@@ -1,0 +1,24 @@
+{
+  "command": [
+    "srun",
+    "--gpu-bind=single:1",
+    "/psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/src/opalx.pre-mpi-z-20261106",
+    "case.in",
+    "--info",
+    "1",
+    "--2D5BatchSize",
+    "64",
+    "--restart",
+    "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/dba-initial-state.h5"
+  ],
+  "ranks": 1,
+  "gpus": 1,
+  "omp_threads": 1,
+  "binary": "/psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/src/opalx.pre-mpi-z-20261106",
+  "binary_sha256": "6bd5c3a499e54c8201ac788e6c036e56d6add6c77b76967e2ce156e937f21d65",
+  "input_sha256": "f6b5ce075a32fa8ea4968738f26970089a3bb4acd06b11b3cced252dd21c9b3a",
+  "checkpoint_sha256": "4d6adf38da35d9168f9cdb10847786eb1ea64d27e13e521211173901037e19f5",
+  "job_id": "355021",
+  "returncode": 0,
+  "wall_seconds": 50.67132723890245
+}
