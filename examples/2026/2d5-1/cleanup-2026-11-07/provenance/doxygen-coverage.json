@@ -1,0 +1,608 @@
+{
+  "new_functions": [
+    {
+      "owner": "opalx::spacecharge::FFT2D5FieldStorage",
+      "name": "warmup",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h",
+      "line": "70",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5FieldStorage",
+      "name": "mesh",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h",
+      "line": "82",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5FieldStorage",
+      "name": "workspace",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h",
+      "line": "89",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5FieldStorage",
+      "name": "backendSolves",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h",
+      "line": "91",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5FieldStorage",
+      "name": "resetBackendSolves",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h",
+      "line": "93",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5FieldStorage",
+      "name": "batchSize",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h",
+      "line": "103",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5FieldStorage",
+      "name": "solveBatchedSlices",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h",
+      "line": "105",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}::Problem",
+      "name": "Problem",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "357",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}::Problem",
+      "name": "fill",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "377",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}::Problem",
+      "name": "reference",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "413",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}::Problem",
+      "name": "check",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "420",
+      "documented": true
+    },
+    {
+      "owner": "FieldSolverCmd",
+      "name": "getFFT2D5Model",
+      "file": "src/Structure/FieldSolverCmd.h",
+      "line": "125",
+      "documented": true
+    },
+    {
+      "owner": "FieldSolverCmd",
+      "name": "hasFFT2D5Model",
+      "file": "src/Structure/FieldSolverCmd.h",
+      "line": "127",
+      "documented": true
+    },
+    {
+      "owner": "FieldSolverCmd",
+      "name": "setFFT2D5Model",
+      "file": "src/Structure/FieldSolverCmd.h",
+      "line": "130",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "getSegmentGeometry",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "552",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "getSegmentBounds",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "554",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "getProjectedPositions",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "581",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "getProjectedSegments",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "586",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "preparePathGeometryAndProjections",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "679",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "migrateToSlabs",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "692",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "accumulateDensityHalos",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "694",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "fillFieldHalos",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "696",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "resizePathGeometry",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "700",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "buildPathSegments",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "703",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "buildPathHierarchy",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "706",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "projectContainer",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "711",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "enterParticleSolveFrames",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "757",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "restoreParticleSolveFrames",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "761",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "checkMigrationDomain",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "765",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "saveMigrationPositions",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "770",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "restoreMigrationPositions",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "773",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "migrateContainer",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "778",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "validateDepositionContainer",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "784",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "scatterContainer",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "790",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "finishChargeDeposition",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "797",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "sumLineDensityProfile",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "802",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "scaleLineDensityAndGradient",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "808",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "solveDiagnosticSlabs",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "815",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "solveSerialSlices",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "821",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "setTransverseFieldGhosts",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "823",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "longitudinalCoupling",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "826",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "gatherContainer",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "833",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "evaluatePathSegment",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "717",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "pathDistanceRoundoff",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "724",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "pathNodeDistance2",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "729",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "findClosestPathSegment",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "737",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "projectPreparedParticle",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "747",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::FFT2D5Algorithm",
+      "name": "loadPreparedCoordinates",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "line": "842",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}::Plans",
+      "name": "Plans",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "87",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}",
+      "name": "range",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "38",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}",
+      "name": "stream",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "47",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}",
+      "name": "box",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "55",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}",
+      "name": "ptr",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "61",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}",
+      "name": "label",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "67",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}",
+      "name": "measure",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "468",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}",
+      "name": "benchmarkModes",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "478",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}",
+      "name": "validateCandidates",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "482",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}",
+      "name": "timeCandidates",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "512",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}",
+      "name": "measureProblem",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "543",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}",
+      "name": "run",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "570",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::fft2d5_detail",
+      "name": "registerTimers",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "line": "45",
+      "documented": true
+    },
+    {
+      "owner": "opalx::spacecharge::fft2d5_detail",
+      "name": "timed",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "line": "59",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}::Candidate",
+      "name": "Candidate",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "124",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}::Candidate",
+      "name": "initializeGreen",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "150",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}::Candidate",
+      "name": "plan",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "181",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}::Candidate",
+      "name": "solve",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "187",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}::Candidate",
+      "name": "pack",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "210",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}::Candidate",
+      "name": "transformForward",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "234",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}::Candidate",
+      "name": "convolve",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "256",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}::Candidate",
+      "name": "transformBackward",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "278",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}::Candidate",
+      "name": "extractFields",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "300",
+      "documented": true
+    },
+    {
+      "owner": "anonymous_namespace{BenchmarkFFT2D5Batch.cpp}::Candidate",
+      "name": "phase",
+      "file": "unit_tests/SpaceCharge/BenchmarkFFT2D5Batch.cpp",
+      "line": "173",
+      "documented": true
+    },
+    {
+      "owner": "FFT2D5Poisson",
+      "name": "solveBatched",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "line": "172",
+      "documented": true
+    },
+    {
+      "owner": "FFT2D5Poisson",
+      "name": "setWarmupTiming",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "line": "178",
+      "documented": true
+    },
+    {
+      "owner": "FFT2D5Poisson",
+      "name": "validateBatchGeometry",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "line": "211",
+      "documented": true
+    },
+    {
+      "owner": "FFT2D5Poisson",
+      "name": "prepareBatchBuffers",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "line": "216",
+      "documented": true
+    },
+    {
+      "owner": "FFT2D5Poisson",
+      "name": "copyOccupiedSlices",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "line": "219",
+      "documented": true
+    },
+    {
+      "owner": "FFT2D5Poisson",
+      "name": "prepareBatchGreen",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "line": "222",
+      "documented": true
+    },
+    {
+      "owner": "FFT2D5Poisson",
+      "name": "prepareRowExecutors",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "line": "225",
+      "documented": true
+    },
+    {
+      "owner": "FFT2D5Poisson",
+      "name": "packBatch",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "line": "229",
+      "documented": true
+    },
+    {
+      "owner": "FFT2D5Poisson",
+      "name": "transformBatch",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "line": "233",
+      "documented": true
+    },
+    {
+      "owner": "FFT2D5Poisson",
+      "name": "multiplyBatchGreen",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "line": "236",
+      "documented": true
+    },
+    {
+      "owner": "FFT2D5Poisson",
+      "name": "extractBatchFields",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "line": "241",
+      "documented": true
+    },
+    {
+      "owner": "FFT2D5Poisson",
+      "name": "cellAveragedGreensFunction",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "line": "102",
+      "documented": true
+    },
+    {
+      "owner": "FFT2D5Poisson",
+      "name": "timedPhase",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "line": "249",
+      "documented": true
+    },
+    {
+      "owner": "FFT2D5Poisson",
+      "name": "logPrimitive",
+      "file": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "line": "260",
+      "documented": true
+    }
+  ],
+  "missing": [],
+  "internal_docs": true
+}

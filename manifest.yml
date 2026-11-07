@@ -14136,3 +14136,426 @@ assets:
     description: "Study dated 2026-11-06; canonical supporting filenames retained; raw particles and trace databases external."
     status: "experimental"
     sha256: "b4d12a17c3d440429a7e336633b938d556e3b61bf17bbc13dc80a65bd19236f5"
+
+  - title: "FFT2D5 solver cleanup and verification — analyze.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/analyze.py"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "0aa7e656e4fb491f3b664df8a7dc8f6b6d9477919fc087d15bb731311f50ec57"
+
+  - title: "FFT2D5 solver cleanup and verification — function-sizes.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/function-sizes.csv"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "e62fa3ce1a8e2a5696baf153fc2953dd8d9313da5b1bd6f5e47e24c5a9429970"
+
+  - title: "FFT2D5 solver cleanup and verification — physics-audit.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/physics-audit.csv"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "e8ab4769638650ff15911c86e4e0631e9de0a8c22c9d69c73394648253558a8d"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/baseline.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/baseline.json"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "d1ed3ca875609a7466a6dc58e7e636892fbbd29a8a31f320f5dcd72dc192e3a2"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/benchmark-validation/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/benchmark-validation/case.out"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/benchmark-validation/validation.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/benchmark-validation/validation.csv"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "dd152655c6bc721a31a702d2b88b1588216dce4f843f91deb80949c439d8bc84"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/build-benchmark-final.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/build-benchmark-final.log"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "c44630351b79fbb48e2f48619fdfe9d3ec5fef4616cd2c8bbdad3afe2275ae6f"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/build-docs.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/build-docs.log"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "fd614317603525a878adf5a8a3999cd59f5597b5156ea3250b924d5c8524336f"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/build-final.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/build-final.log"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "664a93933b95762462b37573173f4e098c6fe6ecada25b96202e33b83d139bef"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/check_doxygen.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/check_doxygen.py"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "587499fd93be41e1548930e402d388720658a0c4f9d797c922a25a505556e68c"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cleanup.patch"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cleanup.patch"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "597c8966b6463fbc46dcaf54ff2b852b320f4626a6d2b4b79828b9b1e62c2e61"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-1-after/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-1-after/case.in"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-1-after/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-1-after/case.out"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "640b38f4725a09286e9a25bc916524ac4614cc8f19bf18eb57b2ec35b7bad475"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-1-after/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-1-after/case.stat"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "ac8a544e5f68a12386121c8ad93ff6c42dd1d9322ec44724a439ca3110ea2d09"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-1-after/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-1-after/run.json"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "04bf0d35bbc881b9773055a78f42dc5fa2ccaf315b7e59fda38eea28e2a045c0"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-1-after/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-1-after/timing.dat"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "adb0b93b75c9a9da0abe6cf8bc74ec8f4715f1ba198aabbd28fd37a0bbfc4711"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-1-before/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-1-before/case.in"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-1-before/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-1-before/case.out"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "2fbf7b6f5478491e2ed4ac268ae28d7752e4c813aca31daf8a6138d40b65b87f"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-1-before/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-1-before/case.stat"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "c0505d989cb5b63f8270ce4ea111da5415a7d2bf14dc219dfbad1051d53304a1"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-1-before/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-1-before/run.json"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "d2e4f777ea9a47b8f0bcfbe2f7c9bb34ecadcb08900fb304cba2c22231da917a"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-1-before/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-1-before/timing.dat"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "deed819a5933ff01db73480ab1312d4519869ada618c3a8df818f6a5b31454c1"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-2-after/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-2-after/case.in"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-2-after/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-2-after/case.out"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "75d0146b4cf286cdd7a5bf068c11362bade1b13077d37d3055e4016e29c7f99e"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-2-after/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-2-after/case.stat"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "09c2def54423d7325370b4ee7365fa7aa428af9ec5cbf3d13de4c6186610d24e"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-2-after/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-2-after/run.json"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "2e6af575e54fa417a666de285485a048d707f84e67d4b4d2256e573c54caa23f"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-2-after/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-2-after/timing.dat"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "b351108eeb56834a26c0a9f45332200ea8b7723db03edc10618cb461c9cfe10b"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-2-before/case.in"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-2-before/case.in"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "13892d2d5900018ba0936af6a3a52f978188cb30dbd210bff059ab22aa7d46ff"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-2-before/case.out"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-2-before/case.out"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "06008bb45cc7d5bc9b93f1131ec3fb05418cb50a4b9ae08e9148e99665c7658f"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-2-before/case.stat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-2-before/case.stat"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "9cd8bb176ae83df9278f1b5272f2d6ca0f95263039a90887e34051338a0c97f4"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-2-before/run.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-2-before/run.json"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "a3bf554cbf9940e87019f84156532557a7481f2e465b30d861bab61b274ae3e4"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/cpu-2-before/timing.dat"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/cpu-2-before/timing.dat"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "019ab16a4d410b9302a5de58929ed4b5f123a9cf6cd5186dc1faac4acdedc482"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/ctest-omp1.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/ctest-omp1.log"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "413e75434fed2510268c7f7445580812cf08e42e142df9a1f672a1a83e33d474"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/ctest-omp4.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/ctest-omp4.log"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "67cc17eccd1ae8a553b47aecf2b3712dabacbf194c5bf120fdb5947d9f222e5e"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/doxyfile"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/doxyfile"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "ef0a16ee7f13e6a134065f54311476994e7a156df43476b413e32152469a8132"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/doxygen-coverage.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/doxygen-coverage.json"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "ad473ad04cb1e38863ba16bb554a1ca1a5af272cf8ccbdec123c146864b45b62"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/doxygen-warnings.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/doxygen-warnings.log"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/function-sizes.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/function-sizes.csv"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "e62fa3ce1a8e2a5696baf153fc2953dd8d9313da5b1bd6f5e47e24c5a9429970"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/native-locations.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/native-locations.json"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "ecc7693b6ec477c8538a77bfe8d83ae48903a86a14da096ca0252972947b8b98"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/run_pilots.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/run_pilots.py"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "0a9cd4970592002d9ca1f78570819ff221a84000917ba9a06e795a0e9c4498ce"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/source-files.json"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/source-files.json"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "fbef92ec70fb6e142d800869491cbd00bacf164e1bda57cf36c046553d674560"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/test.py"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/test.py"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "13e642517f770370a1f137aa7c363b91792244064a0e7dd4135b9c59c96edc53"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/unit-mpi2-omp1.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/unit-mpi2-omp1.log"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "bc467be32e9fc172215d566aa60e732696260077c6d20b8e9a6c89126a12add1"
+
+  - title: "FFT2D5 solver cleanup and verification — provenance/unit-mpi2-omp4.log"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/provenance/unit-mpi2-omp4.log"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "6ae9899f953637eb3bde73ee7b07d01aa20510fce54df5182bb3d56e132bcf3c"
+
+  - title: "FFT2D5 solver cleanup and verification — readme.md"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/readme.md"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "512872a354b192dd9e75f3aafc3f5dd91119eab42e1601d4743368f509214fc3"
+
+  - title: "FFT2D5 solver cleanup and verification — timings.csv"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/timings.csv"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "72845887da41c96fae9dde1db53d5727daa168bb9a78d2ead602478a85db9989"
+
+  - title: "FFT2D5 solver cleanup and verification — timings.pdf"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/timings.pdf"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "f62f896bfa722462dcb1f43fbfc54eac5161c65d7b2bcb1bb6e147a421233062"
+
+  - title: "FFT2D5 solver cleanup and verification — timings.png"
+    date: null
+    category: "examples/2d5-1"
+    source: "CPU Release cleanup validation on 1/2 MPI ranks; exact component oracles, independent fields and Doxygen XML checks"
+    destination: "examples/2026/2d5-1/cleanup-2026-11-07/timings.png"
+    description: "Study dated 2026-11-07; canonical supporting filenames retained; native particles/executables remain external. CUDA revalidation pending."
+    status: "experimental"
+    sha256: "3f741374382f849e73b15e9bb45d206474ebd18135b0cd12e7424d27a249ad35"
