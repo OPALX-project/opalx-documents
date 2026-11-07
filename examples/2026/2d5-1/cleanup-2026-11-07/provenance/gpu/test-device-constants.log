@@ -1,0 +1,55 @@
+Internal ctest changing into directory: /Users/adelmann/git/opalx/build-omp
+Test project /Users/adelmann/git/opalx/build-omp
+    Start 100: TestFFT2D5Algorithm
+1/3 Test #100: TestFFT2D5Algorithm ..............   Passed    0.61 sec
+    Start 101: TestFFT2D5Numerics
+2/3 Test #101: TestFFT2D5Numerics ...............   Passed    1.44 sec
+    Start 111: TestFFT2D5Parallel
+3/3 Test #111: TestFFT2D5Parallel ...............   Passed    0.52 sec
+
+100% tests passed, 0 tests failed out of 3
+
+Label Time Summary:
+unit    =   2.58 sec*proc (3 tests)
+
+Total Test time (real) =   2.59 sec
+Running main() from /Users/adelmann/git/opalx/build-omp/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+Running main() from /Users/adelmann/git/opalx/build-omp/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from FFT2D5ParallelTest
+[----------] 2 tests from FFT2D5ParallelTest
+Kokkos::OpenMP::initialize WARNING: OMP_PROC_BIND environment variable not set
+  In general, for best performance with OpenMP 4.0 or better set OMP_PROC_BIND=spread and OMP_PLACES=threads
+  For best performance with OpenMP 3.1 set OMP_PROC_BIND=true
+  For unit testing set OMP_PROC_BIND=false
+
+MPI detected: For OpenMP binding to work as intended, MPI ranks must be bound to exclusive CPU sets.
+
+[ RUN      ] FFT2D5ParallelTest.MigrationHalosAndFieldsMatchDirectConvolution
+Kokkos::OpenMP::initialize WARNING: OMP_PROC_BIND environment variable not set
+  In general, for best performance with OpenMP 4.0 or better set OMP_PROC_BIND=spread and OMP_PLACES=threads
+  For best performance with OpenMP 3.1 set OMP_PROC_BIND=true
+  For unit testing set OMP_PROC_BIND=false
+
+MPI detected: For OpenMP binding to work as intended, MPI ranks must be bound to exclusive CPU sets.
+
+[ RUN      ] FFT2D5ParallelTest.MigrationHalosAndFieldsMatchDirectConvolution
+[       OK ] FFT2D5ParallelTest.MigrationHalosAndFieldsMatchDirectConvolution (97 ms)
+[ RUN      ] FFT2D5ParallelTest.BatchedLineDensityMatchesHostSumsOnTinySlabs
+[       OK ] FFT2D5ParallelTest.MigrationHalosAndFieldsMatchDirectConvolution (97 ms)
+[ RUN      ] FFT2D5ParallelTest.BatchedLineDensityMatchesHostSumsOnTinySlabs
+[       OK ] FFT2D5ParallelTest.BatchedLineDensityMatchesHostSumsOnTinySlabs (1 ms)
+[       OK ] FFT2D5ParallelTest.BatchedLineDensityMatchesHostSumsOnTinySlabs (1 ms)
+[----------] 2 tests from FFT2D5ParallelTest (99 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (107 ms total)
+[  PASSED  ] 2 tests.
+[----------] 2 tests from FFT2D5ParallelTest (99 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (107 ms total)
+[  PASSED  ] 2 tests.

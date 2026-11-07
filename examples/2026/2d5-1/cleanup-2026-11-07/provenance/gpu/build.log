@@ -1,0 +1,263 @@
+[  0%] Built target mod_files
+[  2%] Built target blas_obj
+[  2%] Built target blas
+[ 26%] Built target lapack_obj
+[ 26%] Built target Heffte
+[ 26%] Built target lapack
+[ 61%] Built target lapacke_obj
+[ 79%] Built target hdf5-static
+[ 79%] Built target lapacke
+[ 82%] Built target H5hut
+[ 83%] Built target kokkoscore
+[ 83%] Built target kokkosalgorithms
+[ 83%] Built target kokkossimd
+[ 83%] Built target kokkoscontainers
+[ 84%] Built target ippl
+[ 84%] Building CXX object src/CMakeFiles/opalx.dir/SpaceCharge/SpaceChargeFactory.cpp.o
+[ 84%] Building CXX object src/CMakeFiles/opalx.dir/SpaceCharge/Poisson/PoissonSolver.cpp.o
+[ 84%] Building CXX object src/CMakeFiles/opalx.dir/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp.o
+[ 84%] Building CXX object src/CMakeFiles/opalx.dir/Structure/H5Writer.cpp.o
+[ 84%] Building CXX object src/CMakeFiles/opalx.dir/Structure/LBalWriter.cpp.o
+[ 84%] Building CXX object src/CMakeFiles/opalx.dir/Structure/StatWriter.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/opalx.dir/Structure/LossDataSink.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/opalx.dir/Structure/SDDSWriter.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/opalx.dir/Structure/MemoryProfiler.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/opalx.dir/Tables/Selector.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/opalx.dir/Track/CofCmd.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/opalx.dir/Track/Track.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/opalx.dir/Track/TrackCmd.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/opalx.dir/Track/TrackEnd.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/opalx.dir/Track/TrackParser.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/opalx.dir/Track/TrackRun.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/opalx.dir/Utilities/Options.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/opalx.dir/ValueDefinitions/BoolConstant.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/opalx.dir/ValueDefinitions/RealConstant.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/opalx.dir/ValueDefinitions/RealVector.cpp.o
+[ 85%] Linking CXX static library libopalx.a
+[ 98%] Built target opalx
+[ 98%] Building CXX object src/CMakeFiles/opalx_exe.dir/Main.cpp.o
+[100%] Linking CXX executable opalx
+[100%] Built target opalx_exe
+[  0%] Built target mod_files
+[  2%] Built target blas_obj
+[  2%] Built target Heffte
+[  2%] Built target blas
+[  3%] Built target kokkoscore
+[ 28%] Built target lapack_obj
+[ 28%] Built target kokkosalgorithms
+[ 28%] Built target kokkossimd
+[ 28%] Built target kokkoscontainers
+[ 28%] Built target lapack
+[ 63%] Built target lapacke_obj
+[ 81%] Built target hdf5-static
+[ 81%] Built target lapacke
+[ 82%] Built target ippl
+[ 85%] Built target H5hut
+[ 85%] Built target gtest
+[ 85%] Built target gtest_main
+[100%] Built target opalx
+[100%] Building CXX object unit_tests/SpaceCharge/CMakeFiles/TestFFT2D5Algorithm.dir/TestFFT2D5Algorithm.cpp.o
+[100%] Linking CXX executable TestFFT2D5Algorithm
+[100%] Built target TestFFT2D5Algorithm
+[  0%] Built target mod_files
+[  2%] Built target blas_obj
+[  2%] Built target Heffte
+[  2%] Built target gtest
+[  2%] Built target blas
+[  3%] Built target kokkoscore
+[  3%] Built target gtest_main
+[ 28%] Built target lapack_obj
+[ 28%] Built target kokkosalgorithms
+[ 28%] Built target kokkossimd
+[ 28%] Built target kokkoscontainers
+[ 28%] Built target lapack
+[ 63%] Built target lapacke_obj
+[ 81%] Built target hdf5-static
+[ 81%] Built target lapacke
+[ 82%] Built target ippl
+[ 85%] Built target H5hut
+[100%] Built target opalx
+[100%] Building CXX object unit_tests/SpaceCharge/CMakeFiles/TestFFT2D5Numerics.dir/TestFFT2D5Numerics.cpp.o
+/psi/home/adelmann/opalx-dev/dba/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp(625): warning #177-D: function "<unnamed>::TestSolve2d5::expectPotential" was declared but never referenced
+          static void expectPotential(
+                      ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/psi/home/adelmann/opalx-dev/dba/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp: In instantiation of ‘void opalx::spacecharge::FFT2D5Algorithm::scatterToGrid(const opalx::spacecharge::SpaceChargeSolveContext&, DiagnosticPolicy, bool) [with DiagnosticPolicy = _GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info]’:
+/psi/home/adelmann/opalx-dev/dba/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp:881:30:   required from here
+  881 |         solver->scatterToGrid<Info>(context(), *info);
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~ 
+/psi/home/adelmann/opalx-dev/dba/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp:342:37: warning: ‘opalx::spacecharge::FFT2D5Algorithm::scatterToGrid<_GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info>(const opalx::spacecharge::SpaceChargeSolveContext&, _GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info, bool)::<lambda()>’ declared with greater visibility than the type of its field ‘opalx::spacecharge::FFT2D5Algorithm::scatterToGrid<_GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info>(const opalx::spacecharge::SpaceChargeSolveContext&, _GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info, bool)::<lambda()>::<diagnostic capture>’ [-Wattributes]
+  342 |         fft2d5_detail::timed("2D5 Scatter", [&] {
+      |                                     ^~~~~~~~~~~~~
+  343 |             if (solveReferencePath_m.extent(0) < 2) return;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  344 |             Kokkos::deep_copy(fieldStorage_m->chargeDensity().getView(), 0.);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  345 |             for (size_t c = 0; c < particles_m.size(); ++c)
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  346 |                 if (context.trackingActive()[c])
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  347 |                     scatterContainer(c, diagnostic, usePreparedProjections);
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  348 |             finishChargeDeposition(context, diagnostic);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  349 |         });
+      |                                      
+/psi/home/adelmann/opalx-dev/dba/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp: In instantiation of ‘void opalx::spacecharge::FFT2D5Algorithm::calculateLineDensity(DiagnosticPolicy) [with DiagnosticPolicy = _GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info]’:
+/psi/home/adelmann/opalx-dev/dba/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp:1130:37:   required from here
+ 1130 |         solver->calculateLineDensity<Info>(*totalInfo);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/psi/home/adelmann/opalx-dev/dba/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp:566:42: warning: ‘opalx::spacecharge::FFT2D5Algorithm::calculateLineDensity<_GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info>(_GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info)::<lambda()>’ declared with greater visibility than the type of its field ‘opalx::spacecharge::FFT2D5Algorithm::calculateLineDensity<_GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info>(_GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info)::<lambda()>::<diagnostic capture>’ [-Wattributes]
+  566 |         fft2d5_detail::timed("2D5 Line density", [&] {
+      |                                          ^~~~~~~~~~~~~
+  567 |             if (config_m.longitudinalFieldMode == LongitudinalFieldMode::None) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  568 |                 Kokkos::deep_copy(lineDensity_m, 0);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  569 |                 diagnostic.totalDensity(lineDensity_m);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  570 |                 diagnostic.lineDensity(lineDensity_m);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  571 |                 Kokkos::deep_copy(lineDensityGradient_m, 0);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  572 |                 diagnostic.lineDensityGradient(lineDensityGradient_m);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  573 |                 return;
+      |                 ~~~~~~~                   
+  574 |             }
+      |             ~                             
+  575 |             sumLineDensityProfile();
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~      
+  576 |             diagnostic.totalDensity(lineDensity_m);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  577 |             scaleLineDensityAndGradient(diagnostic);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  578 |         });
+      |                                           
+/psi/home/adelmann/opalx-dev/dba/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp: In instantiation of ‘void opalx::spacecharge::FFT2D5Algorithm::solvePoissons(DiagnosticPolicy) [with DiagnosticPolicy = _GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info]’:
+/psi/home/adelmann/opalx-dev/dba/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp:1222:30:   required from here
+ 1222 |         solver->solvePoissons<Info>(*info);
+      |         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/psi/home/adelmann/opalx-dev/dba/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp:606:37: warning: ‘opalx::spacecharge::FFT2D5Algorithm::solvePoissons<_GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info>(_GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info)::<lambda()>’ declared with greater visibility than the type of its field ‘opalx::spacecharge::FFT2D5Algorithm::solvePoissons<_GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info>(_GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info)::<lambda()>::<diagnostic capture>’ [-Wattributes]
+  606 |         fft2d5_detail::timed("2D5 Poisson", [&] {
+      |                                     ^~~~~~~~~~~~~
+  607 |             using Policy         = Kokkos::MDRangePolicy<Kokkos::Rank<2>>;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  608 |             auto e3d             = fieldStorage_m->electricField().getView();
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  609 |             const auto rho3d     = fieldStorage_m->chargeDensity().getView();
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  610 |             const auto nGhost    = fieldStorage_m->electricField().getNghost();
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  611 |             const auto numSlices = fieldStorage_m->layout().getLocalNDIndex()[2].length();
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  612 |             fieldStorage_m->resetBackendSolves();
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  613 |             Kokkos::deep_copy(e3d, Vector3D_t(0.));
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  614 |             Kokkos::View<int*> occupiedSlices("FFT2D5OccupiedSlices", numSlices);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  615 |             Kokkos::deep_copy(occupiedSlices, 0);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  616 |             Kokkos::parallel_for(
+      |             ~~~~~~~~~~~~~~~~~~~~~    
+  617 |                     "Solve2d5::solvePoissons::occupancy",
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  618 |                     Policy({0, 0}, {numSlices, rho3d.extent(0)}),
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  619 |                     fft2d5_detail::OccupiedSlicesFunctor{rho3d, occupiedSlices, nGhost});
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  620 |             auto occupiedHost =
+      |             ~~~~~~~~~~~~~~~~~~~      
+  621 |                     Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), occupiedSlices);
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  622 |             bool batched = false;
+      |             ~~~~~~~~~~~~~~~~~~~~~    
+  623 |             if constexpr (std::is_same_v<DiagnosticPolicy, NullDiagnostic>) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  624 |                 if (fieldStorage_m->batchSize() > 0) {
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  625 |                     std::vector<size_t> occupied;
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  626 |                     for (size_t z = 0; z < size_t(numSlices); ++z)
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  627 |                         if (occupiedHost(z)) occupied.push_back(z);
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  628 |                     fieldStorage_m->solveBatchedSlices(occupied);
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  629 |                     batched = true;
+      |                     ~~~~~~~~~~~~~~~  
+  630 |                 }
+      |                 ~                    
+  631 |             }
+      |             ~                        
+  632 |             if (!batched && ippl::Comm->size() > 1) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  633 |                 solveDiagnosticSlabs(occupiedHost, diagnostic);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  634 |                 batched = true;
+      |                 ~~~~~~~~~~~~~~~      
+  635 |             }
+      |             ~                        
+  636 |             if (!batched) solveSerialSlices(occupiedHost, diagnostic);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  637 |             setTransverseFieldGhosts();
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  638 |             diagnostic.eField(e3d);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~  
+  639 |         });
+      |                                      
+/psi/home/adelmann/opalx-dev/dba/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp: In instantiation of ‘void opalx::spacecharge::FFT2D5Algorithm::gatherFromGrid(const opalx::spacecharge::SpaceChargeSolveContext&, DiagnosticPolicy, bool) [with DiagnosticPolicy = _GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info]’:
+/psi/home/adelmann/opalx-dev/dba/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp:1327:31:   required from here
+ 1327 |         solver->gatherFromGrid<Info>(context(), *info);
+      |         ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~ 
+/psi/home/adelmann/opalx-dev/dba/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp:700:36: warning: ‘opalx::spacecharge::FFT2D5Algorithm::gatherFromGrid<_GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info>(const opalx::spacecharge::SpaceChargeSolveContext&, _GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info, bool)::<lambda()>’ declared with greater visibility than the type of its field ‘opalx::spacecharge::FFT2D5Algorithm::gatherFromGrid<_GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info>(const opalx::spacecharge::SpaceChargeSolveContext&, _GLOBAL__N__9d376f59_22_TestFFT2D5Numerics_cpp_5ecc11cc_3735710::Info, bool)::<lambda()>::<diagnostic capture>’ [-Wattributes]
+  700 |         fft2d5_detail::timed("2D5 Gather", [&] {
+      |                                    ^~~~~~~~~~~~~
+  701 |             if (solveReferencePath_m.extent(0) < 2) return;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  702 |             for (size_t c = 0; c < particles_m.size(); ++c) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  703 |                 if (!context.trackingActive()[c]) continue;
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  704 |                 if (config_m.scatterLongitudinally)
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  705 |                     gatherContainer<true>(c, diagnostic, usePreparedProjections);
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  706 |                 else
+      |                 ~~~~                
+  707 |                     gatherContainer<false>(c, diagnostic, usePreparedProjections);
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  708 |             }
+      |             ~                       
+  709 |         });
+      |                                     
+[100%] Linking CXX executable TestFFT2D5Numerics
+[100%] Built target TestFFT2D5Numerics
+[  0%] Built target mod_files
+[  2%] Built target blas_obj
+[  2%] Built target gtest
+[  2%] Built target Heffte
+[  3%] Built target kokkoscore
+[  3%] Built target blas
+[  3%] Built target gtest_main
+[ 28%] Built target lapack_obj
+[ 28%] Built target kokkossimd
+[ 28%] Built target kokkosalgorithms
+[ 28%] Built target kokkoscontainers
+[ 28%] Built target lapack
+[ 63%] Built target lapacke_obj
+[ 81%] Built target hdf5-static
+[ 81%] Built target lapacke
+[ 82%] Built target ippl
+[ 85%] Built target H5hut
+[100%] Built target opalx
+[100%] Building CXX object unit_tests/SpaceCharge/CMakeFiles/TestFFT2D5Parallel.dir/TestFFT2D5Parallel.cpp.o
+/psi/home/adelmann/opalx-dev/dba/unit_tests/SpaceCharge/TestFFT2D5Parallel.cpp: In member function ‘virtual void opalx::spacecharge::_GLOBAL__N__e298826b_22_TestFFT2D5Parallel_cpp_5ecc11cc_3737401::FFT2D5ParallelTest_MigrationHalosAndFieldsMatchDirectConvolution_Test::TestBody()’:
+/psi/home/adelmann/opalx-dev/dba/unit_tests/SpaceCharge/TestFFT2D5Parallel.cpp:152:19: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  152 |                             for (int k = 0; k < local[2].length(); ++k)
+      |                   ^         ~~~~~~~~~
+[100%] Linking CXX executable TestFFT2D5Parallel
+[100%] Built target TestFFT2D5Parallel
