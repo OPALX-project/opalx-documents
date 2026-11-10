@@ -1,0 +1,39 @@
+{
+  "commit": "fd6ba8dc5c952ce034869dc40e963ecabef7cfa8",
+  "source_checkout": "/Users/adelmann/git/opalx-658-committed",
+  "original_executable": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+  "original_executable_sha256": "a0a922982baa205f6c1360f33627568c8393c49f2e046b651003dc6a6307bc27",
+  "executable_backup": "/Users/adelmann/git/opalx-658-build-record/opalx-existing-a0a922982baa",
+  "original_dirty_files_left_in_place": true,
+  "status": "complete",
+  "new_executable": "/Users/adelmann/git/opalx-658-committed/build-omp/src/opalx",
+  "new_executable_sha256": "ab1febaafc26f4dc82904808dfb81b6de7c7476d42290fc7cc79a7090e0602f3",
+  "new_executable_archive": "/Users/adelmann/git/opalx-658-build-record/opalx-658-committed-fd6ba8dc5-ab1febaafc26",
+  "source_tracked_changes": false,
+  "original_working_tree_status_unchanged": true,
+  "original_tracked_patch_unchanged": true,
+  "original_executable_unchanged": true,
+  "tests": {
+    "ctest_omp1": {
+      "passed": 131,
+      "failed": 0,
+      "log": "ctest-omp1-oversubscribe.log"
+    },
+    "ctest_omp4_fft2d5": {
+      "passed": 3,
+      "failed": 0,
+      "log": "ctest-omp4-fft2d5.log"
+    },
+    "mpi_two_rank_probe": "Rejected during single-domain test-fixture initialization; did not reach FFT2D5 solver guard. Not claimed as a solver multi-rank check."
+  },
+  "toolchain": {
+    "compiler": "Clang21.1.8",
+    "configuration": "Release/OpenMP",
+    "sdk": "MacOSX26.2",
+    "mpi_test_flags": [
+      "--oversubscribe",
+      "--bind-to",
+      "none"
+    ]
+  }
+}

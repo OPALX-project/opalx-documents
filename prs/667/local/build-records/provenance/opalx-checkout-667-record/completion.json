@@ -1,0 +1,92 @@
+{
+  "status": "complete",
+  "checkout": "/Users/adelmann/git/opalx",
+  "pr": 667,
+  "branch": "codex/fft2d5-explicit-original-model",
+  "commit": "d47703aff69879de8e3a87f862a171926b288f69",
+  "src_matches_pr": true,
+  "non_src_changes_restored_identically": {
+    ".github/workflows/cpu-serial.yml": {
+      "exists": true,
+      "backup": "/Users/adelmann/git/opalx-checkout-667-record/non-src-keep/.github/workflows/cpu-serial.yml",
+      "sha256": "68cd67ff67198ff61f73ca8b2ed6e2b101873e502f0434a6888d1b8f0733a274"
+    },
+    ".gitignore": {
+      "exists": true,
+      "backup": "/Users/adelmann/git/opalx-checkout-667-record/non-src-keep/.gitignore",
+      "sha256": "efba83f563d06ae2ceea28723a5509eba32e65dbcaaefdf39eca18cf36fb0d30"
+    },
+    "README.md": {
+      "exists": true,
+      "backup": "/Users/adelmann/git/opalx-checkout-667-record/non-src-keep/README.md",
+      "sha256": "3df02c17dde73ef0cb6cf3323187bbffe216c277c45420ab1976e931eebca0c5"
+    },
+    "docs/validation/fft2d5/uniform-b-ellipsoid/NEXT-STEPS.md": {
+      "exists": true,
+      "backup": "/Users/adelmann/git/opalx-checkout-667-record/non-src-keep/docs/validation/fft2d5/uniform-b-ellipsoid/NEXT-STEPS.md",
+      "sha256": "9272a963ea473391fb3283263e1c2f334a28a343801ea1dd937f6795358cece6"
+    },
+    "docs/validation/fft2d5/uniform-b-ellipsoid/README.md": {
+      "exists": true,
+      "backup": "/Users/adelmann/git/opalx-checkout-667-record/non-src-keep/docs/validation/fft2d5/uniform-b-ellipsoid/README.md",
+      "sha256": "cfaa196d373f96ba25c34b7b034850185deb9cd9b7488dac94459e9c2edbf0f0"
+    },
+    "docs/validation/fft2d5/uniform-b-ellipsoid/prepare_opalx.py": {
+      "exists": true,
+      "backup": "/Users/adelmann/git/opalx-checkout-667-record/non-src-keep/docs/validation/fft2d5/uniform-b-ellipsoid/prepare_opalx.py",
+      "sha256": "9e01820c1da61c0927427aa860946afbff407bed5129634aaa32ca78e100b5c3"
+    },
+    "tools/run_regression_smoke.py": {
+      "exists": true,
+      "backup": "/Users/adelmann/git/opalx-checkout-667-record/non-src-keep/tools/run_regression_smoke.py",
+      "sha256": "8bd9f5366c8bf9cbe8f31ea273493b83427adeafd0ec06ddeede5e81facd280f"
+    },
+    "unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp": {
+      "exists": true,
+      "backup": "/Users/adelmann/git/opalx-checkout-667-record/non-src-keep/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp",
+      "sha256": "188ad9fbe7f0af11a5bcd75a1d712973f429c546d73fe3fd415497b2b9ac1b2b"
+    },
+    "unit_tests/Algorithms/TestDeviceExternalField.cpp": {
+      "exists": true,
+      "backup": "/Users/adelmann/git/opalx-checkout-667-record/non-src-keep/unit_tests/Algorithms/TestDeviceExternalField.cpp",
+      "sha256": "d768b2c5b989a1a5ff598306b876f1a960541b7f83481829a1bcd063ec9ed8b0"
+    },
+    "unit_tests/Elements/TestOpalBeamlinePlacement.cpp": {
+      "exists": true,
+      "backup": "/Users/adelmann/git/opalx-checkout-667-record/non-src-keep/unit_tests/Elements/TestOpalBeamlinePlacement.cpp",
+      "sha256": "8c9d81aeb8fe79a6afa3b3daa76f0f9a43cb48912fec06c754de8afecee96217"
+    },
+    "unit_tests/SpaceCharge/CMakeLists.txt": {
+      "exists": true,
+      "backup": "/Users/adelmann/git/opalx-checkout-667-record/non-src-keep/unit_tests/SpaceCharge/CMakeLists.txt",
+      "sha256": "7d2d2b36886c84f90dc8c86410cb0eda020661ab7efb560a55bcaaae79f517ef"
+    },
+    "unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp": {
+      "exists": true,
+      "backup": "/Users/adelmann/git/opalx-checkout-667-record/non-src-keep/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp",
+      "sha256": "4e3ebd7ce0f3fdc62af18719ffb3fab6024846477342811a5556fe6f26e212d2"
+    },
+    "unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp": {
+      "exists": true,
+      "backup": "/Users/adelmann/git/opalx-checkout-667-record/non-src-keep/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp",
+      "sha256": "bbc7f4a42df425a8647ab828ea609653a9611520967a23ac255c9094a820117a"
+    },
+    "unit_tests/SpaceCharge/TestSpaceChargeConfig.cpp": {
+      "exists": true,
+      "backup": "/Users/adelmann/git/opalx-checkout-667-record/non-src-keep/unit_tests/SpaceCharge/TestSpaceChargeConfig.cpp",
+      "sha256": "2dda951e78f0c60f3478dd3ec24e6c82afea3dbaa2f2dff5a3e1d9b995162b55"
+    }
+  },
+  "untracked_src_saved_separately": [
+    "src/AbsBeamline/ScalingFFASupport.h",
+    "src/SpaceCharge/FFT2D5/FFT2D5Curvature.cpp",
+    "src/SpaceCharge/FFT2D5/FFT2D5Curvature.h",
+    "src/SpaceCharge/FFT2D5/FFT2D5FreeSpace.cpp",
+    "src/SpaceCharge/FFT2D5/FFT2D5FreeSpace.h",
+    "src/SpaceCharge/FFT2D5/FFT2D5FreeSpaceKernel.h",
+    "src/SpaceCharge/FFT2D5/FFT2D5Geometry.cpp",
+    "src/SpaceCharge/FFT2D5/FFT2D5Geometry.h"
+  ],
+  "simulation_binary_unchanged": true,
+  "no_rebuild_performed": true
+}

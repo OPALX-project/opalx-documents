@@ -1,0 +1,3 @@
+Active: compile original ~/git/opalx includinglocalchanges, existingbinarybackedupandcommittedarchivepreserved. Localtrackedpatch+untrackedcodetar+filehashes pinned. Then same10m10stepZeroSCand10pC, comparecommitted658/Py RMS/emittance/analyticZeroSC. LocalOPEN hasnewcurvaturemodelandthin-sourceguard; do not disableguardorchangeinputifrequestedcasefails. No solverfixes/stash/commits/push.
+
+Finished: local postbuildEXE byteidenticalpreviousa0a,oldbackup+cleancommittedarchivekept; sourcehashesunchanged. SixrelevantCTestentriespassOMP1/4. ZeroSC10m10stepscomplete;local10pCguardrejectionbeforefirstSC atmaxu80.8839mmvs20mm. Campaignresults/plots/failureat tracking/bend-10m-local-changes. No processleft,no sourcefix.

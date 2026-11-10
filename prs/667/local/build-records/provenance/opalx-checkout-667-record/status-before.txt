@@ -1,0 +1,52 @@
+ M .github/workflows/cpu-serial.yml
+ M .gitignore
+ M README.md
+ M docs/validation/fft2d5/uniform-b-ellipsoid/NEXT-STEPS.md
+ M docs/validation/fft2d5/uniform-b-ellipsoid/README.md
+ M docs/validation/fft2d5/uniform-b-ellipsoid/prepare_opalx.py
+ M src/AbsBeamline/CMakeLists.txt
+ M src/AbsBeamline/ScalingFFAMagnet.cpp
+ M src/AbsBeamline/ScalingFFAMagnet.h
+ M src/Algorithms/DeviceExternalField.cpp
+ M src/Algorithms/DeviceExternalField.h
+ M src/Algorithms/ParallelTracker.cpp
+ M src/Elements/PlacementResolver.cpp
+ M src/Elements/PlacementResolver.h
+ M src/SpaceCharge/FFT2D5/CMakeLists.txt
+ M src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
+ M src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
+ M src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
+ M src/SpaceCharge/SpaceChargeConfig.cpp
+ M src/SpaceCharge/SpaceChargeConfig.h
+ M src/SpaceCharge/SpaceChargeConfigBuilder.cpp
+ M src/Structure/FieldSolverCmd.cpp
+ M src/Structure/FieldSolverCmd.h
+ M src/Track/CofCmd.cpp
+ M tools/run_regression_smoke.py
+ M unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp
+ M unit_tests/Algorithms/TestDeviceExternalField.cpp
+ M unit_tests/Elements/TestOpalBeamlinePlacement.cpp
+ M unit_tests/SpaceCharge/CMakeLists.txt
+ M unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
+ M unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp
+ M unit_tests/SpaceCharge/TestSpaceChargeConfig.cpp
+?? ANNOUNCEMENTS.md
+?? HANDOFF-FFA-COF.md
+?? HANDOFF-FFA.md
+?? HANDOFF-FFT2D5.md
+?? build-omp/
+?? output/
+?? src/AbsBeamline/ScalingFFASupport.h
+?? src/SpaceCharge/FFT2D5/FFT2D5Curvature.cpp
+?? src/SpaceCharge/FFT2D5/FFT2D5Curvature.h
+?? src/SpaceCharge/FFT2D5/FFT2D5FreeSpace.cpp
+?? src/SpaceCharge/FFT2D5/FFT2D5FreeSpace.h
+?? src/SpaceCharge/FFT2D5/FFT2D5FreeSpaceKernel.h
+?? src/SpaceCharge/FFT2D5/FFT2D5Geometry.cpp
+?? src/SpaceCharge/FFT2D5/FFT2D5Geometry.h
+?? tmp/
+?? tools/test_run_regression_smoke.py
+?? tools/toOPALX/
+?? unit_tests/SpaceCharge/TestFFT2D5Curvature.cpp
+?? unit_tests/SpaceCharge/TestFFT2D5FreeSpace.cpp
+?? unit_tests/SpaceCharge/TestFFT2D5Geometry.cpp
