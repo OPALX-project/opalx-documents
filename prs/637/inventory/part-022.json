@@ -1,0 +1,2067 @@
+[
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/data/acceleration_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/benchmark/data/acceleration_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/input-manifest.json",
+    "sha256": "f43c0085d927d87d036604bd099dbf96e8e059c1a44b9f201f38c78c3e12105f",
+    "bytes": 955,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/benchmark/input-manifest.json"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/radial.hist",
+    "sha256": "f4a2ad6e87091802ac428c950b75cdd4e16968f1b9a2847782b702376315664a",
+    "bytes": 2696,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/benchmark/radial.hist"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/radial.peaks",
+    "sha256": "ab59fd23f64555064dab07f6dee6b410b4b80b655d32610c75277c6fc7fb4d9d",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/benchmark/radial.peaks"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/benchmark/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/benchmark/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/run.log",
+    "sha256": "36cb90d054165c0f0940f4c272b0c8457ad3a8646bdddf3cc296f499e1dd6910",
+    "bytes": 24335,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/benchmark/run.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/timing.dat",
+    "sha256": "2dfe282d9d82e1fd39956dadeabde59c9b4bb482d9a57b7b3fab0a316b2c3092",
+    "bytes": 2783,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/benchmark/timing.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/Cyclotron-RF-Stop.h5",
+    "sha256": "6c6f5d77781816139818b6da4f60c83feb43e757eba628d2c4eba3f2a5cb4130",
+    "bytes": 30909,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/Cyclotron-RF-Stop.in",
+    "sha256": "0eafda92517b6c47a7c094ef31a03445dd738c60ba7a7db6bf28d37c1a4c5222",
+    "bytes": 3242,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/Cyclotron-RF-Stop.stat",
+    "sha256": "9025de276436910d9562429d19bbdaf8c2e934116712a68efaa8debafd2a7a82",
+    "bytes": 7838,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/bunch.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "cacc28a404387db3f057cebca6c7418049ce39dfdde24e46262d66a2dfdbda41",
+    "bytes": 3017,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "84734f16cf9c5c4fd914be8e6233dfbb397c21240d943b794bee86816361019a",
+    "bytes": 290567,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "46844f6015a89ca261653eb23437c40393917cc6fc86a181569a01291b4d98f9",
+    "bytes": 7799,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/proton.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/run.log",
+    "sha256": "7c0ed2e081b3c82ba01e8f2000bce8fed6e66ba6fdc4504330044796a243ea4f",
+    "bytes": 15278,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/run.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/none/timing.dat",
+    "sha256": "1b52ec6c4e5c054723e4d8143017bcd2db2f522e5ed05b481a2ddb324664b74c",
+    "bytes": 1217,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/none/timing.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/Cyclotron-RF-Stop.h5",
+    "sha256": "a1d6ce11ff33cfb17e00e81de42bd4e7d6a6e2d523fb46abe3f04f062368edc6",
+    "bytes": 4459,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/Cyclotron-RF-Stop.in",
+    "sha256": "486c19e58421a4b6e5e2a2f4bed81630955d6a0a13380404dddfbf85a7452b3c",
+    "bytes": 3352,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/bunch.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "b46daf19c5fe035620cad2934969b6f1f34079f077a27668e0abde30ad418671",
+    "bytes": 3127,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "84734f16cf9c5c4fd914be8e6233dfbb397c21240d943b794bee86816361019a",
+    "bytes": 290567,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "46844f6015a89ca261653eb23437c40393917cc6fc86a181569a01291b4d98f9",
+    "bytes": 7799,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/proton.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration/zero/run.log",
+    "sha256": "bc53a7295416860a10eb5716ce2cfcb452228202215e72d465f598b50ac68ece",
+    "bytes": 11056,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/Cyclotron-RF-Stop.h5",
+    "sha256": "17f856255214de10e707c8423a4e01dec73273a584a310ad1cfc7eee8e78a0ab",
+    "bytes": 30909,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/Cyclotron-RF-Stop.in",
+    "sha256": "f11be86f9527274c0110b9e7a28b96b71d01c32b7f2fdde192889f152d315b24",
+    "bytes": 3373,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/Cyclotron-RF-Stop.stat",
+    "sha256": "68de227442bb7aa75567361fbe2e66008e2e9e813b4abd0ee16556ffac339dab",
+    "bytes": 7837,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/bunch.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "8c6bcdb4a2cc4306ae8f5682672b152fa2fde850381f0a6a9b38be3ace074700",
+    "bytes": 3148,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "84734f16cf9c5c4fd914be8e6233dfbb397c21240d943b794bee86816361019a",
+    "bytes": 290567,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "46844f6015a89ca261653eb23437c40393917cc6fc86a181569a01291b4d98f9",
+    "bytes": 7799,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/proton.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/run.log",
+    "sha256": "612ae06469f8aa1918d9657c033db90da0053171ed84288170bd82b779768dba",
+    "bytes": 24948,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/run.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/timing.dat",
+    "sha256": "274773c3877763b1833cba36f74191ab702b63476bbd811665836c23cfb7f74e",
+    "bytes": 2783,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-one/timing.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/Cyclotron-RF-Stop.h5",
+    "sha256": "0a41cb743608bbb078152991f2e2c230f26b734f7b5a65d7f7aa70c7dae00765",
+    "bytes": 30909,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/Cyclotron-RF-Stop.in",
+    "sha256": "f11be86f9527274c0110b9e7a28b96b71d01c32b7f2fdde192889f152d315b24",
+    "bytes": 3373,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/Cyclotron-RF-Stop.stat",
+    "sha256": "9d32a237ac53007eac4af45bddbe8e95b8bf531c4262d7c6755c650114226c73",
+    "bytes": 7837,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/bunch.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "8c6bcdb4a2cc4306ae8f5682672b152fa2fde850381f0a6a9b38be3ace074700",
+    "bytes": 3148,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "ee690b8fadab1ce99725bee6c770bc5c79e7396634411623f5632d4f0eea1091",
+    "bytes": 288633,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "3a6b8ae3a99c77e280830f67f9c8bc74d2273518343902c1192e6b92ee57d8a7",
+    "bytes": 8470,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/proton.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/run.log",
+    "sha256": "08d46c174417adc17297cdb57b5f088993071d3e11cbd29b38b2892a00310089",
+    "bytes": 32324,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/run.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/timing.dat",
+    "sha256": "a5a149b6e2fdb3d7a9435bfed78b39e55d73fffea2f1d91b9ace242347130661",
+    "bytes": 3711,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/charged-two/timing.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/Cyclotron-RF-Stop.h5",
+    "sha256": "ad66d31b39d40e709946c2442a00c35a098c276bd1d6ac7a899f52a23c106947",
+    "bytes": 30909,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/Cyclotron-RF-Stop.in",
+    "sha256": "7f0e20887e9fd94ff3d24c996b6557ac3ef4e2cb6e7f8d90f87c7a725b0f1d09",
+    "bytes": 3373,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/Cyclotron-RF-Stop.stat",
+    "sha256": "f078381089096c0b520d205e7798b290b3cde7c4d295a275d3bf550caab23af2",
+    "bytes": 7838,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/bunch.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "a91fcc6c5c36425033a0e00fdb5a60aa4be2c65ebdeaca5ca5e7d2d132655737",
+    "bytes": 3148,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "84734f16cf9c5c4fd914be8e6233dfbb397c21240d943b794bee86816361019a",
+    "bytes": 290567,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "46844f6015a89ca261653eb23437c40393917cc6fc86a181569a01291b4d98f9",
+    "bytes": 7799,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/proton.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/run.log",
+    "sha256": "cf44ed9c85f68c11a187832d421fea0ae8b27cd931d162169005fa8a83bbc38a",
+    "bytes": 24954,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/run.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/timing.dat",
+    "sha256": "643f7edbe514077c678a6fbf1894472bdb69e94597e7fa91fdb4e6f24632b3b3",
+    "bytes": 2783,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/near-zero/timing.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/Cyclotron-RF-Stop.h5",
+    "sha256": "3f443fcde57aca9974ec70ec388eaf529eea4c199bb8b36523607de02a90eb5e",
+    "bytes": 30909,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/Cyclotron-RF-Stop.in",
+    "sha256": "0eafda92517b6c47a7c094ef31a03445dd738c60ba7a7db6bf28d37c1a4c5222",
+    "bytes": 3242,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/Cyclotron-RF-Stop.stat",
+    "sha256": "181b588029049a2f2efb787bd77638acd2432488c44576c6e5105ac284383364",
+    "bytes": 7838,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/bunch.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "cacc28a404387db3f057cebca6c7418049ce39dfdde24e46262d66a2dfdbda41",
+    "bytes": 3017,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "84734f16cf9c5c4fd914be8e6233dfbb397c21240d943b794bee86816361019a",
+    "bytes": 290567,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "46844f6015a89ca261653eb23437c40393917cc6fc86a181569a01291b4d98f9",
+    "bytes": 7799,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/proton.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/run.log",
+    "sha256": "cc3698bfec38d7852b268f5dceeb17d275183adf39cbd648136ea9c3852e3fa7",
+    "bytes": 15284,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/run.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/timing.dat",
+    "sha256": "a5b73167327c8b2b834889279d99f2a661508dab1fb0cd359aba108ce41cb921",
+    "bytes": 1217,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/none/timing.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-final/report.json",
+    "sha256": "2f2f36a31f65b721d8c9048321af4dad4acf20982a13a029811c613aec959da1",
+    "bytes": 641,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-final/report.json"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/Cyclotron-RF-Stop.h5",
+    "sha256": "0078a6dcbbd36b7ab6b21cac170b8be460717a5840290be8ef960bca9810fe75",
+    "bytes": 30909,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/Cyclotron-RF-Stop.in",
+    "sha256": "f11be86f9527274c0110b9e7a28b96b71d01c32b7f2fdde192889f152d315b24",
+    "bytes": 3373,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/Cyclotron-RF-Stop.stat",
+    "sha256": "db731cac463b7e6dc17e4907ab379ff70a2b03b9205164eb764c05cc7c3b30cd",
+    "bytes": 7837,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/bunch.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "8c6bcdb4a2cc4306ae8f5682672b152fa2fde850381f0a6a9b38be3ace074700",
+    "bytes": 3148,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "84734f16cf9c5c4fd914be8e6233dfbb397c21240d943b794bee86816361019a",
+    "bytes": 290567,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "46844f6015a89ca261653eb23437c40393917cc6fc86a181569a01291b4d98f9",
+    "bytes": 7799,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/proton.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/run.log",
+    "sha256": "1871223ec10932362640a1af7e5d1cf47a34d1b1388d91379ee24d0041acaaa6",
+    "bytes": 24956,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/run.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/timing.dat",
+    "sha256": "fec1fa79b3325157e512e4d28cbdc93f327d6575667afbfadf9ece1220df3963",
+    "bytes": 2783,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-one/timing.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/Cyclotron-RF-Stop.h5",
+    "sha256": "a80488531b3de97c0988e850271f99cee1f54a39675b8ee792122f929833fcea",
+    "bytes": 30909,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/Cyclotron-RF-Stop.in",
+    "sha256": "f11be86f9527274c0110b9e7a28b96b71d01c32b7f2fdde192889f152d315b24",
+    "bytes": 3373,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/Cyclotron-RF-Stop.stat",
+    "sha256": "7edb246905741b67a44b060798db36b9a196d10fbf9e3281933879a78d4136ae",
+    "bytes": 7837,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/bunch.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "8c6bcdb4a2cc4306ae8f5682672b152fa2fde850381f0a6a9b38be3ace074700",
+    "bytes": 3148,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "ee690b8fadab1ce99725bee6c770bc5c79e7396634411623f5632d4f0eea1091",
+    "bytes": 288633,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "3a6b8ae3a99c77e280830f67f9c8bc74d2273518343902c1192e6b92ee57d8a7",
+    "bytes": 8470,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/proton.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/run.log",
+    "sha256": "93d2a3921ea0171f4273beeda5c1c73a0542e951b61fd1898187c4e811dccebc",
+    "bytes": 32335,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/run.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/timing.dat",
+    "sha256": "74ed2ef0da5f9b1a2a9bd4c99e5c683d7d6d4b8dfd17a7dad2e845d12cd94697",
+    "bytes": 3711,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/charged-two/timing.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/Cyclotron-RF-Stop.h5",
+    "sha256": "54d3f5b05c471745689272b5fbdf3ab1048a5777cf175e22e15cbf08036a2ded",
+    "bytes": 30909,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/Cyclotron-RF-Stop.in",
+    "sha256": "7f0e20887e9fd94ff3d24c996b6557ac3ef4e2cb6e7f8d90f87c7a725b0f1d09",
+    "bytes": 3373,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/Cyclotron-RF-Stop.stat",
+    "sha256": "de231fb5475e2c95b1f0e0ac2ee37105cef870564a7770ba6094d473751672dd",
+    "bytes": 7838,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/bunch.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "a91fcc6c5c36425033a0e00fdb5a60aa4be2c65ebdeaca5ca5e7d2d132655737",
+    "bytes": 3148,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "84734f16cf9c5c4fd914be8e6233dfbb397c21240d943b794bee86816361019a",
+    "bytes": 290567,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "46844f6015a89ca261653eb23437c40393917cc6fc86a181569a01291b4d98f9",
+    "bytes": 7799,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/proton.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/run.log",
+    "sha256": "809663a346f496d7497770bfc1213e01318a99ad146ab6788c08e4ba5cc30f09",
+    "bytes": 24954,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/run.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/timing.dat",
+    "sha256": "6fff0badf11e16506b5614288280f8e62b12a88288b31ced3d8b31ad4f30da5c",
+    "bytes": 2783,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/near-zero/timing.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/Cyclotron-RF-Stop.h5",
+    "sha256": "1d67aeaa9738653f78c12c8909c970ec60ac9dad56682caf11193ab2834ba901",
+    "bytes": 30909,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/Cyclotron-RF-Stop.in",
+    "sha256": "0eafda92517b6c47a7c094ef31a03445dd738c60ba7a7db6bf28d37c1a4c5222",
+    "bytes": 3242,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/Cyclotron-RF-Stop.stat",
+    "sha256": "2838e9f5e2d1dcf82f7c8d5aa40234f1e5248ac7792c1c5dfb6349166c7237eb",
+    "bytes": 7838,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/bunch.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "cacc28a404387db3f057cebca6c7418049ce39dfdde24e46262d66a2dfdbda41",
+    "bytes": 3017,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "84734f16cf9c5c4fd914be8e6233dfbb397c21240d943b794bee86816361019a",
+    "bytes": 290567,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "46844f6015a89ca261653eb23437c40393917cc6fc86a181569a01291b4d98f9",
+    "bytes": 7799,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/proton.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/run.log",
+    "sha256": "d4b8e78e5f1af40dce77dce302c746dce693ea0d299776b1aef16f2032fe8acc",
+    "bytes": 15284,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/run.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/timing.dat",
+    "sha256": "5d9664485367c1f4915c99dc394397a3295b377a8658317bd54e22570dd80748",
+    "bytes": 1217,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/bunch-integration-verified/none/timing.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/coasting10/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/coasting10/coasting.in",
+    "sha256": "5ee7d3e4376b5c0a6f99de74365e388e213de196ae56ba86679f9c558332b8e8",
+    "bytes": 3098,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/coasting10/coasting.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/coasting10/gauss.dat",
+    "sha256": "df11b9cf5b8cd75d5b967f6e43b8eb77b99228067161364139dee4f6739ade47",
+    "bytes": 38429052,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/coasting10/input-manifest.json",
+    "sha256": "ba65194add72006a9196b5337b376ee898f057c6bb4dc073a8fe0025e51e3d1c",
+    "bytes": 636,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/coasting10/input-manifest.json"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/finish_when_done.py",
+    "sha256": "2a780cbd1f14a3e8d70d7c0a8b3215e6b7fa3334b76db6e34fc2195e03abd9fc",
+    "bytes": 547,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/finish_when_done.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/finish_when_done_16.py",
+    "sha256": "2bfac05becc1bcf1266f9fb0b38c8a9c81a64616486a675d0d1d09e182500fbe",
+    "bytes": 553,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/finish_when_done_16.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/Cyclotron-Coasting.h5",
+    "sha256": "5ba2027922004435ac409d7528b188cc73a04e471681fe713678d0fd0e84f4bc",
+    "bytes": 14275,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/Cyclotron-Coasting.in",
+    "sha256": "39fdd120f305fcd8e8bfb8201d1ee2d8413f112a6ac792c0144ed885bb826cef",
+    "bytes": 3077,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/cyclotron-coasting.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/Cyclotron-Coasting.local",
+    "sha256": "8df3114b67fb9f49c064b7056e8941bae43c1d6d53213ef8beffc41b1434c077",
+    "bytes": 224,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/cyclotron-coasting.local"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/Cyclotron-Coasting.rt",
+    "sha256": "8da27b00f0d4127c135d322b391c1b984423b61928531fa3c91a7620fc772ab6",
+    "bytes": 741,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/cyclotron-coasting.rt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/Cyclotron-Coasting.stat",
+    "sha256": "4a518caef05e2a90c6054c26f3316649f8322003623618ff2f761f5af6ab77ba",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/data/Cyclotron-Coasting_3D.opal",
+    "sha256": "6ff9b017fd1132867eb3ef4ae4e84d90f4a28a3c41748025c1cf91ba7daf8e78",
+    "bytes": 1220,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/data/cyclotron-coasting_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/data/Cyclotron-Coasting_DesignPath.dat",
+    "sha256": "816901b39bd8e55aea8d7218da12d7748c99f62830ae4b273f28af85d5182dec",
+    "bytes": 296661,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/data/cyclotron-coasting_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/data/Cyclotron-Coasting_ElementPositions.py",
+    "sha256": "b17642e6df6a244449cee5d954c6daef1ef1bdc6e8dbb8b34d0d819f33e94364",
+    "bytes": 25827,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/data/cyclotron-coasting_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/data/Cyclotron-Coasting_ElementPositions.sdds",
+    "sha256": "0e538d0e2f018cb535788795dfa29102b81f757ecf8fc45b27e338a1b177b624",
+    "bytes": 7800,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/data/cyclotron-coasting_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/data/Cyclotron-Coasting_ElementPositions.txt",
+    "sha256": "0b22be2fcfbaf5d1230bdd1f8f70556774419e73de3b171dafcd89fdbe40a78f",
+    "bytes": 1360,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/data/cyclotron-coasting_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/hits.hist",
+    "sha256": "c10880d6ae1bdbc73e5f1ff8078463e570bdf03cc13219446ad8b1eec172c402",
+    "bytes": 275,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/hits.hist"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/hits.loss",
+    "sha256": "090d77221270190c330172e8bd4c7f8856ef1875ecb24f3064c0961fba10b488",
+    "bytes": 1482,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/hits.loss"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/hits.peaks",
+    "sha256": "1f25572e13275f57670a4f3422da45ef71c31f179239f86540f847b65f489f99",
+    "bytes": 205,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/hits.peaks"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/miss.hist",
+    "sha256": "8ce7f2f3b9ffebc896c2fb0f67bf8878f996a76de6729bf6c2dedc6ed5178c25",
+    "bytes": 96,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/miss.hist"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/miss.peaks",
+    "sha256": "ab59fd23f64555064dab07f6dee6b410b4b80b655d32610c75277c6fc7fb4d9d",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/miss.peaks"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/proton72.dat",
+    "sha256": "0c612d341099fbb07f94fb1d61d998515208178074239e1d89acbb69aee937d7",
+    "bytes": 47,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/proton72.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/reference/Cyclotron-Coasting.stat",
+    "sha256": "d128fab7ff24b66aa2506189421240720756f0be038c332bccdfe297516acca8",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/reference/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/reference/Cyclotron-Coasting.stat.md5",
+    "sha256": "07b749faf92b532a9ce8ec49d374a9ce02b44f39a2b748d9cd8f143a73d1b6fd",
+    "bytes": 58,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/reference/cyclotron-coasting.stat.md5"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/reverse.hist",
+    "sha256": "c10880d6ae1bdbc73e5f1ff8078463e570bdf03cc13219446ad8b1eec172c402",
+    "bytes": 275,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/reverse.hist"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/reverse.loss",
+    "sha256": "090d77221270190c330172e8bd4c7f8856ef1875ecb24f3064c0961fba10b488",
+    "bytes": 1482,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/reverse.loss"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/reverse.peaks",
+    "sha256": "1f25572e13275f57670a4f3422da45ef71c31f179239f86540f847b65f489f99",
+    "bytes": 205,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/reverse.peaks"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/run.log",
+    "sha256": "fded826b23954f1a4c6b7d327712786c0344d9b97263bbe0602bcb745164de13",
+    "bytes": 18470,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/run.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-ascii/timing.dat",
+    "sha256": "2fb90f7c512e3f7186208485f3e402d054ee37b743a786d576f6d1a95105128a",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-ascii/timing.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/Cyclotron-Coasting.h5",
+    "sha256": "cbfda5b0dea26086879e4603dc9c4bf9a034007ab2db98831754e2b70a9144bd",
+    "bytes": 14275,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/Cyclotron-Coasting.in",
+    "sha256": "903ad12133731683f29d2bcb237e336623a61ed2baf6ecd2f1c42e2df3880754",
+    "bytes": 3053,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/cyclotron-coasting.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/Cyclotron-Coasting.local",
+    "sha256": "8df3114b67fb9f49c064b7056e8941bae43c1d6d53213ef8beffc41b1434c077",
+    "bytes": 224,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/cyclotron-coasting.local"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/Cyclotron-Coasting.rt",
+    "sha256": "8da27b00f0d4127c135d322b391c1b984423b61928531fa3c91a7620fc772ab6",
+    "bytes": 741,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/cyclotron-coasting.rt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/Cyclotron-Coasting.stat",
+    "sha256": "c52266ac50c5d384cbfd19988a306613f318ea873c9975c855b6066018f5d74a",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/data/Cyclotron-Coasting_3D.opal",
+    "sha256": "85ac6d20161765b26daf26b4f5e0a3d98577e0b8462cf46b922add978eb742e8",
+    "bytes": 1196,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/data/cyclotron-coasting_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/data/Cyclotron-Coasting_DesignPath.dat",
+    "sha256": "816901b39bd8e55aea8d7218da12d7748c99f62830ae4b273f28af85d5182dec",
+    "bytes": 296661,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/data/cyclotron-coasting_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/data/Cyclotron-Coasting_ElementPositions.py",
+    "sha256": "b17642e6df6a244449cee5d954c6daef1ef1bdc6e8dbb8b34d0d819f33e94364",
+    "bytes": 25827,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/data/cyclotron-coasting_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/data/Cyclotron-Coasting_ElementPositions.sdds",
+    "sha256": "0e538d0e2f018cb535788795dfa29102b81f757ecf8fc45b27e338a1b177b624",
+    "bytes": 7800,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/data/cyclotron-coasting_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/data/Cyclotron-Coasting_ElementPositions.txt",
+    "sha256": "0b22be2fcfbaf5d1230bdd1f8f70556774419e73de3b171dafcd89fdbe40a78f",
+    "bytes": 1360,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/data/cyclotron-coasting_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/hits.h5",
+    "sha256": "633b6d200533f63e60bdc3fbedc229a6d6e4d2fc254f2ff1c86f2b9b3bf0f862",
+    "bytes": 191857,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/hits.hist",
+    "sha256": "c10880d6ae1bdbc73e5f1ff8078463e570bdf03cc13219446ad8b1eec172c402",
+    "bytes": 275,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/hits.hist"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/hits.peaks",
+    "sha256": "1f25572e13275f57670a4f3422da45ef71c31f179239f86540f847b65f489f99",
+    "bytes": 205,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/hits.peaks"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/miss.hist",
+    "sha256": "8ce7f2f3b9ffebc896c2fb0f67bf8878f996a76de6729bf6c2dedc6ed5178c25",
+    "bytes": 96,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/miss.hist"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/miss.peaks",
+    "sha256": "ab59fd23f64555064dab07f6dee6b410b4b80b655d32610c75277c6fc7fb4d9d",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/miss.peaks"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/proton72.dat",
+    "sha256": "0c612d341099fbb07f94fb1d61d998515208178074239e1d89acbb69aee937d7",
+    "bytes": 47,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/proton72.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/reference/Cyclotron-Coasting.stat",
+    "sha256": "d128fab7ff24b66aa2506189421240720756f0be038c332bccdfe297516acca8",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/reference/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/reference/Cyclotron-Coasting.stat.md5",
+    "sha256": "07b749faf92b532a9ce8ec49d374a9ce02b44f39a2b748d9cd8f143a73d1b6fd",
+    "bytes": 58,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/reference/cyclotron-coasting.stat.md5"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/reverse.h5",
+    "sha256": "633b6d200533f63e60bdc3fbedc229a6d6e4d2fc254f2ff1c86f2b9b3bf0f862",
+    "bytes": 191857,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/reverse.hist",
+    "sha256": "c10880d6ae1bdbc73e5f1ff8078463e570bdf03cc13219446ad8b1eec172c402",
+    "bytes": 275,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/reverse.hist"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/reverse.peaks",
+    "sha256": "1f25572e13275f57670a4f3422da45ef71c31f179239f86540f847b65f489f99",
+    "bytes": 205,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/reverse.peaks"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/run.log",
+    "sha256": "714e2c3ab960b8cf421f2207ffbe3a252db790c331fef5299202f6cb575a48eb",
+    "bytes": 18383,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/run.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-hdf5/timing.dat",
+    "sha256": "cc650dc0b9bfa46545d592a3216a5dfae6c84debb616195c0be3fd220e87d362",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-hdf5/timing.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-off/Cyclotron-Coasting.h5",
+    "sha256": "b0665724737651749811ca1442dd0653918c9b0a3bc8127197ed781067a9aa6c",
+    "bytes": 14275,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-off/Cyclotron-Coasting.in",
+    "sha256": "d915829eff1bd16262be08f20e748a5da202740f7c0121de000f7115a0ce5a2c",
+    "bytes": 2777,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-off/cyclotron-coasting.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-off/Cyclotron-Coasting.local",
+    "sha256": "8df3114b67fb9f49c064b7056e8941bae43c1d6d53213ef8beffc41b1434c077",
+    "bytes": 224,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-off/cyclotron-coasting.local"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-off/Cyclotron-Coasting.rt",
+    "sha256": "8da27b00f0d4127c135d322b391c1b984423b61928531fa3c91a7620fc772ab6",
+    "bytes": 741,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-off/cyclotron-coasting.rt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-off/Cyclotron-Coasting.stat",
+    "sha256": "0f7649eb9cd3ee591999bff8ab28dc298715ca7ee57979b0410f92a508ba97fc",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-off/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-off/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-off/data/Cyclotron-Coasting_3D.opal",
+    "sha256": "4c33b08699ff3df8afa2d650d40cc695b6a81eca0498a992a5bc39e5776015c4",
+    "bytes": 920,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-off/data/cyclotron-coasting_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-off/data/Cyclotron-Coasting_DesignPath.dat",
+    "sha256": "816901b39bd8e55aea8d7218da12d7748c99f62830ae4b273f28af85d5182dec",
+    "bytes": 296661,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-off/data/cyclotron-coasting_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-off/data/Cyclotron-Coasting_ElementPositions.py",
+    "sha256": "b17642e6df6a244449cee5d954c6daef1ef1bdc6e8dbb8b34d0d819f33e94364",
+    "bytes": 25827,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-off/data/cyclotron-coasting_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-off/data/Cyclotron-Coasting_ElementPositions.sdds",
+    "sha256": "0e538d0e2f018cb535788795dfa29102b81f757ecf8fc45b27e338a1b177b624",
+    "bytes": 7800,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-off/data/cyclotron-coasting_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-off/data/Cyclotron-Coasting_ElementPositions.txt",
+    "sha256": "0b22be2fcfbaf5d1230bdd1f8f70556774419e73de3b171dafcd89fdbe40a78f",
+    "bytes": 1360,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-off/data/cyclotron-coasting_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-off/proton72.dat",
+    "sha256": "0c612d341099fbb07f94fb1d61d998515208178074239e1d89acbb69aee937d7",
+    "bytes": 47,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-off/proton72.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-off/reference/Cyclotron-Coasting.stat",
+    "sha256": "d128fab7ff24b66aa2506189421240720756f0be038c332bccdfe297516acca8",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-off/reference/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-off/reference/Cyclotron-Coasting.stat.md5",
+    "sha256": "07b749faf92b532a9ce8ec49d374a9ce02b44f39a2b748d9cd8f143a73d1b6fd",
+    "bytes": 58,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-off/reference/cyclotron-coasting.stat.md5"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-off/run.log",
+    "sha256": "9ff5d718a4b548351ef58ead2b57744c07c12b2869c950235bc1896a08299d4c",
+    "bytes": 17285,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-off/run.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-Coasting-off/timing.dat",
+    "sha256": "dcf5b9824a88fb90f5fdbe4054f7f5a8c620e58395fa73b240220e8b9eda6d3a",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-coasting-off/timing.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/Cyclotron-RF-Stop.h5",
+    "sha256": "6d08cc6583977fc142580d69301d26ea269fd1685822ca7c46722a1becfef9cc",
+    "bytes": 14275,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/Cyclotron-RF-Stop.in",
+    "sha256": "1b7aec44055d0e364eed1f52f168ea7408f8191e21217e2f5b7ca6c8c79a35e1",
+    "bytes": 3572,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/Cyclotron-RF-Stop.stat",
+    "sha256": "bdbf69f4cd74b822f79bfe857807a19a688c68cdf00b82d9d7603b5025ca22f4",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "99bed068c10653964bc26a760bd16bc33a389f43fbcef76d1af414740382a3f0",
+    "bytes": 3347,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "cacf63d557f6eab37020b18b9e79b18dc9f8ad1871b6a3b8e368648d8cbf400d",
+    "bytes": 8467,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/hits.hist",
+    "sha256": "ba5ba0d743e007c7b6c23d84e7548c055eb6fcbeed0ab1236d9ab8a2b7f50b5b",
+    "bytes": 274,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/hits.hist"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/hits.loss",
+    "sha256": "e4cbf385e82bf157a2c661bffa2c449b302b5fc2bbe366f05967d889ee8b70ae",
+    "bytes": 164,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/hits.loss"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/hits.peaks",
+    "sha256": "6d353292b1f3cbebf8cba42c25f1be3e1bf1010721e2a145b05f6bb8226f6a70",
+    "bytes": 37,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/hits.peaks"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/miss.hist",
+    "sha256": "8ce7f2f3b9ffebc896c2fb0f67bf8878f996a76de6729bf6c2dedc6ed5178c25",
+    "bytes": 96,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/miss.hist"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/miss.peaks",
+    "sha256": "ab59fd23f64555064dab07f6dee6b410b4b80b655d32610c75277c6fc7fb4d9d",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/miss.peaks"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/proton.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/reverse.hist",
+    "sha256": "ba5ba0d743e007c7b6c23d84e7548c055eb6fcbeed0ab1236d9ab8a2b7f50b5b",
+    "bytes": 274,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/reverse.hist"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/reverse.loss",
+    "sha256": "e4cbf385e82bf157a2c661bffa2c449b302b5fc2bbe366f05967d889ee8b70ae",
+    "bytes": 164,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/reverse.loss"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/reverse.peaks",
+    "sha256": "6d353292b1f3cbebf8cba42c25f1be3e1bf1010721e2a145b05f6bb8226f6a70",
+    "bytes": 37,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/reverse.peaks"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/run.log",
+    "sha256": "dcd88609e949b3318d21abfe5375b8174bd474f4ea4582e71a7cd3816b43440c",
+    "bytes": 15784,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/run.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-ascii/timing.dat",
+    "sha256": "a9470b2e6a9dd2bbabb1d91b7da69a9948b3583e1b3cc829ef2b4689371beaf6",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-ascii/timing.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-hdf5/Cyclotron-RF-Stop.h5",
+    "sha256": "cbe200886d94c37af7dfa60c83d25f297cc41b4b24f7592acec48117843a55b2",
+    "bytes": 14275,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-hdf5/Cyclotron-RF-Stop.in",
+    "sha256": "0092dbd732bdf2b566cba53cf9ac08f034e9ae1735f3d886b348b093c3c223a1",
+    "bytes": 3548,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-hdf5/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-hdf5/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-hdf5/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-hdf5/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-hdf5/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-hdf5/Cyclotron-RF-Stop.stat",
+    "sha256": "bdbf69f4cd74b822f79bfe857807a19a688c68cdf00b82d9d7603b5025ca22f4",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-hdf5/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-hdf5/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/flushing-integration/Cyclotron-RF-Stop-hdf5/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "39484e6af981cd6b52af8bea964db17a70138b56aa0d10e22597cdf84e267c00",
+    "bytes": 3323,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/flushing-integration/cyclotron-rf-stop-hdf5/data/cyclotron-rf-stop_3d.opal"
+  }
+]

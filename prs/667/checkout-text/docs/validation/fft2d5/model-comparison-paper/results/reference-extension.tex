@@ -1,0 +1,41 @@
+\section{Independent validation of SACR}
+The reference is checked directly for the current constant-radius tube.
+A separate implementation integrates the original Cartesian Coulomb vector
+with the physical volume factor $J$, without surface formulas, softening or
+charge renormalization. Eight targets per profile include mixed transverse
+bulk points, off-axis points 10 and 5 mm from an end, and an axis point
+0.1 mm from an end. Five targets per profile have all three field components
+nonzero. Angular and radial refinements are independent of the SACR rule.
+\begin{figure}[!ht]\centering
+\includegraphics[width=\linewidth]{figures/sacr-volume-validation.pdf}
+\caption{Independent volume integration versus SACR for both profiles and
+all three field components. Lower panels retain signed differences; bars
+show the change under the final volume-rule refinement, not a statistical
+confidence interval. Probe indices are centre (1), bulk (2--3), off-axis
+10 mm from the end (4--5), axis 5 mm and 0.1 mm from the end (6--7), and
+off-axis 5 mm from the end (8). All axes include zero.}
+\label{fig:sacr-volume-validation}\end{figure}
+The largest observed difference among 48 components is $2.2\times10^{-11}$ V/m; the final independent refinement changes a component by at most $1.5\times10^{-10}$ V/m. These are sampled numerical checks rather than a uniform error bound.
+
+\begin{samepage}
+A second check keeps charge, tube cross-section, line-density profile and
+15 material targets fixed while increasing $R$ from 2 to 1000 m. The same
+curved SACR implementation also evaluates $R=\infty$ and is compared with
+the separately derived finite-cylinder reference. Define
+\begin{equation}
+ \Delta_i(R)=\frac{\max_{15\ {\rm targets}}
+ |E_i^{\rm SACR}(R)-E_i^{\rm cylinder}|}{E_{i,*}},\qquad
+ E_{i,*}=\max_{51\ {\rm straight\ targets}}|E_i^{\rm cylinder}|.
+\end{equation}
+The fixed component scale retains targets with zero field. Finite-radius
+differences measure the physical change in source geometry.
+\end{samepage}
+\begin{figure}[!ht]\centering
+\includegraphics[width=\linewidth]{figures/sacr-radius-convergence.pdf}
+\caption{Constant-section SACR approaches the straight-cylinder field as
+curvature tends to zero. Each point is the maximum difference over the same
+15 material targets, divided by its fixed straight component scale.
+Both axes retain zero; the point at $1/R=0$ is an actual infinite-radius
+calculation. These geometry differences are distinct from quadrature error.}
+\label{fig:sacr-radius-convergence}\end{figure}
+The straight-limit implementations differ by at most $6.9\times10^{-15}$ V/m over the selected targets. The largest recorded radius-sweep quadrature change is $3.8\times10^{-15}$ V/m. The two checks support using SACR as the independent frozen-field reference for this tube; they do not validate beam tracking.

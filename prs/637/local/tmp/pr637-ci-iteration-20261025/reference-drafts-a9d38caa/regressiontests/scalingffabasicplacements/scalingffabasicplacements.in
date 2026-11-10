@@ -1,0 +1,96 @@
+OPTION, PSDUMPFREQ = 300000;     // 6d data written every 300000 time steps (h5).
+OPTION, STATDUMPFREQ = 100;   // Beam Stats written every 10 time steps (stat).
+OPTION, BOUNDPDESTROY=10; // Delete lost particles, if any
+OPTION, AUTOPHASE=4;        // Autophase is on, and phase of max energy
+                            // gain will be found automatically for cavities
+Option, VERSION=10900;
+
+Title, string="Scaling FFA Test";
+
+//----------------------------------------------------------------------------
+//Global Parameters
+
+REAL n_particles         = 10;      //Number of particles in simulation.
+REAL beam_bunch_charge   = 1.6021766339999998e-15;      //Charge of bunch. (C)
+
+//Initial Momentum Calculation
+// p = 1/3.3356 T m
+REAL P0 = 0.299792458; // GeV/c, c*1e-9, magnetic rigidity for 1 T m
+REAL R0 = 3.0;
+REAL R0_NEG = -1*R0;
+
+Magnet1  : SCALINGFFAMAGNET, L=0.5, ELEMEDGE=0.0,
+           B0=-1.0, R0=R0, FIELD_INDEX=1, RADIAL_NEG_EXTENT=0.2, RADIAL_POS_EXTENT=0.2,
+           FRINGE_LENGTH=0.01;
+Magnet2  : SCALINGFFAMAGNET, L=0.5, ELEMEDGE=0.5,
+           B0=-1.0, R0=R0, FIELD_INDEX=1, TAN_DELTA=0.0, MAX_Y_POWER=5,
+           FRINGE_LENGTH=0.01,
+           RADIAL_NEG_EXTENT=0.2, RADIAL_POS_EXTENT=0.2, HEIGHT=0.5;
+MagnetEnge : SCALINGFFAMAGNET, L=0.5, ELEMEDGE=1.0,
+           B0=-1.0, R0=R0, FIELD_INDEX=1, TAN_DELTA=0.0, MAX_Y_POWER=1,
+           FRINGE_LENGTH=0.01,
+           RADIAL_NEG_EXTENT=0.2, RADIAL_POS_EXTENT=0.2, HEIGHT=0.5,
+           END_FIELD_MODEL="EngeFringe";
+EngeFringe: ENGE, LENGTH=0.5, FRINGE_LENGTH=0.01, COEFFICIENTS={0.0, 1.0, 0.0, 0.0};
+SpiralMagnet  : SCALINGFFAMAGNET, L=0.5, ELEMEDGE=1.5, FRINGE_LENGTH=0.01,
+           B0=-1.0, R0=R0, FIELD_INDEX=1, TAN_DELTA=0.5, MAX_Y_POWER=1,
+           RADIAL_NEG_EXTENT=0.2, RADIAL_POS_EXTENT=0.2, HEIGHT=0.5;
+MinimalMagnet  : SCALINGFFAMAGNET, L=0.5, ELEMEDGE=2.0, B0=-1.0, R0=R0, FIELD_INDEX=1;
+
+
+MagnetNegR0 : SCALINGFFAMAGNET, L=0.5, ELEMEDGE=0.5,
+           B0=+1.0, R0=R0_NEG, FIELD_INDEX=1, TAN_DELTA=0.0, MAX_Y_POWER=5,
+           FRINGE_LENGTH=0.01,
+           RADIAL_NEG_EXTENT=0.2, RADIAL_POS_EXTENT=0.2, HEIGHT=0.5;
+
+SpiralMagnetNegR0  : SCALINGFFAMAGNET, L=0.5, ELEMEDGE=1.5, FRINGE_LENGTH=0.01,
+           B0=+1.0, R0=R0_NEG, FIELD_INDEX=1, TAN_DELTA=0.5, MAX_Y_POWER=1,
+           RADIAL_NEG_EXTENT=0.2, RADIAL_POS_EXTENT=0.2, HEIGHT=0.5;
+
+FFALine: Line = (Magnet1, Magnet2, MagnetEnge, SpiralMagnet, MinimalMagnet, MagnetNegR0, SpiralMagnetNegR0);
+
+Dist: DISTRIBUTION, TYPE = FROMFILE,
+    FNAME = "distr-scalingffa.txt",
+    NPARTDIST = n_particles;
+
+ES1: EMISSIONSOURCE, DISTRIBUTION = Dist;
+mySources: EMISSIONSOURCELIST = (ES1);
+
+//Disabled by default because it is quite slow...
+//FieldMapGenerator : DUMPEMFIELDS, FILE_NAME="map.dat", COORDINATE_SYSTEM=CARTESIAN,
+//               X_START=-2.0, DX=0.02, X_STEPS=201,
+//               Y_START=0.0, DY=0.01, Y_STEPS=1,
+//               Z_START=-1.0, DZ=0.02, Z_STEPS=201,
+//               T_START=0.0, DT=0.0, T_STEPS=1;
+
+//----------------------------------------------------------------------------
+// Define Field solvers
+// The mesh sizes should be a factor of 2
+// for most efficient space charge calculation.
+
+FS_SC: Fieldsolver, TYPE = NONE,
+            NX = 16, NY = 16, NZ = 16, // SC grid size is 32^3
+            PARFFTX = true,
+            PARFFTY = true,
+            PARFFTZ = true,  // parallel in the z direction only
+            BCFFTX = open,
+            BCFFTY = open,
+            BCFFTZ = open,
+            BBOXINCR = 1,
+            GREENSF = INTEGRATED;
+
+//----------------------------------------------------------------------------
+// Electron Beam Definition
+
+BEAM1:  BEAM, PARTICLE = PROTON, NALLOC = n_particles,
+        BCHARGE = beam_bunch_charge, SOURCES = mySources, CHARGE = +1;
+
+//----------------------------------------------------------------------------
+// Simulate the beamline using TRACK and RUN.
+
+TRACK, LINE = FFALine, BEAM = BEAM1, MAXSTEPS = 1000, DT = 1e-10, ZSTOP=60.0;
+RUN, METHOD = "PARALLEL",
+    FIELDSOLVER = FS_SC;
+ENDTRACK;
+Quit;
+

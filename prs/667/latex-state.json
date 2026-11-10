@@ -1,0 +1,31 @@
+{
+  "goal": "Archive remaining PR667 text and all checkout LaTeX sources; compile standalone documents using preserved figure assets; clean only PR-specific untracked files after verification.",
+  "phase": "complete",
+  "source_root": "/Users/adelmann/git/opalx",
+  "tracked_guard": {
+    ".github/workflows/cpu-serial.yml": "68cd67ff67198ff61f73ca8b2ed6e2b101873e502f0434a6888d1b8f0733a274",
+    ".gitignore": "efba83f563d06ae2ceea28723a5509eba32e65dbcaaefdf39eca18cf36fb0d30",
+    "README.md": "3df02c17dde73ef0cb6cf3323187bbffe216c277c45420ab1976e931eebca0c5",
+    "tools/run_regression_smoke.py": "8bd9f5366c8bf9cbe8f31ea273493b83427adeafd0ec06ddeede5e81facd280f",
+    "unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp": "188ad9fbe7f0af11a5bcd75a1d712973f429c546d73fe3fd415497b2b9ac1b2b"
+  },
+  "policy": "prs/667 small UTF-8 text only, <=1MiB/file. Compact necessary figure assets live outside prs under examples/2026/2d5-1/latex-assets. No commits/pushes authorized. No scientific/model edits. Tracked source files and unrelated material stay in place.",
+  "source_directories": [
+    "docs/validation/fft2d5",
+    "tmp/pdfs/uniform-b-report",
+    "tmp/pdfs/mapped-grid-2026-11-03",
+    "tmp/pdfs/reference-illustrations-2026-11-03",
+    "tmp/pdfs/model-comparison"
+  ],
+  "text_files": 3525,
+  "latex_files": 151,
+  "figure_records": 160,
+  "standalone_documents": 14,
+  "undefined_references": false,
+  "portable_source_check": true,
+  "compiled_reports_directory": "/Users/adelmann/git/opalx-documents/reports/2026/pr667",
+  "untracked_files_removed": 4221,
+  "untracked_bytes_removed": 196205951,
+  "tracked_source_unchanged": true,
+  "notes": "All TeX files preserved, 14 complete documents compiled. Untracked FFT2D5 research files and report QA caches relocated; tracked files and unrelated source/output untouched."
+}

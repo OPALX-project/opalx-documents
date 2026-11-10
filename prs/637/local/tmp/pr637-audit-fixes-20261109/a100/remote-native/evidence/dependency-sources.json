@@ -1,0 +1,37 @@
+{
+  "ippl": {
+    "sha": "d6216553e39dcf4405849c027517cc3401fefee5",
+    "source": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/deps/ippl-src",
+    "seed": "/data/user/adelmann/opalx-dev/ffa-probes-20261107/790abac19643/deps/ippl-src"
+  },
+  "kokkos": {
+    "sha": "8e15454876298832f013ebcaf08d53825b5bda40",
+    "source": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/deps/kokkos-src",
+    "seed": "/data/user/adelmann/opalx-dev/ffa-probes-20261107/790abac19643/deps/kokkos-src"
+  },
+  "heffte": {
+    "sha": "6e16996e5a3eb65c60fd62fd4d93c4b2df833033",
+    "source": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/deps/heffte-src",
+    "seed": "/data/user/adelmann/opalx-dev/ffa-probes-20261107/790abac19643/deps/heffte-src"
+  },
+  "gtest": {
+    "sha": "6910c9d9165801d8827d628cb72eb7ea9dd538c5",
+    "source": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/deps/gtest-src",
+    "seed": "/data/user/adelmann/opalx-dev/ffa-probes-20261107/790abac19643/deps/gtest-src"
+  },
+  "h5hut": {
+    "sha": "b5c74f760bc9919d409f46b5472e9eedf9a764d5",
+    "source": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/deps/h5hut-src",
+    "seed": "/data/user/adelmann/opalx-dev/ffa-probes-20261107/790abac19643/deps/h5hut-src"
+  },
+  "hdf5": {
+    "source": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/deps/hdf5-src",
+    "seed": "/data/user/adelmann/opalx-dev/ffa-probes-20261107/790abac19643/build/_deps/hdf5-src",
+    "method": "isolated source copy, no modifications"
+  },
+  "opalx_lapack": {
+    "source": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/deps/opalx_lapack-src",
+    "seed": "/data/user/adelmann/opalx-dev/ffa-probes-20261107/790abac19643/build/_deps/opalx_lapack-src",
+    "method": "isolated source copy, no modifications"
+  }
+}

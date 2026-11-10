@@ -1,0 +1,134 @@
+[
+  {
+    "source": "cell-triangle-64x32x2048-box0.012x0.0015-q16",
+    "profile": "triangle",
+    "source_mesh": [
+      64,
+      32,
+      2048
+    ],
+    "source_box_m": [
+      0.012,
+      0.0015
+    ],
+    "gauss_order": 16,
+    "source_particles": 1244160,
+    "source_charge_C": 1.0000000000000003e-11,
+    "compact_npz": "cell-triangle-64x32x2048-box0.012x0.0015-q16.npz",
+    "compact_sha256": "d947c9cc437b4fb22c038d854f4f270ee4d9d343ee17eed61e531c72d08f929d",
+    "full_q_attributes_sha256": "09b6f29941d9fc2876c81eb46e39985bb2abf40c652deec7ae8d4915f85e3f2d",
+    "full_q_reconstruction_passed": true,
+    "schema": "For each s, q_i=density_normalization*profile_integral_ds*cross_integral_J. Positions from curved X(s,u,y). Append listed probes. m_i=q_i/e*proton mass[GeV].",
+    "original_source_checkpoint_sha256": "97802922118dc188f4752df5e285acc67eaf027c73f12d62ccad3154b1396869"
+  },
+  {
+    "source": "cell-triangle-64x32x8192-box0.012x0.0015-q16",
+    "profile": "triangle",
+    "source_mesh": [
+      64,
+      32,
+      8192
+    ],
+    "source_box_m": [
+      0.012,
+      0.0015
+    ],
+    "gauss_order": 16,
+    "source_particles": 4976640,
+    "source_charge_C": 1.0000000000000001e-11,
+    "compact_npz": "cell-triangle-64x32x8192-box0.012x0.0015-q16.npz",
+    "compact_sha256": "1ef591206adbb5aa4be9843c0de1e8cd111315e6ffe23a12066ec7a7f5c886c7",
+    "full_q_attributes_sha256": "af3513bc41318d31d6f4b87f47e15a4b8d808be46ede11bae1721833c39a90f6",
+    "full_q_reconstruction_passed": true,
+    "schema": "For each s, q_i=density_normalization*profile_integral_ds*cross_integral_J. Positions from curved X(s,u,y). Append listed probes. m_i=q_i/e*proton mass[GeV].",
+    "original_source_checkpoint_sha256": "f72013c9b55f47d1d094be1d9a0bf47eb2d8b08c010e305b1eed24fdcf2d103f"
+  },
+  {
+    "source": "cell-triangle-96x48x8192-box0.012x0.0015-q16",
+    "profile": "triangle",
+    "source_mesh": [
+      96,
+      48,
+      8192
+    ],
+    "source_box_m": [
+      0.012,
+      0.0015
+    ],
+    "gauss_order": 16,
+    "source_particles": 10803200,
+    "source_charge_C": 1.0000000000000001e-11,
+    "compact_npz": "cell-triangle-96x48x8192-box0.012x0.0015-q16.npz",
+    "compact_sha256": "c3fe817ad638241ebab48bd68b930e7f26f167cce2bb9c1ecf7ce9977ba4140c",
+    "full_q_attributes_sha256": "5ede6946e2d93ef27e125df1b99468bfd3281e5be912c823e3169bcd3274c401",
+    "full_q_reconstruction_passed": true,
+    "schema": "For each s, q_i=density_normalization*profile_integral_ds*cross_integral_J. Positions from curved X(s,u,y). Append listed probes. m_i=q_i/e*proton mass[GeV].",
+    "original_source_checkpoint_sha256": "cdbdd9ddb45207dcc3bbfd1ab1e7daecb8f3f29a7c9891bcc6f4abf0aebac21d"
+  },
+  {
+    "source": "cell-uniform-64x32x2048-box0.012x0.0015-q16",
+    "profile": "uniform",
+    "source_mesh": [
+      64,
+      32,
+      2048
+    ],
+    "source_box_m": [
+      0.012,
+      0.0015
+    ],
+    "gauss_order": 16,
+    "source_particles": 1244160,
+    "source_charge_C": 1.0000000000000007e-11,
+    "compact_npz": "cell-uniform-64x32x2048-box0.012x0.0015-q16.npz",
+    "compact_sha256": "0a54b1066335ea0f5791d0dca8a62e2a2b495b845d35432ad1de65ceb2fdcf49",
+    "full_q_attributes_sha256": "eae1bcff68fabc36d76585c73038d56ce77426f8ab30d5a4c957a8954a55e912",
+    "full_q_reconstruction_passed": true,
+    "schema": "For each s, q_i=density_normalization*profile_integral_ds*cross_integral_J. Positions from curved X(s,u,y). Append listed probes. m_i=q_i/e*proton mass[GeV].",
+    "original_source_checkpoint_sha256": "29c653e3039ec9a9f7249d5209284b423ea2e4dd8ac5a690d9d900b57f003b8d"
+  },
+  {
+    "source": "cell-uniform-64x32x8192-box0.012x0.0015-q16",
+    "profile": "uniform",
+    "source_mesh": [
+      64,
+      32,
+      8192
+    ],
+    "source_box_m": [
+      0.012,
+      0.0015
+    ],
+    "gauss_order": 16,
+    "source_particles": 4976640,
+    "source_charge_C": 9.999999999999983e-12,
+    "compact_npz": "cell-uniform-64x32x8192-box0.012x0.0015-q16.npz",
+    "compact_sha256": "f6d818f2ad8743e05cb9f78b0ecbe999d3b26e2ef4812f24a6ec2f1ccf6e9261",
+    "full_q_attributes_sha256": "0b22a7a84d62141504934bea760dad9342783aaf4a6e68ca723ddd08f2ee5c3c",
+    "full_q_reconstruction_passed": true,
+    "schema": "For each s, q_i=density_normalization*profile_integral_ds*cross_integral_J. Positions from curved X(s,u,y). Append listed probes. m_i=q_i/e*proton mass[GeV].",
+    "original_source_checkpoint_sha256": "dd5401a09e0dacb98f3fa9699994438bf3ecab7c0847fa9a299dd1ca48af102b"
+  },
+  {
+    "source": "cell-uniform-96x48x8192-box0.012x0.0015-q16",
+    "profile": "uniform",
+    "source_mesh": [
+      96,
+      48,
+      8192
+    ],
+    "source_box_m": [
+      0.012,
+      0.0015
+    ],
+    "gauss_order": 16,
+    "source_particles": 10803200,
+    "source_charge_C": 9.999999999999983e-12,
+    "compact_npz": "cell-uniform-96x48x8192-box0.012x0.0015-q16.npz",
+    "compact_sha256": "66548b8d70f750cacbd9b852c12c205234963720ff52b824118cdcdffa3c4d01",
+    "full_q_attributes_sha256": "502795bbb6ac3a7f8826411673f63125f7e1522dd3dbe6225792f6cb2feb07d0",
+    "full_q_reconstruction_passed": true,
+    "schema": "For each s, q_i=density_normalization*profile_integral_ds*cross_integral_J. Positions from curved X(s,u,y). Append listed probes. m_i=q_i/e*proton mass[GeV].",
+    "original_source_checkpoint_sha256": "793a81ff4b59035a03fbe242ffcd6fcadaeed32b00d9b48f8a5a99847dffb263"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-04",
+  "pdf": "/Users/adelmann/git/opalx/output/pdf/fft2d5-model-comparison.pdf",
+  "pdf_pages": 10,
+  "pdf_sha256": "9f8cb42eefcba9146490d9d3e57c6670736185203d0d93cb663fc10c1765e901",
+  "source_zip": "/Users/adelmann/git/opalx/output/pdf/fft2d5-model-comparison-source.zip",
+  "zip_sha256": "18d3d89ca063bf03294956588e06b4d53538270ff9580e975c7fe9b354af3724",
+  "zip_files": 153,
+  "latex_warnings": 0,
+  "all_pages_visually_reviewed": true,
+  "portable_replay": "PASS; seven PNG figures and all seven generated result TeX files byte-identical",
+  "portable_latex_build": "PASS; ten pages, no warnings",
+  "archive_crc_and_sha256_manifest": "PASS",
+  "sacr_direct_vector_max_difference_V_m": 2.187611203297024e-11,
+  "sacr_straight_limit_max_difference_V_m": 6.8833827526759706e-15,
+  "native_tracking_cases": 8,
+  "steps_per_case": 10,
+  "tracking_scope": "Original OPALX/PyORBIT slice models; straight and R2 bend, each charged and ZeroSC",
+  "straight_max_RMS_difference_percent": 0.0076252826060274,
+  "bend_max_RMS_difference_percent": 0.0133807795783202,
+  "bend_max_endpoint_growth_difference_percent": 0.5305302809285983,
+  "remaining_limits": [
+    "weak bend centroid responses disagree at 1%",
+    "native bend transport and polyline/Frenet differences",
+    "ten steps do not establish step convergence",
+    "curvature-corrected tracking not tested"
+  ]
+}

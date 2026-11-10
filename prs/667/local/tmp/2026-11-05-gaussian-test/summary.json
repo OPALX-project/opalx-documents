@@ -1,0 +1,22 @@
+{
+  "changed_file": "unit_tests/Distribution/TestGaussian.cpp",
+  "ffa_files_unchanged": {
+    "unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp": true,
+    "unit_tests/Algorithms/TestDeviceExternalField.cpp": true,
+    "unit_tests/Elements/TestOpalBeamlinePlacement.cpp": true
+  },
+  "full_gaussian_suite_repeats_per_thread_count": 5,
+  "one_rank_openmp_threads": [
+    1,
+    4,
+    16
+  ],
+  "two_rank_openmp_threads": [
+    1,
+    4
+  ],
+  "negative_control_rejected": true,
+  "correct_test_restored_recompiled_and_passed": true,
+  "existing_sd_tolerances_unchanged": true,
+  "finite_z_cutoff_unchanged": true
+}

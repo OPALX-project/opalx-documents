@@ -1,0 +1,2040 @@
+diff --git a/unit_tests/AbsBeamline/TestFieldmapElement.cpp b/unit_tests/AbsBeamline/TestFieldmapElement.cpp
+index 381d00408..bd0c2e5fa 100644
+--- a/unit_tests/AbsBeamline/TestFieldmapElement.cpp
++++ b/unit_tests/AbsBeamline/TestFieldmapElement.cpp
+@@ -27,6 +27,8 @@
+ 
+ #include "gtest/gtest.h"
+ 
++#include "../TemporaryDirectory.h"
++
+ extern Inform* gmsg;
+ 
+ #include <filesystem>
+@@ -97,7 +99,6 @@ protected:
+         ippl::initialize(argc, argv);
+         gmsg                = new Inform(nullptr, -1);
+         Options::enableHDF5 = false;
+-        std::filesystem::create_directories("data");
+     }
+ 
+     static void TearDownTestSuite() {
+@@ -107,30 +108,35 @@ protected:
+     }
+ 
+     void SetUp() override {
++        oldInputFn_ = OpalData::getInstance()->getInputFn();
++        directory_.create("opalx-fieldmap-element");
+         const auto* info = ::testing::UnitTest::GetInstance()->current_test_info();
+         testStem_        = std::string("fieldmapelement_") + info->name();
+-        OpalData::getInstance()->storeInputFn(testStem_ + ".opal");
++        OpalData::getInstance()->storeInputFn((directory_.path() / (testStem_ + ".opal")).string());
+         OpalData::getInstance()->setOpenMode(OpalData::OpenMode::WRITE);
+     }
+ 
+     void TearDown() override {
+         for (const auto& file : mapFiles_) {
+             Fieldmap::freeMap(file);
+-            std::filesystem::remove(file);
+         }
+         mapFiles_.clear();
++        OpalData::getInstance()->storeInputFn(oldInputFn_);
++        directory_.reset();
+     }
+ 
+-    /// Register a map file so TearDown releases and removes it.
++    /// Release cached maps before removing this test's directory in TearDown.
+     std::string track(const std::string& path) {
+         mapFiles_.push_back(path);
+         return path;
+     }
+ 
+     std::string mapPath(const std::string& suffix) const {
+-        return (std::filesystem::path("data") / (testStem_ + suffix)).string();
++        return (directory_.path() / (testStem_ + suffix)).string();
+     }
+ 
++    opalx::test::TemporaryDirectory directory_;
++    std::string oldInputFn_;
+     std::string testStem_;
+     std::vector<std::string> mapFiles_;
+ };
+diff --git a/unit_tests/AbsBeamline/TestFieldmapVsAnalytic.cpp b/unit_tests/AbsBeamline/TestFieldmapVsAnalytic.cpp
+index fdd0005cb..7ed1bdd84 100644
+--- a/unit_tests/AbsBeamline/TestFieldmapVsAnalytic.cpp
++++ b/unit_tests/AbsBeamline/TestFieldmapVsAnalytic.cpp
+@@ -30,6 +30,8 @@
+ 
+ #include "gtest/gtest.h"
+ 
++#include "../TemporaryDirectory.h"
++
+ extern Inform* gmsg;
+ 
+ #include <algorithm>
+@@ -94,7 +96,6 @@ protected:
+         char** argv = nullptr;
+         ippl::initialize(argc, argv);
+         gmsg = new Inform(nullptr, -1);
+-        std::filesystem::create_directories("data");
+     }
+ 
+     static void TearDownTestSuite() {
+@@ -104,13 +105,15 @@ protected:
+     }
+ 
+     void SetUp() override {
++        directory_.create("opalx-fieldmap-vs-analytic");
+         const auto* info = ::testing::UnitTest::GetInstance()->current_test_info();
+-        mapFile_         = std::string("data/fmvsanalytic_") + info->name() + ".g4blmap";
++        mapFile_ = (directory_.path() / (std::string("fmvsanalytic_") + info->name() + ".g4blmap"))
++                           .string();
+     }
+ 
+     void TearDown() override {
+         Fieldmap::freeMap(mapFile_);
+-        std::filesystem::remove(mapFile_);
++        directory_.reset();
+     }
+ 
+     /// A multipole with one normal component, wide open transversely.
+@@ -163,6 +166,7 @@ protected:
+         }
+     }
+ 
++    opalx::test::TemporaryDirectory directory_;
+     std::string mapFile_;
+ };
+ 
+diff --git a/unit_tests/AbsBeamline/TestRFCavity.cpp b/unit_tests/AbsBeamline/TestRFCavity.cpp
+index 9ae0148da..3274cfc34 100644
+--- a/unit_tests/AbsBeamline/TestRFCavity.cpp
++++ b/unit_tests/AbsBeamline/TestRFCavity.cpp
+@@ -54,6 +54,8 @@
+  *      scale = 1, frequency = 1, phase = 0
+  *   Individual tests override only what they need.
+  */
++#include "../TemporaryDirectory.h"
++
+ #include <gtest/gtest.h>
+ #include <limits>
+ #include "AbsBeamline/VariableRFCavity.h"
+@@ -501,6 +503,9 @@ protected:
+         ippl::finalize();
+     }
+     void SetUp() override {
++        directory_m.create("opalx-ideal-rf", ippl::Comm->getCommunicator());
++        // Autophaser diagnostics use the cavity name, rather than the input basename.
++        cavity.setName((directory_m.path() / "ideal").string());
+         cavity.setCavityType("IDEAL");
+         cavity.getGeometry().setElementLength(0.2);
+         cavity.setAmplitudem(5.0);
+@@ -509,6 +514,11 @@ protected:
+         cavity.setAperture(ApertureType::RECTANGULAR, {0.1, 0.05});
+         cavity.initialise(nullptr);
+     }
++    void TearDown() override {
++        ippl::Comm->barrier();
++        directory_m.reset();
++    }
++
+     std::shared_ptr<PartBunch_t> makeBunch(size_t count) {
+         beam       = std::make_shared<Beam>();
+         auto bunch = std::make_shared<PartBunch_t>(
+@@ -518,6 +528,7 @@ protected:
+         bunch->getParticleContainer()->createParticles(count);
+         return bunch;
+     }
++    opalx::test::TemporaryDirectory directory_m;
+     RFCavityRep cavity{"ideal"};
+     std::shared_ptr<Beam> beam;
+ };
+diff --git a/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp b/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp
+index 3cbe33226..c1896cab4 100644
+--- a/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp
++++ b/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp
+@@ -23,6 +23,8 @@
+ 
+ #include "gtest/gtest.h"
+ 
++#include "../TemporaryDirectory.h"
++
+ #include <algorithm>
+ #include <array>
+ #include <cmath>
+@@ -54,6 +56,7 @@ public:
+     }
+ 
+     void SetUp() {
++        directory_m.create("opalx-scaling-ffa");
+         sector_m = new ScalingFFAMagnet("test");
+         // characteristic length is R*dphi => 0.6545 m
+         std::shared_ptr<endfieldmodel::Tanh> tanh =
+@@ -75,10 +78,12 @@ public:
+     void TearDown() {
+         delete sector_m;
+         sector_m = nullptr;
++        directory_m.reset();
+     }
+ 
+     ~ScalingFFAMagnetTest() {}
+ 
++    opalx::test::TemporaryDirectory directory_m;
+     ScalingFFAMagnet* sector_m;
+     std::ofstream fout_m;
+     double r0_m           = 24;                                       // m
+@@ -379,7 +384,7 @@ TEST_F(ScalingFFAMagnetTest, RejectsExpansionBeyondDeviceStorage) {
+ }
+ 
+ TEST_F(ScalingFFAMagnetTest, BTwoDTest) {
+-    std::ofstream fout("/tmp/b_twod.out");
++    std::ofstream fout(directory_m.path() / "b_twod.out");
+     bool passtest = true;
+     for (double y = 0.; y < 0.025; y += 0.015) {
+         for (double r = r0_m; r < r0_m + 1; r += 0.2) {
+@@ -392,7 +397,7 @@ TEST_F(ScalingFFAMagnetTest, BTwoDTest) {
+ }
+ 
+ TEST_F(ScalingFFAMagnetTest, ConvergenceYTest) {
+-    std::ofstream fout("/tmp/convergence_y.out");
++    std::ofstream fout(directory_m.path() / "convergence_y.out");
+     bool passtest = true;
+     for (double y = 0.00001; y < 0.02; y *= 2.) {
+         passtest &= printLine(Vector_t<double, 3>({r0_m, y, 2. * psi0_m}), 0., fout, 1e-3);
+@@ -490,7 +495,7 @@ TEST_F(ScalingFFAMagnetTest, ConvergenceOrderHackedTest) {
+ }
+ 
+ TEST_F(ScalingFFAMagnetTest, ConvergenceEndLengthTest) {
+-    std::ofstream fout("/tmp/convergence_endlength.out");
++    std::ofstream fout(directory_m.path() / "convergence_endlength.out");
+     bool passtest = true;
+     for (double endLength = 1.; endLength < 10.1; endLength += 1.) {
+         std::shared_ptr<endfieldmodel::Tanh> tanh =
+diff --git a/unit_tests/AbsBeamline/TestSolenoid.cpp b/unit_tests/AbsBeamline/TestSolenoid.cpp
+index b68e85679..869e40986 100644
+--- a/unit_tests/AbsBeamline/TestSolenoid.cpp
++++ b/unit_tests/AbsBeamline/TestSolenoid.cpp
+@@ -26,6 +26,8 @@
+ 
+ #include "gtest/gtest.h"
+ 
++#include "../TemporaryDirectory.h"
++
+ #include <cmath>
+ #include <filesystem>
+ #include <fstream>
+@@ -41,7 +43,6 @@ protected:
+         ippl::initialize(argc, argv);
+         gmsg                = new Inform(nullptr, -1);
+         Options::enableHDF5 = false;
+-        std::filesystem::create_directories("data");
+     }
+ 
+     static void TearDownTestSuite() {
+@@ -51,18 +52,23 @@ protected:
+     }
+ 
+     void SetUp() override {
++        oldInputFn_                       = OpalData::getInstance()->getInputFn();
+         Options::enableLinearTransferMaps = false;
+-        const auto* info                  = ::testing::UnitTest::GetInstance()->current_test_info();
+-        testStem_                         = std::string("solenoid_") + info->name();
++        directory_.create("opalx-solenoid");
++        const auto* info = ::testing::UnitTest::GetInstance()->current_test_info();
++        // Give diagnostic writers an absolute stem so their files stay in this directory.
++        testStem_ = (directory_.path() / (std::string("solenoid_") + info->name())).string();
+         OpalData::getInstance()->storeInputFn(testStem_ + ".opal");
+         OpalData::getInstance()->setOpenMode(OpalData::OpenMode::WRITE);
+-        cleanupOutputs();
+     }
+ 
+     void TearDown() override {
+         Options::enableLinearTransferMaps = false;
+         Fieldmap::freeMap(fieldmapFile_.string());
+-        cleanupOutputs();
++        dataSink_m.reset();
++        fsCmdBase_m.reset();
++        OpalData::getInstance()->storeInputFn(oldInputFn_);
++        directory_.reset();
+     }
+ 
+     class TestableFieldSolverCmd : public FieldSolverCmd {
+@@ -113,7 +119,7 @@ protected:
+     std::filesystem::path writeXZFieldmap(
+             const std::string& filename, double zBeginCm, double zEndCm, int nz, double rBeginCm,
+             double rEndCm, int nr, double bzValue = 1.0, double brValue = 0.0) {
+-        fieldmapFile_ = std::filesystem::path("data") / filename;
++        fieldmapFile_ = directory_.path() / filename;
+         std::ofstream out(fieldmapFile_);
+         out << "2DMagnetoStatic XZ\n";
+         out << zBeginCm << " " << zEndCm << " " << nz - 1 << "\n";
+@@ -126,21 +132,7 @@ protected:
+         return fieldmapFile_;
+     }
+ 
+-    std::filesystem::path outputPath(const std::string& suffix) const {
+-        return std::filesystem::path("data") / (testStem_ + suffix);
+-    }
+-
+-    void cleanupOutputs() const {
+-        std::filesystem::remove(outputPath("_ElementPositions.txt"));
+-        std::filesystem::remove(outputPath("_ElementPositions.py"));
+-        std::filesystem::remove(outputPath("_ElementPositions.sdds"));
+-        std::filesystem::remove(outputPath("_ElementPositions.vtk"));
+-        std::filesystem::remove(outputPath("_ElementPositions.html"));
+-        std::filesystem::remove(outputPath("_ElementPositions.gpl"));
+-        if (!fieldmapFile_.empty()) {
+-            std::filesystem::remove(fieldmapFile_);
+-        }
+-    }
++    std::filesystem::path outputPath(const std::string& suffix) const { return testStem_ + suffix; }
+ 
+     static std::tuple<double, double, double> parsePositionLine(const std::string& line) {
+         const auto quote = line.rfind('"');
+@@ -161,6 +153,8 @@ protected:
+         return tokens;
+     }
+ 
++    opalx::test::TemporaryDirectory directory_;
++    std::string oldInputFn_;
+     std::string testStem_;
+     std::filesystem::path fieldmapFile_;
+     std::shared_ptr<FieldSolverCmd> fsCmdBase_m;
+diff --git a/unit_tests/Algorithms/TestIndexMap.cpp b/unit_tests/Algorithms/TestIndexMap.cpp
+index 8bcf0a03a..c70d18413 100644
+--- a/unit_tests/Algorithms/TestIndexMap.cpp
++++ b/unit_tests/Algorithms/TestIndexMap.cpp
+@@ -1,3 +1,4 @@
++#include "../TemporaryDirectory.h"
+ #include "gtest/gtest.h"
+ 
+ #include "AbstractObjects/OpalData.h"
+@@ -130,7 +131,6 @@ protected:
+         char** argv = nullptr;
+         ippl::initialize(argc, argv);
+         gmsg = new Inform(nullptr, -1);
+-        std::filesystem::create_directories(OpalData::getInstance()->getAuxiliaryOutputDirectory());
+     }
+ 
+     static void TearDownTestSuite() {
+@@ -140,15 +140,23 @@ protected:
+     }
+ 
+     void SetUp() override {
+-        OpalData::getInstance()->storeInputFn("indexmap_sdds.opal");
++        savedInput_m = OpalData::getInstance()->getInputFn();
++        directory_m.create("opalx-indexmap", ippl::Comm->getCommunicator());
++        OpalData::getInstance()->storeInputFn((directory_m.path() / "indexmap_sdds.opal").string());
+         OpalData::getInstance()->setOpenMode(OpalData::OpenMode::WRITE);
+     }
+ 
+-    void TearDown() override { std::filesystem::remove(sddsPath()); }
++    void TearDown() override {
++        OpalData::getInstance()->storeInputFn(savedInput_m);
++        ippl::Comm->barrier();
++        directory_m.reset();
++    }
++
++    opalx::test::TemporaryDirectory directory_m;
++    std::string savedInput_m;
+ 
+     static std::filesystem::path sddsPath() {
+-        return std::filesystem::path(OpalData::getInstance()->getAuxiliaryOutputDirectory())
+-               / "indexmap_sdds_ElementPositions.sdds";
++        return OpalData::getInstance()->getInputBasename() + "_ElementPositions.sdds";
+     }
+ };
+ 
+diff --git a/unit_tests/Algorithms/TestOrbitThreader.cpp b/unit_tests/Algorithms/TestOrbitThreader.cpp
+index 8fc417071..48ab79f9b 100644
+--- a/unit_tests/Algorithms/TestOrbitThreader.cpp
++++ b/unit_tests/Algorithms/TestOrbitThreader.cpp
+@@ -1,3 +1,4 @@
++#include "../TemporaryDirectory.h"
+ #include "gtest/gtest.h"
+ 
+ #include "AbsBeamline/CyclotronSector.h"
+@@ -229,18 +230,26 @@ protected:
+     }
+ 
+     void SetUp() override {
++        savedInput_m = OpalData::getInstance()->getInputFn();
++        directory_m.create("opalx-orbit-threader", ippl::Comm->getCommunicator());
+         Options::enableLinearTransferMaps = false;
+         resetMapSettings();
+-        OpalData::getInstance()->storeInputFn("TestOrbitThreader.opal");
++        OpalData::getInstance()->storeInputFn(
++                (directory_m.path() / "TestOrbitThreader.opal").string());
+         OpalData::getInstance()->setOpenMode(OpalData::OpenMode::WRITE);
+-        std::filesystem::create_directories(OpalData::getInstance()->getAuxiliaryOutputDirectory());
+     }
+ 
+     void TearDown() override {
+         Options::enableLinearTransferMaps = false;
+         resetMapSettings();
++        OpalData::getInstance()->storeInputFn(savedInput_m);
++        ippl::Comm->barrier();
++        directory_m.reset();
+     }
+ 
++    opalx::test::TemporaryDirectory directory_m;
++    std::string savedInput_m;
++
+     static void resetMapSettings() {
+         Options::linearTransferMapRichardsonLevels = 0;
+         Options::linearTransferMapSteps.fill(1.e-3);
+diff --git a/unit_tests/BasicActions/TestDumpEMFields.cpp b/unit_tests/BasicActions/TestDumpEMFields.cpp
+index cf07d4ba2..77e9fb7ea 100644
+--- a/unit_tests/BasicActions/TestDumpEMFields.cpp
++++ b/unit_tests/BasicActions/TestDumpEMFields.cpp
+@@ -16,6 +16,8 @@
+ // You should have received a copy of the GNU General Public License
+ // along with OPAL. If not, see <https://www.gnu.org/licenses/>.
+ //
++#include "../TemporaryDirectory.h"
++
+ #include <filesystem>
+ #include <fstream>
+ #include <iostream>
+@@ -186,13 +188,13 @@ namespace {
+     }
+ 
+     TEST(TestDumpEMFields, writeFieldsCartTest) {
+-        std::string auxDirectory = OpalData::getInstance()->getAuxiliaryOutputDirectory();
+-        std::filesystem::create_directory(auxDirectory);
+-        gmsg               = new Inform(nullptr, -1);
+-        std::string fname1 = "test5";
+-        std::string fname2 = "test6";
+-        std::string fname3 = "test7";
+-        std::string fname4 = "test8";
++        opalx::test::TemporaryDirectory directory("opalx-dump-fields");
++        const std::string auxDirectory = directory.path().string();
++        gmsg                           = new Inform(nullptr, -1);
++        std::string fname1             = (directory.path() / "test5").string();
++        std::string fname2             = (directory.path() / "test6").string();
++        std::string fname3             = (directory.path() / "test7").string();
++        std::string fname4             = (directory.path() / "test8").string();
+ 
+         clear_files({fname1, fname2, fname3, fname4});
+         DumpEMFields dump1;
+@@ -259,11 +261,11 @@ namespace {
+     }
+ 
+     TEST(TestDumpEMFields, writeFieldsCylTest) {
+-        std::string auxDirectory = OpalData::getInstance()->getAuxiliaryOutputDirectory();
+-        std::filesystem::create_directory(auxDirectory);
+-        gmsg = new Inform(nullptr, -1);
++        opalx::test::TemporaryDirectory directory("opalx-dump-fields");
++        const std::string auxDirectory = directory.path().string();
++        gmsg                           = new Inform(nullptr, -1);
+ 
+-        std::string fnameCyl = "testCyl";
++        std::string fnameCyl = (directory.path() / "testCyl").string();
+ 
+         clear_files({fnameCyl});
+         DumpEMFields dump;
+@@ -322,12 +324,12 @@ namespace {
+     }
+ 
+     TEST(TestDumpEMFields, writeFieldsCylOriginTest) {
+-        std::string auxDirectory = OpalData::getInstance()->getAuxiliaryOutputDirectory();
+-        std::filesystem::create_directory(auxDirectory);
+-        gmsg = new Inform(nullptr, -1);
++        opalx::test::TemporaryDirectory directory("opalx-dump-fields");
++        const std::string auxDirectory = directory.path().string();
++        gmsg                           = new Inform(nullptr, -1);
+ 
+-        std::string fnameCyl1 = "testCyl1";
+-        std::string fnameCyl2 = "testCyl2";
++        std::string fnameCyl1 = (directory.path() / "testCyl1").string();
++        std::string fnameCyl2 = (directory.path() / "testCyl2").string();
+ 
+         clear_files({fnameCyl1, fnameCyl2});
+         DumpEMFields dump1;
+@@ -390,11 +392,11 @@ namespace {
+     }
+ 
+     TEST(TestDumpEMFields, BadGrid) {
+-        std::string auxDirectory = OpalData::getInstance()->getAuxiliaryOutputDirectory();
+-        std::filesystem::create_directory(auxDirectory);
+-        gmsg = new Inform(nullptr, -1);
++        opalx::test::TemporaryDirectory directory("opalx-dump-fields");
++        const std::string auxDirectory = directory.path().string();
++        gmsg                           = new Inform(nullptr, -1);
+ 
+-        std::string fnameCyl = "testCyl";
++        std::string fnameCyl = (directory.path() / "testCyl").string();
+ 
+         clear_files({fnameCyl});
+         DumpEMFields dump;
+@@ -410,10 +412,10 @@ namespace {
+     }
+ 
+     TEST(TestDumpEMFields, CouldNotOpenFile) {
+-        std::string auxDirectory = OpalData::getInstance()->getAuxiliaryOutputDirectory();
+-        std::filesystem::create_directory(auxDirectory);
+-        gmsg                 = new Inform(nullptr, -1);
+-        std::string fnameCyl = ".";  // Opening for write to a directory always fails
++        opalx::test::TemporaryDirectory directory("opalx-dump-fields");
++        const std::string auxDirectory = directory.path().string();
++        gmsg                           = new Inform(nullptr, -1);
++        std::string fnameCyl = directory.path().string();  // Opening a directory for write fails
+         DumpEMFields dump;
+         setAttributesCyl(
+                 &dump, 0.1, 0.1, 3., 90. * Units::deg2rad, 45. * Units::deg2rad, 16, 0.2, 0.3, 2.,
+@@ -426,10 +428,10 @@ namespace {
+     }
+ 
+     TEST(TestDumpEMFields, WriteFailure) {
+-        std::string auxDirectory = OpalData::getInstance()->getAuxiliaryOutputDirectory();
+-        std::filesystem::create_directory(auxDirectory);
+-        gmsg                 = new Inform(nullptr, -1);
+-        std::string fnameCyl = "testCyl";
++        opalx::test::TemporaryDirectory directory("opalx-dump-fields");
++        const std::string auxDirectory = directory.path().string();
++        gmsg                           = new Inform(nullptr, -1);
++        std::string fnameCyl           = (directory.path() / "testCyl").string();
+         DumpEMFields dump;
+         setAttributesCyl(
+                 &dump, 0.1, 0.1, 3., 90. * Units::deg2rad, 45. * Units::deg2rad, 16, 0.2, 0.3, 2.,
+diff --git a/unit_tests/Distribution/TestEmittedFromFile.cpp b/unit_tests/Distribution/TestEmittedFromFile.cpp
+index 26c2e92e4..f47d91054 100644
+--- a/unit_tests/Distribution/TestEmittedFromFile.cpp
++++ b/unit_tests/Distribution/TestEmittedFromFile.cpp
+@@ -1,4 +1,5 @@
+ #include <gtest/gtest.h>
++#include "../TemporaryDirectory.h"
+ 
+ #include <algorithm>
+ #include <array>
+@@ -26,7 +27,7 @@ protected:
+ 
+     void SetUp() override {
+         pc           = makeContainer(false);
+-        tempFilename = "emittedfromfile_test_input.dat";
++        tempFilename = (directory_m.create("opalx-emitted-fromfile") / "input.dat").string();
+     }
+ 
+     /// Container on the test mesh; @p spin turns on the per-particle polarization Pol.
+@@ -52,11 +53,7 @@ protected:
+         return container;
+     }
+ 
+-    void TearDown() override {
+-        if (!tempFilename.empty()) {
+-            std::remove(tempFilename.c_str());
+-        }
+-    }
++    void TearDown() override { directory_m.reset(); }
+ 
+     void allocate(size_t globalCapacity) {
+         const int nranks           = std::max(1, ippl::Comm->size());
+@@ -104,6 +101,7 @@ protected:
+     std::shared_ptr<BunchStateHandler> bunchStateHandler;
+     ippl::Vector<int, 3> nr;
+     bool isAllPeriodic_m = true;
++    opalx::test::TemporaryDirectory directory_m;
+     std::string tempFilename;
+ };
+ 
+diff --git a/unit_tests/Distribution/TestFromFile.cpp b/unit_tests/Distribution/TestFromFile.cpp
+index ea6d3eb2e..48bbf951a 100644
+--- a/unit_tests/Distribution/TestFromFile.cpp
++++ b/unit_tests/Distribution/TestFromFile.cpp
+@@ -4,6 +4,7 @@
+ #include <cstdio>
+ #include <fstream>
+ #include <memory>
++#include "../TemporaryDirectory.h"
+ 
+ #include "Distribution/Distribution.h"
+ #include "Distribution/FromFile.h"
+@@ -41,14 +42,10 @@ protected:
+ 
+         bunchStateHandler = std::make_shared<BunchStateHandler>();
+         pc->setBunchStateHandler(bunchStateHandler);
+-        tempFilename = "fromfile_test_input.dat";
++        tempFilename = (directory_m.create("opalx-fromfile") / "input.dat").string();
+     }
+ 
+-    void TearDown() override {
+-        if (!tempFilename.empty()) {
+-            std::remove(tempFilename.c_str());
+-        }
+-    }
++    void TearDown() override { directory_m.reset(); }
+ 
+     void writeSampleFile() {
+         // Strict format: N, then header, then data (comments/blanks skipped in data section)
+@@ -91,6 +88,7 @@ protected:
+     std::shared_ptr<BunchStateHandler> bunchStateHandler;
+     ippl::Vector<int, 3> nr;
+     bool isAllPeriodic_m = true;
++    opalx::test::TemporaryDirectory directory_m;
+     std::string tempFilename;
+ };
+ 
+diff --git a/unit_tests/Elements/TestRBendSettings.cpp b/unit_tests/Elements/TestRBendSettings.cpp
+index 7457b2c14..3f9d0d149 100644
+--- a/unit_tests/Elements/TestRBendSettings.cpp
++++ b/unit_tests/Elements/TestRBendSettings.cpp
+@@ -16,6 +16,8 @@
+ #include "ValueDefinitions/RealVariable.h"
+ #include "gtest/gtest.h"
+ 
++#include "../TemporaryDirectory.h"
++
+ namespace {
+     using Vec                     = Vector_t<double, 3>;
+     constexpr double electronMass = 510998.95;
+@@ -45,14 +47,14 @@ namespace {
+             gmsg = nullptr;
+             ippl::finalize();
+         }
++        opalx::test::TemporaryDirectory directory;
+         std::string filename;
+         void SetUp() override {
+-            filename = "rbend-settings-"
+-                       + std::string(testing::UnitTest::GetInstance()->current_test_info()->name())
+-                       + ".map";
++            directory.create("opalx-rbend-settings");
++            filename = (directory.path() / "profile.map").string();
+             std::ofstream(filename) << "1DProfile1 1 1 5\n-25 0 15 0\n-15 0 25 0\n0\n2\n0\n2\n";
+         }
+-        void TearDown() override { std::filesystem::remove(filename); }
++        void TearDown() override { directory.reset(); }
+         std::unique_ptr<OpalRBend> element(double theta = angle, double e1 = 0.0) {
+             auto el = std::make_unique<OpalRBend>();
+             for (const auto& [name, value] : std::vector<std::pair<std::string, double>>{
+diff --git a/unit_tests/Fields/TestAstra1DDynamic.cpp b/unit_tests/Fields/TestAstra1DDynamic.cpp
+index 3efffbb12..d7efe9081 100644
+--- a/unit_tests/Fields/TestAstra1DDynamic.cpp
++++ b/unit_tests/Fields/TestAstra1DDynamic.cpp
+@@ -43,6 +43,8 @@
+ 
+ #include <gtest/gtest.h>
+ 
++#include "../TemporaryDirectory.h"
++
+ #include "Fields/Astra1DDynamic.h"
+ #include "Fields/Fieldmap.h"
+ #include "Ippl.h"
+@@ -124,19 +126,17 @@ protected:
+         ippl::finalize();
+     }
+ 
+-    void SetUp() override {
+-        tmpDir_ = std::filesystem::temp_directory_path() / "opalx_astra1d_test";
+-        std::filesystem::create_directories(tmpDir_);
+-    }
++    void SetUp() override { tmpDir_ = temporaryDirectory_.create("opalx-astra1d-dynamic"); }
+ 
+     void TearDown() override {
+         Fieldmap::clearDictionary();
+-        std::filesystem::remove_all(tmpDir_);
++        temporaryDirectory_.reset();
+     }
+ 
+     std::string tmpFile(const std::string& name) const { return (tmpDir_ / name).string(); }
+ 
+     std::filesystem::path tmpDir_;
++    opalx::test::TemporaryDirectory temporaryDirectory_;
+ };
+ 
+ // ===========================================================================
+diff --git a/unit_tests/Fields/TestAstra1DMagnetoStatic.cpp b/unit_tests/Fields/TestAstra1DMagnetoStatic.cpp
+index 8291af6e8..e594d3bdb 100644
+--- a/unit_tests/Fields/TestAstra1DMagnetoStatic.cpp
++++ b/unit_tests/Fields/TestAstra1DMagnetoStatic.cpp
+@@ -38,6 +38,8 @@
+ 
+ #include <gtest/gtest.h>
+ 
++#include "../TemporaryDirectory.h"
++
+ #include "Fields/Astra1DMagnetoStatic.h"
+ #include "Fields/Fieldmap.h"
+ #include "Ippl.h"
+@@ -118,20 +120,17 @@ protected:
+         ippl::finalize();
+     }
+ 
+-    void SetUp() override {
+-        tmpDir_ = std::filesystem::temp_directory_path() / "opalx_astra1dmagnetostatic_test";
+-
+-        std::filesystem::create_directories(tmpDir_);
+-    }
++    void SetUp() override { tmpDir_ = temporaryDirectory_.create("opalx-astra1d-magnetostatic"); }
+ 
+     void TearDown() override {
+         Fieldmap::clearDictionary();
+-        std::filesystem::remove_all(tmpDir_);
++        temporaryDirectory_.reset();
+     }
+ 
+     std::string tmpFile(const std::string& name) const { return (tmpDir_ / name).string(); }
+ 
+     std::filesystem::path tmpDir_;
++    opalx::test::TemporaryDirectory temporaryDirectory_;
+ };
+ 
+ // ===========================================================================
+diff --git a/unit_tests/Fields/TestFM2DDynamic.cpp b/unit_tests/Fields/TestFM2DDynamic.cpp
+index c4bc316db..07c166799 100644
+--- a/unit_tests/Fields/TestFM2DDynamic.cpp
++++ b/unit_tests/Fields/TestFM2DDynamic.cpp
+@@ -48,6 +48,8 @@
+ 
+ #include <gtest/gtest.h>
+ 
++#include "../TemporaryDirectory.h"
++
+ #include "Fields/FM2DDynamic.h"
+ #include "Fields/Fieldmap.h"
+ #include "Ippl.h"
+@@ -160,19 +162,17 @@ protected:
+         ippl::finalize();
+     }
+ 
+-    void SetUp() override {
+-        tmpDir_ = std::filesystem::temp_directory_path() / "opalx_fm2d_test";
+-        std::filesystem::create_directories(tmpDir_);
+-    }
++    void SetUp() override { tmpDir_ = temporaryDirectory_.create("opalx-fm2d-dynamic"); }
+ 
+     void TearDown() override {
+         Fieldmap::clearDictionary();
+-        std::filesystem::remove_all(tmpDir_);
++        temporaryDirectory_.reset();
+     }
+ 
+     std::string tmpFile(const std::string& name) const { return (tmpDir_ / name).string(); }
+ 
+     std::filesystem::path tmpDir_;
++    opalx::test::TemporaryDirectory temporaryDirectory_;
+ };
+ 
+ // ===========================================================================
+diff --git a/unit_tests/Fields/TestFM2DMagnetoStatic.cpp b/unit_tests/Fields/TestFM2DMagnetoStatic.cpp
+index c79e9af24..680bbd0fb 100644
+--- a/unit_tests/Fields/TestFM2DMagnetoStatic.cpp
++++ b/unit_tests/Fields/TestFM2DMagnetoStatic.cpp
+@@ -18,6 +18,8 @@
+ 
+ #include <gtest/gtest.h>
+ 
++#include "../TemporaryDirectory.h"
++
+ #include "Fields/FM2DMagnetoStatic.h"
+ #include "Fields/Fieldmap.h"
+ #include "Ippl.h"
+@@ -130,20 +132,18 @@ protected:
+         ippl::finalize();
+     }
+ 
+-    void SetUp() override {
+-        tmpDir_ = std::filesystem::temp_directory_path() / "opalx_fm2d_test";
+-        std::filesystem::create_directories(tmpDir_);
+-    }
++    void SetUp() override { tmpDir_ = temporaryDirectory_.create("opalx-fm2d-magnetostatic"); }
+ 
+     void TearDown() override {
+         Fieldmap::clearDictionary();
+-        std::filesystem::remove_all(tmpDir_);
++        temporaryDirectory_.reset();
+     }
+ 
+     /// Helper to build a full path inside the temp directory
+     std::string tmpFile(const std::string& name) const { return (tmpDir_ / name).string(); }
+ 
+     std::filesystem::path tmpDir_;
++    opalx::test::TemporaryDirectory temporaryDirectory_;
+ };
+ 
+ // ===========================================================================
+diff --git a/unit_tests/Fields/TestFM3DDynamic.cpp b/unit_tests/Fields/TestFM3DDynamic.cpp
+index a9a0398d7..da7991a2c 100644
+--- a/unit_tests/Fields/TestFM3DDynamic.cpp
++++ b/unit_tests/Fields/TestFM3DDynamic.cpp
+@@ -1,5 +1,7 @@
+ #include <gtest/gtest.h>
+ 
++#include "../TemporaryDirectory.h"
++
+ #include "BeamlineCore/RFCavityRep.h"
+ #include "Fields/FM3DDynamic.h"
+ #include "PartBunch/PartBunch.h"
+@@ -8,7 +10,6 @@
+ #include "Utilities/GeneralOpalException.h"
+ 
+ #include <array>
+-#include <chrono>
+ #include <cmath>
+ #include <filesystem>
+ #include <fstream>
+@@ -47,17 +48,11 @@ protected:
+         ippl::finalize();
+     }
+ 
+-    void SetUp() override {
+-        const auto stamp = std::chrono::steady_clock::now().time_since_epoch().count();
+-        directory        = std::filesystem::temp_directory_path()
+-                    / ("opalx_fm3dynamic_" + std::to_string(stamp) + "_"
+-                       + std::to_string(ippl::Comm->rank()));
+-        std::filesystem::create_directories(directory);
+-    }
++    void SetUp() override { directory = temporaryDirectory_.create("opalx-fm3d-dynamic"); }
+ 
+     void TearDown() override {
+         Fieldmap::clearDictionary();
+-        std::filesystem::remove_all(directory);
++        temporaryDirectory_.reset();
+     }
+ 
+     std::string write(const std::string& name, const std::string& contents) {
+@@ -112,6 +107,7 @@ protected:
+     }
+ 
+     std::filesystem::path directory;
++    opalx::test::TemporaryDirectory temporaryDirectory_;
+ };
+ 
+ TEST_F(FM3DDynamicTest, FactoryMetadataAndUnloadedAccess) {
+diff --git a/unit_tests/Fields/TestG4BL2DMagnetoStatic.cpp b/unit_tests/Fields/TestG4BL2DMagnetoStatic.cpp
+index ee899e854..2c8d57b6d 100644
+--- a/unit_tests/Fields/TestG4BL2DMagnetoStatic.cpp
++++ b/unit_tests/Fields/TestG4BL2DMagnetoStatic.cpp
+@@ -18,6 +18,8 @@
+ 
+ #include <gtest/gtest.h>
+ 
++#include "../TemporaryDirectory.h"
++
+ #include "Fields/Fieldmap.h"
+ #include "Fields/G4BL2DMagnetoStatic.h"
+ #include "Ippl.h"
+@@ -97,19 +99,17 @@ protected:
+         ippl::finalize();
+     }
+ 
+-    void SetUp() override {
+-        tmpDir_ = std::filesystem::temp_directory_path() / "opalx_g4bl2d_test";
+-        std::filesystem::create_directories(tmpDir_);
+-    }
++    void SetUp() override { tmpDir_ = temporaryDirectory_.create("opalx-g4bl2d-magnetostatic"); }
+ 
+     void TearDown() override {
+         Fieldmap::clearDictionary();
+-        std::filesystem::remove_all(tmpDir_);
++        temporaryDirectory_.reset();
+     }
+ 
+     std::string tmpFile(const std::string& name) const { return (tmpDir_ / name).string(); }
+ 
+     std::filesystem::path tmpDir_;
++    opalx::test::TemporaryDirectory temporaryDirectory_;
+ };
+ 
+ // ===========================================================================
+diff --git a/unit_tests/Fields/TestG4BL3DGrid.cpp b/unit_tests/Fields/TestG4BL3DGrid.cpp
+index bbf966b1e..9df76c8ea 100644
+--- a/unit_tests/Fields/TestG4BL3DGrid.cpp
++++ b/unit_tests/Fields/TestG4BL3DGrid.cpp
+@@ -28,6 +28,8 @@
+ 
+ #include "gtest/gtest.h"
+ 
++#include "../TemporaryDirectory.h"
++
+ #include <algorithm>
+ #include <filesystem>
+ #include <fstream>
+@@ -144,22 +146,23 @@ protected:
+         int argc    = 0;
+         char** argv = nullptr;
+         ippl::initialize(argc, argv);
+-        std::filesystem::create_directories("data");
+     }
+ 
+     static void TearDownTestSuite() { ippl::finalize(); }
+ 
+     void SetUp() override {
+         const auto* info = ::testing::UnitTest::GetInstance()->current_test_info();
+-        stem_            = std::string("data/g4bl3d_") + info->name();
++        stem_            = (temporaryDirectory_.create("opalx-g4bl3d-grid")
++                 / (std::string("g4bl3d_") + info->name()))
++                        .string();
+     }
+ 
+     void TearDown() override {
+         for (const auto& file : files_) {
+             Fieldmap::freeMap(file);
+-            std::filesystem::remove(file);
+         }
+         files_.clear();
++        temporaryDirectory_.reset();
+     }
+ 
+     std::string path(const std::string& suffix = ".g4blmap") {
+@@ -176,6 +179,7 @@ protected:
+ 
+     std::string stem_;
+     std::vector<std::string> files_;
++    opalx::test::TemporaryDirectory temporaryDirectory_;
+ };
+ 
+ TEST_F(G4BL3DGridTest, DetectedAsAGridMapAndReportsItsBox) {
+diff --git a/unit_tests/PartBunch/TestMultiContainerPartBunch.cpp b/unit_tests/PartBunch/TestMultiContainerPartBunch.cpp
+index b2e593323..cb7214563 100644
+--- a/unit_tests/PartBunch/TestMultiContainerPartBunch.cpp
++++ b/unit_tests/PartBunch/TestMultiContainerPartBunch.cpp
+@@ -11,7 +11,8 @@
+ 
+ #include <gtest/gtest.h>
+ 
+-#include <cstdio>
++#include "../TemporaryDirectory.h"
++
+ #include <memory>
+ #include <random>
+ #include <stdexcept>
+@@ -43,7 +44,6 @@ namespace {
+             char** argv = nullptr;
+             ippl::initialize(argc, argv);
+ 
+-            OpalData::getInstance()->storeInputFn("unit_test.opal");
+             gmsg                = new Inform(nullptr, -1);
+             Options::enableHDF5 = false;
+         }
+@@ -55,6 +55,11 @@ namespace {
+         }
+ 
+         void SetUp() override {
++            auto* opal           = OpalData::getInstance();
++            savedInput_m         = opal->getInputFn();
++            const auto directory = outputDirectory_m.create(
++                    "opalx-multi-container", ippl::Comm->getCommunicator());
++            opal->storeInputFn((directory / "unit_test.opal").string());
+             storageConfig.periodicParticleBoundary = true;
+ 
+             dataSink = std::make_shared<DataSink>();
+@@ -83,6 +88,11 @@ namespace {
+             bunch.reset();
+             dataSink.reset();
+             beam.reset();
++            // Close every writer before deleting only this fixture's diagnostic files.
++            ippl::Comm->barrier();
++            OpalData::getInstance()->storeInputFn(savedInput_m);
++            outputDirectory_m.reset();
++            ippl::Comm->barrier();
+         }
+ 
+         void createParticlesInContainer(
+@@ -143,6 +153,8 @@ namespace {
+             return fd;
+         }
+ 
++        opalx::test::TemporaryDirectory outputDirectory_m;
++        std::string savedInput_m;
+         opalx::spacecharge::CartesianDomainConfig3D storageConfig;
+         std::shared_ptr<DataSink> dataSink;
+         std::shared_ptr<Beam> beam;
+@@ -296,7 +308,6 @@ namespace {
+ 
+     TEST_F(MultiContainerPartBunchTest, DataSink_MultiContainerInit_DoesNotThrow) {
+         EXPECT_NO_THROW(DataSink(std::vector<H5PartWrapper*>{}, false, 2));
+-        std::remove((OpalData::getInstance()->getInputBasename() + ".lbal").c_str());
+     }
+ 
+     TEST_F(MultiContainerPartBunchTest, DataSink_dumpSDDS_ThrowsWhenFdextTooSmall) {
+@@ -309,10 +320,6 @@ namespace {
+ 
+         const double azimuth = 0.0;
+         EXPECT_THROW(ds.dumpSDDS(*bunch, fdTooSmall, 1, azimuth), OpalException);
+-
+-        std::remove((DataSink::diagnosticStemForContainer("unit_test", 2, 0) + ".stat").c_str());
+-        std::remove((DataSink::diagnosticStemForContainer("unit_test", 2, 1) + ".stat").c_str());
+-        std::remove((OpalData::getInstance()->getInputBasename() + ".lbal").c_str());
+     }
+ 
+     TEST_F(MultiContainerPartBunchTest, DataSink_dumpSDDS_NoThrowWithMatchingFdextAndHdf5Off) {
+@@ -326,10 +333,6 @@ namespace {
+ 
+         const double azimuth = 0.0;
+         EXPECT_NO_THROW(ds.dumpSDDS(*bunch, fd, 1, azimuth));
+-
+-        std::remove((DataSink::diagnosticStemForContainer("unit_test", 2, 0) + ".stat").c_str());
+-        std::remove((DataSink::diagnosticStemForContainer("unit_test", 2, 1) + ".stat").c_str());
+-        std::remove((OpalData::getInstance()->getInputBasename() + ".lbal").c_str());
+     }
+ 
+     // When HDF5 is disabled, dumpH5 returns before validating fdext size.
+@@ -343,10 +346,6 @@ namespace {
+         fdTooSmall.push_back(zeroFdPair());
+ 
+         EXPECT_NO_THROW(ds.dumpH5(*bunch, fdTooSmall));
+-
+-        std::remove((DataSink::diagnosticStemForContainer("unit_test", 2, 0) + ".stat").c_str());
+-        std::remove((DataSink::diagnosticStemForContainer("unit_test", 2, 1) + ".stat").c_str());
+-        std::remove((OpalData::getInstance()->getInputBasename() + ".lbal").c_str());
+     }
+ 
+     TEST_F(MultiContainerPartBunchTest, DataSink_dumpH5_ThrowsWhenFdextTooSmallAndHdf5On) {
+@@ -355,10 +354,8 @@ namespace {
+         const bool savedH5  = Options::enableHDF5;
+         Options::enableHDF5 = true;
+ 
+-        static int h5FileCounter = 0;
+-        const int tag            = ++h5FileCounter;
+-        const std::string f0     = std::string("test_mc_h5_c0_") + std::to_string(tag) + ".h5";
+-        const std::string f1     = std::string("test_mc_h5_c1_") + std::to_string(tag) + ".h5";
++        const std::string f0 = (outputDirectory_m.path() / "test_mc_h5_c0.h5").string();
++        const std::string f1 = (outputDirectory_m.path() / "test_mc_h5_c1.h5").string();
+ 
+         std::vector<H5PartWrapper*> wrappers;
+         wrappers.push_back(new H5PartWrapperForPT(f0, H5_O_WRONLY));
+@@ -375,12 +372,6 @@ namespace {
+             delete w;
+         }
+ 
+-        std::remove(f0.c_str());
+-        std::remove(f1.c_str());
+-        std::remove((DataSink::diagnosticStemForContainer("unit_test", 2, 0) + ".stat").c_str());
+-        std::remove((DataSink::diagnosticStemForContainer("unit_test", 2, 1) + ".stat").c_str());
+-        std::remove((OpalData::getInstance()->getInputBasename() + ".lbal").c_str());
+-
+         Options::enableHDF5 = savedH5;
+     }
+ 
+@@ -395,11 +386,12 @@ namespace {
+             ~RestoreH5Option() { Options::enableHDF5 = value; }
+         } restoreH5{savedH5};
+ 
+-        const std::string base = "test_diagnostic_checkpoint_rewind";
+-        const std::string f0   = base + "_c0.h5";
+-        const std::string f1   = base + "_c1.h5";
+-        auto w0                = std::make_unique<H5PartWrapperForPT>(f0, H5_O_WRONLY);
+-        auto w1                = std::make_unique<H5PartWrapperForPT>(f1, H5_O_WRONLY);
++        const std::string base =
++                (outputDirectory_m.path() / "test_diagnostic_checkpoint_rewind").string();
++        const std::string f0 = base + "_c0.h5";
++        const std::string f1 = base + "_c1.h5";
++        auto w0              = std::make_unique<H5PartWrapperForPT>(f0, H5_O_WRONLY);
++        auto w1              = std::make_unique<H5PartWrapperForPT>(f1, H5_O_WRONLY);
+         std::vector<H5PartWrapper*> wrappers{w0.get(), w1.get()};
+ 
+         {
+@@ -438,14 +430,6 @@ namespace {
+         ASSERT_EQ(H5ReadStepAttribFloat64(file, "TIME", &time), H5_SUCCESS);
+         EXPECT_DOUBLE_EQ(time, 2.0e-12);
+         ASSERT_EQ(H5CloseFile(file), H5_SUCCESS);
+-
+-        ippl::Comm->barrier();
+-        if (ippl::Comm->rank() == 0) {
+-            std::remove(f0.c_str());
+-            std::remove(f1.c_str());
+-            std::remove((base + ".lbal").c_str());
+-        }
+-        ippl::Comm->barrier();
+     }
+ 
+ }  // namespace
+diff --git a/unit_tests/Physics/TestMuonDecaySpectrum.cpp b/unit_tests/Physics/TestMuonDecaySpectrum.cpp
+index 439404bc3..af5c1e6ff 100644
+--- a/unit_tests/Physics/TestMuonDecaySpectrum.cpp
++++ b/unit_tests/Physics/TestMuonDecaySpectrum.cpp
+@@ -40,8 +40,7 @@
+  *    @f$A@f$ flips sign relative to @f$\mu^-@f$ — the V-A signature.
+  *
+  * Writes muon_angular_spectrum_mu_minus.csv and muon_angular_spectrum_mu_plus.csv
+- * into the test working directory; those CSVs are consumed by
+- * tools/spectrum_plots/plot_spectrum.py (use --overlay to compare the two).
++ * into owned temporary directories, removed at the end of each test case.
+  */
+ 
+ #include <gtest/gtest.h>
+@@ -55,6 +54,7 @@
+ #include <string>
+ #include <vector>
+ 
++#include "../TemporaryDirectory.h"
+ #include "Ippl.h"
+ #include "PartBunch/ParticleContainer.hpp"
+ #include "Physics/MuonDecay.h"
+@@ -225,9 +225,11 @@ namespace {
+             EXPECT_NEAR(meanCos, meanRef, 0.01);
+             EXPECT_NEAR(area, 1.0, 0.01);
+ 
++            opalx::test::TemporaryDirectory directory("opalx-muon-spectrum");
++            const auto outputPath = (directory.path() / csvPath).string();
+             opalx::test::writeSpectrumCsv(
+-                    csvPath, hist, analyticPdf, "cos(theta) w.r.t. muon spin");
+-            std::cout << "[MuonAngularSpectrum] CSV written: " << csvPath << '\n';
++                    outputPath, hist, analyticPdf, "cos(theta) w.r.t. muon spin");
++            std::cout << "[MuonAngularSpectrum] CSV written: " << outputPath << '\n';
+         }
+ 
+     private:
+diff --git a/unit_tests/Physics/TestPionDecaySpectrum.cpp b/unit_tests/Physics/TestPionDecaySpectrum.cpp
+index 9acc73fe4..3c250f1b6 100644
+--- a/unit_tests/Physics/TestPionDecaySpectrum.cpp
++++ b/unit_tests/Physics/TestPionDecaySpectrum.cpp
+@@ -34,7 +34,7 @@
+  *    muon energy spectrum is uniform on @f$[E_-, E_+]@f$ from the rest-frame
+  *    isotropy plus the longitudinal Lorentz boost.
+  *
+- * CSVs (consumed by tools/spectrum_plots/plot_spectrum.py):
++ * Diagnostic CSVs are written in owned temporary directories and removed after use:
+  *   - pion_rest_costheta.csv
+  *   - pion_boosted_energy_box.csv
+  */
+@@ -49,6 +49,7 @@
+ #include <memory>
+ #include <vector>
+ 
++#include "../TemporaryDirectory.h"
+ #include "Ippl.h"
+ #include "PartBunch/ParticleContainer.hpp"
+ #include "Physics/ParticleProperties.h"
+@@ -178,7 +179,8 @@ namespace {
+         EXPECT_NEAR(mean, 0.0, 0.02);
+         EXPECT_NEAR(area, 1.0, 0.01);
+ 
+-        const std::string csvPath = "pion_rest_costheta.csv";
++        opalx::test::TemporaryDirectory directory("opalx-pion-spectrum");
++        const std::string csvPath = (directory.path() / "pion_rest_costheta.csv").string();
+         opalx::test::writeSpectrumCsv(csvPath, hist, uniform, "cos(theta) (rest frame)");
+         std::cout << "[PionDecayRestFrame] CSV written: " << csvPath << '\n';
+     }
+@@ -247,7 +249,8 @@ namespace {
+         EXPECT_NEAR(mean, meanRef, 0.005 * (ePlus - eMinus));
+         EXPECT_NEAR(area, 1.0, 0.01);
+ 
+-        const std::string csvPath = "pion_boosted_energy_box.csv";
++        opalx::test::TemporaryDirectory directory("opalx-pion-spectrum");
++        const std::string csvPath = (directory.path() / "pion_boosted_energy_box.csv").string();
+         opalx::test::writeSpectrumCsv(csvPath, hist, analyticPdf, "E_mu^lab [GeV]");
+         std::cout << "[PionDecayBoosted] CSV written: " << csvPath << '\n';
+     }
+diff --git a/unit_tests/SpaceCharge/TestCartesianDomainLoadBalancing.cpp b/unit_tests/SpaceCharge/TestCartesianDomainLoadBalancing.cpp
+index ac0473389..a32c305f4 100644
+--- a/unit_tests/SpaceCharge/TestCartesianDomainLoadBalancing.cpp
++++ b/unit_tests/SpaceCharge/TestCartesianDomainLoadBalancing.cpp
+@@ -32,7 +32,6 @@
+ #include "Utility/Inform.h"
+ 
+ #include <array>
+-#include <cstdio>
+ #include <functional>
+ #include <memory>
+ #include <vector>
+@@ -67,8 +66,6 @@ namespace opalx::spacecharge {
+             static void TearDownTestSuite() {
+                 delete gmsg;
+                 gmsg = nullptr;
+-                std::remove("cartesian_domain_load_balancing.stat");
+-                std::remove("cartesian_domain_load_balancing.lbal");
+                 ippl::finalize();
+             }
+ 
+diff --git a/unit_tests/SpaceCharge/TestCartesianDomainUpdaterORB.cpp b/unit_tests/SpaceCharge/TestCartesianDomainUpdaterORB.cpp
+index ebd2eb15e..67b1ba956 100644
+--- a/unit_tests/SpaceCharge/TestCartesianDomainUpdaterORB.cpp
++++ b/unit_tests/SpaceCharge/TestCartesianDomainUpdaterORB.cpp
+@@ -13,7 +13,6 @@
+ #include "Utility/Inform.h"
+ 
+ #include <array>
+-#include <cstdio>
+ #include <memory>
+ #include <vector>
+ 
+@@ -45,8 +44,6 @@ namespace opalx::spacecharge {
+             static void TearDownTestSuite() {
+                 delete gmsg;
+                 gmsg = nullptr;
+-                std::remove("cartesian_domain_updater_orb.stat");
+-                std::remove("cartesian_domain_updater_orb.lbal");
+                 ippl::finalize();
+             }
+ 
+diff --git a/unit_tests/SpaceCharge/TestCartesianPIC3DAlgorithms.cpp b/unit_tests/SpaceCharge/TestCartesianPIC3DAlgorithms.cpp
+index 95e306d9c..3673ea2ea 100644
+--- a/unit_tests/SpaceCharge/TestCartesianPIC3DAlgorithms.cpp
++++ b/unit_tests/SpaceCharge/TestCartesianPIC3DAlgorithms.cpp
+@@ -29,6 +29,8 @@
+ 
+ #include <gtest/gtest.h>
+ 
++#include "../TemporaryDirectory.h"
++
+ #include "AbstractObjects/OpalData.h"
+ #include "Algorithms/Quaternion.hpp"
+ #include "PartBunch/BunchStateHandler.h"
+@@ -39,9 +41,9 @@
+ #include <algorithm>
+ #include <array>
+ #include <cmath>
+-#include <cstdio>
+ #include <limits>
+ #include <memory>
++#include <string>
+ #include <utility>
+ #include <vector>
+ 
+@@ -57,7 +59,6 @@ namespace opalx::spacecharge {
+                 int argc    = 0;
+                 char** argv = nullptr;
+                 ippl::initialize(argc, argv);
+-                OpalData::getInstance()->storeInputFn("cartesian_pic3d_algorithms.opal");
+                 gmsg                = new Inform(nullptr, -1);
+                 Options::enableHDF5 = false;
+             }
+@@ -65,11 +66,28 @@ namespace opalx::spacecharge {
+             static void TearDownTestSuite() {
+                 delete gmsg;
+                 gmsg = nullptr;
+-                std::remove("cartesian_pic3d_algorithms.stat");
+-                std::remove("cartesian_pic3d_algorithms.lbal");
+                 ippl::finalize();
+             }
+ 
++            void SetUp() override {
++                auto* opal           = OpalData::getInstance();
++                savedInput_m         = opal->getInputFn();
++                const auto directory = outputDirectory_m.create(
++                        "opalx-cartesian_pic3d_algorithms", ippl::Comm->getCommunicator());
++                opal->storeInputFn((directory / "cartesian_pic3d_algorithms.opal").string());
++            }
++
++            void TearDown() override {
++                // Diagnostic writers created in the test body have closed before cleanup.
++                ippl::Comm->barrier();
++                OpalData::getInstance()->storeInputFn(savedInput_m);
++                outputDirectory_m.reset();
++                ippl::Comm->barrier();
++            }
++
++            opalx::test::TemporaryDirectory outputDirectory_m;
++            std::string savedInput_m;
++
+             struct Run {
+                 CartesianDomain<double, 3> domain;
+                 std::shared_ptr<BunchStateHandler> state = std::make_shared<BunchStateHandler>();
+diff --git a/unit_tests/SpaceCharge/TestCartesianPIC3DComponents.cpp b/unit_tests/SpaceCharge/TestCartesianPIC3DComponents.cpp
+index ec0a88c5a..79567e082 100644
+--- a/unit_tests/SpaceCharge/TestCartesianPIC3DComponents.cpp
++++ b/unit_tests/SpaceCharge/TestCartesianPIC3DComponents.cpp
+@@ -19,6 +19,8 @@
+ 
+ #include <gtest/gtest.h>
+ 
++#include "../TemporaryDirectory.h"
++
+ #include "AbstractObjects/OpalData.h"
+ #include "Algorithms/Quaternion.hpp"
+ #include "PartBunch/BunchStateHandler.h"
+@@ -37,8 +39,8 @@
+ #include <algorithm>
+ #include <array>
+ #include <cmath>
+-#include <cstdio>
+ #include <memory>
++#include <string>
+ #include <vector>
+ 
+ namespace opalx::spacecharge {
+@@ -50,7 +52,6 @@ namespace opalx::spacecharge {
+                 int argc    = 0;
+                 char** argv = nullptr;
+                 ippl::initialize(argc, argv);
+-                OpalData::getInstance()->storeInputFn("cartesian_pic3d_components.opal");
+                 gmsg                = new Inform(nullptr, -1);
+                 Options::enableHDF5 = false;
+             }
+@@ -58,11 +59,28 @@ namespace opalx::spacecharge {
+             static void TearDownTestSuite() {
+                 delete gmsg;
+                 gmsg = nullptr;
+-                std::remove("cartesian_pic3d_components.stat");
+-                std::remove("cartesian_pic3d_components.lbal");
+                 ippl::finalize();
+             }
+ 
++            void SetUp() override {
++                auto* opal           = OpalData::getInstance();
++                savedInput_m         = opal->getInputFn();
++                const auto directory = outputDirectory_m.create(
++                        "opalx-cartesian_pic3d_components", ippl::Comm->getCommunicator());
++                opal->storeInputFn((directory / "cartesian_pic3d_components.opal").string());
++            }
++
++            void TearDown() override {
++                // Diagnostic writers created in the test body have closed before cleanup.
++                ippl::Comm->barrier();
++                OpalData::getInstance()->storeInputFn(savedInput_m);
++                outputDirectory_m.reset();
++                ippl::Comm->barrier();
++            }
++
++            opalx::test::TemporaryDirectory outputDirectory_m;
++            std::string savedInput_m;
++
+             [[nodiscard]] CartesianDomainConfig3D storage(bool periodic = false) const {
+                 CartesianDomainConfig3D result;
+                 result.meshSize                 = {8, 8, 8};
+diff --git a/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp b/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
+index 897453265..fa58b2f0e 100644
+--- a/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
++++ b/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
+@@ -1,5 +1,7 @@
+ #include <gtest/gtest.h>
+ 
++#include "../TemporaryDirectory.h"
++
+ #include "Algorithms/CoordinateSystemTrafo.h"
+ #include "Algorithms/Quaternion.hpp"
+ #include "PartBunch/BunchStateHandler.h"
+@@ -29,12 +31,16 @@ namespace opalx::spacecharge {
+             static void TearDownTestSuite() { ippl::finalize(); }
+ 
+             void SetUp() override {
+-                pathFile_m = std::filesystem::current_path() / "fft2d5-design-path.dat";
+-                std::ofstream path(pathFile_m);
+-                path << "s rx ry rz px py pz ex ey ez bx by bz ke t\n";
+-                path << "0 0 0 0 0 0 1 0 0 0 0 0 0 0 0\n";
+-                path << "1 0 0 1 0 0 1 0 0 0 0 0 0 0 0\n";
+-                path.close();
++                pathFile_m = outputDirectory_m.create(
++                                     "opalx-fft2d5-algorithm", ippl::Comm->getCommunicator())
++                             / "fft2d5-design-path.dat";
++                if (ippl::Comm->rank() == 0) {
++                    std::ofstream path(pathFile_m);
++                    path << "s rx ry rz px py pz ex ey ez bx by bz ke t\n";
++                    path << "0 0 0 0 0 0 1 0 0 0 0 0 0 0 0\n";
++                    path << "1 0 0 1 0 0 1 0 0 0 0 0 0 0 0\n";
++                }
++                ippl::Comm->barrier();
+ 
+                 ippl::NDIndex<3> domain;
+                 for (unsigned dimension = 0; dimension < 3; ++dimension) {
+@@ -53,7 +59,9 @@ namespace opalx::spacecharge {
+                 particles_m.reset();
+                 layout_m.reset();
+                 mesh_m.reset();
+-                std::filesystem::remove(pathFile_m);
++                ippl::Comm->barrier();
++                outputDirectory_m.reset();
++                ippl::Comm->barrier();
+             }
+ 
+             FFT2D5Config config(FFT2D5LongitudinalFieldMode mode) const {
+@@ -67,6 +75,7 @@ namespace opalx::spacecharge {
+                 return values;
+             }
+ 
++            opalx::test::TemporaryDirectory outputDirectory_m;
+             std::filesystem::path pathFile_m;
+             std::unique_ptr<Mesh_t<3>> mesh_m;
+             std::unique_ptr<FieldLayout_t<3>> layout_m;
+diff --git a/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp b/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp
+index 1ee63cebb..5840f42b8 100644
+--- a/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp
++++ b/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp
+@@ -15,6 +15,7 @@
+ //
+ 
+ #include <gtest/gtest.h>
++
+ #include <algorithm>
+ #include <cmath>
+ #include <csignal>
+@@ -22,6 +23,7 @@
+ #include <memory>
+ #include <random>
+ #include <string>
++#include "../TemporaryDirectory.h"
+ #include "AbstractObjects/OpalData.h"
+ #include "Attributes/Attributes.h"
+ #include "Ippl.h"
+@@ -262,9 +264,6 @@ namespace {
+             char** argv = nullptr;
+             ippl::initialize(argc, argv);
+ 
+-            // DataSink requires a basename to create *.stat / *.lbal writers.
+-            OpalData::getInstance()->storeInputFn("unit_test.opal");
+-
+             // Many OPAL writers assume `gmsg` is initialized (see SDDSWriter/StatWriter).
+             // Unit tests normally don't set this up via Main().
+             gmsg = new Inform(nullptr, -1);
+@@ -286,10 +285,15 @@ namespace {
+         static constexpr size_t kDefaultNParticles = 64;
+ 
+         void SetUp() override {
+-            // Remove any reference path file
+-            if (std::filesystem::exists("data/unit_test_DesignPath.dat")) {
+-                std::filesystem::remove("data/unit_test_DesignPath.dat");
+-            }
++            auto* opal           = OpalData::getInstance();
++            savedInput_m         = opal->getInputFn();
++            const auto directory = outputDirectory_m.create(
++                    "opalx-fft2d5-numerics", ippl::Comm->getCommunicator());
++            opal->storeInputFn((directory / "unit_test.opal").string());
++            // The default resolver uses the input basename; an absolute stem keeps both
++            // default-path and explicitly selected reference files inside this test's directory.
++            referencePath_m = directory / "unit_test_DesignPath.dat";
++            specifiedPath_m = directory / "Specified_DesignPath.dat";
+             // Keep mesh small so scatter/solve/gather are quick.
+             fsCmd_m = std::make_shared<TestableFieldSolverCmd>();
+             fsCmd_m->setType("NONE");
+@@ -323,11 +327,11 @@ namespace {
+             bunch_m.reset();
+             dataSink_m.reset();
+             fsCmd_m.reset();
+-            pc_m.reset();
+-            // Remove reference path file
+-            if (std::filesystem::exists("data/unit_test_DesignPath.dat")) {
+-                std::filesystem::remove("data/unit_test_DesignPath.dat");
+-            }
++            beam_m.reset();
++            ippl::Comm->barrier();
++            OpalData::getInstance()->storeInputFn(savedInput_m);
++            outputDirectory_m.reset();
++            ippl::Comm->barrier();
+         }
+ 
+         void createParticles(
+@@ -668,6 +672,10 @@ namespace {
+             }
+         }
+ 
++        opalx::test::TemporaryDirectory outputDirectory_m;
++        std::filesystem::path referencePath_m;
++        std::filesystem::path specifiedPath_m;
++        std::string savedInput_m;
+         std::array<std::uint8_t, 1> activity_m{1};
+         std::unique_ptr<FFT2D5Algorithm> solver_m;
+         std::shared_ptr<TestableFieldSolverCmd> fsCmd_m;
+@@ -721,16 +729,13 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LoadReferencePath_ReadFail) {
+-        makeReferencePathFile(
+-                "data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 1}, {1, 0, 2}, {0, 0, 3}},
+-                true);
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 1}, {1, 0, 2}, {0, 0, 3}}, true);
+         fsCmd_m->setType("FFT2D5");
+         EXPECT_ANY_THROW(rebuildBunch());
+     }
+ 
+     TEST_F(TestSolve2d5, LoadReferencePath_Success) {
+-        makeReferencePathFile(
+-                "data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 1}, {1, 0, 2}, {0, 0, 3}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 1}, {1, 0, 2}, {0, 0, 3}});
+         fsCmd_m->setType("FFT2D5");
+         ASSERT_NO_THROW(rebuildBunch());
+         auto* solver     = solver_m.get();
+@@ -752,10 +757,9 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LoadReferencePath_SpecifiedFile) {
+-        makeReferencePathFile(
+-                "Specified_DesignPath.dat", {{0, 0, 0}, {0, 0, 1}, {1, 0, 2}, {0, 0, 3}});
++        makeReferencePathFile(specifiedPath_m, {{0, 0, 0}, {0, 0, 1}, {1, 0, 2}, {0, 0, 3}});
+         fsCmd_m->setType("FFT2D5");
+-        fsCmd_m->setRefPathFileName("Specified_DesignPath.dat");
++        fsCmd_m->setRefPathFileName(specifiedPath_m.string());
+         ASSERT_NO_THROW(rebuildBunch());
+         auto* solver     = solver_m.get();
+         auto hostRefPath = Kokkos::create_mirror_view(solver->getReferencePath());
+@@ -776,8 +780,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, SliceSolverSetup) {
+-        makeReferencePathFile(
+-                "data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 1}, {1, 0, 2}, {0, 0, 3}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 1}, {1, 0, 2}, {0, 0, 3}});
+         fsCmd_m->setType("FFT2D5");
+         ASSERT_NO_THROW(rebuildBunch());
+         const auto* solver = solver_m.get();
+@@ -795,8 +798,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, ToFrenetSerret_NoParticles) {
+-        makeReferencePathFile(
+-                "data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 1}, {1, 0, 2}, {0, 0, 3}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 1}, {1, 0, 2}, {0, 0, 3}});
+         fsCmd_m->setType("FFT2D5");
+         ASSERT_NO_THROW(rebuildBunch());
+         auto* solver = solver_m.get();
+@@ -804,14 +806,14 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, ToFrenetSerret_ShortReferencePath) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setClosedRing(false);
+         EXPECT_THROW(rebuildBunch(), OpalException);
+     }
+ 
+     TEST_F(TestSolve2d5, ToFrenetSerret_TrivialReferencePath) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 1}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 1}});
+         fsCmd_m->setType("FFT2D5");
+         rebuildBunch();
+         auto* solver = solver_m.get();
+@@ -827,7 +829,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, ToFrenetSerret_Simple) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 1}, {1, 0, 2}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 1}, {1, 0, 2}});
+         fsCmd_m->setType("FFT2D5");
+         rebuildBunch();
+         auto* solver = solver_m.get();
+@@ -841,8 +843,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, ToFrenetSerret_AtRefCorner) {
+-        makeReferencePathFile(
+-                "data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 1}, {1, 0, 2}, {0, 0, 3}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 1}, {1, 0, 2}, {0, 0, 3}});
+         fsCmd_m->setType("FFT2D5");
+         rebuildBunch();
+         auto* solver = solver_m.get();
+@@ -856,8 +857,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, ToFrenetSerret_DegenerateRefPath) {
+-        makeReferencePathFile(
+-                "data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 0}, {0, 0, 1}, {1, 0, 2}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 0}, {0, 0, 1}, {1, 0, 2}});
+         fsCmd_m->setType("FFT2D5");
+         rebuildBunch();
+         auto* solver = solver_m.get();
+@@ -871,7 +871,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, BoostToBeamFrame_Simple) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 3}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 3}});
+         fsCmd_m->setType("FFT2D5");
+         rebuildBunch();
+         auto* solver = solver_m.get();
+@@ -884,7 +884,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, BoostToBeamFrame_SimpleInvalid) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 3}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 3}});
+         fsCmd_m->setType("FFT2D5");
+         rebuildBunch();
+         auto* solver = solver_m.get();
+@@ -900,7 +900,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, ScatterToGrid_SimpleCharge) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -925,7 +925,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, ScatterToGrid_ClosedRingChargeLo) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -951,7 +951,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, ScatterToGrid_ClosedRingChargeHi) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -977,7 +977,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, ScatterToGrid_SimpleChargeDensity) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1002,7 +1002,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, ScatterToGrid_ClosedRingChargeDensityLo) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1028,7 +1028,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, ScatterToGrid_ClosedRingChargeDensityHi) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1054,7 +1054,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, TotalDensity_Simple) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1071,7 +1071,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LineDensity_Simple) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1088,7 +1088,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LineDensityGradient_Simple) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1106,7 +1106,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LineDensity_RingNotClosed) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1124,7 +1124,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LineDensity_RingClosed) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1142,7 +1142,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, SolvePoissons_Simple) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1171,7 +1171,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, ToFrenetSerretGather_Simple) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 1}, {1, 0, 2}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 1}, {1, 0, 2}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1192,7 +1192,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, GatherEField_OneParticle) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1213,7 +1213,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, GatherEField_TwoParticles) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1242,7 +1242,7 @@ namespace {
+     // Fixed laboratory charge and geometry must give the same transverse E at
+     // every beam speed. The self magnetic force must cancel beta^2 of E.
+     TEST_F(TestSolve2d5, TransverseLabDensityAndMagneticCancellation) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1277,7 +1277,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, UniformCylinderMatchesGaussLaw) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(128);
+         fsCmd_m->setNY(128);
+@@ -1324,7 +1324,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, OpenReferencePathRejectsEndpointPileup) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setClosedRing(false);
+         for (const double z : {-0.1, 6.1}) {
+@@ -1336,7 +1336,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, Deboost_TwoStationaryParticles) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1363,7 +1363,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, Deboost_TwoRelativisticParticles) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1398,7 +1398,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, ParabolicLineDensityHasCenteredLongitudinalForce) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(4);
+         fsCmd_m->setNY(4);
+@@ -1449,7 +1449,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, ClosedLongitudinalGatherWrapsCellCenters) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNZ(12);
+         fsCmd_m->setClosedRing(true);
+@@ -1470,7 +1470,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LongitudinalField_Simple) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1508,7 +1508,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LabFrameFields_Simple) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1544,7 +1544,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LabFrameFields_SimpleInvalid) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1584,7 +1584,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LabFrameFields_SimpleOutOfBoundsX) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1607,7 +1607,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LabFrameFields_SimpleOutOfBoundsY) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1630,7 +1630,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LabFrameFields_SimpleOutOfBoundsZ) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         rebuildBunch();
+         createParticles({{0, 0, -1}, {0, 0, 7}}, {{0, 0, 1}, {0, 0, 1}});
+@@ -1638,7 +1638,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LabFrameFields_ClosedRing) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1681,7 +1681,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LabFrameFields_OpenRing) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1724,7 +1724,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LabFrameFields_Pipe) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1762,7 +1762,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LabFrameFields_Plates) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1800,21 +1800,21 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LoadReferencePath_Empty) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {});
++        makeReferencePathFile(referencePath_m, {});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setClosedRing(false);
+         EXPECT_THROW(rebuildBunch(), OpalException);
+     }
+ 
+     TEST_F(TestSolve2d5, LoadReferencePath_EmptyClosedRing) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {});
++        makeReferencePathFile(referencePath_m, {});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setClosedRing(true);
+         EXPECT_THROW(rebuildBunch(), OpalException);
+     }
+ 
+     TEST_F(TestSolve2d5, LabFrameFields_NoParticles) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1834,7 +1834,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, LabFrameFields_MainApi) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -1894,7 +1894,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, MainApiMatchesDirectStagesForScatterAndBoundaryModes) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+@@ -2150,7 +2150,7 @@ namespace {
+             {0.000105, -0.000078, 0.4}};
+ 
+     TEST_F(TestSolve2d5, KvBeam_Charge) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 0.03}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 0.03}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(10);
+         fsCmd_m->setNY(10);
+@@ -2168,7 +2168,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, KvBeam_ChargeDensity) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 0.03}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 0.03}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(10);
+         fsCmd_m->setNY(10);
+@@ -2187,7 +2187,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, KvBeam_Potential) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 0.03}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 0.03}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(10);
+         fsCmd_m->setNY(10);
+@@ -2217,7 +2217,7 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, KvBeam_ElectricField) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 0.03}});
++        makeReferencePathFile(referencePath_m, {{0, 0, 0}, {0, 0, 0.03}});
+         fsCmd_m->setType("FFT2D5");
+         fsCmd_m->setNX(10);
+         fsCmd_m->setNY(10);
+diff --git a/unit_tests/Structure/TestCheckpointFile.cpp b/unit_tests/Structure/TestCheckpointFile.cpp
+index 7b1ce01a1..6d60d0ee0 100644
+--- a/unit_tests/Structure/TestCheckpointFile.cpp
++++ b/unit_tests/Structure/TestCheckpointFile.cpp
+@@ -1,4 +1,5 @@
+ #include <gtest/gtest.h>
++#include "../TemporaryDirectory.h"
+ 
+ #include "AbstractObjects/OpalData.h"
+ #include "Algorithms/CoordinateSystemTrafo.h"
+@@ -33,28 +34,21 @@ namespace {
+             int argc    = 0;
+             char** argv = nullptr;
+             ippl::initialize(argc, argv);
+-            gmsg = new Inform(nullptr, -1);
+-            OpalData::getInstance()->storeInputFn("checkpoint_unit.in");
++            gmsg                = new Inform(nullptr, -1);
+             Options::enableHDF5 = false;
+         }
+ 
+         static void TearDownTestSuite() {
+-            ippl::Comm->barrier();
+-            if (ippl::Comm->rank() == 0) {
+-                std::remove("checkpoint_unit.stat");
+-                std::remove("checkpoint_unit.lbal");
+-                std::remove("checkpoint_unit_checkpoint.h5");
+-                std::remove("checkpoint_unit_checkpoint.h5.tmp");
+-                std::remove("checkpoint_unit_attributes.h5");
+-                std::remove("checkpoint_unit_attributes.h5.tmp");
+-            }
+-            ippl::Comm->barrier();
+             delete gmsg;
+             gmsg = nullptr;
+             ippl::finalize();
+         }
+ 
+         void SetUp() override {
++            savedInput_m = OpalData::getInstance()->getInputFn();
++            directory_m.create("opalx-checkpoint", ippl::Comm->getCommunicator());
++            OpalData::getInstance()->storeInputFn(
++                    (directory_m.path() / "checkpoint_unit.in").string());
+             Options::useQMAttributes               = false;
+             storageConfig.periodicParticleBoundary = true;
+ 
+@@ -68,6 +62,10 @@ namespace {
+             if (beam) {
+                 Attributes::setRealArray(*beam->findAttribute("POLARIZATION"), {});
+             }
++            beamObject.reset();
++            OpalData::getInstance()->storeInputFn(savedInput_m);
++            ippl::Comm->barrier();
++            directory_m.reset();
+         }
+ 
+         std::unique_ptr<Bunch> makeBunch(DataSink& sink) {
+@@ -116,6 +114,8 @@ namespace {
+         opalx::spacecharge::CartesianDomainConfig3D storageConfig;
+         std::unique_ptr<Beam> beamObject;
+         Beam* beam = nullptr;
++        opalx::test::TemporaryDirectory directory_m;
++        std::string savedInput_m;
+     };
+ 
+     TEST_F(CheckpointFileTest, RoundTripRestoresMultiContainerStateWithHdf5DiagnosticsDisabled) {
+@@ -152,7 +152,8 @@ namespace {
+             }
+         }
+ 
+-        const std::string path = CheckpointFile::defaultPath("checkpoint_unit");
++        const std::string path =
++                CheckpointFile::defaultPath(OpalData::getInstance()->getInputBasename());
+         OpalData::getInstance()->setMaxPhase("TEST_CAVITY", 0.375);
+         const int phasesBeforeRead = OpalData::getInstance()->getNumberOfMaxPhases();
+         ASSERT_NO_THROW(CheckpointFile::write(path, *source, 2, 7));
+@@ -237,7 +238,7 @@ namespace {
+             Kokkos::deep_copy(pc->Pol.getView(), polHost);
+         }
+ 
+-        const std::string path = "checkpoint_unit_attributes.h5";
++        const std::string path = (directory_m.path() / "checkpoint_unit_attributes.h5").string();
+         ASSERT_NO_THROW(CheckpointFile::write(path, *source, 0, 5));
+ 
+         DataSink targetSink;
+diff --git a/unit_tests/Structure/TestDirichletPlaneWriter.cpp b/unit_tests/Structure/TestDirichletPlaneWriter.cpp
+index 4fe38891e..3fc4c8a6f 100644
+--- a/unit_tests/Structure/TestDirichletPlaneWriter.cpp
++++ b/unit_tests/Structure/TestDirichletPlaneWriter.cpp
+@@ -1,3 +1,4 @@
++#include "../TemporaryDirectory.h"
+ //
+ // Unit tests for DirichletPlaneWriter.
+ //
+@@ -24,6 +25,17 @@ protected:
+ 
+     static void TearDownTestSuite() { ippl::finalize(); }
+ 
++    void SetUp() override {
++        directory_m.create("opalx-dirichlet-writer", ippl::Comm->getCommunicator());
++    }
++
++    void TearDown() override {
++        ippl::Comm->barrier();
++        directory_m.reset();
++    }
++
++    opalx::test::TemporaryDirectory directory_m;
++
+     static std::string readFile(const std::string& path) {
+         std::ifstream f(path);
+         std::stringstream ss;
+@@ -33,8 +45,7 @@ protected:
+ };
+ 
+ TEST_F(DirichletPlaneWriterTest, ConstructorCreatesOutputDirectory) {
+-    const std::string dir = "dirichlet_writer_test_dir";
+-    std::filesystem::remove_all(dir);
++    const std::string dir = (directory_m.path() / "dirichlet_writer_test_dir").string();
+ 
+     DirichletPlaneWriter writer(dir);
+ 
+@@ -43,8 +54,7 @@ TEST_F(DirichletPlaneWriterTest, ConstructorCreatesOutputDirectory) {
+ }
+ 
+ TEST_F(DirichletPlaneWriterTest, WritePlaneCreatesAsciiDumpWithMetadata) {
+-    const std::string dir = "dirichlet_writer_dump_dir";
+-    std::filesystem::remove_all(dir);
++    const std::string dir = (directory_m.path() / "dirichlet_writer_dump_dir").string();
+ 
+     DirichletPlaneWriter writer(dir);
+ 
+@@ -70,8 +80,7 @@ TEST_F(DirichletPlaneWriterTest, WritePlaneCreatesAsciiDumpWithMetadata) {
+ }
+ 
+ TEST_F(DirichletPlaneWriterTest, InvalidDimensionsThrow) {
+-    const std::string dir = "dirichlet_writer_invalid_dims";
+-    std::filesystem::remove_all(dir);
++    const std::string dir = (directory_m.path() / "dirichlet_writer_invalid_dims").string();
+ 
+     DirichletPlaneWriter writer(dir);
+ 

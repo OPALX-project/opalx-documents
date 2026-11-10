@@ -1,0 +1,138 @@
+{
+  "retrieved_date": "2026-11-01",
+  "scope": "Primary literature model-scope and validation comparison. Facts and our inferences are separated. No solver runs or production edits.",
+  "our_setup": {
+    "length_m": 5,
+    "bend_radius_m": 2,
+    "a_m": 0.005,
+    "c_m": 0.0005,
+    "beta": 0.001,
+    "Q_C": 1e-11,
+    "angular_span_rad": 2.5,
+    "sharp_ends": true,
+    "open_space": true
+  },
+  "sources": [
+    {
+      "id": "patric2006",
+      "citation": "O. Boine-Frankenheim and V. Kornilov, Implementation and Validation of Space Charge and Impedance Kicks in the Code PATRIC for Studies of Transverse Coherent Instabilities in the FAIR Rings, ICAP2006 WEA3MP04, pp267–270.",
+      "url": "https://accelconf.web.cern.ch/icap06/papers/WEA3MP04.pdf",
+      "location": "p267 Eqs2–3 and assumptions paragraph; p269 validation examples",
+      "verified_primary_facts": [
+        "Transverse fields come from 2D Poisson solves at longitudinal grid positions.",
+        "Assumes bunch length much greater than transverse beam and pipe dimensions.",
+        "Assigns the bunch-centre lattice position to all slices, neglecting fast transverse-envelope changes across the bunch.",
+        "Validation includes coasting-beam noise spectra and analytic stability boundaries, not a finite hard-ended curved-tube field comparison."
+      ],
+      "contrast_inference": "Our large global aspect ratio supports a slice approximation in the bulk, but passing these stability observables cannot certify one-percent weak curvature or end-field accuracy.",
+      "local_pdf": "patric-2006.pdf",
+      "local_pdf_sha256": "7a830f12e4d44a42d2cb362416fc8a5461ddea6969de1ba550d104ec5a53183b"
+    },
+    {
+      "id": "pyorbit2017",
+      "citation": "H. Bartosik, Code description: pyORBIT, CERN ABP-CWG, 2 March2017.",
+      "url": "https://indico.cern.ch/event/613511/contributions/2473231/attachments/1420981/2177652/ABP-CWG-PyORBIT.pdf",
+      "location": "PDF pages8–9 (slides7–8)",
+      "verified_primary_facts": [
+        "The model named 2.5D projects transverse charge onto a single grid and weights transverse kicks by local line density.",
+        "Optional longitudinal forces use a line-density derivative with a transverse-uniform-beam assumption.",
+        "A separately named slice-by-slice 2D model bins on a 3D grid and differentiates its sliced potential for transverse and longitudinal kicks.",
+        "Separate longitudinal models include on-axis round-pipe impedance and a special version with radial dependence."
+      ],
+      "contrast_inference": "2.5D is a family label. OPALX combines independent slice solves and a fixed-g longitudinal closure; one cannot transfer the capabilities or validation of every similarly named model to it.",
+      "access": "Web reader403; primary PDF downloaded successfully and all17pages text-extracted locally.",
+      "local_pdf": "pyorbit-2017.pdf",
+      "local_pdf_sha256": "beb97567c343a944293b48d32ab27a2f514c9c7b22639708156edc3fba11a3b5"
+    },
+    {
+      "id": "impactxparameters2026",
+      "citation": "ImpactX26.10 official documentation, Parameters: Python, space-charge model properties.",
+      "url": "https://impactx.readthedocs.io/en/latest/usage/python.html",
+      "location": "space_charge, space_charge_gauss_long_scale, poisson_solver",
+      "verified_primary_facts": [
+        "Distinguishes 2D long-unbunched, 2p5D line-density-weighted transverse fields plus longitudinal density derivative, full3D, and Gaussian3D/2p5D models.",
+        "For Gauss2p5D, default longitudinal scale1.103 gamma sigma_z minimizes the on-axis longitudinal-field L2 error for a long3D Gaussian bunch.",
+        "For a long bunch in a perfectly conducting pipe, recommends the pipe radius as the scale instead.",
+        "FFT field solver uses integrated Green functions with open boundaries."
+      ],
+      "contrast_inference": "A longitudinal normalization selected for Gaussian free space is profile-dependent. It does not establish the hard-end field of our uniform elliptical source or validate curvature."
+    },
+    {
+      "id": "impactxkick2026",
+      "citation": "ImpactX26.08 official example, Momentum Kick in the2.5D Gaussian Space Charge Model.",
+      "url": "https://impactx.readthedocs.io/en/26.08/usage/examples/space_charge_gaussian_kick/README.html",
+      "location": "Setup and analytic prediction; embedded test code lines288–333,626–670",
+      "verified_primary_facts": [
+        "Uses an initially cold round-Gaussian100MeV electron bunch in a1m drift with one space-charge kick.",
+        "Example rms transverse sizes40micrometres and rms ct1mm; charge1nC.",
+        "Checks particle momentum changes against Qiang2025 Eqs31–32 for the same reduced model.",
+        "Embedded PIC acceptance tolerances are2% rms/6.3% maximum transverse and20% rms/40% maximum longitudinal, normalized by predicted component maxima. These are test tolerances, not measured errors."
+      ],
+      "contrast_inference": "Our frozen-field comparison follows the useful single-kick/field-first validation pattern, but additionally tests the reduced model against independent3D Coulomb fields. This example supplies no universal1% claim."
+    },
+    {
+      "id": "yuan2018",
+      "citation": "Y.-S. Yuan, O. Boine-Frankenheim and I. Hofmann, Intensity limitations due to space charge for bunch compression in synchrotrons, PRAB21,074201(2018).",
+      "doi": "10.1103/PhysRevAccelBeams.21.074201",
+      "url": "https://repository.gsi.de/record/218093/files/PhysRevAccelBeams.21.074201.pdf",
+      "location": "SecIIA Eq1; SecIIC pp3–4; TableI p4; Fig5",
+      "verified_primary_facts": [
+        "Uses1D longitudinal plus2D transverse space charge because compressed bunches remain long compared with transverse sizes.",
+        "Starts with parabolic longitudinal and3sigma-truncated Gaussian transverse distributions.",
+        "SIS18 example uses uranium73+,295MeV/u,216m circumference and half-length78m compressed to6m.",
+        "Compares coupled-envelope and PIC observables, including rms sizes and resonance/emittance-growth behaviour.",
+        "Longitudinal geometry factor is0.5+2ln(pipe radius/beam radius)."
+      ],
+      "contrast_inference": "This establishes usefulness for smooth-profile synchrotron dynamics under its closure, not our open-space sharp-end point fields. Our beta0.001 and electrostatic frozen source differ substantially."
+    },
+    {
+      "id": "noise2015",
+      "citation": "O. Boine-Frankenheim, I. Hofmann, J. Struckmeier and S. Appel, Artificial collisions, entropy and emittance growth in computer simulations of intense beams, NIMA770,164–168(2015).",
+      "doi": "10.1016/j.nima.2014.10.004",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0168900214011206",
+      "location": "Publisher abstract/introduction and section previews",
+      "verified_primary_facts": [
+        "Finite macro-particle sampling adds numerical noise and diffusion to self-consistent PIC dynamics.",
+        "Noise-driven growth depends on macro-particle count and tune shift.",
+        "Studies2D/2.5D synchrotron models and explains the need to balance particle population, grid resolution and interpolation."
+      ],
+      "contrast_inference": "Our initially nonconvergent polar-source fields cannot be interpreted as model error merely by refining the mesh. The quiet-source, sampling and matched-mesh controls are necessary; frozen checks alone also do not certify long-term emittance accuracy.",
+      "access": "Primary publisher abstract/introduction/section previews read; full article not obtained."
+    },
+    {
+      "id": "noise2014conference",
+      "citation": "O. Boine-Frankenheim, I. Hofmann and J. Struckmeier, Artificial Collisions, Entropy and Emittance Growth in Computer Simulations of Intense Beams, IPAC2014 TUPRI017.",
+      "doi": "10.18429/JACoW-IPAC2014-TUPRI017",
+      "url": "https://proceedings.jacow.org/IPAC2014/papers/tupri017.pdf",
+      "location": "Abstract/introduction; Eqs1–7",
+      "verified_primary_facts": [
+        "Derives diffusion/entropy relations and studies numerical-friction scaling against simulations.",
+        "Warns that PIC noise can contaminate long-term beam-loss predictions; increasing particle count and using higher-order interpolation or density smoothing controls it."
+      ],
+      "contrast_inference": "Supports separately checking numerical source sampling and eventual long-term tracking, rather than treating a converged frozen field as full dynamical validation."
+    },
+    {
+      "id": "dehoon2003_preprint2002",
+      "citation": "M. J. L. de Hoon, E. P. Lee, J. J. Barnard and A. Friedman, Cold phase fluid model of the longitudinal dynamics of space-charge-dominated beams, Phys.Plasmas10,855–861(2003); original LBNL manuscript dated1March2002.",
+      "doi": "10.1063/1.1541015",
+      "url": "https://www.researchgate.net/publication/234991093_Cold_phase_fluid_model_of_the_longitudinal_dynamics_of_space-charge-dominated_beams",
+      "institutional_permalink": "https://escholarship.org/uc/item/9n40q129",
+      "location": "Original manuscript SecI; SecII Eqs4–16; SecIII",
+      "access": "Root read the complete original author-uploaded LBNL manuscript through the web full-text extraction. Journal citation metadata independently confirmed; full journal text was not read. Institutional endpoint returned403.",
+      "verified_primary_facts": [
+        "Local g approximation requires uniform density and slowly varying beam semiaxes/line density on the pipe-radius scale.",
+        "Identifies breakdown near ends, for short compressed beams and at shocks.",
+        "Derives a nonlocal Fourier–Bessel field; recovers local g by Taylor expansion.",
+        "Finite-radius compressed-slice field remains bounded; WARP(r,z) solver replaces g for end dynamics."
+      ],
+      "contrast_inference": "Supports a known hard-end approximation limitation, not a universal2.5D failure or numerical boundary bug.",
+      "limits": "Kernel is transverse-averaged Ez for a straight circularized beam in an infinite circular conducting pipe. ItsR is pipe radius, not bend radius. It does not quantitatively predict our open elliptical curved-tube point fields."
+    }
+  ],
+  "conclusions_ours": [
+    "The2.5D label alone does not specify how longitudinal fields, transverse variation or geometry are handled.",
+    "Global slenderness does not establish slow longitudinal variation at a sharp end.",
+    "A1% normalization to the13.07V/m transverse characteristic field permits errors larger than the entire0.055V/m curvature signal; the midpoint response needs its own error measure.",
+    "Frozen Coulomb tests establish a field-operator benchmark; matching rms sizes, tune shifts or a reduced-model analytic kick establishes different observables."
+  ]
+}

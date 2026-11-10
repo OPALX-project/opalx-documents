@@ -1,0 +1,2339 @@
+{
+  "study": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles",
+  "date": "2026-11-02",
+  "scope": "Frozen free-space uniform and triangular curved-tube fields; no tracking accuracy claim",
+  "exclusions": [
+    "large distributions",
+    "HDF5 particle data",
+    "binaries",
+    "compiled packages",
+    "build trees"
+  ],
+  "sources": [
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/HANDOFF-infrastructure.md",
+      "snapshot": "data/free-open/HANDOFF-infrastructure.md",
+      "sha256": "c22c7cc0f2873f73d36c3f67a155016c154a6961741877e9a80b15306bb6e33d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/HANDOFF.md",
+      "snapshot": "data/free-open/HANDOFF.md",
+      "sha256": "8583c2470722192a49eb07066a2615ffec8d38b66800150c918d441f56955be7"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analysis/acceptance.json",
+      "snapshot": "data/free-open/analysis/acceptance.json",
+      "sha256": "7a6d6f2959e3a76ef59ad5bf99a772c0fb5c08092e6e4d81ad36d54d99f6358c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analysis/convergence_changes.csv",
+      "snapshot": "data/free-open/analysis/convergence_changes.csv",
+      "sha256": "84dd302bb6d86d116597a6ef49fb426f80f4e71b179b408beec751dd8f4937fe"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analysis/explicitly_invalid_cases.csv",
+      "snapshot": "data/free-open/analysis/explicitly_invalid_cases.csv",
+      "sha256": "0e79ab0252890266cc9d6fd2983d3ac8c8f664ccbc1691a2a728659f1f0d1220"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analysis/field_comparison.csv",
+      "snapshot": "data/free-open/analysis/field_comparison.csv",
+      "sha256": "b8cbac394244cc6d6b8e273ec8e8db0a32d8cfc70464fbde42b7828877142d5a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analysis/field_summary.csv",
+      "snapshot": "data/free-open/analysis/field_summary.csv",
+      "sha256": "480e26dc979e42a08237b975f3a5e3ef3c72123a7e96cb92f0e6e38924c44dc1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analysis/run_integrity_checks.csv",
+      "snapshot": "data/free-open/analysis/run_integrity_checks.csv",
+      "sha256": "b47035a00f0c70df362b76e51cfe239a3d127922b02f44afccf49bdf239da030"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analysis/source_quadratures/catalog.csv",
+      "snapshot": "data/free-open/analysis/source_quadratures/catalog.csv",
+      "sha256": "6317d4f8879dc25d7d0ca16053b96742dedded5af4212cf9f301c21cdcd5d790"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analysis/source_quadratures/catalog.json",
+      "snapshot": "data/free-open/analysis/source_quadratures/catalog.json",
+      "sha256": "62627212cc76f6998bb8e756c86ed137c6a7a88be5f7c364c2ed29b8151929a0"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analysis/source_quadratures/cell-triangle-64x32x2048-box0.012x0.0015-q16.npz",
+      "snapshot": "data/free-open/analysis/source_quadratures/cell-triangle-64x32x2048-box0.012x0.0015-q16.npz",
+      "sha256": "d947c9cc437b4fb22c038d854f4f270ee4d9d343ee17eed61e531c72d08f929d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analysis/source_quadratures/cell-triangle-64x32x8192-box0.012x0.0015-q16.npz",
+      "snapshot": "data/free-open/analysis/source_quadratures/cell-triangle-64x32x8192-box0.012x0.0015-q16.npz",
+      "sha256": "1ef591206adbb5aa4be9843c0de1e8cd111315e6ffe23a12066ec7a7f5c886c7"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analysis/source_quadratures/cell-triangle-96x48x8192-box0.012x0.0015-q16.npz",
+      "snapshot": "data/free-open/analysis/source_quadratures/cell-triangle-96x48x8192-box0.012x0.0015-q16.npz",
+      "sha256": "c3fe817ad638241ebab48bd68b930e7f26f167cce2bb9c1ecf7ce9977ba4140c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analysis/source_quadratures/cell-uniform-64x32x2048-box0.012x0.0015-q16.npz",
+      "snapshot": "data/free-open/analysis/source_quadratures/cell-uniform-64x32x2048-box0.012x0.0015-q16.npz",
+      "sha256": "0a54b1066335ea0f5791d0dca8a62e2a2b495b845d35432ad1de65ceb2fdcf49"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analysis/source_quadratures/cell-uniform-64x32x8192-box0.012x0.0015-q16.npz",
+      "snapshot": "data/free-open/analysis/source_quadratures/cell-uniform-64x32x8192-box0.012x0.0015-q16.npz",
+      "sha256": "f6d818f2ad8743e05cb9f78b0ecbe999d3b26e2ef4812f24a6ec2f1ccf6e9261"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analysis/source_quadratures/cell-uniform-96x48x8192-box0.012x0.0015-q16.npz",
+      "snapshot": "data/free-open/analysis/source_quadratures/cell-uniform-96x48x8192-box0.012x0.0015-q16.npz",
+      "sha256": "66548b8d70f750cacbd9b852c12c205234963720ff52b824118cdcdffa3c4d01"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analyze-aligned.log",
+      "snapshot": "data/free-open/analyze-aligned.log",
+      "sha256": "cb481a99b5daf7cdad7e46b41b0c14910e91fb90783a733e1830232d372b6dd4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analyze-cell-m64-final.log",
+      "snapshot": "data/free-open/analyze-cell-m64-final.log",
+      "sha256": "f72155e68c2c2bff03d6a88fa7acb1e6481b36a995103707118e2fe76b0b7bc9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analyze-fixed-through-uniform8192-final.log",
+      "snapshot": "data/free-open/analyze-fixed-through-uniform8192-final.log",
+      "sha256": "4ea2c0dd95ccc6dce977d6e774c14851081cd848fef272e3d8d2d53025b4462f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analyze-fixed-through4096-final.log",
+      "snapshot": "data/free-open/analyze-fixed-through4096-final.log",
+      "sha256": "64eed10b0c666eb47e8dac6b5a4d696b940c369aaf17c265575b932ad4ea99ea"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analyze-m64.log",
+      "snapshot": "data/free-open/analyze-m64.log",
+      "sha256": "de55deb0b3b03c92efc6636c246fb7a05964962e51aa0236acac57c6666218cf"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analyze-primary-series-final.log",
+      "snapshot": "data/free-open/analyze-primary-series-final.log",
+      "sha256": "63952a75c52e29fa903f9ecc8afd3be8663224b12a4b0c8cdaa7b7975f14a1b2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analyze-uniform-cell-m64-final.log",
+      "snapshot": "data/free-open/analyze-uniform-cell-m64-final.log",
+      "sha256": "1e2ea02b441ac4fca9ef9e30d37c64b7bd5b9d1056855cf95baa114a0a0247b9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analyze-uniform-m64.log",
+      "snapshot": "data/free-open/analyze-uniform-m64.log",
+      "sha256": "87268205be85d734a782bdaebf11ebd6b0d5061366a3ece96dd4193487d5ea08"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analyze-weighted-smoke.log",
+      "snapshot": "data/free-open/analyze-weighted-smoke.log",
+      "sha256": "66e4fb0fe7a99e84a6358a72f78564ce14fe9e67d32b9c55768211fb36a9425e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analyze-z4096.log",
+      "snapshot": "data/free-open/analyze-z4096.log",
+      "sha256": "5dc1ef1845217395b877124a5f81562f9e3de67914c4bb492abbeb309a8844d3"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/analyze_fields.py",
+      "snapshot": "data/free-open/analyze_fields.py",
+      "sha256": "fded2636d0b98a93e15a5933d676726c36abc8945d002c9e4e229b4befbd35cd"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/HANDOFF.md",
+      "snapshot": "data/free-open/audit-weighted/HANDOFF.md",
+      "sha256": "f85516f8499b4d6f0e38976cd3a04e93e63f65bf74240214e9cbf5d67e94138a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/audit-summary.csv",
+      "snapshot": "data/free-open/audit-weighted/audit-summary.csv",
+      "sha256": "9d25b4d26183bc1bebc94278f41dfce3c32b2b5a5503b8c6f018ccfeca041767"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/audit_checkpoint.py",
+      "snapshot": "data/free-open/audit-weighted/audit_checkpoint.py",
+      "sha256": "263e19eb6aac391e030f6083241646f7305b83a5df73859b3c758baf3097b39d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/field-error-summary.csv",
+      "snapshot": "data/free-open/audit-weighted/field-error-summary.csv",
+      "sha256": "4911054ff438913d8169a071e196416b02383846f9a3610e684d13eaf494aaac"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/generator-snapshot-checks.json",
+      "snapshot": "data/free-open/audit-weighted/generator-snapshot-checks.json",
+      "sha256": "85239e6bcd30cc2b21f56d7b7b121db4e6f7c0244f9b64817ba79909ac2616ff"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/independent-control-changes.csv",
+      "snapshot": "data/free-open/audit-weighted/independent-control-changes.csv",
+      "sha256": "f4d90be8a38d4783000f34298c57d5dd4619379f3fbfe62c2e9a439e6dd9990a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/summarize_audits.py",
+      "snapshot": "data/free-open/audit-weighted/summarize_audits.py",
+      "sha256": "cdb528d4922a585ae4651cbbae55d7be2347ab5c1ddabeff03fde47d23f14ca8"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-cell-m64-final-fields.csv",
+      "snapshot": "data/free-open/audit-weighted/triangle-cell-m64-final-fields.csv",
+      "sha256": "0034d4d2e23b9cd32763a7eceb39d5a2e08cc8a7a7fca1985e925bc2b5e3a2c3"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-cell-m64-final-metrics.csv",
+      "snapshot": "data/free-open/audit-weighted/triangle-cell-m64-final-metrics.csv",
+      "sha256": "c71a1cc2bfb115cc345ab80fafe0802cd4171cc561cc8c1ca9ca85bbd4126a0b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-cell-m64-final.json",
+      "snapshot": "data/free-open/audit-weighted/triangle-cell-m64-final.json",
+      "sha256": "5bc8d0770aefac81be6bf2ec27fc0be9b57f02429ef0a176a9150fe2669267ef"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-cell-m64-final.log",
+      "snapshot": "data/free-open/audit-weighted/triangle-cell-m64-final.log",
+      "sha256": "5bc8d0770aefac81be6bf2ec27fc0be9b57f02429ef0a176a9150fe2669267ef"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-cell-z2048-final-fields.csv",
+      "snapshot": "data/free-open/audit-weighted/triangle-cell-z2048-final-fields.csv",
+      "sha256": "340da2678e9c070a5536d1d842afc33aab4d447f8d2881c35ad8748f12b696cb"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-cell-z2048-final-metrics.csv",
+      "snapshot": "data/free-open/audit-weighted/triangle-cell-z2048-final-metrics.csv",
+      "sha256": "c7d2148b8c8748ad2b2669ee41799b7682ab0417064867f1ba356278d51cc511"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-cell-z2048-final.json",
+      "snapshot": "data/free-open/audit-weighted/triangle-cell-z2048-final.json",
+      "sha256": "f456ff01940b73924f872fa6053bf79e1ae85e59b221ec31d17476e9046e18e1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-cell-z2048-final.log",
+      "snapshot": "data/free-open/audit-weighted/triangle-cell-z2048-final.log",
+      "sha256": "f456ff01940b73924f872fa6053bf79e1ae85e59b221ec31d17476e9046e18e1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-cell-z4096-final-fields.csv",
+      "snapshot": "data/free-open/audit-weighted/triangle-cell-z4096-final-fields.csv",
+      "sha256": "660b1b4bf90c21324239e812f65f923bcdf32a8fe4f3ba204eed66e37be19b8e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-cell-z4096-final-metrics.csv",
+      "snapshot": "data/free-open/audit-weighted/triangle-cell-z4096-final-metrics.csv",
+      "sha256": "beeb069176e49cc8e53e61dfd2d1755c7b1c01143fe971dde7e53d6697193d3c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-cell-z4096-final.json",
+      "snapshot": "data/free-open/audit-weighted/triangle-cell-z4096-final.json",
+      "sha256": "ef443b683ac3f0e9c5c65925a9523e64c72482515ebaee45763b2635028bc1e5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-cell-z4096-final.log",
+      "snapshot": "data/free-open/audit-weighted/triangle-cell-z4096-final.log",
+      "sha256": "ef443b683ac3f0e9c5c65925a9523e64c72482515ebaee45763b2635028bc1e5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-cell-z8192-final-fields.csv",
+      "snapshot": "data/free-open/audit-weighted/triangle-cell-z8192-final-fields.csv",
+      "sha256": "79667f0c5aa8ac4f2a423a41cd55255db99f97d7bf32d632cb4ecdda6ef9b4c7"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-cell-z8192-final-metrics.csv",
+      "snapshot": "data/free-open/audit-weighted/triangle-cell-z8192-final-metrics.csv",
+      "sha256": "ec2289878a9e04229fe93ea5309bfbb4c17f2f2bdcbbb8ea4038fa558b731716"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-cell-z8192-final.json",
+      "snapshot": "data/free-open/audit-weighted/triangle-cell-z8192-final.json",
+      "sha256": "992e5cb0a0112dd55b59b6098f4927c332abbe676e0b707c065af586a4b70a05"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-cell-z8192-final.log",
+      "snapshot": "data/free-open/audit-weighted/triangle-cell-z8192-final.log",
+      "sha256": "992e5cb0a0112dd55b59b6098f4927c332abbe676e0b707c065af586a4b70a05"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-control-mesh96-final-fields.csv",
+      "snapshot": "data/free-open/audit-weighted/triangle-control-mesh96-final-fields.csv",
+      "sha256": "2337822411097902851950306ac5da2c60b66e0001deeb749d6c6fbb7630eada"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-control-mesh96-final-metrics.csv",
+      "snapshot": "data/free-open/audit-weighted/triangle-control-mesh96-final-metrics.csv",
+      "sha256": "14024ccb4fddf050302fff09030ee5394cf73d3703a3118d1ea0f3dff01259de"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-control-mesh96-final.json",
+      "snapshot": "data/free-open/audit-weighted/triangle-control-mesh96-final.json",
+      "sha256": "5238c7087729c739f8a555270abf859454272baf26c2eff850eb591578c3fc06"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-control-mesh96-final.log",
+      "snapshot": "data/free-open/audit-weighted/triangle-control-mesh96-final.log",
+      "sha256": "5238c7087729c739f8a555270abf859454272baf26c2eff850eb591578c3fc06"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-control-source96-final-fields.csv",
+      "snapshot": "data/free-open/audit-weighted/triangle-control-source96-final-fields.csv",
+      "sha256": "69171d8b4db0a527fe27fb970f838026e4cc1ada5ab4a2adddd64fd42653046c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-control-source96-final-metrics.csv",
+      "snapshot": "data/free-open/audit-weighted/triangle-control-source96-final-metrics.csv",
+      "sha256": "84ab39e8212de366a100d4d48fce79de183804394bfc60dd21b82aa63e1f68dd"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-control-source96-final.json",
+      "snapshot": "data/free-open/audit-weighted/triangle-control-source96-final.json",
+      "sha256": "93d9184f6181806df575b53a099aa5ecc6a7e65503f3b78acf461c1d6c8f51d0"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-control-source96-final.log",
+      "snapshot": "data/free-open/audit-weighted/triangle-control-source96-final.log",
+      "sha256": "93d9184f6181806df575b53a099aa5ecc6a7e65503f3b78acf461c1d6c8f51d0"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-weighted-smoke-final-fields.csv",
+      "snapshot": "data/free-open/audit-weighted/triangle-weighted-smoke-final-fields.csv",
+      "sha256": "6a31ca344bbe1b1412b47f05536b8896240cb68c724e0298e896b8adbe802d88"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-weighted-smoke-final-metrics.csv",
+      "snapshot": "data/free-open/audit-weighted/triangle-weighted-smoke-final-metrics.csv",
+      "sha256": "d5f704bde02033fe9bed3426b1f34d7269e450f9874d68074ab072e0d3a6e180"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-weighted-smoke-final.json",
+      "snapshot": "data/free-open/audit-weighted/triangle-weighted-smoke-final.json",
+      "sha256": "3c0e3486a3cffbef700ff3d0c9b23590edb25f645a7dba9f54a4c34b583596da"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/triangle-weighted-smoke-final.log",
+      "snapshot": "data/free-open/audit-weighted/triangle-weighted-smoke-final.log",
+      "sha256": "3c0e3486a3cffbef700ff3d0c9b23590edb25f645a7dba9f54a4c34b583596da"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-cell-m64-final-fields.csv",
+      "snapshot": "data/free-open/audit-weighted/uniform-cell-m64-final-fields.csv",
+      "sha256": "b23514a31d33072ba0caa37d1c281a55ac460f37ba44f12708a52bdafcf7d061"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-cell-m64-final-metrics.csv",
+      "snapshot": "data/free-open/audit-weighted/uniform-cell-m64-final-metrics.csv",
+      "sha256": "84c7d2d6888432657eabc5fded84d61abae112458f3ea8b0e0984458f694d45e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-cell-m64-final.json",
+      "snapshot": "data/free-open/audit-weighted/uniform-cell-m64-final.json",
+      "sha256": "5701a7c0abc4189b6daa6c21329f4c1aea86fc33aa0c28a7ea5e4a1438ba64d3"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-cell-m64-final.log",
+      "snapshot": "data/free-open/audit-weighted/uniform-cell-m64-final.log",
+      "sha256": "5701a7c0abc4189b6daa6c21329f4c1aea86fc33aa0c28a7ea5e4a1438ba64d3"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-cell-z2048-final-fields.csv",
+      "snapshot": "data/free-open/audit-weighted/uniform-cell-z2048-final-fields.csv",
+      "sha256": "6219ce1c4b9eff8b16ddb6f6ea338eda58ad32de60f3e14be596ce312f74a62f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-cell-z2048-final-metrics.csv",
+      "snapshot": "data/free-open/audit-weighted/uniform-cell-z2048-final-metrics.csv",
+      "sha256": "13efb534512a101053cf3d715c2e77f8b8177a3d35b4aa831b1dc72461c0b982"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-cell-z2048-final.json",
+      "snapshot": "data/free-open/audit-weighted/uniform-cell-z2048-final.json",
+      "sha256": "0c3c98a0b932e5c34dd2aefc46aa18e85c9469f1192c72745c874c1cce758f15"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-cell-z2048-final.log",
+      "snapshot": "data/free-open/audit-weighted/uniform-cell-z2048-final.log",
+      "sha256": "0c3c98a0b932e5c34dd2aefc46aa18e85c9469f1192c72745c874c1cce758f15"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-cell-z4096-final-fields.csv",
+      "snapshot": "data/free-open/audit-weighted/uniform-cell-z4096-final-fields.csv",
+      "sha256": "63a4a66550d8c5ad87af3c20fa2639c600d6799566716be4037761aada3c1368"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-cell-z4096-final-metrics.csv",
+      "snapshot": "data/free-open/audit-weighted/uniform-cell-z4096-final-metrics.csv",
+      "sha256": "e62d606768e9136c1f4faac78d7317f2b2658cde19db70d52382d78ff7a06bce"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-cell-z4096-final.json",
+      "snapshot": "data/free-open/audit-weighted/uniform-cell-z4096-final.json",
+      "sha256": "7890b1cc0247371a8a5094d97593c6bc178aa572fb5d728d68ddf8fb1bd554d1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-cell-z4096-final.log",
+      "snapshot": "data/free-open/audit-weighted/uniform-cell-z4096-final.log",
+      "sha256": "7890b1cc0247371a8a5094d97593c6bc178aa572fb5d728d68ddf8fb1bd554d1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-cell-z8192-final-fields.csv",
+      "snapshot": "data/free-open/audit-weighted/uniform-cell-z8192-final-fields.csv",
+      "sha256": "61dd6916ddb264bda9e16399a1b10bd73e2ea0435006f24d40ef90b146ae49ae"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-cell-z8192-final-metrics.csv",
+      "snapshot": "data/free-open/audit-weighted/uniform-cell-z8192-final-metrics.csv",
+      "sha256": "f56f564c232d000dfc7ca0e9b93ff181bd29217080963351f7eaad606efb2fd3"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-cell-z8192-final.json",
+      "snapshot": "data/free-open/audit-weighted/uniform-cell-z8192-final.json",
+      "sha256": "fb89f24b5211a40ee36f17988133182f731668d724e251934eeabf530d6e09aa"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-cell-z8192-final.log",
+      "snapshot": "data/free-open/audit-weighted/uniform-cell-z8192-final.log",
+      "sha256": "fb89f24b5211a40ee36f17988133182f731668d724e251934eeabf530d6e09aa"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-control-mesh96-final-fields.csv",
+      "snapshot": "data/free-open/audit-weighted/uniform-control-mesh96-final-fields.csv",
+      "sha256": "2e5b2dd5367a126f4e12db75c18ce88d9f4b3391f13eba8ad695a4a1d79a4b5d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-control-mesh96-final-metrics.csv",
+      "snapshot": "data/free-open/audit-weighted/uniform-control-mesh96-final-metrics.csv",
+      "sha256": "dd5a0f22581d873242b1e9a810adc2a57d8f973b1c7b6eef81a889d4a77c5aca"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-control-mesh96-final.json",
+      "snapshot": "data/free-open/audit-weighted/uniform-control-mesh96-final.json",
+      "sha256": "478dc977ffdddeca8efb61faff2bb15d310a76db4acc8af7b1010c1356f14774"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-control-mesh96-final.log",
+      "snapshot": "data/free-open/audit-weighted/uniform-control-mesh96-final.log",
+      "sha256": "478dc977ffdddeca8efb61faff2bb15d310a76db4acc8af7b1010c1356f14774"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-control-path01-final-fields.csv",
+      "snapshot": "data/free-open/audit-weighted/uniform-control-path01-final-fields.csv",
+      "sha256": "baeb27df26ca403819b036681f65f12c25feffe089104620b053f7f3e2944a32"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-control-path01-final-metrics.csv",
+      "snapshot": "data/free-open/audit-weighted/uniform-control-path01-final-metrics.csv",
+      "sha256": "8d1ca5386c41dada3eb4049d13ee0cf0d9e29dfcc72fd425c214abe2ff4311ff"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-control-path01-final.json",
+      "snapshot": "data/free-open/audit-weighted/uniform-control-path01-final.json",
+      "sha256": "07dbf3ca4169c5471d7204dc362e21b5145d821dd5b77316d2fd0e44d758c180"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-control-path01-final.log",
+      "snapshot": "data/free-open/audit-weighted/uniform-control-path01-final.log",
+      "sha256": "07dbf3ca4169c5471d7204dc362e21b5145d821dd5b77316d2fd0e44d758c180"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-control-source96-final-fields.csv",
+      "snapshot": "data/free-open/audit-weighted/uniform-control-source96-final-fields.csv",
+      "sha256": "f422968f09d1ac21601d0864f2791fa11cc2cb0e1199e8b244b3856d3d60f222"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-control-source96-final-metrics.csv",
+      "snapshot": "data/free-open/audit-weighted/uniform-control-source96-final-metrics.csv",
+      "sha256": "402a99188eda3f77c5244a608dc8ea9fa71068131d11b4f8e06b48125197a138"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-control-source96-final.json",
+      "snapshot": "data/free-open/audit-weighted/uniform-control-source96-final.json",
+      "sha256": "36f49f6d23351e57f96ea50335ad196f8470e069b192595e75e05dd3bb5b13d1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/audit-weighted/uniform-control-source96-final.log",
+      "snapshot": "data/free-open/audit-weighted/uniform-control-source96-final.log",
+      "sha256": "36f49f6d23351e57f96ea50335ad196f8470e069b192595e75e05dd3bb5b13d1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/build-frozen.log",
+      "snapshot": "data/free-open/build-frozen.log",
+      "sha256": "bc5fa0a41ad682d07e301a51f5e197f882998fa65b2f8f5426eab489ab385e69"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/build-native.log",
+      "snapshot": "data/free-open/build-native.log",
+      "sha256": "a1306e936224763f083db82254b53d07bf5421cf49ac2dc13aefddaf8f326cb3"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/build-tests-final.log",
+      "snapshot": "data/free-open/build-tests-final.log",
+      "sha256": "4efced8fec3dbed61326110022ab188a9566d7d255841b37fa4e8a360918524b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/build-tests.log",
+      "snapshot": "data/free-open/build-tests.log",
+      "sha256": "b13d3227256e968b5cefa80ccbaadc4f5d02e603286afea590b3732a7df0f17a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/build-unit-final-frozen.log",
+      "snapshot": "data/free-open/build-unit-final-frozen.log",
+      "sha256": "cd3936caef87b516bec4c0b3399a93a28ed91dfdd37d64f686dd94df98d6c544"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/build-weight-preservation.log",
+      "snapshot": "data/free-open/build-weight-preservation.log",
+      "sha256": "32a3ab7cad63011f757618f70bd6c4a34adbb1ab09aa0dd59043d691341b73da"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/build.log",
+      "snapshot": "data/free-open/build.log",
+      "sha256": "12be597df09d992f63d84b0b14c71a07b5d4d42012f5322883a0b8f6f80f6ee2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/checks/ctest-final-launcher-fixed.log",
+      "snapshot": "data/free-open/checks/ctest-final-launcher-fixed.log",
+      "sha256": "fe48b2a3a3f1e9d5b6c5fa289573db905943f1d895bdd29df134eaacb53897c3"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/checks/ctest-final.log",
+      "snapshot": "data/free-open/checks/ctest-final.log",
+      "sha256": "ff58e56c2fb5c0974fa9ca07ff9559a78dbb6db339072bfa2b9b76d696849b56"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/checks/ctest-unit-output.log",
+      "snapshot": "data/free-open/checks/ctest-unit-output.log",
+      "sha256": "ef7041e0716cabfabf38e2868795fdea068d61678fcc4309c6976dd2d9e6fec2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/checks/tests.json",
+      "snapshot": "data/free-open/checks/tests.json",
+      "sha256": "3f02ace9a190782ff07f34f4f9a1ce515fd243f080a29d34d3896780d578a19e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/checks/unit-algorithm-final.log",
+      "snapshot": "data/free-open/checks/unit-algorithm-final.log",
+      "sha256": "bf27b6ac061d97e85c27d8887c2356af12e4ecb1f263e2469a0608ef0c3e1ccf"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/checks/unit-config-final.log",
+      "snapshot": "data/free-open/checks/unit-config-final.log",
+      "sha256": "d120bf68804a1ae526b0f9ad6f693d02cbf2fa61ad4cfc8d63187ea4dfa5da9e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/checks/unit-free-final.log",
+      "snapshot": "data/free-open/checks/unit-free-final.log",
+      "sha256": "d792c24127d6c436ce2717b17d714ddea4f7f08d8a50e90151d14113ab342184"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/checks/unit-geometry.log",
+      "snapshot": "data/free-open/checks/unit-geometry.log",
+      "sha256": "e041800d3c92c83c9bfcc99a71aead57d77bc94e09db7198f09330c80c579d43"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/checks/unit-mpi-guard-final.log",
+      "snapshot": "data/free-open/checks/unit-mpi-guard-final.log",
+      "sha256": "60b620554c82aa21e83a35df8e349c355154868fa88eb5e118bd0adba8b82eef"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/ctest-final-launcher-fixed.log",
+      "snapshot": "data/free-open/ctest-final-launcher-fixed.log",
+      "sha256": "fe48b2a3a3f1e9d5b6c5fa289573db905943f1d895bdd29df134eaacb53897c3"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/ctest-final.log",
+      "snapshot": "data/free-open/ctest-final.log",
+      "sha256": "ff58e56c2fb5c0974fa9ca07ff9559a78dbb6db339072bfa2b9b76d696849b56"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/design/HANDOFF.md",
+      "snapshot": "data/free-open/design/HANDOFF.md",
+      "sha256": "58f90aee2590576eb4df227e71fc572e1f6141171e24c1c812fae9b8a7676021"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/design/check_curvature_expansion.py",
+      "snapshot": "data/free-open/design/check_curvature_expansion.py",
+      "sha256": "2f464003eacdf5ebf4bbfa7742d5e85f4cbfd7b5cc47c8d058449ecb448737b6"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/design/check_kernel.cpp",
+      "snapshot": "data/free-open/design/check_kernel.cpp",
+      "sha256": "1cc4f47cafb4b68edbb687444cebc6616f29eca94f0c45643074f5c64f27ed14"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/design/check_kernel.py",
+      "snapshot": "data/free-open/design/check_kernel.py",
+      "sha256": "1d748e3b50ad24e3728282d5fea21022931332884ae08f0939d7800c88ce562f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/design/curvature_expansion_R2_order40.csv",
+      "snapshot": "data/free-open/design/curvature_expansion_R2_order40.csv",
+      "sha256": "3c1848cba0a863a8fcff8faa4a967e58d424b60362788b5282f0241d5c47cac4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/design/curvature_expansion_R2_order40.json",
+      "snapshot": "data/free-open/design/curvature_expansion_R2_order40.json",
+      "sha256": "3c098d58b80b88fe5ac9e30a9b46529ba8758a88a35636c22b7aa209a65eb230"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/design/curvature_expansion_R2_order64.csv",
+      "snapshot": "data/free-open/design/curvature_expansion_R2_order64.csv",
+      "sha256": "06033d0ef08d6b21a147f77048fcd0eb6a0ad3c2502f1d7912363586260dcaec"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/design/curvature_expansion_R2_order64.json",
+      "snapshot": "data/free-open/design/curvature_expansion_R2_order64.json",
+      "sha256": "e28c370c618e2c9d4261a39080321c44bf77abe66c013cb95c0a514c06a8c1ee"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/design/kernel_checks.csv",
+      "snapshot": "data/free-open/design/kernel_checks.csv",
+      "sha256": "ef4fbbc006985bf52b32f2d20caba4dd2a997ff360e2c5530f1bc19abd482c88"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/driver-cell-m64-final.log",
+      "snapshot": "data/free-open/driver-cell-m64-final.log",
+      "sha256": "f5789c4dbc3564490f4d7979271f6d6f3f6ee4c59b179cddaf16d272566d1bbc"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/driver-fixed-source-series-final.json",
+      "snapshot": "data/free-open/driver-fixed-source-series-final.json",
+      "sha256": "5ea0c7cb6ceaa6b4f3c3114878d5f7590f475e9b46ef829545cb4b6ae6a1883b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/driver-fixed-source-series-final.log",
+      "snapshot": "data/free-open/driver-fixed-source-series-final.log",
+      "sha256": "d0c8fea4e706ed446524fb5dc899898809f398c5280ad5112622e8f934179966"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/driver-transverse-controls-final.json",
+      "snapshot": "data/free-open/driver-transverse-controls-final.json",
+      "sha256": "c70d7cf67e8a111855fc2aaef67cff6bdf44066087d78c3ef8dff605ba64d28c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/driver-transverse-controls-final.log",
+      "snapshot": "data/free-open/driver-transverse-controls-final.log",
+      "sha256": "8063b342f6715ac1266b7e7843c8c77de3aad61dc02ad3ada8d0a1674877cdea"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/driver-triangle-m64.log",
+      "snapshot": "data/free-open/driver-triangle-m64.log",
+      "sha256": "0d796ec314acced18f3d0134095acce1685d1a03c12b6f985b01470e4d3956d7"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/driver-triangle-weighted-smoke-final.log",
+      "snapshot": "data/free-open/driver-triangle-weighted-smoke-final.log",
+      "sha256": "16e7339ca0fa57b13a5fc6e3d1b90f2561d3a543a43c76847d307108185c1317"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/driver-uniform-m64-aligned.json",
+      "snapshot": "data/free-open/driver-uniform-m64-aligned.json",
+      "sha256": "3494c802add4bfc51e7df0608a82bda27dac5a137db6649e0c15495a5bb53ed9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/driver-uniform-m64-aligned.log",
+      "snapshot": "data/free-open/driver-uniform-m64-aligned.log",
+      "sha256": "efcad489405054606e9fdc6f2c7313e61ed2b7b498e6e1d225eb061db11aab6f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/driver-uniform-m64.log",
+      "snapshot": "data/free-open/driver-uniform-m64.log",
+      "sha256": "7b7f569dea6f4bb3725ec1c92206b0c72ced282dc1d3777adb794e1b5d7e462e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/driver-uniform-m64z4096.json",
+      "snapshot": "data/free-open/driver-uniform-m64z4096.json",
+      "sha256": "c5d113f81dec2645caf4be9cf4965de711dfc43dc10e4611f9b3ce081df4d6de"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/driver-uniform-m64z4096.log",
+      "snapshot": "data/free-open/driver-uniform-m64z4096.log",
+      "sha256": "e61f970e6db75d52cff005ff4bee48f69ac2f4937d51fc656e4c21ec54a7d161"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/export_source_quadratures.py",
+      "snapshot": "data/free-open/export_source_quadratures.py",
+      "sha256": "a6421684dc5336b508e6be5352839ddc79e45c22d75d2e3b9545efe12e5a6ba4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/final-acceptance.json",
+      "snapshot": "data/free-open/final-acceptance.json",
+      "sha256": "6fc1f0fefa53d4188e1a025d12e730c13475fed5297e5a2c87fc43d3df997b79"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/.matplotlib/fontlist-v390.json",
+      "snapshot": "data/free-open/pipe-control/.matplotlib/fontlist-v390.json",
+      "sha256": "274ea5ecb90ef89c183660ed6779f6166ea095f526166b13bc75e9a13ab188b1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/HANDOFF.md",
+      "snapshot": "data/free-open/pipe-control/HANDOFF.md",
+      "sha256": "c4aac459cbe46f1bc60c7902f5b445c7607338ac42521dc2d25fecc116915163"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/analysis/controls.csv",
+      "snapshot": "data/free-open/pipe-control/analysis/controls.csv",
+      "sha256": "2700fcae3ffb6299f3d45d8a816fd3b6f7f0de060554d3c8473b7a5159b8eab2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/analysis/fields.csv",
+      "snapshot": "data/free-open/pipe-control/analysis/fields.csv",
+      "sha256": "d08d8a55526f55fc3f518c4eeefe16beff618f21a6adbec578a59b4dbae09ec2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/analysis/straight-pipe-control.pdf",
+      "snapshot": "data/free-open/pipe-control/analysis/straight-pipe-control.pdf",
+      "sha256": "dc195522dd42d681cd8fb012d8b6035aac4891b3c711878c739d8957c07d78ab"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/analysis/straight-pipe-control.png",
+      "snapshot": "data/free-open/pipe-control/analysis/straight-pipe-control.png",
+      "sha256": "dd27d274254af3e27dc56512dfef8f5b5f44aedf38dad2dc9b086611a46b5fe5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/analysis/summary.csv",
+      "snapshot": "data/free-open/pipe-control/analysis/summary.csv",
+      "sha256": "7446a2108d88569cc82109cf90bab76b4e35a83303928ecff44d51bdc5476518"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/analysis/validation.json",
+      "snapshot": "data/free-open/pipe-control/analysis/validation.json",
+      "sha256": "c020903981a39c67df6ff646b990abf542442d507df328f078b9bbc24d4b3beb"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/analysis/wall-fields.csv",
+      "snapshot": "data/free-open/pipe-control/analysis/wall-fields.csv",
+      "sha256": "13b1b78dfbb5a30e0ea2c838b4d478a2b48255819fe258f3ef56134284f3fae1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/analysis-final.log",
+      "snapshot": "data/free-open/pipe-control/analysis-final.log",
+      "sha256": "f3654b1eb739a8451fa2dec18d7ee5f2c2bdc1666b95697921a1e123852f837b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/analysis-final703.log",
+      "snapshot": "data/free-open/pipe-control/analysis-final703.log",
+      "sha256": "ebbd8226bcf4c17884f7ed379384341c3eb8180fd17efcf3fc44f47450e5b2f7"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/analysis.log",
+      "snapshot": "data/free-open/pipe-control/analysis.log",
+      "sha256": "794c75adf0fc44300161dc576609ef4d5bae3c9ed4f12818ab8d27ee11b79cae"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/analyze_control.py",
+      "snapshot": "data/free-open/pipe-control/analyze_control.py",
+      "sha256": "1a70e9f725dc64e2932a7cd4afc26b055a99dac0e0b041e2290f4593a63d955b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/native-driver.log",
+      "snapshot": "data/free-open/pipe-control/native-driver.log",
+      "sha256": "75a02fd5ec83b5e4bd1c454d6429e47f99349161cda386a6d0a9d0a0482752cd"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/native-final-driver.log",
+      "snapshot": "data/free-open/pipe-control/native-final-driver.log",
+      "sha256": "d299c5f788fd740003b2901f37abc9652b081db7c079627ce442209a758faf7c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/native-final703-driver.log",
+      "snapshot": "data/free-open/pipe-control/native-final703-driver.log",
+      "sha256": "bdccfa9e727b9eba8cbe07e518060421441c200e237988dde69f3951fe63cd19"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256/data/triangle_ElementPositions.py",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256/data/triangle_ElementPositions.py",
+      "sha256": "047a7a9801d9b529132b3812f5f8b83e4660e25cb44db5a6a6baceaedb81ef1b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256/manifest.json",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256/manifest.json",
+      "sha256": "dbd4eafea1756bcbb0a926043760f57a581b9ee128a698425d92839a3e9798c4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256/triangle.in",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256/triangle.in",
+      "sha256": "ab9dbfb354ee7cd19fdaddba2eba2371f730c9b97fb7baf7455d682cfb7e33d4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256/triangle.out",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256/triangle.out",
+      "sha256": "5ff7ec01e153c59ef1435d2061c7bc805bca6dae4ccbae771aac1e863862af11"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256/triangle.stat",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256/triangle.stat",
+      "sha256": "b1f9c5a4fb4cc951dc66de81123dd57e9ff5d83484a71b6d7a82b7d138bf3eaa"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final/data/triangle_ElementPositions.py",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final/data/triangle_ElementPositions.py",
+      "sha256": "047a7a9801d9b529132b3812f5f8b83e4660e25cb44db5a6a6baceaedb81ef1b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final/manifest.json",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final/manifest.json",
+      "sha256": "c8e33aa2ab2e9e571a12b2d5e25d1e5f3c555ee3d65531d7bdd1d6d537288e54"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final/triangle.in",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final/triangle.in",
+      "sha256": "ab9dbfb354ee7cd19fdaddba2eba2371f730c9b97fb7baf7455d682cfb7e33d4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final/triangle.out",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final/triangle.out",
+      "sha256": "35c25540edc22a16d6c58ef1ccd1a2d89f4ac98ed76745d215001e548d5307df"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final/triangle.stat",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final/triangle.stat",
+      "sha256": "b99cc496d4cdbedbacaedda3902801877d118b5f68d147c676e9260ae15aeb50"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final-probes/data/triangle_ElementPositions.py",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final-probes/data/triangle_ElementPositions.py",
+      "sha256": "047a7a9801d9b529132b3812f5f8b83e4660e25cb44db5a6a6baceaedb81ef1b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final-probes/manifest.json",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final-probes/manifest.json",
+      "sha256": "933e7dfcf03568cf033c76e7450440650ffec3d36efcfcc5f90533ded45d3274"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final-probes/triangle.in",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final-probes/triangle.in",
+      "sha256": "6a5e95b308cc2ad63aa669e94e8ccf554023d4a5c8b4429c54e0f4e2d855495a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final-probes/triangle.out",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final-probes/triangle.out",
+      "sha256": "6663a62b5c242e7673c510a849d0edf16d74990c58a74fcd3ecb87471d090e8f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final-probes/triangle.stat",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final-probes/triangle.stat",
+      "sha256": "09f8fe95cbdfa5d6d8c36da4ff72ac550b2f166a0cad78ae774470a613ffcb2e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final703/data/triangle_ElementPositions.py",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final703/data/triangle_ElementPositions.py",
+      "sha256": "047a7a9801d9b529132b3812f5f8b83e4660e25cb44db5a6a6baceaedb81ef1b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final703/manifest.json",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final703/manifest.json",
+      "sha256": "e1ae713caaa7e2daa0392c4347a65c95969e35d06eb356e5c9ac93e75a450b3f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final703/triangle.in",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final703/triangle.in",
+      "sha256": "ab9dbfb354ee7cd19fdaddba2eba2371f730c9b97fb7baf7455d682cfb7e33d4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final703/triangle.out",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final703/triangle.out",
+      "sha256": "cfcf080627420337cb2b371bd805c62548c2e47f15dfce7b37387fe4ec9b12da"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final703/triangle.stat",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final703/triangle.stat",
+      "sha256": "d7b157aea8466e117198987b6bb60f7e5cd23da1f69fa3d4ac1ec24ff9c05a32"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final703-probes/data/triangle_ElementPositions.py",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final703-probes/data/triangle_ElementPositions.py",
+      "sha256": "047a7a9801d9b529132b3812f5f8b83e4660e25cb44db5a6a6baceaedb81ef1b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final703-probes/manifest.json",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final703-probes/manifest.json",
+      "sha256": "c54c0e9e79169691aae17bbd6e8c8da9170af04f323fc398d2d3d876cf6658cd"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final703-probes/triangle.in",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final703-probes/triangle.in",
+      "sha256": "fd7c7ba686cdeb3890f9165a9b966a69603f9f586cd54f9ca4cdc7464566cb86"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final703-probes/triangle.out",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final703-probes/triangle.out",
+      "sha256": "71db94e8b42e9654fc448344477c188b096ed859ff80c584ab8b428fc1f57b55"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-final703-probes/triangle.stat",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-final703-probes/triangle.stat",
+      "sha256": "0d8e9662d06372680c653dd3e19e516d03321d4ff870449a481e588a3bfc388b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-probes/data/triangle_ElementPositions.py",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-probes/data/triangle_ElementPositions.py",
+      "sha256": "047a7a9801d9b529132b3812f5f8b83e4660e25cb44db5a6a6baceaedb81ef1b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-probes/manifest.json",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-probes/manifest.json",
+      "sha256": "734c201c2bff79e6a4d3e5e705db9aebad62987a605aa3f276d441e35c451bbf"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-probes/triangle.in",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-probes/triangle.in",
+      "sha256": "f0fbff152f5d82ab6b6bb41d162d147c3d782c2f837df9232c154b1f44e2258a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-probes/triangle.out",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-probes/triangle.out",
+      "sha256": "b4928455c36a968478b5708cc590e5306ff555dcc83e38c3c3c685b76a1f81fd"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/opalx/runs/pipe256-probes/triangle.stat",
+      "snapshot": "data/free-open/pipe-control/opalx/runs/pipe256-probes/triangle.stat",
+      "sha256": "cb06a30a85d967aa442555a0afcd215add2e980594893784ccb65ac5c685eeb6"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/provenance/helpers/analytic.py",
+      "snapshot": "data/free-open/pipe-control/provenance/helpers/analytic.py",
+      "sha256": "fcb93255f2eddd659a9a73047465758297cdb42b41c37d318b3f934c8378a55f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/provenance/helpers/prepare_common.py",
+      "snapshot": "data/free-open/pipe-control/provenance/helpers/prepare_common.py",
+      "sha256": "1be01513fa1846df1bbed29d06645b5c0f691ece19de45481bd56f8885928a2d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/provenance/helpers/pyorbit_run_native.py",
+      "snapshot": "data/free-open/pipe-control/provenance/helpers/pyorbit_run_native.py",
+      "sha256": "9999de9ff21e51e63d02296a6dcc2a13944ac1888238dc94fa09292956bf73f6"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/provenance/helpers/run_opalx.py",
+      "snapshot": "data/free-open/pipe-control/provenance/helpers/run_opalx.py",
+      "sha256": "5022bdf64b7adae3cddc73e3c94fe9a8f105723628bc30f3507cf6a37e857a40"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/provenance/licenses/OPALX-LICENSE",
+      "snapshot": "data/free-open/pipe-control/provenance/licenses/OPALX-LICENSE",
+      "sha256": "59fe1b4aa9eafe4fae6e0392c83c4ba2ccd9b72efca2953479862db282717050"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/provenance/licenses/PyORBIT3-LICENSE.txt",
+      "snapshot": "data/free-open/pipe-control/provenance/licenses/PyORBIT3-LICENSE.txt",
+      "sha256": "6ecf884db92999f36a7f3a27ac567ed9f7e3474360d8a55ae80f77ed4ffb316d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/provenance/path-mapping.json",
+      "snapshot": "data/free-open/pipe-control/provenance/path-mapping.json",
+      "sha256": "c0a96a6187f61691595092f4e3462b9b6203f8b29653311b78da406f6bd8a2d5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/provenance/pyorbit-package/INSTALLER",
+      "snapshot": "data/free-open/pipe-control/provenance/pyorbit-package/INSTALLER",
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/provenance/pyorbit-package/METADATA",
+      "snapshot": "data/free-open/pipe-control/provenance/pyorbit-package/METADATA",
+      "sha256": "faf8858b242239c5955a269b43b57957ad06e47248924b90898e5bdc62e89d5f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/provenance/pyorbit-package/REQUESTED",
+      "snapshot": "data/free-open/pipe-control/provenance/pyorbit-package/REQUESTED",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/provenance/pyorbit-package/WHEEL",
+      "snapshot": "data/free-open/pipe-control/provenance/pyorbit-package/WHEEL",
+      "sha256": "ae0ad7b2b2825be0d3e9260ead4bdc777493ab28f32fda6cdb97bbfb6a258993"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/provenance/pyorbit-package/direct_url.json",
+      "snapshot": "data/free-open/pipe-control/provenance/pyorbit-package/direct_url.json",
+      "sha256": "1c8c7401bbad792e611f26b44f8f5ef5552c0475dd7b9d8b799aa5ef25723694"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/rb-r1/launch.json",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/rb-r1/launch.json",
+      "sha256": "5d02cd3128440436e9c91dd16590ef4b48d416e6e8bec87008b9a143f0ba81d2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/rb-r1/manifest-rank0.json",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/rb-r1/manifest-rank0.json",
+      "sha256": "f4100c0a4fc129a2ffb97cce2c3fd3c0f32a28053ae7e18855bc88a1b6f08a1b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/rb-r1/probes-rank0.csv",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/rb-r1/probes-rank0.csv",
+      "sha256": "56e571ff27b647c0c524cbc8cd1baa68df961b305e2e650028ac46ee24588ff9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/rb-r1/run.log",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/rb-r1/run.log",
+      "sha256": "fbe82616ecc8729cb4e48b4b9446552ee58f8044e5b5ffd1021750354b86b0da"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/rb-r2/launch.json",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/rb-r2/launch.json",
+      "sha256": "fdf4d99410d9be88888c8c5bbc789561307ae20016216b6a46b4c5d323a2abe6"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/rb-r2/manifest-rank0.json",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/rb-r2/manifest-rank0.json",
+      "sha256": "17940441b73453fc5c2ca8e99e0380334c04dbc28615bfe244e1b5bf90c17ffe"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/rb-r2/manifest-rank1.json",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/rb-r2/manifest-rank1.json",
+      "sha256": "99229168691fdf1b51b732cdc369ca735f2dbe71408e2a75e5ffb84356a7aaab"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/rb-r2/probes-rank0.csv",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/rb-r2/probes-rank0.csv",
+      "sha256": "4ce934dd2387eb7fe784a53b86c70d2e2f6c16e998fc8f3df609e9cf84fe5ee1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/rb-r2/probes-rank1.csv",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/rb-r2/probes-rank1.csv",
+      "sha256": "77ba45150248b2a418fa03536b262291759c12c31417ac6c66a9c757f199d7d0"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/rb-r2/run.log",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/rb-r2/run.log",
+      "sha256": "7563e9a0bfa0ddd4d94458fcff7f5c5200ab8fd0e5d26eb912034b80c8a576e0"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/slice-r1/launch.json",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/slice-r1/launch.json",
+      "sha256": "1db8ea98bd4a5c968c181403f900072572d4a45a7eab9c568d5f69e66abb0124"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/slice-r1/manifest-rank0.json",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/slice-r1/manifest-rank0.json",
+      "sha256": "77361e826b79e93b35a24059ded31ed60a618bc27268b6f826c2826e1c1cffdd"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/slice-r1/probes-rank0.csv",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/slice-r1/probes-rank0.csv",
+      "sha256": "eccb4c5cc12637b93bf617a068fea7473bc10bb0e6aacb0fa6318796465347d4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/slice-r1/run.log",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/slice-r1/run.log",
+      "sha256": "bf8563abcaa0547dc4dff7854e58f43fc3dc05eea8e395193629442de8a168c8"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/slice-r2/launch.json",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/slice-r2/launch.json",
+      "sha256": "997b594f6c4ee1078d60f7118c671e6d35c55cacb6fc0fcbd6a766df52d46ad2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/slice-r2/manifest-rank0.json",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/slice-r2/manifest-rank0.json",
+      "sha256": "29fde2c565fdfa938888a03cc28481faaaa00f466feb3a136994a2296136608c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/slice-r2/manifest-rank1.json",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/slice-r2/manifest-rank1.json",
+      "sha256": "4ad8a4979b2e36a9e9abcb013e2e7429f3a9dfba4277f0934fcc4ade4877ec90"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/slice-r2/probes-rank0.csv",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/slice-r2/probes-rank0.csv",
+      "sha256": "d89fcccb5d67795ec16b49a33217c96f6bb6fb5901f2bd80e9423d21d1157897"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/slice-r2/probes-rank1.csv",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/slice-r2/probes-rank1.csv",
+      "sha256": "8fc0c48814d83c7d240d2be8e099ef01e21cba94660bceeb0b709564e2b5a9f9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/slice-r2/run.log",
+      "snapshot": "data/free-open/pipe-control/pyorbit/runs/slice-r2/run.log",
+      "sha256": "ad1afccef064b4d032c7d03178151e6a9ed14d1c61ad5d4316e9b41e7f1ca97c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit-driver.log",
+      "snapshot": "data/free-open/pipe-control/pyorbit-driver.log",
+      "sha256": "68ac1ab20034da1c22e893b0bce80ff53f27468023511ee6f0d4c6ea261b4602"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/run_control.py",
+      "snapshot": "data/free-open/pipe-control/run_control.py",
+      "sha256": "c5261e6f8e45e5a52047ba9d7b293b98d00a41aa316a30ca121fb2cf85b1fa18"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall/full/data/triangle_ElementPositions.py",
+      "snapshot": "data/free-open/pipe-control/wall/full/data/triangle_ElementPositions.py",
+      "sha256": "047a7a9801d9b529132b3812f5f8b83e4660e25cb44db5a6a6baceaedb81ef1b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall/full/manifest.json",
+      "snapshot": "data/free-open/pipe-control/wall/full/manifest.json",
+      "sha256": "3fd3879ae8ee67bfb1d273b7941bddc6d475e6eda2f677bd566ab025e60cf027"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall/full/triangle.in",
+      "snapshot": "data/free-open/pipe-control/wall/full/triangle.in",
+      "sha256": "21c2cd28a8be1cca672fa22677055a42234d8d1b8b187079c7265195cca9f819"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall/full/triangle.out",
+      "snapshot": "data/free-open/pipe-control/wall/full/triangle.out",
+      "sha256": "61c7fbeee38d7b69a7f6fb64400d69e4d589931c8f166eb807358ca8c2eb623b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall/full/triangle.stat",
+      "snapshot": "data/free-open/pipe-control/wall/full/triangle.stat",
+      "sha256": "33e96c54f7b682816f4e4e0fbcd794089ae49034230166cdc3820951d7b5ee7a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall/probes/data/triangle_ElementPositions.py",
+      "snapshot": "data/free-open/pipe-control/wall/probes/data/triangle_ElementPositions.py",
+      "sha256": "047a7a9801d9b529132b3812f5f8b83e4660e25cb44db5a6a6baceaedb81ef1b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall/probes/manifest.json",
+      "snapshot": "data/free-open/pipe-control/wall/probes/manifest.json",
+      "sha256": "8ae76a0b3363a0126bd8954b6b71cef1fbf0352d88121359d8cc5aed9f59f0a8"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall/probes/triangle.in",
+      "snapshot": "data/free-open/pipe-control/wall/probes/triangle.in",
+      "sha256": "0847263967305a22bcc51f8050a02dd71dac69d1b6ad395163c1b4cce384b65e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall/probes/triangle.out",
+      "snapshot": "data/free-open/pipe-control/wall/probes/triangle.out",
+      "sha256": "9250bba1175b5f82061dcc1d1633e41d27074f5b09ec472ad842bbf2d1b1fdc9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall/probes/triangle.stat",
+      "snapshot": "data/free-open/pipe-control/wall/probes/triangle.stat",
+      "sha256": "0b14ee6e9c0c1bd48614ddd5dff5348d8c0d2eb1ac8259649e52784685f0a9db"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-driver.log",
+      "snapshot": "data/free-open/pipe-control/wall-driver.log",
+      "sha256": "0f62149640b552e4d8b16481c835c14596f6beffcb6875fa82a2eaa6d438c273"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final/full/data/triangle_ElementPositions.py",
+      "snapshot": "data/free-open/pipe-control/wall-final/full/data/triangle_ElementPositions.py",
+      "sha256": "047a7a9801d9b529132b3812f5f8b83e4660e25cb44db5a6a6baceaedb81ef1b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final/full/manifest.json",
+      "snapshot": "data/free-open/pipe-control/wall-final/full/manifest.json",
+      "sha256": "7a985705e7a2410dce3158d29889c175e3f2789ea60cee50bbd26864d9f36923"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final/full/triangle.in",
+      "snapshot": "data/free-open/pipe-control/wall-final/full/triangle.in",
+      "sha256": "21c2cd28a8be1cca672fa22677055a42234d8d1b8b187079c7265195cca9f819"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final/full/triangle.out",
+      "snapshot": "data/free-open/pipe-control/wall-final/full/triangle.out",
+      "sha256": "133ffd7612c777dc93c5c40eed0429a3c630d9d60d8dc192828f36fbbe44a1b9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final/full/triangle.stat",
+      "snapshot": "data/free-open/pipe-control/wall-final/full/triangle.stat",
+      "sha256": "b1e14a2e61fbd3ebfcea6a3f8c4b202e4e564a5a3f7805cb40b2609b29349902"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final/probes/data/triangle_ElementPositions.py",
+      "snapshot": "data/free-open/pipe-control/wall-final/probes/data/triangle_ElementPositions.py",
+      "sha256": "047a7a9801d9b529132b3812f5f8b83e4660e25cb44db5a6a6baceaedb81ef1b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final/probes/manifest.json",
+      "snapshot": "data/free-open/pipe-control/wall-final/probes/manifest.json",
+      "sha256": "e1e7824ea3b99b55da074e66d0de6910109bcca7afad697acc5849eaa4e2140b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final/probes/triangle.in",
+      "snapshot": "data/free-open/pipe-control/wall-final/probes/triangle.in",
+      "sha256": "8ff931f11cbe25e2c6978ccbf11f343c500c9ac0ef682a09d07b8ffc042b70fd"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final/probes/triangle.out",
+      "snapshot": "data/free-open/pipe-control/wall-final/probes/triangle.out",
+      "sha256": "5ece1b8478424792998987fd36faf954b32b2e2dacf1598f3d3496a91b79dd94"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final/probes/triangle.stat",
+      "snapshot": "data/free-open/pipe-control/wall-final/probes/triangle.stat",
+      "sha256": "3100ba2a63a6646b7944111a9bda494b72d7d6a67665d25454b9700e9107fdb7"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final-driver.log",
+      "snapshot": "data/free-open/pipe-control/wall-final-driver.log",
+      "sha256": "a454e0fdcf0b48d3d73227c4ed0aa221e3980d675710ad995797020330940dd3"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final703/full/data/triangle_ElementPositions.py",
+      "snapshot": "data/free-open/pipe-control/wall-final703/full/data/triangle_ElementPositions.py",
+      "sha256": "047a7a9801d9b529132b3812f5f8b83e4660e25cb44db5a6a6baceaedb81ef1b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final703/full/manifest.json",
+      "snapshot": "data/free-open/pipe-control/wall-final703/full/manifest.json",
+      "sha256": "e4d4f4a1d9fe93527fbc50d40887bee63a5b1fee01423529f3633c266dd64b49"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final703/full/triangle.in",
+      "snapshot": "data/free-open/pipe-control/wall-final703/full/triangle.in",
+      "sha256": "21c2cd28a8be1cca672fa22677055a42234d8d1b8b187079c7265195cca9f819"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final703/full/triangle.out",
+      "snapshot": "data/free-open/pipe-control/wall-final703/full/triangle.out",
+      "sha256": "d3f04bd146bf7e9687169aefa9a497136adb70cc95429d4d489f13db4d8987b7"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final703/full/triangle.stat",
+      "snapshot": "data/free-open/pipe-control/wall-final703/full/triangle.stat",
+      "sha256": "aacb465723bbdfdefb430a51014d574b5b393298fde7254e5f5d2265b9c2e57a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final703/probes/data/triangle_ElementPositions.py",
+      "snapshot": "data/free-open/pipe-control/wall-final703/probes/data/triangle_ElementPositions.py",
+      "sha256": "047a7a9801d9b529132b3812f5f8b83e4660e25cb44db5a6a6baceaedb81ef1b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final703/probes/manifest.json",
+      "snapshot": "data/free-open/pipe-control/wall-final703/probes/manifest.json",
+      "sha256": "14ad5ff76d592c27121b37af292fb700d230fb5953cdddd827e8d40122993076"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final703/probes/triangle.in",
+      "snapshot": "data/free-open/pipe-control/wall-final703/probes/triangle.in",
+      "sha256": "2a202dfe216c9281f09dee23c7ac62dc0d1cceabd3986021eb634b93b16e3407"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final703/probes/triangle.out",
+      "snapshot": "data/free-open/pipe-control/wall-final703/probes/triangle.out",
+      "sha256": "5397cd854c29468fd04d8e604d6811f4c3113f1e0e54c0d12e967052f83f984b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final703/probes/triangle.stat",
+      "snapshot": "data/free-open/pipe-control/wall-final703/probes/triangle.stat",
+      "sha256": "ddedd184f48ac842fab2f0f9b6ab9b15b191abdcec45bae3746b7386b03432ca"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/wall-final703-driver.log",
+      "snapshot": "data/free-open/pipe-control/wall-final703-driver.log",
+      "sha256": "5e950d4563db519d51351a4a2a06be016f35ed6a177b479218334d32034bb16d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/build-request-b9a.json",
+      "snapshot": "data/free-open/provenance/build-request-b9a.json",
+      "sha256": "64066f6a09d5e20dc6e2b1bad914a04b57b9d7f5ab2bcb4311a3cc3f34a99fdf"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/build-request.json",
+      "snapshot": "data/free-open/provenance/build-request.json",
+      "sha256": "a8203dcfd62e5ea8edc7f7b8350bc74342821f3df4ab1f610a3ab826f5622972"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/final-build-b9a.json",
+      "snapshot": "data/free-open/provenance/final-build-b9a.json",
+      "sha256": "8c751bd82d4a71b065a43882a6491c227fee2561d9689f93ed9d70e6406715e7"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/final-build.json",
+      "snapshot": "data/free-open/provenance/final-build.json",
+      "sha256": "3ad14932d823043bff37c02a6f1dce767fd49e3543be32fd2be806323a1f7384"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/implementation-b9a.patch",
+      "snapshot": "data/free-open/provenance/implementation-b9a.patch",
+      "sha256": "ea43305c4f6fdb1f3c1edc2910d82231d10eebccfbded480f8f5d2e113cea710"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/implementation.patch",
+      "snapshot": "data/free-open/provenance/implementation.patch",
+      "sha256": "ea43305c4f6fdb1f3c1edc2910d82231d10eebccfbded480f8f5d2e113cea710"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/source/src/Algorithms/ParallelTracker.cpp",
+      "snapshot": "data/free-open/provenance/source/src/Algorithms/ParallelTracker.cpp",
+      "sha256": "767a212fdbbfd46c90ba928befb061f313cbdbbca75accd9fd3cef04645e2e05"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/source/src/Algorithms/README.md",
+      "snapshot": "data/free-open/provenance/source/src/Algorithms/README.md",
+      "sha256": "b92c417f94d1644292e50cf202973b5a7214834867611e1163f60f0479fc5e28"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/source/src/SpaceCharge/FFT2D5/FFT2D5FreeSpace.cpp",
+      "snapshot": "data/free-open/provenance/source/src/SpaceCharge/FFT2D5/FFT2D5FreeSpace.cpp",
+      "sha256": "e8db67d653caeddba1cbab26ad70ad7a059011da27b4cd48876cda9a7aec08d0"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/source/src/SpaceCharge/FFT2D5/FFT2D5FreeSpace.h",
+      "snapshot": "data/free-open/provenance/source/src/SpaceCharge/FFT2D5/FFT2D5FreeSpace.h",
+      "sha256": "1c311451d6524fd6f03e3a97ca08b341fe74cfed0f4a1c41b16a3df9c8ffbc65"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/source/src/SpaceCharge/FFT2D5/FFT2D5FreeSpaceKernel.h",
+      "snapshot": "data/free-open/provenance/source/src/SpaceCharge/FFT2D5/FFT2D5FreeSpaceKernel.h",
+      "sha256": "2143ae7d2502b077f1e80b68e8b237955c415cab2a64cae29b81c41cc14b2a92"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/source/src/SpaceCharge/FFT2D5/FFT2D5Geometry.cpp",
+      "snapshot": "data/free-open/provenance/source/src/SpaceCharge/FFT2D5/FFT2D5Geometry.cpp",
+      "sha256": "d314a6aaff7f3f842c3b0f0f2688bf9942bbb3614df1a537b41dd488bd12ff6a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/source/src/SpaceCharge/FFT2D5/FFT2D5Geometry.h",
+      "snapshot": "data/free-open/provenance/source/src/SpaceCharge/FFT2D5/FFT2D5Geometry.h",
+      "sha256": "ca0f6c80534e866ebc6d3756e9d0f62f6d7ca2c337fc04fd02c161eadbfd8531"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/source/unit_tests/SpaceCharge/TestFFT2D5FreeSpace.cpp",
+      "snapshot": "data/free-open/provenance/source/unit_tests/SpaceCharge/TestFFT2D5FreeSpace.cpp",
+      "sha256": "59bb4cddfc15c7ecc8abcfceb636025a1b4b3cfc8c77f25e5235d42c4cb80c45"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/source/unit_tests/SpaceCharge/TestFFT2D5Geometry.cpp",
+      "snapshot": "data/free-open/provenance/source/unit_tests/SpaceCharge/TestFFT2D5Geometry.cpp",
+      "sha256": "868fff17d935e5475643b2464a6d9fd48c24195736776d902b6231f03404171c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/sources-before-build-b9a.json",
+      "snapshot": "data/free-open/provenance/sources-before-build-b9a.json",
+      "sha256": "0e0a8485a9bf58dd8860c789aa610b67cd622e5fd66acc3564a7611be5ffdf54"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/sources-before-build.json",
+      "snapshot": "data/free-open/provenance/sources-before-build.json",
+      "sha256": "01056056e3843741ab5fc50a5118cdcf75e2328dc367bc5e4f2ea64051b69545"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/provenance/weighted-checkpoint-preservation.patch",
+      "snapshot": "data/free-open/provenance/weighted-checkpoint-preservation.patch",
+      "sha256": "07efb78bd38c16ef5ffc7d66894d66fe1da937b37b2d8a0b249c1955bdcd4926"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/qualify-results-final.log",
+      "snapshot": "data/free-open/qualify-results-final.log",
+      "sha256": "0f4451c222f71f0db27d641aeaa6b2605b378c52618e6cb5f15bd994f1b1af30"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/qualify_results.py",
+      "snapshot": "data/free-open/qualify_results.py",
+      "sha256": "576930b0efebecd977af908adc476cd61fa1a6bad72fdbbfb6a7cff5cac3c360"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/HANDOFF.md",
+      "snapshot": "data/free-open/reference/HANDOFF.md",
+      "sha256": "5cbbcacd9255346372e0526e919990dcededc81f6614be1a13879379373c7cdc"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/MODEL.md",
+      "snapshot": "data/free-open/reference/MODEL.md",
+      "sha256": "8c321b486d16c4078090b270535794233ac391d09a1fd2d2c1a76f8637adae9a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/acceptance.json",
+      "snapshot": "data/free-open/reference/acceptance.json",
+      "sha256": "58c996108c12ad9adad4302cd86166d031b7994a3f6ef4d7a19d8ffcd4bc0753"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/build_reference.py",
+      "snapshot": "data/free-open/reference/build_reference.py",
+      "sha256": "7c67099004d9960a96f131ee450abab93f98e64a8761e7ec1053222f8deec881"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/cell_source_quadrature_checks.csv",
+      "snapshot": "data/free-open/reference/cell_source_quadrature_checks.csv",
+      "sha256": "0078a37b60bab586de925b966478d40b1e2eef3cbdb68ca707d16b1d7fbc1257"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/charge_checks.csv",
+      "snapshot": "data/free-open/reference/charge_checks.csv",
+      "sha256": "6ed234d1d08a423a84219db9c373bbf71a6a65878e6cf51b43129024a791c563"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/fields_reference.csv",
+      "snapshot": "data/free-open/reference/fields_reference.csv",
+      "sha256": "2d531b0438165032e5361431ee703e4169121c1beac0d5e84d62aa3dcc2ba2d7"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/pde_checks.csv",
+      "snapshot": "data/free-open/reference/pde_checks.csv",
+      "sha256": "63ccdda98658ee28b6a84d399a5f37b7e8599303a8f147dfc7ecb41118c899ee"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/points.csv",
+      "snapshot": "data/free-open/reference/points.csv",
+      "sha256": "cd9b348db34c0a2919240ceb364c20b6c1720b0146e565a56028260b1d496bfd"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/points_extended.csv",
+      "snapshot": "data/free-open/reference/points_extended.csv",
+      "sha256": "5db3d25964f7ba296bc5adaf8a102ad0ee6f5bad77f9f864fc74af4ce4eab46a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/primitive_checks.csv",
+      "snapshot": "data/free-open/reference/primitive_checks.csv",
+      "sha256": "576924524ad5cba13f4c47ec7d1ae338fefece564441524254ac64ce0c5776c2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/profile_reference.py",
+      "snapshot": "data/free-open/reference/profile_reference.py",
+      "sha256": "8c9dc4004dd65f818be688e674b57b923e19ba959b9eb9c928f90d09386825ae"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/quadrature_changes.csv",
+      "snapshot": "data/free-open/reference/quadrature_changes.csv",
+      "sha256": "b44aa53aebd5ce40395aa736b0f118a4101e3ad8027db111441fc2f3daf51c13"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/quadrature_fields.csv",
+      "snapshot": "data/free-open/reference/quadrature_fields.csv",
+      "sha256": "ebcfef1e936c39f4baf54413f24a1f814313d32583aa93dfb450e3ee8bae8028"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/radial_quadrature_checks.csv",
+      "snapshot": "data/free-open/reference/radial_quadrature_checks.csv",
+      "sha256": "00d7a3087fd184990a2caf1169cc8591f2fb756f4dcfc89bd6a2a99bc85c04fd"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/symmetry_checks.csv",
+      "snapshot": "data/free-open/reference/symmetry_checks.csv",
+      "sha256": "f1c8de98e4acd307ac595e9b088f756ec28901b7bdf50331e7e045ef2b3eb224"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/triangle_fields_reference.csv",
+      "snapshot": "data/free-open/reference/triangle_fields_reference.csv",
+      "sha256": "2797950954a4ed8c5bb3ef7f7fcc608c9237d57afdcfe0aea14304f278360450"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/uniform_fields_reference.csv",
+      "snapshot": "data/free-open/reference/uniform_fields_reference.csv",
+      "sha256": "c1dafc0cc29d372ad205807e5a42443e5027437483ee770e7f45a95d26b8b115"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/uniform_previous_checks.csv",
+      "snapshot": "data/free-open/reference/uniform_previous_checks.csv",
+      "sha256": "65bd33e945d60bedca6377494e3b84313908ed8b4627cc27035336966c3bd84a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/uniform_reference.py",
+      "snapshot": "data/free-open/reference/uniform_reference.py",
+      "sha256": "358010db71fb4532a3ccfe47ba619486e27e9298ac770831d8eb4e8bf17c7213"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/volume_checks.csv",
+      "snapshot": "data/free-open/reference/volume_checks.csv",
+      "sha256": "e839c6e0048559ea826f2f7921fb3f9233fa1014b49868732ca1d56727d3adca"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/run_grid_study.py",
+      "snapshot": "data/free-open/run_grid_study.py",
+      "sha256": "833789fda37601fd56892edccb0703ca8a1afd649f16aea543475cf1eacd00a4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/run_study.py",
+      "snapshot": "data/free-open/run_study.py",
+      "sha256": "6b48bd3613451aaac40491e975e15461e0d59e0c3ec9eeda4263c25a895bcecd"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/run_weighted_study.py",
+      "snapshot": "data/free-open/run_weighted_study.py",
+      "sha256": "d1834ad1f237298da362737bdd895473b0f20131b17d7271377bdc6c1aaa6260"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-m64-final/manifest.json",
+      "snapshot": "data/free-open/runs/triangle-cell-m64-final/manifest.json",
+      "sha256": "bf24c52a9575d0d52917a1c19e0b2c215f4ddefbfce18ae915dc5068c01e7329"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-m64-final/tube.in",
+      "snapshot": "data/free-open/runs/triangle-cell-m64-final/tube.in",
+      "sha256": "6866de6946a6977356b27cea58b2bd460938a49ca559231d5a9e669ebe628a7e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-m64-final/tube.out",
+      "snapshot": "data/free-open/runs/triangle-cell-m64-final/tube.out",
+      "sha256": "686c80c870e8ef6c81acd520ee4770fba70890c4c6044d4041b78e17dbfe015c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-m64-final/tube.stat",
+      "snapshot": "data/free-open/runs/triangle-cell-m64-final/tube.stat",
+      "sha256": "b4fcdde3728cf2c4a3a44482274d144f8d84c9839eb4335c17cf1e21fe6e0ddf"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-m64-final-probes/manifest.json",
+      "snapshot": "data/free-open/runs/triangle-cell-m64-final-probes/manifest.json",
+      "sha256": "2b85193102d1bbb11e7597e6f76556cc291bd4e937c89121d0b95572db3d53a9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-m64-final-probes/tube.in",
+      "snapshot": "data/free-open/runs/triangle-cell-m64-final-probes/tube.in",
+      "sha256": "ef3a6e3d6bec7008fb9e935a1d62be806ba15ada3279bb77078529487a822284"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-m64-final-probes/tube.out",
+      "snapshot": "data/free-open/runs/triangle-cell-m64-final-probes/tube.out",
+      "sha256": "07b0d676d4e3ee20f723d907afeb239c48219452ecb56b3f8a156590f6105584"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-m64-final-probes/tube.stat",
+      "snapshot": "data/free-open/runs/triangle-cell-m64-final-probes/tube.stat",
+      "sha256": "0c9f398776cc6000594b0d43cec5edcf02f2ad4f78e1640414abc863184eae30"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z2048-final/manifest.json",
+      "snapshot": "data/free-open/runs/triangle-cell-z2048-final/manifest.json",
+      "sha256": "344df4a15dfbfc28052853aca3dea6b0b451cbaaff22845630866fc4ffa558a7"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z2048-final/tube.in",
+      "snapshot": "data/free-open/runs/triangle-cell-z2048-final/tube.in",
+      "sha256": "2c68da8caa45d38159fa26cc25d7cda69386dbf52a38ee0229d1658495017e90"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z2048-final/tube.out",
+      "snapshot": "data/free-open/runs/triangle-cell-z2048-final/tube.out",
+      "sha256": "85c853830eb2589a24ed827e7a26ef87dd21069733759be8d6ad5041098cad2a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z2048-final/tube.stat",
+      "snapshot": "data/free-open/runs/triangle-cell-z2048-final/tube.stat",
+      "sha256": "b0cd2f09e955e2233d1f8f3e3b8d37623a3b130b4d658abed98c45ba3413139d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z2048-final-probes/manifest.json",
+      "snapshot": "data/free-open/runs/triangle-cell-z2048-final-probes/manifest.json",
+      "sha256": "458aab69d9e9bc763adf3df8f80de7cfc60d1df2a59051986d9e9828c71eb028"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z2048-final-probes/tube.in",
+      "snapshot": "data/free-open/runs/triangle-cell-z2048-final-probes/tube.in",
+      "sha256": "dcc01f7f5d4f0dfa2106c33b141741c724b7c893bc1a8630e0b995b13c2b9a1e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z2048-final-probes/tube.out",
+      "snapshot": "data/free-open/runs/triangle-cell-z2048-final-probes/tube.out",
+      "sha256": "742b3cbfdf7ed0a39ef273e582631c33280db6be3446a7ebae242f3f927d697f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z2048-final-probes/tube.stat",
+      "snapshot": "data/free-open/runs/triangle-cell-z2048-final-probes/tube.stat",
+      "sha256": "7bdf3c8ff524318c283c6f48617aa8b3168e307b5bf84c7d90d2f05c0a13dfd5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z4096-final/manifest.json",
+      "snapshot": "data/free-open/runs/triangle-cell-z4096-final/manifest.json",
+      "sha256": "5f0624667d621d30b98d967631027b0c6fb42c9888aa828ea506ebb4c338a644"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z4096-final/tube.in",
+      "snapshot": "data/free-open/runs/triangle-cell-z4096-final/tube.in",
+      "sha256": "67284f5daba04b0bef28c40d1a6d5995ef63516d340c9bb25b718d947da51357"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z4096-final/tube.out",
+      "snapshot": "data/free-open/runs/triangle-cell-z4096-final/tube.out",
+      "sha256": "8f12bb3dd58d9d8e7578e57f3cff0ea1c8b8fc332f3a4a4abfc10796ab4fc1e6"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z4096-final/tube.stat",
+      "snapshot": "data/free-open/runs/triangle-cell-z4096-final/tube.stat",
+      "sha256": "3b48e76f52a2eaff6b957c5f732219eda631ed5e0cca71aadf8a0b895b1b1560"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z4096-final-probes/manifest.json",
+      "snapshot": "data/free-open/runs/triangle-cell-z4096-final-probes/manifest.json",
+      "sha256": "b5efbca6fec3f43995cbbcee7be33b8ce90c4ba66ae848f9181523eeb7ab7200"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z4096-final-probes/tube.in",
+      "snapshot": "data/free-open/runs/triangle-cell-z4096-final-probes/tube.in",
+      "sha256": "10c4d09bbd6b700a4dfabb61b264feac012364cd582bf0590f722134791dafd9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z4096-final-probes/tube.out",
+      "snapshot": "data/free-open/runs/triangle-cell-z4096-final-probes/tube.out",
+      "sha256": "a902f50fccf0e99242b68fe50ad55d5a3ef0ec5c8e75337d1f6fa7d7f5422a19"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z4096-final-probes/tube.stat",
+      "snapshot": "data/free-open/runs/triangle-cell-z4096-final-probes/tube.stat",
+      "sha256": "3ca36a2b9e77403a6bdfbf766f04bb0112465094ae2a4091a1810779bea8edf9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z8192-final/manifest.json",
+      "snapshot": "data/free-open/runs/triangle-cell-z8192-final/manifest.json",
+      "sha256": "d8ac2cbb536dcb4a8d5393b257d87a72338225679a73b888e988cd0e69e00f0e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z8192-final/tube.in",
+      "snapshot": "data/free-open/runs/triangle-cell-z8192-final/tube.in",
+      "sha256": "25f441ab3156a79cf4b932dfef153057830c7e33f775b2d677d8777ca8dbff70"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z8192-final/tube.out",
+      "snapshot": "data/free-open/runs/triangle-cell-z8192-final/tube.out",
+      "sha256": "e98d3325e78284f774dfc240d32daa3e0ae79a30341b17aa07ed479e1672bf41"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z8192-final/tube.stat",
+      "snapshot": "data/free-open/runs/triangle-cell-z8192-final/tube.stat",
+      "sha256": "a0557f3edd49ba9f2bc5099490b7d9efcf1d3716f0b1d6e5396e1804196adfbd"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z8192-final-probes/manifest.json",
+      "snapshot": "data/free-open/runs/triangle-cell-z8192-final-probes/manifest.json",
+      "sha256": "e24ae978bf3652aeb5b7ef9f0e14dbb914a7f29a7abf2b54bddf8d59c8be6d7c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z8192-final-probes/tube.in",
+      "snapshot": "data/free-open/runs/triangle-cell-z8192-final-probes/tube.in",
+      "sha256": "1299390f2c2efc1c22a55f883466bc61bb0938bfe2da431667344513266aff2f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z8192-final-probes/tube.out",
+      "snapshot": "data/free-open/runs/triangle-cell-z8192-final-probes/tube.out",
+      "sha256": "f609850870ed4179807a84cc9ddb81c38dbbb7bc1ea39084080bcaa4c419117c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-cell-z8192-final-probes/tube.stat",
+      "snapshot": "data/free-open/runs/triangle-cell-z8192-final-probes/tube.stat",
+      "sha256": "0515fc4c175225f7210047484f78ba9128a8530d478475d09060ff96ed224238"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-control-mesh96-final/manifest.json",
+      "snapshot": "data/free-open/runs/triangle-control-mesh96-final/manifest.json",
+      "sha256": "7fc4e31387610bedf9f3d68fd3a016f1956d0b455cf13daf54fb1f78d069efe8"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-control-mesh96-final/tube.in",
+      "snapshot": "data/free-open/runs/triangle-control-mesh96-final/tube.in",
+      "sha256": "fa80080f262c9d19cfac750bbc5fce07f697880a4f5a9563fb1f35edd71b5158"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-control-mesh96-final/tube.out",
+      "snapshot": "data/free-open/runs/triangle-control-mesh96-final/tube.out",
+      "sha256": "8d744c1844548927b4d22e5cf15393a8e49a50fe81f59c932994d583ff3177f7"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-control-mesh96-final/tube.stat",
+      "snapshot": "data/free-open/runs/triangle-control-mesh96-final/tube.stat",
+      "sha256": "fbb4315e86c5770e5c869236bbd14988636e75e92ee3e04b27e030830704847e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-control-mesh96-final-probes/manifest.json",
+      "snapshot": "data/free-open/runs/triangle-control-mesh96-final-probes/manifest.json",
+      "sha256": "1a4d8febe0a6bcb9c817a4a4159bbe0940222c8e2b50fcbeca3a0ffb7596b01b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-control-mesh96-final-probes/tube.in",
+      "snapshot": "data/free-open/runs/triangle-control-mesh96-final-probes/tube.in",
+      "sha256": "95b5530af83264c847241a6967e18480745fdbbb13ba39d4fc2365ef7d1bc0bc"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-control-mesh96-final-probes/tube.out",
+      "snapshot": "data/free-open/runs/triangle-control-mesh96-final-probes/tube.out",
+      "sha256": "0cd620e2dbceef7c02add169ccbd0207db1c0311b4d02f287f79f4beb3901b7b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-control-mesh96-final-probes/tube.stat",
+      "snapshot": "data/free-open/runs/triangle-control-mesh96-final-probes/tube.stat",
+      "sha256": "c0c27cddfd8cdad4ae9ba2deb6121842a9550455edfe9c6bd3b5990aa6ca4022"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-control-source96-final/manifest.json",
+      "snapshot": "data/free-open/runs/triangle-control-source96-final/manifest.json",
+      "sha256": "b48e6e30ab78f49e41450bcef0a6bdfa273f64927862d208224715843e1af545"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-control-source96-final/tube.in",
+      "snapshot": "data/free-open/runs/triangle-control-source96-final/tube.in",
+      "sha256": "b4f9f6662564a9b6cd2b462d0aa16f95655e4c64a51159ea0a39412ab5b46a11"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-control-source96-final/tube.out",
+      "snapshot": "data/free-open/runs/triangle-control-source96-final/tube.out",
+      "sha256": "1adbc5a3b3e8b5df1c087ebc1602e76b952eb9ded5f2c5b27cef80c70bdf36cb"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-control-source96-final/tube.stat",
+      "snapshot": "data/free-open/runs/triangle-control-source96-final/tube.stat",
+      "sha256": "4760f074ddb0c4362e9af55f81fa96c89561bee6f17097254919df2135712a01"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-control-source96-final-probes/manifest.json",
+      "snapshot": "data/free-open/runs/triangle-control-source96-final-probes/manifest.json",
+      "sha256": "8f0849f5a41dca1307ebe0a4c4b08110fbddc5e8412522fe0ccda245d9123b25"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-control-source96-final-probes/tube.in",
+      "snapshot": "data/free-open/runs/triangle-control-source96-final-probes/tube.in",
+      "sha256": "1ca43e44a225d69de91b38ceedcc91a6e8bfdceb7b3ed099e9c64e06a49f21cf"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-control-source96-final-probes/tube.out",
+      "snapshot": "data/free-open/runs/triangle-control-source96-final-probes/tube.out",
+      "sha256": "5102d676113e68a84eb1b1fc11271821d1bf5b24d8889de8a2fb17e4006f41ae"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-control-source96-final-probes/tube.stat",
+      "snapshot": "data/free-open/runs/triangle-control-source96-final-probes/tube.stat",
+      "sha256": "005e083b5ddefaecbaf7783a6609b7a4f8a53ebc994229eaf3d5b19bba1e8e8a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-m64/manifest.json",
+      "snapshot": "data/free-open/runs/triangle-m64/manifest.json",
+      "sha256": "bbce7f42da913e3d9efee02359add5f1e5b0c70f8e75f537efd41bc607c7248c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-m64/tube.in",
+      "snapshot": "data/free-open/runs/triangle-m64/tube.in",
+      "sha256": "1bb5c03ad5f3c79db28546bc67ec0ab134ce8db877c280399c5e721250573839"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-m64/tube.out",
+      "snapshot": "data/free-open/runs/triangle-m64/tube.out",
+      "sha256": "0ad499664791535c30d477b4e511f9b6668adf3140a6fd391149d03cc07494e4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-m64/tube.stat",
+      "snapshot": "data/free-open/runs/triangle-m64/tube.stat",
+      "sha256": "4c9fa6f5a0691ba0ff44dc43f57095f3e0713d56a892ca911079d58e57edc8bb"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-m64-probes/manifest.json",
+      "snapshot": "data/free-open/runs/triangle-m64-probes/manifest.json",
+      "sha256": "e90f218b8fe8d3e8e63211f098674631bbd520611e9226a0508791643a49d827"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-m64-probes/probes.dist",
+      "snapshot": "data/free-open/runs/triangle-m64-probes/probes.dist",
+      "sha256": "671a9e69c795e81b17ec7683b502fd502976fb8fa15eb84bb0227fee58218efa"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-m64-probes/tube.in",
+      "snapshot": "data/free-open/runs/triangle-m64-probes/tube.in",
+      "sha256": "2ba533a016a29793fa7c3b6c5cb808c05073ffd138fbfcd21e8ea4e37ac33363"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-m64-probes/tube.out",
+      "snapshot": "data/free-open/runs/triangle-m64-probes/tube.out",
+      "sha256": "dbfcf4c2832bc9df6d8e7ca71842963c74bc43eb29fc7adad6d0529db91f6574"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-m64-probes/tube.stat",
+      "snapshot": "data/free-open/runs/triangle-m64-probes/tube.stat",
+      "sha256": "5b0c208a9f7e378958c742ce02b7a54654c9d32160b3694f38569b17168810a0"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-weighted-smoke-final/manifest.json",
+      "snapshot": "data/free-open/runs/triangle-weighted-smoke-final/manifest.json",
+      "sha256": "091ef7aa6bf4dae683e744f62a2234e8fcae1e07e6c2f013492745571e864d80"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-weighted-smoke-final/tube.in",
+      "snapshot": "data/free-open/runs/triangle-weighted-smoke-final/tube.in",
+      "sha256": "fa37a45b037d636b26268148f98f19ea062bbd92d395dc4a03e459c8c3e90661"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-weighted-smoke-final/tube.out",
+      "snapshot": "data/free-open/runs/triangle-weighted-smoke-final/tube.out",
+      "sha256": "cb2ff8048634ef5c5ea5cf17535b80e499900f418b7c3813f5a2c3a500495099"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-weighted-smoke-final/tube.stat",
+      "snapshot": "data/free-open/runs/triangle-weighted-smoke-final/tube.stat",
+      "sha256": "00d4e8171da1f0b44896cecda97a066143b561a970e9efa8a7aeb74715335acb"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-weighted-smoke-final-probes/manifest.json",
+      "snapshot": "data/free-open/runs/triangle-weighted-smoke-final-probes/manifest.json",
+      "sha256": "e580458333e27bd56509569c271804d7c49e05a5dbc7365b2b0cf8412b705c8f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-weighted-smoke-final-probes/tube.in",
+      "snapshot": "data/free-open/runs/triangle-weighted-smoke-final-probes/tube.in",
+      "sha256": "5dc1c7be7737b11f7541b720022bce34e100fbf2288b6d5629bbb7e5201c9264"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-weighted-smoke-final-probes/tube.out",
+      "snapshot": "data/free-open/runs/triangle-weighted-smoke-final-probes/tube.out",
+      "sha256": "bb36b1f838d15d737a7ce9390ea73de51785d0d1b4ef8aba4c983041ea13713e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/triangle-weighted-smoke-final-probes/tube.stat",
+      "snapshot": "data/free-open/runs/triangle-weighted-smoke-final-probes/tube.stat",
+      "sha256": "3684a9553f09445b21f253b15fc36c4b06f481f14e664120b2aadb5b2b5b3d9e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-m64-final/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-cell-m64-final/manifest.json",
+      "sha256": "2cca77f55935df8bc35dae6fc49462ef709f06a54778cd0c6dc6da1c78df9976"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-m64-final/tube.in",
+      "snapshot": "data/free-open/runs/uniform-cell-m64-final/tube.in",
+      "sha256": "5f9cc5c3f0f147524aaa2eae67f813a845881a6570caca5b48c51e63cb7e5d6e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-m64-final/tube.out",
+      "snapshot": "data/free-open/runs/uniform-cell-m64-final/tube.out",
+      "sha256": "a04284b7a3a44190c78cdb488a0dbd2492a2613e2448a402c8d7a3c6d027209e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-m64-final/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-cell-m64-final/tube.stat",
+      "sha256": "d87c9b84fc537e48092906c0eeeea35d92cf6f3abf2b36339a1c71c14803f217"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-m64-final-probes/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-cell-m64-final-probes/manifest.json",
+      "sha256": "83da58f0a7336246cf8cb735b44ff35fe37368098e7d23d78d76425f3960631d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-m64-final-probes/tube.in",
+      "snapshot": "data/free-open/runs/uniform-cell-m64-final-probes/tube.in",
+      "sha256": "ef3a6e3d6bec7008fb9e935a1d62be806ba15ada3279bb77078529487a822284"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-m64-final-probes/tube.out",
+      "snapshot": "data/free-open/runs/uniform-cell-m64-final-probes/tube.out",
+      "sha256": "fca12c53646f842293ca0657cb8caea3bc29f2e7993e937b129bd86527301fec"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-m64-final-probes/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-cell-m64-final-probes/tube.stat",
+      "sha256": "eae529a2e9cc024d020c552498d7a1c5da455bc97674db0e145c6bee86bd571a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z2048-final/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-cell-z2048-final/manifest.json",
+      "sha256": "1cbfb56b692834a0337b1d69f491befd4bdd8989385efbcc0cdd47fd00326bfa"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z2048-final/tube.in",
+      "snapshot": "data/free-open/runs/uniform-cell-z2048-final/tube.in",
+      "sha256": "f03bd74bfae02c1b6277ab15848a977a9f32ee41799b794b97c5ff27ee194cae"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z2048-final/tube.out",
+      "snapshot": "data/free-open/runs/uniform-cell-z2048-final/tube.out",
+      "sha256": "7c6c098c9aae5a60d9e0d5a7559abe32a51f9ab67736399fd7fb2113f7f3ef61"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z2048-final/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-cell-z2048-final/tube.stat",
+      "sha256": "68450305c2f46475b3721e489fd55c22ea4c229ae85ed15e4c58e2a614ad6c31"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z2048-final-probes/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-cell-z2048-final-probes/manifest.json",
+      "sha256": "222af73f307d2157f84f7cdbd50f930088c0f3a4a11fb8108359a6fb71e80e47"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z2048-final-probes/tube.in",
+      "snapshot": "data/free-open/runs/uniform-cell-z2048-final-probes/tube.in",
+      "sha256": "dcc01f7f5d4f0dfa2106c33b141741c724b7c893bc1a8630e0b995b13c2b9a1e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z2048-final-probes/tube.out",
+      "snapshot": "data/free-open/runs/uniform-cell-z2048-final-probes/tube.out",
+      "sha256": "e3a0380712192f94e80de2cfbcf4662659d74dac2ef785a252e46d66c5824aa5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z2048-final-probes/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-cell-z2048-final-probes/tube.stat",
+      "sha256": "18f8b92b7846ba00296c357aeca6a00c9a82119589afa88c5238e14e7b207e2a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z4096-final/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-cell-z4096-final/manifest.json",
+      "sha256": "e901c1fbb71b5aac1551ffe5433c5ba5ad1553e4dd1ee85b3c8c75870540ba67"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z4096-final/tube.in",
+      "snapshot": "data/free-open/runs/uniform-cell-z4096-final/tube.in",
+      "sha256": "6d231aa0676c2746aecec29b2f1e33fd0a756f676ce05e3693144a54cfdc9bc1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z4096-final/tube.out",
+      "snapshot": "data/free-open/runs/uniform-cell-z4096-final/tube.out",
+      "sha256": "5fe4f6d6eb8582369d048c57ff4cebd81321b6ca1144fea22893327050d7890b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z4096-final/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-cell-z4096-final/tube.stat",
+      "sha256": "4bde91a4efdc0d6c7fd885a090cb83bec48456fb6a19dba756f0a40b19f95617"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z4096-final-probes/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-cell-z4096-final-probes/manifest.json",
+      "sha256": "2df6ef27065fb3d9ab3f39f9cedbe04de14bac0beb2c79258ecb97d73d030483"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z4096-final-probes/tube.in",
+      "snapshot": "data/free-open/runs/uniform-cell-z4096-final-probes/tube.in",
+      "sha256": "10c4d09bbd6b700a4dfabb61b264feac012364cd582bf0590f722134791dafd9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z4096-final-probes/tube.out",
+      "snapshot": "data/free-open/runs/uniform-cell-z4096-final-probes/tube.out",
+      "sha256": "51467e3d05d6352bbcd88c59b13878a0efc4f85297a17459119943c087abff10"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z4096-final-probes/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-cell-z4096-final-probes/tube.stat",
+      "sha256": "3369f965077a39f4e30fd37a8b42512c39220a679aaf1c710c668d17cef55a13"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z8192-final/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-cell-z8192-final/manifest.json",
+      "sha256": "1a786406f1adf8c5b4c95053bad342183dd8d102783640439738c70406026bbf"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z8192-final/tube.in",
+      "snapshot": "data/free-open/runs/uniform-cell-z8192-final/tube.in",
+      "sha256": "86ed5fa2294bb96ce2870cac8b6b8a975c8705de1fd75d3771559f6624527ca4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z8192-final/tube.out",
+      "snapshot": "data/free-open/runs/uniform-cell-z8192-final/tube.out",
+      "sha256": "2ce6809f48747345661add2a47493e7ab50e85c25059e406f5e4d2a6e7397eeb"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z8192-final/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-cell-z8192-final/tube.stat",
+      "sha256": "336fd60d7b2f069e7ee7c6f5f55bee62c8262d2bfc2e4ca1714cab76788e292a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z8192-final-probes/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-cell-z8192-final-probes/manifest.json",
+      "sha256": "d6647079ad80b42f8af94cdd7bc73791f92b8afd84cff87405aa9602490da249"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z8192-final-probes/tube.in",
+      "snapshot": "data/free-open/runs/uniform-cell-z8192-final-probes/tube.in",
+      "sha256": "1299390f2c2efc1c22a55f883466bc61bb0938bfe2da431667344513266aff2f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z8192-final-probes/tube.out",
+      "snapshot": "data/free-open/runs/uniform-cell-z8192-final-probes/tube.out",
+      "sha256": "cdee7922d4565a611047bf9428f52f068e663a0b8a4c83f850501ace94856da5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-cell-z8192-final-probes/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-cell-z8192-final-probes/tube.stat",
+      "sha256": "fbd932be9e2abc4364cd026042db9b79b18833af5caf9170e9cd5b226de34180"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-mesh96-final/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-control-mesh96-final/manifest.json",
+      "sha256": "0824fac8839acc063aa6c136dafefccd764a9db376259a3f1629de63588986af"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-mesh96-final/tube.in",
+      "snapshot": "data/free-open/runs/uniform-control-mesh96-final/tube.in",
+      "sha256": "db0845af2469c35d01c0e01e2406ff1e4610c6263693e8da650382acb777b050"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-mesh96-final/tube.out",
+      "snapshot": "data/free-open/runs/uniform-control-mesh96-final/tube.out",
+      "sha256": "1d73f0458f805c0ee30a35fac87ab3b09db23feca57a4b6e54fbbdb070d3587b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-mesh96-final/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-control-mesh96-final/tube.stat",
+      "sha256": "e9871a44dfcb68cc63fa4fa56dad99f11d2a1e9c5fa2c5e64737c9442e88911e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-mesh96-final-probes/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-control-mesh96-final-probes/manifest.json",
+      "sha256": "38bc18cff89c88b0027f7d921e34680a97566b0c406f1f40768fd842517e8df4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-mesh96-final-probes/tube.in",
+      "snapshot": "data/free-open/runs/uniform-control-mesh96-final-probes/tube.in",
+      "sha256": "95b5530af83264c847241a6967e18480745fdbbb13ba39d4fc2365ef7d1bc0bc"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-mesh96-final-probes/tube.out",
+      "snapshot": "data/free-open/runs/uniform-control-mesh96-final-probes/tube.out",
+      "sha256": "7995fc831e2e3670609032cef23ff6069b938f2cbd8a21b33cc699ac8651a679"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-mesh96-final-probes/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-control-mesh96-final-probes/tube.stat",
+      "sha256": "6d781f631ce822f35faf80139b9b20d235c588f89384e5e931a225121658dd77"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-path01-final/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-control-path01-final/manifest.json",
+      "sha256": "2acbb1bcfa88b8ab510733a08af55f4e5483a8bf7afd8a95360a29b89bd56c2b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-path01-final/tube.in",
+      "snapshot": "data/free-open/runs/uniform-control-path01-final/tube.in",
+      "sha256": "512e7820bada75d92c7d915815214730e3fccf69f93c5bbb4de5a3dde2d99152"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-path01-final/tube.out",
+      "snapshot": "data/free-open/runs/uniform-control-path01-final/tube.out",
+      "sha256": "a78695fcc7bb1b80f28c74eaa30c433dd884070130c0993c0dcb64180cb14764"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-path01-final/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-control-path01-final/tube.stat",
+      "sha256": "1c1e983723982df340f2fc77c4d0a9f312694d89577a01834fb3c1df8d997068"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-path01-final-probes/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-control-path01-final-probes/manifest.json",
+      "sha256": "5e3300783e9afe09f7eb777c0ade53d4c612d087150b8766e1da827a0d5d802f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-path01-final-probes/tube.in",
+      "snapshot": "data/free-open/runs/uniform-control-path01-final-probes/tube.in",
+      "sha256": "e9f91f24172362d30bdc5fc61ad73f06c072b7c0eff1e2713fbaf802a80415e3"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-path01-final-probes/tube.out",
+      "snapshot": "data/free-open/runs/uniform-control-path01-final-probes/tube.out",
+      "sha256": "8228af1b74fb4030a4e300867ab08397508522b6ec26dce612bf39f896ae1261"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-path01-final-probes/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-control-path01-final-probes/tube.stat",
+      "sha256": "1afacec8e3ce4d3848c406797f7a65506af0c76b3cefce5722b1ba4df8aea955"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-source96-final/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-control-source96-final/manifest.json",
+      "sha256": "3ab9ca5a95519c4543a345e3cab8f0fa8f65b48915fcecda5f97f87bdd523e20"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-source96-final/tube.in",
+      "snapshot": "data/free-open/runs/uniform-control-source96-final/tube.in",
+      "sha256": "d57d0b131038c5caf68e88f6b63351fe6c095581d0e03fb2fb54058607468215"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-source96-final/tube.out",
+      "snapshot": "data/free-open/runs/uniform-control-source96-final/tube.out",
+      "sha256": "b6ef7cbda797c158080cf2063fdeff3e66ef424667ba188835f2a71308280fc6"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-source96-final/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-control-source96-final/tube.stat",
+      "sha256": "73b51a9cf66ea5ce29e09b71609130e89f88563135e2bf545b2ee447a438c818"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-source96-final-probes/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-control-source96-final-probes/manifest.json",
+      "sha256": "b3589545661ff0e21aa5884c2442693d45e21d38b5b602c139f310385e24c80c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-source96-final-probes/tube.in",
+      "snapshot": "data/free-open/runs/uniform-control-source96-final-probes/tube.in",
+      "sha256": "1ca43e44a225d69de91b38ceedcc91a6e8bfdceb7b3ed099e9c64e06a49f21cf"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-source96-final-probes/tube.out",
+      "snapshot": "data/free-open/runs/uniform-control-source96-final-probes/tube.out",
+      "sha256": "bfc267e6a7532627bc60342b7cea2de3f263d529781ea7180ab58cee957e10e7"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-control-source96-final-probes/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-control-source96-final-probes/tube.stat",
+      "sha256": "613209e81b5dbee3c3b5d097e56249ef7157450a58f43f3dc66bfa712b34001c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-m64/manifest.json",
+      "sha256": "cde792aba444ca50ddc0c4a2b6cd428b1822732c59e5221e6934528202853103"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64/tube.in",
+      "snapshot": "data/free-open/runs/uniform-m64/tube.in",
+      "sha256": "7f7093362a543feb6fbae74196dbb1478853a54a88d3a69db64d897ddc9b44ef"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64/tube.out",
+      "snapshot": "data/free-open/runs/uniform-m64/tube.out",
+      "sha256": "17360324337a7b86cffd431d1a03c92a82a4c77e309f4fefafe590a0943c2266"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-m64/tube.stat",
+      "sha256": "6bc90c3643e320672515e7e4f10d6fbbef1d2cba4014bee68f86cece05d8a58f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64-aligned/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-m64-aligned/manifest.json",
+      "sha256": "959dbffe2a923586aebc098505421534a9add7723d1814bc7b50f6a2513831d4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64-aligned/tube.in",
+      "snapshot": "data/free-open/runs/uniform-m64-aligned/tube.in",
+      "sha256": "f08c34f9a3077703b3ed258188c010a17ee11547513bc250dc11c7851215f967"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64-aligned/tube.out",
+      "snapshot": "data/free-open/runs/uniform-m64-aligned/tube.out",
+      "sha256": "2d80f8a4154841087a14cecf9b266b294a1c7d0dd49ddde4861b7c339ddc795e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64-aligned/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-m64-aligned/tube.stat",
+      "sha256": "a1695826a82c874d612a75babf1b8c61ab372d9c973408f3f1eafe522889f314"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64-aligned-probes/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-m64-aligned-probes/manifest.json",
+      "sha256": "c16863d1bfb19293a81b77f99487848080a2b2f9c6aa8df5c936eaf8321f2bb6"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64-aligned-probes/probes.dist",
+      "snapshot": "data/free-open/runs/uniform-m64-aligned-probes/probes.dist",
+      "sha256": "671a9e69c795e81b17ec7683b502fd502976fb8fa15eb84bb0227fee58218efa"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64-aligned-probes/tube.in",
+      "snapshot": "data/free-open/runs/uniform-m64-aligned-probes/tube.in",
+      "sha256": "4171b7dd3d6b7dedace5e825f3b3366d903d0d7934c2bd0a1de3ed5a0d879783"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64-aligned-probes/tube.out",
+      "snapshot": "data/free-open/runs/uniform-m64-aligned-probes/tube.out",
+      "sha256": "533e810214dbf77165ecb9d61183b2a7879df0f1f319aff1595510b1e864f72b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64-aligned-probes/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-m64-aligned-probes/tube.stat",
+      "sha256": "378dd434c9176eb8492b27d6404feff7f6b83309f1a4ebbfbed211725f73a0ce"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64-probes/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-m64-probes/manifest.json",
+      "sha256": "2d7c7b87f86606a0c44bebd315e4353603e6bb8560fb4cbfda5fa59a4f429278"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64-probes/probes.dist",
+      "snapshot": "data/free-open/runs/uniform-m64-probes/probes.dist",
+      "sha256": "671a9e69c795e81b17ec7683b502fd502976fb8fa15eb84bb0227fee58218efa"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64-probes/tube.in",
+      "snapshot": "data/free-open/runs/uniform-m64-probes/tube.in",
+      "sha256": "6dc645e2d9bac4541556d871a28f79e583beec734962f68b9df0ce599c06a6bf"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64-probes/tube.out",
+      "snapshot": "data/free-open/runs/uniform-m64-probes/tube.out",
+      "sha256": "a4677f68d5840c9706623e83eea8d54ac8fd6f669f000231e7c227988ac313d5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64-probes/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-m64-probes/tube.stat",
+      "sha256": "b5d7614cf4c5724ca3667ab30307df6e6bff172d8fc80fd607ef7a5b94078033"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64z4096/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-m64z4096/manifest.json",
+      "sha256": "01fc5a6b1e0b46f183562bd79004ac5d5a4ff23ba844ca32b92fac6a647d7407"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64z4096/tube.in",
+      "snapshot": "data/free-open/runs/uniform-m64z4096/tube.in",
+      "sha256": "1f3beb694b24e31df416205efc46e7b23c4a58b3e897a46df8decccd54de5f82"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64z4096/tube.out",
+      "snapshot": "data/free-open/runs/uniform-m64z4096/tube.out",
+      "sha256": "d647d24a4701394923889825965a8cd5460fad74e4439649091b7c644ea801c5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64z4096/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-m64z4096/tube.stat",
+      "sha256": "fa5b629d070b0d331259c4f2f0554e3fc002706dc76092b69a09979cf90e2b22"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64z4096-probes/manifest.json",
+      "snapshot": "data/free-open/runs/uniform-m64z4096-probes/manifest.json",
+      "sha256": "3b09adea57066d93f10ddae41a2980814e52b5b8bfa2f99d37c793b46a3afd27"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64z4096-probes/probes.dist",
+      "snapshot": "data/free-open/runs/uniform-m64z4096-probes/probes.dist",
+      "sha256": "671a9e69c795e81b17ec7683b502fd502976fb8fa15eb84bb0227fee58218efa"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64z4096-probes/tube.in",
+      "snapshot": "data/free-open/runs/uniform-m64z4096-probes/tube.in",
+      "sha256": "b3c800e1c1e3ef630e07bff84ee1f8c1aa1d2fae00068332ae35607b676b2a2b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64z4096-probes/tube.out",
+      "snapshot": "data/free-open/runs/uniform-m64z4096-probes/tube.out",
+      "sha256": "e0d6f89c3afbd9c82adb4b32ac3400e762362c7b079dddb4262ad2a33c0f8628"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/runs/uniform-m64z4096-probes/tube.stat",
+      "snapshot": "data/free-open/runs/uniform-m64z4096-probes/tube.stat",
+      "sha256": "0a7b97bc4273e43fffcda0bbd410e9c8b1531be3c394a9f0d4f470e6433a2698"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/selection.json",
+      "snapshot": "data/free-open/selection.json",
+      "sha256": "37c5ae2cbfd39b29fcd8b9ef54677cc6b0e0aa4985cc69399e4f05390d6b2c0c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/cell-triangle-64x32x2048-box0.012x0.0015-q16.json",
+      "snapshot": "data/free-open/sources/cell-triangle-64x32x2048-box0.012x0.0015-q16.json",
+      "sha256": "a76719da3e59e626774fa4a3f480c2adb5d61676ffba4c4bd24d39cd8ce33b8d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/cell-triangle-64x32x8192-box0.012x0.0015-q16.json",
+      "snapshot": "data/free-open/sources/cell-triangle-64x32x8192-box0.012x0.0015-q16.json",
+      "sha256": "624ae8353ce7453fb94f80e34c47142e08f598cd1b8c155ae4207f9ef1bee143"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/cell-triangle-96x48x8192-box0.012x0.0015-q16.json",
+      "snapshot": "data/free-open/sources/cell-triangle-96x48x8192-box0.012x0.0015-q16.json",
+      "sha256": "dcdf78f9a01d34caee5d26f716e46021e557b97386f0b70e18524d3f9045bad4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/cell-uniform-64x32x2048-box0.012x0.0015-q16.json",
+      "snapshot": "data/free-open/sources/cell-uniform-64x32x2048-box0.012x0.0015-q16.json",
+      "sha256": "e1bf522de708329d9c5b4fb9c9ddd55b7873384685da75d7085b3b5f8b66d4dc"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/cell-uniform-64x32x8192-box0.012x0.0015-q16.json",
+      "snapshot": "data/free-open/sources/cell-uniform-64x32x8192-box0.012x0.0015-q16.json",
+      "sha256": "339c6dc9cadc067e2309b57c66039aa398998461d41b789a4852d6908e331bb7"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/cell-uniform-96x48x8192-box0.012x0.0015-q16.json",
+      "snapshot": "data/free-open/sources/cell-uniform-96x48x8192-box0.012x0.0015-q16.json",
+      "sha256": "418ff050d91bbb2cc09a90bf837bf5d24c8f37316b2659b8bcf54a5d530e0ac2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/generators/6b48bd3613451aaac40491e975e15461e0d59e0c3ec9eeda4263c25a895bcecd.py",
+      "snapshot": "data/free-open/sources/generators/6b48bd3613451aaac40491e975e15461e0d59e0c3ec9eeda4263c25a895bcecd.py",
+      "sha256": "6b48bd3613451aaac40491e975e15461e0d59e0c3ec9eeda4263c25a895bcecd"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/generators/833789fda37601fd56892edccb0703ca8a1afd649f16aea543475cf1eacd00a4.py",
+      "snapshot": "data/free-open/sources/generators/833789fda37601fd56892edccb0703ca8a1afd649f16aea543475cf1eacd00a4.py",
+      "sha256": "833789fda37601fd56892edccb0703ca8a1afd649f16aea543475cf1eacd00a4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/generators/a8f6c09106460448223ecc4080fd9152043d56b659b043b0991973ba36587e2e.py",
+      "snapshot": "data/free-open/sources/generators/a8f6c09106460448223ecc4080fd9152043d56b659b043b0991973ba36587e2e.py",
+      "sha256": "a8f6c09106460448223ecc4080fd9152043d56b659b043b0991973ba36587e2e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/path-step0.01.dat",
+      "snapshot": "data/free-open/sources/path-step0.01.dat",
+      "sha256": "6a20ad13a8c19ee088dbb98a0929554f69c712001818eff6c122f2afb95aad50"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/path-step0.02.dat",
+      "snapshot": "data/free-open/sources/path-step0.02.dat",
+      "sha256": "6e302cd937c99cf32eeb16bb09ade09dc1d206fcd21021d7b5063d33c8658e9d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/triangle-ns16-nr4-np16-stagger.json",
+      "snapshot": "data/free-open/sources/triangle-ns16-nr4-np16-stagger.json",
+      "sha256": "5c6ba68ea9589169a9a9b5bbecf3c1dfbecd26d817ea88a3bdf7920bc4f62adf"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/triangle-ns2048-nr16-np64-stagger.json",
+      "snapshot": "data/free-open/sources/triangle-ns2048-nr16-np64-stagger.json",
+      "sha256": "9d6037d24afcff49f29ac5afc030f74e0923b2118fbd63dfbab70fd07129eb02"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/uniform-ns1280-nr16-np64-stagger.json",
+      "snapshot": "data/free-open/sources/uniform-ns1280-nr16-np64-stagger.json",
+      "sha256": "af845bc762f2e5a25a95671734ea497137aea1858f0d5a45a60256e6629e05e3"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/uniform-ns16-nr4-np16-stagger.json",
+      "snapshot": "data/free-open/sources/uniform-ns16-nr4-np16-stagger.json",
+      "sha256": "d551354297c22eeb718eeb86dbfc1b47075dafb1ac0bb03e685f5a7a55dd3dd0"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/uniform-ns2048-nr16-np64-stagger.json",
+      "snapshot": "data/free-open/sources/uniform-ns2048-nr16-np64-stagger.json",
+      "sha256": "d4037c88b6733568d8dca1fb3a535a5211a9f3cd4b0c7311a14eef69094da85a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/uniform-ns2560-nr16-np64-stagger.json",
+      "snapshot": "data/free-open/sources/uniform-ns2560-nr16-np64-stagger.json",
+      "sha256": "6ceb0161efa7e69803ab43d5146dcf69d52d800f8eb70b3dd2bc8bac88718116"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/weighted-triangle-polar-ns1280-nr16-np64.json",
+      "snapshot": "data/free-open/sources/weighted-triangle-polar-ns1280-nr16-np64.json",
+      "sha256": "cd7202efe7821ecef604c72a98a4789403cd9e02af64dd4b24760235c8dee0f2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/weighted-triangle-polar-ns16-nr4-np16.json",
+      "snapshot": "data/free-open/sources/weighted-triangle-polar-ns16-nr4-np16.json",
+      "sha256": "a70e57d449b47884deaf8552c0fa59bb72866fddf9fd2630413d4c46fe0db076"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/unit-algorithm-final.log",
+      "snapshot": "data/free-open/unit-algorithm-final.log",
+      "sha256": "bf27b6ac061d97e85c27d8887c2356af12e4ecb1f263e2469a0608ef0c3e1ccf"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/unit-algorithm.log",
+      "snapshot": "data/free-open/unit-algorithm.log",
+      "sha256": "5efed8047a515e436dd970b34be964e73a8641028b9046eae9fad595bdee8b08"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/unit-config-final.log",
+      "snapshot": "data/free-open/unit-config-final.log",
+      "sha256": "d120bf68804a1ae526b0f9ad6f693d02cbf2fa61ad4cfc8d63187ea4dfa5da9e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/unit-free-final.log",
+      "snapshot": "data/free-open/unit-free-final.log",
+      "sha256": "d792c24127d6c436ce2717b17d714ddea4f7f08d8a50e90151d14113ab342184"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/unit-free.log",
+      "snapshot": "data/free-open/unit-free.log",
+      "sha256": "9c8f7c44ef823584db65ac2e2704ffc1f3d31378903eafe029769612ff9ae4eb"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/unit-geometry.log",
+      "snapshot": "data/free-open/unit-geometry.log",
+      "sha256": "e041800d3c92c83c9bfcc99a71aead57d77bc94e09db7198f09330c80c579d43"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/unit-mpi-guard-final.log",
+      "snapshot": "data/free-open/unit-mpi-guard-final.log",
+      "sha256": "60b620554c82aa21e83a35df8e349c355154868fa88eb5e118bd0adba8b82eef"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/unit-numerics.log",
+      "snapshot": "data/free-open/unit-numerics.log",
+      "sha256": "d85e1f4be9a2ff104731c8287c53038244e2c02637aa166eca08d10047076e2b"
+    },
+    {
+      "original": "/Users/adelmann/git/opalx/docs/validation/fft2d5/uniform-b-ellipsoid/report/free-open-selection.json",
+      "snapshot": "data/free-open/selection.json",
+      "sha256": "37c5ae2cbfd39b29fcd8b9ef54677cc6b0e0aa4985cc69399e4f05390d6b2c0c"
+    }
+  ]
+}

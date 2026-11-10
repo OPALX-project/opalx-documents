@@ -1,0 +1,16 @@
+--- a/src/Algorithms/ParallelTracker.cpp
++++ b/src/Algorithms/ParallelTracker.cpp
+@@ -1515,6 +1515,13 @@
+             continue;
+         }
+         if (itsBunch_m->pcAtSStop(ci)) {
++            continue;
++        }
++
++        // A restarted container can carry distinct per-particle charge/mass.
++        // With no emitter there is nothing to initialize: broadcasting its first
++        // Q/M value would destroy those attributes before the next field solve.
++        if (ci >= emittingSamplers_m.size() || emittingSamplers_m[ci].empty()) {
+             continue;
+         }
+ 

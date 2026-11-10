@@ -1,0 +1,332 @@
+{
+  "exact_numerical_equality": true,
+  "undefined_values": "NaNs require matching locations, dtype and full value bytes; no fields excluded",
+  "cases": {
+    "probe/Cyclotron-Coasting-off": {
+      "exact_numerical_equality": true,
+      "checked_arrays": 81,
+      "checked_values": 157,
+      "checked_datasets": 10,
+      "checked_attributes": 70,
+      "max_absolute_difference": 0.0,
+      "mismatches": [],
+      "ignored_attributes": [
+        "Cyclotron-Coasting.h5:/@OPAL_version"
+      ],
+      "matching_undefined_diagnostics": [
+        {
+          "object": "Cyclotron-Coasting.h5:/Step#0@#sigma",
+          "count": 1,
+          "payload_bytes": [
+            "000000000000f87f"
+          ]
+        },
+        {
+          "object": "Cyclotron-Coasting.stat rows",
+          "count": 3,
+          "payload_bytes": [
+            "000000000000f87f",
+            "000000000000f87f",
+            "000000000000f87f"
+          ]
+        }
+      ],
+      "input_files": 3,
+      "scientific_files": [
+        "Cyclotron-Coasting.h5",
+        "Cyclotron-Coasting.stat"
+      ]
+    },
+    "probe/Cyclotron-Coasting-hdf5": {
+      "exact_numerical_equality": true,
+      "checked_arrays": 1149,
+      "checked_values": 1985,
+      "checked_datasets": 490,
+      "checked_attributes": 652,
+      "max_absolute_difference": 0.0,
+      "mismatches": [],
+      "ignored_attributes": [
+        "Cyclotron-Coasting.h5:/@OPAL_version",
+        "hits.h5:/@OPAL_version",
+        "reverse.h5:/@OPAL_version"
+      ],
+      "matching_undefined_diagnostics": [
+        {
+          "object": "Cyclotron-Coasting.h5:/Step#0@#sigma",
+          "count": 1,
+          "payload_bytes": [
+            "000000000000f87f"
+          ]
+        },
+        {
+          "object": "Cyclotron-Coasting.stat rows",
+          "count": 3,
+          "payload_bytes": [
+            "000000000000f87f",
+            "000000000000f87f",
+            "000000000000f87f"
+          ]
+        }
+      ],
+      "input_files": 3,
+      "scientific_files": [
+        "Cyclotron-Coasting.h5",
+        "Cyclotron-Coasting.stat",
+        "hits.h5",
+        "hits.hist",
+        "hits.peaks",
+        "miss.hist",
+        "miss.peaks",
+        "reverse.h5",
+        "reverse.hist",
+        "reverse.peaks"
+      ]
+    },
+    "probe/Cyclotron-Coasting-ascii": {
+      "exact_numerical_equality": true,
+      "checked_arrays": 89,
+      "checked_values": 763,
+      "checked_datasets": 10,
+      "checked_attributes": 70,
+      "max_absolute_difference": 0.0,
+      "mismatches": [],
+      "ignored_attributes": [
+        "Cyclotron-Coasting.h5:/@OPAL_version"
+      ],
+      "matching_undefined_diagnostics": [
+        {
+          "object": "Cyclotron-Coasting.h5:/Step#0@#sigma",
+          "count": 1,
+          "payload_bytes": [
+            "000000000000f87f"
+          ]
+        },
+        {
+          "object": "Cyclotron-Coasting.stat rows",
+          "count": 3,
+          "payload_bytes": [
+            "000000000000f87f",
+            "000000000000f87f",
+            "000000000000f87f"
+          ]
+        }
+      ],
+      "input_files": 3,
+      "scientific_files": [
+        "Cyclotron-Coasting.h5",
+        "Cyclotron-Coasting.stat",
+        "hits.hist",
+        "hits.loss",
+        "hits.peaks",
+        "miss.hist",
+        "miss.peaks",
+        "reverse.hist",
+        "reverse.loss",
+        "reverse.peaks"
+      ]
+    },
+    "probe/Cyclotron-RF-Stop-off": {
+      "exact_numerical_equality": true,
+      "checked_arrays": 81,
+      "checked_values": 157,
+      "checked_datasets": 10,
+      "checked_attributes": 70,
+      "max_absolute_difference": 0.0,
+      "mismatches": [],
+      "ignored_attributes": [
+        "Cyclotron-RF-Stop.h5:/@OPAL_version"
+      ],
+      "matching_undefined_diagnostics": [
+        {
+          "object": "Cyclotron-RF-Stop.h5:/Step#0@#sigma",
+          "count": 1,
+          "payload_bytes": [
+            "000000000000f87f"
+          ]
+        },
+        {
+          "object": "Cyclotron-RF-Stop.stat rows",
+          "count": 3,
+          "payload_bytes": [
+            "000000000000f87f",
+            "000000000000f87f",
+            "000000000000f87f"
+          ]
+        }
+      ],
+      "input_files": 5,
+      "scientific_files": [
+        "Cyclotron-RF-Stop.h5",
+        "Cyclotron-RF-Stop.stat"
+      ]
+    },
+    "probe/Cyclotron-RF-Stop-hdf5": {
+      "exact_numerical_equality": true,
+      "checked_arrays": 199,
+      "checked_values": 485,
+      "checked_datasets": 34,
+      "checked_attributes": 158,
+      "max_absolute_difference": 0.0,
+      "mismatches": [],
+      "ignored_attributes": [
+        "Cyclotron-RF-Stop.h5:/@OPAL_version",
+        "hits.h5:/@OPAL_version",
+        "reverse.h5:/@OPAL_version"
+      ],
+      "matching_undefined_diagnostics": [
+        {
+          "object": "Cyclotron-RF-Stop.h5:/Step#0@#sigma",
+          "count": 1,
+          "payload_bytes": [
+            "000000000000f87f"
+          ]
+        },
+        {
+          "object": "Cyclotron-RF-Stop.stat rows",
+          "count": 3,
+          "payload_bytes": [
+            "000000000000f87f",
+            "000000000000f87f",
+            "000000000000f87f"
+          ]
+        }
+      ],
+      "input_files": 5,
+      "scientific_files": [
+        "Cyclotron-RF-Stop.h5",
+        "Cyclotron-RF-Stop.stat",
+        "hits.h5",
+        "hits.hist",
+        "hits.peaks",
+        "miss.hist",
+        "miss.peaks",
+        "reverse.h5",
+        "reverse.hist",
+        "reverse.peaks"
+      ]
+    },
+    "probe/Cyclotron-RF-Stop-ascii": {
+      "exact_numerical_equality": true,
+      "checked_arrays": 89,
+      "checked_values": 365,
+      "checked_datasets": 10,
+      "checked_attributes": 70,
+      "max_absolute_difference": 0.0,
+      "mismatches": [],
+      "ignored_attributes": [
+        "Cyclotron-RF-Stop.h5:/@OPAL_version"
+      ],
+      "matching_undefined_diagnostics": [
+        {
+          "object": "Cyclotron-RF-Stop.h5:/Step#0@#sigma",
+          "count": 1,
+          "payload_bytes": [
+            "000000000000f87f"
+          ]
+        },
+        {
+          "object": "Cyclotron-RF-Stop.stat rows",
+          "count": 3,
+          "payload_bytes": [
+            "000000000000f87f",
+            "000000000000f87f",
+            "000000000000f87f"
+          ]
+        }
+      ],
+      "input_files": 5,
+      "scientific_files": [
+        "Cyclotron-RF-Stop.h5",
+        "Cyclotron-RF-Stop.stat",
+        "hits.hist",
+        "hits.loss",
+        "hits.peaks",
+        "miss.hist",
+        "miss.peaks",
+        "reverse.hist",
+        "reverse.loss",
+        "reverse.peaks"
+      ]
+    },
+    "bunch/none": {
+      "exact_numerical_equality": true,
+      "checked_arrays": 81,
+      "checked_values": 2707,
+      "checked_datasets": 10,
+      "checked_attributes": 70,
+      "max_absolute_difference": 0.0,
+      "mismatches": [],
+      "ignored_attributes": [
+        "Cyclotron-RF-Stop.h5:/@OPAL_version"
+      ],
+      "matching_undefined_diagnostics": [
+        {
+          "object": "Cyclotron-RF-Stop.h5:/Step#0@#sigma",
+          "count": 1,
+          "payload_bytes": [
+            "000000000000f87f"
+          ]
+        }
+      ],
+      "input_files": 6,
+      "scientific_files": [
+        "Cyclotron-RF-Stop.h5",
+        "Cyclotron-RF-Stop.stat"
+      ]
+    },
+    "bunch/near-zero": {
+      "exact_numerical_equality": true,
+      "checked_arrays": 81,
+      "checked_values": 2707,
+      "checked_datasets": 10,
+      "checked_attributes": 70,
+      "max_absolute_difference": 0.0,
+      "mismatches": [],
+      "ignored_attributes": [
+        "Cyclotron-RF-Stop.h5:/@OPAL_version"
+      ],
+      "matching_undefined_diagnostics": [],
+      "input_files": 6,
+      "scientific_files": [
+        "Cyclotron-RF-Stop.h5",
+        "Cyclotron-RF-Stop.stat"
+      ]
+    },
+    "bunch/charged-one": {
+      "exact_numerical_equality": true,
+      "checked_arrays": 81,
+      "checked_values": 2707,
+      "checked_datasets": 10,
+      "checked_attributes": 70,
+      "max_absolute_difference": 0.0,
+      "mismatches": [],
+      "ignored_attributes": [
+        "Cyclotron-RF-Stop.h5:/@OPAL_version"
+      ],
+      "matching_undefined_diagnostics": [],
+      "input_files": 6,
+      "scientific_files": [
+        "Cyclotron-RF-Stop.h5",
+        "Cyclotron-RF-Stop.stat"
+      ]
+    },
+    "bunch/charged-two": {
+      "exact_numerical_equality": true,
+      "checked_arrays": 81,
+      "checked_values": 2707,
+      "checked_datasets": 10,
+      "checked_attributes": 70,
+      "max_absolute_difference": 0.0,
+      "mismatches": [],
+      "ignored_attributes": [
+        "Cyclotron-RF-Stop.h5:/@OPAL_version"
+      ],
+      "matching_undefined_diagnostics": [],
+      "input_files": 6,
+      "scientific_files": [
+        "Cyclotron-RF-Stop.h5",
+        "Cyclotron-RF-Stop.stat"
+      ]
+    }
+  }
+}

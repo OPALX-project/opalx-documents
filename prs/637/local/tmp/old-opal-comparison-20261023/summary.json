@@ -1,0 +1,231 @@
+{
+  "old_run": {
+    "command": [
+      "/bin/bash",
+      "-c",
+      "source /Users/adelmann/OPAL-2022.1/etc/profile.d/opal.sh && exec /Users/adelmann/OPAL-2022.1/bin/opal acceleration.in"
+    ],
+    "ranks": 1,
+    "threads": 1,
+    "start_unix": 1792771060.832003,
+    "binary_sha256": "3e20fe1e8b040e10dcbb958b2d1a92d5020f5397361b230a615c0e41ca0b5ecd",
+    "input_sha256": "850ffdb8096476a8da50d50d40667bdef7398bb1cc84d93bbf58abb39866ef41",
+    "pid": 5817,
+    "returncode": 0,
+    "elapsed_s": 181.9863097667694
+  },
+  "old_580_reference_crossing": {
+    "step": 133932,
+    "time_s": 2.2035538005923e-05,
+    "energy_MeV": 580.4678007547553
+  },
+  "turns_zero_based": [
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185
+  ],
+  "shared_particle_ids_exclude": [
+    0
+  ],
+  "counts_by_turn": [
+    {
+      "code": "OPAL 2022.1",
+      "turn_zero_based": 178,
+      "particles": 4095,
+      "charge_pC": 39.477032946692994,
+      "mean_radius_mm": 4346.900905157815,
+      "rms_radius_mm": 2.4701164459887073,
+      "min_radius_mm": 4340.717358579087,
+      "max_radius_mm": 4366.323049885419
+    },
+    {
+      "code": "OPAL 2022.1",
+      "turn_zero_based": 179,
+      "particles": 4095,
+      "charge_pC": 39.477032946692994,
+      "mean_radius_mm": 4352.748100212632,
+      "rms_radius_mm": 1.2304268115045371,
+      "min_radius_mm": 4345.519338788278,
+      "max_radius_mm": 4364.779490353859
+    },
+    {
+      "code": "OPAL 2022.1",
+      "turn_zero_based": 180,
+      "particles": 4095,
+      "charge_pC": 39.477032946692994,
+      "mean_radius_mm": 4361.047661248748,
+      "rms_radius_mm": 1.3810846053535033,
+      "min_radius_mm": 4350.976263722972,
+      "max_radius_mm": 4366.239110077175
+    },
+    {
+      "code": "OPAL 2022.1",
+      "turn_zero_based": 181,
+      "particles": 4095,
+      "charge_pC": 39.477032946692994,
+      "mean_radius_mm": 4365.169338637121,
+      "rms_radius_mm": 2.553543667115023,
+      "min_radius_mm": 4352.269263069035,
+      "max_radius_mm": 4376.60113372894
+    },
+    {
+      "code": "OPAL 2022.1",
+      "turn_zero_based": 182,
+      "particles": 4095,
+      "charge_pC": 39.477032946692994,
+      "mean_radius_mm": 4365.762984708697,
+      "rms_radius_mm": 2.8170843379722865,
+      "min_radius_mm": 4358.776263715859,
+      "max_radius_mm": 4383.009553872582
+    },
+    {
+      "code": "OPAL 2022.1",
+      "turn_zero_based": 183,
+      "particles": 4095,
+      "charge_pC": 39.477032946692994,
+      "mean_radius_mm": 4369.262010904474,
+      "rms_radius_mm": 1.5485792257650624,
+      "min_radius_mm": 4362.820223922315,
+      "max_radius_mm": 4384.411525885797
+    },
+    {
+      "code": "OPAL 2022.1",
+      "turn_zero_based": 184,
+      "particles": 4095,
+      "charge_pC": 39.477032946692994,
+      "mean_radius_mm": 4377.898976172528,
+      "rms_radius_mm": 1.1603333436667316,
+      "min_radius_mm": 4371.098682808712,
+      "max_radius_mm": 4382.58573332304
+    },
+    {
+      "code": "OPAL 2022.1",
+      "turn_zero_based": 185,
+      "particles": 4095,
+      "charge_pC": 39.477032946692994,
+      "mean_radius_mm": 4383.5510066824845,
+      "rms_radius_mm": 2.773413155418134,
+      "min_radius_mm": 4369.418561113328,
+      "max_radius_mm": 4396.768293153091
+    },
+    {
+      "code": "OPALX",
+      "turn_zero_based": 178,
+      "particles": 4051,
+      "charge_pC": 39.05285969891411,
+      "mean_radius_mm": 4346.889364771491,
+      "rms_radius_mm": 2.49300483306076,
+      "min_radius_mm": 4340.422398410718,
+      "max_radius_mm": 4365.747895627399
+    },
+    {
+      "code": "OPALX",
+      "turn_zero_based": 179,
+      "particles": 4051,
+      "charge_pC": 39.05285969891411,
+      "mean_radius_mm": 4353.119425797169,
+      "rms_radius_mm": 1.1060433707101387,
+      "min_radius_mm": 4347.061332715685,
+      "max_radius_mm": 4363.548298542426
+    },
+    {
+      "code": "OPALX",
+      "turn_zero_based": 180,
+      "particles": 4048,
+      "charge_pC": 39.023938795656456,
+      "mean_radius_mm": 4360.47323585213,
+      "rms_radius_mm": 1.5065535170521518,
+      "min_radius_mm": 4349.330982924494,
+      "max_radius_mm": 4365.922539738467
+    },
+    {
+      "code": "OPALX",
+      "turn_zero_based": 181,
+      "particles": 4048,
+      "charge_pC": 39.023938795656456,
+      "mean_radius_mm": 4364.111056786841,
+      "rms_radius_mm": 3.0724301021820946,
+      "min_radius_mm": 4351.839088307196,
+      "max_radius_mm": 4374.9959549007135
+    },
+    {
+      "code": "OPALX",
+      "turn_zero_based": 182,
+      "particles": 4048,
+      "charge_pC": 39.023938795656456,
+      "mean_radius_mm": 4365.407487463702,
+      "rms_radius_mm": 2.9161852551183416,
+      "min_radius_mm": 4357.388677378527,
+      "max_radius_mm": 4382.524153317833
+    },
+    {
+      "code": "OPALX",
+      "turn_zero_based": 183,
+      "particles": 4048,
+      "charge_pC": 39.023938795656456,
+      "mean_radius_mm": 4369.583805478196,
+      "rms_radius_mm": 1.4373811878075227,
+      "min_radius_mm": 4364.630564097316,
+      "max_radius_mm": 4382.594641280147
+    },
+    {
+      "code": "OPALX",
+      "turn_zero_based": 184,
+      "particles": 4048,
+      "charge_pC": 39.023938795656456,
+      "mean_radius_mm": 4377.535661063432,
+      "rms_radius_mm": 1.193496490364328,
+      "min_radius_mm": 4369.914782622374,
+      "max_radius_mm": 4383.871044552384
+    },
+    {
+      "code": "OPALX",
+      "turn_zero_based": 185,
+      "particles": 4048,
+      "charge_pC": 39.023938795656456,
+      "mean_radius_mm": 4382.55307070862,
+      "rms_radius_mm": 3.2231382033889457,
+      "min_radius_mm": 4368.480660110469,
+      "max_radius_mm": 4395.963507011013
+    }
+  ],
+  "difference_metrics": {
+    "maximum_absolute_mean_radius_difference_mm": 1.0582818502798546,
+    "minimum_old_over_new_rms": 0.8311153003290298,
+    "maximum_old_over_new_rms": 1.1124580139335203,
+    "summed_density_L1_over_mean_charge": 0.292003069838831
+  },
+  "probe_plane_maximum_residual_m": {
+    "OPAL 2022.1": 2.8818176343349544e-07,
+    "OPALX": 2.120612179901974e-18
+  },
+  "initial_and_bare": {
+    "initial_samples": {
+      "common_physical_particle_samples": 4095,
+      "legacy_id0_not_in_phase_space_dump": true,
+      "maximum_coordinate_residual_m": 1.459104614909279e-09,
+      "maximum_momentum_residual": 3.7940947605896724e-10
+    },
+    "bare_reference_maxima": {
+      "position_error_m": 0.0003274722873634396,
+      "momentum_error": 0.00017574231374412614,
+      "energy_error_MeV": 0.0036281366496950795
+    },
+    "matched_snapshot_count": 133
+  },
+  "limitations": [
+    "Native LF2 and Boris/PIC stepping and space-charge ordering are not identical.",
+    "OPALX uses the explicit MIDPOINT split and one GAMMAZ bin; legacy uses its native cyclotron FFT self-field path.",
+    "Legacy forces reference ID0; OPALX original ID0 was a sampled particle. Excluding ID0 from profiles does not undo its small self-field contribution difference.",
+    "Legacy deletion criteria/cadence have not been matched to OPALX default 10-sigma removal; the observed loss difference cannot be assigned uniquely to the self-field solver.",
+    "Legacy probe plane interpolation differs; residuals are measured, not assumed zero.",
+    "Old run completed a bounded140000steps; data beyond first580MeV reference crossing are excluded offline.",
+    "Very coarse8\u00b3 mesh/4096samples; these are reproducibility diagnostics, not converged machine predictions.",
+    "Both track one bunch, with no neighbouring-turn self fields."
+  ]
+}

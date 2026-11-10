@@ -1,0 +1,76 @@
+[
+  {
+    "args": [],
+    "returncode": 1,
+    "check": "invalid size rejected"
+  },
+  {
+    "args": [
+      "0"
+    ],
+    "returncode": 1,
+    "check": "invalid size rejected"
+  },
+  {
+    "args": [
+      "-1"
+    ],
+    "returncode": 1,
+    "check": "invalid size rejected"
+  },
+  {
+    "args": [
+      "1.5"
+    ],
+    "returncode": 1,
+    "check": "invalid size rejected"
+  },
+  {
+    "args": [
+      "8junk"
+    ],
+    "returncode": 1,
+    "check": "invalid size rejected"
+  },
+  {
+    "args": [
+      "2147483648"
+    ],
+    "returncode": 1,
+    "check": "invalid size rejected"
+  },
+  {
+    "args": [
+      "--help"
+    ],
+    "returncode": 0,
+    "check": "OPALX help/argument placement accepted"
+  },
+  {
+    "args": [
+      "-h"
+    ],
+    "returncode": 0,
+    "check": "OPALX help/argument placement accepted"
+  },
+  {
+    "args": [
+      "--2D5BatchSize",
+      "8",
+      "--input",
+      "nonexistent.in"
+    ],
+    "returncode": 1,
+    "check": "OPALX help/argument placement accepted"
+  },
+  {
+    "args": [
+      "--input",
+      "nonexistent.in",
+      "--2D5BatchSize",
+      "64"
+    ],
+    "returncode": 1,
+    "check": "OPALX help/argument placement accepted"
+  }
+]

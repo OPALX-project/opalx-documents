@@ -1,0 +1,21 @@
+{
+  "purpose": "Validate provenance extraction on previous completed failed job; not current a9 evidence",
+  "job_id": 17451643780,
+  "xml_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17451643780/artifacts/raw/regression-results-cpu-zen2-openmp/regressionTests/pr-637_Implement_cyclotron_PROBE_and_accelerating_space-charge_tracking/cpu-zen2-openmp/results_2026-10-25_21-21.xml",
+  "sha256": "9d7726ecae6d73928a37aef7d0359be3437519610e4ffb94bc48151595424f43",
+  "date_start": "2026-10-25T21:23:33.730071",
+  "revisions": {
+    "code": "23f04f6",
+    "code_full": "23f04f6c8e57f497e6f1a722038f9e1cef010803",
+    "tests": "737547e",
+    "tests_full": "737547e6ae38cf3001d6bc45cf38dd1a47d78402"
+  },
+  "run_metadata": {
+    "host": "nid002155",
+    "architecture": "unknown",
+    "backend": "unknown",
+    "mpi_ranks": "1",
+    "omp_threads": "1",
+    "device": "none"
+  }
+}

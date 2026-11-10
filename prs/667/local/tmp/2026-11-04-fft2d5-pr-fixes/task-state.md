@@ -1,0 +1,17 @@
+# FFT2D5 core fixes — committed and pushed
+
+User authorized commit/push, and asked during work for DBA input (answered with exactpilotinput path/settings and restartcommand; includeinputlink in final).
+Commit40856f1a28246fb8d137864ca7541f2aede71a7b on codex/fft2d5-explicit-original-model pushed normally toorigin; upstreamset andremoteSHAverified. PR667 remainsOPEN; titleupdatedtoFixoriginalFFT2D5framehandlingandtransversefields; bodyverifiedexactpreparedcontent, preservespublishedplots/inputlinks, explainsactualsourcefixes/currentbuildrepeat andlimits. https://github.com/OPALX-project/OPALX/pull/667
+
+11filescommitted: eightvalidatedFFT2D5sourcefilesbyteidenticalfd6ba8dc5, matchingTestFFT2D5Algorithm.cpp/TestFFT2D5Numerics.cpp fromfd6, andnewunit_tests/SpaceCharge/README.md. Noexperimental3D/curvatureoperator, newprojectioncacheorotheroptimization included.
+All7oldmodified/untrackedexperimentalSpaceCharge testfiles preservedbyte-for-byte underpreserved-experimental-tests withSHAinventorypreserved-tests.json. ReplacedAlgorithm/Numericswithcompatiblefd6versions;restoredHEADconfigtestandCMake;removed3untrackedexperimentaltestfilesfromactivedirONLYafterverifiedbackup. FFA/workflow/README/tools/.gitignorelocalsunchanged,hashverified. srcandunit_tests/SpaceCharge nowcleanrelativeHEAD;unrelatedworkingchangesremain.
+
+Buildonly~/git/opalx/build-omp, normalOPALX_ENABLE_UNIT_TESTS=ON; clearedtemporaryCMAKE_PROJECT_TOP_LEVEL_INCLUDES, so normaltargetsarenowusedwithoutthetemporaryvalidationtestcopies. BuiltnormalTestFFT2D5Algorithm,TestFFT2D5Numerics,TestSpaceChargeConfig; all3CTests passOMP1 and4. MPI2unsupportedrankrejectionpassesbothranks. SandboxMPI2mappingfailedbeforetesttwice;approvedtool escalationwith--map-byslot--bind-tonone--oversubscribe succeeded. Noactualunitfailure/tolerancerelaxation. Diffwhitespaceand11-filecommitscopereviewed.
+
+Benchmarkexe~/git/opalx/build-omp/src/opalx preservedunchangedSHA4fd718db8dea11088409158506cd61761eb35f7a0e6a15638fba235c433ba0eb; copyatbuild-omp/previous/opalx-4fd718db8dea. HEADsourcefilehashesmatchvalidatedbuild,recordedcommit-provenance.json. MetadataembeddedintheoldexestillreflectspriorbuildHEAD; noexe relinkwasneeded. Publishedrepeatdatastillvalidfieldsourceexact.
+
+CIatverification: CSCSopenmp/GH200/MI300 PENDING;otherGitHubjobsSKIPPED. LocalrelevanttestsPASS; noGPUcheckperformedlocally. Do notclaimCIcomplete. PRmergeable,mergestateBLOCKEDpendingrequiredchecks/approvals. No mergeperformed.
+
+NoDBArunsstarted. Noopalx-documents commit/push (outsideauthorizedcorecommit scope). Allpriorreports/assetsremainlocalandpreserved. No sourceoptimizationimplemented.
+
+DBApilotinput /Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility/omp4-100steps/case.in;100k,64x64x512,5.602212nC,3ps,100steps,ORIGINAL,PIPEMODENONE,MIDPOINT. Requiresindependentdesignreferencecheckpoint../initial-state.h5 andsamecurrentbuildexe. The16turnsSCcampaign remainsunstarted.

@@ -1,0 +1,94 @@
+\clearpage
+\section{Historical frozen fields of a 5 m curved tube}
+\label{sec:frozen}
+Uniform physical density fills a sharp-ended tube with $L=5$ m, $R=2$ m and
+radial/vertical semiaxes $a=5$ mm, $c=0.5$ mm. The nominal charge is 10 pC;
+fields scale linearly. The vertical size and $\beta=0.001$ are benchmark
+choices. One $10^{-17}$ s native step with zero external fields tests the
+frozen field operator, not tracking. These results retain the earlier
+independent-slice OPEN executable; \cref{sec:free-open} tests its replacement.
+
+\subsection{Reference, native fields and comparison scales}
+SACR uses \cref{eq:sacr-surface} and the same curved map, now with
+$|s|\le L/2$ and $u^2/a^2+y^2/c^2\le1$. For $u=a\cos\phi$, $y=c\sin\phi$,
+the side and cap vector areas are
+\begin{align}
+ \dd\bm A_{\rm side}&=(1+u/R)
+  \big[c\cos\phi\,\bm e_r(s)+a\sin\phi\,\bm e_y\big]\dd s\,\dd\phi,\nonumber\\
+ \dd\bm A_\pm&=\pm\bm e_s(\pm L/2)\dd u\,\dd y.
+ \label{eq:frozen-area}
+\end{align}
+Thus $Q=\rho\pi acL$. Sampling includes the volume Jacobian $1+u/R$;
+end caps do not. Independent endpoint, symmetry, divergence/curl, cylinder
+and volume checks pass; the final SACR refinement change is below
+$6.8\times10^{-12}$ of the component scales.
+
+At 43 interior targets, native fields are transformed from the tracker frame
+to the exact circle basis; a probe-only companion removes diagnostic charge.
+Count, charge, IDs, finite-field and frame checks pass; probe motion is below
+5 pm. The pinned executable is the completed 10 pC build in Appendix~B.
+
+With $F_i=E_i/(\rho/(4\pi\eps))$, use fixed scales
+\begin{equation}
+ F_{r,*}=F_{y,*}=\frac{4\pi ac}{a+c},\qquad
+ F_{s,*}=\max_{43\ {\rm targets}}|F_s^{\rm SACR}|,\qquad
+ \eta_i=\frac{E_i^{\rm FFT2D5}-E_i^{\rm SACR}}{E_{i,*}}.
+ \label{eq:frozen-scales}
+\end{equation}
+Here $E_{i,*}=\rho F_{i,*}/(4\pi\eps)$. These retain zeros; percentages are
+not pointwise relative errors. At 10 pC the scales are 13.07 and 3.250 V/m.
+
+\reportfigure{frozen-field-comparison}{All three fields at the 43 targets.
+The finest member of each separate scan is shown, with no joint fine-mesh
+run implied. Dashed: SACR identity. Lower panels retain signed differences.}{fig:frozen-fields}
+
+\clearpage
+\subsection{Separate mesh refinements and controls}
+The transverse scan uses one quiet Cartesian cross-section source with
+$N_y=N_x/2$ and fixed $N_z=512$; the longitudinal scan fixes
+$N_x\times N_y=128\times64$.
+Within each scan the source and reference path are held fixed.
+\tabfile{frozenmeshes}
+\reportfigure{frozen-mesh-convergence}{Matched-source refinements. Solid:
+all 43 targets; dotted triangles: 31 targets at least 50 mm from either end.
+Gray squares are successive mesh changes, separate from SACR difference.
+The 1\% line uses the fixed component scale.}{fig:frozen-mesh}
+\tabfile{frozenerrors}
+``Interior'' includes the 50 mm end-distance targets; near-end targets lie
+5 or 10 mm from an end. The 1\% all-component goal is not met. Stable
+transverse refinement at fixed $N_z=512$ does not establish joint convergence
+of the end fields or physical accuracy.
+
+\input{generated/frozen-controls-text.tex}
+
+At the reference-path midpoint $(u,y,s)=0$, not the global charge centroid,
+the flat-slice continuum model with $\rho_{\rm slice}=\rho(1+u/R)$ predicts
+\begin{equation}
+ E_r^{\rm slice}(0)=-\frac{\rho}{2\pi\eps R}
+ \int_A\frac{u^2}{u^2+y^2}\dd u\,\dd y
+ =-\frac{\rho a^2c}{2\eps R(a+c)}
+ =-0.016341\ {\rm V/m}\quad(10\ {\rm pC}).
+ \label{eq:frozen-flat-slice}
+\end{equation}
+This unfitted slice prediction is inward; the full curved-tube field is outward.
+
+\clearpage
+\subsection{End response and the curvature field}
+\reportfigure{frozen-native-longitudinal-end}{Native longitudinal fields on
+a fixed transverse source column, $u=-42.98\,\mu$m, $y=-88.28\,\mu$m.
+SACR and FFT2D5 use the same local polyline direction. Fields are rescaled
+to exactly 10 pC. The dense SACR curve is a checked interpolant; the
+43-target error metrics use direct quadrature.}{fig:frozen-end}
+At 5 mm from an end, the finest longitudinal mesh misses essentially the
+entire finite-tube tangential field. The local line-density-gradient model
+does not reproduce the smooth interior end response of the Coulomb integral.
+
+\reportfigure{frozen-centre-radial}{Centre radial field under the matched
+transverse refinement. Black: full SACR curved-tube field; the second
+analytic line is the flat-slice limit in \cref{eq:frozen-flat-slice}.
+The FFT2D5 response has the opposite sign to SACR.}{fig:frozen-centre}
+\input{generated/frozen-centre-text.tex}
+One percent of the transverse scale is 0.131 V/m, larger than the entire
+SACR centre field. Component-scale agreement cannot certify this response.
+The archived field model fails this test. \Cref{sec:free-open} tests its
+replacement; curved tracking remains unvalidated.

@@ -1,0 +1,14 @@
+{
+  "job_id": 355082,
+  "state": "FAILED",
+  "failure_stage": "job-only runtime UUID launcher, before os.execv(opalx)",
+  "cause": "Launcher called nonexistent CUDA Runtime API cudaDeviceGetUuid; installed runtime/header export scan confirms absence. Use SDK-typed cudaGetDeviceProperties(...).uuid.",
+  "runtime_library": "/opt/psi/Programming/cuda/13.2.1/targets/x86_64-linux/lib/libcudart.so.13.2.75",
+  "opalx_banner_present": false,
+  "run_hdf5_files": [],
+  "mapping_files": [],
+  "successful_runs": 0,
+  "tracker_started": false,
+  "archive_sha256": "ca09d14668deac811c9f2340536f31e28e60663e308e686e008453e277dd9dd6",
+  "next_step": "Read installed CUDA13.2 header/export table and review wrapper-only versioned API correction before any retry."
+}

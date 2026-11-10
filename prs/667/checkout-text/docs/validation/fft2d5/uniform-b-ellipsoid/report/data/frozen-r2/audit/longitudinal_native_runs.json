@@ -1,0 +1,212 @@
+[
+  {
+    "name": "xy128-z512-ns5120",
+    "command": [
+      "/Users/adelmann/.venv-h6/bin/python",
+      "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/run_study.py",
+      "xy128-z512-ns5120",
+      "--mesh",
+      "128",
+      "64",
+      "512",
+      "--ns",
+      "5120",
+      "--path-step",
+      "0.02",
+      "--run"
+    ],
+    "returncode": 0,
+    "controller_elapsed_s": 23.575463084001967,
+    "source_run": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-ns5120/manifest.json",
+      "sha256": "feb4c35223f0c12eec8d00de848172ec2f777e227479c54c438c536b0aaf8a74",
+      "elapsed_s": 13.633745457998884,
+      "returncode": 0,
+      "expected_particles": 5242923,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+    },
+    "probe_run": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-ns5120-probes/manifest.json",
+      "sha256": "22ab92b01701416c3ac2ad7f736e4e93d6fa1f509013a2b374cde31516b22154",
+      "elapsed_s": 0.10939687499922002,
+      "returncode": 0,
+      "expected_particles": 43,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+    }
+  },
+  {
+    "name": "xy128-z1024-ns5120",
+    "command": [
+      "/Users/adelmann/.venv-h6/bin/python",
+      "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/run_study.py",
+      "xy128-z1024-ns5120",
+      "--mesh",
+      "128",
+      "64",
+      "1024",
+      "--ns",
+      "5120",
+      "--path-step",
+      "0.02",
+      "--run"
+    ],
+    "returncode": 0,
+    "controller_elapsed_s": 15.240655416993832,
+    "source_run": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z1024-ns5120/manifest.json",
+      "sha256": "03da458db7258afbb4e2296b4de6ec6012e4389793ee9be24d9b8a05f6653895",
+      "elapsed_s": 14.201462667006126,
+      "returncode": 0,
+      "expected_particles": 5242923,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+    },
+    "probe_run": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z1024-ns5120-probes/manifest.json",
+      "sha256": "a83c6ec271b4736e7304135a3e26c518253fbdf4d0ac61402085742790d5fef5",
+      "elapsed_s": 0.1369400420007878,
+      "returncode": 0,
+      "expected_particles": 43,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+    }
+  },
+  {
+    "name": "xy128-z2048-ns5120",
+    "command": [
+      "/Users/adelmann/.venv-h6/bin/python",
+      "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/run_study.py",
+      "xy128-z2048-ns5120",
+      "--mesh",
+      "128",
+      "64",
+      "2048",
+      "--ns",
+      "5120",
+      "--path-step",
+      "0.02",
+      "--run"
+    ],
+    "returncode": 0,
+    "controller_elapsed_s": 17.343831958998635,
+    "source_run": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z2048-ns5120/manifest.json",
+      "sha256": "d8c910823be1829c628582e09ca83f941efaa079f174ee189b9378066e0c6504",
+      "elapsed_s": 16.164963124996575,
+      "returncode": 0,
+      "expected_particles": 5242923,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+    },
+    "probe_run": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z2048-ns5120-probes/manifest.json",
+      "sha256": "4511c5224dbdf59a8276e3a5f62ca4ab6aad7246762f84124821a55dd10168e1",
+      "elapsed_s": 0.27745545800280524,
+      "returncode": 0,
+      "expected_particles": 43,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+    }
+  },
+  {
+    "name": "xy128-z4096-ns5120",
+    "command": [
+      "/Users/adelmann/.venv-h6/bin/python",
+      "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/run_study.py",
+      "xy128-z4096-ns5120",
+      "--mesh",
+      "128",
+      "64",
+      "4096",
+      "--ns",
+      "5120",
+      "--path-step",
+      "0.02",
+      "--run"
+    ],
+    "returncode": 0,
+    "controller_elapsed_s": 19.600683708995348,
+    "source_run": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns5120/manifest.json",
+      "sha256": "bc2542b77cb610e8069bda10dbe5b5e0b5bdf40dd565372f890d5851505956ae",
+      "elapsed_s": 18.22364758400363,
+      "returncode": 0,
+      "expected_particles": 5242923,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+    },
+    "probe_run": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns5120-probes/manifest.json",
+      "sha256": "a8b6ea9e542ba5b5795da46dbc03b83176f4d51d465e2e002bd7aa6419b7388e",
+      "elapsed_s": 0.4629955830023391,
+      "returncode": 0,
+      "expected_particles": 43,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+    }
+  },
+  {
+    "name": "xy128-z4096-ns10240",
+    "command": [
+      "/Users/adelmann/.venv-h6/bin/python",
+      "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/run_study.py",
+      "xy128-z4096-ns10240",
+      "--mesh",
+      "128",
+      "64",
+      "4096",
+      "--ns",
+      "10240",
+      "--path-step",
+      "0.02",
+      "--run"
+    ],
+    "returncode": 0,
+    "controller_elapsed_s": 53.45465033400251,
+    "source_run": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns10240/manifest.json",
+      "sha256": "660fb70aba0f1b666169b368a2dea4293f263602930a0a075191c02072175846",
+      "elapsed_s": 32.90685779199703,
+      "returncode": 0,
+      "expected_particles": 10485803,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+    },
+    "probe_run": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns10240-probes/manifest.json",
+      "sha256": "fe3f74063cc75e65ed2e5b27917f2a131b03c8fe707e20f2542bfcdf8543f6f6",
+      "elapsed_s": 0.39741774999856716,
+      "returncode": 0,
+      "expected_particles": 43,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+    }
+  },
+  {
+    "name": "xy128-z4096-ns5120-path01",
+    "command": [
+      "/Users/adelmann/.venv-h6/bin/python",
+      "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/run_study.py",
+      "xy128-z4096-ns5120-path01",
+      "--mesh",
+      "128",
+      "64",
+      "4096",
+      "--ns",
+      "5120",
+      "--path-step",
+      "0.01",
+      "--run"
+    ],
+    "returncode": 0,
+    "controller_elapsed_s": 25.51234816700162,
+    "source_run": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns5120-path01/manifest.json",
+      "sha256": "6e2e875801fb2e016cd14b47bb04f683fcad2b93635addaa802a4183bf12473b",
+      "elapsed_s": 23.913414249997004,
+      "returncode": 0,
+      "expected_particles": 5242923,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+    },
+    "probe_run": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns5120-path01-probes/manifest.json",
+      "sha256": "4c765c44897d27a499fdb53281f9f326978dd840db70134dd71025d09810cd79",
+      "elapsed_s": 0.6086849159983103,
+      "returncode": 0,
+      "expected_particles": 43,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+    }
+  }
+]

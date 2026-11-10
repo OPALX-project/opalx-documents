@@ -1,0 +1,37 @@
+[
+  {
+    "args": [
+      "--restart",
+      "missing.h5",
+      "--input",
+      "missing.in",
+      "--help"
+    ],
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "args": [
+      "--restart",
+      "missing.h5",
+      "--2D5BatchSize",
+      "8",
+      "--input",
+      "missing.in",
+      "--help"
+    ],
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "args": [
+      "--input",
+      "missing.in",
+      "--restart",
+      "missing.h5",
+      "--help"
+    ],
+    "returncode": 0,
+    "passed": true
+  }
+]

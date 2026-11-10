@@ -1,0 +1,8 @@
+ci: pair PR637 with updated field-tracking references
+
+Select codex/pr637-reference-refresh for OpenMP, GH200 and MI300 so the
+ScalingFFA correction is tested with compatible full-duration references.
+Preserve the complete regression and native unit-test inventories.
+
+Restore regression master after the compatible source and external
+reference PR have both merged; retain the external branch until then.

@@ -1,0 +1,20 @@
+[
+  {
+    "backend": "cpu",
+    "ranks": 1,
+    "steps": 100,
+    "max_position_m": 3.52526021086811e-13,
+    "max_momentum": 5.2368844749446945e-15,
+    "particles": 100000,
+    "charge_C": 5.602212333965893e-09
+  },
+  {
+    "backend": "cpu",
+    "ranks": 2,
+    "steps": 100,
+    "max_position_m": 3.632753564124996e-13,
+    "max_momentum": 1.800567419478922e-12,
+    "particles": 100000,
+    "charge_C": 5.602212333965893e-09
+  }
+]

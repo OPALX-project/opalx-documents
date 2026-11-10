@@ -1,0 +1,18 @@
+diff --git a/unit_tests/cmake/AddOPALXTest.cmake b/unit_tests/cmake/AddOPALXTest.cmake
+index c6de2f4df..293913b50 100644
+--- a/unit_tests/cmake/AddOPALXTest.cmake
++++ b/unit_tests/cmake/AddOPALXTest.cmake
+@@ -46,6 +46,13 @@ function(add_opalx_test TEST_NAME)
+ 
+   add_executable(${TEST_NAME} ${_sources})
+ 
++  # Keep inline CUDA kernel helpers local to each module when linking shared
++  # libraries, while preserving the visibility of shared IPPL globals.
++  if(BUILD_SHARED_LIBS AND "CUDA" IN_LIST OPALX_PLATFORMS)
++    set_target_properties(${TEST_NAME} PROPERTIES
++      VISIBILITY_INLINES_HIDDEN ON)
++  endif()
++
+   # Link libraries (opalx exports includes/flags/deps; pick your GTest flavor)
+   if(TEST_USE_GTEST_MAIN)
+     target_link_libraries(${TEST_NAME} PRIVATE opalx GTest::gtest_main)

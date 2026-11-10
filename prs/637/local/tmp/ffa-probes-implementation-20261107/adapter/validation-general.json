@@ -1,0 +1,158 @@
+{
+  "checks": [
+    "large_noncontiguous_ids_exact",
+    "identity_exact",
+    "arbitrary_rotation_translation_exact_rational_oracle",
+    "polar_momentum_rotation_without_translation",
+    "ids_bunch_turn_time_preserved_exactly",
+    "source_dataframe_unchanged",
+    "inverse_frame_round_trip",
+    "momentum_norm_preserved",
+    "distance_from_origin_preserved",
+    "handedness_changing_axis_permutation",
+    "negative_coordinate_and_origin_supported",
+    "repeated_same_turn_crossings_preserved",
+    "origin_shape_rejected",
+    "origin_nonfinite_rejected",
+    "basis_shape_rejected",
+    "basis_nonfinite_rejected",
+    "basis_scaling_rejected",
+    "basis_shear_rejected",
+    "basis_singular_rejected",
+    "nonfinite_record_rejected",
+    "floating_point_ids_rejected",
+    "out_of_range_ids_rejected",
+    "position_overflow_rejected",
+    "ascii_output_ten_columns",
+    "ascii_round_trip_integer_metadata_exact",
+    "ascii_round_trip_coordinates",
+    "exclusive_output_rejects_overwrite",
+    "existing_output_unchanged",
+    "all_hdf5_flush_batches_equal_ascii",
+    "hdf5_ascii_transforms_equal",
+    "header_only_ascii_conversion",
+    "empty_hdf5_batch_supported",
+    "malformed_ascii_width_rejected",
+    "missing_input_rejected",
+    "missing_hdf5_columns_rejected",
+    "unequal_hdf5_lengths_rejected",
+    "float_hdf5_ids_rejected",
+    "cli_help",
+    "cli_arbitrary_transform_succeeds",
+    "cli_matches_api_exact_file",
+    "cli_default_identity",
+    "cli_identity_metadata_exact",
+    "cli_identity_coordinates",
+    "cli_same_input_output_rejected",
+    "cli_existing_output_rejected",
+    "cli_invalid_basis_no_output",
+    "cli_invalid_data_no_output",
+    "real_ffa_all_stations_57_hits_preserved",
+    "real_ffa_ascii_hdf5_metadata_exact",
+    "real_ffa_arbitrary_rotation_norms_metadata"
+  ],
+  "passed": 50,
+  "failed": 0,
+  "adapter_sha256": "686a2a9ab71d409f1fc62f5ae84fbefcb842620b2304460d372369a45cce3d8f",
+  "validator_sha256": "4521de110ebd5572226da688c8be54b91520317bd7daa561476bac1aa966c3c3",
+  "real_ffa_hits": 57,
+  "real_ffa_files": [
+    {
+      "station": 1,
+      "hits": 3,
+      "hdf5_sha256": "3960b508d23dc1ca0c46edad5bdd918ec6399b7636c4d110c6ac2ad2d7e47662",
+      "ascii_sha256": "ddd982a508eed1e08de5b12a6284073af3fe4d808a1cc9a4f04af76a3fa2ab74"
+    },
+    {
+      "station": 2,
+      "hits": 4,
+      "hdf5_sha256": "5369208ba26219933a1987160aca3ac5653b9413763bd7d0589320fce374cca2",
+      "ascii_sha256": "4b98b59b8d6bbfbaab53313fb339967f72a1813de57f41256df98bf9b9e40117"
+    },
+    {
+      "station": 3,
+      "hits": 4,
+      "hdf5_sha256": "4346ae41ca267cf6cad8b47593fc89f190b3b9fd14ab5a513fe22aaac68c0626",
+      "ascii_sha256": "ba1185b0274c7e52f2fa954f7785732974739ae89373e1f309357bf81077d039"
+    },
+    {
+      "station": 4,
+      "hits": 4,
+      "hdf5_sha256": "7dfd02c66e4be62891e4fe9314207e6a232c7c943a1ff0d93e3732aad3267eb1",
+      "ascii_sha256": "9af9d80b3d173d964da34c1ec5bb9738aca52bfba6162e59f1e3641eded07ff9"
+    },
+    {
+      "station": 5,
+      "hits": 4,
+      "hdf5_sha256": "16e51cbf44279c3acea569a43d5fd0a2895d31f6b617a174dab16b0fdc9e6ab4",
+      "ascii_sha256": "745981d9f7c867540f4983a284378dc9f1f870203ca5e52a0e68b9977e4a29e2"
+    },
+    {
+      "station": 6,
+      "hits": 4,
+      "hdf5_sha256": "2c3735dbfd4236195690beb902dd9ed02dd8ae223ce930db4aa66781967b3f82",
+      "ascii_sha256": "1c55e04c05e9d2952d05ecf62b3f2f036b16b68f93a80646bb1ef9e25dad825a"
+    },
+    {
+      "station": 7,
+      "hits": 4,
+      "hdf5_sha256": "20ec818679f08a1d11961c2fb4293ef2b423c50f0634bbe1bafa9cc98cd5aa73",
+      "ascii_sha256": "6e54ebf9784b959343e78aa11f454cfcadec99c3d9b8ff2c13ee3f0514e175d6"
+    },
+    {
+      "station": 8,
+      "hits": 4,
+      "hdf5_sha256": "39e995a1a51a953622e49bd8d41038d6f172db7ec37ad85ab10181aa24690274",
+      "ascii_sha256": "9b0641c3793f1dac057d983161376be5cf0bc916fb284ad36034724e9b153f48"
+    },
+    {
+      "station": 9,
+      "hits": 4,
+      "hdf5_sha256": "1fb4145faa6998c04ac2dc6181b046af5aa0ea8e0d2fae6abcaefe57ff8ef544",
+      "ascii_sha256": "cf3ff354ed767a45140df29f11db07f1698aa766dd6d787f9ac42330aec10c59"
+    },
+    {
+      "station": 10,
+      "hits": 4,
+      "hdf5_sha256": "bf4fe2e95c39b1bf52e51e57f5ea8feab34d06c8b5ea13f02a08434153ac46c3",
+      "ascii_sha256": "86e272492a653e6dd882f9ca505c22181a31770492b97f3b1deff2db7b468963"
+    },
+    {
+      "station": 11,
+      "hits": 3,
+      "hdf5_sha256": "cd96c4930b5dcf4eec1cbaa546ee4dfea96ec82c5a604c50396341d0a29cc749",
+      "ascii_sha256": "08910c9762b3a6213c6fc3a636353d451921e847b908cb2308c1bf0799318962"
+    },
+    {
+      "station": 12,
+      "hits": 3,
+      "hdf5_sha256": "720b4aa865fe37ebc055679de5862a3f63385751b38d50b75c8ac06c3edca3ea",
+      "ascii_sha256": "b01c549e89e055d295730d98e4e08c477a5f816b956eeb4ff45956ac91883bb9"
+    },
+    {
+      "station": 13,
+      "hits": 3,
+      "hdf5_sha256": "c6665e1448ac2ea135dbddfc973f6e65e31439c5c9c187580b5c39bb374e1ba6",
+      "ascii_sha256": "4d567f0d6d61e1a3e4b8309b32d2be9b1cb2eee4d2d7691212567beff1c66b0b"
+    },
+    {
+      "station": 14,
+      "hits": 3,
+      "hdf5_sha256": "b58601c33d333ff29a0dd16ca07681b87da1e36b9048cd83fd4f203b500a2b1e",
+      "ascii_sha256": "ecb305ed0c8a0ffeab12548306c37bde5114c61357a1e7f2d0bd17a8ff6e17da"
+    },
+    {
+      "station": 15,
+      "hits": 3,
+      "hdf5_sha256": "1dbe5462ccdf77a4d81d9d4a41a43102414a1ff39353f370c39059b7b10255da",
+      "ascii_sha256": "bc505ef129b291924a46ed87965c80b587c6bc552dbcded47c964bb15419f512"
+    },
+    {
+      "station": 16,
+      "hits": 3,
+      "hdf5_sha256": "1bc3c249ee56ff0862d3f5c4f92040f5f2129fc9ddbb564b9f6cd1cd27c50481",
+      "ascii_sha256": "00d80fafe7d8a3fa7c2a66d4cc2fcefea0bc2971ca7e52ad0da2c6bc35aa26ba"
+    }
+  ],
+  "note": "Standalone analysis utility validation only; native C++ and GPU tracking unchanged. Rational rotation oracle and inverse checks use absolute 2e-15 m / 3e-17 p/(mc) roundoff tolerances. No simulation, reference-data or physics-tolerance changes."
+}

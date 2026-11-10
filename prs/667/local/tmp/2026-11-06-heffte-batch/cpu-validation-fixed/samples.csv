@@ -1,0 +1,13 @@
+method,nx,ny,nz,batch,round,seconds_per_solve
+current_solveBatched,64,64,256,64,0,0.039389472000000002
+public_reorder_scale_fused,64,64,256,64,0,0.036289374999999999
+executor_r2c_rows_transpose,64,64,256,64,0,0.026807083333333332
+executor_c2c_merged_xy,64,64,256,64,0,0.048529930666666665
+public_reorder_scale_fused,64,64,256,64,1,0.036590389000000001
+executor_r2c_rows_transpose,64,64,256,64,1,0.026484902666666667
+executor_c2c_merged_xy,64,64,256,64,1,0.049216013666666669
+current_solveBatched,64,64,256,64,1,0.036119194333333333
+executor_r2c_rows_transpose,64,64,256,64,2,0.026799458333333331
+executor_c2c_merged_xy,64,64,256,64,2,0.049333250000000002
+current_solveBatched,64,64,256,64,2,0.035881958333333332
+public_reorder_scale_fused,64,64,256,64,2,0.03434619466666667

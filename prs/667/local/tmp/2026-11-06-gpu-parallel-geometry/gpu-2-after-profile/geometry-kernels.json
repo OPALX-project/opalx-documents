@@ -1,0 +1,66 @@
+[
+  {
+    "rank": 0,
+    "kernels": [
+      {
+        "name": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<opalx::spacecharge::FFT2D5Algorithm::preparePathGeometryAndProjections(const opalx::spacecharge::SpaceChargeSolveContext &, bool)::[lambda() (instance 1)]::operator ()() const::[lambda(unsigned long) (instance 1)], Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>>(T1)",
+        "calls": 100,
+        "total_ms": 0.312544,
+        "average_ms": 0.00312544,
+        "min_ms": 0.002944,
+        "max_ms": 0.003808,
+        "first_start_ns": 7735070165
+      },
+      {
+        "name": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<opalx::spacecharge::FFT2D5Algorithm::preparePathGeometryAndProjections(const opalx::spacecharge::SpaceChargeSolveContext &, bool)::[lambda() (instance 1)]::operator ()() const::[lambda(const Kokkos::Impl::CudaTeamMember &) (instance 1)], Kokkos::TeamPolicy<>, Kokkos::Cuda>>(T1)",
+        "calls": 100,
+        "total_ms": 25.079117,
+        "average_ms": 0.25079117,
+        "min_ms": 0.236351,
+        "max_ms": 0.305694,
+        "first_start_ns": 7735154580
+      },
+      {
+        "name": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<opalx::spacecharge::FFT2D5Algorithm::preparePathGeometryAndProjections(const opalx::spacecharge::SpaceChargeSolveContext &, bool)::[lambda() (instance 1)]::operator ()() const::[lambda(unsigned long) (instance 2)], Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>>(T1)",
+        "calls": 200,
+        "total_ms": 6.256897,
+        "average_ms": 0.031284485,
+        "min_ms": 0.027072,
+        "max_ms": 0.038912,
+        "first_start_ns": 7736311439
+      }
+    ]
+  },
+  {
+    "rank": 1,
+    "kernels": [
+      {
+        "name": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<opalx::spacecharge::FFT2D5Algorithm::preparePathGeometryAndProjections(const opalx::spacecharge::SpaceChargeSolveContext &, bool)::[lambda() (instance 1)]::operator ()() const::[lambda(unsigned long) (instance 1)], Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>>(T1)",
+        "calls": 100,
+        "total_ms": 0.323008,
+        "average_ms": 0.0032300799999999998,
+        "min_ms": 0.002976,
+        "max_ms": 0.003904,
+        "first_start_ns": 7736615856
+      },
+      {
+        "name": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<opalx::spacecharge::FFT2D5Algorithm::preparePathGeometryAndProjections(const opalx::spacecharge::SpaceChargeSolveContext &, bool)::[lambda() (instance 1)]::operator ()() const::[lambda(const Kokkos::Impl::CudaTeamMember &) (instance 1)], Kokkos::TeamPolicy<>, Kokkos::Cuda>>(T1)",
+        "calls": 100,
+        "total_ms": 25.649513,
+        "average_ms": 0.25649513,
+        "min_ms": 0.23776,
+        "max_ms": 0.307488,
+        "first_start_ns": 7736687376
+      },
+      {
+        "name": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<opalx::spacecharge::FFT2D5Algorithm::preparePathGeometryAndProjections(const opalx::spacecharge::SpaceChargeSolveContext &, bool)::[lambda() (instance 1)]::operator ()() const::[lambda(unsigned long) (instance 2)], Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>>(T1)",
+        "calls": 200,
+        "total_ms": 7.224227,
+        "average_ms": 0.036121135,
+        "min_ms": 0.03008,
+        "max_ms": 0.051776,
+        "first_start_ns": 7737842321
+      }
+    ]
+  }
+]

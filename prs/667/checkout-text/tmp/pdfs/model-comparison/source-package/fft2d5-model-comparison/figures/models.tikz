@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Latex,font=\small,
+ box/.style={draw,rounded corners=2pt,minimum height=9mm,align=center},
+ arrow/.style={->,thick}]
+ \node[box,fill=gray!8] (source) at (0,0) {Same physical\\charge distribution};
+ \node[box,fill=blue!7] (old) at (4,1.5) {Original 2D5 / PyORBIT\\2D slices + local $E_s$};
+ \node[box,fill=green!7] (fix) at (4,0) {Curvature extension\\2D solves: $\rho$, $u'\rho$};
+ \node[box,fill=green!7] (line) at (8.7,0) {1D arc integral\\combine $\Phi_\perp$};
+ \node[box,fill=orange!9] (sacr) at (4,-1.5) {SACR reference\\full Coulomb integral};
+ \draw[arrow] (source.east)--++(.5,0)|-(old.west);
+ \draw[arrow] (source.east)--(fix.west);
+ \draw[arrow] (source.east)--++(.5,0)|-(sacr.west);
+ \draw[arrow] (fix.east)--(line.west);
+ \node[align=left] at (8.8,1.5) {Longitudinal closure:\\$E_s\propto-g\lambda'(s)$};
+ \node[align=left] at (8.7,-1.5) {Finite ends and\\exact circular geometry};
+\end{tikzpicture}

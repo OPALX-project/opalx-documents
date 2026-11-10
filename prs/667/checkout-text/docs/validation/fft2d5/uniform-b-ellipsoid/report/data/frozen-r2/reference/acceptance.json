@@ -1,0 +1,71 @@
+{
+  "model": "SACR uniform-physical-density constant-section finite curved tube",
+  "scope": "43 sampled interior frozen-field targets; no tracking claim",
+  "geometry": {
+    "a_m": 0.005,
+    "c_m": 0.0005,
+    "half_length_m": 2.5,
+    "radius_m": 2.0,
+    "volume_m3": 3.926990816987242e-05
+  },
+  "field_units": "F=E/(k*rho), k=1/(4*pi*epsilon0), units metre",
+  "local_coordinate_and_field_order": [
+    "radial",
+    "vertical",
+    "tangential"
+  ],
+  "scales_div_k_rho_m": {
+    "radial": 0.005711986642890534,
+    "vertical": 0.005711986642890534,
+    "tangential": 0.0014202325784798471
+  },
+  "scale_definition": "radial and vertical: 4*pi*a*c/(a+c); tangential: maximum absolute converged SACR Es over the fixed 43 diagnostic targets",
+  "points": 43,
+  "levels": [
+    [
+      128,
+      16
+    ],
+    [
+      256,
+      32
+    ],
+    [
+      512,
+      64
+    ],
+    [
+      1024,
+      128
+    ],
+    [
+      2048,
+      128
+    ],
+    [
+      4096,
+      128
+    ]
+  ],
+  "final_normalized_refinement_changes": {
+    "radial": 5.314728959910823e-16,
+    "vertical": 6.780531207054229e-12,
+    "tangential": 2.1888041180907139e-16
+  },
+  "refinement_tolerance": 1e-06,
+  "independent_checks": {
+    "maximum_endpoint_difference_normalized": 3.8885566348641565e-16,
+    "maximum_relative_divergence_error": 3.894440325780124e-10,
+    "maximum_curl_norm_over_4pi": 2.2442020473735805e-10,
+    "long_straight_ellipse_difference_normalized": 4.406669554760346e-13,
+    "maximum_symmetry_difference_normalized": 1.1198893165526379e-14,
+    "maximum_volume_surface_relative_difference": 3.730349362740526e-14,
+    "passed": true
+  },
+  "passed": true,
+  "runtime_s": 4.658737124998879,
+  "source_hashes": {
+    "tube_reference.py": "358010db71fb4532a3ccfe47ba619486e27e9298ac770831d8eb4e8bf17c7213",
+    "build_reference.py": "6147b3b8c375d81510ddc6cfe6e913721dcb67ed338eec93d830225c815f9fa6"
+  }
+}

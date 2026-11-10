@@ -1,0 +1,13 @@
+{
+  "targets": [
+    "TestDeviceExternalField",
+    "TestScalingFFAMagnet"
+  ],
+  "compiler_errors": [
+    "/Users/adelmann/git/opalx/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp:626:34: error: no member named 'outsideAperture' in 'ScalingFFAMagnetConfig'",
+    "/Users/adelmann/git/opalx/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp:627:34: error: no member named 'contains' in 'ScalingFFAMagnetConfig'",
+    "/Users/adelmann/git/opalx/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp:629:37: error: no member named 'outsideAperture' in 'ScalingFFAMagnetConfig'",
+    "/Users/adelmann/git/opalx/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp:630:37: error: no member named 'contains' in 'ScalingFFAMagnetConfig'",
+    "/Users/adelmann/git/opalx/unit_tests/Algorithms/TestDeviceExternalField.cpp:552:29: error: no member named 'fieldOracleSupported' in 'device_external::Lattice'"
+  ]
+}

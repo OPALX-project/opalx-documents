@@ -1,0 +1,8 @@
+Fix restart look-ahead for explicit input files
+
+Recognize --input filename when deciding whether --restart has an optional
+checkpoint argument. This avoids treating the checkpoint as another input
+file when the explicit input option follows it.
+
+Validated restart/input ordering with and without --2D5BatchSize using the
+current Release/OpenMP build.

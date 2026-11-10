@@ -1,0 +1,82 @@
+[
+  {
+    "geometry": "bend",
+    "code": "OPALX 2D5",
+    "zero_sc": false,
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/opalx/runs/bend-10pC-10steps-e85/manifest.json",
+    "manifest_sha256": "a6348ea8d33fb3d331e3a5484f734e959b075d0a1da731cfa477ef525352fa70",
+    "source_sha256": "4cf23b08e775af54ab1b4d0cd25d090793d36d0735c6c0bd332ddc1af3939c59",
+    "steps": 10,
+    "source_particles": 1048576
+  },
+  {
+    "geometry": "bend",
+    "code": "OPALX 2D5",
+    "zero_sc": true,
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/opalx/runs/bend-ZeroSC-10steps-e85/manifest.json",
+    "manifest_sha256": "c043ade361b001d534c3859e4ff75628830c370256fb3a8e8781111e7c1abd32",
+    "source_sha256": "4cf23b08e775af54ab1b4d0cd25d090793d36d0735c6c0bd332ddc1af3939c59",
+    "steps": 10,
+    "source_particles": 1048576
+  },
+  {
+    "geometry": "straight",
+    "code": "OPALX 2D5",
+    "zero_sc": false,
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/opalx/runs/straight-10pC-10steps-e85/manifest.json",
+    "manifest_sha256": "1383fb90f83365c4e060b706f126359e676c5d9ee9586e52494fdac915686038",
+    "source_sha256": "b63b7905c15a30a509169603bd67f18f9835aae620b2bd8fdeef04c30326218d",
+    "steps": 10,
+    "source_particles": 1048576
+  },
+  {
+    "geometry": "straight",
+    "code": "OPALX 2D5",
+    "zero_sc": true,
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/opalx/runs/straight-ZeroSC-10steps-e85/manifest.json",
+    "manifest_sha256": "c3459098cfc1bdbfd48a9cceb1ac960f86fe52064ce436423667bbceb3a583f4",
+    "source_sha256": "b63b7905c15a30a509169603bd67f18f9835aae620b2bd8fdeef04c30326218d",
+    "steps": 10,
+    "source_particles": 1048576
+  },
+  {
+    "geometry": "bend",
+    "code": "PyORBIT",
+    "zero_sc": false,
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/pyorbit/runs/bend-10pC-10steps/manifest.json",
+    "manifest_sha256": "b43583bb8ece5738a9b9e3fe09ecbb10b3ab65925221af0ee4285d0e81d2bf12",
+    "source_sha256": "4cf23b08e775af54ab1b4d0cd25d090793d36d0735c6c0bd332ddc1af3939c59",
+    "steps": 10,
+    "source_particles": 1048576
+  },
+  {
+    "geometry": "bend",
+    "code": "PyORBIT",
+    "zero_sc": true,
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/pyorbit/runs/bend-ZeroSC-10steps/manifest.json",
+    "manifest_sha256": "464134d24d6aff7cf09f845f4b3a1637d1d3cf9f4f96d0bb60d6a3cdd8f7ff8d",
+    "source_sha256": "4cf23b08e775af54ab1b4d0cd25d090793d36d0735c6c0bd332ddc1af3939c59",
+    "steps": 10,
+    "source_particles": 1048576
+  },
+  {
+    "geometry": "straight",
+    "code": "PyORBIT",
+    "zero_sc": false,
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/pyorbit/runs/straight-10pC-10steps/manifest.json",
+    "manifest_sha256": "8781a931c0dd2da4c44f5cd86c89897a1c11c43bf8b0effb42563d3d2f00c90d",
+    "source_sha256": "b63b7905c15a30a509169603bd67f18f9835aae620b2bd8fdeef04c30326218d",
+    "steps": 10,
+    "source_particles": 1048576
+  },
+  {
+    "geometry": "straight",
+    "code": "PyORBIT",
+    "zero_sc": true,
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/pyorbit/runs/straight-ZeroSC-10steps/manifest.json",
+    "manifest_sha256": "3c8517bb29318a0127a6e9d3017c38d39980137e57ff9f2260cc59c8133b021f",
+    "source_sha256": "b63b7905c15a30a509169603bd67f18f9835aae620b2bd8fdeef04c30326218d",
+    "steps": 10,
+    "source_particles": 1048576
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "method": "independent scalar equations and literal frame matrices; not a call to native kernels",
+  "profiles": [
+    {
+      "profile": "school",
+      "samples": 225,
+      "max_absolute_field_error_T": 8.049116928532385e-15
+    },
+    {
+      "profile": "asymmetric_control",
+      "samples": 225,
+      "max_absolute_field_error_T": 7.049916206369744e-15
+    }
+  ],
+  "total_samples": 450,
+  "negative_control_without_spiral_flip_max_error_T": 0.311304684308034,
+  "expected_axial_mapping": "B_native=-B_old[[x,z,y]]",
+  "start_end_parameter_policy": "unchanged: current native AsymmetricEnge already mirrors the old scalar function"
+}

@@ -1,0 +1,2057 @@
+[
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/accepted-before-failure.loss",
+    "sha256": "ddbc0f8f94d891fdc3995959dd9e5bfe07dca6643b949d7036abd9f1fb94baae",
+    "bytes": 171,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/accepted-before-failure.loss"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/accepted-before-failure.peaks",
+    "sha256": "916eaf2c85c1b35756cd1eef1d4a335e8066ced9e2a6b66db2fa63665bc6fd29",
+    "bytes": 37,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/accepted-before-failure.peaks"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/command.txt",
+    "sha256": "8cb88e680e205f27b763044b29f93834ee6aa58d57d37a771c722e03f5d7d00b",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/command.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "27c5465b6be8017625e594305299cd98d5ce74cf1d2be5667ccc2fd0b80546cc",
+    "bytes": 3162,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "a699ea52a27fbdf4967e9085de48fdff09e4fc8fc4aa1645f15e5bd8d8426f05",
+    "bytes": 8469,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/exit-code.txt",
+    "sha256": "bffd0dd9a9df95a5c8638ab09986006e880e735d525c70549a867cd57b70f100",
+    "bytes": 4,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/finished.txt",
+    "sha256": "9601e360abbd81aaadaf99235e6545603c012b6fffaece7cfde44ce4261d8bc0",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/run.log",
+    "sha256": "8a70ecc987c71797582af4b497627f9a8018cb0ac291c6d32d45ab76ef265e4b",
+    "bytes": 11007,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/started.txt",
+    "sha256": "69a3bf81adad49653524483cde5d205f65f325bab078a0e219c9d9e1ebf4ddaf",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-one-rank/started.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/Cyclotron-RF-Stop.h5",
+    "sha256": "78756bd72e1b81b3b1e78c985af511b4af992ab1ca3c60a2b616162b9ef7d127",
+    "bytes": 4461,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/Cyclotron-RF-Stop.in",
+    "sha256": "16c873c594639cd3c1449d2202fbe032b5728a4000266e510baccc1fb7ec6796",
+    "bytes": 3385,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/accepted-before-failure.hist",
+    "sha256": "25fd257efd0960d2d569f2568ebd9027620da99987222ccfc79b24c5c38169c5",
+    "bytes": 1959,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/accepted-before-failure.hist"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/accepted-before-failure.loss",
+    "sha256": "ddbc0f8f94d891fdc3995959dd9e5bfe07dca6643b949d7036abd9f1fb94baae",
+    "bytes": 171,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/accepted-before-failure.loss"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/accepted-before-failure.peaks",
+    "sha256": "916eaf2c85c1b35756cd1eef1d4a335e8066ced9e2a6b66db2fa63665bc6fd29",
+    "bytes": 37,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/accepted-before-failure.peaks"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/command.txt",
+    "sha256": "80b7a3c91a560652148abb0c573492eca7b2b693a2ba3873e48e5393ec64987c",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/command.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "27c5465b6be8017625e594305299cd98d5ce74cf1d2be5667ccc2fd0b80546cc",
+    "bytes": 3162,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "d0b0f0d01705f97915c36258d00a124efcd08524b69cf04e272082d48500955f",
+    "bytes": 8469,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/exit-code.txt",
+    "sha256": "bffd0dd9a9df95a5c8638ab09986006e880e735d525c70549a867cd57b70f100",
+    "bytes": 4,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/finished.txt",
+    "sha256": "9601e360abbd81aaadaf99235e6545603c012b6fffaece7cfde44ce4261d8bc0",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/run.log",
+    "sha256": "930740aa7ead89b1134845e135feda1c8a3ba68d01574a0c9acdf116fb199f62",
+    "bytes": 12328,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/started.txt",
+    "sha256": "9601e360abbd81aaadaf99235e6545603c012b6fffaece7cfde44ce4261d8bc0",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/failure-two-ranks/started.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/final-particles.csv",
+    "sha256": "6e053414a49675dd9d16d9d3f013b7fd14200b50927cf127038bdea24b3af07d",
+    "bytes": 1693,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/final-particles.csv"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/input-manifest.json",
+    "sha256": "8f36e75fde9a3478e52dc64585ac8c8d18b36db2804916a9a9ca91a7d67440c3",
+    "bytes": 3202,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/input-manifest.json"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/integration-checks.tsv",
+    "sha256": "c4a77da2245fb8049018254479d74c748317756f8c7be1af84514002c2c16ac8",
+    "bytes": 1216,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/integration-checks.tsv"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/Cyclotron-RF-Stop.h5",
+    "sha256": "f240baea5399f34cb9963f99b7b192c5922de4b53c0e34b48348da64361cfcaa",
+    "bytes": 152609,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/Cyclotron-RF-Stop.in",
+    "sha256": "33dc8fcd0b1585bc1ab8f64fd86e523f24eddb5b9e47a499d2ef4fddfe497aa4",
+    "bytes": 3263,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/Cyclotron-RF-Stop.stat",
+    "sha256": "1762bc7b6cf0d97e6d54d7a0179b66a82d7261cac87104def7c3feeaba400ea8",
+    "bytes": 7774,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/command.txt",
+    "sha256": "8cb88e680e205f27b763044b29f93834ee6aa58d57d37a771c722e03f5d7d00b",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/command.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "83c23263ce47d102f8749d66cbae98fa67fdeb2be3948ac32de686da2328d4af",
+    "bytes": 3040,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "a699ea52a27fbdf4967e9085de48fdff09e4fc8fc4aa1645f15e5bd8d8426f05",
+    "bytes": 8469,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/exit-code.txt",
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "bytes": 2,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/final-particles.csv",
+    "sha256": "c5d7c0636ca4c065f2759c75daa8b7246f9717c749c01db21c2150ae2ad80286",
+    "bytes": 386,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/final-particles.csv"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/final-stat-row.txt",
+    "sha256": "fac446286ab2fc83fe3f283d14c6e1c58786fbbfb2f9b1b6994a5c5b18bc830e",
+    "bytes": 1345,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/final-stat-row.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/final-state.h5dump",
+    "sha256": "183bc3661f45d2ca6f4726fc2b10076ec36b587e03cc0c4960d49af76bbd26c7",
+    "bytes": 1659,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/final-state.h5dump"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/finished.txt",
+    "sha256": "69a3bf81adad49653524483cde5d205f65f325bab078a0e219c9d9e1ebf4ddaf",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/run.log",
+    "sha256": "9bc059058f79c045efa25752ea8158c20cd52b92235e7b4a5f903267f6475ac7",
+    "bytes": 15718,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/run.log"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/started.txt",
+    "sha256": "69a3bf81adad49653524483cde5d205f65f325bab078a0e219c9d9e1ebf4ddaf",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/started.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/timing.dat",
+    "sha256": "cc960b86b7ca55a6290fe3cd33ffd5e342788a28d8c48baac2e81c88e92ae20d",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-one-rank/timing.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/Cyclotron-RF-Stop.h5",
+    "sha256": "643e4c35c774f50ac8da3d8a08ed83fb07eae521a5c78ca033db3a1da60e2e2c",
+    "bytes": 152609,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/Cyclotron-RF-Stop.in",
+    "sha256": "33dc8fcd0b1585bc1ab8f64fd86e523f24eddb5b9e47a499d2ef4fddfe497aa4",
+    "bytes": 3263,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/Cyclotron-RF-Stop.stat",
+    "sha256": "e8630e18eb55ddd28c345f558263b5a3f5c93ecd9fcf2cc391464258d6cd4a9b",
+    "bytes": 7774,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/command.txt",
+    "sha256": "80b7a3c91a560652148abb0c573492eca7b2b693a2ba3873e48e5393ec64987c",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/command.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "83c23263ce47d102f8749d66cbae98fa67fdeb2be3948ac32de686da2328d4af",
+    "bytes": 3040,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "d0b0f0d01705f97915c36258d00a124efcd08524b69cf04e272082d48500955f",
+    "bytes": 8469,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/exit-code.txt",
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "bytes": 2,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/final-particles.csv",
+    "sha256": "a4c6665d3c8c1c0c5279522b356a521bbf33e3da944326119e7925424e4a4889",
+    "bytes": 387,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/final-particles.csv"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/final-stat-row.txt",
+    "sha256": "32de507b1e03178bf87b9a10d0606b1219d1eb2b72488cc300ffa53f35fc9211",
+    "bytes": 1345,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/final-stat-row.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/final-state.h5dump",
+    "sha256": "34f677782fb21c8919e9d0c0c54a4d5715047f70ede5cc785405bcd65c01c5fc",
+    "bytes": 1660,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/final-state.h5dump"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/finished.txt",
+    "sha256": "69a3bf81adad49653524483cde5d205f65f325bab078a0e219c9d9e1ebf4ddaf",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/run.log",
+    "sha256": "45db66b0212c42a5c2bc472785589490c71882561c99c137b72d6d3f7bf7b5db",
+    "bytes": 17851,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/run.log"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/started.txt",
+    "sha256": "69a3bf81adad49653524483cde5d205f65f325bab078a0e219c9d9e1ebf4ddaf",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/started.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/timing.dat",
+    "sha256": "64d41fc26a0c3c9bde51f3d3f7543585bc5c431d4dccca40d9648594ce6ad003",
+    "bytes": 1217,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/one-proton-two-ranks/timing.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/rank-and-particle-differences.tsv",
+    "sha256": "e72d56515b5e93dd0c9ea30ee1d0629e4209d805e42ce4b473ec13a77eb2b607",
+    "bytes": 538,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/rank-and-particle-differences.tsv"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/run-manual.sh",
+    "sha256": "6693e5fbcc02910986a8b016857e298b5c8eeb44eae9bfae384d95c1183a868e",
+    "bytes": 2123,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/run-manual.sh"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/run-summary.tsv",
+    "sha256": "52c1f6db4b74a73ebccc6e81f2f36f3af17a6e685e088019ee90ad81992f9bed",
+    "bytes": 135,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/run-summary.tsv"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/source-head.txt",
+    "sha256": "6fc57ff8819c48487994daf850050f067fa2caf530ab6a4de221f08689df6c3a",
+    "bytes": 41,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/source-head.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/source.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/source.diff"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/source.sha256",
+    "sha256": "7afe0eadcb7309a2fd56a2c81bd43b3387667f940b9a36a6a4161ad9776a382c",
+    "bytes": 606,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/source.sha256"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/Cyclotron-RF-Stop.h5",
+    "sha256": "9e438c14f01262e10ae041e34256e6770b9e3014f29d59bdd90a22ed993e6232",
+    "bytes": 152609,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/Cyclotron-RF-Stop.in",
+    "sha256": "193749c32b3c2803fbd0c1e545d4d40b2ae2d37eca5e578208de3914dbc28b03",
+    "bytes": 3263,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/Cyclotron-RF-Stop.stat",
+    "sha256": "0df01fc05dc7ff2b34be6da0c960837d92b65454abcce42a5dc6a300715f276d",
+    "bytes": 7774,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/command.txt",
+    "sha256": "8cb88e680e205f27b763044b29f93834ee6aa58d57d37a771c722e03f5d7d00b",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/command.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "6a2d2aca37189637c1a1390b71f15da64a3804b0300feb9008184f43ad435c24",
+    "bytes": 3040,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "a699ea52a27fbdf4967e9085de48fdff09e4fc8fc4aa1645f15e5bd8d8426f05",
+    "bytes": 8469,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/exit-code.txt",
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "bytes": 2,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/final-particles.csv",
+    "sha256": "dc6985136554cc90c3ec524bc6131a08f36c5943bd6e1ed37760d9d65dbce685",
+    "bytes": 648,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/final-particles.csv"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/final-stat-row.txt",
+    "sha256": "94b19869c714597d191126e4d2abd3b20eedee452bd579410fc0a97f18dbc0db",
+    "bytes": 1345,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/final-stat-row.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/final-state.h5dump",
+    "sha256": "543e52289f3291a05e803349fb1ef43976f8e7167abc8abd51309bfe3090758b",
+    "bytes": 1817,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/final-state.h5dump"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/finished.txt",
+    "sha256": "69a3bf81adad49653524483cde5d205f65f325bab078a0e219c9d9e1ebf4ddaf",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/proton.dat",
+    "sha256": "e48082ce10016c1a497328b01dbcef0e45c43405b97b17007c7c0fd67611ba83",
+    "bytes": 101,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/run.log",
+    "sha256": "bbd078bd03d5132e44b6340068ede8a4df48ae71bceb772e9712024ec79ab001",
+    "bytes": 15718,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/run.log"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/started.txt",
+    "sha256": "69a3bf81adad49653524483cde5d205f65f325bab078a0e219c9d9e1ebf4ddaf",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/started.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/timing.dat",
+    "sha256": "d8e7deac1707c01fd88b33cbd5cc246ca07c177f05b2a1400b36d3c38a1cc1b8",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-one-rank/timing.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/Cyclotron-RF-Stop.h5",
+    "sha256": "9e438c14f01262e10ae041e34256e6770b9e3014f29d59bdd90a22ed993e6232",
+    "bytes": 152609,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/Cyclotron-RF-Stop.in",
+    "sha256": "193749c32b3c2803fbd0c1e545d4d40b2ae2d37eca5e578208de3914dbc28b03",
+    "bytes": 3263,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/Cyclotron-RF-Stop.stat",
+    "sha256": "a569cb69f9611bcdd92e6861fb786e3ad816b12a7cf2bd05ed23f44f960fd02c",
+    "bytes": 7774,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/command.txt",
+    "sha256": "80b7a3c91a560652148abb0c573492eca7b2b693a2ba3873e48e5393ec64987c",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/command.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "6a2d2aca37189637c1a1390b71f15da64a3804b0300feb9008184f43ad435c24",
+    "bytes": 3040,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "d0b0f0d01705f97915c36258d00a124efcd08524b69cf04e272082d48500955f",
+    "bytes": 8469,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/exit-code.txt",
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "bytes": 2,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/final-particles.csv",
+    "sha256": "bb4ddfe6ff1bf4857993c255df90d461eb95c34f47fb1d4eb3b4059faf26029a",
+    "bytes": 650,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/final-particles.csv"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/final-stat-row.txt",
+    "sha256": "94b19869c714597d191126e4d2abd3b20eedee452bd579410fc0a97f18dbc0db",
+    "bytes": 1345,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/final-stat-row.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/final-state.h5dump",
+    "sha256": "8a4a07f6e4a7a9b87941c2a1bb65e74d97947abe7a34dc0e72aea864a7a321ea",
+    "bytes": 1818,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/final-state.h5dump"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/finished.txt",
+    "sha256": "69a3bf81adad49653524483cde5d205f65f325bab078a0e219c9d9e1ebf4ddaf",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/proton.dat",
+    "sha256": "e48082ce10016c1a497328b01dbcef0e45c43405b97b17007c7c0fd67611ba83",
+    "bytes": 101,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/run.log",
+    "sha256": "791cd84a5b800c55ebe26f5383b2aa8f8ce9a7decfd62c655e153a0a3fc763b6",
+    "bytes": 17850,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/run.log"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/started.txt",
+    "sha256": "69a3bf81adad49653524483cde5d205f65f325bab078a0e219c9d9e1ebf4ddaf",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/started.txt"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/timing.dat",
+    "sha256": "6020484a61c966a3e421391c98e6bb908d5695b2115df3226f6e7677fdb6ac84",
+    "bytes": 1217,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration/two-protons-two-ranks/timing.dat"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/rf-review-integration.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/rf-review-integration.log"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/scaling-mpi.log",
+    "sha256": "63bd0decc5744350b2b532fbbabf72feb2b1b493514a19330af6ddc2e5061e8f",
+    "bytes": 1898,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-upstream-merge-20261107/scaling-mpi.log"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/test-inventory.json",
+    "sha256": "b56f199f25c0e766b5ac0e835663ad1b4f1ccba7a57ef9d980bdb43bce9eabc5",
+    "bytes": 125872,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/test-inventory.json"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/tracker-audit.md",
+    "sha256": "ffbc5c726b4e44c5983ab254e37bf4992b1aa6ef5601b93cfb1c5e4c41673f73",
+    "bytes": 4769,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/tracker-audit.md"
+  },
+  {
+    "original": "tmp/pr637-upstream-merge-20261107/validation.json",
+    "sha256": "4104ab95d1d08b9a2122e254e8295315e2dc1ec7942412e7d5cac2cf4df2817b",
+    "bytes": 812,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-upstream-merge-20261107/validation.json"
+  },
+  {
+    "original": "tmp/probe-status-20261107/CI_AUDIT.md",
+    "sha256": "a40b070b43de088e66b1c93b22cbb6d0ca4573fb206502c25b1b10921d9100ed",
+    "bytes": 4288,
+    "disposition": "retained-text",
+    "archive": "local/tmp/probe-status-20261107/ci_audit.md"
+  },
+  {
+    "original": "tmp/probe-status-20261107/STATUS.md",
+    "sha256": "e5410f3dc8fa2609c747e28f5e27e823822aa8bf25c6644ef60558639fad3491",
+    "bytes": 9758,
+    "disposition": "retained-text",
+    "archive": "local/tmp/probe-status-20261107/status.md"
+  },
+  {
+    "original": "tmp/probe-status-20261107/ci-matrix.json",
+    "sha256": "9c291616c14a54a14d85a392ed7af67eca12b6eaff31a7fc0ff1fbc0ae0ec690",
+    "bytes": 7475,
+    "disposition": "retained-text",
+    "archive": "local/tmp/probe-status-20261107/ci-matrix.json"
+  },
+  {
+    "original": "tmp/probe-status-20261107/failure-584/ANALYSIS.md",
+    "sha256": "9ed1c8b4fd1e874e8e019a541b18b66bd7235e32ce88710d94158e85b7bc21f1",
+    "bytes": 3667,
+    "disposition": "retained-text",
+    "archive": "local/tmp/probe-status-20261107/failure-584/analysis.md"
+  },
+  {
+    "original": "tmp/probe-status-20261107/failure-584/cause-audit.json",
+    "sha256": "cb9d8a7fd1ce153d27e42797c05ded54ce152dc398a4a29efb5bc0874bb62643",
+    "bytes": 2227,
+    "disposition": "retained-text",
+    "archive": "local/tmp/probe-status-20261107/failure-584/cause-audit.json"
+  },
+  {
+    "original": "tmp/probe-status-20261107/failure-584/github-issue-672.json",
+    "sha256": "ebf35a81fa12d7248af3fbf27dda69fb2d7f96af077b9d41e3075414436564d3",
+    "bytes": 6813,
+    "disposition": "retained-text",
+    "archive": "local/tmp/probe-status-20261107/failure-584/github-issue-672.json"
+  },
+  {
+    "original": "tmp/probe-status-20261107/failure-584/github-issue-672.md",
+    "sha256": "fec3a7101162d69f6c258e01256c6a00b237a579cccde8ec3774e040bdd73020",
+    "bytes": 6522,
+    "disposition": "retained-text",
+    "archive": "local/tmp/probe-status-20261107/failure-584/github-issue-672.md"
+  },
+  {
+    "original": "tmp/probe-status-20261107/failure-584/numeric-summary.json",
+    "sha256": "168dd287a2bf63426fdf6d7a52f563f1fb3469093436265456c295e62a5859a2",
+    "bytes": 647,
+    "disposition": "retained-text",
+    "archive": "local/tmp/probe-status-20261107/failure-584/numeric-summary.json"
+  },
+  {
+    "original": "tmp/probe-status-20261107/failure-584/quick_analysis.py",
+    "sha256": "8a73c68ea2242fdc4f811cff7599ae18d059c39f1873509e354c96b10d94e736",
+    "bytes": 1928,
+    "disposition": "retained-text",
+    "archive": "local/tmp/probe-status-20261107/failure-584/quick_analysis.py"
+  },
+  {
+    "original": "tmp/probe-status-20261107/gh200-results.xml",
+    "sha256": "b22754cda86bea9befcec5940ca32b9217f48389fc89af15689f1492f1d79af0",
+    "bytes": 99314,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/probe-status-20261107/gh200-results.xml"
+  },
+  {
+    "original": "tmp/probe-status-20261107/hidden-launch-failures.json",
+    "sha256": "fdad4c40b0394cd71571193abba341e6757575e761a221b342fcc61cfeabb81d",
+    "bytes": 3901,
+    "disposition": "retained-text",
+    "archive": "local/tmp/probe-status-20261107/hidden-launch-failures.json"
+  },
+  {
+    "original": "tmp/probe-status-20261107/mi300-results.xml",
+    "sha256": "6d4871c53ca3174172e3a736c248882e93fc34b8e9217fd089041bbc6dc8db72",
+    "bytes": 99168,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/probe-status-20261107/mi300-results.xml"
+  },
+  {
+    "original": "tmp/probe-status-20261107/native-summaries.json",
+    "sha256": "c526fab5ab3a0ae06506d8ac0c35ae4c771f10ff6c255238372cd0a5774d10fd",
+    "bytes": 6231,
+    "disposition": "retained-text",
+    "archive": "local/tmp/probe-status-20261107/native-summaries.json"
+  },
+  {
+    "original": "tmp/probe-status-20261107/openmp-results.xml",
+    "sha256": "c562884afd6b1073924c4784a9adb1a6dedc11d46b50a5a2011574154850cabd",
+    "bytes": 99160,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/probe-status-20261107/openmp-results.xml"
+  },
+  {
+    "original": "tmp/probe-status-20261107/reference-changes.json",
+    "sha256": "1132aead4c57771e5d51b596af8f090476e90cd7fa10d621f853577d81c0db70",
+    "bytes": 9853,
+    "disposition": "retained-text",
+    "archive": "local/tmp/probe-status-20261107/reference-changes.json"
+  },
+  {
+    "original": "tmp/probe-status-20261107/regression-provenance.json",
+    "sha256": "7d63bf367045722a44722a23b84a3215d3d699ad670cce77d13f2e28683fcc22",
+    "bytes": 712,
+    "disposition": "retained-text",
+    "archive": "local/tmp/probe-status-20261107/regression-provenance.json"
+  },
+  {
+    "original": "tmp/probe-status-20261107/source-tree-audit.json",
+    "sha256": "d95f24e4b056e630b761d8b109e508d8954736602e608d3b4ff80fbf630deb7c",
+    "bytes": 3229,
+    "disposition": "retained-text",
+    "archive": "local/tmp/probe-status-20261107/source-tree-audit.json"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/HANDOFF.md",
+    "sha256": "39c5fc998d1183ffb88baf6a5830640149ba9a0f0db8da8a502121bf1e19b2b7",
+    "bytes": 4120,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/handoff.md"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/acceleration.h5",
+    "sha256": "f16a75ac28e4393866244b8525dbf67ea3d1fd4beafac05434ab650f93ae82ee",
+    "bytes": 5373773,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/acceleration.in",
+    "sha256": "ef52b28a203d1ad794496b6d97129a12ffb0777c2fee0465a56e0dbbb8004b6d",
+    "bytes": 3489,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/acceleration-590mev/acceleration.in"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/acceleration.stat",
+    "sha256": "27dfefee6e8b1950c9e82192888f9e399bb358530ba1c9d3c7540d5011705cb4",
+    "bytes": 741652,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev/acceleration.stat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/data/acceleration_3D.opal",
+    "sha256": "9cb2796f94deb65f240df57cc79508ecc4dbb2a4ec29807ff88b1493a5906b17",
+    "bytes": 3348,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev/data/acceleration_3d.opal"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/data/acceleration_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev/data/acceleration_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/data/acceleration_ElementPositions.py",
+    "sha256": "95f270c70195cacf5ad144831ebc4c5c932309bf5c4b73b6b75b976f73f56973",
+    "bytes": 25883,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev/data/acceleration_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/data/acceleration_ElementPositions.sdds",
+    "sha256": "23e2e12556416b9394bfc5b9dfac21ed28834d54b4fd1f8c0a4c7de2ba0d9eb5",
+    "bytes": 8462,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev/data/acceleration_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/data/acceleration_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/acceleration-590mev/data/acceleration_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/extraction-hits.csv",
+    "sha256": "241147b12e40d66bbd591642db26afc7ccbe44adce3e0477271deaf6d99f9eef",
+    "bytes": 641,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/acceleration-590mev/extraction-hits.csv"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/extraction.h5",
+    "sha256": "18283b98b573a5ef42e48e0facc25e473e87db863b999a8b63e30cfe099a3d48",
+    "bytes": 13779,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/extraction.hist",
+    "sha256": "8245490ad6935505344f88ff77de4a012b1d9a605e319681a41d811629db6c55",
+    "bytes": 274,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev/extraction.hist"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/extraction.peaks",
+    "sha256": "9f4237fd5059c8654e8ecce253a8d09fb175ecbccd8e115bd868b91aee214b48",
+    "bytes": 74,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev/extraction.peaks"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/acceleration-590mev/proton.dat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/radial0-hits.csv",
+    "sha256": "58da12303f8fc379b9396f454e2bc1e7aff4e53244668c4115c094b6bd3b789a",
+    "bytes": 37287,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/acceleration-590mev/radial0-hits.csv"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/radial0.h5",
+    "sha256": "b8793fd4041b4e6b39188dfe5a395be029732ceff3659f4fd425b3b6eff910fb",
+    "bytes": 32115,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/radial0.hist",
+    "sha256": "8a1909049e96ad3b87131cfb6bd7b8b8d8179d0a5ccaa17e42eec614412253d4",
+    "bytes": 5692,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev/radial0.hist"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/radial0.peaks",
+    "sha256": "abf10cc616ce793f6919faac2709b026cfdbfaa11383176f143193dfd06eac26",
+    "bytes": 3586,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev/radial0.peaks"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/radial90-hits.csv",
+    "sha256": "b596be3a3144c8ec97253c293046234b7dc10a507883adcc45885225874a3aa2",
+    "bytes": 37451,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/acceleration-590mev/radial90-hits.csv"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/radial90.h5",
+    "sha256": "14130f9fd77ddf5012ad93392917e9db44d7957fc62115c0390411e90059b30a",
+    "bytes": 32115,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/radial90.hist",
+    "sha256": "cb8333485375643da6adb1f3e374eb353037d22b5ddcaacb8b85458f8fa0c0e5",
+    "bytes": 5692,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev/radial90.hist"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/radial90.peaks",
+    "sha256": "d6f215ec084daa04eb873c5e3f7f2f1c4415aa9bfc7e2f03a39a637f88d3685d",
+    "bytes": 3589,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev/radial90.peaks"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/acceleration-590mev/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/acceleration-590mev/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/run.log",
+    "sha256": "a3eee90fdd10b136067515738f277f48a61ed9b4ac4415d57c4aa09b42de1c6a",
+    "bytes": 100444,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev/run.log"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/statistics.csv",
+    "sha256": "e1a96ab461aeb3ca16a7d5a49fadf890b6d957949f57e96c79f4c650aa702dd6",
+    "bytes": 197274,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/acceleration-590mev/statistics.csv"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV/timing.dat",
+    "sha256": "a89313c74403ca26e134fb8604c06065038c01af54b53d924eadbe5cc947387e",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev/timing.dat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV-control/acceleration.h5",
+    "sha256": "3b0327df8ae8c015c30c45d1ac5d121fd3bcd14d6bbceb4442982c854e622190",
+    "bytes": 5373773,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV-control/acceleration.in",
+    "sha256": "744341318a6cfa1e66a8b886342518578861bf0624a7c7ca6632714c40fb5e68",
+    "bytes": 3194,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/acceleration-590mev-control/acceleration.in"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV-control/acceleration.stat",
+    "sha256": "9f59094ec74543fb8e3dc33622aa1e31e78c35d103ae57debbe40b7c768e8c95",
+    "bytes": 741652,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev-control/acceleration.stat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV-control/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV-control/data/acceleration_3D.opal",
+    "sha256": "731f8d14e3ff9cee3b0431015202bacae35eec5aa188af17f96a0bea74b42a7f",
+    "bytes": 3052,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev-control/data/acceleration_3d.opal"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV-control/data/acceleration_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev-control/data/acceleration_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV-control/data/acceleration_ElementPositions.py",
+    "sha256": "95f270c70195cacf5ad144831ebc4c5c932309bf5c4b73b6b75b976f73f56973",
+    "bytes": 25883,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev-control/data/acceleration_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV-control/data/acceleration_ElementPositions.sdds",
+    "sha256": "23e2e12556416b9394bfc5b9dfac21ed28834d54b4fd1f8c0a4c7de2ba0d9eb5",
+    "bytes": 8462,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev-control/data/acceleration_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV-control/data/acceleration_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/acceleration-590mev-control/data/acceleration_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV-control/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/acceleration-590mev-control/proton.dat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV-control/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/acceleration-590mev-control/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV-control/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/acceleration-590mev-control/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV-control/run.log",
+    "sha256": "e516de7eae474d5fd1ee8baab59221255b4e181183a026fc780eda4a81f68b6e",
+    "bytes": 100352,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev-control/run.log"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/acceleration-590MeV-control/timing.dat",
+    "sha256": "094eaaeab547fb2d9d79e4dfc5de9035a6361861dec4d397a9162e90c0eecc05",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/acceleration-590mev-control/timing.dat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/analyze.py",
+    "sha256": "485a6eed25e958f849facec1371be31e8af0a1308ab4e7e8f5d13be48fe0f76b",
+    "bytes": 8454,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/analyze.py"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/coasting.h5",
+    "sha256": "e83a498cf262c98276a0072a87d31357799742b3a017c75e7584253e21682c64",
+    "bytes": 82987,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/coasting.in",
+    "sha256": "77b9ca5c65125feace6bc81f259886a8898e32cefad38bdcfb8a0dcc0aa6c90e",
+    "bytes": 2994,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/coasting-10turns/coasting.in"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/coasting.stat",
+    "sha256": "fb788710c13cf5cde99c3ca4b25cceb8ea7b177adcf4f66630779c856a8f57e1",
+    "bytes": 104819,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns/coasting.stat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/data/coasting_3D.opal",
+    "sha256": "008d97a026949d6426a9e23853074f5b436c8364db0a694b3ab5f33d4355daa3",
+    "bytes": 1221,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns/data/coasting_3d.opal"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/data/coasting_DesignPath.dat",
+    "sha256": "816901b39bd8e55aea8d7218da12d7748c99f62830ae4b273f28af85d5182dec",
+    "bytes": 296661,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns/data/coasting_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/data/coasting_ElementPositions.py",
+    "sha256": "c868142909c5c8f18aa55b7339affea6b090dbd3fa0df02f31d7f63790739cf8",
+    "bytes": 25787,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns/data/coasting_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/data/coasting_ElementPositions.sdds",
+    "sha256": "4db9571db6fb95684d01d726affdcf1dfaa830d8cfadae73cdaa3a5e7f42f96c",
+    "bytes": 7790,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns/data/coasting_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/data/coasting_ElementPositions.txt",
+    "sha256": "0b22be2fcfbaf5d1230bdd1f8f70556774419e73de3b171dafcd89fdbe40a78f",
+    "bytes": 1360,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/coasting-10turns/data/coasting_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/extraction.hist",
+    "sha256": "f6e0487554acb2894fbac66da98f8301822e31b20ff6c30109f6dd3f10e1cf32",
+    "bytes": 274,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns/extraction.hist"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/extraction.peaks",
+    "sha256": "ab59fd23f64555064dab07f6dee6b410b4b80b655d32610c75277c6fc7fb4d9d",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns/extraction.peaks"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/proton72.dat",
+    "sha256": "0c612d341099fbb07f94fb1d61d998515208178074239e1d89acbb69aee937d7",
+    "bytes": 47,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/coasting-10turns/proton72.dat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/radial0-hits.csv",
+    "sha256": "e0561d87a53a48696f85f22191897c2fb9d3875f27a9139a68c8c0831e93fac1",
+    "bytes": 1653,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/coasting-10turns/radial0-hits.csv"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/radial0.h5",
+    "sha256": "e7522067a515bc2dafbef56b21950e3f395810fa87833f65fa2006a3462986e4",
+    "bytes": 13779,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/radial0.hist",
+    "sha256": "0e2b0776c0e601bcee4b59136e3c588bf633c743e00afd74f71c029bad3fd927",
+    "bytes": 5692,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns/radial0.hist"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/radial0.peaks",
+    "sha256": "01009b6f2553a8fc9b83f6a91b98705cc94830b04b1b089003bbf83529470372",
+    "bytes": 170,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns/radial0.peaks"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/radial90-hits.csv",
+    "sha256": "400428c19570cfeb75d2428d7bd7f550ef4045d94388576cd935556e6b5520b2",
+    "bytes": 1853,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/coasting-10turns/radial90-hits.csv"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/radial90.h5",
+    "sha256": "65c1883d5014c587d507fefc92b65442227191cba3a7776ae297321b19f6b4e3",
+    "bytes": 13779,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/radial90.hist",
+    "sha256": "0702e952469e45f318d6806f8bf11ebe4e7b8d9d26e813a6c55eaeff6c7af3b6",
+    "bytes": 5692,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns/radial90.hist"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/radial90.peaks",
+    "sha256": "b49e4cdba43e798e4baf7da994b31195985dce6baa3aebe63bb536ea97fdb212",
+    "bytes": 187,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns/radial90.peaks"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/run.log",
+    "sha256": "0c4be6064ffac89f929a08a09c6bc566faff57b3589bc366175d7496c812e05c",
+    "bytes": 16860,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns/run.log"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/statistics.csv",
+    "sha256": "92d99c0a835006c3ca220edc88bed324a4bc1d6b79b257e8ad3d266506c144ad",
+    "bytes": 28684,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/coasting-10turns/statistics.csv"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns/timing.dat",
+    "sha256": "cd647a6ad20e1657b99b7dddb1fee511192bab7dddce679a2fc71e513c9c44fe",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns/timing.dat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns-control/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns-control/coasting.h5",
+    "sha256": "e10cc70148dd041f62ba25a09f6d71afde56d0a2df331ad182cd78588fa0ad0b",
+    "bytes": 82987,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns-control/coasting.in",
+    "sha256": "a4cd296e033c25b827e213409eb462aff30f396b5794ae46cb7947b9b9c5d05c",
+    "bytes": 2699,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/coasting-10turns-control/coasting.in"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns-control/coasting.stat",
+    "sha256": "98ad28a7937807e0c7e1175dcf6e555947630e12d09c81b367d461f8b54e6024",
+    "bytes": 104819,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns-control/coasting.stat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns-control/data/coasting_3D.opal",
+    "sha256": "4d6d1f23675f25e2beac446c5cd510b9653034645c8f297ef6c83177543a879b",
+    "bytes": 925,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns-control/data/coasting_3d.opal"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns-control/data/coasting_DesignPath.dat",
+    "sha256": "816901b39bd8e55aea8d7218da12d7748c99f62830ae4b273f28af85d5182dec",
+    "bytes": 296661,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns-control/data/coasting_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns-control/data/coasting_ElementPositions.py",
+    "sha256": "c868142909c5c8f18aa55b7339affea6b090dbd3fa0df02f31d7f63790739cf8",
+    "bytes": 25787,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns-control/data/coasting_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns-control/data/coasting_ElementPositions.sdds",
+    "sha256": "4db9571db6fb95684d01d726affdcf1dfaa830d8cfadae73cdaa3a5e7f42f96c",
+    "bytes": 7790,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns-control/data/coasting_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns-control/data/coasting_ElementPositions.txt",
+    "sha256": "0b22be2fcfbaf5d1230bdd1f8f70556774419e73de3b171dafcd89fdbe40a78f",
+    "bytes": 1360,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/coasting-10turns-control/data/coasting_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns-control/proton72.dat",
+    "sha256": "0c612d341099fbb07f94fb1d61d998515208178074239e1d89acbb69aee937d7",
+    "bytes": 47,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/coasting-10turns-control/proton72.dat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns-control/run.log",
+    "sha256": "95fef62460caccddb2072f45f7a5b2c53a83b817515312e0e3fc9b6a8c179478",
+    "bytes": 16795,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns-control/run.log"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-10turns-control/timing.dat",
+    "sha256": "82ce877d326105531978ac16290bf523ad37cf6ca26f2344a7cbdbe3caa73e66",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-probes-20261023/coasting-10turns-control/timing.dat"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/coasting-anomaly.png",
+    "sha256": "4a3af4371d71954a1629bad3efed9417e595f5ac04ac9a327949600253366d32",
+    "bytes": 73030,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/legacy/cyclotron1.in",
+    "sha256": "1fafd8eb1b4a020c03c41f8832f0eba3d4d9fae97efa3e2159dadefdfa77d703",
+    "bytes": 1967,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/legacy/cyclotron1.in"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/legacy/cyclotron2.in",
+    "sha256": "67b696af41eefbbcd546ff8720e96ff21917c9c6d51d78d59362f369fd40ba22",
+    "bytes": 2281,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/legacy/cyclotron2.in"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/manifest.json",
+    "sha256": "4a135cc5592c27e63a3baba49e1a9751a1fb13ea26a711d9cbe6c09c48257be2",
+    "bytes": 4267,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/manifest.json"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/ring-probes.pdf",
+    "sha256": "59811afce3b60dd75f123a1b9e4e012892f6ea756c0a1c74d821b0805694d74e",
+    "bytes": 57132,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/ring-probes.png",
+    "sha256": "050a3f8f09f8400856ff198584e46b670cc1668b34e811a953e2b9f0930b49c8",
+    "bytes": 296347,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/run_controls.py",
+    "sha256": "29feb7bae575160d7232e2bc054c76df331f343929d9b3367e6cf193835bcc52",
+    "bytes": 1625,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/run_controls.py"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/stage_and_run.py",
+    "sha256": "671a8e6465dc124c5a7895041f7f7d2018908fa8f513669b45184712b1493f29",
+    "bytes": 3234,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/stage_and_run.py"
+  },
+  {
+    "original": "tmp/ring-probes-20261023/summary.json",
+    "sha256": "80557370527143ffe7a49fd4bf167762ecedf1fbc06fb63596d5ea1bf21957e3",
+    "bytes": 2882,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-probes-20261023/summary.json"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/STATE.md",
+    "sha256": "b14ab3a819a644c5e177d7029ec8072abae8b4cae510c8f88ab7281f416c83ce",
+    "bytes": 2686,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/state.md"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/__pycache__/plot_last_eight.cpython-311.pyc",
+    "sha256": "a2c9045e045300379435774b6c0dc5ce92c15fc7eef502fa9c4a939d7b675ede",
+    "bytes": 9589,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic/acceleration.h5",
+    "sha256": "e0652d5d8948ff11951999d3bb073363c4da2c8e573825fb83690bb1ba521fec",
+    "bytes": 4459,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic/acceleration.in",
+    "sha256": "d0b5ea5dfd7e95fae19b73bbd478cd31d22a8659e104d9a524572e33a3f687e7",
+    "bytes": 3482,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic/acceleration.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic/acceleration.stat",
+    "sha256": "42b3db1a7892457ce9711d884e764afcd0d323cbf5f716f9cbcddf95be6b8aaa",
+    "bytes": 86879,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic/acceleration.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic/bunch.dat",
+    "sha256": "6bb2233aec1c06529089ca6e349fea2b2a9b0f570bfbffe708e9970d4958014b",
+    "bytes": 38797306,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic/data/acceleration_3D.opal",
+    "sha256": "6013752dcb411590d16c142c1238b039472ff6da5e16b7ea1cacf1c95c86d398",
+    "bytes": 3340,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic/data/acceleration_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic/data/acceleration_DesignPath.dat",
+    "sha256": "bf4d53ed338d06c4567315a167c35b13afe978a284ad8436f5c857e3754e1101",
+    "bytes": 288628,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic/data/acceleration_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic/data/acceleration_ElementPositions.py",
+    "sha256": "95f270c70195cacf5ad144831ebc4c5c932309bf5c4b73b6b75b976f73f56973",
+    "bytes": 25883,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic/data/acceleration_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic/data/acceleration_ElementPositions.sdds",
+    "sha256": "644f0b52f96a66759c61cd0724112df2c46d2e9d7309765e51aa4e2af4e3bab4",
+    "bytes": 7794,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic/data/acceleration_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic/data/acceleration_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic/data/acceleration_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic/input-manifest.json",
+    "sha256": "b29884d2279a1755ac6fc44cde1bdee6b09f096862e74d4e8870bed7796ac52d",
+    "bytes": 955,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic/input-manifest.json"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic/launch.json",
+    "sha256": "8119774216e5c3252063ab8864826489c885f3147210d16b9dd9d8fe89886d87",
+    "bytes": 1563,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic/launch.json"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic/run.log",
+    "sha256": "e211d70ad63168f91524215fb89391ae6909995513709140fd88586db48b76ae",
+    "bytes": 14923,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic/run.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/acceleration.h5",
+    "sha256": "8f29bdcf2a66e92f2ccc0be167d815f0eeee05d41b9cebef8dfb124e3aa8c5cc",
+    "bytes": 4459,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/acceleration.in",
+    "sha256": "315a1875d6f1eebd32889f2add3feef608f9325d82633dc6b5f455737c51c53b",
+    "bytes": 3480,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/acceleration.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/acceleration.stat",
+    "sha256": "8f268e03a8b4d3a81cb989a9373d7404bcc75e96f5229770b19558a768cf27d1",
+    "bytes": 1907324,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/bunch.dat",
+    "sha256": "5495fae1f972f35779d70245cdc8c2b90547aba96ebfd5b1fa984bc5a24eb900",
+    "bytes": 4849466,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/data/acceleration_3D.opal",
+    "sha256": "48f1e588f5b62a79792c2b6c0059edc208e7faaab3d8bb30f5063cccbbd653b5",
+    "bytes": 3338,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/data/acceleration_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/data/acceleration_DesignPath.dat",
+    "sha256": "be16a809e223a22345b77e823424b3741b18dc85e8561cd2d8cab8ce461c700d",
+    "bytes": 288628,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/data/acceleration_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/data/acceleration_ElementPositions.py",
+    "sha256": "95f270c70195cacf5ad144831ebc4c5c932309bf5c4b73b6b75b976f73f56973",
+    "bytes": 25883,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/data/acceleration_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/data/acceleration_ElementPositions.sdds",
+    "sha256": "644f0b52f96a66759c61cd0724112df2c46d2e9d7309765e51aa4e2af4e3bab4",
+    "bytes": 7794,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/data/acceleration_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/data/acceleration_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/data/acceleration_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/input-manifest.json",
+    "sha256": "fe987c474431e2204d32831f85f5b545445e834c6362ce528ceead31736bcf6e",
+    "bytes": 928,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/input-manifest.json"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/launch.json",
+    "sha256": "4a5a08c186207015111249bd41f502b8508a8e552e558663bbecdb8208c0ef76",
+    "bytes": 1599,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/launch.json"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-16/run.log",
+    "sha256": "5f491c25d3823292734f097ac7bf8f11b657d5bb57b92f720db7c54186579598",
+    "bytes": 186896,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/acceleration.h5",
+    "sha256": "4eb36281f75652a45d809f113b2d8f188fb755500556b208f5aaa4989a73f8d2",
+    "bytes": 40497348,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/acceleration.in",
+    "sha256": "8e5a96bde740d40d82a2a42c92e53688fd4bb32afbf80a0cb2da3a457f055404",
+    "bytes": 3454,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/acceleration.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/acceleration.stat",
+    "sha256": "f84b049f0b7707626fb6b371a6d6a615a743e57e5b4ee1a14e1634e223206c0f",
+    "bytes": 1894822,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/bunch.dat",
+    "sha256": "e1fdc4c7c113bf30aef627efd31b2da02858f1124e09d01ff5bd40ddb393a27b",
+    "bytes": 606199,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/bunch.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/data/acceleration_3D.opal",
+    "sha256": "2bd3384dba70b1e0f20a2cb54e7be7d67d7ac03a054c60e789e927db89f8f4ad",
+    "bytes": 3312,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/data/acceleration_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/data/acceleration_DesignPath.dat",
+    "sha256": "cddf9e9c5b495a01b8498d09f1a140de162f8181438e20ad8b82d28c81890f65",
+    "bytes": 288628,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/data/acceleration_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/data/acceleration_ElementPositions.py",
+    "sha256": "95f270c70195cacf5ad144831ebc4c5c932309bf5c4b73b6b75b976f73f56973",
+    "bytes": 25883,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/data/acceleration_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/data/acceleration_ElementPositions.sdds",
+    "sha256": "644f0b52f96a66759c61cd0724112df2c46d2e9d7309765e51aa4e2af4e3bab4",
+    "bytes": 7794,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/data/acceleration_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/data/acceleration_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/data/acceleration_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/input-manifest.json",
+    "sha256": "4855f8b5a5cd1d465c873d9e215480a65edd453c403de356a027f715d0f2fa18",
+    "bytes": 742,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/input-manifest.json"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/launch.json",
+    "sha256": "4bf26d6d73258a526508f9db0921f20e942e32e5b59ebb47db06c605ffef451f",
+    "bytes": 1596,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/launch.json"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/radial.h5",
+    "sha256": "816e6cce345505c5f77e1e95b30c148ce968d4e32b8e119a6beecb1d60ae49c0",
+    "bytes": 74640623,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/radial.hist",
+    "sha256": "da4353845ffce54204f6fcf33c1441f860d7106c4abf87b69b1671aa2516a69e",
+    "bytes": 72335,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/radial.hist"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/radial.peaks",
+    "sha256": "b1953615e99d54332b39e79848356efad5a9cb5a3b7d1a88010411696c17322d",
+    "bytes": 3542,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/radial.peaks"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/rffield1.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/rffield2.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/run.log",
+    "sha256": "928a35f88e47252ba929b4312239797b8d1d597b2b60122ad0b269f310f05380",
+    "bytes": 161701,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/run.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/timing.dat",
+    "sha256": "04833ce4d6ea0e6f77f5eeebfcd1b9bedfb72e484582b92119cc08f8f649cfb4",
+    "bytes": 2783,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/timing.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/analysis-16.log",
+    "sha256": "561bc37979c5a42442ff16b6462cb2bfa8a4c66911f80ba224b544f1cb68e9e0",
+    "bytes": 51,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/analysis-16.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/analysis-8-580.log",
+    "sha256": "8d05fc2a9ee8a05b506631b5f8986b68a710cc05476c4668a13d5cc520f3307f",
+    "bytes": 6077,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/analysis-8-580.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/analysis.log",
+    "sha256": "561bc37979c5a42442ff16b6462cb2bfa8a4c66911f80ba224b544f1cb68e9e0",
+    "bytes": 51,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/analysis.log"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/acceleration.h5",
+    "sha256": "2507974a858fb4f6681e264fd8eba383e644053084ab5dfb1ca2b9d9cabc01bd",
+    "bytes": 18886845,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/acceleration.in",
+    "sha256": "194261617df5e7e6d8932c596b83cc56215ec6c9ad5235f482705972b6720a0d",
+    "bytes": 3449,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ring-space-charge-profiles-20261023/benchmark/acceleration.in"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/acceleration.stat",
+    "sha256": "f85fc98a4d6060546a11549b87aa6fb5f657b0d3bf7840a09b60bb5fa0739060",
+    "bytes": 7833,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/benchmark/acceleration.stat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/bunch.dat",
+    "sha256": "6bb2233aec1c06529089ca6e349fea2b2a9b0f570bfbffe708e9970d4958014b",
+    "bytes": 38797306,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/data/acceleration_3D.opal",
+    "sha256": "98af3d8997bc4cb2dc14eb962b57f997ac42711ff678ba321c9ea5acb05bd7da",
+    "bytes": 3307,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/benchmark/data/acceleration_3d.opal"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/data/acceleration_DesignPath.dat",
+    "sha256": "7232c9f7c23854dccbed75e373b8f786a74f7b0f2b9f5c0eaae2e47cb99c4f24",
+    "bytes": 885563,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/benchmark/data/acceleration_designpath.dat"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/data/acceleration_ElementPositions.py",
+    "sha256": "95f270c70195cacf5ad144831ebc4c5c932309bf5c4b73b6b75b976f73f56973",
+    "bytes": 25883,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/benchmark/data/acceleration_elementpositions.py"
+  },
+  {
+    "original": "tmp/ring-space-charge-profiles-20261023/benchmark/data/acceleration_ElementPositions.sdds",
+    "sha256": "f79f166d16118b239dbca6089916291b5c155a9d6559201522dabde6bf33e1b5",
+    "bytes": 7794,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ring-space-charge-profiles-20261023/benchmark/data/acceleration_elementpositions.sdds"
+  }
+]

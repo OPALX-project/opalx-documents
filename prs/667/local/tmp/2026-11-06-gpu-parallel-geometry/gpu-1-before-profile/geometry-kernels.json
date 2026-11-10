@@ -1,0 +1,25 @@
+[
+  {
+    "rank": 0,
+    "kernels": [
+      {
+        "name": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<opalx::spacecharge::FFT2D5Algorithm::preparePathGeometryAndProjections(const opalx::spacecharge::SpaceChargeSolveContext &, bool)::[lambda() (instance 1)]::operator ()() const::[lambda(unsigned long) (instance 1)], Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>>(T1)",
+        "calls": 100,
+        "total_ms": 404.406233,
+        "average_ms": 4.04406233,
+        "min_ms": 3.844015,
+        "max_ms": 4.965994,
+        "first_start_ns": 6494422356
+      },
+      {
+        "name": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<opalx::spacecharge::FFT2D5Algorithm::preparePathGeometryAndProjections(const opalx::spacecharge::SpaceChargeSolveContext &, bool)::[lambda() (instance 1)]::operator ()() const::[lambda(unsigned long) (instance 2)], Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>>(T1)",
+        "calls": 100,
+        "total_ms": 5.401729,
+        "average_ms": 0.05401729,
+        "min_ms": 0.0488,
+        "max_ms": 0.080639,
+        "first_start_ns": 6499780541
+      }
+    ]
+  }
+]

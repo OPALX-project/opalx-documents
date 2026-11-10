@@ -1,0 +1,72 @@
+[
+  {
+    "id": "547300108",
+    "name": "TestLossDataSinkMPI",
+    "status": "PASSED",
+    "details": "Completed",
+    "runningTime": 2.58,
+    "command": "/usr/bin/srun \"-n\" \"2\" \"--uenv=/capstor/store/cscs/cscs/public/uenvs/opal-x-gh200-mpich-gcc-2026-10-01.squashfs\" \"--view=default\" \"--repo=/capstor/scratch/cscs/biddisco/.uenv-images-ci-daint\" \"/user-environment/wrapper-mpi.sh\" \"/ritom/scratch/cscs/biddisco/gitlab-runner/f7t/1/694321096757981/build-a9d38caa-release/bin/TestLossDataSinkMPI\" \"--gtest_filter=LossDataSinkTest.EmptySinkDestructionIsRankLocal:LossDataSinkTest.EmptySinkUnwindingIsRankLocal:LossDataSinkTest.AsciiCreationDecisionIsCollectiveAcrossFileViews:LossDataSinkTest.OutputInspectionFailureIsCollective\"",
+    "gtest_summary": [
+      "[==========] Running 4 tests from 1 test suite."
+    ]
+  },
+  {
+    "id": "547300122",
+    "name": "TestRFEventStepMPI",
+    "status": "PASSED",
+    "details": "Completed",
+    "runningTime": 2.77,
+    "command": "/usr/bin/srun \"-n\" \"2\" \"--uenv=/capstor/store/cscs/cscs/public/uenvs/opal-x-gh200-mpich-gcc-2026-10-01.squashfs\" \"--view=default\" \"--repo=/capstor/scratch/cscs/biddisco/.uenv-images-ci-daint\" \"/user-environment/wrapper-mpi.sh\" \"/ritom/scratch/cscs/biddisco/gitlab-runner/f7t/1/694321096757981/build-a9d38caa-release/bin/TestRFEventStepMPI\"",
+    "gtest_summary": [
+      "[==========] Running 14 tests from 1 test suite.",
+      "[==========] Running 14 tests from 1 test suite."
+    ]
+  },
+  {
+    "id": "547300135",
+    "name": "TestCyclotronProbeMPI",
+    "status": "PASSED",
+    "details": "Completed",
+    "runningTime": 2.91,
+    "command": "/usr/bin/srun \"-n\" \"2\" \"--uenv=/capstor/store/cscs/cscs/public/uenvs/opal-x-gh200-mpich-gcc-2026-10-01.squashfs\" \"--view=default\" \"--repo=/capstor/scratch/cscs/biddisco/.uenv-images-ci-daint\" \"/user-environment/wrapper-mpi.sh\" \"/ritom/scratch/cscs/biddisco/gitlab-runner/f7t/1/694321096757981/build-a9d38caa-release/bin/TestCyclotronProbeMPI\"",
+    "gtest_summary": [
+      "[==========] Running 11 tests from 1 test suite.",
+      "[==========] Running 11 tests from 1 test suite."
+    ]
+  },
+  {
+    "id": "547300245",
+    "name": "TestLossDataSinkMPI",
+    "status": "PASSED",
+    "details": "Completed",
+    "runningTime": 3.13,
+    "command": "/usr/bin/srun \"-n\" \"2\" \"--uenv=/capstor/store/cscs/cscs/public/uenvs/opal-x-gh200-mpich-gcc-2026-10-01.squashfs\" \"--view=default\" \"--repo=/capstor/scratch/cscs/biddisco/.uenv-images-ci-daint\" \"/user-environment/wrapper-mpi.sh\" \"/ritom/scratch/cscs/biddisco/gitlab-runner/f7t/0/694321096757981/build-a9d38caa-release/bin/TestLossDataSinkMPI\" \"--gtest_filter=LossDataSinkTest.EmptySinkDestructionIsRankLocal:LossDataSinkTest.EmptySinkUnwindingIsRankLocal:LossDataSinkTest.AsciiCreationDecisionIsCollectiveAcrossFileViews:LossDataSinkTest.OutputInspectionFailureIsCollective\"",
+    "gtest_summary": [
+      "[==========] Running 4 tests from 1 test suite."
+    ]
+  },
+  {
+    "id": "547300259",
+    "name": "TestRFEventStepMPI",
+    "status": "PASSED",
+    "details": "Completed",
+    "runningTime": 2.67,
+    "command": "/usr/bin/srun \"-n\" \"2\" \"--uenv=/capstor/store/cscs/cscs/public/uenvs/opal-x-gh200-mpich-gcc-2026-10-01.squashfs\" \"--view=default\" \"--repo=/capstor/scratch/cscs/biddisco/.uenv-images-ci-daint\" \"/user-environment/wrapper-mpi.sh\" \"/ritom/scratch/cscs/biddisco/gitlab-runner/f7t/0/694321096757981/build-a9d38caa-release/bin/TestRFEventStepMPI\"",
+    "gtest_summary": [
+      "[==========] Running 14 tests from 1 test suite.",
+      "[==========] Running 14 tests from 1 test suite."
+    ]
+  },
+  {
+    "id": "547300272",
+    "name": "TestCyclotronProbeMPI",
+    "status": "PASSED",
+    "details": "Completed",
+    "runningTime": 2.81,
+    "command": "/usr/bin/srun \"-n\" \"2\" \"--uenv=/capstor/store/cscs/cscs/public/uenvs/opal-x-gh200-mpich-gcc-2026-10-01.squashfs\" \"--view=default\" \"--repo=/capstor/scratch/cscs/biddisco/.uenv-images-ci-daint\" \"/user-environment/wrapper-mpi.sh\" \"/ritom/scratch/cscs/biddisco/gitlab-runner/f7t/0/694321096757981/build-a9d38caa-release/bin/TestCyclotronProbeMPI\"",
+    "gtest_summary": [
+      "[==========] Running 11 tests from 1 test suite.",
+      "[==========] Running 11 tests from 1 test suite."
+    ]
+  }
+]

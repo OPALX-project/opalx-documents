@@ -1,0 +1,15 @@
+{
+  "samples": 4096,
+  "grid": [
+    8,
+    8,
+    8
+  ],
+  "current_A": 0.002,
+  "freq_Hz": 50650000.0,
+  "old_dt_s": 1.6452780519907864e-10,
+  "sample_source": "/Users/adelmann/git/opalx-master/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580/bunch.dat",
+  "sample_conversion": "center original offsets then rotate into radial/tangent/vertical basis at110degrees; subtract launch momentum",
+  "input_hash": "1f139adeb4d82b3afac9904a7f593a6015ea496b9722503e09b8ea9f74ff79b8",
+  "distribution_hash": "825571547f070a4275da3d1380010f190f8bacd9c1fea6f75157084c75d29e7a"
+}

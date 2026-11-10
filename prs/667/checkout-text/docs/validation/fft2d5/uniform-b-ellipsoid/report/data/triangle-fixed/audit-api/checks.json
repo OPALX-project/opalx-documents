@@ -1,0 +1,43 @@
+{
+  "checks_pass": true,
+  "new_opalx_pairs": 6,
+  "new_opalx_snapshots": 12,
+  "independently_reread_historical_snapshots": 2,
+  "pyorbit_cases": [
+    {
+      "case": "rb-repeat-r1",
+      "mpi_size": 1,
+      "points": 183,
+      "max_axis_error_percent": 0.006603114728398474,
+      "native_charge_and_provenance_checks_pass": true
+    },
+    {
+      "case": "slice-repeat-r1",
+      "mpi_size": 1,
+      "points": 183,
+      "max_axis_error_percent": 0.2860504175832612,
+      "native_charge_and_provenance_checks_pass": true
+    },
+    {
+      "case": "slice-repeat-r2",
+      "mpi_size": 2,
+      "points": 183,
+      "max_axis_error_percent": 0.28605041758482663,
+      "native_charge_and_provenance_checks_pass": true
+    }
+  ],
+  "max_consolidated_Es_difference_V_m": 0.0,
+  "historical_cache_difference_V_m": 0.0,
+  "legacy_rebuilt_difference_V_m": 2.0611784244882106e-10,
+  "numerical_width_control_difference_V_m": 5.766196409240365e-10,
+  "physical_radius_change_error_percent": 0.023498254098161687,
+  "direct_fixed256_to_py_axis_scale_difference_percent": {
+    "slice-repeat-r1": 0.4468375670875369,
+    "rb-repeat-r1": 0.1673852739111985
+  },
+  "py_mpi_all_target_difference_V_m": 2.6921043172478676e-10,
+  "reference": "Numerical real-space integration of Gauss-law radial field to grounded wall, followed by finite-s potential derivative; no imported g kernel or parent read_opal helper.",
+  "analysis_csv_sha256": "56a9baf945053f751021a94bd1a8b84486b3d44e878b953e79a1691dd8acbbb4",
+  "summary_csv_sha256": "8a1596ddf4378d739f829cd0d6e08c695b3fabb7d549d25dfa9034a68b67c2f3",
+  "audit_script_sha256": "05507b22606e215bfe35632aa5bb51e2992545fd0c9ea61f71d23929663dd175"
+}

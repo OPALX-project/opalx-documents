@@ -1,0 +1,32 @@
+{
+  "pages": 30,
+  "source_files": 1160,
+  "global_evidence_hashes": 1045,
+  "new_snapshots": 465,
+  "binary_sha256": "70383ff72345d869db40d42d2ff5aee8ceaa2f1f4fa656fcf2e8fc75e35647c1",
+  "isolated_rebuild": {
+    "directory": "/var/folders/_1/2_y6_z_54jj8ch647xpcq1hh0000gn/T/opalx-free-open-rebuild-2mjhifi5",
+    "report": "/var/folders/_1/2_y6_z_54jj8ch647xpcq1hh0000gn/T/opalx-free-open-rebuild-2mjhifi5/uniform-field-report",
+    "output": "/var/folders/_1/2_y6_z_54jj8ch647xpcq1hh0000gn/T/opalx-free-open-rebuild-2mjhifi5/output",
+    "returncode": 0,
+    "log": "/var/folders/_1/2_y6_z_54jj8ch647xpcq1hh0000gn/T/opalx-free-open-rebuild-2mjhifi5/rebuild.log"
+  },
+  "isolated_text_and_all_figure_png_hashes_match": true,
+  "final_zip_integrity_pass": true,
+  "final_zip_code_and_data_match_tested_build": true,
+  "metadata_documents_changed_after_preflight": [
+    "HANDOFF.md",
+    "QA.md"
+  ],
+  "regenerated_figure_pdf_metadata_differences": 15,
+  "artifacts": {
+    "fft2d5-uniform-field-validation.pdf": {
+      "bytes": 1004355,
+      "sha256": "44ff6d9078955efe50222faf056d1a89a57399e12bdbe024d4eb040b83ede077"
+    },
+    "fft2d5-uniform-field-validation-source.zip": {
+      "bytes": 10512771,
+      "sha256": "f51d94838da738b80413d1e455acf768999222ecf42167c8bc5f37f97d5fa2ce"
+    }
+  }
+}

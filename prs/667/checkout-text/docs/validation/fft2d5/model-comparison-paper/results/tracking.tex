@@ -1,0 +1,59 @@
+\section{First native tracking comparison}
+The first tracking case uses the uniform longitudinal profile and the same
+physical disk and length, sampled by $1\,048\,576$ equal-charge particles.
+Each geometry shares identical initial particle coordinates and momenta
+between the codes. Cold protons at $\beta=10^{-3}$ advance a nominal 1 m in
+exactly ten midpoint steps, $\Delta t=\SI{0.333564}{\micro s}$.
+A ZeroSC companion keeps the same nominal charge and particle mass while
+disabling self-fields. We compare both total centred RMS sizes and
+$\Delta\sigma_i=\sigma_i(10\,\mathrm{pC})-\sigma_i(\mathrm{ZeroSC})$.
+
+OPALX uses the original slice baseline, not the transverse curvature
+extension. PyORBIT uses its native drift and sector-bend body maps with
+native transverse slices and local longitudinal kicks. Both retain the
+physical $g=6.36$; PyORBIT's per-turn longitudinal normalization is scaled
+by step length divided by numerical period. The grid is
+$128^2\times512$ in a 48 mm transverse box. The straight numerical period
+is 12 m; the bend uses the common reference-polyline circumference.
+The transverse PyORBIT kick retains its native approximation of omitting
+transverse work from its energy coordinate.
+
+\begin{figure}[!ht]\centering
+\includegraphics[width=\linewidth]{figures/tracking-comparison.pdf}
+\caption{Exactly ten native tracking steps per case, with a same-source
+ZeroSC companion. Upper rows show centred RMS sizes; lower rows isolate
+the self-field response. Straight $u=x$; bend $u,y,s$ are local circular
+coordinates, rather than whole-bunch Cartesian projections. The horizontal
+axis is nominal central-particle flight. All size and response axes
+include zero.}\label{fig:tracking-comparison}\end{figure}
+The straight ZeroSC bunch translates without changing shape. After ten charged steps, $\sigma_x=\sigma_y$ is 10.47396 mm in OPALX and 10.47316 mm in PyORBIT. The maximum total-RMS difference over the straight trajectory is 0.0076\%. The endpoint transverse and longitudinal growth increments differ by 0.17\% and 0.11\%, respectively. Relative errors in the smallest early-step increments are larger; the endpoint growth figures do not describe every step.
+
+\begin{samepage}
+The bend continuation uses a uniform Cartesian magnetic field,
+$B_y=\SI{1.564870}{mT}$, and $R=2$ m. OPALX's ZeroSC particles satisfy
+the independent discrete Boris orbit at all ten endpoints. Native PyORBIT
+bend-map controls check the expected focusing and longitudinal signs.
+The native maps have different transport approximations: ten-step Boris
+has a finite phase lag, while PyORBIT uses a paraxial sector-bend model.
+Against the exact continuous uniform-field ZeroSC orbit, PyORBIT's final
+Cartesian position components differ by up to 95.1 micrometres under the stated
+coordinate embedding. Thus close RMS agreement alone does not certify
+individual trajectories or centroids.
+OPALX also projects onto a polyline; its maximum circle--chord sagitta is
+1.563 micrometres, whereas PyORBIT retains native Frenet coordinates.
+This is a geometric bound, not a force-error bound. Longitudinal centroid
+comparisons use absolute circular arclength from the same initial phase.
+The maximum total-RMS difference over the bent trajectory is 0.0134\%. 
+\par\end{samepage}
+\begin{table}[H]\centering\small
+\caption{Bend endpoint after ten charged steps. RMS sizes and self-field
+changes are in mm and micrometres, respectively.}\begin{tabular}{lrrrr}\toprule
+ &\multicolumn{2}{c}{RMS (mm)}&\multicolumn{2}{c}{$\Delta\sigma$ (\si{\micro m})}\\
+ Component&OPALX&PyORBIT&OPALX&PyORBIT\\\midrule
+$u$&9.24497&9.24373&468.775&468.040\\
+$y$&10.47880&10.47799&478.798&477.991\\
+$s$&1443.40436&1443.40425&20.727&20.617\\
+\bottomrule\end{tabular}\label{tab:tracking-bend}\end{table}
+\begin{samepage}
+The bend endpoint growth differences remain below 0.54\% in all three directions. The charged-minus-ZeroSC radial and longitudinal centroid responses differ by 2.01 and 0.81 micrometres, respectively. These weak centroid responses do not agree at the 1\% level. The charged-minus-ZeroSC comparison separates self-field changes from the native transport mismatch. These ten-step runs screen code-to-code tracking consistency for the original slice models. They establish neither step convergence nor accuracy against full finite-source curved dynamics, and do not validate tracking with the curvature extension.
+\par\end{samepage}

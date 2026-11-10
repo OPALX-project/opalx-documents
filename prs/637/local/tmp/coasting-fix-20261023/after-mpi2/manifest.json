@@ -1,0 +1,17 @@
+{
+  "command": [
+    "mpirun",
+    "-np",
+    "2",
+    "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+    "coasting.in",
+    "--info",
+    "2"
+  ],
+  "binary_sha256": "a415d1957a328b402a442dd11cdd0f6b0bd04b4a70dc8b6683a0022a0efe7d19",
+  "input_sha256": "19debf60057be7c52cd4e2a7ba1f49b0a0b50655b86d57e062b64551f940b296",
+  "ranks": 2,
+  "threads": 1,
+  "returncode": 0,
+  "elapsed_s": 1.7561795830260962
+}

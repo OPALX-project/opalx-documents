@@ -1,0 +1,111 @@
+{
+  "case": "fourfold",
+  "r0_m": 4.0,
+  "old_run": "/Users/adelmann/git/opalx-master/tmp/ffa-probes-implementation-20261107/old-school/fourfold-steps10000-scale1-valid",
+  "variant": "hdf5",
+  "ranks": 1,
+  "steps": 10000,
+  "dt_s": 4.1788549937317174e-10,
+  "input_particles": 1,
+  "mass_GeV": 0.93827208816,
+  "initial_native_x_px_y_py_z_pz": [
+    0.0,
+    -0.0087,
+    0.001,
+    0.0,
+    0.0,
+    0.07955668483652201
+  ],
+  "old_reference": {
+    "case": "fourfold",
+    "source": "/Users/adelmann/git/FFA25-school/migration-audit/legacy-fourfold.in",
+    "source_sha256": "2704d6838ff54b14abe8f9cce5f2578c3497bda053b340d1c60ddfa47deeb380",
+    "original_notebook_spiral": 0.5235987755982988,
+    "steps": 10000,
+    "step_size_m": 0.01,
+    "nominal_energy_MeV": 3.0,
+    "actual_energy_MeV": 2.9999997190185437,
+    "input_mass_MeV": 938.272,
+    "physical_mass_MeV": 938.27208816,
+    "integer_steps_per_RF": 2393,
+    "raw_steps_per_RF": 2393.2771294202703,
+    "initial_old_x_y_z_px_py_pz": [
+      4.0,
+      0.0,
+      0.001,
+      -0.0087,
+      0.07955668483652201,
+      0.0
+    ],
+    "dt_s": 4.1788549937317174e-10,
+    "legacy_turn_period_s": 1e-06,
+    "stations": 4,
+    "NPART": 1,
+    "space_charge": "NONE",
+    "binary": "/Users/adelmann/OPAL-2022.1/bin/opal",
+    "binary_sha256": "3e20fe1e8b040e10dcbb958b2d1a92d5020f5397361b230a615c0e41ca0b5ecd",
+    "input_sha256": "9283e56465881123ca0c2906acf4a62c33bef9a98c34683c8b7e718d3afe90f3",
+    "start_unix": 1794052593.282541,
+    "command": [
+      "/bin/bash",
+      "-c",
+      "source /Users/adelmann/OPAL-2022.1/etc/profile.d/opal.sh && exec /Users/adelmann/OPAL-2022.1/bin/opal school.in"
+    ],
+    "pid": 98878,
+    "returncode": 0,
+    "elapsed_s": 1.1576449871063232,
+    "probe_files": [
+      "PROBE1.loss",
+      "PROBE2.loss",
+      "PROBE3.loss",
+      "PROBE4.loss"
+    ],
+    "probe_rows": {
+      "PROBE3.loss": 4,
+      "PROBE2.loss": 4,
+      "PROBE4.loss": 4,
+      "PROBE1.loss": 5
+    },
+    "distribution_sha256": "edc7215789ec0579c1f48d8324bb1242422ce4e5679c83ceefc7fb308cd599b0",
+    "binary_OPAL_revision": "a4e0e14466557289b4f7a843fb9eb72700ff1992",
+    "completed_recorded_steps": 10000,
+    "has_particle_loss": false,
+    "accepted_for_comparison": true,
+    "legacy_turn_semantics": "RF-step counter incremented after each integer_steps_per_RF, not directed physical revolution.",
+    "initial_duplicate_hits": 2,
+    "integrator": "RK4 (4th-order Runge-Kutta; confirmed in run.log)"
+  },
+  "legacy_ring_placement": true,
+  "geometry_correction": "theta_entrance=PI/2-phi_template-L/R0; TAN_DELTA sign reversed",
+  "native_template_sha256": "ac3b513cbbe374f5b20d48a1e63e6a8430abd8e729f2b6772b814e6b21309092",
+  "school_module_sha256": "4366a0fced82dc31e54822c485d4586b2020845a51ac44bf2a6f3d88686fb882",
+  "input_sha256": "aadcc59e040ae3b40fd68b42186ad13200f129388f06512988d0a45fd9852c94",
+  "particle_sha256": "f8c2bec3a2d8785aa10cd06be2c8ffbe2dc4321ac11c70d5886d8331560ab65b",
+  "probe_stations": [
+    "PROBE1",
+    "PROBE2",
+    "PROBE3",
+    "PROBE4"
+  ],
+  "notes": [
+    "Native output remains lab X-Z horizontal/Y vertical.",
+    "Legacy initial-plane t=0 samples are reported separately.",
+    "Native turn is directed reference returns; old turn is RF-step bookkeeping.",
+    "No TURNS stop; compare fixed nominal step/time budgets."
+  ],
+  "executable": "/Users/adelmann/git/opalx-master/tmp/ffa-probes-implementation-20261107/bin/opalx-first",
+  "executable_sha256": "b13e9e5354a4434826ebf9844b05ebed6c3e6534a2b48fcc867dd6329cd80ef5",
+  "command": [
+    "mpiexec",
+    "-n",
+    "1",
+    "/Users/adelmann/git/opalx-master/tmp/ffa-probes-implementation-20261107/bin/opalx-first",
+    "--info",
+    "1",
+    "school.in"
+  ],
+  "start_unix": 1794052904.9606872,
+  "pid": 99760,
+  "returncode": 0,
+  "elapsed_s": 6.808880805969238
+}

@@ -1,0 +1,14 @@
+{
+  "status": "infrastructure_available_no_job_submitted",
+  "checked_date": "2026-11-09",
+  "ssh_host": "merlin6",
+  "resolved_host": "merlin-l-001.psi.ch",
+  "batch_mode": true,
+  "prior_root": "/data/user/adelmann/opalx-dev/ffa-probes-20261107/790abac19643",
+  "prior_build_size": "986M",
+  "prior_evidence_preserved": true,
+  "remote_writes": false,
+  "submitted_jobs": [],
+  "estimated_safe_validation": "Fresh isolated source/build using clean read-only dependency seeds; approximately25\u201335minutes plus queue, based on prior27m45s build.",
+  "limitation": "Existing immutable build cannot be cleanly reused incrementally without modifying or manually relocating its paths. No CUDA compile or GPU test of current audit fixes has been run."
+}

@@ -1,0 +1,17 @@
+Batch independent FFT2D5 slice transforms within OPALX
+
+Add --2D5BatchSize as an explicit positive-integer option, retaining serial
+slice execution by default. Reuse native heFFTe R2C batch calls and contiguous
+buffers without changing IPPL or transforming the longitudinal direction.
+Preserve the existing Green function, normalization, potential halo and field
+differences; keep diagnostic callbacks on the serial path.
+
+Resize reused OPALX fields through updateLayout when the transverse grid
+changes. Test partial batches, empty/neutral/vacated slices, anisotropic grids,
+potential halos, unchanged sources and complete solves under both boundary modes.
+
+Validation: four unit targets pass with one and four OpenMP threads, ten CLI
+checks pass, and two-rank execution remains rejected. The identical 100-step
+pilot drops from 21.38 s to about 11.02 s for batch sizes 8 and 32, with
+RMS/emittance differences below 2.2e-14 relative. Host execution only; no
+16-turn runs.

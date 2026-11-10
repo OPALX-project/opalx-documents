@@ -1,0 +1,37 @@
+{
+  "scope": "Read-only quick audit of original16^3/32768-particle run, not an8^3 validation.",
+  "run_root": "/Users/adelmann/git/opalx-master/tmp/ring-space-charge-profiles-20261023/accelerating-pic-16",
+  "original_exit": {
+    "returncode": 156,
+    "last_reference_gap": "RF3",
+    "last_reference_energy_MeV": 584.1575,
+    "target_MeV": 590,
+    "failure_message": "SINGLEGAP particle left field support or received an unphysical kick."
+  },
+  "original_possible_guards": [
+    "No magnetic sector accepts trial midpoint: radial/vertical/angular support, or nonfinite trial position",
+    "RF kick rejects nonfinite/nonforward momentum/profile sample, final gamma<1 or outgoing longitudinal momentum squared<=0",
+    "Negative timestep or >64 gaps are structural guards, but this fixed-positive-dt five-gap input excludes them"
+  ],
+  "map_support": {
+    "rmin_m": 1.9,
+    "rmax_m": 4.7,
+    "vertical_min_m": -0.05,
+    "vertical_max_m": 0.05,
+    "angular_sector_rad": "[0,pi/4)"
+  },
+  "saved_statistics": {
+    "rows": 1348,
+    "last_time_ns": 22178.348140653,
+    "last_mean_energy_MeV": 583.385873,
+    "last_particles": 32561,
+    "last_max_y_m": 0.040697,
+    "largest_saved_max_y_m": 0.04435972611173477,
+    "energy_at_largest_max_y_MeV": 581.8792554401133,
+    "last50_conservative_radius_upper_max_m": 4.566167587712566
+  },
+  "checkpoint_coverage": "acceleration.h5 contains root metadata only; zero particle-step groups. No failed-particle ID/state or output probe hit file was saved.",
+  "inference": "A vertical halo crossing the50mm map support is plausible and closer to its boundary than the radial extent in the saved samples. It is not proven; invalid RF kick, angular seam or nonfinite trial state remain possible without failed-state capture.",
+  "not_the_cause_by_itself": "An RF radial support miss is skipped by crossing selection and does not itself trigger this fatal. The590MeV target had not been reached, so this is not the terminal EKINSTOP endpoint issue.",
+  "required_to_classify": "Reproduce the same16^3/32768 input with diagnostic failure category, particle ID and lab state, and retain last accepted-state/checkpoint data;8^3 cannot validate the original near584MeV failure."
+}

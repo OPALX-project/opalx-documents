@@ -1,0 +1,144 @@
+{
+  "snapshot_date": "2026-11-01",
+  "scope": "SACR multi-point static field and radius-limit validation",
+  "sources": [
+    {
+      "snapshot": "data/sacr/acceptance.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/study-results/acceptance.json",
+      "sha256": "6d4f8fa86f1bdd4d6bfcea95e46ed26bee8463d3a30ae555646b3cb69b187391",
+      "bytes": 946
+    },
+    {
+      "snapshot": "data/sacr/endpoint_checks.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/study-results/endpoint_checks.csv",
+      "sha256": "f26b7b861edfefc9df70192bf1fb876c55b0a720df7f2f15228cd6a7ba8fc121",
+      "bytes": 12671
+    },
+    {
+      "snapshot": "data/sacr/fields.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/study-results/fields.csv",
+      "sha256": "3218518ec1f52a9b363debc774e5e027a226d07b1f38f731d33171fdc630ce80",
+      "bytes": 271932
+    },
+    {
+      "snapshot": "data/sacr/fields_all_resolutions.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/study-results/fields_all_resolutions.csv",
+      "sha256": "65efb05197d58f38a3dbddbb3f662c9accc153d14e87192e73376c413a9ba190",
+      "bytes": 901196
+    },
+    {
+      "snapshot": "data/sacr/flat_best_summary.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/study-results/flat_best_summary.csv",
+      "sha256": "f17befbec2db46a125153836a58e44d92e504c1c765c283a1f61fc716dadcac2",
+      "bytes": 797
+    },
+    {
+      "snapshot": "data/sacr/flat_summary.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/study-results/flat_summary.csv",
+      "sha256": "655c82b1d9d9d936f1ebbf65e8f55a63213d2e3fd9019601bd02d03ea6be596a",
+      "bytes": 3701
+    },
+    {
+      "snapshot": "data/sacr/points.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/study-results/points.csv",
+      "sha256": "f9c666dfcd9dd8795317a6c7c37b1f75827a1dc9981e4ceae18bd3048563ec74",
+      "bytes": 1782
+    },
+    {
+      "snapshot": "data/sacr/provenance.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/study-results/provenance.json",
+      "sha256": "43c3e908e0132bb22c901affe579b36e50bc0bb1df6683eb490a1a5454ea6abc",
+      "bytes": 1141
+    },
+    {
+      "snapshot": "data/sacr/quadrature_changes.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/study-results/quadrature_changes.csv",
+      "sha256": "b5f4e883d5d7f272a2ce9e87d135a067abefc7a9d3928754248054d2e82a8e10",
+      "bytes": 259641
+    },
+    {
+      "snapshot": "data/sacr/quadrature_summary.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/study-results/quadrature_summary.csv",
+      "sha256": "56868b0d5923c41c028c859cdbc4180852f6282321d20b4af0200512cf33328b",
+      "bytes": 2780
+    },
+    {
+      "snapshot": "data/sacr/radius_summary.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/study-results/radius_summary.csv",
+      "sha256": "c36ab3d7785da6c166ecd553d5b72d25b6b2d513a226af9bf9d5f9092d9c28eb",
+      "bytes": 3045
+    },
+    {
+      "snapshot": "data/sacr/scalar_vectorized_checks.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/study-results/scalar_vectorized_checks.csv",
+      "sha256": "159ed2908707a063ebe475f77c3c80102784967cf0a3b2daa481c35be9f44834",
+      "bytes": 1354
+    },
+    {
+      "snapshot": "data/sacr/symmetry_checks.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/study-results/symmetry_checks.csv",
+      "sha256": "4f9a77a4c2a72058529261ab2b386cf9eb497c475d0256bd7369bf75be6ccfad",
+      "bytes": 15001
+    },
+    {
+      "snapshot": "data/sacr/field_study.py",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/field_study.py",
+      "sha256": "7cf76f8e07d0d297f58f7550ea7988272dd8c19aa37bbddc6bfcdee4ed1d2d92",
+      "bytes": 16104
+    },
+    {
+      "snapshot": "data/sacr/validate_dubin_limit.py",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/validate_dubin_limit.py",
+      "sha256": "acb8e0ba8713b907f667eeb8d35cd3ce5efa440b0930c951b89bcc08feba3034",
+      "bytes": 7549
+    },
+    {
+      "snapshot": "data/sacr/independent/acceptance.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/independent-results/acceptance.json",
+      "sha256": "661aa2795d44c717812852cd08d8048b980813cb2d4bf980904192f43da06848",
+      "bytes": 789
+    },
+    {
+      "snapshot": "data/sacr/independent/boundary_vector_area_checks.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/independent-results/boundary_vector_area_checks.csv",
+      "sha256": "829e9af4fb0d5c3d6e3f6ca38055e363bad7b592563817498a2034b98a55876a",
+      "bytes": 206
+    },
+    {
+      "snapshot": "data/sacr/independent/cartesian_pde_checks.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/independent-results/cartesian_pde_checks.csv",
+      "sha256": "c11897fbcea2a8235106867da3382ca5f48480f0340e86a563674555bc7b1fca",
+      "bytes": 1234
+    },
+    {
+      "snapshot": "data/sacr/independent/symmetry_checks.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/independent-results/symmetry_checks.csv",
+      "sha256": "51ad6dd41fa7490ae62a8ae9974ddfd3bdb9156d335ddd7a5f9b99fe8123ecc6",
+      "bytes": 208
+    },
+    {
+      "snapshot": "data/sacr/independent/volume_surface_check.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/independent-results/volume_surface_check.csv",
+      "sha256": "13a1273ad066d3478dccc8b81e52162b6917e498042cfb871c24e94dcb6cdf3a",
+      "bytes": 744
+    },
+    {
+      "snapshot": "data/sacr/independent/volume_surface_check.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/independent-results/volume_surface_check.json",
+      "sha256": "baa4e3e63c0ec0b82fcfb74dc1069d7cbdf8a28bee5cf3c50ec7f21de88d8018",
+      "bytes": 374
+    },
+    {
+      "snapshot": "data/sacr/independent/volume_surface_check.py",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/independent-results/volume_surface_check.py",
+      "sha256": "15a39b3319b045e1bdb4bfa334d60aca2ae595ecb80f503f5f8eec5f56891373",
+      "bytes": 2940
+    },
+    {
+      "snapshot": "data/sacr/README.md",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/README.md",
+      "sha256": "820b6e156728f8223a1c1178c43b97335633262fda488142f8e7602749077d67",
+      "bytes": 4900
+    }
+  ]
+}

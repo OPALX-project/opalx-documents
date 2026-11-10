@@ -1,0 +1,82 @@
+{
+  "runs": {
+    "coasting-10turns": {
+      "final_energy_MeV": 72.00000029088541,
+      "final_time_us": 1.18670529640545,
+      "final_path_m": 131.8979525561668,
+      "statistics_records": 73,
+      "probes": {
+        "radial0": {
+          "hits": 8,
+          "first_reference_turn": 0,
+          "last_reference_turn": 8,
+          "min_radius_mm": 2088.6141713540915,
+          "max_radius_mm": 2602.9125902093256,
+          "min_energy_MeV": 71.99202892794182,
+          "max_energy_MeV": 72.00000029072503
+        },
+        "radial90": {
+          "hits": 9,
+          "first_reference_turn": 0,
+          "last_reference_turn": 8,
+          "min_radius_mm": 2101.189579067674,
+          "max_radius_mm": 3820.5255745429613,
+          "min_energy_MeV": 71.99225474216854,
+          "max_energy_MeV": 72.0000002906896
+        },
+        "extraction": {
+          "hits": 0
+        }
+      },
+      "phase_space_records_compared": 8,
+      "accepted_steps": 7213,
+      "final_particle_reference_offset_m": 22.99847541899688,
+      "all_saved_transport_and_statistics_identical_to_probe_off": true
+    },
+    "acceleration-590MeV": {
+      "final_energy_MeV": 590.3268245382127,
+      "final_time_us": 22.44977127297299,
+      "final_path_m": 4254.864205546323,
+      "statistics_records": 546,
+      "probes": {
+        "radial0": {
+          "hits": 189,
+          "first_reference_turn": 0,
+          "last_reference_turn": 188,
+          "min_radius_mm": 2146.2568197092137,
+          "max_radius_mm": 4393.963724160067,
+          "min_energy_MeV": 73.27262963929996,
+          "max_energy_MeV": 587.3802791429771
+        },
+        "radial90": {
+          "hits": 189,
+          "first_reference_turn": 0,
+          "last_reference_turn": 188,
+          "min_radius_mm": 2143.1398561652904,
+          "max_radius_mm": 4402.262280572574,
+          "min_energy_MeV": 73.74180753571093,
+          "max_energy_MeV": 588.1389877228557
+        },
+        "extraction": {
+          "hits": 3,
+          "first_reference_turn": 186,
+          "last_reference_turn": 188,
+          "min_radius_mm": 4345.043105807053,
+          "max_radius_mm": 4359.5870648688415,
+          "min_energy_MeV": 581.472485951127,
+          "max_energy_MeV": 587.3802899687714
+        }
+      },
+      "phase_space_records_compared": 546,
+      "accepted_steps": 545799,
+      "final_particle_reference_offset_m": 3.2749658713192045e-10,
+      "all_saved_transport_and_statistics_identical_to_probe_off": true,
+      "extraction_max_plane_residual_m": 1.0099545073017629e-16
+    }
+  },
+  "limitations": [
+    "Single proton; no space charge; one MPI rank and one OpenMP thread.",
+    "Existing SINGLEGAP map/transport model retained; not a new machine calibration.",
+    "The long coasting case exhibits a pre-existing large particle/reference separation; controls reproduce it exactly."
+  ]
+}

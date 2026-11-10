@@ -1,0 +1,25 @@
+{
+  "name": "new-electron-r1",
+  "binary": "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+  "binary_sha256": "1b24f376cf40132bd529d1313f2a84dc7d87da3d40806a2daba06686727fd98b",
+  "ranks": 1,
+  "returncode": 156,
+  "elapsed_s": 0.6311922499444336,
+  "expected": "SINGLEGAP requires an unpolarized positive proton and does not support restart.",
+  "passed": true,
+  "markers": [
+    "Error>     SINGLEGAP requires an unpolarized positive proton and does not support restart.",
+    "Error>     SINGLEGAP requires an unpolarized positive proton and does not support restart."
+  ],
+  "command": [
+    "mpirun",
+    "-np",
+    "1",
+    "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+    "Cyclotron-RF-Stop.in",
+    "--info",
+    "2"
+  ],
+  "input_sha256": "c0862989abba8f8778a9d41bbfdd81edf77a040ff049aad1d437b3b08f2b672b",
+  "timeout": false
+}

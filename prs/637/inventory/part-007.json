@@ -1,0 +1,1977 @@
+[
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-quarter-hdf5-r1/school-frame/PROBE7.loss",
+    "sha256": "ad5b2fc895da06e5f2e6243ea34a199023dff70a8da0f9e1be41dcc0a294b7ff",
+    "bytes": 542,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-quarter-hdf5-r1/school-frame/probe7.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-quarter-hdf5-r1/school-frame/PROBE8.loss",
+    "sha256": "c4abe56b1a9b2cee5ded349d98c460f24f3c6df3ab7bcb7aca6b695fd5125112",
+    "bytes": 542,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-quarter-hdf5-r1/school-frame/probe8.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-quarter-hdf5-r1/school-frame/PROBE9.loss",
+    "sha256": "6ceafd5dde0fb1451d5564ab078fcab286913dcd3379ad41c7d8fdcdaa27b03e",
+    "bytes": 561,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-quarter-hdf5-r1/school-frame/probe9.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-quarter-hdf5-r1/school.h5",
+    "sha256": "f6bf2c7ea18c9f93a1b09049dff762bd910b491d53be7f88137e184fea39c9e6",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-quarter-hdf5-r1/school.in",
+    "sha256": "b2daf03a4a11ee024415132636ab70c91f0318ed8a9c7ad4c495281e9c8f9e0e",
+    "bytes": 48040,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-quarter-hdf5-r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-quarter-hdf5-r1/school.stat",
+    "sha256": "364eacd668cffbb6ed04226c62652ef72df664fb655c682c6bd2a340a2d41c68",
+    "bytes": 7768,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-quarter-hdf5-r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-quarter-hdf5-r1/timing.dat",
+    "sha256": "7957c50215ffe9cf803e62661041fb4004b124703532f2d669070b9487a8ceae",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-quarter-hdf5-r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/PROBE1.h5",
+    "sha256": "234a43642e065c95f90c3b472f825d9427250a82c52b907c19a6560158cc5cba",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/PROBE10.h5",
+    "sha256": "0bd0613d9742dcb1c590ccf53ecd5bdc50fedc6fd731d042062447caedd14c5a",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/PROBE11.h5",
+    "sha256": "11bc243bc857aeaf9dfa33f62f843f76a869c21d75e2c96cb0c1e54b764d00e6",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/PROBE12.h5",
+    "sha256": "d682bcd61dc78b1fc07b92066619258c0295b4ccce43457d18469dadce9c6e11",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/PROBE13.h5",
+    "sha256": "4ff0ae49f9b1f10f4185a3a7e47f8d33ad5d5cc88c9a2eac10a74ab425eee459",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/PROBE14.h5",
+    "sha256": "1b41fdc3ba86c08d020341ee0143b8b8e121e0067ae29b1cca0b6e958ad43998",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/PROBE15.h5",
+    "sha256": "b3af8ebd3ad6f107a986f1538fe691c43afe680d5b1a9c5e0ab23a92e02d61fa",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/PROBE16.h5",
+    "sha256": "6b72a1eafc38831b499cbb22ca28a9608841d87676c2ca8be51a535194f3bd4f",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/PROBE2.h5",
+    "sha256": "6c7dd13ffded75f1c782ea5e5f54472a7c5259c69ef735107f42d1d711ca4998",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/PROBE3.h5",
+    "sha256": "4e7da2d790bb3756fa97966543f55b8077f5b4f405aeca7744f4138e9641d272",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/PROBE4.h5",
+    "sha256": "fcd7effa67f33d1d73b0da47dfe4ac0629b00b8b07a0df7fad0e7686deac9ed4",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/PROBE5.h5",
+    "sha256": "cb7c861b73cb8d755a9db0d05d89ea7895633cbd4a0a6f23c94c4ae690ae429e",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/PROBE6.h5",
+    "sha256": "b39091f21d9564402375dcd548023ae3afdc2f58694fef5c75ad4555da033c98",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/PROBE7.h5",
+    "sha256": "661583cd788d3b88070f97a889fef74ca74aac4a7f7d37b36f2b2559712a5453",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/PROBE8.h5",
+    "sha256": "2620dfa45a428e180cf63abab50937876ef8d46368a863316f1041834985f4ba",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/PROBE9.h5",
+    "sha256": "da2f6047a7d5d049a8b3032a4204185e182fc72a88c639c6462003f9e9b71943",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/analysis.json",
+    "sha256": "2bb26ff59d099b0335de106a1e0c0169c9f0833a1c2d7706cbc37fdac1c77850",
+    "bytes": 10865,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/crossing-comparison.csv",
+    "sha256": "11f8edeca77644bc68284fbfe7799605dd461f8e96431394a075c9a3cd500a14",
+    "bytes": 17956,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/crossing-comparison.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/data/school_3D.opal",
+    "sha256": "ddd7d93652182ed3746a1de1b3296c985fe389613cd7e0ee0521dea5d5037b6c",
+    "bytes": 47969,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/data/school_DesignPath.dat",
+    "sha256": "0655806eda99dd7c4f151a608f96288d58ed216982bbcff2abcfae855a8fc078",
+    "bytes": 3420251,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/data/school_ElementPositions.sdds",
+    "sha256": "1d3e67e2e0818b7e5cdacd46bae592015a2c3b75aa1cf2750e0615286bb00b9b",
+    "bytes": 102459,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/data/school_ElementPositions.txt",
+    "sha256": "e78b090ba8eb6d44ea63a7376701b8955f58a89e6a230fdffe2e2db8946225b1",
+    "bytes": 179775,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/final-state.npz",
+    "sha256": "cfca06d1d14affc1d07c2c274e7ae055520555f03ff974e81bd4d15c6d8de9cb",
+    "bytes": 3276,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/manifest.json",
+    "sha256": "0fa8e09b7a4551e748bc8c342bde232aad00d666854df4395d4fa823e7101eae",
+    "bytes": 4851,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/particles.dat",
+    "sha256": "65ca902e9907a3a48563ec34729429e71ea68433a6055ceef92b6caa60fa16d7",
+    "bytes": 67,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/run.log",
+    "sha256": "8be485a8034138ff97effa90efc7f90a5e5a1d544c7deeca760edd41c019ba6f",
+    "bytes": 3808818,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/PROBE1.loss",
+    "sha256": "f8f1e565eb98a4d5b0f07e3bf9d8e80fdedc2d6fa0e7f5571c3e570b5dd15bbe",
+    "bytes": 439,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/probe1.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/PROBE10.loss",
+    "sha256": "0368740c216e0706776d4c6b711ed6c2c097f7e45d5929b1f3871bfcacce65e2",
+    "bytes": 544,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/probe10.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/PROBE11.loss",
+    "sha256": "be53b0be8fb8fb8143f9c242b1433d77d2f23bb30d371f3256dfa2edeb6cb18e",
+    "bytes": 430,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/probe11.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/PROBE12.loss",
+    "sha256": "c4e76b52a397f8a3140111a3471b82316e76a3b81d6c6a6756647c76262bf580",
+    "bytes": 430,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/probe12.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/PROBE13.loss",
+    "sha256": "6498c12f76b1d6ae75d1fa37d2420f6d4199340e9d33551ad72a3c284143ea42",
+    "bytes": 442,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/probe13.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/PROBE14.loss",
+    "sha256": "99df8152752983ab6b05bbf71260d8942e6e5f0ca7f8bd3420f78ff4ff0e8106",
+    "bytes": 425,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/probe14.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/PROBE15.loss",
+    "sha256": "103440d8dd6de96a0058d2891b139a7080d0e7f90bc8f55e8b9813969ea6725e",
+    "bytes": 422,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/probe15.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/PROBE16.loss",
+    "sha256": "71d2c352fa76369220a56be93e7b6077085726b0a652a9919861007d5cfc625a",
+    "bytes": 424,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/probe16.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/PROBE2.loss",
+    "sha256": "871c9352e438d1f8cf216e8cfafde4731911dc98b090459939c0138a8b366b23",
+    "bytes": 533,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/probe2.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/PROBE3.loss",
+    "sha256": "e4bd4a7594efa35bccf9653680a05fb7b33c6995d582ea6aa0a80b74fc6964a4",
+    "bytes": 533,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/probe3.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/PROBE4.loss",
+    "sha256": "7424059c0141e48f206f51def2e5c2f2231308e2a6778e241d13b6df6e8b30c5",
+    "bytes": 537,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/probe4.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/PROBE5.loss",
+    "sha256": "b4feb6d66cd83d5c6ab834b19863b34874f33150d6e68b40ec3570a9f533a1b3",
+    "bytes": 476,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/probe5.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/PROBE6.loss",
+    "sha256": "7e52dfe58190322c883497c2f15ecfa84a8d7155bfbbe21e760098460091bf94",
+    "bytes": 546,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/probe6.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/PROBE7.loss",
+    "sha256": "56300f04e38029320c94d5efc8f708b045f3489ebc2ab25303689cd00b4ba33c",
+    "bytes": 543,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/probe7.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/PROBE8.loss",
+    "sha256": "1e379dfacdcfa3c4264ae28928c34b2bbef44a61f1b34c434e13492e31a5f90e",
+    "bytes": 543,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/probe8.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/PROBE9.loss",
+    "sha256": "e3b9e89d01d007df0566f6eabdcdd13eda0c2a7fd193d17b9eef351d890a6644",
+    "bytes": 561,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school-frame/probe9.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school.h5",
+    "sha256": "8da7464e0cf4e3014fd8c08f080854f5cf9bf1f68451b712b640139925cb8e3d",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school.in",
+    "sha256": "74ae2c4e5a86ad540c3adee3358f02114262cf66b710154316d751fc2479e49a",
+    "bytes": 48041,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school.stat",
+    "sha256": "d788f3af625d26433d68a536c6112daeaab696ffcd1268870aaf5ec68e3d9321",
+    "bytes": 7768,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/timing.dat",
+    "sha256": "05b4bd676d8f8e100f414379132ffc88dc63572c2d03d8d6dfd50062b960989d",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-refined-hdf5-r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/PROBE1.h5",
+    "sha256": "6049d89ed7c717020d6253ccbbb9a3d588e8ed56ebcd8247286ed5f04bf93219",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/PROBE10.h5",
+    "sha256": "4dfb93529ada64dd84d70fa48db8f86cfff4b21181bc7457a4674f1cd5da8137",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/PROBE11.h5",
+    "sha256": "3b90c8e94bf6c33bb0571b2fece624b8d2d35e4199d9ef343d12478f5d8ffae6",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/PROBE12.h5",
+    "sha256": "fe26a9a34412adfb667f1067dfef3baba4ab55c1529878f903cc8486df8f8db8",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/PROBE13.h5",
+    "sha256": "2dd6eda50899c634f7bc52746d9c34470a520888725b305318d0af55f2d465f4",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/PROBE14.h5",
+    "sha256": "a69f1b9aae49ee43c6b02de4657d47997a27523ca303ef8bb4ab1a6d4cce27e2",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/PROBE15.h5",
+    "sha256": "a2949848b609a21afc3629af08c425a6099f6b70554fd9f81f032ab47b5b214f",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/PROBE16.h5",
+    "sha256": "9f9e1caffecca017c24492bf65eed54c37af7a5a490ed7e238548171e886c965",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/PROBE2.h5",
+    "sha256": "624038abf42953a21b024801725006fa1b9f496fa260b995504771e2c123f84b",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/PROBE3.h5",
+    "sha256": "da61086f46f6309fcb29abcb8056f4f7dec54ab02c4014f466a3445ee308adc4",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/PROBE4.h5",
+    "sha256": "7a439e9480fe157272e3c56e3c70f05ff51f26fe580db542639a5cfec9082a23",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/PROBE5.h5",
+    "sha256": "ab429ff6749c90d8e2e5f0c1c0516d087a12f19d76786d54f8f8ac94a9dbad90",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/PROBE6.h5",
+    "sha256": "67ecc653a208494db9e6610db9af776ca3df0eaeaafb1910fd8fd392fa2dc81e",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/PROBE7.h5",
+    "sha256": "23f8a3400ae40add0968f21d090bcdf376b9247e1daef6f755ac7d725f3e360d",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/PROBE8.h5",
+    "sha256": "8bcba084aee0869f70744937c601a6a0d57321b86fb0332a5af5aec59f430964",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/PROBE9.h5",
+    "sha256": "d8c68cfcd20f9662f648803e30810d5dbf2cc691d2dc9fff9a603dae5df67488",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/analysis.json",
+    "sha256": "e8e59eb5d3b4fce882f4fcb17bd73c89a9c3abfdfc809f49bb95924ef9869113",
+    "bytes": 11496,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/crossing-comparison.csv",
+    "sha256": "026565f89a0b947abbc50e4b32d84be084f080c673b7a0509700f22b28a1f43e",
+    "bytes": 23084,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/crossing-comparison.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/data/school_3D.opal",
+    "sha256": "1fea002be2beb776b0ca651ac71c7c176bc8c385492b8330f419adf1ff480738",
+    "bytes": 47969,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/data/school_DesignPath.dat",
+    "sha256": "638d9948ebc92f92b720c66288584c2123a44966b3a49dc885ca245ea34186de",
+    "bytes": 3407205,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/data/school_ElementPositions.sdds",
+    "sha256": "4e033e5883600be08440d6b6978a0f0014b08ba9079475180dbad5c1be1407b5",
+    "bytes": 99441,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/data/school_ElementPositions.txt",
+    "sha256": "e78b090ba8eb6d44ea63a7376701b8955f58a89e6a230fdffe2e2db8946225b1",
+    "bytes": 179775,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/final-state.npz",
+    "sha256": "18e0ba9e1d2fb7b2cd388cc8424cbaadb7f048bae6bf9b3942285410a05c063c",
+    "bytes": 3276,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/manifest.json",
+    "sha256": "d3a3331601534c4307ef5887b0bba10755ee81852955de2816b7edaefab40d1e",
+    "bytes": 4856,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/particles.dat",
+    "sha256": "408583bed4b5399f9ab5e03efec4bd3da84f656bc0f3b47655995ab6c31d779f",
+    "bytes": 71,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/run.log",
+    "sha256": "aca873afc0c6b92b576a0cfe9819d366cc63925ed07b99dd23e126d95a0a7d27",
+    "bytes": 3808376,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/PROBE1.loss",
+    "sha256": "ac6c32e1c611b52e89e3a70f45490226c426f40609bfdfcad71f9b3516e2fdf9",
+    "bytes": 566,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/probe1.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/PROBE10.loss",
+    "sha256": "6e81b84e0ad9066016b2e20c5d42d482b0d0ffae0ef3ccea952e0377c0880d1d",
+    "bytes": 714,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/probe10.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/PROBE11.loss",
+    "sha256": "51eac7295cfe7b6817e79ee9d4f44649d5549ff69b7eaf26ac452d75ab28bd13",
+    "bytes": 552,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/probe11.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/PROBE12.loss",
+    "sha256": "0021e28ad8d8a75d2ed4d5107473805275a1f08749fbaf0ee678a71dcc9b321c",
+    "bytes": 554,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/probe12.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/PROBE13.loss",
+    "sha256": "71d03ec2bdfd1d9f4b4ea0dc457098b07d13f5b531c950ef48148a663aa624eb",
+    "bytes": 566,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/probe13.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/PROBE14.loss",
+    "sha256": "31a709fb26bcb2fe43b43f408562a0b9f8c319eeb08f411e3650873ea75435ec",
+    "bytes": 550,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/probe14.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/PROBE15.loss",
+    "sha256": "162496b311eb86c1a84031446a1b020c0b76e44034e9b8d59bdb16c7eebfd799",
+    "bytes": 546,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/probe15.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/PROBE16.loss",
+    "sha256": "620c51e8d50535b7eabe7c4d0262ec2c0adc9d4dd2a732913bc8f8a2938f548f",
+    "bytes": 551,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/probe16.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/PROBE2.loss",
+    "sha256": "c07560dec87036ab16c42650cf5bfb200dcb4028faacb5498ef04e6fb993b611",
+    "bytes": 704,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/probe2.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/PROBE3.loss",
+    "sha256": "c96511154c378746514bcfa23fbbd500d8b7747ce29062368664db92d03c01df",
+    "bytes": 708,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/probe3.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/PROBE4.loss",
+    "sha256": "0c0f09d50d1e95e429dd5131da1ae2e278a2e0ebc6688fa35a84f42014ba41ba",
+    "bytes": 702,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/probe4.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/PROBE5.loss",
+    "sha256": "0b0d0f74ba71895ddf2e5ce466cc4607960ade8e9c1c63c7d104a9f1aa086193",
+    "bytes": 644,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/probe5.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/PROBE6.loss",
+    "sha256": "53068772a6d4584f502ad4c54f10bb233061fb92cb52f90b8282dc432f4d5290",
+    "bytes": 712,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/probe6.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/PROBE7.loss",
+    "sha256": "73498b7838235fc4491c2d790d2b6cd434ab2f557f3be2ba6858af80a5f23342",
+    "bytes": 711,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/probe7.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/PROBE8.loss",
+    "sha256": "ff8575bf68a6670850d642a4b81efec60879043d7f18e8d50746c7c29076d4b4",
+    "bytes": 714,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/probe8.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/PROBE9.loss",
+    "sha256": "a7b2735f971afd7aafa5def079c1e9c509c83d38cfac3a4ba89ce32758278d3b",
+    "bytes": 728,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school-frame/probe9.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school.h5",
+    "sha256": "31053a6ed8c32b03ed17787781a5dac6519c25bf7639c3c47c8ff387f5b46ff5",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school.in",
+    "sha256": "5db58d8f431be93fa3ec889ae90b34e937322253f5379231b5ebd8c0101fe7d9",
+    "bytes": 48041,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school.stat",
+    "sha256": "e3703bd6235fb5f8b6bf6a98a0033c4d0c8b4211ced302535820a8c59758fc24",
+    "bytes": 7771,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/timing.dat",
+    "sha256": "70854a9b06f5e0c4f41daef481f0b3ee2663d1e729f26ff0eed6ac7a1d58424e",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-hdf5-r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/PROBE1.h5",
+    "sha256": "c465bd4e32040575293a3d4827344664dbb71a70d71ad9989d3e6bfc9e97e4c7",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/PROBE10.h5",
+    "sha256": "bb8858aa8fd79776d7a2524c845fe685b396f0dbdf255f41038098b7fea5d08e",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/PROBE11.h5",
+    "sha256": "1577d470b512fc128a0b2b2d33dd24d910598979e0dc97bf964ceb63652780e6",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/PROBE12.h5",
+    "sha256": "755a8bfc79882beb4b2d47cc073a87b95096f473d53e21f38fe0d88aebb73fb3",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/PROBE13.h5",
+    "sha256": "0d3b50cf81fff318898e8b05f1e4526725beadcec44e8e9f17c1a972413075e9",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/PROBE14.h5",
+    "sha256": "9a75d3fa1aef687df63cb8acfa96dd65591f8fb9fed23c357b4fb997cf6a6ce7",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/PROBE15.h5",
+    "sha256": "6a35f10786007fa011f5e79adb489601438b85d9381fe6a2d785d1c1e9096d3f",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/PROBE16.h5",
+    "sha256": "1de7c1112894d75007556abee3a882827e6b859abeba61d57cc52fe9be9292ec",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/PROBE2.h5",
+    "sha256": "b476c9048f43ccc1caccd44f498b629f3222a86d3e383df9c9f32491f00ed5d0",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/PROBE3.h5",
+    "sha256": "42e8cf15ec0461ee014059779056f81f36190347c763bea8bbadae251e620136",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/PROBE4.h5",
+    "sha256": "82c4c24350dccf5582eb944ace9f4f6b731a54b8ce3c63a8daad196fdc5fb39b",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/PROBE5.h5",
+    "sha256": "eecb2634349e32e53c9fb7574da7e3e648f31089ac28e6e8eaac1873024eefe1",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/PROBE6.h5",
+    "sha256": "3322cfd3aa32dee4f271434527306ab50d613d5f49e01106959d29ea0ad3d645",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/PROBE7.h5",
+    "sha256": "d62719685ed01a3aa1146f8afe497f0ae887936592bc132ff2bb783cfc3d098c",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/PROBE8.h5",
+    "sha256": "e6c17375683d02e8c5af237ba2a28aed2f4184d9f859a9cf1b75b9cb102c5276",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/PROBE9.h5",
+    "sha256": "7792cbac65fa09ccd6777f58716a776e5ca857d3dc7572994f1a013b8eba82d8",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/analysis.json",
+    "sha256": "0adc9308e89918d4d901a9cf0c1d739b2f4e5dc467cb3b7121e9ee8f7770bd3b",
+    "bytes": 11508,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/crossing-comparison.csv",
+    "sha256": "f0db4f0f5403fcf5394d3b1caa6332561efc2fd943e36930336b0ac97e1b35ce",
+    "bytes": 23111,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/crossing-comparison.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/data/school_3D.opal",
+    "sha256": "ddd7d93652182ed3746a1de1b3296c985fe389613cd7e0ee0521dea5d5037b6c",
+    "bytes": 47969,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/data/school_DesignPath.dat",
+    "sha256": "eb635d65966bcf5d53b336ca166053dfc9f408da2eb38a6d2f461c1fc5323a3a",
+    "bytes": 3423297,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/data/school_ElementPositions.sdds",
+    "sha256": "4db4a5d4e3f95bf9478d71f93279efe5656defc54d61bad0b01e035eed16cd30",
+    "bytes": 100595,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/data/school_ElementPositions.txt",
+    "sha256": "e78b090ba8eb6d44ea63a7376701b8955f58a89e6a230fdffe2e2db8946225b1",
+    "bytes": 179775,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/final-state.npz",
+    "sha256": "0b96fe770c7bd4ae020e3176ade24464fc88b4e09c1f16c7154ef8498b764218",
+    "bytes": 3276,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/manifest.json",
+    "sha256": "7c07fe4b9fe219ef288fa4ff860a9d0cf7014ffa09df8d70834ace6485b1a2c7",
+    "bytes": 4582,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/particles.dat",
+    "sha256": "408583bed4b5399f9ab5e03efec4bd3da84f656bc0f3b47655995ab6c31d779f",
+    "bytes": 71,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/run.log",
+    "sha256": "55200b424e2f02cd31a7c50b5f643ec5aff5e3f48b9eb3863ddc6694234ec22b",
+    "bytes": 3815545,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/PROBE1.loss",
+    "sha256": "21adab53e8ed04c2ef9fa11e3ce069b20db2c51584d785bd4e332ac501a6a90e",
+    "bytes": 564,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/probe1.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/PROBE10.loss",
+    "sha256": "5020413ded7ac1643922b246c1925367b8205aad97b7eb6c74f330a9d8a15e50",
+    "bytes": 713,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/probe10.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/PROBE11.loss",
+    "sha256": "b3e204f38bb672834b7e997a080ae06b39a127fb7126522f968f2d7d81c9f960",
+    "bytes": 553,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/probe11.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/PROBE12.loss",
+    "sha256": "792ae26ef24799dba3825a871d90f9fad0cb37ac80d7d04e1b38661677309878",
+    "bytes": 559,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/probe12.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/PROBE13.loss",
+    "sha256": "f7686991a52c654757f800d6135ee47b79c94fd617ca995d71add5a4f75dc880",
+    "bytes": 568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/probe13.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/PROBE14.loss",
+    "sha256": "1a1ec7e56f02cb5b524747bbc324d5a5d3e0cc62496fe42a4a45daca463fc5fb",
+    "bytes": 549,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/probe14.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/PROBE15.loss",
+    "sha256": "a9dc8ebc03c037edfc24387f9230c6386aad1d31544826ba00a1e22d23d0081d",
+    "bytes": 543,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/probe15.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/PROBE16.loss",
+    "sha256": "06c4540a6df948a0a2b1e71ae65278995340fc7b1c6f43874581976664b04968",
+    "bytes": 553,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/probe16.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/PROBE2.loss",
+    "sha256": "5ecc912e321814e05c63556faf42bd6b7dfb4ab14ddf059e68f7af44d3dd6afd",
+    "bytes": 704,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/probe2.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/PROBE3.loss",
+    "sha256": "66396c20bd1098aff64aa848580b6c383ee1301d3020c2040d0bc88967e5d019",
+    "bytes": 707,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/probe3.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/PROBE4.loss",
+    "sha256": "bcd6efa8ecca2b95b34a9889fe2f5f7a58facabe4e76ec8aafc62a69476987a0",
+    "bytes": 705,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/probe4.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/PROBE5.loss",
+    "sha256": "14db1cfc543e9da8961c9991d2de6d6883a860313c4a45c074bc448d32f50364",
+    "bytes": 644,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/probe5.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/PROBE6.loss",
+    "sha256": "58dcc1eaa7ca3aad316407ffe20f46c6e1407f93372c7f2591a0e48cc397730b",
+    "bytes": 715,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/probe6.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/PROBE7.loss",
+    "sha256": "5fe4ac5f7fbdd4bde1af3fe2dd9bbbbb3d21ae83f2e93e7e102ee424bd550789",
+    "bytes": 712,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/probe7.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/PROBE8.loss",
+    "sha256": "5f7b745578555e4a852b32ab6e749c7d32752f4bb100ce4e8de9e694d1817727",
+    "bytes": 711,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/probe8.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/PROBE9.loss",
+    "sha256": "091c2e6d3b52c909999dcba9472d6d3564fdb3b8d11710b5cf8341e484bfef48",
+    "bytes": 727,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school-frame/probe9.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school.h5",
+    "sha256": "e00495c05bcdd790ca9d3be5e2b3a9e02bb6744dc6a8d6588899eb3abd32ebb9",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school.in",
+    "sha256": "74ae2c4e5a86ad540c3adee3358f02114262cf66b710154316d751fc2479e49a",
+    "bytes": 48041,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school.stat",
+    "sha256": "b0385f034fd0c0ce291c9cdd742aac9f96d80b21be090e13414628e186fd02c2",
+    "bytes": 7771,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/timing.dat",
+    "sha256": "e65741229882d8a1f70784d4612969b67c92451a7fc3558c651a610788c478d0",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-matched-vertical-refined-hdf5-r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/analysis.json",
+    "sha256": "f72a9357d00af7ee3f040fb0bb09da4f7909fc69f9a39f2726396226ea682b77",
+    "bytes": 295,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/data/school_3D.opal",
+    "sha256": "a7f713f53613e718ee957b33aff9e54539891a5fd5836ea8c3df5e94651dd13e",
+    "bytes": 40435,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/data/school_DesignPath.dat",
+    "sha256": "7e36333e5fca0977a76fa581d6704509cae6ace13746edb951e460baf764061b",
+    "bytes": 3399727,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/data/school_ElementPositions.sdds",
+    "sha256": "afb25b8465165b6e767043ef057e98eb5a65640193dca010cfb207b622abf29f",
+    "bytes": 99645,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/data/school_ElementPositions.txt",
+    "sha256": "ff9aaa77e7e809e9945a58c2de546b5f925b1259ddc6342a4d7ab2338480871c",
+    "bytes": 179775,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/final-state.npz",
+    "sha256": "a2d9bc08ba9d071f4496bbff936cb2f3fbf1b85e72d30bd83c88a49d68d87441",
+    "bytes": 3034,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/manifest.json",
+    "sha256": "90b955825d1645f24870593c1988ac08f878bb47563f7eb9b81f59d8aea71329",
+    "bytes": 3810,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/particles.dat",
+    "sha256": "65ca902e9907a3a48563ec34729429e71ea68433a6055ceef92b6caa60fa16d7",
+    "bytes": 67,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/run.log",
+    "sha256": "83f1746496475335437eeca9d385ff86ac87416a6a929552640a7597e508248e",
+    "bytes": 3822823,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/school.h5",
+    "sha256": "d3e54666d73283d5f2e372a08c78a86de90aa812cdd1de93f1aee65b70100c58",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/school.in",
+    "sha256": "f21135fc69c9c730cfa806661e417dcb261164ed590cc14f9cab84381a5db17c",
+    "bytes": 40505,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/school.stat",
+    "sha256": "f9032ceaaa073e667b6f36bdf82b7b4c6cc183bb0a61d30291c21958008e87e5",
+    "bytes": 7765,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/timing.dat",
+    "sha256": "102dab5f6e88737403b8ba79483837364e33267c4d6737b9faed839a256bd782",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-off-r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/PROBE1.h5",
+    "sha256": "a04bbffd3c35f7b492a73e5992dae7de682010051f2e8821627f63a4b555c3c3",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/PROBE10.h5",
+    "sha256": "ab5290f99236eda2c9ed43251d694d56e49f7d626a2e81e68d19b2452df69fe1",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/PROBE11.h5",
+    "sha256": "9ea3d95d4acda146ac454799f0c0235f497e10cfc40c723fa894f1f9400241e8",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/PROBE12.h5",
+    "sha256": "c5f164e18e55de3b21e191bc180124d3169248b4b13cc9aed90820865359b6f5",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/PROBE13.h5",
+    "sha256": "378d180487157a830cd2ad140d3e08241852b2b19cfde508cb24aeb3777d91e9",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/PROBE14.h5",
+    "sha256": "04647c8aae4d0cb4c488938be688869d737e3583e154f2d185cb563df4136f99",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/PROBE15.h5",
+    "sha256": "246c3a0b570250fe91da66760915622842889339e5a6951f95c6154ca8ba3f80",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/PROBE16.h5",
+    "sha256": "5be85b40978cfcac636c3f7a7320ff49044b9be098186273f059747427d424b8",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/PROBE2.h5",
+    "sha256": "2da314b96b280d7c69c90ee256c93e9e7c5695d8f8c1dfa71998fe8344f1d15f",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/PROBE3.h5",
+    "sha256": "ac52ef7ebfe7b38c91a8534bcffce4a4e13b816de2e73a3abdb634dbf279b1bc",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/PROBE4.h5",
+    "sha256": "91e4adfd73527c9f5f84d1cd94d21a552942eb1502d733e5620f86748138ef32",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/PROBE5.h5",
+    "sha256": "6cd4ead89f272a26582f9dbd86ecb1bfcf216611f288ec31d9cfe5079658d361",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/PROBE6.h5",
+    "sha256": "412b434c5a1f15e8d3b86393c6473db097b7d7f69d9e8c4d1b5c7e8bd2877abe",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/PROBE7.h5",
+    "sha256": "aa6d06c6bb69a40bfe0b6366923749fca4c4007c62fb1cf7cf84f3a57518d414",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/PROBE8.h5",
+    "sha256": "0dc82c636213ff23fa1c0429136e57f02acbc2ea30e976e3045ace526744825e",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/PROBE9.h5",
+    "sha256": "6c89c68127beda0694faf523d728d1b21143e460245d3000f259db13eddd42c8",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/analysis.json",
+    "sha256": "6902b1ba792908941a5aec3663d6ea8943622267f8090743d0b3c2450298101a",
+    "bytes": 10679,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/crossing-comparison.csv",
+    "sha256": "a1b7553a45b520fa1345c34b8b54fc03c5cabbc7f201680c7f267ad006f238a1",
+    "bytes": 17583,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/crossing-comparison.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/data/school_3D.opal",
+    "sha256": "0bd6f885cd35eb077fae47aff622be9f7f1db99e37f345cb962abd45bea51c8b",
+    "bytes": 42753,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/data/school_DesignPath.dat",
+    "sha256": "0727921a16ce35181fb602c908ec34f8782798148dd7b2de6d639d955bca4c1e",
+    "bytes": 3411343,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/data/school_ElementPositions.sdds",
+    "sha256": "9d4162ed4c717507466f2fad52e23ce41c7b2f9e3a3237270d22222ea576fb3c",
+    "bytes": 103517,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/data/school_ElementPositions.txt",
+    "sha256": "ff9aaa77e7e809e9945a58c2de546b5f925b1259ddc6342a4d7ab2338480871c",
+    "bytes": 179775,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/final-state.npz",
+    "sha256": "7d86e9aa3a1efa5d37ddb236ed7636a85d226160ca0ec9ce914fc53a3b17a877",
+    "bytes": 3034,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/manifest.json",
+    "sha256": "83c4ccfa2dc9c4575d23c52a08ff830798abf675b15e358400de3b322b1148ed",
+    "bytes": 4222,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/particles.dat",
+    "sha256": "65ca902e9907a3a48563ec34729429e71ea68433a6055ceef92b6caa60fa16d7",
+    "bytes": 67,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/run.log",
+    "sha256": "f6077ae907579c05fff7d605f16cecdc4f2bddc67e2928a65de950a4b75351ee",
+    "bytes": 3814895,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/PROBE1.loss",
+    "sha256": "1c5aa87daedd5df784f060737699e94dc5a27574179eb6f5d79b0cd883dfae6f",
+    "bytes": 437,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/probe1.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/PROBE10.loss",
+    "sha256": "3be6fe6be952bb2c350f9f72107202bfba9c8cfc1a2af8c9b809a00bbd33eb38",
+    "bytes": 542,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/probe10.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/PROBE11.loss",
+    "sha256": "bc8d5eb60c2be982c4b78752928ca518d5af71e666bdb585a31893908e3b9acb",
+    "bytes": 427,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/probe11.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/PROBE12.loss",
+    "sha256": "d56f61a7e49e9856c0846b4933d1a833e79c3f9365459876497a0e2ad3851b55",
+    "bytes": 429,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/probe12.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/PROBE13.loss",
+    "sha256": "e110d26d608f7bd9ccdcbdd3fea490bf5e0a82823c2f10f7264e949b94763221",
+    "bytes": 445,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/probe13.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/PROBE14.loss",
+    "sha256": "fcc1b70d3b5555cd4bc8eea37cd5266b439663c92af0b8f059b5c2d03191c46d",
+    "bytes": 426,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/probe14.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/PROBE15.loss",
+    "sha256": "32cb1120690e3e2774385dc9ae930817a909f941a03f9779b36f36cdd3fcc1f2",
+    "bytes": 422,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/probe15.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/PROBE16.loss",
+    "sha256": "30395647d4d884bb3983c36a9c1cc6ebf9474ff2bd10492d8bbdc706781fbb00",
+    "bytes": 424,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/probe16.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/PROBE2.loss",
+    "sha256": "4a501307b03ec0f4d4f4632aac38ed871c9e42ae609ba7fcd16203a16dab14a1",
+    "bytes": 537,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/probe2.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/PROBE3.loss",
+    "sha256": "fa26321bfe004bc8b6ce0dd0b3369281785ef6e1fcccce97d49e4d02f07e5e2a",
+    "bytes": 533,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/probe3.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/PROBE4.loss",
+    "sha256": "51312954c37360c0a772ccc181d2ed6550cc3e8a149cd24f5858333196318ad6",
+    "bytes": 537,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/probe4.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/PROBE5.loss",
+    "sha256": "325745876c033cb20ea5db05d76ecd2cf22033f17cd76b9530a12b466b0a4eda",
+    "bytes": 470,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/probe5.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/PROBE6.loss",
+    "sha256": "4269b86775ac801b1bd24dee7b78d25c0c63d0ada3e442edf91a8f1da7e21572",
+    "bytes": 544,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/probe6.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/PROBE7.loss",
+    "sha256": "c9fd036924ebb9e3deae5504837c2cf0b7ffedc41729c3fcd622e2957b5f6dbe",
+    "bytes": 545,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/probe7.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/PROBE8.loss",
+    "sha256": "cd6960ce777b5c9655f50b8712c04a090d8e71a06422efdfdb256a7e044f0577",
+    "bytes": 545,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/probe8.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/PROBE9.loss",
+    "sha256": "458178aab6802cebb733d1dcbfdda09d85c2f48f5c8383017f1f43a7c8733ec8",
+    "bytes": 562,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school-frame/probe9.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school.h5",
+    "sha256": "056a2f0f752db3d37cd91d4693168f78aebef84e23786c8d0fdfaf57235a8e3f",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school.in",
+    "sha256": "0411ea6072ae89d5b086b22a5a80d6878c031b7c4e92753d99056b814fda444a",
+    "bytes": 42825,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school.stat",
+    "sha256": "b5e84de48b8f0c0a0c9334688ace4b9c8f451ea58f439ae87b03dbb8e97cc7fe",
+    "bytes": 7765,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/timing.dat",
+    "sha256": "a954babc2aabea1ee3c516a6fd246b1754a3b6178d5a9ac927809d4dceb5dd90",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-refined-hdf5-r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/PROBE1.h5",
+    "sha256": "9ff64a2e58608f3c8d2a98b530b7ec6ebbffa6cd21affda1e678cdd13946f111",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/PROBE10.h5",
+    "sha256": "3f9edeec1619e8a6ba457c57316a757c116bcbf28fa8366237963f7ffd03282f",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/PROBE11.h5",
+    "sha256": "4b3177cb8477dd5bf915ea2b53714f694f1680c15ae0bf1b76503257e1bbde87",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/PROBE12.h5",
+    "sha256": "c731bbbfd6475ab8e016fe42cb83a284b2a08a14670f0a7b37d705178013c450",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/PROBE13.h5",
+    "sha256": "170612c1dad86f05d8615a5bcac12d13259c439cb6227b74d4b79db71a979712",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/PROBE14.h5",
+    "sha256": "8820976863c7c85da5b962d1dc9ebed4ceeca83ba742ab3bf2f21fd57c55d81b",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/PROBE15.h5",
+    "sha256": "93dd62278201f5d5eca9447551fd190d4a2c32fe3b9510a8562e5ef8a655ef50",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/PROBE16.h5",
+    "sha256": "e272ff0ed39833cdceae5921fedf8331ae6684d98740f51b619ef686b7661dfc",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/PROBE2.h5",
+    "sha256": "ab54b7b577640de1c71dcca71b87b58d37db9db96ba560d9f7a269f7492e039b",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/PROBE3.h5",
+    "sha256": "9ea7a6db903259bd1607acc75890c68f3b348cd00af8275c538488d0a2d62878",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/PROBE4.h5",
+    "sha256": "12915df50e8b14243a709334651690b7d5b0a9bb184d3e7b89d97c7b83fe4302",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/PROBE5.h5",
+    "sha256": "2c67558fb8cf8d159c541120adaf66d15947e039fbca70c9fb8099ddd32c00f4",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/PROBE6.h5",
+    "sha256": "967081d99fd1a696571ceb7b5a9b4543849a15f1ac61eea9131128c4fab151bd",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/PROBE7.h5",
+    "sha256": "f41e5b4d380d1d72d943fcc8fde89074c518fc25378a47fcb67f0f4613dc3c8b",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/PROBE8.h5",
+    "sha256": "804a0562a790558d197bc56c37f1a05b4f8d0d3496f8887e95348ea088a116ce",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/PROBE9.h5",
+    "sha256": "60b49855379c2081266012aca609823345d953d4d00df08f6b6f4415a911259e",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/analysis.json",
+    "sha256": "ff217c49cd9f5c3b8d2a2c607e61aaaf82caf1a541a729c134aeb2fa61f51241",
+    "bytes": 11295,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/crossing-comparison.csv",
+    "sha256": "761232d491bbb119eeb43bbd46b387f1fe84e40a30badefdedba5c55b2750757",
+    "bytes": 22744,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/crossing-comparison.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/data/school_3D.opal",
+    "sha256": "be5e9928b74d0c077f753f13a16fb61370dc806c1827c6d193a8d18552d52792",
+    "bytes": 42753,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/data/school_DesignPath.dat",
+    "sha256": "0044f25c0a5a89390c068a84e24a0190f7cbbc35c7ae9479fb1b575c70131b52",
+    "bytes": 3399223,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/data/school_ElementPositions.sdds",
+    "sha256": "a73a86d7416bcf2e968f674f724f5dbfaa40bfc9777f7c4b46f27d78d2011bd7",
+    "bytes": 98595,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/data/school_ElementPositions.txt",
+    "sha256": "ff9aaa77e7e809e9945a58c2de546b5f925b1259ddc6342a4d7ab2338480871c",
+    "bytes": 179775,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/final-state.npz",
+    "sha256": "06bde21c458ab4634d819aa321f7b88c0d623ff5b72594c6eff64f35253cca29",
+    "bytes": 3034,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/manifest.json",
+    "sha256": "69190aeaecd11c6c30e666a5affe6bc41dac81299b8a52bb948dc692e190d37d",
+    "bytes": 4225,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/particles.dat",
+    "sha256": "408583bed4b5399f9ab5e03efec4bd3da84f656bc0f3b47655995ab6c31d779f",
+    "bytes": 71,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/run.log",
+    "sha256": "c2666c0e8a71883dce31fcd74870a166d1fcd09862bb220d2a287cc3c0a646b0",
+    "bytes": 3815415,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/PROBE1.loss",
+    "sha256": "9a32abcbb9b51851192fb4f4c91a91401eb41b2ee9453ad1c297d039ed8dd2cc",
+    "bytes": 565,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/probe1.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/PROBE10.loss",
+    "sha256": "864c82fdfd0ddd1d244ccebbe8b007405c0470f4020e64bae46cfec1066f1c10",
+    "bytes": 716,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/probe10.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/PROBE11.loss",
+    "sha256": "da3e4ec719367e834e7d061035720f414c5fa9ddc4041e1854cc2b7b83dea44b",
+    "bytes": 559,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/probe11.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/PROBE12.loss",
+    "sha256": "dfcfe7c2983223d7a578fc3a839b84f16d357c76d08d24f30f3759e37a2e8318",
+    "bytes": 558,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/probe12.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/PROBE13.loss",
+    "sha256": "e80f175ec573d60d250f38b1e7aa42e45b363aa70aa697a21eba66b6b21845d8",
+    "bytes": 573,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/probe13.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/PROBE14.loss",
+    "sha256": "2d367d4fa222b24074dee893392b8af618ef3a64d0c1c56f093b0be65ad4726d",
+    "bytes": 554,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/probe14.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/PROBE15.loss",
+    "sha256": "937773a1c469894dc61d682a319bb160442dd1c445588beea2c487e14026feeb",
+    "bytes": 552,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/probe15.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/PROBE16.loss",
+    "sha256": "8077b4a555333e79a7be1dd2dda686399b4b43714da3516a511cfe8207f13acc",
+    "bytes": 552,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/probe16.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/PROBE2.loss",
+    "sha256": "52de31621aeb7ada8a6566711ef7c99d54c9b3abdfc42b664774d4eaca198772",
+    "bytes": 705,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/probe2.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/PROBE3.loss",
+    "sha256": "d677ea511669517e74f3e2131c5bd00f65cb7edfa3ab837616e62159ab7cf9d5",
+    "bytes": 705,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/probe3.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/PROBE4.loss",
+    "sha256": "d5fd1f11432745e975ccb53eb6e98b1f797c775bd5429dbcaa37a1e389a4f3b4",
+    "bytes": 710,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/probe4.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/PROBE5.loss",
+    "sha256": "c5f6a7f43c337994275f80781fa2024d716a9eb227e42954786a2ad558b54f75",
+    "bytes": 640,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/probe5.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/PROBE6.loss",
+    "sha256": "9824d210c3ddb2397dc1c1d2d30d561d17feeed861348d7d98379995647a2e19",
+    "bytes": 717,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/probe6.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/PROBE7.loss",
+    "sha256": "f8cca394f3fc1d623785c179f8dcfa67d02ea4cfbda0b6b169d4e7f9c30605ea",
+    "bytes": 713,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/probe7.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/PROBE8.loss",
+    "sha256": "645d690eca9f3832e12de6c1b4a76d4331beaed17fd81fc85bbc2fade93bdfd9",
+    "bytes": 716,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/probe8.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/PROBE9.loss",
+    "sha256": "97c0d72e82117a887d1e29dc42377315d1a4e1a86e2bff0d9c584661026165c9",
+    "bytes": 733,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school-frame/probe9.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school.h5",
+    "sha256": "4bb684cbbd943b2cb93b6a596557fccd0c4899c823a3c3f95c7a8c5957e7cb72",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school.in",
+    "sha256": "0d105d68070e214b45f9441e8bd768bbadf766ae2b6efa45f6ab5d1c369c62d7",
+    "bytes": 42825,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school.stat",
+    "sha256": "06619b71988eb1e6779f1fdf6fa478265717546f5ed7517847c5f4d88fc0adbf",
+    "bytes": 7768,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/timing.dat",
+    "sha256": "26a532caea71eadb6acae168957b75c37b5f1d28da16101ce72b8d1d70d587df",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-hdf5-r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/PROBE1.h5",
+    "sha256": "cd1694d0b11761348685f85ccc33dc9d135a1a208f17ce011f17659e5b2b82b7",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/PROBE10.h5",
+    "sha256": "f8272bc60b4ee946cc7a83c224ac1b17e1c526d85c486f22dba4d632310bc3c6",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/PROBE11.h5",
+    "sha256": "5657266b7f0dc220128bc72de66e4c12314362c7d57378defe7ac7f1914d97d9",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/PROBE12.h5",
+    "sha256": "6b862a0b8b73c1e14bd4e9e34053770081d43cabed66362b06b868fb4d8cb273",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/PROBE13.h5",
+    "sha256": "b957a40babece669ec815a535b9394bcdb68c34576250952c8e93bd4fb92674c",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/PROBE14.h5",
+    "sha256": "9d0fe8b917999682ec734d235cee0171cda21b8ac697ed2c45d3ec28a440f61f",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/PROBE15.h5",
+    "sha256": "6e30067b6dafbac25ecc400c830ecdb5e3efe38e14455ef2d28d2291190b56ea",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/PROBE16.h5",
+    "sha256": "db0ee83edf73939333592b41fd924c4d492ccb522496a9b1158006b7d3f1f869",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/PROBE2.h5",
+    "sha256": "de19d7e40e0683be87cd67744aa18fb3c97be203fdc54d7fd9570bfec56bcc70",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/PROBE3.h5",
+    "sha256": "113ce0ca610ef74dfb982c74bb6a47ab6de88294c4eaf724838f6d20aaf0441d",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/PROBE4.h5",
+    "sha256": "a64e0c37db7b73f7bebee77e0e4f9ba8d6fa850e2081dea452dae5a9208ef665",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/PROBE5.h5",
+    "sha256": "c8de28bd9bdc9b44f956b51691d4aadbd43cd246f46619b126bb68e4c61e7276",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/PROBE6.h5",
+    "sha256": "5d40e009b7b94e95b219d65b4450a62ea95109d3aa0ba42cbb4e88dec7ebe97e",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/PROBE7.h5",
+    "sha256": "dafd3f2c25cc630f2d55e1535e06c110e56e36cbf2a09e31d525aa813a13f123",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/PROBE8.h5",
+    "sha256": "479a07291b36fe39a9ec2dc7f9ece03acff42560ad6d0a37298c3ea49d9f7ba9",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/PROBE9.h5",
+    "sha256": "1bf70050124461565d29a82cca14cf864c17a42f4638961ea08302a7fc278dfd",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/analysis.json",
+    "sha256": "4c8a30af0cfa50f9d1eb7b85aedf62785127141d215acb01cb9aed8d0cb06c5f",
+    "bytes": 11292,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/crossing-comparison.csv",
+    "sha256": "91aec1cf75f9249f16f3bcd63210f6478b2a5015e1a4cf683619699492a04ece",
+    "bytes": 22747,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/crossing-comparison.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/data/school_3D.opal",
+    "sha256": "0bd6f885cd35eb077fae47aff622be9f7f1db99e37f345cb962abd45bea51c8b",
+    "bytes": 42753,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/data/school_DesignPath.dat",
+    "sha256": "e26953a7427775692abc17a2e317ebbe2aef5fddda808e219c32a16143619c42",
+    "bytes": 3411147,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/data/school_ElementPositions.sdds",
+    "sha256": "91d5b423bd183be5ed436be3b7511f5bb2285fb44d1ea0fa5e4b0de738e5370a",
+    "bytes": 101611,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/data/school_ElementPositions.txt",
+    "sha256": "ff9aaa77e7e809e9945a58c2de546b5f925b1259ddc6342a4d7ab2338480871c",
+    "bytes": 179775,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/final-state.npz",
+    "sha256": "84da505c1eb6615ada06ff4bb1205e72e4fd9b81dcf5960e64c05b816399242d",
+    "bytes": 3034,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/manifest.json",
+    "sha256": "fe27b5646d2cb471d1d8c9457ea91b23850ecb6ace9fbee38b22d2d8b9ab135f",
+    "bytes": 3953,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/particles.dat",
+    "sha256": "408583bed4b5399f9ab5e03efec4bd3da84f656bc0f3b47655995ab6c31d779f",
+    "bytes": 71,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/run.log",
+    "sha256": "94d8a8dfbe73b5aafd63aa4e5c4982037df031325bac3d76d38972b7136c4523",
+    "bytes": 3821943,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/PROBE1.loss",
+    "sha256": "4450ba6db3c6da8043b7f7f1dd3ed5b7e19906a2641cc11b1492390ee1a123a6",
+    "bytes": 566,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/probe1.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/PROBE10.loss",
+    "sha256": "0e055ce2d15cd91793b2e82f2af84b9c339f530b66a7d72d09fcec18b0166e4b",
+    "bytes": 716,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/probe10.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/PROBE11.loss",
+    "sha256": "cab9386c3027d61c0ba7f94e7b25cbc277625270203a804e6feb70b7e6746b5f",
+    "bytes": 555,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/probe11.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/PROBE12.loss",
+    "sha256": "68e78d13f66fee69fd2114905f4df1cda1a4c9c417c96ec6c8eec2e26f6b33e4",
+    "bytes": 560,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/probe12.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/PROBE13.loss",
+    "sha256": "1c269d521d1bdfd69a896f19a3d7c0b9981ebe7d4d65ceb82e9e3241a877b982",
+    "bytes": 574,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/probe13.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/PROBE14.loss",
+    "sha256": "99741f52e94442a770042ee4250ad0000628ba632fef51c0c8d9752acd8e52bd",
+    "bytes": 550,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/probe14.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/PROBE15.loss",
+    "sha256": "1706b929838da7d0828a9c0ab68cbc6fb6309100e362e912144e68eed31429ca",
+    "bytes": 549,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/probe15.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/PROBE16.loss",
+    "sha256": "e06bf242f7da6394bf0a3c10c76c6b15907ee64e5e5c66db40401265c9c14311",
+    "bytes": 551,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/probe16.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/PROBE2.loss",
+    "sha256": "b4e0c595ce69b50019cf76bed3a6d55e038f0c30750719721810c0525ef89c4a",
+    "bytes": 708,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/probe2.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/PROBE3.loss",
+    "sha256": "842f537bf9a04a9076ee8324202772f157897554efaf229a430e970dd328e295",
+    "bytes": 706,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/probe3.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/PROBE4.loss",
+    "sha256": "5a841e2b0ba9507e4d616165a447848509362ccf19f878c2d0745e0aaefc1e58",
+    "bytes": 707,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/probe4.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/PROBE5.loss",
+    "sha256": "08f757670c4fdfa9e29f4cf4205ec65b90963737b58c33f6cfa74db839471757",
+    "bytes": 643,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/probe5.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/PROBE6.loss",
+    "sha256": "3fdaecda5e1870454bae7263b87361ffd6d29d1d080f358bc6cda32860413aa5",
+    "bytes": 717,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/probe6.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/PROBE7.loss",
+    "sha256": "c1b100f6f53a88a7eaa6072130fbbc7cf7659b5c642cb553444234ecf90e8e10",
+    "bytes": 713,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/probe7.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/PROBE8.loss",
+    "sha256": "a4ad2f350127f69cce3df96bd349f8f2e1bf14909789b03cfcabab7f304908fb",
+    "bytes": 719,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/probe8.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/PROBE9.loss",
+    "sha256": "b99524a005ca5875b59740f8407e835282730b77a82c1d9a622b846bbe86186e",
+    "bytes": 734,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school-frame/probe9.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school.h5",
+    "sha256": "d9645ebe2bc01f4f0304f9b1e360df5b22f7acc88f2b10615aa29cafd4f8569f",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  }
+]

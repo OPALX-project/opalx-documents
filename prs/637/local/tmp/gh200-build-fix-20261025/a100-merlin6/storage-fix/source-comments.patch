@@ -1,0 +1,139 @@
+--- a/src/PartBunch/ParticleContainer.hpp
++++ b/src/PartBunch/ParticleContainer.hpp
+@@ -49,22 +49,50 @@
+ using size_type = ippl::detail::size_type;
+ 
+ namespace cyclotron_probe::detail {
++    /// The real IPPL attribute: sorting, deletion and MPI migration carry State with its particle.
+     using History = ippl::ParticleAttrib<State>;
+ 
+-    /** Keep attribute destruction and its virtual CUDA methods in libopalx.
+-     * An inline default deleter can instantiate a competing attribute vtable in
+-     * executable consumers of ParticleContainer, selecting unregistered kernels.
++    /** @brief Stateless ownership policy keeping history implementation in libopalx.
++     *
++     * ParticleContainer is a header-defined template used by both libopalx and its
++     * executable consumers. Inline construction, resize or default deletion of
++     * History can instantiate its virtual-function table and CUDA storage/migration
++     * methods in both modules. In shared CUDA builds, symbol interposition can then
++     * select an executable helper whose kernel stub was not registered with CUDA,
++     * causing cudaErrorInvalidResourceHandle during resize or MPI serialization.
++     *
++     * A factory alone is insufficient: std::default_delete<History> still places
++     * the delete expression in each consumer's container destructor. This complete,
++     * stateless deleter type lets unique_ptr retain exclusive ownership while its
++     * operator() is defined only in PartBunch.cpp, together with makeHistory() and
++     * initializeHistory(). Keep all three definitions out of line so the normal
++     * attribute lifecycle is instantiated inside libopalx.
++     *
++     * This policy adds no per-particle state. The pointee remains IPPL's registered
++     * History attribute, with its existing data layout and migration methods.
+      */
+     struct HistoryDeleter {
+         void operator()(History* history) const;
+     };
+ 
++    /// Exclusive owner; IPPL retains non-owning base pointers to the registered attribute.
+     using HistoryPtr = std::unique_ptr<History, HistoryDeleter>;
+ 
+-    /// Construct storage in the same library module as its CUDA kernels.
++    /** @brief Construct history storage in the library that owns its CUDA kernels.
++     * The caller registers the returned attribute with IPPL before initialization.
++     */
+     HistoryPtr makeHistory();
+ 
+-    /// Initialize registered storage, preserving the existing allocation semantics.
++    /** @brief Allocate and reset a newly registered history attribute.
++     * @pre addAttribute() has bound the attribute to the container's live particle count;
++     *      getView() dereferences that count to select the live range.
++     * @param history New attribute whose active entries have no previous probe endpoint.
++     * @param capacity Allocated particle capacity (R.size()), possibly larger than the live count.
++     *
++     * Resize uses the existing preserving operation; reset covers only the live range.
++     * Later IPPL growth must preserve armed histories, so this reset helper is only
++     * for initial registration, never for extending an existing history.
++     */
+     void initializeHistory(History& history, size_type capacity);
+ }  // namespace cyclotron_probe::detail
+ 
+@@ -200,13 +228,21 @@
+     /// (enabled per beam when the BEAM has POLARIZATION set).
+     bool hasSpin() const { return spinEnabled_m; }
+ 
+-    /** Optional diagnostic storage; IPPL migrates and sorts it with R/P/ID.
+-     * Histories remain in laboratory coordinates when the tracking frame changes.
+-     * Reused/new particle slots are recognized by their stable ID in update().
++    /** @brief Return the independent per-particle history for one probe index.
++     * Crossing interpolation needs a particle's previous endpoint even after IPPL
++     * changes its local array index or owning rank. Registering History alongside
++     * R/P/ID makes sorting, deletion and migration keep these records aligned.
++     * Histories remain in laboratory coordinates when the tracking frame changes;
++     * update() uses stable IDs to recognize reused/new particle slots.
++     *
++     * The factory and custom owner preserve the shared-library CUDA boundary
++     * documented by cyclotron_probe::detail::HistoryDeleter. Keep allocation,
++     * initialization and deletion in those out-of-line helpers.
+      */
+     ParticleAttrib<cyclotron_probe::State>& probeHistory(std::size_t index) {
+         while (probeHistories_m.size() <= index) {
+             auto attribute = cyclotron_probe::detail::makeHistory();
++            // Bind the live count before initializeHistory() obtains a getView() subview.
+             this->addAttribute(*attribute);
+             cyclotron_probe::detail::initializeHistory(*attribute, this->R.size());
+             probeHistories_m.push_back(std::move(attribute));
+--- a/src/PartBunch/PartBunch.cpp
++++ b/src/PartBunch/PartBunch.cpp
+@@ -15,6 +15,10 @@
+ 
+ #undef doDEBUG
+ 
++// This existing libopalx translation unit owns the probe attribute lifecycle.
++// Keep these definitions non-template and out of line: moving new, resize/reset
++// or delete back into ParticleContainer.hpp can reintroduce executable-side
++// attribute vtables and CUDA helpers (see HistoryDeleter's ownership contract).
+ namespace cyclotron_probe::detail {
+     void HistoryDeleter::operator()(History* history) const { delete history; }
+ 
+@@ -22,6 +26,8 @@
+ 
+     void initializeHistory(History& history, size_type capacity) {
+         history.resize(capacity);
++        // Registration supplies getView()'s live count; spare capacity is not a
++        // set of active histories. Reset only the newly registered live entries.
+         Kokkos::deep_copy(history.getView(), State{});
+     }
+ }  // namespace cyclotron_probe::detail
+--- a/src/Algorithms/CyclotronProbe.h
++++ b/src/Algorithms/CyclotronProbe.h
+@@ -25,7 +25,14 @@
+         Vector start = Vector(0.0), end = Vector(0.0);
+     };
+ 
+-    /// Trivially copyable particle attribute: migrated/sorted with its owner.
++    /** @brief Crossing memory for one particle at one cyclotron probe.
++     * The two directed observers retain previous endpoints and arming state for
++     * interpolation in either crossing direction. id identifies the particle when
++     * an array slot is reused; passages counts accepted segment crossings.
++     * This trivially copyable record is stored in an IPPL particle attribute so
++     * sorting and MPI migration carry the previous endpoints with their owner.
++     * Each probe needs an independent history because its segment and crossings differ.
++     */
+     struct State {
+         passive_probe::State forward, reverse;
+         std::int64_t id = -1;
+--- a/src/Structure/LossDataSink.cpp
++++ b/src/Structure/LossDataSink.cpp
+@@ -606,8 +606,11 @@
+     if (H5file_m) {
+         closeFile();
+     }
+-    // save() closes and synchronizes successful writes explicitly. An idle
+-    // sink must also be destructible on just one rank during exception unwinding.
++    // save() owns normal file close and synchronization. Do not add a barrier
++    // here: a rank can unwind after a probe kernel/serialization exception while
++    // its peers wait for migration data. A destructor collective would hide the
++    // original exception behind a deadlock. The fallback close above still needs
++    // coordinated ranks if a failed save left a parallel HDF5 file open.
+ }
+ 
+ void LossDataSink::openH5(h5_int32_t mode) {

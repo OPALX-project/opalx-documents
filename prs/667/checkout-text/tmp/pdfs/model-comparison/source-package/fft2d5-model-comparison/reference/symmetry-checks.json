@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "reference_reflections": [
+    {
+      "geometry": "straight",
+      "profile": "uniform",
+      "reflections": {
+        "u": {
+          "targets": 51,
+          "max_field_difference_V_m": 6.661338147750939e-16
+        },
+        "y": {
+          "targets": 51,
+          "max_field_difference_V_m": 2.220446049250313e-16
+        },
+        "s": {
+          "targets": 51,
+          "max_field_difference_V_m": 0.0
+        }
+      }
+    },
+    {
+      "geometry": "straight",
+      "profile": "triangle",
+      "reflections": {
+        "u": {
+          "targets": 51,
+          "max_field_difference_V_m": 8.881784197001252e-16
+        },
+        "y": {
+          "targets": 51,
+          "max_field_difference_V_m": 1.8943185234058207e-16
+        },
+        "s": {
+          "targets": 51,
+          "max_field_difference_V_m": 2.7755575615628914e-17
+        }
+      }
+    },
+    {
+      "geometry": "curved_R2",
+      "profile": "uniform",
+      "reflections": {
+        "y": {
+          "targets": 51,
+          "max_field_difference_V_m": 2.507791899936507e-15
+        },
+        "s": {
+          "targets": 51,
+          "max_field_difference_V_m": 1.4432899320127035e-15
+        }
+      }
+    },
+    {
+      "geometry": "curved_R2",
+      "profile": "triangle",
+      "reflections": {
+        "y": {
+          "targets": 51,
+          "max_field_difference_V_m": 2.4424906541753444e-15
+        },
+        "s": {
+          "targets": 51,
+          "max_field_difference_V_m": 1.887379141862766e-15
+        }
+      }
+    }
+  ],
+  "straight_round_rotations": [
+    {
+      "profile": "uniform",
+      "angle_degrees": 90,
+      "max_field_difference_V_m": 5.551115123125783e-17
+    },
+    {
+      "profile": "triangle",
+      "angle_degrees": 90,
+      "max_field_difference_V_m": 2.220446049250313e-16
+    }
+  ],
+  "curved_radial_reflection_not_assumed": true
+}

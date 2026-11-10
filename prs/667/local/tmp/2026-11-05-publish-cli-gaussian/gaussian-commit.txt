@@ -1,0 +1,10 @@
+Test untruncated Gaussian tails statistically
+
+Replace the invalid deterministic 5.5-sigma maximum assertion with a
+binomial tail-count check using the analytic normal probability and a
+Bernstein/union bound. Keep the RMS tolerances and finite z cutoff, and
+check finiteness in all six coordinates.
+
+All eight Gaussian cases pass five repeats at 1, 4 and 16 OpenMP threads,
+and two-rank runs at 1 and 4 threads. A temporary 3-sigma clipping negative
+control is rejected by the new assertions.

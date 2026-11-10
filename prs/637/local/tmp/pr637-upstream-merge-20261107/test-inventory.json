@@ -1,0 +1,6120 @@
+{
+  "backtraceGraph" : 
+  {
+    "commands" : 
+    [
+      "add_test",
+      "add_opalx_test"
+    ],
+    "files" : 
+    [
+      "/Users/adelmann/git/opalx-master/unit_tests/cmake/AddOPALXTest.cmake",
+      "/Users/adelmann/git/opalx-master/unit_tests/OpalParser/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/AbsBeamline/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/AbsBeamline/EndFieldModel/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/BeamlineCore/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/BeamlineGeometry/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/Distribution/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/Fields/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/Physics/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/Utilities/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/Structure/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/Algorithms/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/PartBunch/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/PartBunch/Binning/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/SpaceCharge/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/BasicActions/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/Elements/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/Lines/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/Processes/GlobalProcesses/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/Steppers/CMakeLists.txt",
+      "/Users/adelmann/git/opalx-master/unit_tests/Track/CMakeLists.txt"
+    ],
+    "nodes" : 
+    [
+      {
+        "file" : 1
+      },
+      {
+        "command" : 1,
+        "file" : 1,
+        "line" : 1,
+        "parent" : 0
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 1
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 4,
+        "parent" : 3
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 4
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 5,
+        "parent" : 6
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 7
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 6,
+        "parent" : 9
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 10
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 7,
+        "parent" : 12
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 13
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 8,
+        "parent" : 15
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 16
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 9,
+        "parent" : 18
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 19
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 10,
+        "parent" : 21
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 22
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 11,
+        "parent" : 24
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 25
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 12,
+        "parent" : 27
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 28
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 13,
+        "parent" : 30
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 31
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 14,
+        "parent" : 33
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 34
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 15,
+        "parent" : 36
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 37
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 16,
+        "parent" : 39
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 40
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 17,
+        "parent" : 42
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 43
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 18,
+        "parent" : 45
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 46
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 19,
+        "parent" : 48
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 49
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 20,
+        "parent" : 51
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 52
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 21,
+        "parent" : 54
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 55
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 22,
+        "parent" : 57
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 58
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 23,
+        "parent" : 60
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 61
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 24,
+        "parent" : 63
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 64
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 1,
+        "file" : 2,
+        "line" : 25,
+        "parent" : 66
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 67
+      },
+      {
+        "file" : 3
+      },
+      {
+        "command" : 1,
+        "file" : 3,
+        "line" : 4,
+        "parent" : 69
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 70
+      },
+      {
+        "file" : 3
+      },
+      {
+        "command" : 1,
+        "file" : 3,
+        "line" : 5,
+        "parent" : 72
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 73
+      },
+      {
+        "file" : 3
+      },
+      {
+        "command" : 1,
+        "file" : 3,
+        "line" : 6,
+        "parent" : 75
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 76
+      },
+      {
+        "file" : 3
+      },
+      {
+        "command" : 1,
+        "file" : 3,
+        "line" : 7,
+        "parent" : 78
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 79
+      },
+      {
+        "file" : 4
+      },
+      {
+        "command" : 1,
+        "file" : 4,
+        "line" : 4,
+        "parent" : 81
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 82
+      },
+      {
+        "file" : 4
+      },
+      {
+        "command" : 1,
+        "file" : 4,
+        "line" : 7,
+        "parent" : 84
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 85
+      },
+      {
+        "file" : 5
+      },
+      {
+        "command" : 1,
+        "file" : 5,
+        "line" : 4,
+        "parent" : 87
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 88
+      },
+      {
+        "file" : 6
+      },
+      {
+        "command" : 1,
+        "file" : 6,
+        "line" : 4,
+        "parent" : 90
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 91
+      },
+      {
+        "file" : 6
+      },
+      {
+        "command" : 1,
+        "file" : 6,
+        "line" : 5,
+        "parent" : 93
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 94
+      },
+      {
+        "file" : 6
+      },
+      {
+        "command" : 1,
+        "file" : 6,
+        "line" : 6,
+        "parent" : 96
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 97
+      },
+      {
+        "file" : 6
+      },
+      {
+        "command" : 1,
+        "file" : 6,
+        "line" : 7,
+        "parent" : 99
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 100
+      },
+      {
+        "file" : 6
+      },
+      {
+        "command" : 1,
+        "file" : 6,
+        "line" : 8,
+        "parent" : 102
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 103
+      },
+      {
+        "file" : 6
+      },
+      {
+        "command" : 1,
+        "file" : 6,
+        "line" : 9,
+        "parent" : 105
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 106
+      },
+      {
+        "file" : 6
+      },
+      {
+        "command" : 1,
+        "file" : 6,
+        "line" : 10,
+        "parent" : 108
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 109
+      },
+      {
+        "file" : 7
+      },
+      {
+        "command" : 1,
+        "file" : 7,
+        "line" : 4,
+        "parent" : 111
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 112
+      },
+      {
+        "file" : 7
+      },
+      {
+        "command" : 1,
+        "file" : 7,
+        "line" : 5,
+        "parent" : 114
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 115
+      },
+      {
+        "file" : 7
+      },
+      {
+        "command" : 1,
+        "file" : 7,
+        "line" : 6,
+        "parent" : 117
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 118
+      },
+      {
+        "file" : 7
+      },
+      {
+        "command" : 1,
+        "file" : 7,
+        "line" : 7,
+        "parent" : 120
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 121
+      },
+      {
+        "file" : 7
+      },
+      {
+        "command" : 1,
+        "file" : 7,
+        "line" : 8,
+        "parent" : 123
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 124
+      },
+      {
+        "file" : 7
+      },
+      {
+        "command" : 1,
+        "file" : 7,
+        "line" : 9,
+        "parent" : 126
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 127
+      },
+      {
+        "file" : 7
+      },
+      {
+        "command" : 1,
+        "file" : 7,
+        "line" : 10,
+        "parent" : 129
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 130
+      },
+      {
+        "file" : 8
+      },
+      {
+        "command" : 1,
+        "file" : 8,
+        "line" : 4,
+        "parent" : 132
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 133
+      },
+      {
+        "file" : 8
+      },
+      {
+        "command" : 1,
+        "file" : 8,
+        "line" : 17,
+        "parent" : 135
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 136
+      },
+      {
+        "file" : 8
+      },
+      {
+        "command" : 1,
+        "file" : 8,
+        "line" : 19,
+        "parent" : 138
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 139
+      },
+      {
+        "file" : 8
+      },
+      {
+        "command" : 1,
+        "file" : 8,
+        "line" : 21,
+        "parent" : 141
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 142
+      },
+      {
+        "file" : 8
+      },
+      {
+        "command" : 1,
+        "file" : 8,
+        "line" : 22,
+        "parent" : 144
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 145
+      },
+      {
+        "file" : 9
+      },
+      {
+        "command" : 1,
+        "file" : 9,
+        "line" : 5,
+        "parent" : 147
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 148
+      },
+      {
+        "file" : 9
+      },
+      {
+        "command" : 1,
+        "file" : 9,
+        "line" : 6,
+        "parent" : 150
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 151
+      },
+      {
+        "file" : 9
+      },
+      {
+        "command" : 1,
+        "file" : 9,
+        "line" : 7,
+        "parent" : 153
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 154
+      },
+      {
+        "file" : 9
+      },
+      {
+        "command" : 1,
+        "file" : 9,
+        "line" : 8,
+        "parent" : 156
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 157
+      },
+      {
+        "file" : 9
+      },
+      {
+        "command" : 1,
+        "file" : 9,
+        "line" : 9,
+        "parent" : 159
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 160
+      },
+      {
+        "file" : 9
+      },
+      {
+        "command" : 1,
+        "file" : 9,
+        "line" : 10,
+        "parent" : 162
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 163
+      },
+      {
+        "file" : 9
+      },
+      {
+        "command" : 1,
+        "file" : 9,
+        "line" : 11,
+        "parent" : 165
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 166
+      },
+      {
+        "file" : 9
+      },
+      {
+        "command" : 1,
+        "file" : 9,
+        "line" : 12,
+        "parent" : 168
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 169
+      },
+      {
+        "file" : 9
+      },
+      {
+        "command" : 1,
+        "file" : 9,
+        "line" : 13,
+        "parent" : 171
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 172
+      },
+      {
+        "file" : 9
+      },
+      {
+        "command" : 1,
+        "file" : 9,
+        "line" : 14,
+        "parent" : 174
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 175
+      },
+      {
+        "file" : 9
+      },
+      {
+        "command" : 1,
+        "file" : 9,
+        "line" : 15,
+        "parent" : 177
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 178
+      },
+      {
+        "file" : 9
+      },
+      {
+        "command" : 1,
+        "file" : 9,
+        "line" : 16,
+        "parent" : 180
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 181
+      },
+      {
+        "file" : 9
+      },
+      {
+        "command" : 1,
+        "file" : 9,
+        "line" : 17,
+        "parent" : 183
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 184
+      },
+      {
+        "file" : 9
+      },
+      {
+        "command" : 1,
+        "file" : 9,
+        "line" : 18,
+        "parent" : 186
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 187
+      },
+      {
+        "file" : 9
+      },
+      {
+        "command" : 1,
+        "file" : 9,
+        "line" : 19,
+        "parent" : 189
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 190
+      },
+      {
+        "file" : 9
+      },
+      {
+        "command" : 1,
+        "file" : 9,
+        "line" : 22,
+        "parent" : 192
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 193
+      },
+      {
+        "file" : 10
+      },
+      {
+        "command" : 1,
+        "file" : 10,
+        "line" : 4,
+        "parent" : 195
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 196
+      },
+      {
+        "file" : 10
+      },
+      {
+        "command" : 1,
+        "file" : 10,
+        "line" : 5,
+        "parent" : 198
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 199
+      },
+      {
+        "file" : 10
+      },
+      {
+        "command" : 1,
+        "file" : 10,
+        "line" : 6,
+        "parent" : 201
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 202
+      },
+      {
+        "file" : 10
+      },
+      {
+        "command" : 1,
+        "file" : 10,
+        "line" : 7,
+        "parent" : 204
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 205
+      },
+      {
+        "file" : 10
+      },
+      {
+        "command" : 1,
+        "file" : 10,
+        "line" : 8,
+        "parent" : 207
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 208
+      },
+      {
+        "file" : 10
+      },
+      {
+        "command" : 1,
+        "file" : 10,
+        "line" : 9,
+        "parent" : 210
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 211
+      },
+      {
+        "file" : 10
+      },
+      {
+        "command" : 1,
+        "file" : 10,
+        "line" : 10,
+        "parent" : 213
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 214
+      },
+      {
+        "file" : 10
+      },
+      {
+        "command" : 1,
+        "file" : 10,
+        "line" : 13,
+        "parent" : 216
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 217
+      },
+      {
+        "file" : 10
+      },
+      {
+        "command" : 1,
+        "file" : 10,
+        "line" : 14,
+        "parent" : 219
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 220
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 4,
+        "parent" : 222
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 223
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 5,
+        "parent" : 225
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 226
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 6,
+        "parent" : 228
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 229
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 7,
+        "parent" : 231
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 232
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 8,
+        "parent" : 234
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 235
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 9,
+        "parent" : 237
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 238
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 10,
+        "parent" : 240
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 241
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 11,
+        "parent" : 243
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 244
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 12,
+        "parent" : 246
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 247
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 13,
+        "parent" : 249
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 250
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 14,
+        "parent" : 252
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 253
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 15,
+        "parent" : 255
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 256
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 16,
+        "parent" : 258
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 259
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 17,
+        "parent" : 261
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 262
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 18,
+        "parent" : 264
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 265
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 19,
+        "parent" : 267
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 268
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 20,
+        "parent" : 270
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 271
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 21,
+        "parent" : 273
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 274
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 22,
+        "parent" : 276
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 277
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 23,
+        "parent" : 279
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 280
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 24,
+        "parent" : 282
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 283
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 25,
+        "parent" : 285
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 286
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 26,
+        "parent" : 288
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 289
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 28,
+        "parent" : 291
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 292
+      },
+      {
+        "file" : 11
+      },
+      {
+        "command" : 1,
+        "file" : 11,
+        "line" : 29,
+        "parent" : 294
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 295
+      },
+      {
+        "file" : 12
+      },
+      {
+        "command" : 1,
+        "file" : 12,
+        "line" : 4,
+        "parent" : 297
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 298
+      },
+      {
+        "file" : 12
+      },
+      {
+        "command" : 1,
+        "file" : 12,
+        "line" : 5,
+        "parent" : 300
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 301
+      },
+      {
+        "file" : 12
+      },
+      {
+        "command" : 1,
+        "file" : 12,
+        "line" : 6,
+        "parent" : 303
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 304
+      },
+      {
+        "file" : 12
+      },
+      {
+        "command" : 1,
+        "file" : 12,
+        "line" : 7,
+        "parent" : 306
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 307
+      },
+      {
+        "file" : 13
+      },
+      {
+        "command" : 1,
+        "file" : 13,
+        "line" : 4,
+        "parent" : 309
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 310
+      },
+      {
+        "file" : 14
+      },
+      {
+        "command" : 1,
+        "file" : 14,
+        "line" : 4,
+        "parent" : 312
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 313
+      },
+      {
+        "file" : 14
+      },
+      {
+        "command" : 1,
+        "file" : 14,
+        "line" : 5,
+        "parent" : 315
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 316
+      },
+      {
+        "file" : 14
+      },
+      {
+        "command" : 1,
+        "file" : 14,
+        "line" : 6,
+        "parent" : 318
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 319
+      },
+      {
+        "file" : 14
+      },
+      {
+        "command" : 1,
+        "file" : 14,
+        "line" : 7,
+        "parent" : 321
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 322
+      },
+      {
+        "file" : 14
+      },
+      {
+        "command" : 1,
+        "file" : 14,
+        "line" : 8,
+        "parent" : 324
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 325
+      },
+      {
+        "file" : 14
+      },
+      {
+        "command" : 1,
+        "file" : 14,
+        "line" : 9,
+        "parent" : 327
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 328
+      },
+      {
+        "file" : 14
+      },
+      {
+        "command" : 1,
+        "file" : 14,
+        "line" : 10,
+        "parent" : 330
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 331
+      },
+      {
+        "file" : 14
+      },
+      {
+        "command" : 1,
+        "file" : 14,
+        "line" : 11,
+        "parent" : 333
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 334
+      },
+      {
+        "file" : 14
+      },
+      {
+        "command" : 1,
+        "file" : 14,
+        "line" : 12,
+        "parent" : 336
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 337
+      },
+      {
+        "file" : 14
+      },
+      {
+        "command" : 1,
+        "file" : 14,
+        "line" : 13,
+        "parent" : 339
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 340
+      },
+      {
+        "file" : 14
+      },
+      {
+        "command" : 1,
+        "file" : 14,
+        "line" : 14,
+        "parent" : 342
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 343
+      },
+      {
+        "file" : 14
+      },
+      {
+        "command" : 1,
+        "file" : 14,
+        "line" : 15,
+        "parent" : 345
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 346
+      },
+      {
+        "file" : 15
+      },
+      {
+        "command" : 1,
+        "file" : 15,
+        "line" : 4,
+        "parent" : 348
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 349
+      },
+      {
+        "file" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 16,
+        "line" : 4,
+        "parent" : 351
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 352
+      },
+      {
+        "file" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 16,
+        "line" : 5,
+        "parent" : 354
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 355
+      },
+      {
+        "file" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 16,
+        "line" : 6,
+        "parent" : 357
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 358
+      },
+      {
+        "file" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 16,
+        "line" : 7,
+        "parent" : 360
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 361
+      },
+      {
+        "file" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 16,
+        "line" : 8,
+        "parent" : 363
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 364
+      },
+      {
+        "file" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 16,
+        "line" : 9,
+        "parent" : 366
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 367
+      },
+      {
+        "file" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 16,
+        "line" : 10,
+        "parent" : 369
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 370
+      },
+      {
+        "file" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 16,
+        "line" : 11,
+        "parent" : 372
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 373
+      },
+      {
+        "file" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 16,
+        "line" : 12,
+        "parent" : 375
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 376
+      },
+      {
+        "file" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 16,
+        "line" : 13,
+        "parent" : 378
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 379
+      },
+      {
+        "file" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 16,
+        "line" : 14,
+        "parent" : 381
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 382
+      },
+      {
+        "file" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 16,
+        "line" : 15,
+        "parent" : 384
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 385
+      },
+      {
+        "file" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 16,
+        "line" : 16,
+        "parent" : 387
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 388
+      },
+      {
+        "file" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 16,
+        "line" : 17,
+        "parent" : 390
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 391
+      },
+      {
+        "file" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 16,
+        "line" : 18,
+        "parent" : 393
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 394
+      },
+      {
+        "file" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 16,
+        "line" : 19,
+        "parent" : 396
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 397
+      },
+      {
+        "file" : 17
+      },
+      {
+        "command" : 1,
+        "file" : 17,
+        "line" : 4,
+        "parent" : 399
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 400
+      },
+      {
+        "file" : 18
+      },
+      {
+        "command" : 1,
+        "file" : 18,
+        "line" : 4,
+        "parent" : 402
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 403
+      },
+      {
+        "file" : 19
+      },
+      {
+        "command" : 1,
+        "file" : 19,
+        "line" : 4,
+        "parent" : 405
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 406
+      },
+      {
+        "file" : 20
+      },
+      {
+        "command" : 1,
+        "file" : 20,
+        "line" : 4,
+        "parent" : 408
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 114,
+        "parent" : 409
+      }
+    ]
+  },
+  "kind" : "ctestInfo",
+  "tests" : 
+  [
+    {
+      "backtrace" : 2,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/OpalParser/TestMacro"
+      ],
+      "name" : "TestMacro",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "parser",
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/OpalParser"
+        }
+      ]
+    },
+    {
+      "backtrace" : 5,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestApertureHelper"
+      ],
+      "name" : "TestApertureHelper",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 8,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestCyclotronSector"
+      ],
+      "name" : "TestCyclotronSector",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 11,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "2",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestCyclotronSectorMPI"
+      ],
+      "name" : "TestCyclotronSectorMPI",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 14,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestCyclotronRF"
+      ],
+      "name" : "TestCyclotronRF",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 17,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestBendFieldModel"
+      ],
+      "name" : "TestBendFieldModel",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 20,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestBox"
+      ],
+      "name" : "TestBox",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 23,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestCollimator"
+      ],
+      "name" : "TestCollimator",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 26,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestMarkOutsideAperture"
+      ],
+      "name" : "TestMarkOutsideAperture",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 29,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestConstantEFieldCavity"
+      ],
+      "name" : "TestConstantEFieldCavity",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 32,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestConstantFocusing"
+      ],
+      "name" : "TestConstantFocusing",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 35,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestFieldmapElement"
+      ],
+      "name" : "TestFieldmapElement",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 38,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestFieldmapVsAnalytic"
+      ],
+      "name" : "TestFieldmapVsAnalytic",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 41,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestMultipoleT"
+      ],
+      "name" : "TestMultipoleT",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 44,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestMultipoleTBase"
+      ],
+      "name" : "TestMultipoleTBase",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 47,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestMultipoleTStraight"
+      ],
+      "name" : "TestMultipoleTStraight",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 50,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestMultipoleTCurvedConstRadius"
+      ],
+      "name" : "TestMultipoleTCurvedConstRadius",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 53,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestScalingFFAMagnet"
+      ],
+      "name" : "TestScalingFFAMagnet",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 56,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestSolenoid"
+      ],
+      "name" : "TestSolenoid",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 59,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestVariableRFCavity"
+      ],
+      "name" : "TestVariableRFCavity",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 62,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestRFCavity"
+      ],
+      "name" : "TestRFCavity",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 65,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestTravelingWave"
+      ],
+      "name" : "TestTravelingWave",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 68,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/TestMonitor"
+      ],
+      "name" : "TestMonitor",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline"
+        }
+      ]
+    },
+    {
+      "backtrace" : 71,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/EndFieldModel/TestTanh"
+      ],
+      "name" : "TestTanh",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/EndFieldModel"
+        }
+      ]
+    },
+    {
+      "backtrace" : 74,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/EndFieldModel/TestEnge"
+      ],
+      "name" : "TestEnge",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/EndFieldModel"
+        }
+      ]
+    },
+    {
+      "backtrace" : 77,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/EndFieldModel/TestAsymmetricEnge"
+      ],
+      "name" : "TestAsymmetricEnge",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/EndFieldModel"
+        }
+      ]
+    },
+    {
+      "backtrace" : 80,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/EndFieldModel/TestEndFieldModelManager"
+      ],
+      "name" : "TestEndFieldModelManager",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/AbsBeamline/EndFieldModel"
+        }
+      ]
+    },
+    {
+      "backtrace" : 83,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/BeamlineCore/TestConstantEFieldCavityRep"
+      ],
+      "name" : "TestConstantEFieldCavityRep",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/BeamlineCore"
+        }
+      ]
+    },
+    {
+      "backtrace" : 86,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/BeamlineCore/TestBendRep"
+      ],
+      "name" : "TestBendRep",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/BeamlineCore"
+        }
+      ]
+    },
+    {
+      "backtrace" : 89,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/BeamlineGeometry/TestGeometry"
+      ],
+      "name" : "TestGeometry",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/BeamlineGeometry"
+        }
+      ]
+    },
+    {
+      "backtrace" : 92,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Distribution/TestGaussian"
+      ],
+      "name" : "TestGaussian",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Distribution"
+        }
+      ]
+    },
+    {
+      "backtrace" : 95,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Distribution/TestMultiVariateGaussian"
+      ],
+      "name" : "TestMultiVariateGaussian",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Distribution"
+        }
+      ]
+    },
+    {
+      "backtrace" : 98,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Distribution/TestFlatTop"
+      ],
+      "name" : "TestFlatTop",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Distribution"
+        }
+      ]
+    },
+    {
+      "backtrace" : 101,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Distribution/TestOpalFlatTop"
+      ],
+      "name" : "TestOpalFlatTop",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Distribution"
+        }
+      ]
+    },
+    {
+      "backtrace" : 104,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Distribution/TestFromFile"
+      ],
+      "name" : "TestFromFile",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Distribution"
+        }
+      ]
+    },
+    {
+      "backtrace" : 107,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Distribution/TestEmittedFromFile"
+      ],
+      "name" : "TestEmittedFromFile",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Distribution"
+        }
+      ]
+    },
+    {
+      "backtrace" : 110,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Distribution/TestUniform"
+      ],
+      "name" : "TestUniform",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Distribution"
+        }
+      ]
+    },
+    {
+      "backtrace" : 113,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Fields/TestFM2DMagnetoStatic"
+      ],
+      "name" : "TestFM2DMagnetoStatic",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Fields"
+        }
+      ]
+    },
+    {
+      "backtrace" : 116,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Fields/TestAstra1DDynamic"
+      ],
+      "name" : "TestAstra1DDynamic",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Fields"
+        }
+      ]
+    },
+    {
+      "backtrace" : 119,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Fields/TestAstra1DMagnetoStatic"
+      ],
+      "name" : "TestAstra1DMagnetoStatic",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Fields"
+        }
+      ]
+    },
+    {
+      "backtrace" : 122,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Fields/TestFM2DDynamic"
+      ],
+      "name" : "TestFM2DDynamic",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Fields"
+        }
+      ]
+    },
+    {
+      "backtrace" : 125,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Fields/TestFM3DDynamic"
+      ],
+      "name" : "TestFM3DDynamic",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Fields"
+        }
+      ]
+    },
+    {
+      "backtrace" : 128,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Fields/TestG4BL2DMagnetoStatic"
+      ],
+      "name" : "TestG4BL2DMagnetoStatic",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Fields"
+        }
+      ]
+    },
+    {
+      "backtrace" : 131,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Fields/TestG4BL3DGrid"
+      ],
+      "name" : "TestG4BL3DGrid",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Fields"
+        }
+      ]
+    },
+    {
+      "backtrace" : 134,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Physics/TestLinearCompton"
+      ],
+      "name" : "TestLinearCompton",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Physics"
+        }
+      ]
+    },
+    {
+      "backtrace" : 137,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Physics/TestLinearBreitWheeler"
+      ],
+      "name" : "TestLinearBreitWheeler",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Physics"
+        }
+      ]
+    },
+    {
+      "backtrace" : 140,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Physics/TestMuonDecay"
+      ],
+      "name" : "TestMuonDecay",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Physics"
+        }
+      ]
+    },
+    {
+      "backtrace" : 143,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Physics/TestMuonDecaySpectrum"
+      ],
+      "name" : "TestMuonDecaySpectrum",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Physics"
+        }
+      ]
+    },
+    {
+      "backtrace" : 146,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Physics/TestPionDecaySpectrum"
+      ],
+      "name" : "TestPionDecaySpectrum",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Physics"
+        }
+      ]
+    },
+    {
+      "backtrace" : 149,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities/TestBiMap"
+      ],
+      "name" : "TestBiMap",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities"
+        }
+      ]
+    },
+    {
+      "backtrace" : 152,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities/TestCubicSpline"
+      ],
+      "name" : "TestCubicSpline",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities"
+        }
+      ]
+    },
+    {
+      "backtrace" : 155,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities/TestLinearSpline"
+      ],
+      "name" : "TestLinearSpline",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities"
+        }
+      ]
+    },
+    {
+      "backtrace" : 158,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities/TestFFT"
+      ],
+      "name" : "TestFFT",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities"
+        }
+      ]
+    },
+    {
+      "backtrace" : 161,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities/TestRandom"
+      ],
+      "name" : "TestRandom",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities"
+        }
+      ]
+    },
+    {
+      "backtrace" : 164,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities/TestHistogram"
+      ],
+      "name" : "TestHistogram",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities"
+        }
+      ]
+    },
+    {
+      "backtrace" : 167,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities/TestOpalException"
+      ],
+      "name" : "TestOpalException",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities"
+        }
+      ]
+    },
+    {
+      "backtrace" : 170,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities/TestQuasiRandom"
+      ],
+      "name" : "TestQuasiRandom",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities"
+        }
+      ]
+    },
+    {
+      "backtrace" : 173,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities/TestGSLCompat"
+      ],
+      "name" : "TestGSLCompat",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities"
+        }
+      ]
+    },
+    {
+      "backtrace" : 176,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities/TestGSLComplex"
+      ],
+      "name" : "TestGSLComplex",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities"
+        }
+      ]
+    },
+    {
+      "backtrace" : 179,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities/TestGSLMatrix"
+      ],
+      "name" : "TestGSLMatrix",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities"
+        }
+      ]
+    },
+    {
+      "backtrace" : 182,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities/TestGSLBLAS"
+      ],
+      "name" : "TestGSLBLAS",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities"
+        }
+      ]
+    },
+    {
+      "backtrace" : 185,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities/TestGSLLinalg"
+      ],
+      "name" : "TestGSLLinalg",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities"
+        }
+      ]
+    },
+    {
+      "backtrace" : 188,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities/TestGSLEigen"
+      ],
+      "name" : "TestGSLEigen",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities"
+        }
+      ]
+    },
+    {
+      "backtrace" : 191,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities/TestGSLIntegration"
+      ],
+      "name" : "TestGSLIntegration",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities"
+        }
+      ]
+    },
+    {
+      "backtrace" : 194,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities/TestPredefinedString"
+      ],
+      "name" : "TestPredefinedString",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Utilities"
+        }
+      ]
+    },
+    {
+      "backtrace" : 197,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure/TestBinningCmd"
+      ],
+      "name" : "TestBinningCmd",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure"
+        }
+      ]
+    },
+    {
+      "backtrace" : 200,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure/TestBinConfigWriter"
+      ],
+      "name" : "TestBinConfigWriter",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure"
+        }
+      ]
+    },
+    {
+      "backtrace" : 203,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure/TestDirichletPlaneWriter"
+      ],
+      "name" : "TestDirichletPlaneWriter",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure"
+        }
+      ]
+    },
+    {
+      "backtrace" : 206,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure/TestLaser"
+      ],
+      "name" : "TestLaser",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure"
+        }
+      ]
+    },
+    {
+      "backtrace" : 209,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure/TestBeam"
+      ],
+      "name" : "TestBeam",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure"
+        }
+      ]
+    },
+    {
+      "backtrace" : 212,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure/TestLossDataSink"
+      ],
+      "name" : "TestLossDataSink",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure"
+        }
+      ]
+    },
+    {
+      "backtrace" : 215,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "2",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure/TestLossDataSinkMPI",
+        "--gtest_filter=LossDataSinkTest.EmptySinkDestructionIsRankLocal:LossDataSinkTest.EmptySinkUnwindingIsRankLocal:LossDataSinkTest.AsciiCreationDecisionIsCollectiveAcrossFileViews:LossDataSinkTest.OutputInspectionFailureIsCollective"
+      ],
+      "name" : "TestLossDataSinkMPI",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 60.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure"
+        }
+      ]
+    },
+    {
+      "backtrace" : 218,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure/TestCheckpointFile"
+      ],
+      "name" : "TestCheckpointFile",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure"
+        }
+      ]
+    },
+    {
+      "backtrace" : 221,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure/TestMeshGenerator"
+      ],
+      "name" : "TestMeshGenerator",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Structure"
+        }
+      ]
+    },
+    {
+      "backtrace" : 224,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestPolynomialTimeDependence"
+      ],
+      "name" : "TestPolynomialTimeDependence",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 227,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestSinusoidalTimeDependence"
+      ],
+      "name" : "TestSinusoidalTimeDependence",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 230,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestSplineTimeDependence"
+      ],
+      "name" : "TestSplineTimeDependence",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 233,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestQuaternion"
+      ],
+      "name" : "TestQuaternion",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 236,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestCoordinateSystemTrafo"
+      ],
+      "name" : "TestCoordinateSystemTrafo",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 239,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestIndexMap"
+      ],
+      "name" : "TestIndexMap",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 242,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestOrbitThreader"
+      ],
+      "name" : "TestOrbitThreader",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 245,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestSpectralTunes"
+      ],
+      "name" : "TestSpectralTunes",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 248,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestOneTurnMap"
+      ],
+      "name" : "TestOneTurnMap",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 251,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestTrackReferenceStep"
+      ],
+      "name" : "TestTrackReferenceStep",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 254,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestRFEventStep"
+      ],
+      "name" : "TestRFEventStep",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 257,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "2",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestRFEventStepMPI"
+      ],
+      "name" : "TestRFEventStepMPI",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 260,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestDeviceExternalField"
+      ],
+      "name" : "TestDeviceExternalField",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 263,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestBorisStepControl"
+      ],
+      "name" : "TestBorisStepControl",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 266,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestExperimentalBoundarySample"
+      ],
+      "name" : "TestExperimentalBoundarySample",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 269,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestPassiveProbe"
+      ],
+      "name" : "TestPassiveProbe",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 272,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestPassiveRingProbe"
+      ],
+      "name" : "TestPassiveRingProbe",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 275,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestBorisMidpoint"
+      ],
+      "name" : "TestBorisMidpoint",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 278,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestClosedOrbitInitialState"
+      ],
+      "name" : "TestClosedOrbitInitialState",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 281,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestClosedOrbitSolver"
+      ],
+      "name" : "TestClosedOrbitSolver",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 284,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestLinearMapEigenAnalysis"
+      ],
+      "name" : "TestLinearMapEigenAnalysis",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 287,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestDistributionMoments"
+      ],
+      "name" : "TestDistributionMoments",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 290,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestStepSizeConfig"
+      ],
+      "name" : "TestStepSizeConfig",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 293,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestCyclotronProbe"
+      ],
+      "name" : "TestCyclotronProbe",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 296,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "2",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms/TestCyclotronProbeMPI"
+      ],
+      "name" : "TestCyclotronProbeMPI",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Algorithms"
+        }
+      ]
+    },
+    {
+      "backtrace" : 299,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/PartBunch/TestBCHandler"
+      ],
+      "name" : "TestBCHandler",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/PartBunch"
+        }
+      ]
+    },
+    {
+      "backtrace" : 302,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/PartBunch/TestBunchStateHandler"
+      ],
+      "name" : "TestBunchStateHandler",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/PartBunch"
+        }
+      ]
+    },
+    {
+      "backtrace" : 305,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/PartBunch/TestMultiContainerPartBunch"
+      ],
+      "name" : "TestMultiContainerPartBunch",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/PartBunch"
+        }
+      ]
+    },
+    {
+      "backtrace" : 308,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/PartBunch/TestParticleContainer"
+      ],
+      "name" : "TestParticleContainer",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/PartBunch"
+        }
+      ]
+    },
+    {
+      "backtrace" : 311,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/PartBunch/Binning/TestBinning"
+      ],
+      "name" : "TestBinning",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/PartBunch/Binning"
+        }
+      ]
+    },
+    {
+      "backtrace" : 314,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge/TestSpaceChargeConfig"
+      ],
+      "name" : "TestSpaceChargeConfig",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge"
+        }
+      ]
+    },
+    {
+      "backtrace" : 317,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge/TestFFT2D5Algorithm"
+      ],
+      "name" : "TestFFT2D5Algorithm",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "RUN_SERIAL",
+          "value" : true
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge"
+        }
+      ]
+    },
+    {
+      "backtrace" : 320,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge/TestFFT2D5Numerics"
+      ],
+      "name" : "TestFFT2D5Numerics",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "RUN_SERIAL",
+          "value" : true
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge"
+        }
+      ]
+    },
+    {
+      "backtrace" : 323,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge/TestSpaceChargeSolver"
+      ],
+      "name" : "TestSpaceChargeSolver",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "RUN_SERIAL",
+          "value" : true
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge"
+        }
+      ]
+    },
+    {
+      "backtrace" : 326,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge/TestParticleBinTraversal"
+      ],
+      "name" : "TestParticleBinTraversal",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "RUN_SERIAL",
+          "value" : true
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge"
+        }
+      ]
+    },
+    {
+      "backtrace" : 329,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge/TestCartesianPIC3DComponents"
+      ],
+      "name" : "TestCartesianPIC3DComponents",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "RUN_SERIAL",
+          "value" : true
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge"
+        }
+      ]
+    },
+    {
+      "backtrace" : 332,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge/TestCartesianDomainLoadBalancing"
+      ],
+      "name" : "TestCartesianDomainLoadBalancing",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "RUN_SERIAL",
+          "value" : true
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge"
+        }
+      ]
+    },
+    {
+      "backtrace" : 335,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge/TestCartesianDomainUpdaterORB"
+      ],
+      "name" : "TestCartesianDomainUpdaterORB",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "RUN_SERIAL",
+          "value" : true
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge"
+        }
+      ]
+    },
+    {
+      "backtrace" : 338,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge/TestCartesianPIC3DAlgorithms"
+      ],
+      "name" : "TestCartesianPIC3DAlgorithms",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "RUN_SERIAL",
+          "value" : true
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge"
+        }
+      ]
+    },
+    {
+      "backtrace" : 341,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge/TestCartesianPIC3DFields"
+      ],
+      "name" : "TestCartesianPIC3DFields",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "RUN_SERIAL",
+          "value" : true
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge"
+        }
+      ]
+    },
+    {
+      "backtrace" : 344,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge/TestPoissonSolver"
+      ],
+      "name" : "TestPoissonSolver",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "RUN_SERIAL",
+          "value" : true
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge"
+        }
+      ]
+    },
+    {
+      "backtrace" : 347,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge/TestP3MShortRangeParallel"
+      ],
+      "name" : "TestP3MShortRangeParallel",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "RUN_SERIAL",
+          "value" : true
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/SpaceCharge"
+        }
+      ]
+    },
+    {
+      "backtrace" : 350,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/BasicActions/TestDumpEMFields"
+      ],
+      "name" : "TestDumpEMFields",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/BasicActions"
+        }
+      ]
+    },
+    {
+      "backtrace" : 353,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements/TestRBendSettings"
+      ],
+      "name" : "TestRBendSettings",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements"
+        }
+      ]
+    },
+    {
+      "backtrace" : 356,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements/TestOpalAsymmetricEnge"
+      ],
+      "name" : "TestOpalAsymmetricEnge",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements"
+        }
+      ]
+    },
+    {
+      "backtrace" : 359,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements/TestOpalBend"
+      ],
+      "name" : "TestOpalBend",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements"
+        }
+      ]
+    },
+    {
+      "backtrace" : 362,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements/TestOpalBeamlinePlacement"
+      ],
+      "name" : "TestOpalBeamlinePlacement",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements"
+        }
+      ]
+    },
+    {
+      "backtrace" : 365,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements/TestOpalBox"
+      ],
+      "name" : "TestOpalBox",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements"
+        }
+      ]
+    },
+    {
+      "backtrace" : 368,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements/TestOpalCollimator"
+      ],
+      "name" : "TestOpalCollimator",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements"
+        }
+      ]
+    },
+    {
+      "backtrace" : 371,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements/TestOpalDrift"
+      ],
+      "name" : "TestOpalDrift",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements"
+        }
+      ]
+    },
+    {
+      "backtrace" : 374,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements/TestOpalEnge"
+      ],
+      "name" : "TestOpalEnge",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements"
+        }
+      ]
+    },
+    {
+      "backtrace" : 377,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements/TestOpalMultipole"
+      ],
+      "name" : "TestOpalMultipole",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements"
+        }
+      ]
+    },
+    {
+      "backtrace" : 380,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements/TestOpalMultipoleT"
+      ],
+      "name" : "TestOpalMultipoleT",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements"
+        }
+      ]
+    },
+    {
+      "backtrace" : 383,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements/TestOpalPolynomialTimeDependence"
+      ],
+      "name" : "TestOpalPolynomialTimeDependence",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements"
+        }
+      ]
+    },
+    {
+      "backtrace" : 386,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements/TestOpalScalingFFAMagnet"
+      ],
+      "name" : "TestOpalScalingFFAMagnet",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements"
+        }
+      ]
+    },
+    {
+      "backtrace" : 389,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements/TestOpalSplineTimeDependence"
+      ],
+      "name" : "TestOpalSplineTimeDependence",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements"
+        }
+      ]
+    },
+    {
+      "backtrace" : 392,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements/TestOpalSinusoidalTimeDependence"
+      ],
+      "name" : "TestOpalSinusoidalTimeDependence",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements"
+        }
+      ]
+    },
+    {
+      "backtrace" : 395,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements/TestOpalTanh"
+      ],
+      "name" : "TestOpalTanh",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements"
+        }
+      ]
+    },
+    {
+      "backtrace" : 398,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements/TestOpalVariableRFCavity"
+      ],
+      "name" : "TestOpalVariableRFCavity",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Elements"
+        }
+      ]
+    },
+    {
+      "backtrace" : 401,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Lines/TestRing"
+      ],
+      "name" : "TestRing",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Lines"
+        }
+      ]
+    },
+    {
+      "backtrace" : 404,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Processes/GlobalProcesses/TestDecay"
+      ],
+      "name" : "TestDecay",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Processes/GlobalProcesses"
+        }
+      ]
+    },
+    {
+      "backtrace" : 407,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Steppers/TestSpinTBMTPusher"
+      ],
+      "name" : "TestSpinTBMTPusher",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Steppers"
+        }
+      ]
+    },
+    {
+      "backtrace" : 410,
+      "command" : 
+      [
+        "/opt/homebrew/bin/mpiexec",
+        "-n",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Track/TestDecayChain"
+      ],
+      "name" : "TestDecayChain",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "unit"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 300.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/Users/adelmann/git/opalx-master/build_openmp/unit_tests/Track"
+        }
+      ]
+    }
+  ],
+  "version" : 
+  {
+    "major" : 1,
+    "minor" : 0
+  }
+}

@@ -1,0 +1,121 @@
+[
+  {
+    "directory": "tools",
+    "argv": [
+      "/Users/adelmann/.venv-h6/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/Users/adelmann/git/opalx/tools",
+      "-p",
+      "test*.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_s": 1.718214499996975,
+    "log": "/Users/adelmann/git/opalx/tmp/2026-11-05-all-unit-tests/python-0.log"
+  },
+  {
+    "directory": "tools/toOPALX",
+    "argv": [
+      "/Users/adelmann/.venv-h6/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/Users/adelmann/git/opalx/tools/toOPALX",
+      "-p",
+      "test*.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_s": 3.551072459027637,
+    "log": "/Users/adelmann/git/opalx/tmp/2026-11-05-all-unit-tests/python-1.log"
+  },
+  {
+    "directory": "tools/toOPALX/opal2opalx",
+    "argv": [
+      "/Users/adelmann/.venv-h6/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/Users/adelmann/git/opalx/tools/toOPALX/opal2opalx",
+      "-p",
+      "test*.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_s": 0.513224333000835,
+    "log": "/Users/adelmann/git/opalx/tmp/2026-11-05-all-unit-tests/python-2.log"
+  },
+  {
+    "directory": "tools/toOPALX/astra2opalx",
+    "argv": [
+      "/Users/adelmann/.venv-h6/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/Users/adelmann/git/opalx/tools/toOPALX/astra2opalx",
+      "-p",
+      "test*.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_s": 3.1912972499849275,
+    "log": "/Users/adelmann/git/opalx/tmp/2026-11-05-all-unit-tests/python-3.log"
+  },
+  {
+    "directory": "tools/toOPALX/astra2opalx/dev_tests",
+    "argv": [
+      "/Users/adelmann/.venv-h6/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/Users/adelmann/git/opalx/tools/toOPALX/astra2opalx/dev_tests",
+      "-p",
+      "test*.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_s": 26.576966458000243,
+    "log": "/Users/adelmann/git/opalx/tmp/2026-11-05-all-unit-tests/python-4.log"
+  },
+  {
+    "directory": "tools/toOPALX/elegant2opalx",
+    "argv": [
+      "/Users/adelmann/.venv-h6/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/Users/adelmann/git/opalx/tools/toOPALX/elegant2opalx",
+      "-p",
+      "test*.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_s": 0.7414327920414507,
+    "log": "/Users/adelmann/git/opalx/tmp/2026-11-05-all-unit-tests/python-5.log"
+  },
+  {
+    "directory": "tools/toOPALX/elegant2opalx/dev_tests",
+    "argv": [
+      "/Users/adelmann/.venv-h6/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/Users/adelmann/git/opalx/tools/toOPALX/elegant2opalx/dev_tests",
+      "-p",
+      "test*.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_s": 10.671272167004645,
+    "log": "/Users/adelmann/git/opalx/tmp/2026-11-05-all-unit-tests/python-6.log"
+  }
+]

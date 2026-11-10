@@ -1,0 +1,17 @@
+{
+  "command": [
+    "mpirun",
+    "-np",
+    "1",
+    "/Users/adelmann/git/opalx-master/tmp/coasting-fix-20261023/opalx-before",
+    "coasting.in",
+    "--info",
+    "2"
+  ],
+  "binary_sha256": "2f7bf515102cc5d3703ce0640e08190478c99aa15773dff2af8474a11bf8cb8c",
+  "input_sha256": "dd33a31c3f238fed96d196305bba9913af6abe2e310711d5c995be1fbc0149f7",
+  "ranks": 1,
+  "threads": 1,
+  "returncode": 0,
+  "elapsed_s": 1.4919184169266373
+}

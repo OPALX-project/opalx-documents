@@ -1,0 +1,6 @@
+comparison,case_a,case_b,points,max_absolute_difference_V_m,max_relative_difference_percent
+slice MPI repeat,pyorbit-slice-r1,pyorbit-slice-r2,144,2.6921043172478676e-10,2.699289088579404e-12
+Baartman MPI repeat,pyorbit-rb-r1,pyorbit-rb-r2,144,7.474227459169924e-07,6.997554718987841e-09
+OPALX vs PyORBIT slices,opalx-pipe256,pyorbit-slice-r1,144,47.72760982707041,0.446837567087526
+OPALX vs PyORBIT Baartman,opalx-pipe256,pyorbit-rb-r1,144,17.878754233002837,0.1673852739111944
+current vs previous OPALX pipe control,fixed256-old,opalx-pipe256,144,2.128217602148652e-10,1.9924894186458443e-12

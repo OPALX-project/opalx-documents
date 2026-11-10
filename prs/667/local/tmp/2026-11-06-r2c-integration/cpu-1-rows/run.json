@@ -1,0 +1,24 @@
+{
+  "ranks": 1,
+  "returncode": 0,
+  "command": [
+    "/opt/homebrew/bin/mpirun",
+    "--oversubscribe",
+    "--map-by",
+    "slot",
+    "--bind-to",
+    "none",
+    "-n",
+    "1",
+    "/Users/adelmann/git/opalx/build-omp/src/opalx",
+    "case.in",
+    "--info",
+    "1",
+    "--2D5BatchSize",
+    "64",
+    "--restart",
+    "/Users/adelmann/git/opalx/tmp/2026-11-05-merlin6-a100/payload/assets/dba-initial-state.h5"
+  ],
+  "wall_seconds": 17.310736957995687,
+  "binary_sha256": "648761e2e0af974353331431102ea463289430512e4937dedb0a05af6c46d227"
+}

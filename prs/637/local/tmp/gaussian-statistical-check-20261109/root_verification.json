@@ -1,0 +1,31 @@
+{
+  "status": "complete; all relevant and full suites pass",
+  "sole_new_source_change": "unit_tests/Distribution/TestGaussian.cpp",
+  "frozen_test_sha256": "6569cabdd647bd40dcbbeb280819aca92ea724b5f06b30972975b5bf830fa4ce",
+  "current_source_files_verified": 1073,
+  "prior_source_files_unchanged": 37,
+  "linux_build_type": "Debug",
+  "linux_backend": "OPENMP",
+  "linux_gaussian_variant_executions": 48,
+  "linux_gaussian_skips": 0,
+  "linux_rank_variants": [
+    1,
+    2
+  ],
+  "linux_thread_variants": [
+    1,
+    4
+  ],
+  "linux_distribution_targets_passed": 7,
+  "linux_full_suite_passed": 137,
+  "local_gaussian_cases_passed": 8,
+  "local_full_suite_passed": 137,
+  "source_binary_rebuild_verified": true,
+  "production_library_unchanged": true,
+  "prior_archives_unchanged": true,
+  "job": "355097 COMPLETED0:0",
+  "evidence_sha256": "f21f064d3def3d9429038c4321512aacd6ef5c6cd7c3dc7f4baf3eaded171063",
+  "head": "b1551b9c337c0c57dd21a4e2e26ccaff10fdfc93",
+  "staged_files": [],
+  "committed_or_pushed": false
+}

@@ -1,0 +1,131 @@
+{
+  "directory": "/Users/adelmann/git/opalx-master/tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1",
+  "variant": "hdf5",
+  "ranks": 1,
+  "final_particles": 1,
+  "global_steps": 54652,
+  "final_time_s": 4.178854993731562e-06,
+  "elapsed_s": 5.524840831756592,
+  "stations": [
+    {
+      "station": "PROBE1",
+      "native_hits": 2,
+      "old_positive_time_hits": 3,
+      "old_initial_hits": 2,
+      "matched": 2,
+      "unmatched_old": 1,
+      "unmatched_native": 0,
+      "native_turns": [
+        0,
+        2
+      ],
+      "old_turns": [
+        2,
+        3,
+        4
+      ],
+      "max_abs_delta_x": 0.30902788784068713,
+      "max_abs_delta_y": 2.7057699991146245e-10,
+      "max_abs_delta_z": 0.001472238313690337,
+      "max_abs_delta_px": 0.010524043512590038,
+      "max_abs_delta_py": 0.000497920010347222,
+      "max_abs_delta_pz": 5.709451728778234e-05,
+      "max_abs_delta_time": 5.4560395726163765e-09
+    },
+    {
+      "station": "PROBE2",
+      "native_hits": 3,
+      "old_positive_time_hits": 4,
+      "old_initial_hits": 0,
+      "matched": 3,
+      "unmatched_old": 1,
+      "unmatched_native": 0,
+      "native_turns": [
+        0,
+        1,
+        2
+      ],
+      "old_turns": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_abs_delta_x": 4.0781355591079014e-10,
+      "max_abs_delta_y": 0.13664946348714935,
+      "max_abs_delta_z": 0.0014479409811681357,
+      "max_abs_delta_px": 0.0006910285733135596,
+      "max_abs_delta_py": 0.02401880901138894,
+      "max_abs_delta_pz": 9.26871058694265e-05,
+      "max_abs_delta_time": 4.3815943896493985e-09
+    },
+    {
+      "station": "PROBE3",
+      "native_hits": 3,
+      "old_positive_time_hits": 4,
+      "old_initial_hits": 0,
+      "matched": 3,
+      "unmatched_old": 1,
+      "unmatched_native": 0,
+      "native_turns": [
+        0,
+        1,
+        2
+      ],
+      "old_turns": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_abs_delta_x": 0.09402701858289353,
+      "max_abs_delta_y": 5.770395067770262e-10,
+      "max_abs_delta_z": 0.001898530786658155,
+      "max_abs_delta_px": 0.033024528505828835,
+      "max_abs_delta_py": 0.003872063412198923,
+      "max_abs_delta_pz": 0.000186757147382757,
+      "max_abs_delta_time": 6.440231195784877e-09
+    },
+    {
+      "station": "PROBE4",
+      "native_hits": 2,
+      "old_positive_time_hits": 4,
+      "old_initial_hits": 0,
+      "matched": 2,
+      "unmatched_old": 2,
+      "unmatched_native": 0,
+      "native_turns": [
+        0,
+        1
+      ],
+      "old_turns": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "max_abs_delta_x": 1.360232236431606e-10,
+      "max_abs_delta_y": 0.15886807835420536,
+      "max_abs_delta_z": 0.001877127155432938,
+      "max_abs_delta_px": 0.0005041893469550501,
+      "max_abs_delta_py": 0.021600309275205766,
+      "max_abs_delta_pz": 0.00010707317858336336,
+      "max_abs_delta_time": 7.690012299085774e-09
+    }
+  ],
+  "native_hits": 10,
+  "matched_hits": 10,
+  "old_initial_hits_excluded": 2,
+  "unmatched_old": 5,
+  "unmatched_native": 0,
+  "radial_summary_files": [],
+  "max_abs_deltas": {
+    "x": 0.30902788784068713,
+    "y": 0.15886807835420536,
+    "z": 0.001898530786658155,
+    "px": 0.033024528505828835,
+    "py": 0.02401880901138894,
+    "pz": 0.000186757147382757,
+    "time": 7.690012299085774e-09
+  }
+}

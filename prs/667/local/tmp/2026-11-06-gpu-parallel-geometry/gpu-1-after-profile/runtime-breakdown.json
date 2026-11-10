@@ -1,0 +1,15 @@
+{
+  "steps": 99,
+  "window_start_ns": 6249654360,
+  "window_end_ns": 7469390645,
+  "window_s": 1.219736285,
+  "profiled_window_ms_per_step": 12.320568535353535,
+  "kernel_count": 72376,
+  "kernel_count_per_step": 731.070707070707,
+  "kernel_busy_percent": 48.29261867863511,
+  "copy_memset_only_percent": 0.3536715315474935,
+  "no_device_activity_percent": 51.353709789817394,
+  "kernel_execution_ms_per_step": 5.949925181818182,
+  "synchronization_calls": 39260,
+  "scope": "Second segment-build kernel start through last GPU kernel; first physical solve and OrbitThreader excluded. CUDA API durations overlap GPU work; percentages measure temporal device activity, not SM occupancy."
+}

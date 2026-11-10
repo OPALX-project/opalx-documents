@@ -1,0 +1,28 @@
+{
+  "status": "all affected local tests pass; full suite has separate unchanged Gaussian failure",
+  "source_files_new_task": 30,
+  "affected_targets_passed": 29,
+  "full_suite_passed": 136,
+  "full_suite_total": 137,
+  "full_suite_failed": [
+    "TestGaussian"
+  ],
+  "parallel_fm2d_repetitions": {
+    "TestFM2DDynamic": 20,
+    "TestFM2DMagnetoStatic": 20
+  },
+  "concurrent_checkpoint_copies": [
+    {
+      "copy": 1,
+      "passed_cases": 2
+    },
+    {
+      "copy": 2,
+      "passed_cases": 2
+    }
+  ],
+  "frozen_source_hashes_verified": true,
+  "prior_seven_file_hashes_unchanged": true,
+  "linux_after_job": 355096,
+  "linux_status": "running/pending; do not claim after pass yet"
+}

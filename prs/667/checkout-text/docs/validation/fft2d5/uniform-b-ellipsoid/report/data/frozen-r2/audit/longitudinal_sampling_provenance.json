@@ -1,0 +1,14 @@
+{
+  "scope": "Independent geometry/CIC longitudinal sampling audit, no OPALX fields",
+  "gamma_correction": "omitted; below 1e-6 relative for beta=.001",
+  "tangential_characteristic_scale_m": 0.0014202325784798471,
+  "transverse_characteristic_scale_m": 0.005711986642890534,
+  "bulk_definition": "more than 50 mm from either hard end",
+  "baseline": "exact CIC integral of continuous flat line charge on affine-compressed path coordinate",
+  "source_hashes": {
+    "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/longitudinal_sampling.py": "3721adf0c6944bb66a89b2ace269f724902d699b3425eb486fe24133ff9fec4c",
+    "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/sources/tube-ns2560-nr16-np64.npz": "0db7a82876fe117cc8898e5ab36330ccd80e47828e4375a743a44381b57d0820",
+    "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/sources/path-step0.02.dat": "1d9f450c0b3a64d2cf512bdd021c669e111c501550ca10203f5e531946dbf1d7",
+    "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/reference/points.csv": "cd9b348db34c0a2919240ceb364c20b6c1720b0146e565a56028260b1d496bfd"
+  }
+}

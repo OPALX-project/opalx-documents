@@ -1,0 +1,27 @@
+commit a9d38caa4f88433a5de1508b3d5c7d01bdfea95a
+Author:     Andreas Adelmann <andreas.adelmann@psi.ch>
+AuthorDate: Sun Oct 25 21:32:45 2026 +0100
+Commit:     Andreas Adelmann <andreas.adelmann@psi.ch>
+CommitDate: Sun Oct 25 21:32:45 2026 +0100
+
+    Preserve accumulated fields in ScalingFFA elements
+    
+    Add each ScalingFFA element's magnetic contribution instead of replacing
+    fields already gathered from other magnets or the self-field solver.
+    Outside-support contributions now leave the accumulator unchanged.
+    Keep raw field getters' overwrite contract and existing public signatures.
+    
+    Share the existing device calculation through a public launcher in an
+    internal namespace: NVCC extended lambdas cannot be enclosed by a private
+    member. The final uniform store mode adds or replaces without extra views,
+    kernels, synchronization or changes to field formulas and support.
+    
+    Add self-contained native regressions for seeded accumulators, overlapping
+    and outside-support elements, raw lookup, and particle/reference parity.
+    Also verify MultipoleT fringe normalization and reference/device parity
+    against an independent analytic quadrupole envelope.
+    
+    Validation: focused OpenMP targets pass 39 cases; the new accumulation
+    case also passes on two ranks. The unchanged 1000-step ScalingFFA case
+    retains all ten particles and reduces particle/reference separation from
+    1.222 m to 7.93e-13 m. Existing tolerances are unchanged.

@@ -1,0 +1,27 @@
+# Straight triangular-pipe control
+
+Goal: repeat the established conducting-pipe side control with the final native OPALX binary, independently of the curved free-space SACR comparison. No production code or report was edited by this subagent.
+
+Parameters: uniform round beam a=5 mm, conducting pipe b=20 mm, triangular longitudinal density of full length 10 m, Q=16.02176634 microC, proton kinetic energy 0.4 GeV. Fields are frozen for one 1e-20 s OPALX step; PyORBIT applies an equivalent direct 1 m kick without moving probes.
+
+The independent reference remains `triangle-pipe/analytic-audit/analytic.py`: lambda=2Q/L*(1-2|s|/L), Es=-lambda' g(r)/(4 pi epsilon0 gamma²), with g=1+2ln(b/a)-r²/a² inside the beam and g=2ln(b/r) in the vacuum annulus. The acceptance targets are fixed beforehand: 1 m <= |s| <= 4 m, including 62 axis and 82 interior radial probes. The cusp and end transition data are retained but excluded from the local-model accuracy claim.
+
+Native fine control: CIRCULAR_UNIFORM, explicit PIPERADIUS=20 mm, 256³ grid, W=20 mm, 8,388,608 source particles plus 183 probes. The probe-only companion has identical macrocharge; its field is subtracted (longitudinally at the same reference gamma²). This numerical box covers the beam-interior probes, not the physical pipe wall.
+
+An additional small native fixture covers the vacuum annulus and physical wall: 65,536 sources, 10 probes, mesh32x32x64, W=60 mm, same explicit pipe/beam parameters; a separate equal-macrocharge probe-only control checks marker contribution. This uses the existing regression fixture without editing it. Wall Es must be zero within 1e-4 V/m; all nonzero reference fields must agree within 1%.
+
+PyORBIT repeats: pinned unmodified runtime from `triangle-pipe/pyorbit/native-package`, slice512²x128 with 16,777,216 sources and Baartman128²x256 with 33,554,432 sources. Each model is rerun on both one and two MPI ranks. Native per-particle macro weights are checked in the harness, probes/extent guards have zero charge, and all targets are checked by ID and coordinate. Source/kick unit conversions and runtime hashes are recorded.
+
+Native binary freeze: original exploratory cases `opalx/runs/pipe256` and `wall` used SHA44f02d57... before root performed the final relink. They are preserved, excluded from selected results, and the build-path hash check correctly rejected them after the binary changed. Selected cases `pipe256-final` and `wall-final` use the archived final binary `../binaries/opalx-final-b9a4d4cda121c4f4`, SHA256 `b9a4d4cda121c4f43589759bbe68d72b481eb4b6747a28b5d5186f5e9bb70a62`. No native cases run concurrently with the large curved-study runs; that slot is coordinated with the SACR study agent.
+
+Reproduce with `/Users/adelmann/.venv-h6/bin/python run_control.py native`, `... run_control.py wall`, `... run_control.py pyorbit`, then `... analyze_control.py`. Completed selected cases are write-once; choose a new case tag rather than replacing results. PyORBIT MPI uses explicit oversubscribed slot mapping on this machine. Native manifests record exact input/distribution/path/binary hashes and counts. Analysis additionally checks HDF5 units, all IDs and macrocharges, total charge/time/reference gamma, frozen target geometry, and 2049 sampled source IDs against the immutable tensor source.
+
+Status: all final native and all four PyORBIT runs completed successfully. Independent HDF5/source/weight/frame audits passed. Selected native binary hash is b9a4d4c... for every main/probe/wall snapshot. The 2049 sampled native source IDs agree with the immutable tensor geometry to below 1e-10 m; exact source/probe counts, q, Q, SI units, frozen time, reference direction/gamma and companion normalization all pass.
+
+Results (maximum local relative error over the fixed accepted points): OPALX axis0.160787%, interior radial0.028648%; PyORBIT slices axis/radial0.286050% on both one/two ranks; Baartman axis/radial0.006603% on both ranks. OPALX versus slices differs at most0.446838%; versus Baartman0.167385%. One/two-rank maximum field differences are2.69e-10 V/m (slices) and7.47e-7 V/m (Baartman). The selected final OPALX result matches the earlier saved pipe result within2.13e-10 V/m, confirming that the free-space change leaves this side control unchanged within roundoff.
+
+The separate annulus/wall control has maximum nonzero error0.003516%, exact wall Es=0 V/m, and probe-only Es below3.08e-15 V/m. Its wall is geometrically inside the numerical grid, so the zero is the physical model boundary rather than an out-of-grid dropped target.
+
+Deliverables: `analysis/fields.csv`, `summary.csv`, `controls.csv`, `wall-fields.csv`, `validation.json`, and `straight-pipe-control.pdf/.png`. The JSON includes source/runtime/scripts hashes, exact snapshot checks, analytic parameters and all metrics. The PDF/PNG were visually checked. This control qualifies the straight local conducting-pipe closure, not finite-end free-space physics or curved relativistic dynamics. No report or production edit was made.
+
+Final rerun after root fixed attribute preservation: selected native inputs are now pipe256-final703 and wall-final703, using archived opalx-final-70383ff72345d869, SHA25670383ff72345d869db40d42d2ff5aee8ceaa2f1f4fa656fcf2e8fc75e35647c1. Earlier b9a and44f cases remain historical and excluded. Updated analysis/validation.json and plots use7038 exclusively; all numerical pipe-control metrics remain unchanged within roundoff.

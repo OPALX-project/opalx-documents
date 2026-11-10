@@ -1,0 +1,144 @@
+\section{Software verification and automated tracking checks}
+\label{app:verification}
+\begin{center}\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.29\linewidth}>{\raggedright\arraybackslash}p{0.63\linewidth}}\toprule
+Check & Result and scope\\\midrule
+Independent model & Sphere, oblate and integral checks; zero-charge rotation,
+centroid, invariants, positive volume and tighter integration pass.\\
+Earlier C++ unit tests & 131/131 CTest entries pass with one OpenMP thread. Tests cover
+kernels, forces, halos, boundaries, small grids, neutral/empty sources and frames.\\
+Four-thread numerics & 66 applicable tests pass; the MPI-only guard is skipped
+in this single-rank run.\\
+Two-rank FFT2D5 guard & Unsupported-MPI rejection passes. Distributed FFT2D5
+tracking is not tested; GPU execution is unverified.\\
+3D OPEN tracking & Baseline one-/two-rank curves agree within
+$3.5\times10^{-13}$ relative. Completed 10 pC OPEN sizes agree with the model
+within 0.070\%.\\
+10 pC controls & All five runs complete, including both zero controls;
+80 particle snapshots pass independent count, charge, field-map and diagnostic checks.\\
+SACR fields & 33 points in each of three geometries; the 5 m source also uses
+11 bend-radius values. Static field and quadrature checks are separate from
+OPALX tracking. See \cref{sec:sacr}.\\
+Frozen curved tube & Native one-rank fields at 43 points, separate transverse
+and longitudinal mesh scans, and source/path controls. Integrity checks pass;
+the 1\% physical field target fails. See \cref{sec:frozen}.\\
+Earlier tracking regressions & ZeroSC and 1 pC all-step validators pass locally.
+The original study ran only ZeroSC through the full smoke hook;
+updated compatibility checks are in \cref{sec:pipe-gates}.\\
+Validator integration & Seven runner tests and six deliberately corrupted
+tracking outputs pass their expected acceptance/rejection checks.\\
+Remote CI & Cases and workflow remain local and unpublished. The external
+CSCS runner retains its existing \code{.rt} checks.\\\bottomrule
+\end{tabular}
+\end{center}
+\tabfile{modelchecks}
+
+The OPALX tracking cases \code{FFT2D5-UniformB-ZeroSC} and
+\code{FFT2D5-UniformB-1pC} check all 128 STAT samples against the independent
+model, plus duration, particle count, assigned charge and source fixtures.
+Corruption controls alter an intermediate RMS, particle count, charge, time,
+finite values or output length. These checks supplement the three final-value
+\code{.rt} checks. Tracking regressions and C++ unit tests are separate test layers.
+
+\subsection{Incomplete runs}
+\begin{center}\small
+\begin{tabular}{lrrl}\toprule
+Case & STAT rows & Duration covered & Intended check\\\midrule
+$R=0.25$ m fine mesh & 61/128 & 47.6563\% & $256\times512\times550$\\\bottomrule
+\end{tabular}
+\end{center}
+This run remains excluded from acceptance. The earlier interrupted 10 pC
+files are preserved, but complete replacement runs now supply the results in
+Section~6. Report generation launches no simulations.
+
+\subsection{Historical slice implementation}
+The earlier solver uses the rectangular-cell-averaged logarithmic Green function,
+including the finite self-cell, and centered gradients with convolved potential
+halos. It transforms particles and the laboratory reference path into a common
+solve frame, then restores the particle frame. One FFT workspace serves all
+slices; cleared empty slices are skipped, while nonempty neutral sources are solved.
+
+\input{generated/free-open-verification.tex}
+
+\subsection{Evidence catalog}
+Paths below are relative to \code{data/}; CSV values retain their stored precision.
+\begin{center}\footnotesize
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.25\linewidth}>{\raggedright\arraybackslash}p{0.67\linewidth}}\toprule
+Result & Evidence files\\\midrule
+Baseline/refinements & \code{baseline-summary.csv}, \code{baseline-convergence.csv},
+\code{baseline-acceptance.json}\\
+3D OPEN controls & \code{open-summary.csv}, \code{open-refinement-summary.csv},
+\code{open-convergence.json}\\
+Completed 10 pC study & \code{10pc-completed/}: all-step sizes/growth,
+refinement, covariance/centroid, five manifests and particle verification\\
+SACR field reference & \code{sacr/}: point set, field values, quadrature and
+radius summaries, code/provenance and independent differential/volume checks\\
+Frozen 5 m tube & \code{frozen-r2/}: constant-section reference, all-component
+fields, matched mesh/control data, native end profiles and plotting sources\\
+Corrected OPEN profiles & \code{free-open/}: uniform/triangular SACR fields,
+native full/probe tables, matched-source mesh scan, independent q/m audits,
+compact source quadratures, code/build provenance and repeated pipe controls\\
+Literature comparison & \code{literature/}: primary-source review/synthesis
+metadata and hashes; linked references appear in the bibliography\\
+Collective response & \code{growth-summary.csv}, \code{centroid-summary.csv},
+\code{covariance-snapshots.csv}\\
+Initial fields / $g$ & \code{field-summary.csv}, \code{g-evolution.csv}\\
+Radius scan & \code{radius-summary.csv}, \code{radius-all-case-summary.csv},
+\code{analytic-geometry.csv}\\
+Model and generator & \code{model-checks.json}, \code{strong-model-checks.json},
+\code{ellipsoid_model.py}, \code{prepare_opalx.py}\\
+Software checks & \code{test-logs/fft2d5-final-*.log},
+\code{zero-regression-validation.json}, \code{q1-regression-validation.json}\\
+Incomplete runs & \code{incomplete-manifests/}\\\bottomrule
+\end{tabular}
+\end{center}
+
+\clearpage
+\section{Reproduction and provenance}
+The earlier frame/slice fix is saved locally in commit \code{fd6ba8dc5} on
+\code{658-fft2d5-keep-particles-and-reference-path-in-a-consistent-frame}.
+Later validation/report edits remain uncommitted. Baseline and radius results
+use the archived tracking binary
+\begin{quote}\small
+\path{ba08fdd0b0bb1e90a64ba0fd3763a8b6d044b128c0af9b9dfd215ad0ffac8fd4}.
+\end{quote}
+The completed 10 pC study pins a second build of the same twelve solver/test
+sources, with SHA-256
+\begin{quote}\small
+\path{e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf}.
+\end{quote}
+Its coarse control reproduces the earlier pilot within $10^{-8}$ relative.
+Archived provenance records a pre-commit parent and exact source hashes; that
+parent alone does not identify the modified source. The coarse frozen-field
+result uses a different historical binary. Run hashes do not identify the
+executable currently installed in a build directory.
+
+The nonlocal OPEN fields in \cref{sec:free-open} and the repeated straight
+pipe control use the source-frozen executable
+\begin{quote}\small
+\path{70383ff72345d869db40d42d2ff5aee8ceaa2f1f4fa656fcf2e8fc75e35647c1}.
+\end{quote}
+\code{data/free-open/provenance/} records 982 source/test hashes, the base
+commit, the scoped solver patch, the isolated checkpoint-preservation patch,
+and new source files. Preserved unrelated tracking edits are identified in
+the source authorship note and are not attributed to this solver change.
+
+Run \code{./build.sh} from the report directory to verify evidence hashes,
+rebuild tables/figures and compile with \code{latexmk}. The default Python is
+\path{/Users/adelmann/.venv-h6/bin/python}; override it with
+\code{OPALX_REPORT_PYTHON}. The PDF is written to
+\code{output/pdf/fft2d5-uniform-field-validation.pdf} in the OPALX checkout.
+Figure/table generation uses copied data without OPALX or network access.
+
+To reproduce the 1 pC run, use the model package one directory above this report:
+\begin{quote}\small\ttfamily\raggedright
+python prepare\_opalx.py q1 --solver fft2d5 --charge-pc 1\newline
+\hspace*{1em}--mesh 128 256 1024 --run\newline
+python analyze\_stat.py --manifest opalx-runs/q1/manifest.json\newline
+\hspace*{1em}--require-one-percent
+\end{quote}
+The original run tree is
+\path{/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz}.
+Large particle files remain there. \code{data/provenance.json} records copied
+evidence paths, sizes and hashes; figure-input hashes are recorded separately.
+

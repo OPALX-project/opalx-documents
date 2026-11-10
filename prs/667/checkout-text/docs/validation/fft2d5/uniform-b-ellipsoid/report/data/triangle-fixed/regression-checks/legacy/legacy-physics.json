@@ -1,0 +1,98 @@
+{
+  "case": "FFT2D5-TriangularPipe",
+  "passed": false,
+  "criterion": "Nonzero frozen longitudinal fields within 1% of uniform-round conducting-pipe analytic solution; wall Es=0 within 1e-4V/m; exact IDs, charge, time and frame",
+  "maximum_relative_field_error": 2.662171383099396,
+  "maximum_wall_absolute_field_V_per_m": 9746.53881740302,
+  "max_probe_motion_residual_m": 1.0456564803567802e-15,
+  "relative_field_tolerance": 0.01,
+  "wall_absolute_tolerance_V_per_m": 0.0001,
+  "expected_particles": 65546,
+  "source_charge_C": 1.6021766339999997e-05,
+  "assigned_charge_C": 1.602421106752991e-05,
+  "snapshot_time_s": 1.0000000000000001e-20,
+  "source_probes_self_field": "Only two probe planes at +/-2.5m, separated by many gradient cells; same-plane symmetric CIC gather/deposit has zero longitudinal self contribution",
+  "h5_sha256": "953d458e23b3ad93a09a3f2689cdf8f59be1fcf04d081870285c16ce85179086",
+  "probes": [
+    {
+      "probe_id": 0,
+      "radius_m": 0.0,
+      "s_m": -2.5,
+      "actual_Es_V_per_m": -9746.538817399083,
+      "analytic_Es_V_per_m": -10681.199017834952,
+      "passed": false
+    },
+    {
+      "probe_id": 1,
+      "radius_m": 0.0025,
+      "s_m": -2.5,
+      "actual_Es_V_per_m": -9746.538817399083,
+      "analytic_Es_V_per_m": -9973.382727467262,
+      "passed": false
+    },
+    {
+      "probe_id": 2,
+      "radius_m": 0.005,
+      "s_m": -2.5,
+      "actual_Es_V_per_m": -9746.538817399083,
+      "analytic_Es_V_per_m": -7849.933856364199,
+      "passed": false
+    },
+    {
+      "probe_id": 3,
+      "radius_m": 0.0125,
+      "s_m": -2.5,
+      "actual_Es_V_per_m": -9746.538817399083,
+      "analytic_Es_V_per_m": -2661.4098024965333,
+      "passed": false
+    },
+    {
+      "probe_id": 4,
+      "radius_m": 0.02,
+      "s_m": -2.5,
+      "actual_Es_V_per_m": -9746.538817399083,
+      "analytic_Es_V_per_m": -0.0,
+      "passed": false
+    },
+    {
+      "probe_id": 5,
+      "radius_m": 0.0,
+      "s_m": 2.5,
+      "actual_Es_V_per_m": 9746.53881740302,
+      "analytic_Es_V_per_m": 10681.199017834952,
+      "passed": false
+    },
+    {
+      "probe_id": 6,
+      "radius_m": 0.0025,
+      "s_m": 2.5,
+      "actual_Es_V_per_m": 9746.53881740302,
+      "analytic_Es_V_per_m": 9973.382727467262,
+      "passed": false
+    },
+    {
+      "probe_id": 7,
+      "radius_m": 0.005,
+      "s_m": 2.5,
+      "actual_Es_V_per_m": 9746.53881740302,
+      "analytic_Es_V_per_m": 7849.933856364199,
+      "passed": false
+    },
+    {
+      "probe_id": 8,
+      "radius_m": 0.0125,
+      "s_m": 2.5,
+      "actual_Es_V_per_m": 9746.53881740302,
+      "analytic_Es_V_per_m": 2661.4098024965333,
+      "passed": false
+    },
+    {
+      "probe_id": 9,
+      "radius_m": 0.02,
+      "s_m": 2.5,
+      "actual_Es_V_per_m": 9746.53881740302,
+      "analytic_Es_V_per_m": 0.0,
+      "passed": false
+    }
+  ]
+}

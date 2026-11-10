@@ -1,0 +1,36 @@
+/tmp/pr637-cscs-openmp-old.trace
+2026-10-25T16:04:44.605492Z 01O Run regression test FodoCell-multipoleT-fromfile
+2026-10-25T16:04:44.605494Z 01O Reference output files OK
+2026-10-25T16:04:44.605495Z 01O Test rms_x(avg) failed: 1.3061724278502996e-05 (eps=1e-05) 
+2026-10-25T16:04:44.605497Z 01O Test rms_y(avg) passed: 6.92006892029531e-06 (eps=1e-05) 
+2026-10-25T16:04:44.605498Z 01O Test rms_s(avg) passed: 2.525571722977683e-07 (eps=1e-05) 
+2026-10-25T16:04:44.605500Z 01O Test emit_x(avg) passed: 3.8147427252972535e-06 (eps=1e-05) 
+2026-10-25T16:04:44.605502Z 01O Test emit_y(avg) failed: 1.3184285918234021e-05 (eps=1e-05) 
+2026-10-25T16:04:44.605503Z 01O Test emit_s(avg) passed: 1.1802266707726536e-07 (eps=1e-05) 
+2026-10-25T16:04:44.605505Z 01O Test energy(avg) passed: 1.0314725583186936e-12 (eps=1e-05) 
+2026-10-25T16:04:44.605507Z 01O 	 Checksum for reference FodoCell-quad-fromfile.stat.md5 OK 
+2026-10-25T16:04:44.605508Z 01O Run regression test FodoCell-quad-fromfile
+/tmp/pr637-cscs-gh200-old.trace
+2026-10-25T16:42:09.514905Z 01O Run regression test FodoCell-multipoleT-fromfile
+2026-10-25T16:42:09.514905Z 01O Reference output files OK
+2026-10-25T16:42:09.514905Z 01O Test rms_x(avg) failed: 1.3061724278480717e-05 (eps=1e-05) 
+2026-10-25T16:42:09.514906Z 01O Test rms_y(avg) passed: 6.920068920263337e-06 (eps=1e-05) 
+2026-10-25T16:42:09.514906Z 01O Test rms_s(avg) passed: 2.525571722682903e-07 (eps=1e-05) 
+2026-10-25T16:42:09.514907Z 01O Test emit_x(avg) passed: 3.814742725307195e-06 (eps=1e-05) 
+2026-10-25T16:42:09.514907Z 01O Test emit_y(avg) failed: 1.3184285918197022e-05 (eps=1e-05) 
+2026-10-25T16:42:09.514908Z 01O Test emit_s(avg) passed: 1.1802266665710506e-07 (eps=1e-05) 
+2026-10-25T16:42:09.514908Z 01O Test energy(avg) passed: 9.346346185896074e-13 (eps=1e-05) 
+2026-10-25T16:42:09.514908Z 01O 	 Checksum for reference FodoCell-quad-fromfile.stat.md5 OK 
+2026-10-25T16:42:09.514909Z 01O Run regression test FodoCell-quad-fromfile
+/tmp/pr637-cscs-mi300-old.trace
+2026-10-25T16:08:47.648532Z 01O Run regression test FodoCell-multipoleT-fromfile
+2026-10-25T16:08:47.648533Z 01O Reference output files OK
+2026-10-25T16:08:47.648533Z 01O Test rms_x(avg) failed: 1.306172427848102e-05 (eps=1e-05) 
+2026-10-25T16:08:47.648534Z 01O Test rms_y(avg) passed: 6.920068920262678e-06 (eps=1e-05) 
+2026-10-25T16:08:47.648534Z 01O Test rms_s(avg) passed: 2.5255717226701956e-07 (eps=1e-05) 
+2026-10-25T16:08:47.648535Z 01O Test emit_x(avg) passed: 3.81474272530634e-06 (eps=1e-05) 
+2026-10-25T16:08:47.648536Z 01O Test emit_y(avg) failed: 1.3184285918198937e-05 (eps=1e-05) 
+2026-10-25T16:08:47.648536Z 01O Test emit_s(avg) passed: 1.1802266665358152e-07 (eps=1e-05) 
+2026-10-25T16:08:47.648537Z 01O Test energy(avg) passed: 9.348741536418022e-13 (eps=1e-05) 
+2026-10-25T16:08:47.648537Z 01O 	 Checksum for reference FodoCell-quad-fromfile.stat.md5 OK 
+2026-10-25T16:08:47.648538Z 01O Run regression test FodoCell-quad-fromfile

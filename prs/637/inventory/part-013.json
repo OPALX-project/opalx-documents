@@ -1,0 +1,2082 @@
+[
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/baseline-audit-fixes.patch",
+    "sha256": "086ee9daef99d86769fb4a2b960db9363f389549346df6f42b9db9ba85932bfe",
+    "bytes": 31443,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/baseline-audit-fixes.patch"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/baseline-sources.json",
+    "sha256": "0809edd4cd8152139735ec2452378c4cdb968f308a20fb6919070d1db9aef5da",
+    "bytes": 325,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/baseline-sources.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/ci-test-source-comparison.json",
+    "sha256": "bbe00f8b6552f3f83b6dcd1dcab7635134f511da76e2b1caa65665096f450428",
+    "bytes": 331,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/ci-test-source-comparison.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/fix.patch",
+    "sha256": "70c3da28dab7e0c3fc2f809576c996fb39333749d3dcf85c9ea481c356c509cd",
+    "bytes": 3445,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/fix.patch"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/REPORT.md",
+    "sha256": "4beb53ab71596b537c4aa235ca615b37d28349bfdcc829719edb47358ef2a7c1",
+    "bytes": 6680,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/report.md"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/STATE.md",
+    "sha256": "a51c3ccbfcaf8b56eb0f1c736deead725c163c4ae3bab89e79392d576842d6ca",
+    "bytes": 1246,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/state.md"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/after-corrected-submission.json",
+    "sha256": "507736e8ac5bd77155ecd926036f4996a25f7566ae3064adbd03582f14bfe875",
+    "bytes": 426,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/after-corrected-submission.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/after-corrected-submission.log",
+    "sha256": "4ff2285a794755106b95b2fda64c53889afc1a67a17e7acfdec4bb3cf0b957d5",
+    "bytes": 698,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/after-corrected-submission.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/after-corrected-upload.log",
+    "sha256": "94dbeecfedf57900fced12d73898498aca6d71ec748d21eae0e0cf23f3c901ad",
+    "bytes": 219,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/after-corrected-upload.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/after-final-submission.json",
+    "sha256": "e085a0402018f51eb4182ff393df0bf7636bf6cfeb82e2ff4084e660586b7da8",
+    "bytes": 474,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/after-final-submission.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/after-final-submission.log",
+    "sha256": "ece2275eba5a46db5b0ed24c65aa2d04ff32ea01154b53eafeba400fff899220",
+    "bytes": 744,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/after-final-submission.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/after-final-upload.log",
+    "sha256": "94dbeecfedf57900fced12d73898498aca6d71ec748d21eae0e0cf23f3c901ad",
+    "bytes": 219,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/after-final-upload.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/after-final.sbatch",
+    "sha256": "b4547c052297cb43ee1eab742d0f3d2c80860f1ad985a9dceb41fc3bdc76be91",
+    "bytes": 5178,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/after-final.sbatch"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/after-setup.log",
+    "sha256": "1ecce690f53ee7bd7c1c389122b026797a11a1193bbff57e12e0a9519dde0f38",
+    "bytes": 838,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/after-setup.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/after-submission.json",
+    "sha256": "ffbe77b06723bf303bdabb7758a1f6d0d582f7e4712f9eea0c07f4d17690d438",
+    "bytes": 239,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/after-submission.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/after.sbatch",
+    "sha256": "3a937afbaa7ac606e0d3c273c1d6005087b08c24e9ce6ebbe86447472dbc464c",
+    "bytes": 4175,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/after.sbatch"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/audit.json",
+    "sha256": "656872b70c6b351771c8d7b645ccdadfb28446c3097a6cdebd24954a654affcd",
+    "bytes": 30103,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/audit.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/audit_linux.py",
+    "sha256": "71b77206da37d52ff0b1dc6b4259e3394ce181839d6b7e77a5c8dab451c4419e",
+    "bytes": 6562,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/audit_linux.py"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/baseline-plan.json",
+    "sha256": "e493b15096838ef84c0b7f42e1a760216470ceb1511dd90de80d0d3d8a3ea973",
+    "bytes": 429,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/baseline-plan.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/baseline-submission.json",
+    "sha256": "712519d07ab8405f68aba7709519454c48c66e0137ec7afd4db734d6d1165571",
+    "bytes": 205,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/baseline-submission.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/baseline.sbatch",
+    "sha256": "cd9c569a5f11c218393d8b0f20cbc9747bcb00fb95ea4186cff5d77d77f3766c",
+    "bytes": 2475,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/baseline.sbatch"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/before-parallel-001.log",
+    "sha256": "e5e8c674c03a5d86ca63aaa5365cfeb2abec8d3890cec182659d1181bd6e3596",
+    "bytes": 12290,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/before-parallel-001.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/fixed-TestLossDataSink.cpp",
+    "sha256": "c5f55848a0a2435d5256c9a12bbf7cd3bb09a2dafaf8eb983965bb1a8b8145b6",
+    "bytes": 27258,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/fixed-testlossdatasink.cpp"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/fixed-source.json",
+    "sha256": "be2832fb53e715d41535a23b46cb1e5a3cdd5e44cae5d597a98f31b5180fc115",
+    "bytes": 171,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/fixed-source.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/parallel_stress.py",
+    "sha256": "cac713aac6a525eb076751256c643c65532a4de4cd2c72296a1c9f7ad6d47f30",
+    "bytes": 848,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/parallel_stress.py"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/parallel_stress_after.py",
+    "sha256": "783aa84085996fbedefd0f3017b86068580fce297a4258cffbefd93a2440432b",
+    "bytes": 851,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/parallel_stress_after.py"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/prepare_remote.py",
+    "sha256": "8f5f8d0b2ba077a24a4e658017ac91366720b0578b8846b079030d8029a2b007",
+    "bytes": 3778,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/prepare_remote.py"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/relevant-final-submission.json",
+    "sha256": "a3d242808a52ec06e8ffa9004444debafae2e9f582a18e702ce44a7239201702",
+    "bytes": 376,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/relevant-final-submission.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/relevant-final-submission.log",
+    "sha256": "85ee0c4cc79f7bbc3d5b0e9a1c16cb3b320909e9a6ef549d59772a3f6758d335",
+    "bytes": 650,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/relevant-final-submission.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/relevant-final-upload.log",
+    "sha256": "94dbeecfedf57900fced12d73898498aca6d71ec748d21eae0e0cf23f3c901ad",
+    "bytes": 219,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/relevant-final-upload.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/relevant-final.sbatch",
+    "sha256": "65f5199ea481f13f78150531a368013958065da943191f3da788461f4d9eac22",
+    "bytes": 4482,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/relevant-final.sbatch"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/after-corrected-submission.json",
+    "sha256": "507736e8ac5bd77155ecd926036f4996a25f7566ae3064adbd03582f14bfe875",
+    "bytes": 426,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/after-corrected-submission.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/after-final-submission.json",
+    "sha256": "e085a0402018f51eb4182ff393df0bf7636bf6cfeb82e2ff4084e660586b7da8",
+    "bytes": 474,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/after-final-submission.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/after-final.sbatch",
+    "sha256": "b4547c052297cb43ee1eab742d0f3d2c80860f1ad985a9dceb41fc3bdc76be91",
+    "bytes": 5178,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/after-final.sbatch"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/after-submission.json",
+    "sha256": "ffbe77b06723bf303bdabb7758a1f6d0d582f7e4712f9eea0c07f4d17690d438",
+    "bytes": 239,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/after-submission.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/after.sbatch",
+    "sha256": "3a937afbaa7ac606e0d3c273c1d6005087b08c24e9ce6ebbe86447472dbc464c",
+    "bytes": 4175,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/after.sbatch"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/baseline.sbatch",
+    "sha256": "cd9c569a5f11c218393d8b0f20cbc9747bcb00fb95ea4186cff5d77d77f3766c",
+    "bytes": 2475,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/baseline.sbatch"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/CMakeCache.txt",
+    "sha256": "02f563fc99620b3d4a84a5b9fcfcf9a8661f4a6ada836ed0957589e637b71f2a",
+    "bytes": 106664,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/cmakecache.txt"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/CTestTestfile.cmake",
+    "sha256": "e7e44331914a1c426ce270fa9adb0fa0ec58756080ad62b402a47af4f0db9a5c",
+    "bytes": 580,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/ctesttestfile.cmake"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/unit_tests/Algorithms/CTestTestfile.cmake",
+    "sha256": "9bb349b4685826656acbdabc820dd62ddb76be1cb1569e55803f1e3ccee64999",
+    "bytes": 23373,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/unit_tests/algorithms/ctesttestfile.cmake"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/unit_tests/Distribution/CTestTestfile.cmake",
+    "sha256": "32566ffd41fbe4bb29a1470b4819c709dba1358a67f0a9b9c02b862456ac6c1c",
+    "bytes": 6795,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/unit_tests/distribution/ctesttestfile.cmake"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/unit_tests/Structure/CMakeFiles/TestLossDataSink.dir/flags.make",
+    "sha256": "f3e10527727c79fbfce8f5c979acbb5eb14b29aaaa2f8df8f1f3149e09a25ab0",
+    "bytes": 3783,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/unit_tests/structure/cmakefiles/testlossdatasink.dir/flags.make"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/unit_tests/Structure/CMakeFiles/TestLossDataSink.dir/link.txt",
+    "sha256": "c38f77d739698e7292e0f9d4bd9d040ce235b637ec63be6354fecece6e4aa0c5",
+    "bytes": 1916,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/unit_tests/structure/cmakefiles/testlossdatasink.dir/link.txt"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/unit_tests/Structure/CMakeFiles/TestLossDataSinkMPI.dir/flags.make",
+    "sha256": "f3e10527727c79fbfce8f5c979acbb5eb14b29aaaa2f8df8f1f3149e09a25ab0",
+    "bytes": 3783,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/unit_tests/structure/cmakefiles/testlossdatasinkmpi.dir/flags.make"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/unit_tests/Structure/CMakeFiles/TestLossDataSinkMPI.dir/link.txt",
+    "sha256": "b404f7132e4809be5fc195d31aba9a3259e99dc0fc4a3b5152611c66059e3f31",
+    "bytes": 1922,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/unit_tests/structure/cmakefiles/testlossdatasinkmpi.dir/link.txt"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/unit_tests/Structure/CTestTestfile.cmake",
+    "sha256": "3c1501c48d8efaf7df52b595847336cf7e217b32b8cb2e19d1d27d1eda4a1b9a",
+    "bytes": 8760,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/build/unit_tests/structure/ctesttestfile.cmake"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace-ctest.log",
+    "sha256": "7a59a4464e6413b2bd2ee189ac5e19cd5dc7884a6fc3278c10560223c807f83b",
+    "bytes": 8054,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace-ctest.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3955962",
+    "sha256": "290b279306540666a286b5215c6ec4b271d977a1126bb28aac29a882ab56cc4f",
+    "bytes": 63111,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3955962"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3955963",
+    "sha256": "1fe33c802a28bf9509a1ca51bc3c39e3de437d28218ea85a7515011f287c89c9",
+    "bytes": 927194,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3955963"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3955964",
+    "sha256": "1241eb650171264e22c17e6acd4d00fbb831def91c53580bdcfe93bc5ef76c52",
+    "bytes": 927292,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3955964"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956010",
+    "sha256": "8ec9f6012590a830cc5b0c2ba42549fb77c693df68fec33577f2d4d38559fffb",
+    "bytes": 322,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956010"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956011",
+    "sha256": "ee5157c59e537103224fdbe58cdf82cb52735d8318a16070e82748ceed1bb796",
+    "bytes": 143,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956011"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956012",
+    "sha256": "bb35bddac420d9523fa87e658ea2ef52c9215e7434e745c9c2a46f9e3f404055",
+    "bytes": 27790,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956012"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956013",
+    "sha256": "12c6b1d894da6571137218a98e8d33face1f5676fc836dbaae1aafd1537c8a2b",
+    "bytes": 1422,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956013"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956014",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956014"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956015",
+    "sha256": "bb35bddac420d9523fa87e658ea2ef52c9215e7434e745c9c2a46f9e3f404055",
+    "bytes": 27790,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956015"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956016",
+    "sha256": "f532c756afee1eb546efadc288e5617cbd0745b86d90c2a5e94c1a3efe0106bc",
+    "bytes": 250374,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956016"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956017",
+    "sha256": "6794885b0d9f6d2618f8a3f4dc95bf094ba7461a78318532d2daaa3b21639463",
+    "bytes": 247184,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956017"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956018",
+    "sha256": "eeddb5f8ddc3bb4064d9787b7da13ed39779ad35f5a8920039e341b0b8763bdc",
+    "bytes": 1296,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956018"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956019",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956019"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956020",
+    "sha256": "6218f7539099a72cfbf9a6a20ce8d5d1f8ae75087f72f24d86be2972f49ea5d0",
+    "bytes": 279896,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956020"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956021",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956021"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956022",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956022"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956023",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956023"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956024",
+    "sha256": "aad783627e5a3d85f70521f488398d1e34047e8e86e45f980d1275f97e54ab34",
+    "bytes": 289,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956024"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956025",
+    "sha256": "fda46a9895647cb77369761f714d167332f74cf211d2959f128ba2413c4ef329",
+    "bytes": 289,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956025"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956026",
+    "sha256": "fda46a9895647cb77369761f714d167332f74cf211d2959f128ba2413c4ef329",
+    "bytes": 289,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956026"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956027",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956027"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956028",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956028"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956029",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956029"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956031",
+    "sha256": "7bc42baff5910912c6c050c1b25b8dc756709fc9b4d6cb5d9ad2e6a1d58348a0",
+    "bytes": 102,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956031"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956032",
+    "sha256": "7bc42baff5910912c6c050c1b25b8dc756709fc9b4d6cb5d9ad2e6a1d58348a0",
+    "bytes": 102,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956032"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956033",
+    "sha256": "7bc42baff5910912c6c050c1b25b8dc756709fc9b4d6cb5d9ad2e6a1d58348a0",
+    "bytes": 102,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956033"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956093",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956093"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956094",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956094"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956095",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956095"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956096",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956096"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956097",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956097"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956098",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956098"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956099",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956099"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956100",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956100"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956101",
+    "sha256": "29d50c6fb633dc49972d8ca854afcecf7e4bb5f479cb870f89ccdf6ff854bf31",
+    "bytes": 22,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/before-strace.3956101"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/binaries-corrected.sha256",
+    "sha256": "2dd122aae958e8339d9da6fec4b1cb4b8212e65980aef260a0a03a1289c0913b",
+    "bytes": 569,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/binaries-corrected.sha256"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/binaries.sha256",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/binaries.sha256"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/build.log",
+    "sha256": "ae10d92198299c38e997ad595838b82d52fb0688185af390b6514920c136f9ca",
+    "bytes": 210230,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/build.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/configure.log",
+    "sha256": "849fde83980e0902ff2cd2fa4ebb72b1e58ef1a4e192c53c9022cf86170f0270",
+    "bytes": 18419,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/configure.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/dependency-sources.json",
+    "sha256": "1f747cd9e0bef1c67df6c44f10bc6fe3511bf8ac621be274e9ecc26722d44aad",
+    "bytes": 2021,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/dependency-sources.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/isolated.log",
+    "sha256": "db1851230e7f0a2872056b470f5a3652cfdbcafefdfc61d8f952de49d3ab4bf1",
+    "bytes": 8053,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/isolated.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/isolated.xml",
+    "sha256": "d804ab69412bcfafe2445055d9c2f36c896992e4163127c1039928c8c766b916",
+    "bytes": 2876,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/isolated.xml"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/job.log",
+    "sha256": "10f48ff9621630231dd282866efd94adc7b9997858080ccd131a0d76246b2ec4",
+    "bytes": 238733,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/job.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/original-TestLossDataSink.cpp",
+    "sha256": "8334e99b84b8b7ccfa1bff245219c3fd3ec333bbed042bbc5b15003f6360647f",
+    "bytes": 27261,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/original-testlossdatasink.cpp"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/parallel-001.log",
+    "sha256": "e5e8c674c03a5d86ca63aaa5365cfeb2abec8d3890cec182659d1181bd6e3596",
+    "bytes": 12290,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/parallel-001.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/parallel-summary.json",
+    "sha256": "38082ef526ed4eeac572bd7996f622f078ff0ff1c7ad7e18338b2ff605f85e3e",
+    "bytes": 1180,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/parallel-summary.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/prepare.log",
+    "sha256": "4b6185cf7b9b3a5fe7beefaae56cc2a7447e41820db6afd12f21c882787eea8f",
+    "bytes": 3178,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/prepare.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/slurm-355089.out",
+    "sha256": "10f48ff9621630231dd282866efd94adc7b9997858080ccd131a0d76246b2ec4",
+    "bytes": 238733,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/slurm-355089.out"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/source-manifest.json",
+    "sha256": "7a576692c71f5cd7815bdd6e09b1c3f67e8e782d6a71959f1426e15212b35907",
+    "bytes": 116662,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/source-manifest.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/status.tsv",
+    "sha256": "44010f7a1aa97dedc3c56c9cfd5cc12ba171c99ba21d07bff2c0b095d884c3e0",
+    "bytes": 92,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/status.tsv"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/submission.json",
+    "sha256": "712519d07ab8405f68aba7709519454c48c66e0137ec7afd4db734d6d1165571",
+    "bytes": 205,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence/submission.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-after/build-all.log",
+    "sha256": "baf6e8ef5ead4e769e93c88ffba9fcf9d8973003ea4d311f635e1281645eba46",
+    "bytes": 63735,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-after/build-all.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-after/full-suite.log",
+    "sha256": "b079101dda217959e25ba0e55cebde0f0e6b1de84838a92b2dbce88f8e9afac2",
+    "bytes": 20610,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-after/full-suite.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-after/job.log",
+    "sha256": "f84a4bf7fae50445cfb5589f445ce861c9cf427162999fe13a61b50793220afb",
+    "bytes": 84684,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-after/job.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-after/source-change.json",
+    "sha256": "abc240863b75941c7fed87965d73fcb7845da0a393595bfc6e2c257bc72ab946",
+    "bytes": 366,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-after/source-change.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-after/status.tsv",
+    "sha256": "b1217506d1d493f97217a4a6e82ffb649c3f95efaca4fc35b2e31beeebee4fe8",
+    "bytes": 86,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-after/status.tsv"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-final/binary-verification.json",
+    "sha256": "01a56caeffb8a711e6cfc97e78d0f134f8cb04b72bd57fb2429fe9d7f005baee",
+    "bytes": 814,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-final/binary-verification.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-final/full-suite.log",
+    "sha256": "6f06d3385e15ef45d62a691929839bd129e82ed5b4aa770a50b9bd2a0899155a",
+    "bytes": 17923,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-final/full-suite.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-final/full-suite.xml",
+    "sha256": "3fd38a7ef1baaff6af5f5ecf418536a842a179f58238bdb1cfb66ba8537c3549",
+    "bytes": 175655,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-final/full-suite.xml"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-final/job.log",
+    "sha256": "926a9b5ee72def4e658da232854cb92ca1f131ba72777e3a632cf77364ce114b",
+    "bytes": 22735,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-final/job.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-final/library-before.sha256",
+    "sha256": "c5c6d69cc179a4bad74754ac1bfa19ad2f0f21b8f1103fbe351febae93484d70",
+    "bytes": 65,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-final/library-before.sha256"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-final/rebuild-fixed-targets.log",
+    "sha256": "8333b68860940be3fc626d93768feefabd8fbb25bf93725f934954908de153fc",
+    "bytes": 3659,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-final/rebuild-fixed-targets.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-final/source-verification.json",
+    "sha256": "59b9bd50ec433d96de173f024b0b247370798a47ef244e3af11331dc83d7b6ca",
+    "bytes": 298,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-final/source-verification.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-final/status.tsv",
+    "sha256": "dc5773f0a49574e1152899e275d11c929ad830d984ca01957bbb3ea6af352413",
+    "bytes": 91,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-final/status.tsv"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/gaussian-isolated.log",
+    "sha256": "dd431dec2189a7c8406872ac3fbc76bf84ea9c5fd75a6f0f18bb44bbd4fdbc45",
+    "bytes": 5001,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/gaussian-isolated.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/gaussian-isolated.xml",
+    "sha256": "0a81fa91cb9f8c76bc277bb372ecadb6b29b087cab11ff048a58fc3e042d0844",
+    "bytes": 2201,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/gaussian-isolated.xml"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/input-metadata.json",
+    "sha256": "c80018f16b0ad423df7dbc2f8ddb078872360375ffea50b022f7d09a0745a5dc",
+    "bytes": 564,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/input-metadata.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/job.log",
+    "sha256": "c9be84c84a6cb31e0d7e0563c3b82306ca34704af30ddad836d83e7c321dc6cc",
+    "bytes": 38953,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/job.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-001.log",
+    "sha256": "250cbae37170c2ecd25e598890ff94d9b6e34095d7dc57567235f215e6294e33",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-001.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-002.log",
+    "sha256": "51f3f657efbc283643d17843aa950042e4b039ddbfd77c0cd9dcec2bab4df066",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-002.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-003.log",
+    "sha256": "728ef2ae368b3d19f1cc31161827904762d75cb1785d9a5a5cdcef264b5e31eb",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-003.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-004.log",
+    "sha256": "66db0baca0be4bed1d6d3ad0d701baf9ba7018d20c1998517fbe3fd1e4c8ab6e",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-004.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-005.log",
+    "sha256": "a7c30c2257dc365e43e4a58fc6d08ce6abb9d5e19ee085cf57ac528df01193cd",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-005.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-006.log",
+    "sha256": "d266767d2ee63f65965392e4994e963fa17ff6e510cfe3ada4e32d6ce32631c7",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-006.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-007.log",
+    "sha256": "4738277cc5467ca79b52207e2249916100b9c0349299d23e23642c9dbae6ece8",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-007.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-008.log",
+    "sha256": "d7bd2744eb1f7209c1cae34ba3251f8e9da3324f7c5a6420d337b31ebe21d569",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-008.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-009.log",
+    "sha256": "1804d7afffe48271360e25c8c15f82802b9da3c8fb300d1cfe2a8ea39e4b9892",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-009.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-010.log",
+    "sha256": "0a3ba13c89ce5592e5fdc20ca12b78b903c4304d505fcad3f206716d951b5b99",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-010.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-011.log",
+    "sha256": "44a4e29c6129bf6309e6d80fbf5973d8996227381b513ac7402a10bae42ac298",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-011.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-012.log",
+    "sha256": "215ea84b3c76703ee931fc5d0fc926323e468d5bc5a71dc556bacc3dd63a889a",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-012.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-013.log",
+    "sha256": "07280e459544abede5e1ec464cc9ef67214cfed0127205be60af38589ba29be6",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-013.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-014.log",
+    "sha256": "06a72387365ad3fae14c5bc841a571ed00aa9677de63eed8fa8c2089e8b6d7cd",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-014.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-015.log",
+    "sha256": "13b2bc0d2de488c8d7c7f7c067b126508be5ebddea4a4127968fd902e0896c7c",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-015.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-016.log",
+    "sha256": "f056f0928d698e475c20546264cae28ae890aa306d28507e455993d3b836acc7",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-016.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-017.log",
+    "sha256": "b6f1c64d9cb08de9d9d2fe34a3d05da5713e49205a3a86e6b83f5adc7dabe2ad",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-017.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-018.log",
+    "sha256": "694336e2f4f0416c71fdcdcea1b636579622017821314d1ca93f14d21a07c649",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-018.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-019.log",
+    "sha256": "b10f5b4c61df03a4ebace3c818c1a9afd72e34ff3a711104d231825aaee98191",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-019.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-020.log",
+    "sha256": "51fa0c92753a1120247e35f3d39265e96d24cd16cabce96c3a4fca0f905227fe",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-020.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-021.log",
+    "sha256": "299a5029f9b485de6f8c50bd6a5f120ef748e35e35bcaf6d04e49dffccb602c4",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-021.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-022.log",
+    "sha256": "2531b2e075b6ffe5762e334ea17519ec43788ec8503951dc80421a2e4643adcb",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-022.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-023.log",
+    "sha256": "973a5e9275677a7d078358e1628fca0cf29e486476fa142d136b8eae0c5271bb",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-023.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-024.log",
+    "sha256": "359e9cc4c53a9808e7bdf1685e26a541e7aa1c7c77b5775c7aece02fdff0df6b",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-024.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-025.log",
+    "sha256": "f547e2506eceb17c7e29919a8b5143ad0c31db7677cb096a31f070340a0967d4",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-025.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-026.log",
+    "sha256": "e0d25ad530136911822af9f73f23d2ba3a4fed68842abdf7b727fa7f7164a3eb",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-026.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-027.log",
+    "sha256": "3e7f0e46a13a5af74221fcab135e556c3a7dab38a0ca54f0eff68fa4125e40e2",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-027.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-028.log",
+    "sha256": "f91babc63b367c45c8055339e3212e04a8615ad04894d74fd2db6ac914efb29c",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-028.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-029.log",
+    "sha256": "1064561bcfafa88e1f0ec19bd00eb60bd86bb21306be4b318e6c892259bf7d72",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-029.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-030.log",
+    "sha256": "25946c71f1ab620bbc5ec9fc804bfeffc208fca56bfef51cbc5ac61402077290",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-030.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-031.log",
+    "sha256": "6dada354b5c379d8bacefe38fee76f7a9228c02bc7c2d77daef5f3aea83e8dda",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-031.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-032.log",
+    "sha256": "6c7e8464e50fe62e7d245f0a41836f4fdd38720933e3cf115ece01ff10071b2e",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-032.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-033.log",
+    "sha256": "02e3c2c36cbe080617bb08ec8386a923e7a7a4736802994ce0bedf78d410aa1e",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-033.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-034.log",
+    "sha256": "a0a7510653bb2b9b333c747e93bb1f52a7fe735f33417924d2bedc410a0e25b8",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-034.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-035.log",
+    "sha256": "366eaa0e8a7f19859302a073167fb8c22cf800ae18a3066293c3975744ccbeae",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-035.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-036.log",
+    "sha256": "c6bfb3d5fb3bc48c4e3d65a558919b8364ed081f476f04e46d0931c06297a64c",
+    "bytes": 8050,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-036.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-037.log",
+    "sha256": "e87e1e08edebe744722bfb3198d7adcfee8d6dbf086e36d821d82b4caf1609c6",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-037.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-038.log",
+    "sha256": "2058f2825e4ecd59cb243dd7ad145912182a9260508b69fdc891cfbcbf10673e",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-038.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-039.log",
+    "sha256": "8055471e59dc8d66d7663a9065189fffba3421e79f4b83a9c45ec2c84078780f",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-039.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-040.log",
+    "sha256": "8076bea81bd4932ffd8d7f9fe7c885cc70faf7aac34c00e0527802d73a4e0457",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-040.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-041.log",
+    "sha256": "ea210f124d0e4cf47682b92587ea213eec17b9f9e366c10343f44973429444b9",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-041.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-042.log",
+    "sha256": "61ed1b27934cad82723a31919f77934f3640d2280c2c896e64d1029e97b223d9",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-042.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-043.log",
+    "sha256": "5f24268b81b4bba0c0c496285fd1b66efa70104ab563888ef748de8a6e6a3d3d",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-043.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-044.log",
+    "sha256": "0689c9ff12d9a21fb3e7a4afd5446ea63e02ed88003d6b25c37bac1551a7b590",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-044.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-045.log",
+    "sha256": "d6c7f719e2a9e99f0c8bc1f9708fab76a52407d7aaaf8fde030bc5824a524271",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-045.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-046.log",
+    "sha256": "18bee4604e32ed315d27f55e7583013d55908bcd33942e048f62f5baebbd3285",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-046.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-047.log",
+    "sha256": "3eb17744268ee3c2d285e64ca5d9801da64b4d7880964b0f3d4b264881781352",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-047.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-048.log",
+    "sha256": "a50e42e859eebefa87e07bbbb03094abc2c74bf2fa221bc9e9a2b48e184055fc",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-048.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-049.log",
+    "sha256": "102888bf8088f458d014518428b5fc12e1c2fba58311268c16ced8e3c200b517",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-049.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-050.log",
+    "sha256": "b93b4985f3d93a6c29cdd0715238cd3dba8cd986367baf8fc1e9d7377512fa12",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-050.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-051.log",
+    "sha256": "dadc1f87ffa701e102fb51b3ea172cfcbec6b282efb93e738dd63d89509008d1",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-051.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-052.log",
+    "sha256": "d5e2dfc0d63bd22d07c200efb1cbd059aa5af4828075193e73697e5264d0730a",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-052.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-053.log",
+    "sha256": "df5433a906499929820759dc5f33b6315210af71639f63e04e1e8cb7799ab301",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-053.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-054.log",
+    "sha256": "17ca9fd5548edeba2558b64fb6e6b66418ef3819af5ef41e184c6b27982cf82f",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-054.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-055.log",
+    "sha256": "6328e39a895466cc2ffd50c08e0ec90094a494a849ad46d5a58e4cabbdbb3b75",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-055.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-056.log",
+    "sha256": "31a45d05ccc2b1822081d1b47161066873dc8aa8766b407882f96f7dbec8ff08",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-056.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-057.log",
+    "sha256": "152f6d6aee91276491c6c7bc68cf4ef426dd391061500e5472df97cc5fb311c3",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-057.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-058.log",
+    "sha256": "fe90c39bca0c725754d922cca0fc4d856adb0900385694ee53fe5424f29bbada",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-058.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-059.log",
+    "sha256": "80f7683b637cc0b3704ec678e684017fc966e77bd3eef053ff8be23111fc861a",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-059.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-060.log",
+    "sha256": "b48c4b57a55af349f3398aa4d5ee8a85a0c37daca8791506c5f2067729bfb3a5",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-060.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-061.log",
+    "sha256": "3544adf76849a734b5e2f0e0dfc35da4ea38705f0a6d97c79edae84ba453718a",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-061.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-062.log",
+    "sha256": "bbe9a415ae625fce3f23fe8b5b240f8bedb8d2a640a2dc46ca4716ed1c882b96",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-062.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-063.log",
+    "sha256": "92d4d1b3a8416722bf7eb8106c95d40327c141130dec3d2b64e39deefafdb7d9",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-063.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-064.log",
+    "sha256": "d7be1ac84d6bd87e3211c065915e5fe292bb42f2b64e9e6282aac32865902db0",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-064.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-065.log",
+    "sha256": "c2bcaad581f06729dbf503720eff4b3bffaae2bd37a3d2d12908b568410ce57e",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-065.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-066.log",
+    "sha256": "61f699dbe0136228d8fb606b1b5ce1ae52c7d203693170a180fad5318a3d500b",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-066.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-067.log",
+    "sha256": "2c71a6398b19e3faf2da159cacd4783750106a0444a6996581276a63f71705cc",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-067.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-068.log",
+    "sha256": "f11d8112b07e244cbf43324f437bb0299e7964b056999319e9601af346ad1c11",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-068.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-069.log",
+    "sha256": "0d4c10d854dfabfeadab83898199e580b6218cc03de993aee411242dfbbd7671",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-069.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-070.log",
+    "sha256": "87a504a6c0f6acf6a9a5d42913ff1660fea78730bdb70b3a30e2070b66c11a5d",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-070.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-071.log",
+    "sha256": "1a3a97b4ce66e01938473f4db1d54f925ecb210d499cefee926103bb58e16ec1",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-071.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-072.log",
+    "sha256": "0d163af4eb5d4da73d432db7b691a8d713faa1516e159c94676fa872370b5347",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-072.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-073.log",
+    "sha256": "9ddf530035158fc220fdeaa3ea106be6cfe02066656f654e1ca85eedb6c939a1",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-073.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-074.log",
+    "sha256": "a37462e127ffaf5702b92b95ee3b888e209105d9b09ee50adbb63f21ca4950ac",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-074.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-075.log",
+    "sha256": "d67fa0039f49aa867779e997ffcdba6665f6e8c061f94cae56bad9bdbac72c49",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-075.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-076.log",
+    "sha256": "665cb4f13d6559731f8a03ed8ce2fee7fc255947f179bcca112d15e1fee29df8",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-076.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-077.log",
+    "sha256": "95e5233364f03cbe1237d9e9fb7430f46f16b8237eea83bd043edd00da3dc53a",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-077.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-078.log",
+    "sha256": "150c8171d891b0d22c10c849ce1804fa07196021c6c1a7550a144fe8727045ee",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-078.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-079.log",
+    "sha256": "f037383746e1ce34d175a0e49699a93777df15ac00c201f7532e201f1dcc7b4d",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-079.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-080.log",
+    "sha256": "a46f2f615591f4905ece878c915ace68d24ae534f2a7fb9cc53762857eb9083a",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-080.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-081.log",
+    "sha256": "1f51dd6c7a7628c8b2b5b89256df803ad52ad0a79d2d8831f8f719357361b944",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-081.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-082.log",
+    "sha256": "5782d7bbf4df0438f927a9dd76c43d81bb6250e8eeb9be1345db8f629aabb742",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-082.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-083.log",
+    "sha256": "7cfd7e7c59fff79f8c16e0768d8ba3619c8af83775d2e22c7e12057755a1142f",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-083.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-084.log",
+    "sha256": "befc24d718acf38074fc37c0f9a810bf39775409bfe47c643e422adf768908d7",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-084.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-085.log",
+    "sha256": "7d6801e3e27ced0ec6ef5ff12d9da31c6fb8db6806d8c30483d20efa479c59a4",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-085.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-086.log",
+    "sha256": "f486f305e12da311bac8b2042ec43c2a408082ebdf3f899bbb5eebd4389210f9",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-086.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-087.log",
+    "sha256": "c523d40188b5bf3e219fe09f72f766ffb2d123b31776117c9f31a07b33082af5",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-087.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-088.log",
+    "sha256": "a34d0eb8a02c7821bfbe7246131ac48fa840442fccd4ab003e03be83e808c48c",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-088.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-089.log",
+    "sha256": "bd92b856c05fcb6e46ae7328f026a5fc918f1cfc1ebdcd7443df247ff176c2d5",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-089.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-090.log",
+    "sha256": "9ea010f38cf9260ac211de2f8de126c3f83b160de07007cd57ecdf1294d00ddb",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-090.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-091.log",
+    "sha256": "760a8e2d91c0e90858fb2e454d891c1c3905abbbe846015956c55502bef61445",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-091.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-092.log",
+    "sha256": "4b969cf970da424d79ee362d42d8199b390ff85f3e58b94433cfab79886ec852",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-092.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-093.log",
+    "sha256": "3e7f473c0cfc6e9b5a433d238ddb520096ef54a9895cf934967f332eb9546819",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-093.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-094.log",
+    "sha256": "54d5833cdeb47da87c76049148fe24a50b2f98dd9aab0991d9e940a0d731e528",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-094.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-095.log",
+    "sha256": "bda03bb35686b104ad3d2837d4b314fdcb96babecc49f5ed4681b0f02d99c7a6",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-095.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-096.log",
+    "sha256": "66891368c00d96da6db0932f9f9f75809ad8fdb9f1cf0554c9e8f1de1b765e4f",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-096.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-097.log",
+    "sha256": "002f810f29ba0b749a38abfdf38c91b4793390404756c0a50055ab1eec13b212",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-097.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-098.log",
+    "sha256": "df880dc374ac538bb92b2cb099c503f967f50f8eac6d2f8da24cbc82283299aa",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-098.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-099.log",
+    "sha256": "f64e1a1308c2dcd835bfcde4ef69b17329c970f47d800b219899c75fa613fe7d",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-099.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-100.log",
+    "sha256": "3bdf34aa2ea334ea4248c2c79a16554ee601d9380102bbe076c1ee4cfde90d9e",
+    "bytes": 8049,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-100.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-summary.json",
+    "sha256": "2d41ac3fdab3de18d47616b25b4bfc4c4455fd3180a71e55d5f327a39610549d",
+    "bytes": 20131,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/parallel-summary.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/related.log",
+    "sha256": "98541f297b3a9c149a57d03d5e53170179bac566c1012e890e3a0ade0d4a69f2",
+    "bytes": 18736,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/related.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/related.xml",
+    "sha256": "e96a11cbe2ad80adb1a4b899a88b57f0fbeb0450a9e68b74ad3c71d24873102c",
+    "bytes": 6669,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/related.xml"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/status.tsv",
+    "sha256": "a81eb9c37eb1c65cf3dfa89ffe00a989b2bd0f3cc2a12643e363c8ab77306bc4",
+    "bytes": 131,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/status.tsv"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/terminal-verification.json",
+    "sha256": "70b7c50e81d09d141d1262d3e827a6a5745990d1b8c3018e894ed0bab554cb14",
+    "bytes": 150,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/evidence-stress/terminal-verification.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/fixed-TestLossDataSink.cpp",
+    "sha256": "c5f55848a0a2435d5256c9a12bbf7cd3bb09a2dafaf8eb983965bb1a8b8145b6",
+    "bytes": 27258,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/fixed-testlossdatasink.cpp"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/job-accounting.txt",
+    "sha256": "19acd58323d34145cd6a66f7116c3022333078eb074891bba4c42bea5a1c5a03",
+    "bytes": 1122,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/job-accounting.txt"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/mtime-check.json",
+    "sha256": "793d4a8a75addbff5260ebabe4a2374ee223bbbc6d178d7e5b17d2ad62ac09a9",
+    "bytes": 296,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/mtime-check.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/parallel_stress.py",
+    "sha256": "cac713aac6a525eb076751256c643c65532a4de4cd2c72296a1c9f7ad6d47f30",
+    "bytes": 848,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/parallel_stress.py"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/parallel_stress_after.py",
+    "sha256": "783aa84085996fbedefd0f3017b86068580fce297a4258cffbefd93a2440432b",
+    "bytes": 851,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/parallel_stress_after.py"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/prepare_remote.py",
+    "sha256": "8f5f8d0b2ba077a24a4e658017ac91366720b0578b8846b079030d8029a2b007",
+    "bytes": 3778,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/prepare_remote.py"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/relevant-final-submission.json",
+    "sha256": "a3d242808a52ec06e8ffa9004444debafae2e9f582a18e702ce44a7239201702",
+    "bytes": 376,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/relevant-final-submission.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/relevant-final.sbatch",
+    "sha256": "65f5199ea481f13f78150531a368013958065da943191f3da788461f4d9eac22",
+    "bytes": 4482,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/relevant-final.sbatch"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/task-jobs-terminal.json",
+    "sha256": "8597106ad877290bf4b194b4f7fce51e8ce1d67d9544b51b401287da331a43e4",
+    "bytes": 884,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/remote-evidence/task-jobs-terminal.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/retrieve-local.log",
+    "sha256": "94dbeecfedf57900fced12d73898498aca6d71ec748d21eae0e0cf23f3c901ad",
+    "bytes": 219,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/retrieve-local.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/retrieve-remote.log",
+    "sha256": "358dcb98798995bfb1b10469d6a199ff5fc66686d6daf3683455ccbecd6f963a",
+    "bytes": 563,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/retrieve-remote.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/retrieve_evidence.py",
+    "sha256": "00d54cdc186387563068360432cf58ce5554a4a332f447ef1938416aa09bafb5",
+    "bytes": 3636,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/retrieve_evidence.py"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/setup.log",
+    "sha256": "e12a24338f61021f837d91d4cc637edef6683add36c95b97a23a0dbc5ad9c1b2",
+    "bytes": 1431,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/setup.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/validation-evidence.json",
+    "sha256": "9eb9a86c126b550992fb56e993159077540e5bb83f133dc649ad8ebef0fdd4b2",
+    "bytes": 287,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/linux/validation-evidence.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/linux/validation-evidence.tgz",
+    "sha256": "3260c12c40b93741ad335e48b5f908d860db4c0cc6f88c04f85df9988e793bb2",
+    "bytes": 334632,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/macos-after-concurrent.log",
+    "sha256": "9531e6cd827160fc5149fc4d1da7e30aded087e958b07adecaf663b7abd60242",
+    "bytes": 10563,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/macos-after-concurrent.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/macos-before-concurrent.log",
+    "sha256": "e2c5cf20c0f7a5a2493f9b00a3911d60d847a87deee5686add25b3d1a4094398",
+    "bytes": 6982,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/macos-before-concurrent.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/macos-related.log",
+    "sha256": "24516a4fcf3c0c0945dee89e7e8e9563596b16f6ffeee883ab18ede9db24e30b",
+    "bytes": 830,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/macos-related.log"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/macos-related.xml",
+    "sha256": "7d9a0d45b0e3e9a9d7a7defaf904f5af6214dfebd33a357ff1ebc2fdf99bc821",
+    "bytes": 6575,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/lossdatasink-linux-debug-20261109/macos-related.xml"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/REPORT.md",
+    "sha256": "7501ac6f0d3a53f21f4efb50ecfc0c524c653f54f6351534bf0b11711d66be05",
+    "bytes": 4191,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/report.md"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/STATE.md",
+    "sha256": "46c91f49fe2bb1b47373a972b6a66d1f2ef9bbb847f25011b8a173a368d15084",
+    "bytes": 3287,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/state.md"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/analysis.log",
+    "sha256": "2e689c3512a9485857a866dfc864fc7b28d3f16cbc9ba321f155e0ed11ba45d1",
+    "bytes": 986,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/analysis.log"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/bare-reference-errors.csv",
+    "sha256": "74cff36fefa7bc2b7afa5c95bea482c64bad8ba5b197b34a61a0de994075a3a5",
+    "bytes": 12873,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/bare-reference-errors.csv"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/check_initial_and_bare.py",
+    "sha256": "70c393089f0cebb06426418bacb5a3e89fe150b2f3f0128919837244e1c5a495",
+    "bytes": 1918,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/check_initial_and_bare.py"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/common-frame-moments.csv",
+    "sha256": "8af333aaee279dac8454fa0b8466521f7f1c4eabe9ce1b10218675d95620c81f",
+    "bytes": 44816,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/common-frame-moments.csv"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/compare.py",
+    "sha256": "5375835a5a1d223d998a3d36e6a6d5dc90c4ee552859d058657da3dc0d727722",
+    "bytes": 7263,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/compare.py"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/compare_moments.py",
+    "sha256": "b5b3b6bb43ba0973d8bf8a69f5bf6379e9bc21bafa34a20d307e596692983eba",
+    "bytes": 4913,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/compare_moments.py"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/comparison.pdf",
+    "sha256": "6252f5126c948afaaeb1c20a7fe2b9b2947ba75dce818159b3fbf5c283f443d5",
+    "bytes": 26489,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/comparison.png",
+    "sha256": "dad2530c122625bf19d6047ef223afece083e4485772a188feef96c0a87bfbc3",
+    "bytes": 376334,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/differences.csv",
+    "sha256": "23a23cef70aa5e0aff4f86980a85882c285c07eeb3515cf2f0d3b164b61c65b7",
+    "bytes": 499,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/differences.csv"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/energy-rms-emittance.pdf",
+    "sha256": "ec4c47c0192c35456e8f2d13b0b7c5b96b34907607921cd047df524ba8ad9249",
+    "bytes": 39087,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/energy-rms-emittance.png",
+    "sha256": "080880fd60cb755619b269aeb011178f37d141a91f53776aa9ee1180dd8cbdb3",
+    "bytes": 798962,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/initial-bare-summary.json",
+    "sha256": "6b4712e7f3ef95e9ad7241a5a0edcefab312e410c8666182ec9c1a8c15076b55",
+    "bytes": 447,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/initial-bare-summary.json"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/last-common-time-moments.csv",
+    "sha256": "014ba325e27923cbb7035228b14c62aaf9f41f92b6ac8a9c4e2be028082d7c79",
+    "bytes": 474,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/last-common-time-moments.csv"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/moments-summary.json",
+    "sha256": "a0e6e26cc209f9631ce853ae0affdb66efa7a74d4e8fd4a9d47c4f6f6dd9e404",
+    "bytes": 1743,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/moments-summary.json"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/RINGCYCL.h5",
+    "sha256": "cf18216f18226f60a3502fe782456bb8d296559196d1ccb372edfb63bdf8c52a",
+    "bytes": 11016,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/acceleration-Angle0.dat",
+    "sha256": "91e37a505054d1dafd61e1589a127dfb80e1d4c65bbb16126308335d40908ff5",
+    "bytes": 26448,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/old-bare/acceleration-angle0.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/acceleration-Angle1.dat",
+    "sha256": "db1e1b49e9b960aaf2e457d7e7f1b72ed8342abcfd5471844bd01e6825d30bb2",
+    "bytes": 26535,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/old-bare/acceleration-angle1.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/acceleration-Angle2.dat",
+    "sha256": "7dcda14a32448d712fbefacc7e0392d29cda44e62363e0d3e3ce7cb9136ba149",
+    "bytes": 26359,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/old-bare/acceleration-angle2.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/acceleration-afterEachTurn.dat",
+    "sha256": "bc9e72c52de0eaf6e787312c26958d349449dfd560163886bc52aaa1b2ef2bf3",
+    "bytes": 26408,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/old-bare/acceleration-aftereachturn.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/acceleration-trackOrbit.dat",
+    "sha256": "7c623afbacb15ad7911e755afd453330a7209964168d0970e6d352adfa4f66e6",
+    "bytes": 13197578,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/acceleration.h5",
+    "sha256": "4c06bc52fc140ec60cb3d604776f197a05147cc53c95309ad2385cfc745ec51e",
+    "bytes": 3976,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/acceleration.in",
+    "sha256": "d03ed447bbcf6f339c7f4a88a049b71d6c3281326919c2c152de15282e3d94b3",
+    "bytes": 2642,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/old-bare/acceleration.in"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/acceleration.lbal",
+    "sha256": "c8f908259cdb27923cf2366d5cc8c67b8a54d33b13731137f0c9242866bf6c3e",
+    "bytes": 59937,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/old-bare/acceleration.lbal"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/acceleration.stat",
+    "sha256": "971e00c818a47a742eadfd08e1ffefbe8b255519c103ed9628df0c77ccca905e",
+    "bytes": 1753004,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/bunch.dat",
+    "sha256": "cb818393d839f6fe629e14042ef3759302530c57196579376f2d640cf8b46a45",
+    "bytes": 14,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/old-bare/bunch.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/launch.json",
+    "sha256": "11946530db603f76eb585ba19d01bb28a2a169705e7a5e7565498f6ffe11235e",
+    "bytes": 147,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/old-bare/launch.json"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/radial.h5",
+    "sha256": "32b57e8d3f59fa90b2b4e9913acb89a5bc084372a68a2920ceff9d54676bd700",
+    "bytes": 28096,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/radial.hist",
+    "sha256": "81e1036696a11e8f06bd00b665d72c06b51c0e7362e35464df829b1cdc93690f",
+    "bytes": 56082,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/old-bare/radial.hist"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/radial.peaks",
+    "sha256": "a3ff3f4b7061709fd51288ca5032de1bb2661a12467c24583758424d1bc35ca0",
+    "bytes": 1521,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/old-bare/radial.peaks"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/old-bare/rffield1.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/old-bare/rffield2.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/run.log",
+    "sha256": "c6aa9b83446d740c09c163a74f1dbfc65bb5d8e9db6d59cb24332beb67df21cb",
+    "bytes": 186398,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/old-bare/run.log"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-bare/timing.dat",
+    "sha256": "61ff566c30ae988eb83bc28ac127da52e6ee68abbfa430bf4c9d478b01cd472c",
+    "bytes": 2290,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/old-bare/timing.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/RINGCYCL.h5",
+    "sha256": "273fd57f17f9afceb999cdf5be2e9352577431e154227c2015b6c74173b35d51",
+    "bytes": 403608,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/acceleration-trackOrbit.dat",
+    "sha256": "00b64ba2e58fb66d7d15f3822891fd73b3a772ff096056c2de011da69df96a15",
+    "bytes": 26681545,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/acceleration.h5",
+    "sha256": "9a016fe902dd18ac749695f0a018ad2ddc0b355189a778970a5c2fc0a348b590",
+    "bytes": 46432416,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/acceleration.in",
+    "sha256": "850ffdb8096476a8da50d50d40667bdef7398bb1cc84d93bbf58abb39866ef41",
+    "bytes": 2644,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/old-full/acceleration.in"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/acceleration.lbal",
+    "sha256": "4b8ae736f49d0787f724814187f8169e41b57e6641c170a48aefbd90b5447b71",
+    "bytes": 64508,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/old-full/acceleration.lbal"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/acceleration.stat",
+    "sha256": "2c1efa2a34440aabefc4d00e1b874fa1f3b4fbae534586bdaa18ae7eb7869213",
+    "bytes": 2381122,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/bunch.dat",
+    "sha256": "825571547f070a4275da3d1380010f190f8bacd9c1fea6f75157084c75d29e7a",
+    "bytes": 602086,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/old-full/bunch.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/launch.json",
+    "sha256": "1fd1be4c7a2d088d3ff3b8e127a9e89b283d67c72a77b4a519bebe36b8d44338",
+    "bytes": 480,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/old-full/launch.json"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/manifest.json",
+    "sha256": "a15f0685ab19eb3cb84cfab8496c96236db0a6f52cd7d1c37c7d497192c60ad1",
+    "bytes": 583,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/old-full/manifest.json"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/radial.h5",
+    "sha256": "423e5564a0a160f9127de0615294ec1019935c5b941806d85ca2b4131c5924a7",
+    "bytes": 75074904,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/radial.hist",
+    "sha256": "81e1036696a11e8f06bd00b665d72c06b51c0e7362e35464df829b1cdc93690f",
+    "bytes": 56082,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/old-full/radial.hist"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/radial.peaks",
+    "sha256": "db10754924acaca04ecc2af6cec071a2cbc1662227d2e67d4f74c621727061d9",
+    "bytes": 1529,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/old-full/radial.peaks"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/old-full/rffield1.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/old-full/rffield2.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/run.log",
+    "sha256": "a451f0355035b8e48640b39af0b75a8d9ad34b3e3004c1a57710a3fc85810be8",
+    "bytes": 197553,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/old-full/run.log"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/old-full/timing.dat",
+    "sha256": "ab45f77f7eee6d328758f7ec5b18893ea91c28d3ea9a4d80308c4f5fc0dbe0eb",
+    "bytes": 2523,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/old-full/timing.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/per-turn-comparison.pdf",
+    "sha256": "829717096627ec254b2e578eff34821c1f541f5266affefd149d127c48dd40ab",
+    "bytes": 35042,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/per-turn-comparison.png",
+    "sha256": "bd8384d7ecb110aef735083037c323b8a6c1386f298e887dbf6ec01447265e1d",
+    "bytes": 593310,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/run_bare.py",
+    "sha256": "4117087b570d520109ad3e50401fdc65e822d1af8330919ffc0b76a9cbe0e91f",
+    "bytes": 946,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/run_bare.py"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/run_old.py",
+    "sha256": "b60fd8c6a4a3d16769a59d32067a0534264a3eb3cc2aaa0c544bdc3fe369d463",
+    "bytes": 1062,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/run_old.py"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/smoke/acceleration-trackOrbit.dat",
+    "sha256": "0446532659838a86cb94f2afe9e8b89bc40ebe14d05a650f96b3d7079e47a15c",
+    "bytes": 2519,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/smoke/acceleration-trackorbit.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/smoke/acceleration.h5",
+    "sha256": "a709c1fc3655401c4bb7d42de86fc79b5788b4316a7b871c7e3b321f95a19736",
+    "bytes": 4377736,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/smoke/acceleration.in",
+    "sha256": "1f139adeb4d82b3afac9904a7f593a6015ea496b9722503e09b8ea9f74ff79b8",
+    "bytes": 2637,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/smoke/acceleration.in"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/smoke/acceleration.lbal",
+    "sha256": "1a23230655ddea0a3f38b2ea2559d929b7a40ad72707f89108e0b2219ea6eafb",
+    "bytes": 858,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/smoke/acceleration.lbal"
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "files": [
+    {
+      "original_path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/run_opalx.py",
+      "archived_path": "helpers/run_opalx.py",
+      "sha256": "5022bdf64b7adae3cddc73e3c94fe9a8f105723628bc30f3507cf6a37e857a40",
+      "bytes": 5226
+    },
+    {
+      "original_path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/prepare_common.py",
+      "archived_path": "helpers/prepare_common.py",
+      "sha256": "1be01513fa1846df1bbed29d06645b5c0f691ece19de45481bd56f8885928a2d",
+      "bytes": 4007
+    },
+    {
+      "original_path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/run_native.py",
+      "archived_path": "helpers/pyorbit_run_native.py",
+      "sha256": "9999de9ff21e51e63d02296a6dcc2a13944ac1888238dc94fa09292956bf73f6",
+      "bytes": 8985
+    },
+    {
+      "original_path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/analytic-audit/analytic.py",
+      "archived_path": "helpers/analytic.py",
+      "sha256": "fcb93255f2eddd659a9a73047465758297cdb42b41c37d318b3f934c8378a55f",
+      "bytes": 9045
+    },
+    {
+      "original_path": "/Users/adelmann/git/PyORBIT3/LICENSE.txt",
+      "archived_path": "licenses/PyORBIT3-LICENSE.txt",
+      "sha256": "6ecf884db92999f36a7f3a27ac567ed9f7e3474360d8a55ae80f77ed4ffb316d",
+      "bytes": 1078
+    },
+    {
+      "original_path": "/Users/adelmann/git/opalx/LICENSE",
+      "archived_path": "licenses/OPALX-LICENSE",
+      "sha256": "59fe1b4aa9eafe4fae6e0392c83c4ba2ccd9b72efca2953479862db282717050",
+      "bytes": 35158
+    },
+    {
+      "original_path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/pyorbit-3.2.dev59+g28df66018.dist-info/direct_url.json",
+      "archived_path": "pyorbit-package/direct_url.json",
+      "sha256": "1c8c7401bbad792e611f26b44f8f5ef5552c0475dd7b9d8b799aa5ef25723694",
+      "bytes": 62
+    },
+    {
+      "original_path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/pyorbit-3.2.dev59+g28df66018.dist-info/WHEEL",
+      "archived_path": "pyorbit-package/WHEEL",
+      "sha256": "ae0ad7b2b2825be0d3e9260ead4bdc777493ab28f32fda6cdb97bbfb6a258993",
+      "bytes": 93
+    },
+    {
+      "original_path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/pyorbit-3.2.dev59+g28df66018.dist-info/REQUESTED",
+      "archived_path": "pyorbit-package/REQUESTED",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "original_path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/pyorbit-3.2.dev59+g28df66018.dist-info/INSTALLER",
+      "archived_path": "pyorbit-package/INSTALLER",
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+      "bytes": 4
+    },
+    {
+      "original_path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/pyorbit-3.2.dev59+g28df66018.dist-info/METADATA",
+      "archived_path": "pyorbit-package/METADATA",
+      "sha256": "faf8858b242239c5955a269b43b57957ad06e47248924b90898e5bdc62e89d5f",
+      "bytes": 261
+    }
+  ],
+  "large_inputs": "Source NPZ/DIST/HDF5 files and native runtimes are referenced by exact paths/hashes in run manifests and validation.json; native binaries are not copied here.",
+  "reproduction": "run_control.py imports triangle-pipe helper paths; use this mapping to restore their relative layout or update those imports to the archived helper paths. The executed upstream native PyORBIT harness is pinned separately from this local launcher."
+}

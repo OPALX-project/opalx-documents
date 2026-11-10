@@ -1,0 +1,771 @@
+{
+  "status": "relevant-tests-passed; full-suite has one unrelated Gaussian failure",
+  "baseline": {
+    "isolated_ctest_targets": 2,
+    "parallel_pair_iteration": 1,
+    "exact_rewind_case_failed": true,
+    "missing_keep_all_file": true,
+    "literal_CI_values_reproduced": false
+  },
+  "final": {
+    "full_suite_targets": 137,
+    "full_suite_passed": 136,
+    "full_suite_failed": [
+      "TestGaussian"
+    ],
+    "gaussian_first_failure": "largeCutoffDisablesTruncation:5.5717775960503042 exceeds5.5",
+    "gaussian_isolated_passed": false,
+    "related_targets_passed": 5,
+    "actual_CMake_build_type": "Debug",
+    "actual_platform": "OPENMP",
+    "local_checkout_verified": "/Users/adelmann/git/opalx-master",
+    "concurrent_pair_iterations": 100,
+    "concurrent_ctest_targets": 200,
+    "single_rank_case_executions": 1700,
+    "two_rank_subset_case_executions": 800,
+    "source": {
+      "base_source_id": "3320cf6fc490a8be7dc2a33468b35cd99804cf179fd13d07f4d62d00e4bc2ae3",
+      "files_verified": 1072,
+      "changed_file": "unit_tests/Structure/TestLossDataSink.cpp",
+      "after_sha256": "c5f55848a0a2435d5256c9a12bbf7cd3bb09a2dafaf8eb983965bb1a8b8145b6",
+      "other_verified_files": 1071
+    },
+    "binary_proof": {
+      "TestLossDataSink": {
+        "sha256": "242c4d29ff3550cbfcdd7b14f274b673c039b7025a38e0acd56fd038aa6a3446",
+        "baseline_sha256": "79b94b9cd71f7594ad22fd9ead199ce6983b4a0923185d99b52f6750bc03c436",
+        "source_mtime": 1794231682.5438426,
+        "object_mtime": 1794231691.7741177,
+        "binary_mtime": 1794231692.8278584,
+        "old_fixed_names_absent": true,
+        "new_owned_directory_label_present": true
+      },
+      "TestLossDataSinkMPI": {
+        "sha256": "242c4d29ff3550cbfcdd7b14f274b673c039b7025a38e0acd56fd038aa6a3446",
+        "baseline_sha256": "79b94b9cd71f7594ad22fd9ead199ce6983b4a0923185d99b52f6750bc03c436",
+        "source_mtime": 1794231682.5438426,
+        "object_mtime": 1794231700.0601223,
+        "binary_mtime": 1794231700.5540545,
+        "old_fixed_names_absent": true,
+        "new_owned_directory_label_present": true
+      }
+    },
+    "production_library_sha256_unchanged": "b8c48c6930df7121b0bd0e39dba18239808f64dc50146652d5b5f10cad3bc859"
+  },
+  "strace": {
+    "traced_pair_ctest_exit": 0,
+    "creator_pids": {
+      "test_monitor_checkpoint_rewind.h5": [
+        "3956020"
+      ],
+      "test_monitor_checkpoint_keep_all.h5": [
+        "3956020"
+      ],
+      "test_monitor_checkpoint_missing_step.h5": [
+        "3956020"
+      ],
+      "test_monitor_checkpoint_compaction.h5": [
+        "3956020"
+      ]
+    },
+    "cross_process_unlink_attempts": [
+      {
+        "pid": "3956016",
+        "file": "test_monitor_checkpoint_rewind.h5",
+        "operation": "unlink",
+        "success": false,
+        "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)",
+        "creator_pids": [
+          "3956020"
+        ]
+      },
+      {
+        "pid": "3956016",
+        "file": "test_monitor_checkpoint_keep_all.h5",
+        "operation": "unlink",
+        "success": false,
+        "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)",
+        "creator_pids": [
+          "3956020"
+        ]
+      },
+      {
+        "pid": "3956016",
+        "file": "test_monitor_checkpoint_missing_step.h5",
+        "operation": "unlink",
+        "success": false,
+        "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)",
+        "creator_pids": [
+          "3956020"
+        ]
+      },
+      {
+        "pid": "3956016",
+        "file": "test_monitor_checkpoint_compaction.h5",
+        "operation": "unlink",
+        "success": false,
+        "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)",
+        "creator_pids": [
+          "3956020"
+        ]
+      },
+      {
+        "pid": "3956016",
+        "file": "test_monitor_checkpoint_rewind.h5",
+        "operation": "unlink",
+        "success": false,
+        "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)",
+        "creator_pids": [
+          "3956020"
+        ]
+      },
+      {
+        "pid": "3956016",
+        "file": "test_monitor_checkpoint_keep_all.h5",
+        "operation": "unlink",
+        "success": false,
+        "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)",
+        "creator_pids": [
+          "3956020"
+        ]
+      },
+      {
+        "pid": "3956016",
+        "file": "test_monitor_checkpoint_missing_step.h5",
+        "operation": "unlink",
+        "success": false,
+        "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)",
+        "creator_pids": [
+          "3956020"
+        ]
+      },
+      {
+        "pid": "3956016",
+        "file": "test_monitor_checkpoint_compaction.h5",
+        "operation": "unlink",
+        "success": false,
+        "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)",
+        "creator_pids": [
+          "3956020"
+        ]
+      },
+      {
+        "pid": "3956016",
+        "file": "test_monitor_checkpoint_rewind.h5",
+        "operation": "unlink",
+        "success": false,
+        "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)",
+        "creator_pids": [
+          "3956020"
+        ]
+      },
+      {
+        "pid": "3956016",
+        "file": "test_monitor_checkpoint_keep_all.h5",
+        "operation": "unlink",
+        "success": false,
+        "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)",
+        "creator_pids": [
+          "3956020"
+        ]
+      },
+      {
+        "pid": "3956016",
+        "file": "test_monitor_checkpoint_missing_step.h5",
+        "operation": "unlink",
+        "success": false,
+        "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)",
+        "creator_pids": [
+          "3956020"
+        ]
+      },
+      {
+        "pid": "3956016",
+        "file": "test_monitor_checkpoint_compaction.h5",
+        "operation": "unlink",
+        "success": false,
+        "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)",
+        "creator_pids": [
+          "3956020"
+        ]
+      },
+      {
+        "pid": "3956016",
+        "file": "test_monitor_checkpoint_rewind.h5",
+        "operation": "unlink",
+        "success": false,
+        "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)",
+        "creator_pids": [
+          "3956020"
+        ]
+      },
+      {
+        "pid": "3956016",
+        "file": "test_monitor_checkpoint_keep_all.h5",
+        "operation": "unlink",
+        "success": false,
+        "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)",
+        "creator_pids": [
+          "3956020"
+        ]
+      },
+      {
+        "pid": "3956016",
+        "file": "test_monitor_checkpoint_missing_step.h5",
+        "operation": "unlink",
+        "success": false,
+        "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)",
+        "creator_pids": [
+          "3956020"
+        ]
+      },
+      {
+        "pid": "3956016",
+        "file": "test_monitor_checkpoint_compaction.h5",
+        "operation": "unlink",
+        "success": false,
+        "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)",
+        "creator_pids": [
+          "3956020"
+        ]
+      }
+    ],
+    "successful_cross_process_unlinks": 0,
+    "traces_with_relevant_calls": {
+      "3956016": [
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        }
+      ],
+      "3956020": [
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "create",
+          "line": "openat(AT_FDCWD, \"test_monitor_checkpoint_rewind.h5\", O_RDWR|O_CREAT, 0644) = 152"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": true,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = 0"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "create",
+          "line": "openat(AT_FDCWD, \"test_monitor_checkpoint_keep_all.h5\", O_RDWR|O_CREAT, 0644) = 152"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": true,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = 0"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "create",
+          "line": "openat(AT_FDCWD, \"test_monitor_checkpoint_missing_step.h5\", O_RDWR|O_CREAT, 0644) = 152"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": true,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = 0"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "create",
+          "line": "openat(AT_FDCWD, \"test_monitor_checkpoint_compaction.h5\", O_RDWR|O_CREAT, 0644) = 152"
+        },
+        {
+          "file": "test_monitor_checkpoint_rewind.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_rewind.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_keep_all.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_keep_all.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_missing_step.h5",
+          "operation": "unlink",
+          "success": false,
+          "line": "unlink(\"test_monitor_checkpoint_missing_step.h5\") = -1 ENOENT (No such file or directory)"
+        },
+        {
+          "file": "test_monitor_checkpoint_compaction.h5",
+          "operation": "unlink",
+          "success": true,
+          "line": "unlink(\"test_monitor_checkpoint_compaction.h5\") = 0"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Linux Debug/OpenMP on RHEL8/gcc14.3/Kokkos5.2.2, not exact CI Ubuntu26/gcc15.2/Kokkos5.2.0 image",
+    "Full local source snapshot registers137targets vs138 at CI synthetic merge; testedLossDataSinksource matchesexactCIfile",
+    "MPI target covers four rank/collective fixture contracts; it does not run the seventeen single-rank HDF5 cases",
+    "Baseline job terminal1 was a post-test fingerprint-path harness mistake; stale-binary validation was cancelled and replaced; raw history is retained"
+  ]
+}

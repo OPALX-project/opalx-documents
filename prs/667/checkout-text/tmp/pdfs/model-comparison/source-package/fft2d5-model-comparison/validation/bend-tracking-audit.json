@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-04",
+  "source_npz_sha256": "4cf23b08e775af54ab1b4d0cd25d090793d36d0735c6c0bd332ddc1af3939c59",
+  "no_native_runs": true,
+  "no_production_edits": true,
+  "cases": [
+    {
+      "code": "opalx",
+      "mode": "ZeroSC",
+      "identical_initial_source_hash": true,
+      "rows": 11,
+      "period_m": 12.566367358402026,
+      "source_json_sha256": "05e2b4556bc8dd2b57cb3e828be3800463d09908755c4b43e336855aa462ef86",
+      "maximum_geometric_sagitta_m": 1.5628406959677932e-06,
+      "all_ten_native_q_ids_times_passed": true,
+      "maximum_moment_sigma_residual_m": 4.218847493575595e-15,
+      "maximum_common_absolute_mean_residual_m": 1.305622276959184e-13,
+      "exact_discrete_Boris_position_residual_m": 9.547918011776346e-15,
+      "exact_discrete_Boris_momentum_residual_betagamma": 2.8189256484623115e-18
+    },
+    {
+      "code": "opalx",
+      "mode": "10pC",
+      "identical_initial_source_hash": true,
+      "rows": 11,
+      "period_m": 12.566367358402026,
+      "source_json_sha256": "05e2b4556bc8dd2b57cb3e828be3800463d09908755c4b43e336855aa462ef86",
+      "maximum_geometric_sagitta_m": 1.5628406959677932e-06,
+      "all_ten_native_q_ids_times_passed": true,
+      "maximum_moment_sigma_residual_m": 2.6645352591003757e-15,
+      "maximum_common_absolute_mean_residual_m": 3.197442310920451e-14
+    },
+    {
+      "code": "pyorbit",
+      "mode": "ZeroSC",
+      "identical_initial_source_hash": true,
+      "rows": 11,
+      "period_m": 12.566367358402026,
+      "source_json_sha256": "05e2b4556bc8dd2b57cb3e828be3800463d09908755c4b43e336855aa462ef86",
+      "maximum_geometric_sagitta_m": 1.5628406959677932e-06,
+      "longitudinal_step_encoding_recovers_g": 6.360000000000001,
+      "final_native_state_embedding_residual_m": 8.881784197001252e-16,
+      "final_sigma_residual_m": 9.380274335057948e-12,
+      "absolute_mean_residual_m": 9.880984919163893e-15,
+      "absolute_arc_mean_column": "mean_absolute_s_m",
+      "original_frenet_mean_s_m": -2.3969600768167087e-05,
+      "maximum_difference_from_exact_continuous_B_position_m": 9.506344294130109e-05,
+      "RMS_difference_from_exact_continuous_B_percent": [
+        -3.961274026575978e-05,
+        0.0,
+        -2.2475865613102997e-08
+      ],
+      "centroid_difference_from_exact_continuous_B_m": [
+        -1.1492966951457473e-05,
+        0.0,
+        -2.1034835510636007e-05
+      ]
+    },
+    {
+      "code": "pyorbit",
+      "mode": "10pC",
+      "identical_initial_source_hash": true,
+      "rows": 11,
+      "period_m": 12.566367358402026,
+      "source_json_sha256": "05e2b4556bc8dd2b57cb3e828be3800463d09908755c4b43e336855aa462ef86",
+      "maximum_geometric_sagitta_m": 1.5628406959677932e-06,
+      "longitudinal_step_encoding_recovers_g": 6.360000000000001,
+      "final_native_state_embedding_residual_m": 8.881784197001252e-16,
+      "final_sigma_residual_m": 9.340084261566517e-12,
+      "absolute_mean_residual_m": 3.9190872769268026e-14,
+      "absolute_arc_mean_column": "mean_absolute_s_m",
+      "original_frenet_mean_s_m": -2.3691579603257876e-05
+    }
+  ],
+  "root_merged_analysis_check": {
+    "components": 12,
+    "maximum_sigma_difference_m": 9.380274335057948e-12,
+    "maximum_absolute_arc_mean_difference_m": 1.092459456231154e-13,
+    "merged_moments_sha256": "9cc0cb811e1a3e917cc14414af53167c542205a8348dae706dde47edaa230b3a"
+  },
+  "charged_minus_own_zeroSC_centroid_response_m": [
+    {
+      "component": "u",
+      "opalx": 1.418167678094844e-07,
+      "pyorbit": 2.148678946144403e-06
+    },
+    {
+      "component": "y",
+      "opalx": 9.577123240027038e-19,
+      "pyorbit": 1.4206909738659506e-19
+    },
+    {
+      "component": "s",
+      "opalx": 1.0914709756004726e-06,
+      "pyorbit": 2.780211941777466e-07
+    }
+  ],
+  "passed": true,
+  "limits": [
+    "Original slice models only; this is not a corrected-curvature model tracking validation.",
+    "Native PyORBIT sector maps are paraxial, and its SC coordinates remain Frenet while OPALX uses a 5mm polyline.",
+    "The sagitta is a coordinate bound, not a field or trajectory error bound.",
+    "Exactly ten steps provide a consistency screen without step convergence.",
+    "Endpoint RMS-growth agreement does not extend to the weak radial or arc centroid responses."
+  ]
+}

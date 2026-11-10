@@ -1,0 +1,90 @@
+\clearpage
+\section{Triangular bunch in a conducting circular pipe}
+\label{sec:triangle-pipe}
+This control reproduces the longitudinal-force component of the straight
+round-pipe triangular-profile benchmark used in ORBIT~\cite{orbit2006,pyorbit3triangle}. It tests a local
+longitudinal field in a prescribed source; it is not a curved-field or tracking
+validation. The source has fixed circular radius $a=5$ mm, full length
+$L=10$ m, $N=10^{14}$ protons and kinetic energy $0.4$ GeV. The grounded
+pipe radius is $b=20$ mm. All comparisons use a single equivalent frozen
+kick of length $\ell=1$ m.
+
+With $s=0$ at the bunch centre, the line density and long-beam field are
+\begin{align}
+ \lambda(s)&=\frac{2Q}{L}\left(1-\frac{2|s|}{L}\right),
+   &&|s|<L/2,\\
+ E_s(r,s)&=-\frac{\lambda'(s)}{4\pi\eps\gamma^2}
+ \left[1+2\ln\frac ba-\frac{r^2}{a^2}\right],
+   &&0\le r\le a.
+ \label{eq:triangle-pipe}
+\end{align}
+The density vanishes outside its support. The bracket is $g_{\rm axis}
+=1+2\ln(b/a)$ on axis and has uniform-disk mean
+$\overline g=1/2+2\ln(b/a)$~\cite{baartman}. The local formula is compared
+only at $1\le|s|\le4$ m, excluding the cusp and ends. A proton's equivalent
+energy kick is $\Delta W[\mathrm{eV}]=\ell E_s[\mathrm{V/m}]$.
+The common physical reference gives $E_*=|E_s(0,s)|=10.681199$ kV/m on
+either linear branch. No coefficient is fitted.
+
+\reportfigure{triangle-pipe-fields}{Frozen on-axis field and signed difference
+from \cref{eq:triangle-pipe}. Black dashed: physical analytic solution;
+symbols: native results. Gray regions are excluded from acceptance;
+residuals use the fixed scale $E_*$ and the gray band marks $\pm1\%$.
+The cusp transition is displayed without an accuracy claim.}
+{fig:triangle-pipe-fields}
+\tabfile{triangle-results}
+Both columns are maximum pointwise relative differences from the physical
+analytic field: 62 on-axis targets and 82 radial targets at $s=\pm2.5$ m.
+All accepted reference values are nonzero. PyORBIT's sliced-potential and
+Baartman variants meet 1\%; native OPALX CIRCULAR does not.
+
+\clearpage
+\subsection{Numerical controls and the remaining model difference}
+All numerical changes quoted below use the 144 accepted targets.
+\reportfigure{triangle-pipe-controls}{Left: the physical analytic radial
+dependence and the selected native runs in \cref{fig:triangle-pipe-fields}.
+Right: physical on-axis errors under selected mesh changes. PyORBIT varies
+the transverse grid at fixed $N_z=128$ and the same 16-ring source; OPALX
+varies the coupled mesh from $128^3$ to $256^3$ with the same finer source.
+The primary PyORBIT slice result on the left uses 32 rings. The dotted line
+marks 1\%; these controls are not a joint asymptotic extrapolation.}
+{fig:triangle-pipe-controls}
+
+PyORBIT's sliced-potential variant imposes a grounded circular boundary and
+explicitly enables longitudinal kicks. Its last transverse mesh change is
+0.3384\% of $E_*$ on accepted targets; doubling radial and angular source sampling changes the
+field by 0.2838\%. The remaining on-axis bias, $-0.2861\%$, agrees with an
+independent discrete-ring potential prediction, $-0.2860\%$. The Baartman
+variant uses the radial $g(r)$ in \cref{eq:triangle-pipe}. Its largest
+accepted physical error is 0.00660\%.
+
+OPALX uses \code{PIPEMODE=CIRCULAR}, \code{BEAMR=0.005} m and
+\code{PIPESIZEX=PIPESIZEY=0.020} m. These sizes are full numerical widths
+$W$ of the open transverse mesh, while the longitudinal formula uses
+\begin{equation}
+ g_{\rm OPALX}=0.67+2\ln(W/a)=3.442589,
+ \qquad g_{\rm axis}=3.772589.
+ \label{eq:triangle-native}
+\end{equation}
+Thus $W=b$ matches the effective pipe radius in this formula, although its
+open numerical grid spans $\pm10$ mm; no transverse conducting wall is solved.
+For this centred round source the local transverse image field vanishes.
+The coefficient 0.67 belongs to an equivalent parabolic-bunch moment
+model~\cite{oeftiger}, rather than this pointwise fixed-radius disk reference.
+OPALX also omits the radial dependence of $E_s$. These model differences
+predict an on-axis bias of $-8.7473\%$ before numerical errors. The refined
+run follows its native formula within 0.161\%; the matched mesh change is
+0.1253\% of $E_*$ on accepted targets. Increasing $W$ to 40 mm at matched transverse spacing
+changes the native $g$ to 4.828883. This changes the longitudinal model,
+so it is not a padding test at fixed physical pipe radius.
+
+All six OPALX source/probe pairs and 16 PyORBIT configurations pass independent
+input, charge, position and field-conversion checks. OPALX uses a
+$10^{-20}$ s field readout and subtracts a matched probe-only solve;
+maximum probe motion is $2.2\times10^{-12}$ m. PyORBIT uses zero-charge
+probes and fixed-position native kicks. One-/two-rank PyORBIT fields agree
+within $1.5\times10^{-12}\%$ of $E_*$; FFT2D5 remains single-rank.
+An unresolved $N_z=256$ source-sampling case is retained in the archived data;
+increasing longitudinal samples removes its alias. No production solver,
+coefficient or physical tolerance was changed. These results concern the
+longitudinal field only, with no tune-shift, full-drift or curved-field claim.

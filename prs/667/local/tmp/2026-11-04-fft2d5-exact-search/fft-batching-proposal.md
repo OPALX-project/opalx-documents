@@ -1,0 +1,13 @@
+# OPALX-side batching proposal (no implementation authorized yet)
+
+User requests proposal only; NO IPPL edits; no16turnruns. Current exact hierarchy code and documents pushed, a1ad007c8 / ce71b01. Current executable d2c0add... preserved.
+
+Inspection: FFT2D5Poisson uses ippl::FFT<RCTransform>; its adapter copies both real/complex fields to/from temporary arrays each transform. IPPL lower-level HeffteC2C exposes batching; HeffteR2C does not expose it. Native heffte::fft3d_r2c already has forward/backward(batchSize, buffers, workspace, scale) in installed headers; IPPL exposes its native type via HeffteR2C::heffte_t and backend/options traits. Native compute_transform.cpp loops serially over batch FFT executors; do NOT promise thread-parallel FFT execution.
+
+Recommend retain R2C and instantiate existing native heFFTe batch plan inside existing OPALX FFT2D5Poisson. Use existing backend/options selection, Kokkos contiguous buffers, no FFTW-specific API/newdependency/no IPPLfiles. Keep existing serial path as reference and fallback for diagnostic/untested configurations. Batch independent slices, never FFT longitudinal axis. Chunk occupied indices e.g32, B32real+halfcomplexbuffers~8.06MiB for64x64 padded128x128, plus backendworkspace/Green. Reuse allocations/plan/Green; refresh on spacing/mesh change; no allocation perchunk.
+
+Pack/couple/pad allBslice sources in onekernel; native batched R2C; multiply unchanged cell-averaged Green+normalization in onebatchedkernel; batched inverse; compute same centered field using wrapped padded potential halo and write back3D stage in onekernel. Keep charge staging/longitudinal closure/ghosts unchanged. Neutral nonzero slices active, empty slices cleared, partialbatch/map/callbacksemantics preserved. Diagnostics may use serial path initially.
+
+Isolate bridge performance atB1 vs currentfieldwrapper, thenB8/32/64. Batchedcalls reduce1024forward/inverseAPIcalls per512slice solve to32atB32, but mathematical transforms unchanged. Target existing6.41s FFTbuffercopies plus tiny-kernel/interface overhead; additionalpack/unpack remains so no speedup promise. Current wholepilot~21.3s, FFT arithmetic stillserial; no automatic worker-utilization claim.
+
+Validationbeforeactivation: serial/batch fullpotential+halo,E/B/charge equivalence with currentnormalizationfullforward/unscaledinverse and same cellarea/Green/coupling;B1/partialbatch/empty/neutral/changinggrids/non-squaregrids/open+closedghosts. Existinganalyticquadrature/Gaussian/frame/cachetestsOMP1/4, MPI2rejection, identical100steppilotendpoints/stat/runtimes/profile. Numericalroundoffallowed, notbitwisetransformidentity. Preservecurrentexe;buildonlybuild-ompReleaseFFTW. User has not yet approved implementation.

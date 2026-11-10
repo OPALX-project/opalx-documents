@@ -1,0 +1,42 @@
+\begin{tikzpicture}[>=Latex,font=\small,line cap=round,line join=round]
+\definecolor{sacrblue}{RGB}{0,114,178}
+\definecolor{caporange}{RGB}{213,94,0}
+\begin{scope}[shift={(2.5,1.6)}]
+ \node at (0,.9) {\textbf{Free-space coupling}};
+ \fill[sacrblue!15] (0,-2) ++(161.62:2.11)
+   arc[start angle=161.62,end angle=18.38,radius=2.11]
+   -- ++(198.38:.22)
+   arc[start angle=18.38,end angle=161.62,radius=1.89] -- cycle;
+ \draw[sacrblue] (0,-2) ++(161.62:1.89)
+   arc[start angle=161.62,end angle=18.38,radius=1.89];
+ \draw[sacrblue] (0,-2) ++(161.62:2.11)
+   arc[start angle=161.62,end angle=18.38,radius=2.11];
+ \draw[caporange,very thick] (0,-2) ++(161.62:1.89)--++(161.62:.22);
+ \draw[caporange,very thick] (0,-2) ++(18.38:1.89)--++(18.38:.22);
+ \coordinate (target) at (0,0);
+ \coordinate (source) at (1.638,-.853);
+ \fill[sacrblue] (source) circle (2pt) node[below left=2pt] {$\mathbf X'$};
+ \fill (target) circle (2pt) node[left=3pt] {$\mathbf X_t$};
+ \draw[densely dashed,gray,thick] (source)--node[above,sloped,pos=.55] {$D$}(target);
+ \node[align=center] (vacuum) at (.15,-1.0) {uncharged\\vacuum};
+ \draw[->,gray] (vacuum.east)--(.89,-.47);
+ \draw[->,thick] (target)--(0,.6) node[right] {$\mathbf e_u$};
+ \draw[->,caporange,thick] (-1.898,-1.369)--(-2.10,-1.98)
+   node[below] {$\mathbf n'_-$};
+ \draw[->,caporange,thick] (1.898,-1.369)--(2.10,-1.98)
+   node[below] {$\mathbf n'_+$};
+ \node[caporange] at (-1.85,-.95) {$S_-$};
+ \node[caporange] at (2.05,-.95) {$S_+$};
+\end{scope}
+\begin{scope}[shift={(8.9,.9)}]
+ \node at (0,1.6) {\textbf{Each end face}};
+ \filldraw[fill=caporange!12,draw=caporange,thick] (0,0) circle (1.05);
+ \draw[->] (-1.25,0)--(1.4,0) node[right] {$u'$};
+ \draw[->] (0,-1.25)--(0,1.3) node[left] {$y'$};
+ \draw[caporange,thick] (.28,.22) rectangle (.60,.48);
+ \node[anchor=west] at (.68,.38) {$\dd S'$};
+ \node[align=center] at (0,-1.8)
+   {$s'=\pm b,\quad u'^2+y'^2<a^2$\\[3pt]
+    $\dd S'=\dd u'\dd y'$};
+\end{scope}
+\end{tikzpicture}

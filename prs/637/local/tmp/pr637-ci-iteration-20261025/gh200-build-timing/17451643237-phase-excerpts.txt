@@ -1,0 +1,11 @@
+2026-10-25T20:09:57.314091Z 00O+section_start:1792958997:step_script
+2026-10-25T20:09:59.797561Z 01O $ ctest -V -S $CI_PROJECT_DIR/ci/cscs/dashboard-configure-build.cmake -DCTEST_SITE="$CTEST_SITE" -DPRESET=alps-gh200 -DCDASH_LABEL=$CDASH_LABEL -DBUILD_TYPE=$BUILD_TYPE -DBUILD_DIR=$BUILD_PATH -DBUILD_ARCH=$BUILD_ARCH -DIPPL_GIT_TAG=master -DKokkos_ENABLE_DEBUG_BOUNDS_CHECK=OFF -DKokkos_ENABLE_DEBUG_DUALVIEW_MODIFY_CHECK=OFF -DMPIEXEC_EXECUTABLE=/usr/bin/srun -DMPIEXEC_PREFLAGS="$SRUN_FLAGS" -DMPIEXEC_MAX_NUMPROCS=4
+2026-10-25T20:13:06.070503Z 01O     ......................... Size of output: 24K
+2026-10-25T20:13:06.097735Z 01O Build project
+2026-10-25T20:49:07.782854Z 01O     ......................**........ Size of output: 332K
+2026-10-25T20:49:19.746013Z 01O $ echo "Build directory size (before cleanup):" $(du -sh $BUILD_PATH | cut -f1)
+2026-10-25T20:49:22.089654Z 01O Build directory size (before cleanup): 1.3G
+2026-10-25T20:49:43.290590Z 01O $ echo "Build directory size (cleaned for artefacts):" $(du -sh $BUILD_PATH | cut -f1)
+2026-10-25T20:49:47.190946Z 01O Build directory size (cleaned for artefacts): 810M
+2026-10-25T20:49:47.296584Z 00O section_end:1792961387:step_script
+2026-10-25T20:50:33.257225Z 00O Job succeeded

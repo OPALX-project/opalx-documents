@@ -1,0 +1,65 @@
+{
+  "source_files_verified": 1073,
+  "changed_file": "unit_tests/Distribution/TestGaussian.cpp",
+  "new_source_sha256": "6569cabdd647bd40dcbbeb280819aca92ea724b5f06b30972975b5bf830fa4ce",
+  "production_library_unchanged": true,
+  "both_prior_archives_unchanged": true,
+  "test_binary_unchanged_during_checks": true,
+  "gaussian_variants": [
+    {
+      "label": "gaussian-r1-t1",
+      "ranks": 1,
+      "threads": 1,
+      "returncode": 0,
+      "native_cases_run": 8,
+      "native_cases_passed": 8,
+      "native_cases_skipped": 0,
+      "OMP_NUM_THREADS": "1",
+      "IPPL_OPENMP_THREADS": "1",
+      "KOKKOS_NUM_THREADS": "1"
+    },
+    {
+      "label": "gaussian-r1-t4",
+      "ranks": 1,
+      "threads": 4,
+      "returncode": 0,
+      "native_cases_run": 8,
+      "native_cases_passed": 8,
+      "native_cases_skipped": 0,
+      "OMP_NUM_THREADS": "4",
+      "IPPL_OPENMP_THREADS": "4",
+      "KOKKOS_NUM_THREADS": "4"
+    },
+    {
+      "label": "gaussian-r2-t1",
+      "ranks": 2,
+      "threads": 1,
+      "returncode": 0,
+      "native_cases_run": 16,
+      "native_cases_passed": 16,
+      "native_cases_skipped": 0,
+      "OMP_NUM_THREADS": "1",
+      "IPPL_OPENMP_THREADS": "1",
+      "KOKKOS_NUM_THREADS": "1"
+    },
+    {
+      "label": "gaussian-r2-t4",
+      "ranks": 2,
+      "threads": 4,
+      "returncode": 0,
+      "native_cases_run": 16,
+      "native_cases_passed": 16,
+      "native_cases_skipped": 0,
+      "OMP_NUM_THREADS": "4",
+      "IPPL_OPENMP_THREADS": "4",
+      "KOKKOS_NUM_THREADS": "4"
+    }
+  ],
+  "distribution_targets_passed": 7,
+  "full_suite": {
+    "returncode": 0,
+    "targets": 137,
+    "passed": 137,
+    "failed": []
+  }
+}

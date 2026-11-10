@@ -1,0 +1,17 @@
+{
+  "command": [
+    "mpirun",
+    "-np",
+    "1",
+    "/Users/adelmann/git/opalx-master/tmp/ring-space-charge-profiles-20261023/opalx-pre-consolidation",
+    "acceleration.in",
+    "--info",
+    "1"
+  ],
+  "threads": 4,
+  "binary_sha256": "0c4f905d4aec6b0766a29e8619296b52cff337b6ef75a952718d5cc1477734fd",
+  "steps": 2000,
+  "start": 1792924627.024561,
+  "returncode": 156,
+  "elapsed_s": 11.215502977371216
+}

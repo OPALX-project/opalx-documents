@@ -1,0 +1,45 @@
+{
+  "source_revision": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+  "regression_base": "737547e6ae38cf3001d6bc45cf38dd1a47d78402",
+  "executable_sha256": "68fad17728ccb7ed11f51e906bd739d6c59fe1ab646749ef9a54737292242590",
+  "native_unit_tests": "self-contained C++; these draft scripts/data are manual integration artifacts only",
+  "inputs_verified_unchanged": 9,
+  "comparisons_passed": 10,
+  "checksum_files_verified": 6,
+  "references": [
+    {
+      "case": "FodoCell-multipoleT-fromfile",
+      "rows": 2001,
+      "comparisons": 7,
+      "checksums_passed": 3,
+      "particles_min": 1000.0,
+      "particles_max": 1000.0,
+      "charge_C": -1.602176633999999e-15,
+      "max_charge_error_C": 7.888609052210118e-31,
+      "energy_first_MeV": 1000.000000000093,
+      "energy_final_MeV": 1000.000000000176,
+      "energy_range_MeV": 1.589341991348192e-10,
+      "final_t_ns": 200.100000000003,
+      "final_s_m": 59.98846300498126,
+      "final_mean_separation_m": 0.0005032248614401254,
+      "max_mean_separation_m": 0.0005032248614401254
+    },
+    {
+      "case": "ScalingFFABasicPlacements",
+      "rows": 10,
+      "comparisons": 3,
+      "checksums_passed": 3,
+      "particles_min": 10.0,
+      "particles_max": 10.0,
+      "charge_C": 1.602176633999999e-15,
+      "max_charge_error_C": 7.888609052210118e-31,
+      "energy_first_MeV": 46.72604383544819,
+      "energy_final_MeV": 46.72604383544903,
+      "energy_range_MeV": 8.455458555545192e-13,
+      "final_t_ns": 99.99999999999804,
+      "final_s_m": 9.123980648976955,
+      "final_mean_separation_m": 7.931939441046071e-13,
+      "max_mean_separation_m": 8.327145229187566e-13
+    }
+  ]
+}

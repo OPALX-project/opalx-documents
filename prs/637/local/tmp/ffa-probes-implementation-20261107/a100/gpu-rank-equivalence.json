@@ -1,0 +1,24 @@
+{
+  "probe_numeric_records_identical_between_gpu_ranks": true,
+  "stations": 16,
+  "hits": 57,
+  "final_compared_fields": [
+    "id",
+    "x",
+    "y",
+    "z",
+    "px",
+    "py",
+    "pz",
+    "q",
+    "TIME",
+    "GlobalTrackStep",
+    "SPOS",
+    "RefPartR",
+    "RefPartP"
+  ],
+  "final_compared_values_identical": true,
+  "final_particles": 1,
+  "final_charge_C": 1.0000000000000001e-19,
+  "note": "Numeric fields compared; file bytes/runtime metadata are not compared. No simulation rerun."
+}

@@ -1,0 +1,400 @@
+diff --git a/physics/cyclotron.qmd b/physics/cyclotron.qmd
+index 14c4ae6..468e212 100644
+--- a/physics/cyclotron.qmd
++++ b/physics/cyclotron.qmd
+@@ -3,7 +3,7 @@ title: "Physics"
+ description: "Median-plane interpolation, off-plane extension, and legacy mirrored trim coils."
+ audience: physics
+ status: experimental
+-last-reviewed: "2026-09-09"
++last-reviewed: "2026-10-23"
+ ---
+ 
+ The first cyclotron implementation preserves the OPAL 2022.1 PSI Ring map model.
+@@ -75,6 +75,24 @@ counted at timestep endpoints. The final requested return is localized for stati
+ magnetic single-container tracking without collective fields or ongoing emission.
+ The threader's reference return remains a separate calculation.
+ 
++For coasting `RING` tracking, particle field candidates are selected from the
++current bunch bounds in the moving frame, transformed into each sector's local
++frame including misalignment. A conservative angular-wedge test retains sectors
++that may intersect those bounds. The field kernel then enforces the existing
++radial, vertical and half-open angular support. The threader's first-turn path
++index is not used to exclude magnetic sectors: its measured return length can
++differ from the tracked orbit and accumulate a boundary-selection error over
++successive turns. Field formulas, SI units and Boris substeps are unchanged.
++
++Candidate selection uses host bounds already available to tracking and adds no
++particle copies or MPI collectives; field evaluation remains in the existing
++Kokkos kernels. Sector callbacks follow prepared beamline order. Corrected
++membership and coordinate-frame round trips can change floating-point results.
++A ten-turn, zero-offset, 72 MeV PSI Ring proton check keeps particle/reference
++separation below $10^{-9}$ m on one and two MPI ranks. This is a tracking
++consistency check, not an absolute orbit-accuracy or convergence bound.
++
++
+ ### Final reference return event
+ 
+ With launch position $\mathbf r_0$ and unit launch momentum $\mathbf n$, the
+@@ -108,10 +126,11 @@ implementation. See [TURNS restrictions](../user-guide/tracking.qmd#turns).
+ ## Experimental discrete RF tracking
+ 
+ The experimental `CyclotronRFProfile` / `CyclotronRFKick` components implement
+-the radial-voltage model for forward median-plane protons. The implementation
+-is restricted to one unpolarized proton, one container, one MPI rank, and
+-a beamline containing only cyclotron sectors and discrete gaps. Restart is not
+-supported. `TRACK,EKINSTOP` adds a reference kinetic-energy target as described below.
++the radial-voltage model for forward unpolarized protons in one container and
++in a beamline containing only cyclotron sectors and discrete gaps. Particle
++transport uses Kokkos kernels and supports distributed bunches. Restart is not
++supported. Vertical momentum is preserved by the thin RF impulse; the voltage
++profile has no vertical dependence and vertical RF focusing is not modeled. `TRACK,EKINSTOP` adds a reference kinetic-energy target as described below.
+ 
+ Profiles contain normalized coordinate $u$, voltage multiplier $f(u)$, and
+ $df/du$ at each support point. Cubic Hermite interpolation uses the supplied
+@@ -139,18 +158,33 @@ $$
+ $$
+ 
+ where $\ell$ is the profile's physical length and momentum is in units of
+-$m_pc$. The extra $2\pi$ and the absence of a transit factor in the focusing
++$m_pc$. For three-dimensional momenta, the incoming speed uses all components;
++the outgoing longitudinal component satisfies
++$p_{z,f}^2=\gamma_f^2-1-p_x^2-p_y^2$ before the radial/longitudinal rotation. The extra $2\pi$ and the absence of a transit factor in the focusing
+ term reproduce OPAL 2022.1's convention deliberately. This is a compatibility
+-model, not a newly derived general RF focusing law. Unsupported off-plane or
+-backward states, and kicks without a physical outgoing momentum, are rejected
++model, not a newly derived general RF focusing law. Unsupported backward states, and kicks without a physical outgoing momentum, are rejected
+ without modifying momentum. Zero voltage leaves momentum exactly unchanged.
+ 
+ Host and Kokkos evaluation share the same formulas; the kick kernel performs no
+-MPI communication or host/device copies. The initial tracker calls the host kernel
+-and explicitly mirrors the single particle to/from host memory. It transforms
+-particle coordinates between the moving frame and lab frame; the reference uses
+-the same lab-frame stepping routine. This is not a production multi-particle or
+-GPU-optimized event integrator.
++MPI communication or particle host/device copies. Particle stepping transforms
++between the moving frame and laboratory axes inside the Kokkos kernel; map
++storage is shared read-only. The reference uses host field evaluation and the
++same directed-plane localization convention. Each particle's RF phase is
++computed at its own arrival time.
++
++With space charge, `SCFIELDUPDATE="MIDPOINT"` first predicts positions with a
++ballistic half drift, gathers the existing PIC self fields there, then restores
++the starting positions. Frozen gathered self fields supply Boris half kicks
++before and after the complete external magnetic/RF transport. `PRESTEP` samples
++self fields at the starting positions instead. This split approximates the
++collective force over each step; it does not solve Poisson separately at each
++particle's RF event. The timestep must resolve both collective evolution and
++gap crossings. Binning, Green functions, open boundaries and charge normalization
++retain the selected field solver's behavior. The reference carries no self-field
++kick and defines the common stopping time. A terminal reference energy event is
++localized before prediction/gather so the whole bunch uses that accepted duration.
++This experimental extension still needs mesh, particle and timestep convergence
++checks before quantitative extraction-density predictions.
+ 
+ A trial magnetic Boris step brackets positive crossings of each local $z=0$ gap
+ plane. Forty bisections of the substep time locate each root. The earliest accepted
+@@ -172,8 +206,9 @@ At DT/2 and DT/4 the maximum position differences against matched old-LF2 runs
+ are 0.507 and 0.186 micrometres. At DT/4 the final energy difference is -1.93 eV.
+ Those historical accelerating-turn comparisons sampled the return at a timestep
+ endpoint. The current localized `TURNS` mode excludes RF; accelerating runs use
+-their time/step schedule or `EKINSTOP`. Particle E/B diagnostic arrays are not populated by this event handler; field
+-diagnostics require separate explicit sampling. Timesteps must resolve individual
++their time/step schedule or `EKINSTOP`. Particle E/B diagnostic arrays contain gathered self fields when PIC is active;
++this event handler does not populate the external magnetic/RF contribution.
++External field diagnostics require separate explicit sampling. Timesteps must resolve individual
+ gap crossings without an intervening unobserved recrossing.
+ 
+ ## Energy-target semantics and long-run comparison
+diff --git a/physics/field-solver/index.qmd b/physics/field-solver/index.qmd
+index e7cce84..190a27b 100644
+--- a/physics/field-solver/index.qmd
++++ b/physics/field-solver/index.qmd
+@@ -3,7 +3,7 @@ title: "Field Solver Physics"
+ description: "Planned derivation and validation guide for OPALX particle-mesh space-charge solvers."
+ audience: physics
+ status: planned
+-last-reviewed: "2026-09-09"
++last-reviewed: "2026-10-23"
+ toc-depth: 3
+ ---
+ 
+@@ -116,23 +116,63 @@ is production-ready.
+ 
+ ## Binned rest-frame space charge {#physics-binned-space-charge}
+ 
+-For each populated bin $b$, OPALX computes the mean normalized momentum
+-$\mathbf p_b$ and a representative Lorentz factor $\gamma_b$. The longitudinal
+-mesh spacing is stretched by $\gamma_b$, charge is deposited and solved in the
+-approximate bin rest frame, and the gathered electric field $\mathbf E'_b$ is
+-transformed back according to
++For each populated bin, let $\mathbf p_i=\mathbf P_i/(mc)$ and define the
++equal-particle averages $\bar{\mathbf p}=\langle\mathbf p_i\rangle$ and
++$G=\langle\sqrt{1+|\mathbf p_i|^2}\rangle$. For **one configured bin,
++`TYPE=OPEN`, and no active image plane**, OPALX uses the instantaneous
++centre-of-momentum frame:
+ 
+ $$
+-\mathbf E_b=\gamma_b\mathbf E'_b
+- -(\gamma_b-1)(\mathbf E'_b\cdot\widehat{\mathbf v}_b)\widehat{\mathbf v}_b,
++\boldsymbol\beta=\frac{\bar{\mathbf p}}{G},\qquad
++D=G^2-|\bar{\mathbf p}|^2,\qquad
++\Gamma=\frac{G}{\sqrt D}.
++$$
++
++Here $G$ is mean particle energy in units $mc^2$, whereas $\Gamma$ is the bulk
++Lorentz factor. They coincide for coherent momenta; a warm sample with zero mean
++momentum has $\Gamma=1$ even when $G>1$. The weighted total spatial momentum of
++the sampled particles vanishes after this boost. The present single-bunch
++implementation assumes equal physical macroparticle weights.
++
++The solve axes are aligned with the bunch mean momentum. In those axes,
++$x'=x$, $y'=y$, and $z'=\Gamma z$ relative to the moving origin. The backend
++mesh uses $h'_z=\Gamma h_z$ and $\Delta V'=\Gamma\Delta V$. Charge normalization
++is therefore $\rho'=\rho/\Gamma$: the deposited `dt*Q` is divided by the solve
++timestep and the stretched cell volume, exactly once. For particles taking the
++full common timestep, $\sum_j\rho'_j\Delta V'_j=Q$; existing partial-step
++emission weights are retained. Lengths are in metres and charge density in
++C/m$^3$. The OPEN Poisson problem is
++$\nabla'^2\phi'=-\rho'/\epsilon_0$, with $\mathbf E'=-\nabla'\phi'$.
++
++The same $\Gamma$ and $\mathbf v=c\boldsymbol\beta$ enter field reconstruction:
++
++$$
++\mathbf E=\Gamma\mathbf E'
++ -(\Gamma-1)(\mathbf E'\cdot\widehat{\mathbf v})\widehat{\mathbf v},
+ \qquad
+-\mathbf B_b=\frac{\gamma_b}{c^2}\mathbf v_b\times\mathbf E'_b,
++\mathbf B=\frac{\Gamma}{c^2}\mathbf v\times\mathbf E',
+ $$
+ 
+-where $\mathbf v_b=c\mathbf p_b/\gamma_b$. Contributions from all populated
+-bins are accumulated before the particle push. One explicit bin applies a
+-single common boost to the bunch; multiple bins approximate a longitudinally
+-varying velocity distribution.
++with a zero direction vector when $\mathbf v=0$. Electric fields are in V/m and
++magnetic fields in tesla. The actual particle velocity, not the bulk velocity,
++is used by the pusher. For a comoving test particle the transverse force is
++$q\mathbf E'_\perp/\Gamma$. The bin table's `gammaBin` reports this bulk boost
++factor; verbose diagnostics retain `meanParticleGamma` separately.
++
++This remains a frozen electrostatic approximation: $\mathbf B'=0$ is assumed,
++and simultaneous laboratory samples are treated as one stationary rest-frame
++charge shape. Global zero CM momentum does not imply zero local current.
++Internal warm motion, retarded fields, and rest-frame time resynchronization
++are not added by this correction.
++
++Multi-bin solves, other backends, and solves with active image planes retain
++the earlier representative-frame approximation, using $G$ for both the mesh
++stretch and field coefficient and $c\bar{\mathbf p}/G$ for velocity. For warm
++bins that pair is not a single consistent Lorentz boost. `BINS=NONE` remains
++the separate laboratory electrostatic path. The corrected OPEN path requires
++mean momentum along solve z and rejects appreciably tilted inputs supplied
++directly to the solver. General tilted bins need a directional stretch
++$A=I+(\Gamma-1)\mathbf n\mathbf n^T$, not a change of z spacing alone.
+ 
+ ## Emission and conducting boundaries {#physics-emission-boundaries}
+ 
+diff --git a/physics/overview/index.qmd b/physics/overview/index.qmd
+index 6e9654c..8d34739 100644
+--- a/physics/overview/index.qmd
++++ b/physics/overview/index.qmd
+@@ -3,7 +3,7 @@ title: "Overview"
+ description: "Relativistic equations of motion, split-step integration, frame handling, and tracker structure."
+ audience: physics
+ status: current
+-last-reviewed: "2026-09-10"
++last-reviewed: "2026-10-23"
+ ---
+ ## Introduction {#sec.opalt.introduction}
+ 
+@@ -907,3 +907,47 @@ $$\rho(s) = B_0 \times S(s)$$
+ 
+ This expression can be substituted into the preceding recursion to obtain a more explicit
+ equation.
++
++
++### Cyclotron segment diagnostics {#cyclotron-probe-diagnostics}
++
++The cyclotron [PROBE](../../user-guide/elements.qmd#probe) applies the accepted
++endpoint interpolation above in both directions. Its legacy endpoint names
++$(XSTART,YSTART)$ represent laboratory $(x,z)$; the laboratory $y$ coordinate is
++vertical. Let $\mathbf a=(x_a,0,z_a)$ and $\mathbf b=(x_b,0,z_b)$ be the
++segment endpoints [m], $\mathbf d=\mathbf b-\mathbf a$, and
++$\mathbf n=(-d_z,0,d_x)$. After finding a transverse plane crossing
++$\mathbf r_c$, accept it only if
++
++$$
++0\leq\frac{(\mathbf r_c-\mathbf a)\cdot\mathbf d}{\mathbf d\cdot\mathbf d}\leq1.
++$$
++
++Both directions use a 1 nm arming distance. The vertical coordinate is
++unrestricted. Histories retain laboratory endpoints while the bunch frame
++changes; particle attributes carry the history through compaction and MPI
++migration. Only crossing records are transferred from the device for output.
++The diagnostic never changes physical particle state, fields, reference
++advancement, or accepted integration intervals.
++
++Radial histograms use $r_c=\sqrt{x_c^2+z_c^2}$ and bin index
++$\lfloor(r_c-r_{\min})/\Delta r\rfloor$, where $r_{\min}$ is the minimum
++radius on the finite segment and $\Delta r=STEP$ after conversion to metres.
++With $r_{\max}$ the maximum endpoint radius, the number of bins is
++$\lceil(r_{\max}-r_{\min})/\Delta r\rceil+1$; the extra bin includes an
++exact upper boundary. Histogram output converts lengths to mm.
++
++The `.peaks` observable is the arithmetic mean radius of hits assigned to each
++reference turn, with no charge weighting or histogram peak fit. An independent
++reference counter uses the launch section and forward reference momentum;
++turns start at zero. Hits in an accepted interval use the reference turn at the
++start of that interval. Near the reference return, this assigns crossings only
++to accepted-step resolution; reduce `DT` when turn grouping matters there.
++Collective diagnostic reductions may differ in their last bits across MPI
++partitions, but must preserve crossing IDs and integer hit counts.
++
++The interpolation error is $O(\Delta t^2)$ for smooth transverse crossings;
++no method based only on two endpoints can detect unresolved multiple crossings.
++An interval containing an RF impulse does not satisfy the smooth-momentum
++assumption, so probes should not coincide with SINGLEGAP planes. Diagnostic
++history and output rewind are not checkpointed in this implementation.
+diff --git a/user-guide/elements.qmd b/user-guide/elements.qmd
+index 0211637..b761e1a 100644
+--- a/user-guide/elements.qmd
++++ b/user-guide/elements.qmd
+@@ -3,7 +3,7 @@ title: "Elements"
+ description: "Configure current OPALX elements or consult the retained legacy OPAL element interfaces."
+ audience: user
+ status: current
+-last-reviewed: "2026-07-23"
++last-reviewed: "2026-10-23"
+ body-classes: "opalx-sidebar-page-toc"
+ ---
+ 
+@@ -35,7 +35,7 @@ Regression coverage is stated separately from parser registration.
+ | `LASER` | Source registered; no maintained regression input | none |
+ | `MONITOR` | Source registered; no maintained regression input | output file |
+ | `MARKER` | Source registered; no maintained regression input | none |
+-| `PROBE` | Source registered; no maintained regression input | output file |
++| `PROBE` | Cyclotron segment recording; coasting and RF integration checks | `.h5`/`.loss`, `.hist`, `.peaks` |
+ | `RBEND`, `SBEND` | Source registered; no maintained regression input | none |
+ | `VERTICALFFAMAGNET` | Source registered; no maintained regression input | none |
+ | `VARIABLE_RF_CAVITY` | Source registered; no maintained regression input | time models |
+@@ -640,21 +640,66 @@ IP: MARKER, ELEMEDGE=1.2;
+ 
+ ## `PROBE` {#probe}
+ 
+-`PROBE` records particle crossings over a rectangular span.
++`PROBE` records crossings of a finite cyclotron detector segment without removing
++particles or changing their integration steps. Include it in the tracked `LINE`
++or `RING` together with the `CYCLOTRONSECTOR` elements.
+ 
+ ```opal
+-P1: PROBE, L=0.001, ELEMEDGE=0.8,
+-    XSTART=-10, XEND=10, YSTART=-10, YEND=10,
+-    STEP=1, OUTFN="probe.h5";
++P1: PROBE, XSTART=1900, XEND=4700, YSTART=0, YEND=0,
++    STEP=1, OUTFN="radial-probe";
+ ```
+ 
+-| Parameter | Unit | Current behavior |
++| Parameter | Unit | Behavior |
+ |---|---:|---|
+-| `XSTART`, `XEND` | mm | Horizontal endpoints, converted to metres. |
+-| `YSTART`, `YEND` | mm | Vertical endpoints, converted to metres. |
+-| `STEP` | mm | Sampling step; default `1`. |
+-| `WIDTH` | mm | Accepted but not used by the current update path. |
+-| `OUTFN` | path | Output filename. |
++| `XSTART`, `XEND` | mm | Segment endpoint laboratory **X** coordinates. |
++| `YSTART`, `YEND` | mm | Segment endpoint laboratory **Z** coordinates (legacy cyclotron names). |
++| `STEP` | mm | Positive finite radial histogram bin width; default `1`. |
++| `WIDTH` | — | Legacy attribute, unused. |
++| `OUTFN` | path | Output basename; defaults to the element name. A supplied extension is removed. |
++
++The OPALX cyclotron machine plane is laboratory X–Z; laboratory Y is vertical
++and is unrestricted by the probe. Endpoints are global laboratory coordinates,
++independent of the containing sequence's pose. `L`, `ELEMEDGE` and the common
++placement attributes do not position the probe. Endpoints must be finite and
++distinct. Histograms are limited to 10 million bins per probe.
++
++Both crossing directions are recorded; segment endpoints are included. A
++particle initially on the detector is not recorded until it leaves and returns.
++A 1 nm excursion from the detector plane arms the next crossing and suppresses
++near-plane jitter. Crossings are interpolated between accepted particle states.
++Choose `DT` small enough to resolve each crossing and keep the probe away from
++RF impulse planes; see [crossing accuracy](../physics/overview/index.qmd#cyclotron-probe-diagnostics).
++
++For basename `radial-probe`, the outputs are:
++
++- `radial-probe.h5`, or `radial-probe.loss` with `OPTION, ASCIIDUMP=TRUE`:
++  particle ID, laboratory position [m], mechanical momentum normalized by
++  $mc$, crossing time [s], zero-based reference turn and container (`bunchNumber`).
++  HDF5 also stores particle charge [C] and mass [GeV/$c^2$].
++- `radial-probe.hist`: counts in radial bins, with bounds and bin width in mm.
++  Radius is measured from the laboratory origin in the X–Z plane.
++- `radial-probe.peaks`: mean crossing radius [mm] for each reference turn with
++  hits, in increasing turn order. These are radial means, not fitted histogram
++  peak locations. Hits from multiple containers with the same turn are pooled.
++
++Accepted probe hits are flushed collectively every 100 tracking steps and at
++normal completion. HDF5/ASCII records are appended; `.hist` and `.peaks` remain
++cumulative summaries. A collectively reported SINGLEGAP transport error flushes
++previously accepted crossings before aborting; the failed step is not recorded.
++A hard process termination can still lose the unflushed batch. Periodic flushing
++does not enable checkpoint restart.
++
++A run without hits writes a zero histogram and header-only `.peaks`, and no
++phase-space file. Probe output basenames must be unique within a run; existing probe output files
++are rejected, so use a fresh basename for each run. Recording
++supports particle sorting and MPI migration, including empty ranks. It does not
++relax existing restrictions of the SINGLEGAP cyclotron transport model.
++Checkpoint restart and continuation of an earlier particle tracking run are not
++yet supported. An independent fresh `TRACK` run starts a new recording and
++requires fresh output basenames. Legacy FFA/RingElement probe placement remains a separate feature. `COF`
++currently requires a field-only lattice without `PROBE`; use a separate `RING`
++for the orbit solve. A newly emitted particle begins its crossing history at its
++first accepted endpoint; no crossing is inferred across an unobserved interval.
+ 
+ ## `RBEND` and `SBEND` {#bends}
+ 
+diff --git a/user-guide/field-solver/index.qmd b/user-guide/field-solver/index.qmd
+index 04e1102..b2c9364 100644
+--- a/user-guide/field-solver/index.qmd
++++ b/user-guide/field-solver/index.qmd
+@@ -3,7 +3,7 @@ title: "Field Solvers"
+ description: "Configure OPALX particle-in-cell space charge, boundary conditions, binning, and cathode-plane corrections."
+ audience: user
+ status: current
+-last-reviewed: "2026-10-15"
++last-reviewed: "2026-10-23"
+ body-classes: "opalx-sidebar-page-toc"
+ ---
+ 
+@@ -252,13 +252,22 @@ with the uncorrected monolithic solve.
+ Set `BINS` to a named [`BINNING`](../structures/index.qmd#binning) definition.
+ At every field evaluation OPALX rebins particles, then for each populated bin:
+ 
+-1. computes its mean normalized momentum $\mathbf p_b$ and mean $\gamma_b$;
+-2. stretches the longitudinal mesh spacing by $\gamma_b$;
+-3. deposits that bin's charge and solves in its approximate rest frame;
+-4. transforms the result to the laboratory frame; and
+-5. accumulates electric and magnetic contributions from all bins.
+-
+-For $\mathbf v_b=c\mathbf p_b/\gamma_b$ and
++1. computes its mean normalized momentum $\mathbf p_b$ and mean particle energy factor $G_b$;
++2. selects a representative boost factor $\gamma_b$;
++3. stretches the longitudinal mesh spacing by $\gamma_b$;
++4. deposits that bin's charge and solves in its approximate rest frame;
++5. transforms the result to the laboratory frame; and
++6. accumulates electric and magnetic contributions from all bins.
++
++For `TYPE=OPEN`, `MAXBINS=1`, and no active image plane, OPALX uses the
++centre-of-momentum factor
++$\gamma_b=G_b/\sqrt{G_b^2-|\mathbf p_b|^2}$, consistently in charge-density
++normalization, mesh stretching and field reconstruction. Other binned paths
++retain the earlier approximation $\gamma_b=G_b$. See the
++[physics derivation and assumptions](../../physics/field-solver/index.qmd#physics-binned-space-charge).
++The bin table's `gammaBin` is the applied boost factor, not mean particle energy.
++
++For $\mathbf v_b=c\mathbf p_b/G_b$ and
+ $\hat{\mathbf w}_b=\mathbf v_b/|\mathbf v_b|$, the transformation is
+ 
+ $$

@@ -1,0 +1,623 @@
+diff --git a/.github/workflows/cpu-serial.yml b/.github/workflows/cpu-serial.yml
+index 037312488..f5f5fccdd 100644
+--- a/.github/workflows/cpu-serial.yml
++++ b/.github/workflows/cpu-serial.yml
+@@ -74,6 +74,16 @@ jobs:
+           - Drift-1-fromfile
+           - Drift-4-multi-emit-open
+           - FodoCell-fromfile
++          - FFT2D5-UniformB-ZeroSC
++          - FFT2D5-UniformB-1pC
++          - FFT2D5-TriangularPipe
++        include:
++          - test: FFT2D5-UniformB-ZeroSC
++            physics_validator: validate.py
++          - test: FFT2D5-UniformB-1pC
++            physics_validator: validate.py
++          - test: FFT2D5-TriangularPipe
++            physics_validator: validate.py
+ 
+     steps:
+       - name: Install MPI runtime
+@@ -103,6 +113,26 @@ jobs:
+           cd "$RUN_DIR"
+           mpirun -np 1 "$GITHUB_WORKSPACE/bin/opalx" ${{ matrix.test }}.in --info 2
+ 
++      - name: Set up Python for HDF5 field validator
++        if: matrix.test == 'FFT2D5-TriangularPipe'
++        uses: actions/setup-python@v7
++        with:
++          python-version: '3.11'
++
++      - name: Check independent physics at every step (${{ matrix.test }})
++        if: matrix.physics_validator
++        env:
++          TEST_NAME: ${{ matrix.test }}
++          PHYSICS_VALIDATOR: ${{ matrix.physics_validator }}
++        run: |
++          RUN_DIR="run_$TEST_NAME"
++          if [ "$TEST_NAME" = "FFT2D5-TriangularPipe" ]; then
++            python3 -m pip install h5py
++          fi
++          python3 "$RUN_DIR/$PHYSICS_VALIDATOR" \
++            --stat "$RUN_DIR/$TEST_NAME.stat" \
++            --output "$RUN_DIR/physics-validation.json"
++
+       - name: Compare stat output to reference (${{ matrix.test }})
+         env:
+           TEST_NAME: ${{ matrix.test }}
+@@ -171,3 +201,12 @@ jobs:
+ 
+           sys.exit(1 if failed else 0)
+           PYEOF
++
++      - name: Upload independent-physics validation (${{ matrix.test }})
++        if: always() && matrix.physics_validator
++        uses: actions/upload-artifact@v4
++        with:
++          name: physics-${{ matrix.test }}
++          path: |
++            run_${{ matrix.test }}/physics-validation.json
++            run_${{ matrix.test }}/*.stat
+diff --git a/.gitignore b/.gitignore
+index 898c27ba4..7320b1eab 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -46,4 +46,4 @@ coverage_html/
+ __pycache__/
+ *.pyc
+ sandbox
+-
++docs
+diff --git a/README.md b/README.md
+index 5fab1e4ff..e3bf40cc3 100644
+--- a/README.md
++++ b/README.md
+@@ -36,25 +36,6 @@ See [IPPL's formatting documentation](https://ippl-framework.github.io/Manual/se
+   - `Drift-4-multi-emit-open`
+   - `FodoCell-fromfile`
+ 
+-### Quick start with Docker
+-
+-A CPU (OpenMP) build of OPALX is published as a Docker image for x86-64 and
+-ARM64. It runs on Linux, on Windows with WSL 2, and on Intel and Apple Silicon
+-Macs, with nothing to compile. With [Docker](https://docs.docker.com/get-started/get-docker/)
+-installed, this runs one of the [regression tests](https://github.com/OPALX-project/regression-tests-x):
+-
+-```bash
+-git clone --depth=1 https://github.com/OPALX-project/regression-tests-x.git
+-cd regression-tests-x/RegressionTests/Drift-1-fromfile
+-docker run --rm --user "$(id -u):$(id -g)" -v "$PWD:/data" ghcr.io/opalx-project/opalx:cpu Drift-1-fromfile.in --info 2
+-```
+-
+-The results, such as `Drift-1-fromfile.stat`, are written next to the input
+-file. To run your own input file, use the same command in its directory with
+-its name. [docker/README.md](docker/README.md) covers MPI and OpenMP settings,
+-image tags, building the image, a development container and a step-by-step
+-guide for Macs.
+-
+ 
+ ## Manual and Documentation
+ 
+@@ -152,6 +133,10 @@ For the release mode, use `Release` instead of `Debug` as the argument for `-DCM
+ 
+ #### FFT2D5 transverse fields and reference paths
+ 
++For the original slice model, select `FFT2D5MODEL=ORIGINAL` with `PIPEMODE=OPEN`.
++See [model selection](docs/validation/fft2d5/model-selection.md) for defaults and scope.
++
++
+ `FFT2D5` deposits charge on a reference-path mesh using laboratory positions and
+ line charge. The slice Poisson field is therefore the laboratory transverse
+ electric field. The magnetic field follows `B = beta * t_hat cross E / c`, so a
+@@ -161,6 +146,30 @@ longitudinal density derivative is sampled at cell centers with the same shape
+ as charge deposition: linear interpolation for `SCATTERLONGITUDINALLY=TRUE`,
+ otherwise one cell. Closed-ring interpolation wraps across the path boundary.
+ 
++The transverse solver averages the free-space logarithmic Green function over
++each rectangular source cell, including the singular source cell, and computes
++the electric field with centered differences. This avoids a mesh-dependent
++self-cell error for thin beams. Slices share one FFT workspace. In the flat
++local models, empty slices produce zero field without an FFT solve; circular
++OPEN retains the radial field from distant charged slices.
++
++The [uniform-field ellipsoid benchmark](docs/validation/fft2d5/uniform-b-ellipsoid/README.md)
++validates curved tracking through a half-turn to within 1% in all total RMS sizes
++for its specified low-beta geometry. It also reports the larger relative errors
++in small charge-induced size changes, so this total-size criterion is not a
++claim of 1% accuracy in every space-charge response.
++
++`REFPATHFNAME` supplies Cartesian laboratory coordinates that remain fixed during
++tracking. Each solve maps the path and active particle containers into one common
++solve frame using their current reference transforms. Containers may have
++different moving reference frames; the physical path remains unchanged.
++
++The geometric mapping assumes a horizontal planar path. Circular OPEN adds
++a [thin-tube transverse curvature correction](docs/validation/fft2d5/curved-slice-radial.md)
++using two 2D slice solves and a 1D circular line integral. Its longitudinal
++field retains the local-g approximation; full curved-field and tracking
++accuracy require separate validation.
++
+ For an open path, `REFPATHFNAME` must cover the full finite bunch throughout
+ tracking, including particles behind the first reference-particle position.
+ Particles beyond either path endpoint now cause an error before deposition;
+diff --git a/src/Main.cpp b/src/Main.cpp
+index 84fd17b29..48f8e16a7 100644
+--- a/src/Main.cpp
++++ b/src/Main.cpp
+@@ -272,7 +272,11 @@ int main(int argc, char* argv[]) {
+             const auto hasLaterInputArgument = [&](int first) {
+                 for (int jj = first; jj < argc; ++jj) {
+                     const std::string arg(argv[jj]);
+-                    if (optionConsumesArgument(arg)) {
++                    if (arg == "--input") {
++                        if (jj + 1 >= argc) return false;
++                        const std::string next(argv[jj + 1]);
++                        return !next.empty() && next.front() != '-';
++                    } else if (optionConsumesArgument(arg)) {
+                         ++jj;
+                     } else if (arg == "--restart") {
+                         continue;
+diff --git a/tools/run_regression_smoke.py b/tools/run_regression_smoke.py
+index 55e442004..6d0d96856 100755
+--- a/tools/run_regression_smoke.py
++++ b/tools/run_regression_smoke.py
+@@ -7,7 +7,8 @@ that private copy, and all generated output and logs remain next to it.
+ 
+ Unless ``--exit-only`` is used, assertions from ``<test-name>.rt`` are applied
+ to the generated ``<test-name>.stat`` using the same relative-error rule as
+-``.github/workflows/cpu-serial.yml``.
++``.github/workflows/cpu-serial.yml``. An explicitly selected
++``--physics-validator validate.py`` adds the case's independent all-step checks.
+ """
+ 
+ from __future__ import annotations
+@@ -21,7 +22,7 @@ import shlex
+ import shutil
+ import subprocess
+ import sys
+-from typing import Any, Dict, List, Sequence, Tuple
++from typing import Any, Dict, List, Optional, Sequence, Tuple
+ 
+ 
+ EXIT_SUCCESS = 0
+@@ -225,12 +226,77 @@ def resolve_executable(value: str, description: str) -> Path:
+     return Path(located).resolve()
+ 
+ 
++def resolve_physics_validator(value: Path, test_directory: Path) -> Path:
++    """Require a case-local Python script, without absolute paths or escapes."""
++    if value.is_absolute():
++        raise SmokeRunnerError("--physics-validator must be relative to the copied test")
++    script = (test_directory / value).resolve()
++    if not is_within(script, test_directory.resolve()):
++        raise SmokeRunnerError("--physics-validator must stay within the copied test")
++    if not script.is_file():
++        raise SmokeRunnerError(f"physics validator does not exist: {script}")
++    return script
++
++
++def run_physics_validator(
++    script: Path,
++    stat_path: Path,
++    work_directory: Path,
++    artifact_directory: Path,
++    timeout: Optional[float],
++) -> Dict[str, Any]:
++    """Run the explicit validator and retain its report and process diagnostics."""
++    report_path = artifact_directory / "physics-validation.json"
++    if report_path.exists():
++        report_path.unlink()
++    command = [
++        sys.executable,
++        str(script),
++        "--stat",
++        str(stat_path),
++        "--output",
++        str(report_path),
++    ]
++    result: Dict[str, Any] = {"command": command, "report_path": str(report_path)}
++    stdout_path = artifact_directory / "physics-validator.stdout.log"
++    stderr_path = artifact_directory / "physics-validator.stderr.log"
++    try:
++        with stdout_path.open("w", encoding="utf-8") as stdout_stream, stderr_path.open(
++            "w", encoding="utf-8"
++        ) as stderr_stream:
++            completed = subprocess.run(
++                command,
++                cwd=work_directory,
++                stdout=stdout_stream,
++                stderr=stderr_stream,
++                check=False,
++                timeout=timeout,
++            )
++        result["return_code"] = completed.returncode
++    except subprocess.TimeoutExpired:
++        result.update({"passed": False, "error": "physics validator timed out"})
++        return result
++    except OSError as error:
++        result.update({"passed": False, "error": f"cannot launch physics validator: {error}"})
++        return result
++
++    try:
++        report = json.loads(report_path.read_text(encoding="utf-8"))
++        if not isinstance(report, dict) or not isinstance(report.get("passed"), bool):
++            raise ValueError("physics report must contain a boolean 'passed' value")
++        result["report"] = report
++        result["passed"] = completed.returncode == 0 and report["passed"]
++    except (OSError, ValueError) as error:
++        result.update({"passed": False, "error": f"invalid physics report: {error}"})
++    return result
++
++
+ def build_argument_parser() -> argparse.ArgumentParser:
+     """Define the command-line interface."""
+     parser = argparse.ArgumentParser(
+         description=(
+             "Copy one regression test to build-tree scratch space, run OPALX there, "
+-            "and optionally apply its .rt checks."
++            "and optionally apply its .rt and explicitly selected physics checks."
+         ),
+         epilog="""examples:
+   python3 tools/run_regression_smoke.py \\
+@@ -242,6 +308,11 @@ def build_argument_parser() -> argparse.ArgumentParser:
+     --opalx ../build_refactor_take_two/src/opalx \\
+     --test-dir ../regression-tests-x/RegressionTests/SwissFEL-booster-SC-emittedfromfile \\
+     --build-dir ../build_refactor_take_two --np 2 --exit-only
++
++  python3 tools/run_regression_smoke.py \\
++    --opalx build-omp/src/opalx \\
++    --test-dir ../regression-tests-x/RegressionTests/FFT2D5-UniformB-1pC \\
++    --build-dir build-omp --physics-validator validate.py
+ """,
+         formatter_class=SmokeHelpFormatter,
+     )
+@@ -290,11 +361,20 @@ def build_argument_parser() -> argparse.ArgumentParser:
+             "it is copied into the run artifacts before comparison"
+         ),
+     )
+-    parser.add_argument(
++    comparison_mode = parser.add_mutually_exclusive_group()
++    comparison_mode.add_argument(
+         "--exit-only",
+         action="store_true",
+         help="require only a zero OPALX exit code; do not parse .rt or compare .stat files",
+     )
++    comparison_mode.add_argument(
++        "--physics-validator",
++        type=Path,
++        help=(
++            "case-local Python validator, explicitly selected in addition to .rt checks; "
++            "called with --stat PATH --output JSON and required to report passed=true"
++        ),
++    )
+     parser.add_argument(
+         "--timeout",
+         type=positive_float,
+@@ -334,6 +414,9 @@ def run(args: argparse.Namespace) -> int:
+     input_source = test_dir / f"{test_name}.in"
+     if not input_source.is_file():
+         raise SmokeRunnerError(f"test input does not exist: {input_source}")
++    validator_source = None
++    if args.physics_validator is not None:
++        validator_source = resolve_physics_validator(args.physics_validator, test_dir)
+ 
+     opalx = resolve_executable(args.opalx, "OPALX executable")
+     mpi_launcher = resolve_executable(args.mpi_launcher, "MPI launcher")
+@@ -374,6 +457,10 @@ def run(args: argparse.Namespace) -> int:
+         write_json(manifest_path, manifest)
+         raise SmokeRunnerError(f"cannot copy {test_dir} to {work_dir}: {error}") from error
+ 
++    validator_path = None
++    if validator_source is not None:
++        validator_path = resolve_physics_validator(args.physics_validator, work_dir)
++
+     output_path = work_dir / f"{test_name}.stat"
+     if output_path.exists():
+         # A stale generated output may already be present in the source tree.
+@@ -405,6 +492,8 @@ def run(args: argparse.Namespace) -> int:
+             "status": "running",
+         }
+     )
++    if validator_path is not None:
++        manifest["physics_validator"] = str(validator_path)
+     write_json(manifest_path, manifest)
+     print(f"Command: {shlex.join(command)}")
+ 
+@@ -491,15 +580,32 @@ def run(args: argparse.Namespace) -> int:
+     (run_dir / "comparison.log").write_text(comparison_text, encoding="utf-8")
+     print(comparison_text, end="")
+ 
++    physics = None
++    if validator_path is not None:
++        physics = run_physics_validator(
++            validator_path, output_path, work_dir, run_dir, args.timeout
++        )
++        manifest["physics_validation"] = physics
++        print(f"Physics validator: {'PASS' if physics['passed'] else 'FAIL'}")
++        print(f"Physics report: {physics['report_path']}")
++
++    passed = comparison["passed"] and (physics is None or physics["passed"])
++    if not comparison["passed"]:
++        status = "comparison-failed"
++    elif physics is not None and not physics["passed"]:
++        status = "physics-validation-failed"
++    else:
++        status = "passed"
++
+     manifest.update(
+         {
+             "comparison": comparison,
+             "completed_at": dt.datetime.now(dt.timezone.utc).isoformat(),
+-            "status": "passed" if comparison["passed"] else "comparison-failed",
++            "status": status,
+         }
+     )
+     write_json(manifest_path, manifest)
+-    return EXIT_SUCCESS if comparison["passed"] else EXIT_TEST_FAILURE
++    return EXIT_SUCCESS if passed else EXIT_TEST_FAILURE
+ 
+ 
+ def main() -> int:
+diff --git a/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp b/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp
+index 1394b5caa..12b1c437c 100644
+--- a/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp
++++ b/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp
+@@ -606,3 +606,28 @@ TEST_F(ScalingFFAMagnetTest, ParticleFieldAddsToExistingField) {
+         EXPECT_EQ(Bhost(1)[d], existing[d]) << d;
+     }
+ }
++
++TEST_F(ScalingFFAMagnetTest, StaticOpticsApertureIsIndependentOfFieldSelection) {
++    for (double sign : {1., -1.}) {
++        sector_m->setR0(sign * r0_m);
++        sector_m->setRMin(r0_m - 0.1);
++        sector_m->setRMax(r0_m + 0.1);
++        sector_m->setVerticalExtent(0.01);
++        sector_m->setAzimuthalExtent(0.05);
++        const auto config = sector_m->getConfig();
++        const auto point  = [&](double r, double y, double offset) {
++            const double phi = config.phiStart_m + config.tanDelta_m * std::log(r / r0_m) + offset;
++            return Vector_t<double, 3>(sign * (r * std::cos(phi) - r0_m), y, r * std::sin(phi));
++        };
++        for (double r : {r0_m - 0.11, r0_m, r0_m + 0.11})
++            for (double y : {-0.011, 0., 0.011}) {
++                const auto insideWindow = point(r, y, 0);
++                const bool lost         = r < r0_m - 0.1 || r > r0_m + 0.1 || std::abs(y) > 0.01;
++                EXPECT_EQ(config.outsideAperture(insideWindow), lost);
++                EXPECT_EQ(config.contains(insideWindow), !lost);
++                // A different ring arm must not lose the ray through this aperture.
++                EXPECT_FALSE(config.outsideAperture(point(r, y, 0.06)));
++                EXPECT_FALSE(config.contains(point(r, y, 0.06)));
++            }
++    }
++}
+diff --git a/unit_tests/Algorithms/TestDeviceExternalField.cpp b/unit_tests/Algorithms/TestDeviceExternalField.cpp
+index 5527f0645..79e5ad849 100644
+--- a/unit_tests/Algorithms/TestDeviceExternalField.cpp
++++ b/unit_tests/Algorithms/TestDeviceExternalField.cpp
+@@ -3,6 +3,7 @@
+ #include <filesystem>
+ #include <fstream>
+ #include "AbsBeamline/CyclotronSector.h"
++#include "AbsBeamline/ScalingFFAMagnet.h"
+ #include "AbsBeamline/VariableRFCavity.h"
+ #include "Algorithms/DefaultVisitor.h"
+ #include "Algorithms/DeviceExternalField.h"
+@@ -514,3 +515,72 @@ TEST_F(DeviceExternalFieldTest, EligibilityRejectsHigherBendComponentsButAllowsZ
+         }
+     }
+ }
++
++TEST_F(DeviceExternalFieldTest, ScalingFFASpiralSupportMatchesElementAndAccumulatesFringes) {
++    Beam beam;
++    FlaggedBeamline line;
++    DefaultVisitor visitor(line, false, false);
++    const double pi = std::acos(-1.), radius = 4.42;
++    for (double sign : {1., -1.}) {
++        PartBunch_t bunch(
++                {1.}, {1.}, {&beam}, {0}, 1., "LF2", opalx::spacecharge::CartesianDomainConfig3D{});
++        OpalBeamline lattice;
++        for (unsigned i = 0; i < 2; ++i) {
++            ScalingFFAMagnet magnet("ffa" + std::to_string(i));
++            magnet.setR0(sign * radius);
++            magnet.setFieldIndex(7.717022064259446);
++            magnet.setTanDelta(1.);
++            magnet.setMaxOrder(4);
++            magnet.setRMin(radius - 0.8);
++            magnet.setRMax(radius + 1.2);
++            magnet.setVerticalExtent(0.5);
++            magnet.setAzimuthalExtent(2 * pi / 16);
++            magnet.setPhiStart(0.04);
++            magnet.setDipoleConstant(i == 0 ? -0.6532097983351404 : 0.502765236428169);
++            magnet.setEndField(
++                    std::make_shared<endfieldmodel::AsymmetricEnge>(
++                            std::vector<double>{-1.3, 3.42, -1.2, 0.23}, 0.04, 0.12 / radius,
++                            std::vector<double>{-1.3, 3.42, -1.2, 0.23}, 0.04, 0.12 / radius));
++            magnet.initialise();
++            magnet.setCSTrafoGlobal2Local(CoordinateSystemTrafo());
++            magnet.fixPosition();
++            lattice.visit(magnet, visitor, bunch);
++        }
++        lattice.prepareSections();
++        ASSERT_TRUE(device_external::Builder::supports(lattice));
++        auto device = device_external::Builder::build(lattice);
++        EXPECT_FALSE(device.fieldOracleSupported);
++        device_external::State state;
++        EXPECT_FALSE(device.advance(state, 1e-12, 938e6, 1.));
++        const auto source = lattice.getElements();
++        auto host = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), device.elements);
++        for (const auto& element : source) {
++            const auto& magnet = dynamic_cast<const ScalingFFAMagnet&>(*element);
++            for (double r : {radius - 0.81, radius - 0.79, radius, radius + 1.19, radius + 1.21})
++                for (double y : {-0.501, -0.499, 0., 0.499, 0.501})
++                    for (double offset : {-0.394, -0.391, 0., 0.391, 0.394}) {
++                        const double phi = 0.04 + std::log(r / radius) + offset;
++                        const Vector point(
++                                sign * (r * std::cos(phi) - radius), y, r * std::sin(phi));
++                        EXPECT_EQ(host(0).contains(point), magnet.isInside(point));
++                    }
++        }
++        const auto particles = bunch.getParticleContainer();
++        particles->createParticles(1);
++        const Vector point(sign * radius * (std::cos(0.04) - 1), 0.001, radius * std::sin(0.04));
++        Vector expected(0);
++        for (const auto& element : source) {
++            Vector field(0);
++            dynamic_cast<ScalingFFAMagnet&>(*element).getFieldValue(point, field);
++            expected += field;
++        }
++        Kokkos::deep_copy(particles->R.getView(), point);
++        Kokkos::deep_copy(particles->B.getView(), Vector(0));
++        for (const auto& element : device_external::orderedCandidates(lattice, source))
++            element->apply(particles);
++        const auto fields =
++                Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), particles->B.getView());
++        for (unsigned d = 0; d < 3; ++d)
++            EXPECT_NEAR(fields(0)(d), expected(d), 1e-12);
++    }
++}
+diff --git a/unit_tests/Elements/TestOpalBeamlinePlacement.cpp b/unit_tests/Elements/TestOpalBeamlinePlacement.cpp
+index 66242d061..03b3af52a 100644
+--- a/unit_tests/Elements/TestOpalBeamlinePlacement.cpp
++++ b/unit_tests/Elements/TestOpalBeamlinePlacement.cpp
+@@ -1,4 +1,6 @@
++#include "AbsBeamline/ScalingFFAMagnet.h"
+ #include "Algorithms/DefaultVisitor.h"
++#include "Elements/PlacementResolver.h"
+ #include "gtest/gtest.h"
+ 
+ #include "AbstractObjects/OpalData.h"
+@@ -494,3 +496,132 @@ TEST_F(OpalBeamlinePlacementTest, AcceptsUniform6DPoseAcrossMultipleElements) {
+ 
+     EXPECT_NO_THROW(beamline.prepareSections());
+ }
++
++// The school F/D cell has overlapping spiral fringe supports. Test placement
++// independently of tracking, against the median-plane scaling law in metres.
++TEST_F(OpalBeamlinePlacementTest, SchoolScalingFFACellEntrancePosesAndSignedRadii) {
++    const double radius = 4.42, pi = std::acos(-1.);
++    const double starts[]    = {(13.5 + 0.73) * pi / 180, (2.25 - 0.73) * pi / 180};
++    const double lengths[]   = {4.5 * pi / 180 * radius, 2.25 * pi / 180 * radius};
++    const double strengths[] = {-0.6532097983351404, 0.502765236428169};
++    const std::vector<double> coefficients{-1.3, 3.42, -1.20, 0.23};
++    const auto edge = [](double u) {
++        return 1 / (1 + std::exp(-1.3 + u * (3.42 + u * (-1.20 + 0.23 * u))));
++    };
++    for (double sign : {1., -1.})
++        for (double spiral : {pi / 4, 55 * pi / 180})
++            for (bool pose : {false, true}) {
++                ElementList cell;
++                for (unsigned i = 0; i < 2; ++i) {
++                    const std::string name = "school_fringe_" + std::to_string(i);
++                    endfieldmodel::EndFieldModelManager::getEFMManager()->setEndFieldModel(
++                            name, std::make_shared<endfieldmodel::AsymmetricEnge>(
++                                          coefficients, lengths[i] / 2, 0.12, coefficients,
++                                          lengths[i] / 2, 0.12));
++                    auto magnet = std::make_shared<ScalingFFAMagnet>(name);
++                    magnet->setR0(sign * radius);
++                    magnet->setEndFieldName(name);
++                    magnet->setDipoleConstant(strengths[i]);
++                    magnet->setFieldIndex(7.717022064259446);
++                    magnet->setTanDelta(std::tan(spiral));
++                    magnet->setMaxOrder(4);
++                    magnet->setRMin(radius - 0.8);
++                    magnet->setRMax(radius + 1.2);
++                    magnet->setVerticalExtent(0.5);
++                    magnet->setAzimuthalExtent(2 * pi / 16);
++                    magnet->initialise();
++                    if (pose) {
++                        magnet->setCSTrafoGlobal2Local(CoordinateSystemTrafo(
++                                Vector3(sign * radius * (std::cos(starts[i]) - 1), 0,
++                                        radius * std::sin(starts[i])),
++                                rotationAroundY(sign * starts[i])));
++                    } else {
++                        magnet->setElementPosition(radius * starts[i]);
++                    }
++                    cell.push_back(magnet);
++                }
++                const CoordinateSystemTrafo labFrame(
++                        Vector3(0.3, -0.2, 0.1), rotationAroundY(0.17));
++                PlacementResolver::resolve(cell, labFrame);
++                unsigned i = 0;
++                for (const auto& element : cell) {
++                    auto& magnet = dynamic_cast<ScalingFFAMagnet&>(*element);
++                    EXPECT_NEAR(magnet.getGeometry().getArcLength(), lengths[i], tol);
++                    EXPECT_NEAR(magnet.getPhiStart(), lengths[i] / (2 * radius), tol);
++                    for (double r : {radius - 0.1, radius, radius + 0.1})
++                        for (double offset : {-0.03, 0., 0.03}) {
++                            const double phi = starts[i] + lengths[i] / (2 * radius)
++                                               + std::tan(spiral) * std::log(r / radius) + offset;
++                            Vector3 lab(sign * (r * std::cos(phi) - radius), 0, r * std::sin(phi));
++                            const auto local = element->getCSTrafoGlobal2Local().transformTo(
++                                    labFrame.transformFrom(lab));
++                            Vector3 b;
++                            magnet.getFieldValue(local, b);
++                            const double s = radius * offset, half = lengths[i] / 2;
++                            const double expected =
++                                    strengths[i] * std::pow(r / radius, 7.717022064259446)
++                                    * (-1 + edge((-s - half) / 0.12) + edge((s - half) / 0.12));
++                            EXPECT_NEAR(b(1), expected, 2e-12);
++                            EXPECT_NEAR(b(0), 0, tol);
++                            EXPECT_NEAR(b(2), 0, tol);
++                        }
++                    // Maxwell's curl relation at the median plane supplies an
++                    // independent first-order off-plane check for this profile.
++                    const double centrePhi = starts[i] + lengths[i] / (2 * radius);
++                    const Vector3 centre(
++                            sign * radius * (std::cos(centrePhi) - 1), 0,
++                            radius * std::sin(centrePhi));
++                    const auto point = element->getCSTrafoGlobal2Local().transformTo(
++                            labFrame.transformFrom(centre));
++                    const double h = 1e-6;
++                    Vector3 off    = point, offField;
++                    off(1)         = h;
++                    magnet.getFieldValue(off, offField);
++                    for (unsigned d : {0u, 2u}) {
++                        Vector3 plus = point, minus = point, bp, bm;
++                        plus(d) += h;
++                        minus(d) -= h;
++                        magnet.getFieldValue(plus, bp);
++                        magnet.getFieldValue(minus, bm);
++                        EXPECT_NEAR(offField(d) / h, (bp(1) - bm(1)) / (2 * h), 2e-7);
++                    }
++                    if (i == 1) {
++                        magnet.setDipoleConstant(0.);
++                        magnet.getFieldValue(off, offField);
++                        expectVectorNear(offField, Vector3(0));
++                    }
++                    ++i;
++                }
++            }
++    endfieldmodel::EndFieldModelManager::clearEFMManager();
++}
++
++TEST_F(OpalBeamlinePlacementTest, ScalingFFAExitFramesPlaceFollowingDrift) {
++    const std::string name = "exit_frame_fringe";
++    endfieldmodel::EndFieldModelManager::getEFMManager()->setEndFieldModel(
++            name, std::make_shared<endfieldmodel::Tanh>(0.2, 0.02, 4));
++    const CoordinateSystemTrafo labFrame(Vector3(0.3, -0.2, 0.1), rotationAroundY(0.17));
++    for (double sign : {1., -1.}) {
++        auto magnet = std::make_shared<ScalingFFAMagnet>("ffa");
++        magnet->setR0(sign * 4.42);
++        magnet->setEndFieldName(name);
++        magnet->setupEndField();
++        magnet->setElementPosition(0.7);
++        auto drift = std::make_shared<DriftRep>("following");
++        drift->getGeometry().setElementLength(0.1);
++        drift->setElementPosition(0.7 + 0.4 + 0.2);
++        ElementList elements{magnet, drift};
++        PlacementResolver::resolve(elements, labFrame);
++        const double angle = 1.1 / 4.42;
++        const Vector3 exit(sign * 4.42 * (std::cos(angle) - 1), 0, 4.42 * std::sin(angle));
++        const Vector3 tangent(-sign * std::sin(angle), 0, std::cos(angle));
++        expectVectorNear(
++                drift->getCSTrafoGlobal2Local().transformTo(
++                        labFrame.transformFrom(Vector3(exit + 0.2 * tangent))),
++                Vector3(0));
++        expectVectorNear(
++                drift->getCSTrafoGlobal2Local().rotateTo(labFrame.rotateFrom(tangent)),
++                Vector3(0, 0, 1));
++    }
++    endfieldmodel::EndFieldModelManager::clearEFMManager();
++}

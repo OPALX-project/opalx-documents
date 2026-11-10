@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-02",
+  "units": [
+    {
+      "name": "TestFFT2D5Numerics",
+      "tests": 70,
+      "passed": 69,
+      "skipped": 1,
+      "binary_sha256": "f039973bc139fa63c0817d4fb094ffdd3cdba867f451a86d2b13454850f7c694",
+      "xml_sha256": "e87f478a5f76ec2c5c247d559fdd7db4603d602b9e94e58afff431867bf3a521",
+      "log_sha256": "5e8adf8d70780f79a7a786d4e3c297c440aec64ba503117e6dbed3d8da717153"
+    },
+    {
+      "name": "TestFFT2D5Algorithm",
+      "tests": 8,
+      "passed": 8,
+      "skipped": 0,
+      "binary_sha256": "81aaa724f2df495e3927032b83ffab1b9040efd1fc26ef1fcc77f50c02bfc853",
+      "xml_sha256": "c6c82f7dd3de77218c9cc6ad942806b97fa5ab0537baee2dc526952298037e20",
+      "log_sha256": "45b9640c32ac15e0ad0e3002e77be0697280aea4bd2af1cc3f964f3bfad0c0fa"
+    },
+    {
+      "name": "TestSpaceChargeConfig",
+      "tests": 23,
+      "passed": 23,
+      "skipped": 0,
+      "binary_sha256": "d7c137ee08688d5f176460bdbfafd0b4d7a5e517c2f15d47aa1bf5111443196f",
+      "xml_sha256": "1f98ff6334ec0821b80c0e0fe148015ab53ffbbb13b06439d0144d7df4ec5d79",
+      "log_sha256": "47740084de00914bccdf4e6d0beff2b3e9f7086362a7701da4e1bbbff7f05c95"
+    }
+  ],
+  "total_passed": 100,
+  "total_skipped": 1,
+  "expected_skip": "Rank-specific Numerics test in one-rank suite; separately verified native rank2 rejection.",
+  "native_rank2_guard": {
+    "expected_rejection": true,
+    "returncode": 156,
+    "log_sha256": "560a864116714d87e1b0b8f6072b8cc32aae44a2f101255c01716033fcc831b6"
+  },
+  "build_target": "opalx_exe (opalx is the static library)",
+  "build_log_sha256": "2013aea71735e8dfad8fd7af254a26049f2b55c952cfa647042c64e4c1c98dc0",
+  "binary": {
+    "before": {
+      "original_path": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "archived_path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/binaries/opalx-before-e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+      "sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+    },
+    "after": {
+      "path": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "sha256": "9d3771d58f0de7bf913909955e4ef81aef69a33341202edefa9553bb78ead8b5",
+      "bytes": 14588600
+    }
+  },
+  "source_sha256": {
+    "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h": "760eecd68e8b2852bea939c7c1d7d54cbbf5af09b50a41555778ed600fe8138b",
+    "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp": "39ef02c4d69d36cba4d83e214ce1156da106ccb02766842e13d68a933b352584",
+    "src/SpaceCharge/SpaceChargeConfig.h": "0633327e937ba0262eec6fbd4f652e66ca96a870ec8bf5bcda05019bc9e1ca5f",
+    "src/SpaceCharge/SpaceChargeConfig.cpp": "128baa0fd1174de2da5b63e80d2a51172287f1b699762ae4f7ef883f50603aef",
+    "src/SpaceCharge/SpaceChargeConfigBuilder.cpp": "1b298282d3cd4171c4d3e097752e9a4ab883c58a177e790ced752a9017284cf6",
+    "src/Structure/FieldSolverCmd.h": "c31eb37f754754ef4f22bb877bbf13677bd018da468f73efe34d85d74b847f15",
+    "src/Structure/FieldSolverCmd.cpp": "69a3bdac92cbe00fa74fd77331ca3f189ca011870261be8d8ed37089eed27795",
+    "unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp": "75493a08e4371b0a377690cbe6242ec1a49d1edecd53ee559e1dcdc4f3018e76",
+    "unit_tests/SpaceCharge/TestSpaceChargeConfig.cpp": "0a7c53ef059d6c6cbf07d278a261ab201ecb5ecf5bf0b05660522e130d08abc9",
+    "docs/validation/fft2d5/longitudinal-model.md": "cc843be071fa2fef24f7c61e43e1e389c9806e8fca06e4ea3da1f0a1e0d03045",
+    ".github/workflows/cpu-serial.yml": "68cd67ff67198ff61f73ca8b2ed6e2b101873e502f0434a6888d1b8f0733a274"
+  },
+  "independent_native_audit": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/audit-api/checks.json",
+  "native_regression": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/correct/physics-validation.json",
+  "native_regression_controls": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/regression-controls.json",
+  "legacy_tracking_regressions": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/checks/legacy-regression-checks.json",
+  "ci": "Local workflow includes native field validator; YAML parsed. Remote GitHub Actions not run.",
+  "limits": "CPU OpenMP, FFT2D5 one rank, straight frozen uniform-round pipe field. No general curved/free-space or new-mode tracking validation."
+}

@@ -1,0 +1,31 @@
+ M .github/workflows/cpu-serial.yml
+ M .gitignore
+ M README.md
+ M src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
+ M src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
+ M src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
+ M src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp
+ M src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h
+ M src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp
+ M src/SpaceCharge/FFT2D5/FFT2D5Poisson.h
+ M src/SpaceCharge/FFT2D5/ReferencePath.h
+ M tools/run_regression_smoke.py
+ M unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp
+ M unit_tests/Algorithms/TestDeviceExternalField.cpp
+ M unit_tests/Elements/TestOpalBeamlinePlacement.cpp
+ M unit_tests/SpaceCharge/CMakeLists.txt
+ M unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
+ M unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp
+ M unit_tests/SpaceCharge/TestSpaceChargeConfig.cpp
+?? ANNOUNCEMENTS.md
+?? HANDOFF-FFA-COF.md
+?? HANDOFF-FFA.md
+?? HANDOFF-FFT2D5.md
+?? build-omp/
+?? output/
+?? tmp/
+?? tools/test_run_regression_smoke.py
+?? tools/toOPALX/
+?? unit_tests/SpaceCharge/TestFFT2D5Curvature.cpp
+?? unit_tests/SpaceCharge/TestFFT2D5FreeSpace.cpp
+?? unit_tests/SpaceCharge/TestFFT2D5Geometry.cpp

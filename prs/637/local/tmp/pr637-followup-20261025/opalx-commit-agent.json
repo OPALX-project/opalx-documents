@@ -1,0 +1,173 @@
+{
+  "sha": "a27c1b392a178a67e4f0df8c10c7fe48acb111f3",
+  "node_id": "C_kwDOQBpa7doAKGEyN2MxYjM5MmExNzhhNjdlNGYwZGY4YzEwYzdmZTQ4YWNiMTExZjM",
+  "commit": {
+    "author": {
+      "name": "Andreas Adelmann",
+      "email": "andreas.adelmann@psi.ch",
+      "date": "2026-10-25T15:37:18Z"
+    },
+    "committer": {
+      "name": "Andreas Adelmann",
+      "email": "andreas.adelmann@psi.ch",
+      "date": "2026-10-25T15:37:18Z"
+    },
+    "message": "Fix shared CUDA probe history ownership and MPI cleanup\n\nKeep probe-history construction, initialization and deletion inside\nlibopalx using out-of-line helpers and a stateless custom deleter.\nThis prevents executable-side template and vtable instantiations from\nselecting unregistered CUDA kernels during resize and MPI migration.\n\nRemove the redundant LossDataSink destructor barrier while preserving\nnormal save synchronization. Add regressions for history preservation\nduring growth, stable particle IDs and rank-local cleanup.\n\nDocument the ownership boundary, registration order and remaining\ncollective HDF5 error-handling limitations.\n\nValidation: six focused CTest targets pass with OpenMP and shared CUDA\non A100, including all ten probe cases on one and two MPI ranks.",
+    "tree": {
+      "sha": "00a3f42ce9af657cc4ae147802d50f019ea17115",
+      "url": "https://api.github.com/repos/OPALX-project/OPALX/git/trees/00a3f42ce9af657cc4ae147802d50f019ea17115"
+    },
+    "url": "https://api.github.com/repos/OPALX-project/OPALX/git/commits/a27c1b392a178a67e4f0df8c10c7fe48acb111f3",
+    "comment_count": 0,
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "url": "https://api.github.com/repos/OPALX-project/OPALX/commits/a27c1b392a178a67e4f0df8c10c7fe48acb111f3",
+  "html_url": "https://github.com/OPALX-project/OPALX/commit/a27c1b392a178a67e4f0df8c10c7fe48acb111f3",
+  "comments_url": "https://api.github.com/repos/OPALX-project/OPALX/commits/a27c1b392a178a67e4f0df8c10c7fe48acb111f3/comments",
+  "author": {
+    "login": "aaadelmann",
+    "id": 11887267,
+    "node_id": "MDQ6VXNlcjExODg3MjY3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/11887267?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aaadelmann",
+    "html_url": "https://github.com/aaadelmann",
+    "followers_url": "https://api.github.com/users/aaadelmann/followers",
+    "following_url": "https://api.github.com/users/aaadelmann/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aaadelmann/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aaadelmann/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aaadelmann/subscriptions",
+    "organizations_url": "https://api.github.com/users/aaadelmann/orgs",
+    "repos_url": "https://api.github.com/users/aaadelmann/repos",
+    "events_url": "https://api.github.com/users/aaadelmann/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aaadelmann/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "aaadelmann",
+    "id": 11887267,
+    "node_id": "MDQ6VXNlcjExODg3MjY3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/11887267?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aaadelmann",
+    "html_url": "https://github.com/aaadelmann",
+    "followers_url": "https://api.github.com/users/aaadelmann/followers",
+    "following_url": "https://api.github.com/users/aaadelmann/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aaadelmann/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aaadelmann/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aaadelmann/subscriptions",
+    "organizations_url": "https://api.github.com/users/aaadelmann/orgs",
+    "repos_url": "https://api.github.com/users/aaadelmann/repos",
+    "events_url": "https://api.github.com/users/aaadelmann/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aaadelmann/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "61c90499b3f5638f2e26612561e149839774666d",
+      "url": "https://api.github.com/repos/OPALX-project/OPALX/commits/61c90499b3f5638f2e26612561e149839774666d",
+      "html_url": "https://github.com/OPALX-project/OPALX/commit/61c90499b3f5638f2e26612561e149839774666d"
+    }
+  ],
+  "stats": {
+    "total": 148,
+    "additions": 137,
+    "deletions": 11
+  },
+  "files": [
+    {
+      "sha": "007cf40e84998b4ff43d2ead740bf43e4edad98e",
+      "filename": "src/PartBunch/PartBunch.cpp",
+      "status": "modified",
+      "additions": 11,
+      "deletions": 0,
+      "changes": 11,
+      "blob_url": "https://github.com/OPALX-project/OPALX/blob/a27c1b392a178a67e4f0df8c10c7fe48acb111f3/src%2FPartBunch%2FPartBunch.cpp",
+      "raw_url": "https://github.com/OPALX-project/OPALX/raw/a27c1b392a178a67e4f0df8c10c7fe48acb111f3/src%2FPartBunch%2FPartBunch.cpp",
+      "contents_url": "https://api.github.com/repos/OPALX-project/OPALX/contents/src%2FPartBunch%2FPartBunch.cpp?ref=a27c1b392a178a67e4f0df8c10c7fe48acb111f3",
+      "patch": "@@ -15,6 +15,17 @@\n \n #undef doDEBUG\n \n+namespace cyclotron_probe::detail {\n+    void HistoryDeleter::operator()(History* history) const { delete history; }\n+\n+    HistoryPtr makeHistory() { return HistoryPtr(new History()); }\n+\n+    void initializeHistory(History& history, size_type capacity) {\n+        history.resize(capacity);\n+        Kokkos::deep_copy(history.getView(), State{});\n+    }\n+}  // namespace cyclotron_probe::detail\n+\n /**\n  * @copybrief PartBunch::PartBunch\n  */"
+    },
+    {
+      "sha": "f3d6a8b5c42bf10eac9eadea4253f0addd6a2cc4",
+      "filename": "src/PartBunch/ParticleContainer.hpp",
+      "status": "modified",
+      "additions": 23,
+      "deletions": 4,
+      "changes": 27,
+      "blob_url": "https://github.com/OPALX-project/OPALX/blob/a27c1b392a178a67e4f0df8c10c7fe48acb111f3/src%2FPartBunch%2FParticleContainer.hpp",
+      "raw_url": "https://github.com/OPALX-project/OPALX/raw/a27c1b392a178a67e4f0df8c10c7fe48acb111f3/src%2FPartBunch%2FParticleContainer.hpp",
+      "contents_url": "https://api.github.com/repos/OPALX-project/OPALX/contents/src%2FPartBunch%2FParticleContainer.hpp?ref=a27c1b392a178a67e4f0df8c10c7fe48acb111f3",
+      "patch": "@@ -48,6 +48,26 @@ using ParticleAttrib = ippl::ParticleAttrib<T>;\n \n using size_type = ippl::detail::size_type;\n \n+namespace cyclotron_probe::detail {\n+    using History = ippl::ParticleAttrib<State>;\n+\n+    /** Keep attribute destruction and its virtual CUDA methods in libopalx.\n+     * An inline default deleter can instantiate a competing attribute vtable in\n+     * executable consumers of ParticleContainer, selecting unregistered kernels.\n+     */\n+    struct HistoryDeleter {\n+        void operator()(History* history) const;\n+    };\n+\n+    using HistoryPtr = std::unique_ptr<History, HistoryDeleter>;\n+\n+    /// Construct storage in the same library module as its CUDA kernels.\n+    HistoryPtr makeHistory();\n+\n+    /// Initialize registered storage, preserving the existing allocation semantics.\n+    void initializeHistory(History& history, size_type capacity);\n+}  // namespace cyclotron_probe::detail\n+\n #include \"Processes/GlobalProcesses/GlobalProcess.h\"\n \n /**\n@@ -186,17 +206,16 @@ class ParticleContainer\n      */\n     ParticleAttrib<cyclotron_probe::State>& probeHistory(std::size_t index) {\n         while (probeHistories_m.size() <= index) {\n-            auto attribute = std::make_unique<ParticleAttrib<cyclotron_probe::State>>();\n+            auto attribute = cyclotron_probe::detail::makeHistory();\n             this->addAttribute(*attribute);\n-            attribute->resize(this->R.size());\n-            Kokkos::deep_copy(attribute->getView(), cyclotron_probe::State{});\n+            cyclotron_probe::detail::initializeHistory(*attribute, this->R.size());\n             probeHistories_m.push_back(std::move(attribute));\n         }\n         return *probeHistories_m[index];\n     }\n \n private:\n-    std::vector<std::unique_ptr<ParticleAttrib<cyclotron_probe::State>>> probeHistories_m;\n+    std::vector<cyclotron_probe::detail::HistoryPtr> probeHistories_m;\n \n public:\n     ParticleContainer("
+    },
+    {
+      "sha": "b9f57c9171c988eabeff4486fa34c13448e57186",
+      "filename": "src/Structure/LossDataSink.cpp",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 4,
+      "changes": 6,
+      "blob_url": "https://github.com/OPALX-project/OPALX/blob/a27c1b392a178a67e4f0df8c10c7fe48acb111f3/src%2FStructure%2FLossDataSink.cpp",
+      "raw_url": "https://github.com/OPALX-project/OPALX/raw/a27c1b392a178a67e4f0df8c10c7fe48acb111f3/src%2FStructure%2FLossDataSink.cpp",
+      "contents_url": "https://api.github.com/repos/OPALX-project/OPALX/contents/src%2FStructure%2FLossDataSink.cpp?ref=a27c1b392a178a67e4f0df8c10c7fe48acb111f3",
+      "patch": "@@ -606,10 +606,8 @@ LossDataSink::~LossDataSink() noexcept(false) {\n     if (H5file_m) {\n         closeFile();\n     }\n-\n-    if (ippl::Comm != nullptr) {\n-        ippl::Comm->barrier();\n-    }\n+    // save() closes and synchronizes successful writes explicitly. An idle\n+    // sink must also be destructible on just one rank during exception unwinding.\n }\n \n void LossDataSink::openH5(h5_int32_t mode) {"
+    },
+    {
+      "sha": "e5fda06306a52be42780b283578a9f59b06740a6",
+      "filename": "src/Structure/LossDataSink.h",
+      "status": "modified",
+      "additions": 6,
+      "deletions": 3,
+      "changes": 9,
+      "blob_url": "https://github.com/OPALX-project/OPALX/blob/a27c1b392a178a67e4f0df8c10c7fe48acb111f3/src%2FStructure%2FLossDataSink.h",
+      "raw_url": "https://github.com/OPALX-project/OPALX/raw/a27c1b392a178a67e4f0df8c10c7fe48acb111f3/src%2FStructure%2FLossDataSink.h",
+      "contents_url": "https://api.github.com/repos/OPALX-project/OPALX/contents/src%2FStructure%2FLossDataSink.h?ref=a27c1b392a178a67e4f0df8c10c7fe48acb111f3",
+      "patch": "@@ -87,9 +87,12 @@ namespace std {\n }  // namespace std\n enum class CollectionType : unsigned short { SPATIAL = 0, TEMPORAL };\n \n-/*\n-  - In the destructor we do ALL the file handling\n-  - h5hut_mode_m defines h5hut or ASCII\n+/** @brief Collect particle records and write them through collective save().\n+ *\n+ * save() closes output files and synchronizes successful writes. Destruction of\n+ * an idle sink does not communicate, so it is safe during rank-local unwinding.\n+ * The fallback close of a still-open parallel HDF5 file remains collective:\n+ * rank-local exceptions during an active save require coordinated error handling.\n  */\n class LossDataSink {\n public:"
+    },
+    {
+      "sha": "e676c82faf616b3569ca43db4c27c00d582ca097",
+      "filename": "unit_tests/Algorithms/TestCyclotronProbe.cpp",
+      "status": "modified",
+      "additions": 41,
+      "deletions": 0,
+      "changes": 41,
+      "blob_url": "https://github.com/OPALX-project/OPALX/blob/a27c1b392a178a67e4f0df8c10c7fe48acb111f3/unit_tests%2FAlgorithms%2FTestCyclotronProbe.cpp",
+      "raw_url": "https://github.com/OPALX-project/OPALX/raw/a27c1b392a178a67e4f0df8c10c7fe48acb111f3/unit_tests%2FAlgorithms%2FTestCyclotronProbe.cpp",
+      "contents_url": "https://api.github.com/repos/OPALX-project/OPALX/contents/unit_tests%2FAlgorithms%2FTestCyclotronProbe.cpp?ref=a27c1b392a178a67e4f0df8c10c7fe48acb111f3",
+      "patch": "@@ -328,6 +328,47 @@ TEST_F(CyclotronProbeTest, AsciiEmptyRanksMigrationFramesAndTurnGroups) {\n     }\n }\n \n+TEST_F(CyclotronProbeTest, CapacityGrowthPreservesArmedHistoryAndNewParticleIds) {\n+    Options::asciidump = false;\n+    const auto c       = config(\"growth\");\n+    auto pc            = container();\n+    position(pc, -1, 1);\n+    const auto ids = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), pc->ID.getView());\n+    std::int64_t expectedId = ippl::Comm->rank() == 0 ? ids(0) : 0;\n+    MPI_Bcast(&expectedId, 1, MPI_INT64_T, 0, ippl::Comm->getCommunicator());\n+    CyclotronProbeRecorder recorder({c});\n+    recorder.initialize({pc});\n+    recorder.observe(pc, 0, 0, 0);\n+\n+    // Grow registered history after arming a particle. Reallocation must keep\n+    // its previous endpoint; new IDs must initialize without inventing a hit.\n+    const auto oldCapacity = pc->R.size();\n+    pc->createParticles(ippl::Comm->rank() == 0 ? oldCapacity + 1 : 0);\n+    if (ippl::Comm->rank() == 0) EXPECT_GT(pc->R.size(), oldCapacity);\n+    position(pc, 1, 1);\n+    recorder.observe(pc, 2e-9, 0, 0);\n+    recorder.save();\n+\n+    h5_prop_t props = H5CreateFileProp();\n+    auto comm       = ippl::Comm->getCommunicator();\n+    H5SetPropFileMPIOCollective(props, &comm);\n+    auto file = H5OpenFile((c.output + \".h5\").c_str(), H5_O_RDONLY, props);\n+    H5CloseProp(props);\n+    ASSERT_NE(file, static_cast<h5_file_t>(H5_ERR));\n+    EXPECT_EQ(H5GetNumSteps(file), 1);\n+    ASSERT_EQ(H5SetStep(file, 0), H5_SUCCESS);\n+    // Read the global count before setting a one-particle view on every rank.\n+    EXPECT_EQ(H5PartGetNumParticles(file), 1);\n+    ASSERT_EQ(H5PartSetView(file, 0, 0), H5_SUCCESS);\n+    h5_int64_t readId = -1;\n+    EXPECT_EQ(H5PartReadDataInt64(file, \"id\", &readId), H5_SUCCESS);\n+    EXPECT_EQ(readId, expectedId);\n+    double time = 0;\n+    EXPECT_EQ(H5PartReadDataFloat64(file, \"time\", &time), H5_SUCCESS);\n+    EXPECT_NEAR(time, 1e-9, 1e-24);\n+    H5CloseFile(file);\n+}\n+\n TEST_F(CyclotronProbeTest, CollectiveErrorsAndFreshOutputGuard) {\n     Options::asciidump = true;\n     auto c             = config(\"errors\");"
+    },
+    {
+      "sha": "32950f7c5927ed5e076f2c730fd4b7496da42e85",
+      "filename": "unit_tests/Structure/CMakeLists.txt",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 0,
+      "changes": 3,
+      "blob_url": "https://github.com/OPALX-project/OPALX/blob/a27c1b392a178a67e4f0df8c10c7fe48acb111f3/unit_tests%2FStructure%2FCMakeLists.txt",
+      "raw_url": "https://github.com/OPALX-project/OPALX/raw/a27c1b392a178a67e4f0df8c10c7fe48acb111f3/unit_tests%2FStructure%2FCMakeLists.txt",
+      "contents_url": "https://api.github.com/repos/OPALX-project/OPALX/contents/unit_tests%2FStructure%2FCMakeLists.txt?ref=a27c1b392a178a67e4f0df8c10c7fe48acb111f3",
+      "patch": "@@ -7,5 +7,8 @@ add_opalx_test(TestDirichletPlaneWriter USE_GTEST_MAIN)\n add_opalx_test(TestLaser USE_GTEST_MAIN)\n add_opalx_test(TestBeam USE_GTEST_MAIN)\n add_opalx_test(TestLossDataSink USE_GTEST_MAIN)\n+add_opalx_test(TestLossDataSinkMPI\n+              SOURCES TestLossDataSink.cpp NUM_PROCS 2 TIMEOUT 60 USE_GTEST_MAIN\n+              ARGS --gtest_filter=LossDataSinkTest.EmptySinkDestructionIsRankLocal:LossDataSinkTest.EmptySinkUnwindingIsRankLocal)\n add_opalx_test(TestCheckpointFile USE_GTEST_MAIN)\n add_opalx_test(TestMeshGenerator USE_GTEST_MAIN)"
+    },
+    {
+      "sha": "3f37e359c10bd7fe1d11905e671b776e41c4ab37",
+      "filename": "unit_tests/Structure/TestLossDataSink.cpp",
+      "status": "modified",
+      "additions": 51,
+      "deletions": 0,
+      "changes": 51,
+      "blob_url": "https://github.com/OPALX-project/OPALX/blob/a27c1b392a178a67e4f0df8c10c7fe48acb111f3/unit_tests%2FStructure%2FTestLossDataSink.cpp",
+      "raw_url": "https://github.com/OPALX-project/OPALX/raw/a27c1b392a178a67e4f0df8c10c7fe48acb111f3/unit_tests%2FStructure%2FTestLossDataSink.cpp",
+      "contents_url": "https://api.github.com/repos/OPALX-project/OPALX/contents/unit_tests%2FStructure%2FTestLossDataSink.cpp?ref=a27c1b392a178a67e4f0df8c10c7fe48acb111f3",
+      "patch": "@@ -48,6 +48,10 @@\n  *    - rewind physically compacts discarded steps\n  *    - repeated rewind and append cycles do not grow the file\n  *\n+ * 9. Rank-local idle-sink cleanup (also run by TestLossDataSinkMPI)\n+ *    - normal destruction and exception unwinding require no peer participation\n+ *    - ASCII and HDF5-configured sinks that have not opened files are covered\n+ *\n  * ---------------------------------------------------------------------------\n  * Notes\n  * ---------------------------------------------------------------------------\n@@ -244,6 +248,53 @@ namespace {\n         bool oldComputePercentiles_m = false;\n     };\n \n+    TEST_F(LossDataSinkTest, EmptySinkDestructionIsRankLocal) {\n+        const MPI_Comm comm = ippl::Comm->getCommunicator();\n+        const int rank      = ippl::Comm->rank();\n+        // Rank 1 waits for a message, not a collective. A destructor barrier\n+        // would deadlock before rank 0 can send the completion token.\n+        for (const bool hdf5 : {false, true}) {\n+            int completed = 0;\n+            if (rank == 0) {\n+                {\n+                    LossDataSink sink(hdf5 ? \"test_idle_h5_sink\" : \"test_idle_ascii_sink\", hdf5);\n+                }\n+                completed = 1;\n+                if (ippl::Comm->size() > 1) {\n+                    MPI_Send(&completed, 1, MPI_INT, 1, 817, comm);\n+                }\n+            } else if (rank == 1) {\n+                MPI_Recv(&completed, 1, MPI_INT, 0, 817, comm, MPI_STATUS_IGNORE);\n+            }\n+            if (rank < 2) EXPECT_EQ(completed, 1);\n+        }\n+    }\n+\n+    TEST_F(LossDataSinkTest, EmptySinkUnwindingIsRankLocal) {\n+        const MPI_Comm comm = ippl::Comm->getCommunicator();\n+        const int rank      = ippl::Comm->rank();\n+        for (const bool hdf5 : {false, true}) {\n+            int caught = 0;\n+            if (rank == 0) {\n+                try {\n+                    LossDataSink sink(\n+                            hdf5 ? \"test_unwind_h5_sink\" : \"test_unwind_ascii_sink\", hdf5);\n+                    throw std::runtime_error(\"rank-local probe failure\");\n+                } catch (const std::runtime_error& error) {\n+                    caught = std::string(error.what()) == \"rank-local probe failure\";\n+                }\n+                if (ippl::Comm->size() > 1) {\n+                    MPI_Send(&caught, 1, MPI_INT, 1, 818, comm);\n+                }\n+            } else if (rank == 1) {\n+                // The peer must receive the original exception's completion\n+                // token without entering a destructor or cleanup collective.\n+                MPI_Recv(&caught, 1, MPI_INT, 0, 818, comm, MPI_STATUS_IGNORE);\n+            }\n+            if (rank < 2) EXPECT_EQ(caught, 1);\n+        }\n+    }\n+\n     TEST_F(LossDataSinkTest, AddParticleRejectsTurnInformationAfterPlainParticle) {\n         LossDataSink sink;\n "
+    }
+  ]
+}

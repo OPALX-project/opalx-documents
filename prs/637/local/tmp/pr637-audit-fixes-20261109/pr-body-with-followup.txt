@@ -1,0 +1,50 @@
+PROBE currently parses in cyclotron lattices but produces no crossing output. This implements passive cyclotron segment diagnostics and supports collecting turn profiles during coasting and accelerating space-charge runs.
+
+Refs #615. This PR covers cyclotron-sector and native RING/FFA particle tracking, with native laboratory probe output and a general coordinate-frame adapter.
+
+## Changes
+
+- Observe accepted particle endpoints across finite segments in the laboratory X–Z plane, in both directions. Diagnostic histories follow particle IDs through compaction and MPI migration without changing particle states, fields, reference motion or step scheduling.
+- Write HDF5/ASCII crossing records. Cyclotron output additionally provides cumulative radial `.hist` / per-reference-turn `.peaks` summaries; FFA output contains phase-space records only because its ring centre may be translated. Flush every 100 accepted steps, at completion and before reporting a collective SINGLEGAP transport failure. Keep fresh-output checks and reject unsupported restart/continuation.
+- Select coasting cyclotron sectors conservatively from current bunch bounds, preserving native field support checks. This fixes the periodic path-index omission that caused the approximately 23 m particle/reference separation in the ten-turn test.
+- Extend SINGLEGAP tracking to one unpolarized positive-proton bunch with PIC self fields. MIDPOINT uses a ballistic predictor and frozen-field Boris half kicks around external transport; PRESTEP remains available. Localize the reference stopping duration before prediction/gather and preserve complete RF kicks and the established single-particle endpoint convention.
+- Share mapped field kernels, include all three momentum components in RF energy balance, and report field-support/RF-kick failures with particle ID, time and laboratory state.
+- Consolidate selection/descriptors in `DeviceExternalField` and RF event ordering/localization in `TrackReferenceStep`; PIC orchestration stays in `ParallelTracker`. Add host/device unit coverage and reproducible probe/bunch integration scripts.
+
+## Validation
+
+- OpenMP build and clang-format 21.1.8 checks pass.
+- All 10 focused CTest targets pass, including `TestCyclotronSectorMPI` and `TestCyclotronProbeMPI`. Coverage includes bidirectional/finite crossings, repeated HDF5/ASCII flushing, empty ranks, 3D RF kicks, individual arrival times, RF event ordering/ties and failure diagnostics.
+- Probe integrations pass ten-turn coasting closure, ON/OFF passivity, HDF5/ASCII output and invalid-input checks. Accelerating-bunch checks pass negligible-charge equivalence and one/two-rank comparisons.
+- Consolidation preserves all ten short integration cases exactly. A 2,000-step single-thread old/new PIC comparison is also exact.
+- The full 8³-grid / 4,096-particle run reaches the 580 MeV target after a complete kick (reference 580.470767685 MeV, time 22.0354053688 µs). It retains 4,049 particles and 759,907 probe hits. Saved reference states, lost IDs, per-turn counts and the last eight turns' 0.1 mm density bins match the pre-consolidation run exactly.
+- Four-thread full-run particle coordinates differ by at most 2.39 nm; strict bitwise equality does not pass. The frozen baseline also varies between four-thread repeats, consistent with multithreaded PIC roundoff. No numerical tolerance was widened.
+
+## OPAL–OPALX comparison: final eight turns
+
+OPAL 2022.1 (LF2/FFT) versus OPALX (Boris/MIDPOINT PIC), for turns 178–185 (zero-based) in the 580 MeV reference window. Both runs start with 4,096 particles on an 8³ mesh at 2 mA. Profiles use common 0.1 mm bins and physical charge, exclude ID0, and are not area-normalized. The upper panel sums the eight radial line densities; the lower panel shows each turn's mean radius ± rms.
+
+![OPAL 2022.1 versus OPALX: summed radial density and per-turn mean radius for turns 178–185](https://github.com/user-attachments/assets/e88843b0-98ef-4384-b585-3e34febb449d)
+
+Maximum per-turn mean-radius difference: 1.058 mm. OPAL/OPALX rms-width ratio: 0.831–1.112. OPAL retains 4,096 particles, versus 4,049 for OPALX; plotted counts after excluding ID0 are 4,095 for OPAL and 4,051/4,048 for OPALX. Integrator/self-field ordering and particle-removal rules differ, so this coarse single-bunch comparison demonstrates qualitative agreement rather than converged validation.
+
+<details>
+<summary>Individual profiles for all eight turns</summary>
+
+![OPAL 2022.1 versus OPALX: individual radial line densities for turns 178–185](https://github.com/user-attachments/assets/667f7c57-6c0b-428a-bd12-047c1b2f2bac)
+
+</details>
+
+## Limits and follow-up
+
+A100 shared-Release native probe tests and small one-/two-GPU FFA comparisons have passed; these are correctness checks rather than production-scale PIC benchmarks. The collective split is a thin-gap approximation and this coarse run is not a mesh/timestep convergence study. It transports one bunch without neighbouring-turn/bunch space charge or a septum model; vertical RF focusing is not included. Restart/continuation and larger probe performance optimizations remain deferred.
+
+The earlier 16³ run's failure near 584 MeV cannot be reconstructed from its missing buffered state. Periodic flushing and classified failure diagnostics improve future diagnosis; the successful 580 MeV run does not claim to resolve that failure.
+
+User/physics manual edits are prepared in the separate manual checkout and are outside this source-repository PR.
+
+## Deferred performance work
+
+Tracked in #674: batch station communication, compact migratable endpoint histories and batch cumulative cyclotron summaries, with follow-ups for lattice metadata caching and large-file adapter memory. These changes remain separate from this PR's crossing/output correctness work.
+
+The agreed small audit fixes (PIC failure-record storage, shared sector support evaluation and RF validation/setup cleanup) are being implemented and tested locally. They are not yet committed or pushed; the published head remains `b1551b9c3`.

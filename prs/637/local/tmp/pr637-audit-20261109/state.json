@@ -1,0 +1,107 @@
+{
+  "goal": "Audit PR637 for code complexity, duplication and performance",
+  "date": "2026-11-09",
+  "status": "complete",
+  "pr": "https://github.com/OPALX-project/OPALX/pull/637",
+  "head": "b1551b9c337c0c57dd21a4e2e26ccaff10fdfc93",
+  "base": "bdf5a47a0fc209e288d8cd94448e171fe8679a8a",
+  "scope_files": 41,
+  "added_lines": 3730,
+  "removed_lines": 228,
+  "source_changes": [],
+  "tests_run": "Static read-only source/diff review and compile-time layout checks only; no new simulations, runtime benchmarks or full suite reruns.",
+  "numerical_tolerance_changes": false,
+  "findings": [
+    {
+      "id": "F1",
+      "priority": "P2",
+      "category": "performance",
+      "title": "One global error reduction per station per accepted endpoint",
+      "path": "src/Algorithms/CyclotronProbeRecorder.cpp",
+      "line": 130,
+      "evidence": "Each station executes scalar host-result device reduction, MPI_Allreduce at159, count mirror at162 and compact-hit mirror at163. Empty ranks and no-hit intervals participate too. 16 stations imply 16 error collectives per observed endpoint.",
+      "recommendation": "Batch station validity into one collective per observation, then consider batched counts/transfers. Continue observing every accepted interval; do not optimize by dropping samples.",
+      "phase": "Dedicated performance follow-up, as previously agreed"
+    },
+    {
+      "id": "F2",
+      "priority": "P2",
+      "category": "performance",
+      "title": "Full per-particle failure array allocated on every accelerating-PIC step",
+      "path": "src/Algorithms/ParallelTracker.cpp",
+      "line": 1346,
+      "evidence": "Fresh default-initialized Diagnostic array every step; diagnostics(i)=diagnostic at1366 for successful particles too; host only reads on global failure and prints first record per rank. Diagnostic layout is64 bytes,16MiB for262144 local particles before allocation/initialization costs.",
+      "recommendation": "Reuse capacity-managed scratch storage; preferably retain one atomically selected first-failure record per rank and write only on failure, preserving collective failure propagation.",
+      "phase": "Small cleanup before merge recommended"
+    },
+    {
+      "id": "F3",
+      "priority": "P2",
+      "category": "performance and data duplication",
+      "title": "Duplicated endpoint history costs160 bytes per station per allocated particle",
+      "path": "src/Algorithms/CyclotronProbe.h",
+      "line": 36,
+      "evidence": "Two directed State records each hold the previous Endpoint; the same accepted endpoint is also duplicated across stations. All histories are registered migratable IPPL attributes. Local compile-time sizes verified: Endpoint56, directedState72, cyclotronState160, Hit96 bytes.",
+      "recommendation": "Future compact state: one migratable accepted endpoint per particle plus station-specific arming/passage information. Retain stable-ID association and out-of-line CUDA lifecycle ownership.",
+      "phase": "Dedicated performance follow-up, as previously agreed"
+    },
+    {
+      "id": "F4",
+      "priority": "P2",
+      "category": "performance",
+      "title": "Cyclotron flush reduces every historical turn and rewrites unchanged summaries",
+      "path": "src/Algorithms/CyclotronProbeRecorder.cpp",
+      "line": 208,
+      "evidence": "Flush every100 accepted global steps. Sink no-hit return does not skip subsequent summary work. One MPI_Reduce per turn0..maximumTurn, plus histogram reduction and full file replacement. maximumTurn200 means201 tiny peak reductions per station per flush. FFA radialSummaries=false correctly bypasses this branch.",
+      "recommendation": "Pack turn sums/counts into one array reduction and use globally agreed dirty state to skip unchanged summary rewrites. Preserve flush cadence and cumulative output semantics.",
+      "phase": "Focused performance follow-up"
+    },
+    {
+      "id": "F5",
+      "priority": "P2",
+      "category": "code duplication",
+      "title": "Sector support predicate and coordinate calculations have two owners",
+      "path": "src/AbsBeamline/CyclotronSector.h",
+      "line": 168,
+      "evidence": "New DeviceField::add recomputes radius/angle/support at168..172, then shared cyclotron_field::field repeats it at59..63. Boundary rules could drift. Inlining may eliminate some redundant arithmetic; actual double-transcendental execution was not measured.",
+      "recommendation": "Let shared evaluator report support while accumulating B; forward its boolean from the descriptor. Preserve boundary and nonfinite-input semantics explicitly.",
+      "phase": "Small cleanup before merge recommended"
+    },
+    {
+      "id": "F6",
+      "priority": "P3",
+      "category": "complexity and duplication",
+      "title": "RF transport dispatch repeats validation and contains dead guard",
+      "path": "src/Algorithms/ParallelTracker.cpp",
+      "line": 1252,
+      "evidence": "Host/device branches repeat proton/spin/restart validation at1262 and1291. Nested cardinality rejection1255..1260 is unreachable because outer condition already proves those requirements. Immutable descriptor construction1300..1331 is inline in step routine.",
+      "recommendation": "Prepare/validate common RF capability once, remove dead guard, keep concise host/device step helpers within existing code. No additional tracker hierarchy.",
+      "phase": "Small cleanup before merge recommended"
+    },
+    {
+      "id": "F7",
+      "priority": "P3",
+      "category": "existing complexity and performance debt",
+      "title": "Lattice classification and gap collection repeatedly allocate sets and sort",
+      "path": "src/Algorithms/ParallelTracker.cpp",
+      "line": 1108,
+      "evidence": "hasCyclotronGaps plus reference gap assembly1118..1132 existed in base; extension adds calls. OpalBeamline::getElements at89 reconstructs std::set by value. This is inherited debt amplified by PIC, not a newly introduced helper.",
+      "recommendation": "Cache immutable gap/sector occurrences during preparation, preserving current ordering.",
+      "phase": "Follow-up"
+    },
+    {
+      "id": "F8",
+      "priority": "P3",
+      "category": "analysis-tool performance",
+      "title": "General adapter retains and copies whole files in memory",
+      "path": "tools/probe_frame_adapter.py",
+      "line": 66,
+      "evidence": "Retains HDF5 batch DataFrames, concatenates, globally sorts and repeatedly validates/copies records. Ten64-bit columns alone cost80 bytes/hit;10million hits require800MB before copies, sorting and Python integer lists.",
+      "recommendation": "Consider an explicitly ordered batch-export mode and efficient typed integer validation when production analysis needs it. Streaming must not silently change documented global ordering.",
+      "phase": "Future analysis-scale follow-up"
+    }
+  ],
+  "recommendations": "Three targeted cleanups (F2,F5,F6) before merge; retain F1/F3/F4 as explicit performance follow-ups and benchmark OFF/ON at representative N with1/4/16stations before throughput claims.",
+  "limitations": "Structural costs and local ABI sizes are established; actual wall-clock slowdowns/speedups are unmeasured. Existing small GPU runs establish correctness, not representative beam-scale performance. No source fix, commit, push or GitHub review/comment made for audit.",
+  "next_step": "Discuss audit and obtain task scope before implementing fixes."
+}

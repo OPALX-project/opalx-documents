@@ -1,0 +1,31 @@
+{
+  "case": {
+    "key": "16-cell",
+    "label": "16 cells \u00b7 original spiral",
+    "energy_MeV": 12.0,
+    "r0": 4.42,
+    "periods": 16,
+    "spiral": 0.7855,
+    "d_strength": 0.502765236428169,
+    "template": "school-16-cell.in",
+    "guess": [
+      -0.027074444530417,
+      0.01628038887873,
+      0.0,
+      0.0
+    ]
+  },
+  "settings": {
+    "kind": "COF",
+    "dt": 8e-09,
+    "fd": 1e-05,
+    "guess_offset": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "template_sha256": "1587c70a3dcf521760ef4e8d68c3ab39e73328e59ac6e9a10e07e33a26654c3e",
+  "input_sha256": "0114930669db618f5df61226c62ef2c6b10eb0fcbb1293bc50ab2499eb878b09"
+}

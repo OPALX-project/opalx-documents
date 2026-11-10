@@ -1,0 +1,10 @@
+\begin{figure}[!ht]
+\centering\includegraphics[width=\linewidth]{figures/straight-fields.pdf}
+\caption{Straight-bunch fields for uniform (upper rows) and triangular
+(lower rows) profiles. Transverse cuts pass through the centre; the
+longitudinal cut follows the positive axis and uses logarithmic distance
+to the end. Lower panels show native minus finite-source reference.
+The original and curvature-corrected slice models coincide at zero curvature.
+All field axes retain zero.}\label{fig:straight-fields}\end{figure}
+The straight triangular bunch already exposes the longitudinal limitation: at $s=1.25$ m, the local models give $0.09146$ V/m, versus $0.13745$ V/m from the finite-source reference (33.5\% low). For the uniform bunch, the local derivative vanishes in the interior although the finite-source end field remains nonzero. Refining the numerical end stencil cannot supply that nonlocal tail.
+The symmetric particle rule removes artificial $x/y$ anisotropy at fixed particle count. Residual point-kernel/source sampling errors remain, especially in PyORBIT; the two meshes do not establish monotonic convergence.

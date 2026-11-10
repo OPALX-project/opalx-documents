@@ -1,0 +1,96 @@
+{
+  "source": "/Users/adelmann/git/opalx-master/unit_tests/Distribution/TestGaussian.cpp",
+  "source_sha256": "6569cabdd647bd40dcbbeb280819aca92ea724b5f06b30972975b5bf830fa4ce",
+  "source_checks": {
+    "original_hash_verified": true,
+    "rms_block_byte_identical": true,
+    "sampling_configuration_unchanged": true,
+    "other_test_cases_unchanged_ignoring_whitespace": true,
+    "production_gaussian_and_seed_options_have_no_git_diff": true
+  },
+  "model": {
+    "n": 100000,
+    "uncut_dimensions": 5,
+    "threshold_sigma": 3.0,
+    "family_tail_failure_budget": 1e-06,
+    "binomial_p": 0.0026997960632601913,
+    "mean_count": 269.9796063260191,
+    "variance_count": 269.2507164476996,
+    "log_failure": 16.811242831518264
+  },
+  "acceptance": {
+    "bernstein_count_margin": 100.91523873727078,
+    "integer_count_lower": 170,
+    "integer_count_upper": 370,
+    "maximum_sigma": 7.5265089246593595
+  },
+  "probability_bounds": {
+    "count_family_theoretical": 5.000000000000005e-07,
+    "maximum_family_theoretical": 4.999999999999996e-07,
+    "combined_family_theoretical": 1.0000000000000002e-06,
+    "binomial_rejection_lower_one_axis": 2.580468263593383e-11,
+    "binomial_rejection_upper_one_axis": 3.209792412463626e-09,
+    "count_family_numerical_union_upper": 1.61779854754978e-08,
+    "maximum_family_normal_union_upper": 2.6057459670790402e-08,
+    "combined_family_numerical_union_upper": 4.22354451462882e-08
+  },
+  "analytic_mutation_checks": {
+    "complete_3sigma_clipping_rejected": true,
+    "one_40sigma_finite_outlier_rejected_by_maximum": true,
+    "previous_5_571777596_maximum_accepted": true,
+    "scale_change_count_power": [
+      {
+        "sigma": 0.9,
+        "true_tail_probability": 0.0008581206663936765,
+        "expected_tail_count": 85.81206663936766,
+        "one_axis_count_rejection_probability": 0.9999999999999992
+      },
+      {
+        "sigma": 0.95,
+        "true_tail_probability": 0.001589129282100598,
+        "expected_tail_count": 158.9129282100598,
+        "one_axis_count_rejection_probability": 0.8008036123632012
+      },
+      {
+        "sigma": 1.0,
+        "true_tail_probability": 0.0026997960632601913,
+        "expected_tail_count": 269.9796063260191,
+        "one_axis_count_rejection_probability": 3.2355970950995597e-09
+      },
+      {
+        "sigma": 1.05,
+        "true_tail_probability": 0.004274733960172569,
+        "expected_tail_count": 427.4733960172569,
+        "one_axis_count_rejection_probability": 0.9975842786811966
+      },
+      {
+        "sigma": 1.1,
+        "true_tail_probability": 0.006386023282707063,
+        "expected_tail_count": 638.6023282707063,
+        "one_axis_count_rejection_probability": 1.0
+      },
+      {
+        "sigma": 1.2,
+        "true_tail_probability": 0.012419330651552266,
+        "expected_tail_count": 1241.9330651552266,
+        "one_axis_count_rejection_probability": 1.0
+      }
+    ]
+  },
+  "assumptions": [
+    "IID Gaussian sampling model; this does not prove the RNG itself is IID",
+    "fixMeanR=false avoids centering-induced sample dependence",
+    "rejection on independent z alone preserves the other five normal marginals",
+    "union bounds do not require independence across coordinates or between checks"
+  ],
+  "scope_limits": [
+    "The 1e-6 bound covers new count and maximum checks only",
+    "Existing four-standard-error RMS checks are unchanged and have a separate false-alarm budget",
+    "Power and clipping/outlier results here are analytic models, not native C++ mutation runs",
+    "SciPy is used only for this audit; native unit tests require no scripts or external data"
+  ],
+  "versions": {
+    "scipy": "1.17.1"
+  },
+  "native_tests_run_by_this_audit": false
+}

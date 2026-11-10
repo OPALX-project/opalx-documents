@@ -1,0 +1,218 @@
+{
+  "results": [
+    {
+      "name": "new-host-65",
+      "binary": "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+      "binary_sha256": "a9026934deaf44ccc7000f917678ca97c40ef55516850770c070553f7d85cdf8",
+      "ranks": 1,
+      "returncode": 0,
+      "elapsed_s": 0.2907208329997957,
+      "expected": "success",
+      "passed": true,
+      "markers": [
+        "OPAL-X> * Done executing ParallelTracker at 11:57:31"
+      ],
+      "command": [
+        "mpirun",
+        "-np",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+        "Cyclotron-RF-Stop.in",
+        "--info",
+        "2"
+      ],
+      "input_sha256": "56decd7f9ef96a83c1e0a9a07cf343f7626da3dafea6703c957e0d6286d7ce79",
+      "timeout": false
+    },
+    {
+      "name": "old-host-65",
+      "binary": "/Users/adelmann/git/opalx-master/tmp/ffa-probes-implementation-20261107/bin/opalx-linked-final",
+      "binary_sha256": "58bd5db212d2dc3e62c8fdf62a51fb2dca456580eabf9452c595ea448777f9d5",
+      "ranks": 1,
+      "returncode": 0,
+      "elapsed_s": 0.29429583402816206,
+      "expected": "success",
+      "passed": true,
+      "markers": [
+        "OPAL-X> * Done executing ParallelTracker at 11:57:31"
+      ],
+      "command": [
+        "mpirun",
+        "-np",
+        "1",
+        "/Users/adelmann/git/opalx-master/tmp/ffa-probes-implementation-20261107/bin/opalx-linked-final",
+        "Cyclotron-RF-Stop.in",
+        "--info",
+        "2"
+      ],
+      "input_sha256": "56decd7f9ef96a83c1e0a9a07cf343f7626da3dafea6703c957e0d6286d7ce79",
+      "timeout": false
+    },
+    {
+      "name": "new-device-65",
+      "binary": "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+      "binary_sha256": "a9026934deaf44ccc7000f917678ca97c40ef55516850770c070553f7d85cdf8",
+      "ranks": 2,
+      "returncode": 156,
+      "elapsed_s": 0.8479110000189394,
+      "expected": "SINGLEGAP requires magnetic sectors and at most 64 gaps.",
+      "passed": true,
+      "markers": [
+        "Error{0}>     SINGLEGAP requires magnetic sectors and at most 64 gaps.",
+        "Error{0}>     SINGLEGAP requires magnetic sectors and at most 64 gaps.",
+        "Error{1}>     SINGLEGAP requires magnetic sectors and at most 64 gaps.",
+        "Error{1}>     SINGLEGAP requires magnetic sectors and at most 64 gaps."
+      ],
+      "command": [
+        "mpirun",
+        "-np",
+        "2",
+        "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+        "Cyclotron-RF-Stop.in",
+        "--info",
+        "2"
+      ],
+      "input_sha256": "56decd7f9ef96a83c1e0a9a07cf343f7626da3dafea6703c957e0d6286d7ce79",
+      "timeout": false
+    },
+    {
+      "name": "old-device-65",
+      "binary": "/Users/adelmann/git/opalx-master/tmp/ffa-probes-implementation-20261107/bin/opalx-linked-final",
+      "binary_sha256": "58bd5db212d2dc3e62c8fdf62a51fb2dca456580eabf9452c595ea448777f9d5",
+      "ranks": 2,
+      "returncode": 156,
+      "elapsed_s": 0.8501600839663297,
+      "expected": "SINGLEGAP requires magnetic sectors and at most 64 gaps.",
+      "passed": true,
+      "markers": [
+        "Error{1}Error{0}>     SINGLEGAP requires magnetic sectors and at most 64 gaps.>     SINGLEGAP requires magnetic sectors and at most 64 gaps.",
+        "Error{1}>     SINGLEGAP requires magnetic sectors and at most 64 gaps.",
+        "Error{0}>     SINGLEGAP requires magnetic sectors and at most 64 gaps."
+      ],
+      "command": [
+        "mpirun",
+        "-np",
+        "2",
+        "/Users/adelmann/git/opalx-master/tmp/ffa-probes-implementation-20261107/bin/opalx-linked-final",
+        "Cyclotron-RF-Stop.in",
+        "--info",
+        "2"
+      ],
+      "input_sha256": "56decd7f9ef96a83c1e0a9a07cf343f7626da3dafea6703c957e0d6286d7ce79",
+      "timeout": false
+    },
+    {
+      "name": "new-electron-r1",
+      "binary": "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+      "binary_sha256": "a9026934deaf44ccc7000f917678ca97c40ef55516850770c070553f7d85cdf8",
+      "ranks": 1,
+      "returncode": 156,
+      "elapsed_s": 0.677271708031185,
+      "expected": "SINGLEGAP requires an unpolarized positive proton and does not support restart.",
+      "passed": true,
+      "markers": [
+        "Error>     SINGLEGAP requires an unpolarized positive proton and does not support restart.",
+        "Error>     SINGLEGAP requires an unpolarized positive proton and does not support restart."
+      ],
+      "command": [
+        "mpirun",
+        "-np",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+        "Cyclotron-RF-Stop.in",
+        "--info",
+        "2"
+      ],
+      "input_sha256": "c0862989abba8f8778a9d41bbfdd81edf77a040ff049aad1d437b3b08f2b672b",
+      "timeout": false
+    },
+    {
+      "name": "new-electron-r2",
+      "binary": "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+      "binary_sha256": "a9026934deaf44ccc7000f917678ca97c40ef55516850770c070553f7d85cdf8",
+      "ranks": 2,
+      "returncode": 156,
+      "elapsed_s": 0.6835522910114378,
+      "expected": "SINGLEGAP requires an unpolarized positive proton and does not support restart.",
+      "passed": true,
+      "markers": [
+        "Error{1}>     SINGLEGAP requires an unpolarized positive proton and does not support restart.",
+        "Error{1}>     SINGLEGAP requires an unpolarized positive proton and does not support restart.",
+        "Error{0}>     SINGLEGAP requires an unpolarized positive proton and does not support restart.",
+        "Error{0}>     SINGLEGAP requires an unpolarized positive proton and does not support restart."
+      ],
+      "command": [
+        "mpirun",
+        "-np",
+        "2",
+        "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+        "Cyclotron-RF-Stop.in",
+        "--info",
+        "2"
+      ],
+      "input_sha256": "c0862989abba8f8778a9d41bbfdd81edf77a040ff049aad1d437b3b08f2b672b",
+      "timeout": false
+    },
+    {
+      "name": "new-particle-support-failure-r1",
+      "binary": "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+      "binary_sha256": "a9026934deaf44ccc7000f917678ca97c40ef55516850770c070553f7d85cdf8",
+      "ranks": 1,
+      "returncode": 156,
+      "elapsed_s": 0.682553582941182,
+      "expected": "SINGLEGAP particle transport failed",
+      "passed": true,
+      "markers": [
+        "OPAL-X> SINGLEGAP failure rank=0 id=0 cause=field-support gap-index=-1 t[s]=0.000000e+00 Rlab[m]=( -6.984201e-01 , 1.000035e+01 , 1.913732e+00 ) Plab[beta*gamma]=( -3.690638e-01 , -7.821739e-05 , -1.519270e-01 )",
+        "Error>     SINGLEGAP particle transport failed; see cause, ID and laboratory state above.",
+        "Error>     SINGLEGAP particle transport failed; see cause, ID and laboratory state above."
+      ],
+      "command": [
+        "mpirun",
+        "-np",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+        "Cyclotron-RF-Stop.in",
+        "--info",
+        "2"
+      ],
+      "input_sha256": "72016817ba4040d1483d9c0b8e411920933ac6c3afadd5fe676d4da9b077b662",
+      "timeout": false,
+      "coherent_failure": true
+    },
+    {
+      "name": "new-particle-support-failure-r2",
+      "binary": "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+      "binary_sha256": "a9026934deaf44ccc7000f917678ca97c40ef55516850770c070553f7d85cdf8",
+      "ranks": 2,
+      "returncode": 156,
+      "elapsed_s": 0.6746843749424443,
+      "expected": "SINGLEGAP particle transport failed",
+      "passed": true,
+      "markers": [
+        "OPAL-X{0}> SINGLEGAP failure rank=0 id=0 cause=field-support gap-index=-1 t[s]=0.000000e+00 Rlab[m]=( -6.984201e-01 , 1.000035e+01 , 1.913732e+00 ) Plab[beta*gamma]=( -3.690638e-01 , -7.821739e-05 , -1.519270e-01 )",
+        "Error{0}> *** User error detected by function \"ParallelTracker\"1}>     SINGLEGAP particle transport failed; see cause, ID and laboratory state above.",
+        "Error{1}>     SINGLEGAP particle transport failed; see cause, ID and laboratory state above.",
+        "Error{0}>     SINGLEGAP particle transport failed; see cause, ID and laboratory state above.",
+        "Error{0}>     SINGLEGAP particle transport failed; see cause, ID and laboratory state above."
+      ],
+      "command": [
+        "mpirun",
+        "-np",
+        "2",
+        "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+        "Cyclotron-RF-Stop.in",
+        "--info",
+        "2"
+      ],
+      "input_sha256": "72016817ba4040d1483d9c0b8e411920933ac6c3afadd5fe676d4da9b077b662",
+      "timeout": false,
+      "coherent_failure": true
+    }
+  ],
+  "passed": 8,
+  "total": 8,
+  "note": "Separate standalone integration cases only; no native unit-test dependency or production source changes.",
+  "host_stats_byte_identical": true,
+  "host_stats_sha256": "dfb215fabf8333859497ce0b8d02afc93dc82758dd0035b42d9f12ab120a5a8c"
+}

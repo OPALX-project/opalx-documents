@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "date": "2026-11-04",
+  "current_source": {
+    "full_length_m": 5.0,
+    "transverse_radius_m": 0.02,
+    "charge_C": 1e-11,
+    "physical_density_profiles": [
+      "uniform",
+      "triangle"
+    ],
+    "curved_test_radius_m": 2.0
+  },
+  "direct_volume": {
+    "point_profile_cases": 16,
+    "components": 48,
+    "mixed_all_components_nonzero_cases": 10,
+    "maximum_absolute_difference_V_m": 2.187611203297024e-11,
+    "maximum_nonzero_relative_error": 2.9874268248918275e-10,
+    "maximum_fixed_scale_error": 1.6004421068884345e-10,
+    "maximum_final_refinement_delta_V_m": 1.4555670557747646e-10
+  },
+  "radius_sweep": {
+    "material_targets": 15,
+    "radii_per_profile": 10,
+    "profiles": 2,
+    "field_rows": 300,
+    "scalar_fields": 900,
+    "maximum_quadrature_change_V_m": 3.774758283725532e-15,
+    "maximum_straight_limit_difference_V_m": 6.8833827526759706e-15,
+    "component_summary": [
+      {
+        "profile": "uniform",
+        "component": "u",
+        "maximum_over_selected_targets_monotone_to_straight": true,
+        "R2_max_abs_difference_V_m": 0.040935976011793426,
+        "R2_max_difference_over_fixed_scale": 0.025304929693073398,
+        "R1000_max_abs_difference_V_m": 8.127401823781635e-05,
+        "R1000_max_difference_over_fixed_scale": 5.024024141476444e-05,
+        "infinity_max_abs_difference_V_m": 2.1094237467877974e-15
+      },
+      {
+        "profile": "uniform",
+        "component": "y",
+        "maximum_over_selected_targets_monotone_to_straight": true,
+        "R2_max_abs_difference_V_m": 0.0005854325775707103,
+        "R2_max_difference_over_fixed_scale": 0.0003618902407797395,
+        "R1000_max_abs_difference_V_m": 1.1230582223076269e-06,
+        "R1000_max_difference_over_fixed_scale": 6.942282101331885e-07,
+        "infinity_max_abs_difference_V_m": 1.5543122344752192e-15
+      },
+      {
+        "profile": "uniform",
+        "component": "s",
+        "maximum_over_selected_targets_monotone_to_straight": true,
+        "R2_max_abs_difference_V_m": 0.0066396225880585025,
+        "R2_max_difference_over_fixed_scale": 0.003719780307102114,
+        "R1000_max_abs_difference_V_m": 1.1074521722553854e-05,
+        "R1000_max_difference_over_fixed_scale": 6.204386961424596e-06,
+        "infinity_max_abs_difference_V_m": 6.8833827526759706e-15
+      },
+      {
+        "profile": "triangle",
+        "component": "u",
+        "maximum_over_selected_targets_monotone_to_straight": true,
+        "R2_max_abs_difference_V_m": 0.06368710618144605,
+        "R2_max_difference_over_fixed_scale": 0.019823323809415542,
+        "R1000_max_abs_difference_V_m": 0.0001269801446734492,
+        "R1000_max_difference_over_fixed_scale": 3.9523989644885796e-05,
+        "infinity_max_abs_difference_V_m": 6.217248937900877e-15
+      },
+      {
+        "profile": "triangle",
+        "component": "y",
+        "maximum_over_selected_targets_monotone_to_straight": true,
+        "R2_max_abs_difference_V_m": 0.0005860185105921456,
+        "R2_max_difference_over_fixed_scale": 0.00018240481300379517,
+        "R1000_max_abs_difference_V_m": 1.1232520789050682e-06,
+        "R1000_max_difference_over_fixed_scale": 3.496247673162651e-07,
+        "infinity_max_abs_difference_V_m": 3.552713678800501e-15
+      },
+      {
+        "profile": "triangle",
+        "component": "s",
+        "maximum_over_selected_targets_monotone_to_straight": true,
+        "R2_max_abs_difference_V_m": 0.0018778642158544384,
+        "R2_max_difference_over_fixed_scale": 0.013662522223580787,
+        "R1000_max_abs_difference_V_m": 1.7870585284907037e-06,
+        "R1000_max_difference_over_fixed_scale": 1.300185958825278e-05,
+        "infinity_max_abs_difference_V_m": 1.6653345369377348e-16
+      }
+    ]
+  },
+  "old_reference_outputs_unchanged": true,
+  "no_native_runs": true,
+  "no_production_edits": true,
+  "output_paths": {
+    "volume": "volume_checks.csv",
+    "volume_refinement": "volume_error_summary.csv",
+    "radii": "radius-sweep/radius_fields.csv",
+    "radius_summary": "radius-sweep/radius-error-summary.csv"
+  },
+  "limits": [
+    "Sampled validation for the stated constant round tube and two profiles, not a uniform error bound over every target/source shape.",
+    "Closest mixed off-axis control is5mm inside an end; a0.1mm end control is on axis.",
+    "This validates frozen SACR fields; tracking, energy conservation and conducting boundaries remain separate.",
+    "Finite-radius differences from straight fields are physical geometry changes, not quadrature error."
+  ],
+  "provenance": {
+    "volume_acceptance_sha256": "987d1963c00f4d738779368a3f20004abef59135ba283e008e877c123e4b3787",
+    "radius_acceptance_sha256": "8d98a2fd4490a3e38e0491b9719e9582d948172e5adf72f632a5c04f0ea13b97",
+    "original_reference_acceptance_sha256": "5c89262990faca346961cf2fcbbde2669366e288ec0e33b5f600086c93c4d3f1",
+    "integration_script_sha256": "16d3110be1377cb944bcfed8841768a0b126fb31a8bc08b10deb1d29102ed067"
+  }
+}

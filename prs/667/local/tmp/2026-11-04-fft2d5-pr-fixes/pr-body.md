@@ -1,0 +1,29 @@
+Makes `FFT2D5MODEL="ORIGINAL"` explicit and restores the solver fixes used to reproduce the published bend benchmark:
+
+- Map particles and the fixed laboratory reference path into the same solve frame; restore particle coordinates and moments after solving or an exception.
+- Use the rectangular-cell averaged logarithmic Green function, including its finite self term, and retain the convolution potential halo for centered field differences.
+- Reuse one 2D FFT workspace and skip empty slices while clearing their fields. Neutral slices with nonzero charge density remain active.
+
+`ORIGINAL` remains the default and only supported model in this PR: independent transverse 2D slices with a local longitudinal closure (`g=6.36` for `PIPEMODE=OPEN`). `PIPEMODE` selects the longitudinal approximation separately. The earlier local `FINITE_SOURCE` model, 3D operators and curvature-correction operators are outside this change. The proposed projection-cache optimization is also outside this PR.
+
+**Validation:** the normal `TestSpaceChargeConfig`, `TestFFT2D5Algorithm` and `TestFFT2D5Numerics` CTest targets pass with one and four OpenMP threads. The two-rank test confirms FFT2D5 rejects unsupported distributed execution. Tests cover frame invariance, repeated solves, independent cell-potential quadrature, Gaussian mesh convergence, length-unit scaling and boundary fields. See [unit-test details](https://github.com/OPALX-project/OPALX/blob/40856f1a28246fb8d137864ca7541f2aede71a7b/unit_tests/SpaceCharge/README.md).
+
+The same restored source was built in `~/git/opalx/build-omp` and repeated the published 100-step ZeroSC and 10 pC runs. RMS curves and charged-emittance curves reproduce the archived ORIGINAL reference to relative differences below `1e-8`. The benchmark executable SHA-256 is `4fd718db8dea11088409158506cd61761eb35f7a0e6a15638fba235c433ba0eb`. This is CPU/OpenMP validation; GPU behavior was not checked here.
+
+**Test case:** cold protons (β=0.001), a 5 m uniform round bunch with transverse RMS 10 mm, ZeroSC or 10 pC. A uniform vertical magnetic field gives R=2 m. Track 10 m in 100 steps using 1,048,576 common particles and a 512³ charged mesh; compare RMS sizes and emittances with committed 658, PyORBIT and the analytic ZeroSC radial reference.
+
+**Agreement:** at 10 pC, final transverse RMS sizes agree with PyORBIT within 0.6%. Charged radial and vertical emittances differ by 12% and 50%; the maximum radial-size difference along the trajectory is 11%. This is not a claim of converged agreement throughout tracking.
+
+**Analytic ZeroSC calculation:** exact circular trajectories in the uniform magnetic field give the mean-subtracted radial position–momentum covariance. Moments are integrated over the initial uniform disk, including its curved-volume Jacobian. OPALX samples at common time; PyORBIT TEAPOT samples at common lattice station. The plots show the corresponding separate analytic references. Endpoint radial-emittance errors are 0.028% for OPALX and 0.025% for PyORBIT; PyORBIT's maximum absolute curve error is 0.59% of the analytic peak.
+
+The archived figures below are retained; the current-source repeat reproduces their ORIGINAL reference data as described above.
+
+![RMS comparison](https://raw.githubusercontent.com/OPALX-project/opalx-documents/691d1480bcb27275b8d6b913dd77851f498cb47b/examples/2026/2d5-1/rms.png)
+
+![Emittance comparison with common-time and common-station analytic ZeroSC references](https://raw.githubusercontent.com/OPALX-project/opalx-documents/691d1480bcb27275b8d6b913dd77851f498cb47b/examples/2026/2d5-1/emittance.png)
+
+Artifacts are stored in [opalx-documents/examples/2026/2d5-1](https://github.com/OPALX-project/opalx-documents/tree/691d1480bcb27275b8d6b913dd77851f498cb47b/examples/2026/2d5-1).
+
+**100-step, 10 pC inputs:** [OPALX](https://github.com/OPALX-project/opalx-documents/blob/691d1480bcb27275b8d6b913dd77851f498cb47b/examples/2026/2d5-1/inputs/opalx-10pc-100steps.in) · [PyORBIT](https://github.com/OPALX-project/opalx-documents/blob/691d1480bcb27275b8d6b913dd77851f498cb47b/examples/2026/2d5-1/inputs/pyorbit-10pc-100steps.py). [Dependencies and provenance](https://github.com/OPALX-project/opalx-documents/blob/691d1480bcb27275b8d6b913dd77851f498cb47b/examples/2026/2d5-1/inputs/readme.md); external particle and field-map assets are required.
+
+Refs #658.

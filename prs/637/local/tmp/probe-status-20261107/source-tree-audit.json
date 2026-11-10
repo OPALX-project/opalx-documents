@@ -1,0 +1,114 @@
+{
+  "local_head": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+  "published_head": "6a32ba6ddb44730de0c0ac3590b07b16cf089702",
+  "local_files": 1060,
+  "published_files": 1060,
+  "changed_file_count": 0,
+  "changed_files": [],
+  "critical_files": [
+    {
+      "path": "src/Algorithms/CyclotronProbe.h",
+      "local_present": true,
+      "published_present": true,
+      "identical": true
+    },
+    {
+      "path": "src/Algorithms/CyclotronProbeRecorder.cpp",
+      "local_present": true,
+      "published_present": true,
+      "identical": true
+    },
+    {
+      "path": "src/Algorithms/CyclotronProbeRecorder.h",
+      "local_present": true,
+      "published_present": true,
+      "identical": true
+    },
+    {
+      "path": "src/Algorithms/ParallelTracker.cpp",
+      "local_present": true,
+      "published_present": true,
+      "identical": true
+    },
+    {
+      "path": "src/Algorithms/ParallelTracker.h",
+      "local_present": true,
+      "published_present": true,
+      "identical": true
+    },
+    {
+      "path": "src/Algorithms/DeviceExternalField.cpp",
+      "local_present": true,
+      "published_present": true,
+      "identical": true
+    },
+    {
+      "path": "src/Algorithms/DeviceExternalField.h",
+      "local_present": true,
+      "published_present": true,
+      "identical": true
+    },
+    {
+      "path": "src/Algorithms/TrackReferenceStep.h",
+      "local_present": true,
+      "published_present": true,
+      "identical": true
+    },
+    {
+      "path": "src/Elements/OpalProbe.cpp",
+      "local_present": true,
+      "published_present": true,
+      "identical": true
+    },
+    {
+      "path": "src/PartBunch/ParticleContainer.hpp",
+      "local_present": true,
+      "published_present": true,
+      "identical": true
+    },
+    {
+      "path": "src/AbsBeamline/ScalingFFAMagnet.cpp",
+      "local_present": true,
+      "published_present": true,
+      "identical": true
+    },
+    {
+      "path": "src/Structure/LossDataSink.cpp",
+      "local_present": true,
+      "published_present": true,
+      "identical": true
+    }
+  ],
+  "latest_commits": [
+    {
+      "sha": "6a32ba6ddb44730de0c0ac3590b07b16cf089702",
+      "date": "2026-10-25T20:32:45Z",
+      "subject": "Preserve accumulated fields in ScalingFFA elements"
+    },
+    {
+      "sha": "58ec98143e39329c32964acdbee81fe72a843b4c",
+      "date": "2026-10-25T20:09:10Z",
+      "subject": "Merge remote-tracking branch 'origin/615-probe-command-does-not-work' into 615-probe-command-does-not-work"
+    },
+    {
+      "sha": "56fb49cf7ecc5662fb6801e1bae6619637e57c15",
+      "date": "2026-10-25T20:08:35Z",
+      "subject": "Fix collective probe output and terminal RF events"
+    },
+    {
+      "sha": "f61d8a3c8117f87fd0355d6b956c59aa2bc71b97",
+      "date": "2026-10-25T15:37:18Z",
+      "subject": "Fix shared CUDA probe history ownership and MPI cleanup"
+    },
+    {
+      "sha": "1c9b5bd321f983c8d573bf9ec4569d6ee84a4f62",
+      "date": "2026-10-25T11:50:08Z",
+      "subject": "Fix CUDA visibility for cyclotron probe kernels"
+    },
+    {
+      "sha": "a381b1da39f983caede7e92638a33b57766eea09",
+      "date": "2026-10-25T10:52:30Z",
+      "subject": "Merge branch 'master' into 615-probe-command-does-not-work"
+    }
+  ]
+}

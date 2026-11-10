@@ -1,0 +1,17 @@
+{
+  "command": [
+    "mpirun",
+    "-np",
+    "1",
+    "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+    "acceleration.in",
+    "--info",
+    "1"
+  ],
+  "threads": 1,
+  "binary_sha256": "2b507a2075301764b81a8f2a94347c9e60a3b5a3817b591b544b529e79af785f",
+  "steps": 2000,
+  "start": 1792924684.604646,
+  "returncode": 0,
+  "elapsed_s": 5.371213912963867
+}

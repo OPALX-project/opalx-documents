@@ -1,0 +1,14 @@
+Accelerate FFT2D5 nearest-segment search without changing projections
+
+Build a per-solve hierarchy of segment bounding boxes and seed its search
+with the previous segment. Use conservative floating-point pruning and
+lowest-index tie handling, with an exhaustive fallback for stack exhaustion.
+
+Compare segment indices and projected coordinates exactly with an independent
+exhaustive scan, including intersections, ties, stale seeds and extreme scales.
+Document the search, cache lifetime, numerical guard and memory cost.
+
+Validation: four unit targets pass with one and four OpenMP threads; the
+unsupported two-rank check passes. The unchanged 100-step DBA pilot drops
+from 32.71 s to 21.27–21.81 s. Projection time falls from 10.86 s to 0.396 s;
+tracking differences remain at floating-point reduction roundoff.

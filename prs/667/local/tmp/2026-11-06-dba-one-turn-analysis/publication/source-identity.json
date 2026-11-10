@@ -1,0 +1,11 @@
+{
+  "head": "daaf914b0cd1bc28de3b57812fad899e09badc3e",
+  "binary_sha256": "6bd5c3a499e54c8201ac788e6c036e56d6add6c77b76967e2ce156e937f21d65",
+  "source_patch_sha256": "6ec1004cfd31f34b83d3dc81404a1edcf17204226d4da946d5f03afeb0a82b90",
+  "uncommitted_fix": "Named occupancy functor; validated CUDA launch fix",
+  "dependencies": {
+    "ippl": "d6216553e39dcf4405849c027517cc3401fefee5",
+    "heffte": "4d8d4597b479d1e4709a2b1b4cd7d8922600045f",
+    "kokkos": "d9397f95a04a0334d327647e64ab7f1882ca0664"
+  }
+}

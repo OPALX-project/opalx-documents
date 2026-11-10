@@ -1,0 +1,62 @@
+{
+  "build_directory": "/Users/adelmann/git/opalx/build-omp",
+  "build_configuration": "Release/OpenMP",
+  "build_failures": {
+    "targets": [
+      "TestDeviceExternalField",
+      "TestScalingFFAMagnet"
+    ],
+    "compiler_errors": [
+      "/Users/adelmann/git/opalx/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp:626:34: error: no member named 'outsideAperture' in 'ScalingFFAMagnetConfig'",
+      "/Users/adelmann/git/opalx/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp:627:34: error: no member named 'contains' in 'ScalingFFAMagnetConfig'",
+      "/Users/adelmann/git/opalx/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp:629:37: error: no member named 'outsideAperture' in 'ScalingFFAMagnetConfig'",
+      "/Users/adelmann/git/opalx/unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp:630:37: error: no member named 'contains' in 'ScalingFFAMagnetConfig'",
+      "/Users/adelmann/git/opalx/unit_tests/Algorithms/TestDeviceExternalField.cpp:552:29: error: no member named 'fieldOracleSupported' in 'device_external::Lattice'"
+    ]
+  },
+  "ctest": [
+    {
+      "omp_threads": 1,
+      "targets": 129,
+      "passed": 128,
+      "failed": [
+        {
+          "target": "TestOpalBeamlinePlacement",
+          "cases": [
+            "OpalBeamlinePlacementTest.SchoolScalingFFACellEntrancePosesAndSignedRadii",
+            "OpalBeamlinePlacementTest.ScalingFFAExitFramesPlaceFollowingDrift"
+          ]
+        }
+      ]
+    },
+    {
+      "omp_threads": 4,
+      "targets": 129,
+      "passed": 127,
+      "failed": [
+        {
+          "target": "TestGaussian",
+          "cases": [
+            "GaussianTest.largeCutoffDisablesTruncation"
+          ]
+        },
+        {
+          "target": "TestOpalBeamlinePlacement",
+          "cases": [
+            "OpalBeamlinePlacementTest.SchoolScalingFFACellEntrancePosesAndSignedRadii",
+            "OpalBeamlinePlacementTest.ScalingFFAExitFramesPlaceFollowingDrift"
+          ]
+        }
+      ]
+    }
+  ],
+  "python": {
+    "discovered": 1195,
+    "passed": 1194,
+    "skipped": 1,
+    "all_suites_success": true
+  },
+  "mpi2_rejection": true,
+  "source_unchanged": true,
+  "current_binary_sha256": "d75ea9dda8e438e63182dfa9aec7d0eb0db3fb0ba440f9fb3988aacfee5d8e73"
+}

@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "zip_path": "/Users/adelmann/git/opalx/output/pdf/fft2d5-uniform-field-validation-source.zip",
+  "zip_sha256": "61231d5a5e90e1078912e50ff34d37a07047a3403cf5ef3e2f60dbc257337b76",
+  "zip_files": 1168,
+  "zip_crc_bad": null,
+  "directory": "/Users/adelmann/git/opalx/tmp/pdfs/reference-illustrations-2026-11-03/isolated-reference-illustrations-uw_dza8q",
+  "archive_vs_current_differences": [],
+  "commands": [
+    {
+      "command": [
+        "/Users/adelmann/.venv-h6/bin/python",
+        "verify_evidence.py"
+      ],
+      "returncode": 0,
+      "log": "/Users/adelmann/git/opalx/tmp/pdfs/reference-illustrations-2026-11-03/isolated-reference-illustrations-uw_dza8q/command-1.log"
+    },
+    {
+      "command": [
+        "latexmk",
+        "-pdf",
+        "-halt-on-error",
+        "-interaction=nonstopmode",
+        "-outdir=.build",
+        "main.tex"
+      ],
+      "returncode": 0,
+      "log": "/Users/adelmann/git/opalx/tmp/pdfs/reference-illustrations-2026-11-03/isolated-reference-illustrations-uw_dza8q/command-2.log"
+    }
+  ],
+  "latex_warnings": [],
+  "expected_pdf": "/Users/adelmann/git/opalx/output/pdf/fft2d5-uniform-field-validation.pdf",
+  "isolated_pdf": "/Users/adelmann/git/opalx/tmp/pdfs/reference-illustrations-2026-11-03/isolated-reference-illustrations-uw_dza8q/uniform-field-report/.build/main.pdf",
+  "expected_pdf_sha256": "6fb8c1fe7a76e84e428bbf5e036fb8815616e90afb1bb439418124c286f82403",
+  "isolated_pdf_sha256": "8500007332becb38f7ca9666df505a1fcdab178be262402234d06f84425dad58",
+  "expected_pages": 38,
+  "isolated_pages": 38,
+  "different_text_pages": [],
+  "text_sha256": "beab6c7f15348b27eadc9ff438a894509b528de0f9b7124d04b244f5891dc71b",
+  "focused_note_sha256_unchanged": "dd747e784c68b599478935caee7ca94322aa40569ec86848d459fcc4a356b2e8",
+  "verified_evidence_files": 1045
+}

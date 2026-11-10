@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/bin/bash",
+    "-c",
+    "source /Users/adelmann/OPAL-2022.1/etc/profile.d/opal.sh && exec /Users/adelmann/OPAL-2022.1/bin/opal acceleration.in"
+  ],
+  "ranks": 1,
+  "threads": 1,
+  "start_unix": 1792771060.832003,
+  "binary_sha256": "3e20fe1e8b040e10dcbb958b2d1a92d5020f5397361b230a615c0e41ca0b5ecd",
+  "input_sha256": "850ffdb8096476a8da50d50d40667bdef7398bb1cc84d93bbf58abb39866ef41",
+  "pid": 5817,
+  "returncode": 0,
+  "elapsed_s": 181.9863097667694
+}

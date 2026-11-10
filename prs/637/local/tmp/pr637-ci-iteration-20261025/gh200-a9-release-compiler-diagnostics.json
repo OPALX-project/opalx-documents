@@ -1,0 +1,21 @@
+{
+  "url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17451990420/artifacts/raw/build-a9d38caa-release/Testing/20261025-2056/Build.xml",
+  "rows": [
+    {
+      "kind": "Warning",
+      "BuildLogLine": "3236",
+      "Text": "/.../694321096757981/unit_tests/Algorithms/TestRFEventStep.cpp(104): warning #20011-D: calling a __host__ function(\"rf_event::Diagnostic::~Diagnostic()\") from a __host__ __device__ function(\"_NV_ANON_NAMESPACE::Snapshot::~Snapshot\") is not allowed",
+      "SourceFile": "unit_tests/Algorithms/TestRFEventStep.cpp",
+      "PreContext": "[3225/3327] Linking CXX executable bin/TestOneTurnMap\n[3226/3327] Building CXX object unit_tests/Algorithms/CMakeFiles/TestSpectralTunes.dir/TestSpectralTunes.cpp.o\n[3227/3327] Building CXX object unit_tests/Algorithms/CMakeFiles/TestTrackReferenceStep.dir/TestTrackReferenceStep.cpp.o\n[3228/3327] Linking CXX executable bin/TestSpectralTunes\n[3229/3327] Building CXX object unit_tests/Algorithms/CMakeFiles/TestPassiveProbe.dir/TestPassiveProbe.cpp.o\n[3230/3327] Linking CXX executable bin/TestTrackReferenceStep\n[3231/3327] Linking CXX executable bin/TestPassiveProbe\n[3232/3327] Building CXX object unit_tests/Algorithms/CMakeFiles/TestDistributionMoments.dir/TestDistributionMoments.cpp.o\n[3233/3327] Building CXX object unit_tests/PartBunch/CMakeFiles/TestBunchStateHandler.dir/TestBunchStateHandler.cpp.o\n[3234/3327] Building CXX object unit_tests/Algorithms/CMakeFiles/TestRFEventStep.dir/TestRFEventStep.cpp.o",
+      "PostContext": "Remark: The warnings can be suppressed with \"-diag-suppress <warning-number>\"\n\n[3235/3327] Building CXX object unit_tests/Algorithms/CMakeFiles/TestRFEventStepMPI.dir/TestRFEventStep.cpp.o"
+    },
+    {
+      "kind": "Warning",
+      "BuildLogLine": "3241",
+      "Text": "/.../694321096757981/unit_tests/Algorithms/TestRFEventStep.cpp(104): warning #20011-D: calling a __host__ function(\"rf_event::Diagnostic::~Diagnostic()\") from a __host__ __device__ function(\"_NV_ANON_NAMESPACE::Snapshot::~Snapshot\") is not allowed",
+      "SourceFile": "unit_tests/Algorithms/TestRFEventStep.cpp",
+      "PreContext": "",
+      "PostContext": "Remark: The warnings can be suppressed with \"-diag-suppress <warning-number>\"\n\n[3236/3327] Linking CXX executable bin/TestDistributionMoments\n[3237/3327] Linking CXX executable bin/TestBunchStateHandler\n[3238/3327] Linking CXX executable bin/TestRFEventStep\n[3239/3327] Linking CXX executable bin/TestRFEventStepMPI\n[3240/3327] Building CXX object unit_tests/PartBunch/CMakeFiles/TestBCHandler.dir/TestBCHandler.cpp.o\n[3241/3327] Building CXX object unit_tests/Algorithms/CMakeFiles/TestLinearMapEigenAnalysis.dir/TestLinearMapEigenAnalysis.cpp.o\n[3242/3327] Linking CXX executable bin/TestBCHandler"
+    }
+  ]
+}

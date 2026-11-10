@@ -1,0 +1,1 @@
+mpiexec -n 2 --bind-to none /data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestScalingFFAMagnet --gtest_filter=ScalingFFAMagnetTest.SuperposesParticleAndReferenceFieldsWithoutErasingOtherElements

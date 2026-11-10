@@ -1,0 +1,110 @@
+[
+  {
+    "backend": "GH200",
+    "job": 17521960305,
+    "name": "opalx-test-cuda13-sm90-debug-1-rank",
+    "url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17521960305",
+    "summary": [
+      "2026-10-27T23:49:49.269308Z 01O  72/137 Test  #72: TestLossDataSinkMPI ................   Passed    2.82 sec",
+      "2026-10-27T23:51:05.509661Z 01O  86/137 Test  #86: TestRFEventStepMPI .................   Passed    2.73 sec",
+      "2026-10-27T23:51:23.679673Z 01O  99/137 Test  #99: TestCyclotronProbeMPI ..............   Passed    3.98 sec",
+      "2026-10-27T23:52:21.279844Z 01O 100% tests passed, 0 tests failed out of 137"
+    ]
+  },
+  {
+    "backend": "GH200",
+    "job": 17521960306,
+    "name": "opalx-test-cuda13-sm90-release-1-rank",
+    "url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17521960306",
+    "summary": [
+      "2026-10-27T23:49:38.312082Z 01O  72/137 Test  #72: TestLossDataSinkMPI ................   Passed    2.54 sec",
+      "2026-10-27T23:50:39.910375Z 01O  86/137 Test  #86: TestRFEventStepMPI .................   Passed    2.85 sec",
+      "2026-10-27T23:51:00.616239Z 01O  99/137 Test  #99: TestCyclotronProbeMPI ..............   Passed    3.20 sec",
+      "2026-10-27T23:51:56.754815Z 01O 100% tests passed, 0 tests failed out of 137"
+    ]
+  },
+  {
+    "backend": "GH200",
+    "job": 17521960307,
+    "name": "opalx-test-cuda13-sm90-release-4-ranks",
+    "url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17521960307",
+    "summary": [
+      "2026-10-27T23:49:39.683534Z 01O  72/137 Test  #72: TestLossDataSinkMPI ................   Passed    2.79 sec",
+      "2026-10-27T23:50:41.279001Z 01O  86/137 Test  #86: TestRFEventStepMPI .................   Passed    2.93 sec",
+      "2026-10-27T23:51:00.591019Z 01O  99/137 Test  #99: TestCyclotronProbeMPI ..............   Passed    2.76 sec",
+      "2026-10-27T23:51:59.670659Z 01O 100% tests passed, 0 tests failed out of 137"
+    ]
+  },
+  {
+    "backend": "OpenMP",
+    "job": 17521961919,
+    "name": "opalx-test-openmp-debug-1-rank",
+    "url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17521961919",
+    "summary": [
+      "2026-10-27T23:14:06.905646Z 01O  72/137 Test  #72: TestLossDataSinkMPI ................   Passed    0.79 sec",
+      "2026-10-27T23:14:53.028302Z 01O  86/137 Test  #86: TestRFEventStepMPI .................   Passed    0.85 sec",
+      "2026-10-27T23:15:02.514944Z 01O  99/137 Test  #99: TestCyclotronProbeMPI ..............   Passed    0.96 sec",
+      "2026-10-27T23:15:56.024239Z 01O 100% tests passed, 0 tests failed out of 137"
+    ]
+  },
+  {
+    "backend": "OpenMP",
+    "job": 17521961920,
+    "name": "opalx-test-openmp-release-1-rank",
+    "url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17521961920",
+    "summary": [
+      "2026-10-27T23:12:53.928376Z 01O  72/137 Test  #72: TestLossDataSinkMPI ................   Passed    0.85 sec",
+      "2026-10-27T23:13:21.849953Z 01O  86/137 Test  #86: TestRFEventStepMPI .................   Passed    0.81 sec",
+      "2026-10-27T23:13:31.159681Z 01O  99/137 Test  #99: TestCyclotronProbeMPI ..............   Passed    0.88 sec",
+      "2026-10-27T23:14:02.621915Z 01O 100% tests passed, 0 tests failed out of 137"
+    ]
+  },
+  {
+    "backend": "OpenMP",
+    "job": 17521961921,
+    "name": "opalx-test-openmp-release-4-ranks",
+    "url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17521961921",
+    "summary": [
+      "2026-10-27T23:12:17.820118Z 01O  72/137 Test  #72: TestLossDataSinkMPI ................   Passed    0.78 sec",
+      "2026-10-27T23:12:45.677768Z 01O  86/137 Test  #86: TestRFEventStepMPI .................   Passed    0.83 sec",
+      "2026-10-27T23:12:55.106315Z 01O  99/137 Test  #99: TestCyclotronProbeMPI ..............   Passed    1.00 sec",
+      "2026-10-27T23:13:25.756885Z 01O 100% tests passed, 0 tests failed out of 137"
+    ]
+  },
+  {
+    "backend": "MI300",
+    "job": 17521961341,
+    "name": "opalx-test-rocm6_3-debug-1-rank",
+    "url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/jobs/17521961341",
+    "summary": [
+      "2026-10-27T23:12:01.423616Z 01O  72/137 Test  #72: TestLossDataSinkMPI ................   Passed    2.29 sec",
+      "2026-10-27T23:13:01.362703Z 01O  86/137 Test  #86: TestRFEventStepMPI .................   Passed    2.23 sec",
+      "2026-10-27T23:13:24.325786Z 01O  99/137 Test  #99: TestCyclotronProbeMPI ..............   Passed    2.52 sec",
+      "2026-10-27T23:15:52.272381Z 01O 100% tests passed, 0 tests failed out of 137"
+    ]
+  },
+  {
+    "backend": "MI300",
+    "job": 17521961342,
+    "name": "opalx-test-rocm6_3-release-1-rank",
+    "url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/jobs/17521961342",
+    "summary": [
+      "2026-10-27T23:09:07.372495Z 01O  72/137 Test  #72: TestLossDataSinkMPI ................   Passed    2.19 sec",
+      "2026-10-27T23:09:52.188320Z 01O  86/137 Test  #86: TestRFEventStepMPI .................   Passed    2.11 sec",
+      "2026-10-27T23:10:12.864337Z 01O  99/137 Test  #99: TestCyclotronProbeMPI ..............   Passed    2.16 sec",
+      "2026-10-27T23:12:02.317446Z 01O 100% tests passed, 0 tests failed out of 137"
+    ]
+  },
+  {
+    "backend": "MI300",
+    "job": 17521961343,
+    "name": "opalx-test-rocm6_3-release-4-ranks",
+    "url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/jobs/17521961343",
+    "summary": [
+      "2026-10-27T23:08:58.441033Z 01O  72/137 Test  #72: TestLossDataSinkMPI ................   Passed    2.16 sec",
+      "2026-10-27T23:09:43.041238Z 01O  86/137 Test  #86: TestRFEventStepMPI .................   Passed    2.14 sec",
+      "2026-10-27T23:10:03.985247Z 01O  99/137 Test  #99: TestCyclotronProbeMPI ..............   Passed    2.43 sec",
+      "2026-10-27T23:11:53.537782Z 01O 100% tests passed, 0 tests failed out of 137"
+    ]
+  }
+]

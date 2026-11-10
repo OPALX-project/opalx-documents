@@ -1,0 +1,16 @@
+\subsection{Nonlocal OPEN verification}
+Six selected CTest executables pass 113 unit tests; 1 MPI-only test
+is skipped in the one-rank invocation and passes separately on two ranks.
+FFT2D5 therefore still rejects unsupported distributed execution. Backend
+checks include a finite source-cell self integral and independent ellipsoid
+fields at $\gamma=1,2$; geometry and frame checks are separate from native
+physical-field convergence. No existing physical tolerance was relaxed.
+
+Weighted checkpoint sources require preserving each particle's charge and
+mass. An auxiliary fix prevents the emission stage from overwriting these
+attributes when no emitter is active. Independent sorted-ID audits verify
+q/m, total weighted charge, source geometry and frozen motion for both final
+profiles. The pre-fix smoke run changed the profile and is explicitly invalid;
+it supplies no field-accuracy evidence. The existing header charge diagnostic
+can be wrong for nonuniform weights; source normalization uses the actual
+sum of particle weights and never that header value.

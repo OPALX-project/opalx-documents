@@ -1,0 +1,742 @@
+{
+  "study": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal",
+  "date": "2026-11-02",
+  "scope": "Pointwise uniform-round local longitudinal pipe model and native validation; no curved tracking claim",
+  "sources": [
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/HANDOFF-api.md",
+      "snapshot": "data/triangle-fixed/HANDOFF-api.md",
+      "sha256": "23db912515b4341f17e4c3818adc12b108def14d188824d0844edd3ad9193c1a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/HANDOFF-docs.md",
+      "snapshot": "data/triangle-fixed/HANDOFF-docs.md",
+      "sha256": "3869da70d388cceba871ea6b676cede55873ae97ab4aa2ee79326221b16079c0"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/HANDOFF-regression.md",
+      "snapshot": "data/triangle-fixed/HANDOFF-regression.md",
+      "sha256": "167a5071e6c6ada543466a9761615e08b38e821100bd02dcfef50069db712ba9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/HANDOFF-tests.md",
+      "snapshot": "data/triangle-fixed/HANDOFF-tests.md",
+      "sha256": "f1c259845a4d7d92c1e3cf2b1a48210a380d15151509305ccb742f824af22801"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/HANDOFF.md",
+      "snapshot": "data/triangle-fixed/HANDOFF.md",
+      "sha256": "8bfa36c8619612ae7d5c9ec4895d8ac3ece09dd02b5f5f318b0ba5b43b51bbb8"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/README.md",
+      "snapshot": "data/triangle-fixed/README.md",
+      "sha256": "5b24e446d419a1a5937d31f8c316f22c05d4b3ff076b9bffdb187bef43f76719"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/REVIEW-api-core.md",
+      "snapshot": "data/triangle-fixed/REVIEW-api-core.md",
+      "sha256": "66c4ea3c27977ca51d399503f741cadf962fec25c0a2a97409346eafd0ce2faf"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/analysis/controls.csv",
+      "snapshot": "data/triangle-fixed/analysis/controls.csv",
+      "sha256": "8bf347f4a06e27a9770f6426917d2bf0d70c61a11277fb86ec2aa8f5e02476a2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/analysis/fields.csv",
+      "snapshot": "data/triangle-fixed/analysis/fields.csv",
+      "sha256": "56a9baf945053f751021a94bd1a8b84486b3d44e878b953e79a1691dd8acbbb4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/analysis/integrity.json",
+      "snapshot": "data/triangle-fixed/analysis/integrity.json",
+      "sha256": "a1ae4da3c0538ea640166bbdc1d72aa955f6faf58f2406662580578fe626d5e8"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/analysis/provenance.json",
+      "snapshot": "data/triangle-fixed/analysis/provenance.json",
+      "sha256": "4f4de3d3e1e2752b6aabb4cf5f35b92c7d91b83c6774d610c0838379d5f07b1f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/analysis/selection.json",
+      "snapshot": "data/triangle-fixed/analysis/selection.json",
+      "sha256": "5ca1e0161adcc128d1a59368c1b368023cb5bd487326623efce1b284eda62d74"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/analysis/summary.csv",
+      "snapshot": "data/triangle-fixed/analysis/summary.csv",
+      "sha256": "8a1596ddf4378d739f829cd0d6e08c695b3fabb7d549d25dfa9034a68b67c2f3"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/analysis.log",
+      "snapshot": "data/triangle-fixed/analysis.log",
+      "sha256": "ba4a30a91df38b1f99cacefe17551eb398c826f45922be12dfad99018f7b04f0"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/analyze_fixed.py",
+      "snapshot": "data/triangle-fixed/analyze_fixed.py",
+      "sha256": "4aa3e01d9215071bf6300a55eba35df47748ab9fe132cc3f94b80b22a963ff42"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/audit-api/audit.log",
+      "snapshot": "data/triangle-fixed/audit-api/audit.log",
+      "sha256": "595d242a60553ce3668ee9e78fc80b6df3357c46deb75b7e954490b4599ffd0b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/audit-api/check_native_independent.py",
+      "snapshot": "data/triangle-fixed/audit-api/check_native_independent.py",
+      "sha256": "05507b22606e215bfe35632aa5bb51e2992545fd0c9ea61f71d23929663dd175"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/audit-api/checks.json",
+      "snapshot": "data/triangle-fixed/audit-api/checks.json",
+      "sha256": "595d242a60553ce3668ee9e78fc80b6df3357c46deb75b7e954490b4599ffd0b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/audit-api/independent-summary.csv",
+      "snapshot": "data/triangle-fixed/audit-api/independent-summary.csv",
+      "sha256": "7acd86918d91957d2ecb08f4f444188d7bee00ab92580c0cf855a167179b3a4e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/audit-api/snapshot-checks.csv",
+      "snapshot": "data/triangle-fixed/audit-api/snapshot-checks.csv",
+      "sha256": "90ee2407d21e6d6508b6a48f012c5a2ac43b84ac0a4b2125d79d0edb2f2594e3"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/binary-archives.json",
+      "snapshot": "data/triangle-fixed/binary-archives.json",
+      "sha256": "f635cd81d572c43c8ea6fe9708eaea4da20fc7a66fcbcf02e15fa0cb3c081387"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/build.log",
+      "snapshot": "data/triangle-fixed/build.log",
+      "sha256": "2013aea71735e8dfad8fd7af254a26049f2b55c952cfa647042c64e4c1c98dc0"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/capture_checks.py",
+      "snapshot": "data/triangle-fixed/capture_checks.py",
+      "sha256": "1c2b96dc7a0d4c3b82c89bb7a0cfd1c1beb5832630df98dae3469f707fa12e24"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/check_test_reference.py",
+      "snapshot": "data/triangle-fixed/check_test_reference.py",
+      "sha256": "0deff2a6e0fc71302fb87cf7a5d866c8f23c00d67576fcfcc5927ba71089d17b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/checks/TestFFT2D5Algorithm.log",
+      "snapshot": "data/triangle-fixed/checks/TestFFT2D5Algorithm.log",
+      "sha256": "45b9640c32ac15e0ad0e3002e77be0697280aea4bd2af1cc3f964f3bfad0c0fa"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/checks/TestFFT2D5Algorithm.xml",
+      "snapshot": "data/triangle-fixed/checks/TestFFT2D5Algorithm.xml",
+      "sha256": "c6c82f7dd3de77218c9cc6ad942806b97fa5ab0537baee2dc526952298037e20"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/checks/TestFFT2D5Numerics.log",
+      "snapshot": "data/triangle-fixed/checks/TestFFT2D5Numerics.log",
+      "sha256": "5e8adf8d70780f79a7a786d4e3c297c440aec64ba503117e6dbed3d8da717153"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/checks/TestFFT2D5Numerics.xml",
+      "snapshot": "data/triangle-fixed/checks/TestFFT2D5Numerics.xml",
+      "sha256": "e87f478a5f76ec2c5c247d559fdd7db4603d602b9e94e58afff431867bf3a521"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/checks/TestSpaceChargeConfig.log",
+      "snapshot": "data/triangle-fixed/checks/TestSpaceChargeConfig.log",
+      "sha256": "47740084de00914bccdf4e6d0beff2b3e9f7086362a7701da4e1bbbff7f05c95"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/checks/TestSpaceChargeConfig.xml",
+      "snapshot": "data/triangle-fixed/checks/TestSpaceChargeConfig.xml",
+      "sha256": "1f98ff6334ec0821b80c0e0fe148015ab53ffbbb13b06439d0144d7df4ec5d79"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/checks/gates.json",
+      "snapshot": "data/triangle-fixed/checks/gates.json",
+      "sha256": "094cc4489b0ede3119527b64542033bdd965ac8e38b4fed1fd1bee405e47b9a5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/checks/legacy-regression-checks.json",
+      "snapshot": "data/triangle-fixed/checks/legacy-regression-checks.json",
+      "sha256": "3eb611214fefe90e9cdb1f8b1b61b5149422f0a20241f2a21cce311894b6ad9a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/checks/rank2-guard/opalx-rank2.log",
+      "snapshot": "data/triangle-fixed/checks/rank2-guard/opalx-rank2.log",
+      "sha256": "560a864116714d87e1b0b8f6072b8cc32aae44a2f101255c01716033fcc831b6"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/checks/rank2-guard/triangle.in",
+      "snapshot": "data/triangle-fixed/checks/rank2-guard/triangle.in",
+      "sha256": "0b38f3ed20e4277c4846dec9a0368c7a2bc7971d707f2bf2795d6c6df477a7da"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/implementation-provenance.json",
+      "snapshot": "data/triangle-fixed/implementation-provenance.json",
+      "sha256": "f3f74698d8e828982952f73311bc370ecb5e754d6c743ac01fd0446e950cf9dc"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/implementation.patch",
+      "snapshot": "data/triangle-fixed/implementation.patch",
+      "sha256": "80916a08d7867300f63f1298ac0314ff6c1b81883c50f97acd17b4cf5e56683a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/native-runs.log",
+      "snapshot": "data/triangle-fixed/native-runs.log",
+      "sha256": "0fcf882d54071de17578895fad4e4ce59a729a2b16c915a0ff2c410b935de936"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed-wide256/manifest.json",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed-wide256/manifest.json",
+      "sha256": "3bad39ec0d967c120d6621dcc14a25f7c7d1a5ca29a4e5abb30b208ddc71cd1a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed-wide256/triangle.in",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed-wide256/triangle.in",
+      "sha256": "0758b7b73f802e646cd779f69850fec1807d2d8000b016dae1ca6270084f80ec"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed-wide256/triangle.out",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed-wide256/triangle.out",
+      "sha256": "c212b36716a8ffe7f93847dd1ac9cca7515f68be84f0eaca7499f841139c3cec"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed-wide256/triangle.stat",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed-wide256/triangle.stat",
+      "sha256": "7540fede96960d2a0455863bd75d298c9f2d57bfcf40afe4693945ddf644bf52"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed-wide256-probes/manifest.json",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed-wide256-probes/manifest.json",
+      "sha256": "608bf4c5159cfec707ac663aa65c2bc79ed61728ce7609d3f3b37fe9d2c37123"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed-wide256-probes/triangle.in",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed-wide256-probes/triangle.in",
+      "sha256": "e95407f4fe395db1b2b6826c99824a473a64984f20471e4324750169a59a61c4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed-wide256-probes/triangle.out",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed-wide256-probes/triangle.out",
+      "sha256": "56e5a1857e1e20d803a7048f1eff7d12e131555ad860924eeb57775ea82bfa20"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed-wide256-probes/triangle.stat",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed-wide256-probes/triangle.stat",
+      "sha256": "b84fb40621b6cf8c716cb3d354c69348f9e663c5d3e437ee06ffc87fba778013"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed128/manifest.json",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed128/manifest.json",
+      "sha256": "ec15c33f180890fbccd6cf92b63399343788b9b483d92bf4b4731e1dfb6507d8"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed128/triangle.in",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed128/triangle.in",
+      "sha256": "0c376429e53c49e731d5f458be623f3cc2e603932ffec01a67d968a58cd4f187"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed128/triangle.out",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed128/triangle.out",
+      "sha256": "bfdda5ace4ca769f7c022763c75baea9f215985515112cec8ba1e3f414f176be"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed128/triangle.stat",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed128/triangle.stat",
+      "sha256": "f7ae8b7e7cf7647073cf438a961b8dd780793e309defddee55536d7b45b2365c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed128-probes/manifest.json",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed128-probes/manifest.json",
+      "sha256": "6352905e2768ecaae66fb7e48f2b4d2c216cfe00ce4ef90062c4c7750f9d676b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed128-probes/triangle.in",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed128-probes/triangle.in",
+      "sha256": "faf48520c96e3573525a6e669f17e079401ed6e6dbb24b369e133b775de116ad"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed128-probes/triangle.out",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed128-probes/triangle.out",
+      "sha256": "8acd6689072632a01f275e12da7065a71fb53322edd23da483a07c737f1937cb"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed128-probes/triangle.stat",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed128-probes/triangle.stat",
+      "sha256": "14fabe556e336675943ba294ec6edb49e1c0a3a61e70f5cf4c499f219b3aa351"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed256/manifest.json",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed256/manifest.json",
+      "sha256": "5344401df376c274714d2b60598c99e1d8c628de428df627908feec70988436a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed256/triangle.in",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed256/triangle.in",
+      "sha256": "ab9dbfb354ee7cd19fdaddba2eba2371f730c9b97fb7baf7455d682cfb7e33d4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed256/triangle.out",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed256/triangle.out",
+      "sha256": "dc2dca883b0b70284b1bcbb4be0e14ae4d3977f21d59529a3b4c4bf1e85a50a8"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed256/triangle.stat",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed256/triangle.stat",
+      "sha256": "fa01955db56cdda1b7fe88f1f15154655734116715e2057c5b78ad9e43b1b12c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed256-probes/manifest.json",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed256-probes/manifest.json",
+      "sha256": "1c1ac8868f87f94e73c96216e0bb78907a8e9cd310eab24f6ebdde092a97eb75"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed256-probes/triangle.in",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed256-probes/triangle.in",
+      "sha256": "34b7a3e5f45e775fca6f3e853d9c9d6b46e6faa7f4cc4313ab307819f272266d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed256-probes/triangle.out",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed256-probes/triangle.out",
+      "sha256": "1a2c8d1e1fe9fbcb72da9662f1a5d737014210865781fde1457daabff97705a4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed256-probes/triangle.stat",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed256-probes/triangle.stat",
+      "sha256": "f941fb96a1d53bf9f647e6bc15034dfe29464e5156772fb4543f0e5c359372f5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed64/manifest.json",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed64/manifest.json",
+      "sha256": "b6c3b7270b1204a50ab3d7e837d2e9fae1003977a5afd030216dfa1a3e2bed5b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed64/triangle.in",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed64/triangle.in",
+      "sha256": "fbaf5f4b2c0d2631aa0dacd191630f2e5aa430d3bac7ab477c316ca543b2442e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed64/triangle.out",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed64/triangle.out",
+      "sha256": "226dc3b8f29e62a1fca19728009c25de9244dab16d8ffb032b0f8a2ad21c233a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed64/triangle.stat",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed64/triangle.stat",
+      "sha256": "9fb7367a660e0250480bbb27dcdd5e108dd606fad975c2b2950735c81fe316f1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed64-probes/manifest.json",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed64-probes/manifest.json",
+      "sha256": "983ab0f8c44d07ab5b919af3fc7953a37ac9d994fd0f6219be6dbfed3d45f6aa"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed64-probes/triangle.in",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed64-probes/triangle.in",
+      "sha256": "0b38f3ed20e4277c4846dec9a0368c7a2bc7971d707f2bf2795d6c6df477a7da"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed64-probes/triangle.out",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed64-probes/triangle.out",
+      "sha256": "ff7f55bac894f3b11407b9a7b2e310cd10ef74158da5f4d068be5bd67971ca0c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/fixed64-probes/triangle.stat",
+      "snapshot": "data/triangle-fixed/opalx/runs/fixed64-probes/triangle.stat",
+      "sha256": "e3bec55525f221fe14064f8339f9c414b22242ae3d3c8da4bfae6c003a6fefcf"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/legacy128/manifest.json",
+      "snapshot": "data/triangle-fixed/opalx/runs/legacy128/manifest.json",
+      "sha256": "85563400b4c0ac65ab44517df997a33ce9757bfba60ccbf88a43d4e3268d6781"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/legacy128/triangle.in",
+      "snapshot": "data/triangle-fixed/opalx/runs/legacy128/triangle.in",
+      "sha256": "8d4147dbee22e20989255d0753ec64a9c69a272dcc45f3c675f89d30fdc1def6"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/legacy128/triangle.out",
+      "snapshot": "data/triangle-fixed/opalx/runs/legacy128/triangle.out",
+      "sha256": "67636600e87cf168d5831a7765138c77f99923849b21ef26ed1ccd0e921517f7"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/legacy128/triangle.stat",
+      "snapshot": "data/triangle-fixed/opalx/runs/legacy128/triangle.stat",
+      "sha256": "5e36424c28cc498940e5f0cabdbe71610b6983b5cc7d2b6b2c8db3473c23aa4f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/legacy128-probes/manifest.json",
+      "snapshot": "data/triangle-fixed/opalx/runs/legacy128-probes/manifest.json",
+      "sha256": "61ffbe205d6d78383cb477a311a60ea76b926389077459930bca6045898194c8"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/legacy128-probes/triangle.in",
+      "snapshot": "data/triangle-fixed/opalx/runs/legacy128-probes/triangle.in",
+      "sha256": "0b831b7bc68b4e1bf2edba5113b130858b7920ede0970006e2e2816b3428a6ed"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/legacy128-probes/triangle.out",
+      "snapshot": "data/triangle-fixed/opalx/runs/legacy128-probes/triangle.out",
+      "sha256": "c50d34ace3d03fb6b12b448fcd08d12f3a6ef905700b4171d29a1b6ff7cfc91d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/legacy128-probes/triangle.stat",
+      "snapshot": "data/triangle-fixed/opalx/runs/legacy128-probes/triangle.stat",
+      "sha256": "6f2e1eb2b1dac131ba86e39cffd4a35b529972f6deaade34da34033c77f790ab"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/physical-b10mm/manifest.json",
+      "snapshot": "data/triangle-fixed/opalx/runs/physical-b10mm/manifest.json",
+      "sha256": "08320241d5f2b320646dc5be2eab6308dd5d92fd111cdfd71b448166b274b9d5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/physical-b10mm/triangle.in",
+      "snapshot": "data/triangle-fixed/opalx/runs/physical-b10mm/triangle.in",
+      "sha256": "8b07e6acc7ea39482b7813b8cf4cd39ad61054c6ccde411aa0cd7edac4d450bf"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/physical-b10mm/triangle.out",
+      "snapshot": "data/triangle-fixed/opalx/runs/physical-b10mm/triangle.out",
+      "sha256": "6845cdb3ec68c512e8710de873caf6ea278a211c864dbf0f73eaee65fec5ce00"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/physical-b10mm/triangle.stat",
+      "snapshot": "data/triangle-fixed/opalx/runs/physical-b10mm/triangle.stat",
+      "sha256": "e18f38c5fc380743df16717a5e6b09a7c351b75bdf68f8568bcdc68c279e5e54"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/physical-b10mm-probes/manifest.json",
+      "snapshot": "data/triangle-fixed/opalx/runs/physical-b10mm-probes/manifest.json",
+      "sha256": "da68fa4a29d1ca643c3d013a3521ff7041f7b716613c7262af738e69648f1322"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/physical-b10mm-probes/triangle.in",
+      "snapshot": "data/triangle-fixed/opalx/runs/physical-b10mm-probes/triangle.in",
+      "sha256": "1124303f556b2d3e1ce4056a24bcdc76f07f76ca187adf5c502b6c97d9b61963"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/physical-b10mm-probes/triangle.out",
+      "snapshot": "data/triangle-fixed/opalx/runs/physical-b10mm-probes/triangle.out",
+      "sha256": "510d66932c1fa7f68eee35e68e2cfa2229606de305a92d66d3f99e7bf10ee02b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/opalx/runs/physical-b10mm-probes/triangle.stat",
+      "snapshot": "data/triangle-fixed/opalx/runs/physical-b10mm-probes/triangle.stat",
+      "sha256": "3ce5cb180d5f9c94b0e1a904ba580321fcb425400b2ec103189e958f444ab7f1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/pyorbit/runs/rb-repeat-r1/manifest-rank0.json",
+      "snapshot": "data/triangle-fixed/pyorbit/runs/rb-repeat-r1/manifest-rank0.json",
+      "sha256": "136afb2e2d7c4cac29c65d46404d8a62d6c77e1737ac1935f26ca4059f50d0ec"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/pyorbit/runs/rb-repeat-r1/probes-rank0.csv",
+      "snapshot": "data/triangle-fixed/pyorbit/runs/rb-repeat-r1/probes-rank0.csv",
+      "sha256": "56e571ff27b647c0c524cbc8cd1baa68df961b305e2e650028ac46ee24588ff9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/pyorbit/runs/slice-repeat-r1/manifest-rank0.json",
+      "snapshot": "data/triangle-fixed/pyorbit/runs/slice-repeat-r1/manifest-rank0.json",
+      "sha256": "65d83dbc103e20fe40ead10e0faf55c06de67c5d0adcbc4bb6690e91121eb503"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/pyorbit/runs/slice-repeat-r1/probes-rank0.csv",
+      "snapshot": "data/triangle-fixed/pyorbit/runs/slice-repeat-r1/probes-rank0.csv",
+      "sha256": "eccb4c5cc12637b93bf617a068fea7473bc10bb0e6aacb0fa6318796465347d4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/pyorbit/runs/slice-repeat-r2/manifest-rank0.json",
+      "snapshot": "data/triangle-fixed/pyorbit/runs/slice-repeat-r2/manifest-rank0.json",
+      "sha256": "5a787f7a1d1bdcf1057137e285f60e51baf42837b74d9eb253002c3f95479624"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/pyorbit/runs/slice-repeat-r2/manifest-rank1.json",
+      "snapshot": "data/triangle-fixed/pyorbit/runs/slice-repeat-r2/manifest-rank1.json",
+      "sha256": "5b9b8ad263a6938ef2fe8644bbec919ef524e3773854a57eb3f2676e3bcf5eb6"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/pyorbit/runs/slice-repeat-r2/probes-rank0.csv",
+      "snapshot": "data/triangle-fixed/pyorbit/runs/slice-repeat-r2/probes-rank0.csv",
+      "sha256": "d89fcccb5d67795ec16b49a33217c96f6bb6fb5901f2bd80e9423d21d1157897"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/pyorbit/runs/slice-repeat-r2/probes-rank1.csv",
+      "snapshot": "data/triangle-fixed/pyorbit/runs/slice-repeat-r2/probes-rank1.csv",
+      "sha256": "8fc0c48814d83c7d240d2be8e099ef01e21cba94660bceeb0b709564e2b5a9f9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/pyorbit-mpi-repeat.log",
+      "snapshot": "data/triangle-fixed/pyorbit-mpi-repeat.log",
+      "sha256": "d7e21dce784c2d6068429aaaf004657258ccc6294a00572441a5c46f2ef4630c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/pyorbit-rb-repeat.log",
+      "snapshot": "data/triangle-fixed/pyorbit-rb-repeat.log",
+      "sha256": "350daf31602a9c96c69bfbc328ad1563653ec5dcec2fadb32d32fe46d72ad0f3"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/pyorbit-repeat.log",
+      "snapshot": "data/triangle-fixed/pyorbit-repeat.log",
+      "sha256": "c2f4988f54095486b49dd38d5454b6494396de5f0defe8d9ccbe26ee9bc8c492"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/case-file-hashes.json",
+      "snapshot": "data/triangle-fixed/regression-checks/case-file-hashes.json",
+      "sha256": "8dcb38b6e341386195c98fc0810f1bce2a824037973c6b3c9e24f84fd1a90e50"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/correct/FFT2D5-TriangularPipe.out",
+      "snapshot": "data/triangle-fixed/regression-checks/correct/FFT2D5-TriangularPipe.out",
+      "sha256": "898b77fbd05cc0c3534bbaa591cf47e3800e49cda2661768e05a6fb6d354d29d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/correct/physics-validation.json",
+      "snapshot": "data/triangle-fixed/regression-checks/correct/physics-validation.json",
+      "sha256": "7539423f5096580666185d37fda75c612dd30f1302468c882a32fd76edb5b8a4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/legacy/FFT2D5-TriangularPipe.in",
+      "snapshot": "data/triangle-fixed/regression-checks/legacy/FFT2D5-TriangularPipe.in",
+      "sha256": "043e2eb60895b67d4c7db2c6cbba09cf0be260cf359b4f01f6af0ec2edc29de4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/legacy/FFT2D5-TriangularPipe.local",
+      "snapshot": "data/triangle-fixed/regression-checks/legacy/FFT2D5-TriangularPipe.local",
+      "sha256": "3e7350ac32848f385548df95fee42817ca9eeabb4e13c42534966242e827bf6f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/legacy/FFT2D5-TriangularPipe.rt",
+      "snapshot": "data/triangle-fixed/regression-checks/legacy/FFT2D5-TriangularPipe.rt",
+      "sha256": "bd0080db61bdcfa9ea3a321f0227b9cafe6085c1b59f0cc3a4dc92f66b3f2089"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/legacy/README.md",
+      "snapshot": "data/triangle-fixed/regression-checks/legacy/README.md",
+      "sha256": "ab39e77c2ec2dd1e8fb22002768742d48c04f2e5afdf1780c363573067de93be"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/legacy/analytic_provenance.json",
+      "snapshot": "data/triangle-fixed/regression-checks/legacy/analytic_provenance.json",
+      "sha256": "21e2003b60726f3afaee5c7544bd52607ac1754b299e80a427b9da75880f5cec"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/legacy/legacy-physics.json",
+      "snapshot": "data/triangle-fixed/regression-checks/legacy/legacy-physics.json",
+      "sha256": "122168789b5725c52cbddcca652e698ace57b5e4c85f25e7bc17b5f70f42b2b6"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/legacy/legacy.out",
+      "snapshot": "data/triangle-fixed/regression-checks/legacy/legacy.out",
+      "sha256": "c256e0697ca4b82ccc8a14c651efc23cf211c44fe0c4bcb7f0f3b5f2a40c9e57"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/legacy/physics_config.json",
+      "snapshot": "data/triangle-fixed/regression-checks/legacy/physics_config.json",
+      "sha256": "853d9a9920c597b6b13ebb90e4b705d5f2035ccebd9e35b43f049780cfb24ec0"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/legacy/prepare.py",
+      "snapshot": "data/triangle-fixed/regression-checks/legacy/prepare.py",
+      "sha256": "36f573ac3e3ea16e19b571a85f63b4fd0f5e16e99d4d5a9641b49fc1fcfb6724"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/legacy/probes.csv",
+      "snapshot": "data/triangle-fixed/regression-checks/legacy/probes.csv",
+      "sha256": "337a7c2e2f2fbe5d48916f3267ad6de4ae320df33ae152a3e4e9ad68ee300150"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/legacy/reference_provenance.json",
+      "snapshot": "data/triangle-fixed/regression-checks/legacy/reference_provenance.json",
+      "sha256": "5f21cf412c3090fabf057527cb360ea806596b7bc154dc522a74c793ea7e398c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/legacy/reference_validation.json",
+      "snapshot": "data/triangle-fixed/regression-checks/legacy/reference_validation.json",
+      "sha256": "7539423f5096580666185d37fda75c612dd30f1302468c882a32fd76edb5b8a4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/legacy/validate.py",
+      "snapshot": "data/triangle-fixed/regression-checks/legacy/validate.py",
+      "sha256": "4807bbeb85e51f6e88b563e85262a735a814db54274ad8ffd2170c9fdf5b0c6f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/local-run/physics-validation.json",
+      "snapshot": "data/triangle-fixed/regression-checks/local-run/physics-validation.json",
+      "sha256": "b740daf7e9db21c224cd69097c5b178bdeb203446681dd986fac38211ccfe0ed"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/local-script.log",
+      "snapshot": "data/triangle-fixed/regression-checks/local-script.log",
+      "sha256": "a9999e6e4a65ea37c75241c540899f1473389241c01afa1f4d84937354fcc0f2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/probe-only/FFT2D5-TriangularPipe.in",
+      "snapshot": "data/triangle-fixed/regression-checks/probe-only/FFT2D5-TriangularPipe.in",
+      "sha256": "06a2bc0a095fabff44771d65172bed8225111effa4b1ffdee88831d44774f243"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/probe-only/FFT2D5-TriangularPipe.local",
+      "snapshot": "data/triangle-fixed/regression-checks/probe-only/FFT2D5-TriangularPipe.local",
+      "sha256": "3e7350ac32848f385548df95fee42817ca9eeabb4e13c42534966242e827bf6f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/probe-only/FFT2D5-TriangularPipe.rt",
+      "snapshot": "data/triangle-fixed/regression-checks/probe-only/FFT2D5-TriangularPipe.rt",
+      "sha256": "bd0080db61bdcfa9ea3a321f0227b9cafe6085c1b59f0cc3a4dc92f66b3f2089"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/probe-only/README.md",
+      "snapshot": "data/triangle-fixed/regression-checks/probe-only/README.md",
+      "sha256": "ab39e77c2ec2dd1e8fb22002768742d48c04f2e5afdf1780c363573067de93be"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/probe-only/analytic_provenance.json",
+      "snapshot": "data/triangle-fixed/regression-checks/probe-only/analytic_provenance.json",
+      "sha256": "4b45c53a36dcfe0c7758bed19a6ab369fdcf772db74ba2bd839aa254894b5285"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/probe-only/physics_config.json",
+      "snapshot": "data/triangle-fixed/regression-checks/probe-only/physics_config.json",
+      "sha256": "853d9a9920c597b6b13ebb90e4b705d5f2035ccebd9e35b43f049780cfb24ec0"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/probe-only/prepare.py",
+      "snapshot": "data/triangle-fixed/regression-checks/probe-only/prepare.py",
+      "sha256": "1fe5fb635e868d364be53dde9134863030486893100c24788684b5ca2533374f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/probe-only/probe-only.in",
+      "snapshot": "data/triangle-fixed/regression-checks/probe-only/probe-only.in",
+      "sha256": "07e0d6ab8fc3895003d36e30c906bb040871b5fbf53f1aa9d820c7cc7b2eb2b3"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/probe-only/probe-only.out",
+      "snapshot": "data/triangle-fixed/regression-checks/probe-only/probe-only.out",
+      "sha256": "3d378f136d192aa3a966f12d7ac7d2ec32cd91695a97b98801a1d449e6b83709"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/probe-only/probes.csv",
+      "snapshot": "data/triangle-fixed/regression-checks/probe-only/probes.csv",
+      "sha256": "337a7c2e2f2fbe5d48916f3267ad6de4ae320df33ae152a3e4e9ad68ee300150"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/probe-only/reference_provenance.json",
+      "snapshot": "data/triangle-fixed/regression-checks/probe-only/reference_provenance.json",
+      "sha256": "5f21cf412c3090fabf057527cb360ea806596b7bc154dc522a74c793ea7e398c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/probe-only/reference_validation.json",
+      "snapshot": "data/triangle-fixed/regression-checks/probe-only/reference_validation.json",
+      "sha256": "7539423f5096580666185d37fda75c612dd30f1302468c882a32fd76edb5b8a4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/probe-only/validate.py",
+      "snapshot": "data/triangle-fixed/regression-checks/probe-only/validate.py",
+      "sha256": "0008c523eeee33862787456a925ea832389fbf4c7e155cedffd21ce8b66f4b11"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/reference-recheck.log",
+      "snapshot": "data/triangle-fixed/regression-checks/reference-recheck.log",
+      "sha256": "7539423f5096580666185d37fda75c612dd30f1302468c882a32fd76edb5b8a4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/regression-checks/regression-controls.json",
+      "snapshot": "data/triangle-fixed/regression-checks/regression-controls.json",
+      "sha256": "9c5dbeb8881159415c32fdc940bffac1048680c9855e16d83922e4d6e85853ee"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/run_fixed.py",
+      "snapshot": "data/triangle-fixed/run_fixed.py",
+      "sha256": "73349be77c951b8c102d93410ebb14d15fdf4dbb9efb971c8cbbb41e9d215a3a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/unit-reference-check.json",
+      "snapshot": "data/triangle-fixed/unit-reference-check.json",
+      "sha256": "701225712ffbe85354cb5c8ab3b13af7dee7402bb51542721684ec6d5491a9c2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/run_opalx.py",
+      "snapshot": "data/triangle-fixed/opalx/run_opalx.py",
+      "sha256": "5022bdf64b7adae3cddc73e3c94fe9a8f105723628bc30f3507cf6a37e857a40"
+    },
+    {
+      "original": "/Users/adelmann/git/opalx/docs/validation/fft2d5/longitudinal-model.md",
+      "snapshot": "data/triangle-fixed/documentation/longitudinal-model.md",
+      "sha256": "cc843be071fa2fef24f7c61e43e1e389c9806e8fca06e4ea3da1f0a1e0d03045"
+    },
+    {
+      "original": "/Users/adelmann/git/regression-tests-x/RegressionTests/FFT2D5-TriangularPipe/FFT2D5-TriangularPipe.in",
+      "snapshot": "data/triangle-fixed/regression-case/FFT2D5-TriangularPipe.in",
+      "sha256": "06a2bc0a095fabff44771d65172bed8225111effa4b1ffdee88831d44774f243"
+    },
+    {
+      "original": "/Users/adelmann/git/regression-tests-x/RegressionTests/FFT2D5-TriangularPipe/FFT2D5-TriangularPipe.local",
+      "snapshot": "data/triangle-fixed/regression-case/FFT2D5-TriangularPipe.local",
+      "sha256": "7cf68c8003d86864d17186862336afc92c933fb361c6c7d8668bf6f9aaedc5d5"
+    },
+    {
+      "original": "/Users/adelmann/git/regression-tests-x/RegressionTests/FFT2D5-TriangularPipe/FFT2D5-TriangularPipe.rt",
+      "snapshot": "data/triangle-fixed/regression-case/FFT2D5-TriangularPipe.rt",
+      "sha256": "bd0080db61bdcfa9ea3a321f0227b9cafe6085c1b59f0cc3a4dc92f66b3f2089"
+    },
+    {
+      "original": "/Users/adelmann/git/regression-tests-x/RegressionTests/FFT2D5-TriangularPipe/README.md",
+      "snapshot": "data/triangle-fixed/regression-case/README.md",
+      "sha256": "5f93573600a6e38e690fe612ce9ebd33d9fbdc820303e6177175460f0eab621f"
+    },
+    {
+      "original": "/Users/adelmann/git/regression-tests-x/RegressionTests/FFT2D5-TriangularPipe/analytic_provenance.json",
+      "snapshot": "data/triangle-fixed/regression-case/analytic_provenance.json",
+      "sha256": "d54cd7df2d46baeec149f7e2df7f04bea626e74fd838d130bf225adf9e75300e"
+    },
+    {
+      "original": "/Users/adelmann/git/regression-tests-x/RegressionTests/FFT2D5-TriangularPipe/physics_config.json",
+      "snapshot": "data/triangle-fixed/regression-case/physics_config.json",
+      "sha256": "853d9a9920c597b6b13ebb90e4b705d5f2035ccebd9e35b43f049780cfb24ec0"
+    },
+    {
+      "original": "/Users/adelmann/git/regression-tests-x/RegressionTests/FFT2D5-TriangularPipe/prepare.py",
+      "snapshot": "data/triangle-fixed/regression-case/prepare.py",
+      "sha256": "36f573ac3e3ea16e19b571a85f63b4fd0f5e16e99d4d5a9641b49fc1fcfb6724"
+    },
+    {
+      "original": "/Users/adelmann/git/regression-tests-x/RegressionTests/FFT2D5-TriangularPipe/probes.csv",
+      "snapshot": "data/triangle-fixed/regression-case/probes.csv",
+      "sha256": "337a7c2e2f2fbe5d48916f3267ad6de4ae320df33ae152a3e4e9ad68ee300150"
+    },
+    {
+      "original": "/Users/adelmann/git/regression-tests-x/RegressionTests/FFT2D5-TriangularPipe/reference/FFT2D5-TriangularPipe.stat",
+      "snapshot": "data/triangle-fixed/regression-case/reference/FFT2D5-TriangularPipe.stat",
+      "sha256": "409c4959c16ba1dc4058c0a80a79ddf7e9a1011ba3285032bcb05a1ce5cbadc3"
+    },
+    {
+      "original": "/Users/adelmann/git/regression-tests-x/RegressionTests/FFT2D5-TriangularPipe/reference/FFT2D5-TriangularPipe.stat.md5",
+      "snapshot": "data/triangle-fixed/regression-case/reference/FFT2D5-TriangularPipe.stat.md5",
+      "sha256": "b9586f9337e4ce2d918acc47d41d9485f1c772adcc0fffd2b3eefc7737086ca7"
+    },
+    {
+      "original": "/Users/adelmann/git/regression-tests-x/RegressionTests/FFT2D5-TriangularPipe/reference_path.dat",
+      "snapshot": "data/triangle-fixed/regression-case/reference_path.dat",
+      "sha256": "01706a98a7b65504e10f3141944ed6f87d3285185d160e80e9555da97a98a62a"
+    },
+    {
+      "original": "/Users/adelmann/git/regression-tests-x/RegressionTests/FFT2D5-TriangularPipe/reference_provenance.json",
+      "snapshot": "data/triangle-fixed/regression-case/reference_provenance.json",
+      "sha256": "330b10e40dfbdb873ca47b1b1b922b9d473be0ea2c68ab463a100125eef7aba3"
+    },
+    {
+      "original": "/Users/adelmann/git/regression-tests-x/RegressionTests/FFT2D5-TriangularPipe/reference_validation.json",
+      "snapshot": "data/triangle-fixed/regression-case/reference_validation.json",
+      "sha256": "7539423f5096580666185d37fda75c612dd30f1302468c882a32fd76edb5b8a4"
+    },
+    {
+      "original": "/Users/adelmann/git/regression-tests-x/RegressionTests/FFT2D5-TriangularPipe/validate.py",
+      "snapshot": "data/triangle-fixed/regression-case/validate.py",
+      "sha256": "4807bbeb85e51f6e88b563e85262a735a814db54274ad8ffd2170c9fdf5b0c6f"
+    }
+  ]
+}

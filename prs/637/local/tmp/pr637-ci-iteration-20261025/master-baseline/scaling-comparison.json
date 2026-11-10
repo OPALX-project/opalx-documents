@@ -1,0 +1,19 @@
+{
+  "baseline_revision": "8c1a862369fb05034bb27aa1111d63a7b1e16c02",
+  "baseline_executable_sha256": "de8fd16697d9dcaeae8af96fdeac25c936e1a9ff2ddf7729806c2b1ea19d9d17",
+  "candidate_revision": "23f04f6c8e57f497e6f1a722038f9e1cef010803",
+  "candidate_executable_sha256": "e4e8b35004a178b0f8fc2d3cd3bd644874d1043ffcce537e64275f37f9a0a9cc",
+  "rows": 10,
+  "numeric_columns": 47,
+  "numeric_dataframes_identical": true,
+  "existing_avg_1e_minus_4_m_checks_pass_under_stricter_max_absolute_check": {
+    "mean_x": true,
+    "mean_y": true,
+    "mean_s": true
+  },
+  "master_final_mean_x_m": 1.219384512687868,
+  "candidate_final_mean_x_m": 1.219384512687868,
+  "master_final_mean_s_m": -0.08012515205253731,
+  "candidate_final_mean_s_m": -0.08012515205253731,
+  "limitation": "Baseline agreement detects pre-existing behavior; it does not establish the physical correctness of the particle/reference separation."
+}

@@ -1,0 +1,53 @@
+% Ownership of geometry/physics and of uniform-grid/FFT infrastructure.
+% No generic curvilinear IPPL Poisson operator is used in this pipeline.
+\begin{tikzpicture}[
+ x=1cm,y=1cm,font=\small,>=Latex,
+ mgop/.style={draw=blue!55!black,fill=blue!5,line width=.65pt,
+   rounded corners=1.5pt,align=center,text width=3.1cm,minimum height=1.25cm,inner sep=5pt},
+ mgippl/.style={draw=black!45,fill=black!3,line width=.65pt,
+   rounded corners=1.5pt,align=center,text width=3.1cm,minimum height=1.25cm,inner sep=5pt},
+ mgflow/.style={->,line width=.8pt,black!65},
+ mgflowlabel/.style={fill=white,inner sep=2pt,align=center}
+]
+ \path[use as bounding box] (0,0) rectangle (16.6,7.7);
+ \node[anchor=north west,font=\bfseries\small] at (.1,7.55)
+   {Geometry and field physics are implemented in OPALX};
+ \node[anchor=north west,black!65] at (.1,7.0)
+   {IPPL supplies uniform field storage and three-dimensional FFTs};
+
+ \node[mgop] (mga) at (2.0,5.55)
+   {Cartesian particles\\$\bm X_p,\;q_p$};
+ \node[mgop] (mgb) at (6.15,5.55)
+   {OPALX mapping\\$\bm X_p\mapsto(u_p,y_p,s_p)$};
+ \node[mgippl] (mgc) at (10.3,5.55)
+   {IPPL uniform array\\CIC charge density\\$\rho_c[i,j,k]$};
+ \node[mgop] (mgd) at (14.45,5.55)
+   {OPALX kernels\\$G,\;H,\;F$\\Curved geometry};
+ \draw[mgflow] (mga) -- (mgb);
+ \draw[mgflow] (mgb) -- (mgc);
+ \draw[mgflow] (14.45,6.65) -- (mgd.north)
+   node[pos=0,above,mgflowlabel] {Reference geometry};
+
+ \node[mgippl] (mge) at (14.45,3.05)
+   {IPPL 3D FFTs\\Three convolutions};
+ \node[mgop] (mgf) at (10.3,3.05)
+   {OPALX assembly\\Common potential $\Phi$};
+ \node[mgop] (mgg) at (6.15,3.05)
+   {OPALX gradient\\Curvature metric\\$E_u,\;E_y,\;E_s$};
+ \node[mgop] (mgh) at (2.0,3.05)
+   {OPALX gather\\Local-to-Cartesian\\field rotation};
+ \draw[mgflow] (mgd) -- (mge);
+ \draw[mgflow] (mge) -- (mgf);
+ \draw[mgflow] (mgf) -- (mgg);
+ \draw[mgflow] (mgg) -- (mgh);
+
+ \node[anchor=north,align=center] at (2.0,1.78)
+   {Cartesian particle field $\bm E_p$};
+ \draw[mgflow] (mgh.south) -- (2.0,1.88);
+ \draw[mgflow,dashed,black!45] (mgc.south) -- ++(0,-.58) -| (mge.west)
+   node[pos=.28,above,mgflowlabel] {same source spectrum};
+ \node[anchor=west,text width=10.7cm,align=left,black!65] at (5.45,1.22)
+   {Blue boxes: OPALX mapping and field operator.\\
+    Grey boxes: IPPL uniform-array and FFT infrastructure.\\
+    The standard Cartesian Poisson kernel is replaced by the custom operator.};
+\end{tikzpicture}

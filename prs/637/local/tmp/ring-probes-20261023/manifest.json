@@ -1,0 +1,104 @@
+{
+  "binary": "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+  "binary_sha256": "2f7bf515102cc5d3703ce0640e08190478c99aa15773dff2af8474a11bf8cb8c",
+  "git_head": "6d2f011572f9cb1aa38c01e1b9d529e1ab58eb21",
+  "mpi_ranks": 1,
+  "openmp_threads": 1,
+  "runs": {
+    "coasting-10turns": {
+      "source_input": "/Users/adelmann/git/opalx/sandbox/Regression-Tests/ring-cyclotron-coasting-1/coasting.in",
+      "command": [
+        "mpirun",
+        "-np",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+        "coasting.in",
+        "--info",
+        "2"
+      ],
+      "sha256": {
+        "bfield.dat": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+        "proton72.dat": "0c612d341099fbb07f94fb1d61d998515208178074239e1d89acbb69aee937d7",
+        "coasting.in": "77b9ca5c65125feace6bc81f259886a8898e32cefad38bdcfb8a0dcc0aa6c90e"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 0.5067355420906097
+    },
+    "acceleration-590MeV": {
+      "source_input": "/Users/adelmann/git/opalx/sandbox/Regression-Tests/ring-cyclotron-accelera-1/acceleration.in",
+      "command": [
+        "mpirun",
+        "-np",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+        "acceleration.in",
+        "--info",
+        "2"
+      ],
+      "sha256": {
+        "acceleration.in": "ef52b28a203d1ad794496b6d97129a12ffb0777c2fee0465a56e0dbbb8004b6d",
+        "bfield.dat": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+        "proton.dat": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+        "rffield2.dat": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+        "rffield1.dat": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 12.92086762492545
+    },
+    "coasting-10turns-control": {
+      "command": [
+        "mpirun",
+        "-np",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+        "coasting.in",
+        "--info",
+        "2"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.4558223750209436,
+      "sha256": {
+        "bfield.dat": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+        "proton72.dat": "0c612d341099fbb07f94fb1d61d998515208178074239e1d89acbb69aee937d7",
+        "coasting.in": "a4cd296e033c25b827e213409eb462aff30f396b5794ae46cb7947b9b9c5d05c"
+      }
+    },
+    "acceleration-590MeV-control": {
+      "command": [
+        "mpirun",
+        "-np",
+        "1",
+        "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+        "acceleration.in",
+        "--info",
+        "2"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 12.43894799996633,
+      "sha256": {
+        "acceleration.in": "744341318a6cfa1e66a8b886342518578861bf0624a7c7ca6632714c40fb5e68",
+        "bfield.dat": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+        "proton.dat": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+        "rffield2.dat": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+        "rffield1.dat": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b"
+      }
+    }
+  },
+  "working_tree_diff_sha256": "dc98fa11e2b55ca997311df6537064684e42673703dbffe58eccab23391791c6",
+  "new_source_sha256": {
+    "src/Algorithms/CyclotronProbe.h": "932dc6b3f63ef04e781b8700112a29f07bc52e8f8f44fa6cba98035c31799b13",
+    "src/Algorithms/CyclotronProbeRecorder.cpp": "c2365f03ab86c875acebb141386f49a70243c9d26c2877f03b50d3ffdff8849a",
+    "src/Algorithms/CyclotronProbeRecorder.h": "e30b14e56e82060a9d06edba5e8ed3d93f7175d6b5eb54bcd83b53add517fba4"
+  },
+  "legacy_sources": {
+    "cyclotron1.in": {
+      "source": "/Users/adelmann/git/opalx/sandbox/cyclotron/opal/cyclotron1.in",
+      "sha256": "1fafd8eb1b4a020c03c41f8832f0eba3d4d9fae97efa3e2159dadefdfa77d703"
+    },
+    "cyclotron2.in": {
+      "source": "/Users/adelmann/git/opalx/sandbox/cyclotron/opal/cyclotron2.in",
+      "sha256": "67b696af41eefbbcd546ff8720e96ff21917c9c6d51d78d59362f369fd40ba22"
+    }
+  },
+  "probe_geometry_source": "/Users/adelmann/git/opal-manual/sections/elements/index.qmd, PROBE example"
+}

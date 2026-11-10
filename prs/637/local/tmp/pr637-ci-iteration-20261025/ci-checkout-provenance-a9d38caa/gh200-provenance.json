@@ -1,0 +1,81 @@
+{
+  "backend_job": "gh200",
+  "job_id": "17451990424",
+  "architecture_from_job_path": "gpu-cuda-gh200",
+  "expected_source": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+  "queried_utc": "2026-10-25T22:00:56.475092+00:00",
+  "browser_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17451990424/artifacts/browse/regression-results-gpu-cuda-gh200/regressionTests/pr-637_Implement_cyclotron_PROBE_and_accelerating_space-charge_tracking/gpu-cuda-gh200/",
+  "xml_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17451990424/artifacts/raw/regression-results-gpu-cuda-gh200/regressionTests/pr-637_Implement_cyclotron_PROBE_and_accelerating_space-charge_tracking/gpu-cuda-gh200/results_2026-10-25_22-42.xml",
+  "xml_sha256": "1836ed577eb963bf6b67c56a378906960762503a7b237777fbddca5498927a33",
+  "xml_bytes": 100934,
+  "date_start": "2026-10-25T22:46:17.244267",
+  "revisions": {
+    "code": "a9d38ca",
+    "code_full": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+    "tests": "737547e",
+    "tests_full": "737547e6ae38cf3001d6bc45cf38dd1a47d78402"
+  },
+  "run_metadata": {
+    "host": "nid005633",
+    "architecture": "unknown",
+    "backend": "unknown",
+    "mpi_ranks": "1",
+    "omp_threads": "1",
+    "device": "none"
+  },
+  "comparison_counts": {
+    "passed": 396,
+    "failed": 2,
+    "broken": 3
+  },
+  "source_matches": true,
+  "date_matches": true,
+  "failures": [
+    {
+      "simulation": "FodoCell-multipoleT-fromfile",
+      "type": "stat",
+      "var": "rms_x",
+      "mode": "avg",
+      "state": "failed",
+      "eps": "1e-05",
+      "delta": "1.3061724278480717e-05"
+    },
+    {
+      "simulation": "FodoCell-multipoleT-fromfile",
+      "type": "stat",
+      "var": "emit_y",
+      "mode": "avg",
+      "state": "failed",
+      "eps": "1e-05",
+      "delta": "1.3184285918197022e-05"
+    },
+    {
+      "simulation": "ScalingFFABasicPlacements",
+      "type": "stat",
+      "var": "mean_x",
+      "mode": "avg",
+      "state": "broken",
+      "eps": "0.0001",
+      "delta": "-"
+    },
+    {
+      "simulation": "ScalingFFABasicPlacements",
+      "type": "stat",
+      "var": "mean_y",
+      "mode": "avg",
+      "state": "broken",
+      "eps": "0.0001",
+      "delta": "-"
+    },
+    {
+      "simulation": "ScalingFFABasicPlacements",
+      "type": "stat",
+      "var": "mean_s",
+      "mode": "avg",
+      "state": "broken",
+      "eps": "0.0001",
+      "delta": "-"
+    }
+  ],
+  "accepted_current_result": true
+}

@@ -1,0 +1,20 @@
+{
+  "case_manifests": [
+    "runs/zero128/manifest.json",
+    "runs/zero256/manifest.json",
+    "runs/fft-coarse-10pc/manifest.json",
+    "runs/fft-fine-10pc/manifest.json",
+    "runs/open-10pc/manifest.json"
+  ],
+  "case_binary_sha256": {
+    "zero128": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+    "zero256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+    "fft-coarse-10pc": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+    "fft-fine-10pc": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+    "open-10pc": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+  },
+  "analysis_script_sha256": "6cbcb2f444134db8a9063ad8b34632c4bdd8d407eca213ba220edb1a4e84f467",
+  "covariance_scope": "Only available HDF5 particle snapshots; STAT has no position cross-covariance columns.",
+  "growth_metric": "charged-minus-matched-zero RMS at identical physical times; absolute errors always reported; relative growth guarded only below1nm",
+  "physics_parameters_fitted": false
+}

@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "native_cases": [
+    {
+      "case": "straight-ZeroSC-10steps",
+      "passed": true,
+      "rows": 11,
+      "steps": 10,
+      "final_rms_m": {
+        "sigma_global_x_m": 0.01000000000006609,
+        "sigma_global_y_m": 0.01000000000006609,
+        "sigma_global_z_m": 1.4433756729414662
+      },
+      "source_hash": "b63b7905c15a30a509169603bd67f18f9835aae620b2bd8fdeef04c30326218d"
+    },
+    {
+      "case": "straight-10pC-10steps",
+      "passed": true,
+      "rows": 11,
+      "steps": 10,
+      "final_rms_m": {
+        "sigma_global_x_m": 0.010473157169930653,
+        "sigma_global_y_m": 0.010473157169930657,
+        "sigma_global_z_m": 1.4433966698591971
+      },
+      "source_hash": "b63b7905c15a30a509169603bd67f18f9835aae620b2bd8fdeef04c30326218d"
+    },
+    {
+      "case": "bend-ZeroSC-10steps",
+      "passed": true,
+      "rows": 11,
+      "steps": 10,
+      "final_rms_m": {
+        "sigma_frenet_u_m": 0.00877569262880103,
+        "sigma_frenet_y_m": 0.010000000000066026,
+        "sigma_frenet_s_m": 1.443383634949732
+      },
+      "source_hash": "4cf23b08e775af54ab1b4d0cd25d090793d36d0735c6c0bd332ddc1af3939c59"
+    },
+    {
+      "case": "bend-10pC-10steps",
+      "passed": true,
+      "rows": 11,
+      "steps": 10,
+      "final_rms_m": {
+        "sigma_frenet_u_m": 0.009243733119905704,
+        "sigma_frenet_y_m": 0.01047799132204632,
+        "sigma_frenet_s_m": 1.4434042521108301
+      },
+      "source_hash": "4cf23b08e775af54ab1b4d0cd25d090793d36d0735c6c0bd332ddc1af3939c59"
+    }
+  ],
+  "comparisons": [
+    {
+      "case": "straight-ZeroSC-10steps",
+      "max_abs_rms_difference_percent": {
+        "sigma_global_x_m": 6.603051438958079e-10,
+        "sigma_global_y_m": 6.603051438958079e-10,
+        "sigma_global_z_m": 7.086348255056058e-10
+      }
+    },
+    {
+      "case": "straight-10pC-10steps",
+      "max_abs_rms_difference_percent": {
+        "sigma_global_x_m": 0.007625282606028312,
+        "sigma_global_y_m": 0.007625282606011748,
+        "sigma_global_z_m": 1.583410509289458e-06
+      }
+    },
+    {
+      "case": "bend-ZeroSC-10steps",
+      "max_abs_rms_difference_percent": {
+        "sigma_frenet_u_m": 0.005727318915055415,
+        "sigma_frenet_y_m": 6.645725636467434e-10,
+        "sigma_frenet_s_m": 1.8844553510708595e-07
+      }
+    },
+    {
+      "case": "bend-10pC-10steps",
+      "max_abs_rms_difference_percent": {
+        "sigma_frenet_u_m": 0.013380779578322314,
+        "sigma_frenet_y_m": 0.007702401760997065,
+        "sigma_frenet_s_m": 1.1373243890621853e-05
+      }
+    }
+  ],
+  "no_native_solver_edits": true,
+  "exactly_ten_steps": true,
+  "no_extra_refinement_runs": true,
+  "guards_verified_zero": true,
+  "audit_script_sha256": "a9bff97c2ca9523429b525403a3b292d4c7bd7bf9f7fb63e16f41353002849df",
+  "limits": [
+    "Native transverse SC work is not added to native dE; no patch applied.",
+    "Bend uses native TEAPOT paraxial body maps and circular embedding of native local coordinates.",
+    "Common bend SC period/mesh is pinned; native Frenet versus OPALX 5 mm polyline coordinates are documented.",
+    "Use mean_absolute_s_m for the absolute PyORBIT bend centroid; mean_frenet_s_m/native_mean_4 are relative.",
+    "RMS agreement tests matched reduced-model tracking, not full 3D curved-source accuracy."
+  ]
+}

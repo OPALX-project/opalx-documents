@@ -1,0 +1,323 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=20mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,booktabs,graphicx,siunitx,tikz}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Space-charge fields of straight and curved long bunches},
+pdfsubject={OPALX 2D5, curvature correction, SACR and PyORBIT comparisons}}
+\usepackage{etoolbox}
+\usepackage{float}
+\usepackage[section]{placeins}
+\BeforeBeginEnvironment{figure}{\par}
+\AfterEndEnvironment{figure}{\par}
+\BeforeBeginEnvironment{table}{\par}
+\AfterEndEnvironment{table}{\par}
+\usepackage[font=small,labelfont=bf]{caption}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.markings}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlength{\textfloatsep}{11pt}
+\setlength{\floatsep}{9pt}
+\clubpenalty=10000
+\widowpenalty=10000
+\newcommand{\dd}{\mathrm d}
+\newcommand{\eps}{\epsilon_0}
+\newcommand{\kC}{k_{\mathrm e}}
+\newcommand{\er}{\mathbf e_u}
+\newcommand{\es}{\mathbf e_s}
+\newcommand{\ey}{\mathbf e_y}
+\newcommand{\figfile}[2]{\IfFileExists{figures/#1}{\includegraphics[width=#2\linewidth]{figures/#1}}{}}
+\title{Space-charge fields of straight and curved long bunches\\[3pt]
+\large Original and corrected OPALX 2D5, SACR and PyORBIT}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-2.5em}
+\begin{abstract}
+We compare frozen space-charge fields for a \SI{5}{m} bunch carrying
+\SI{10}{pC}, with nominal \SI{10}{mm} rms size in each transverse direction.
+Straight and \SI{2}{m}-radius sources share uniform round cross-sections
+and either uniform or triangular longitudinal profiles. The comparison
+separates the original transverse-slice model, its first-order curvature
+extension, an independent Coulomb reference, and the matched PyORBIT model.
+\IfFileExists{results/abstract.tex}{\input{results/abstract.tex}}{}
+\IfFileExists{results/tracking-abstract.tex}{\input{results/tracking-abstract.tex}}{}
+\end{abstract}
+
+\section{Common charge distribution}
+The transverse density is uniform inside a disk of radius
+$a=\SI{20}{mm}$, corresponding to $\sigma_x=\sigma_y=\SI{10}{mm}$ in the
+straight case. The curved case uses the same physical cross-section.
+Let $u$ and $y$ denote the local
+transverse coordinates, and let $s$ measure arclength from the bunch centre.
+The physical volume density is
+\begin{equation}
+ \rho(u,y,s)=\frac{\lambda(s)}{\pi a^2}\,
+ \mathbf 1_{u^2+y^2<a^2},\qquad
+ \lambda_{\rm U}(s)=\frac{Q}{L},\qquad
+ \lambda_{\rm T}(s)=\frac{2Q}{L}\left(1-\frac{2|s|}{L}\right),
+ \label{eq:source}
+\end{equation}
+for $|s|<L/2$, and zero outside. Here $Q=\SI{10}{pC}$ and
+$L=\SI{5}{m}$. In the straight case $u=x$. The circular source has
+\begin{equation}
+ \mathbf X(u,y,s)=\bigl((R+u)\cos(s/R)-R,\ y,\ (R+u)\sin(s/R)\bigr),
+ \qquad J=1+u/R,\qquad \dd V=J\,\dd u\,\dd y\,\dd s.
+ \label{eq:map}
+\end{equation}
+Positive $u$ points outward. All models use the same physical source,
+charge and free-space boundary condition; no conducting pipe is present.
+The frozen-field tests use protons at $\beta=10^{-3}$ and one field
+evaluation. Fields are reported in the electrostatic convention.
+We remove the native longitudinal $\gamma^{-2}$ factor before comparison.
+The longitudinal numerical periods are \SI{12}{m} for the straight source
+and the reference circumference for the circular source. Each contains
+one \SI{5}{m} bunch and a vacuum gap; SACR includes no periodic images.
+\begin{figure}[ht]
+\centering
+\input{figures/geometry.tikz}
+\caption{Common source geometry: straight cylinder, circular tube and local
+cross-section. The bunch length is \SI{5}{m}; the transverse radius is
+\SI{20}{mm}, giving nominal \SI{10}{mm} rms sizes. Tube thickness is exaggerated
+in the side views. The bending radius is \SI{2}{m}; the charged arc subtends
+$L/R=2.5$ rad.}
+\label{fig:geometry}
+\end{figure}
+\IfFileExists{results/source.tex}{\input{results/source.tex}}{}
+
+\section{Field models}
+\subsection{Original OPALX 2D5}
+The original model solves one free-space transverse Poisson equation per
+longitudinal slice and adds a local longitudinal field,
+\begin{equation}
+ \nabla_\perp^2\Phi_c=-\rho_c/\eps,\qquad
+ \mathbf E_\perp=-\nabla_\perp\Phi_c,\qquad
+ E_s=-\frac{g}{4\pi\eps\gamma^2}\frac{\dd\lambda}{\dd s},
+ \label{eq:original}
+\end{equation}
+where $\rho_c=\dd q/(\dd u\dd y\dd s)=J\rho$ is the deposited coordinate
+density. We retain the prescribed $g=6.36$ to match the original model,
+without fitting it to the finite bunch. This local closure belongs to the
+line-density-derivative family discussed in Ref.~\cite{oeftiger}.
+The reference path and particle containers share one spatial solve frame.
+The transverse solver uses the rectangular-cell averaged logarithmic
+Green function and centred potential gradients.
+
+\subsection{Corrections and curvature extension}
+The earlier numerical fixes correct field normalization, the magnetic-field
+orientation, frame consistency, endpoint coverage and the transverse
+self-cell integral. The additional curvature model described here changes
+the transverse field approximation. Long-bunch curvature corrections have
+also been studied by Qiang~\cite{qiang}; the construction below follows a
+direct expansion of Coulomb's law for this comparison.
+
+Write $\kappa=1/R$, let primed coordinates refer to the source, and let
+$D=|\mathbf X-\mathbf X'|$ be the physical source--target distance. Define
+$\xi=2\sin[\kappa(s'-s)/2]/\kappa$ and
+$D_0^2=(u-u')^2+(y-y')^2+\xi^2$. To first order in transverse offset/R,
+\begin{equation}
+ \frac{J'}{D}=\frac{1}{D_0}+\kappa\left[
+ \frac{u'}{D_0}-\frac{(u+u')\xi^2}{2D_0^3}\right]+\cdots.
+ \label{eq:expansion}
+\end{equation}
+This produces an auxiliary source $u'\rho$, a radial-position-weighted
+moment of the existing density. Dividing $\rho_c$ by $J$ recovers the
+physical density used in the two ordinary 2D solves,
+\begin{equation}
+ \Phi_0=G_{2\mathrm D}*\rho,\qquad
+ \Phi_u=G_{2\mathrm D}*(u'\rho),\qquad
+ G_{2\mathrm D}(r)=-2\kC\log(r/r_0),\quad
+ \kC=\frac{1}{4\pi\eps}.
+\end{equation}
+The matched transverse potential is
+\begin{equation}
+ \Phi_\perp=\Phi_0+\frac{\kappa}{2}(\Phi_u-u\Phi_0)
+                  +\kC\kappa\lambda u-uC(s),\qquad
+ (E_u,E_y)=-\nabla_\perp\Phi_\perp,
+ \label{eq:correction}
+\end{equation}
+where $C$ is the finite-part circular line integral,
+\begin{equation}
+ C(s)=\kC\lim_{h\to0}\left[
+ \int_{|\delta|>h}\frac{\kappa|\kappa|\lambda(s+\delta)}
+ {4|\sin(\kappa\delta/2)|}\,\dd\delta
+ +\kappa\lambda(s)\log(2h/r_0)\right].
+ \label{eq:line}
+\end{equation}
+The matching distance $h$ and logarithmic reference length $r_0$ cancel.
+The algorithm uses two transverse FFT solves and one 1D line integral,
+with no 3D FFT. It retains the local longitudinal closure in
+Eq.~\eqref{eq:original}. The approximation assumes a thin tube and slow
+longitudinal variation on the transverse scale. At $\kappa=0$, the
+curvature-corrected slice model equals the original model exactly.
+
+\subsection{Semi-analytic curved-tube reference (SACR)}
+SACR evaluates the electrostatic field of the prescribed finite charge
+volume $V$ in free space. With $D=|\mathbf X_t-\mathbf X'|$ and
+$\dd V'=J'\dd u'\dd y'\dd s'$, Coulomb's law gives
+\begin{align}
+ \Phi(\mathbf X_t)&=\kC\int_V\frac{\rho(\mathbf X')}{D}\,\dd V',
+ \qquad \Phi\to0\quad\text{as }|\mathbf X_t|\to\infty,\\
+ \mathbf E(\mathbf X_t)&=\kC\int_V\rho(\mathbf X')
+ \frac{\mathbf X_t-\mathbf X'}{D^3}\,\dd V'.
+ \label{eq:sacr}
+\end{align}
+The exact curved distance and volume factor are retained. The tube marks
+where charge is present; the field occupies all space. The straight
+source--target chord may leave the tube and cross uncharged vacuum
+(Fig.~\ref{fig:sacr}). The kernel uses its Euclidean length, with no
+visibility restriction. There is no conducting beam pipe, induced wall
+charge or periodic Coulomb image.
+
+To integrate by parts, differentiate with respect to the Cartesian source
+position, keeping the target fixed:
+\begin{align}
+ \nabla' D^{-1}&=\frac{\mathbf X_t-\mathbf X'}{D^3},\\
+ \rho\nabla' D^{-1}&=\nabla'\!\left(\frac{\rho}{D}\right)
+                      -\frac{\nabla'\rho}{D}.
+\end{align}
+Integrating this product rule over $V$ and applying the divergence theorem
+component by component yields
+\begin{equation}
+ \frac{\mathbf E}{\kC}
+ =\int_V\nabla'\!\left(\frac{\rho}{D}\right)\dd V'
+  -\int_V\frac{\nabla'\rho}{D}\,\dd V'
+ =\oint_{\partial V}\frac{\rho\,\mathbf n'}{D}\,\dd S'
+  -\int_V\frac{\nabla'\rho}{D}\,\dd V'.
+ \label{eq:sacr-surface}
+\end{equation}
+Here $\mathbf n'$ points out of the charge volume. For an interior target,
+exclude a small sphere about $\mathbf X_t$ before taking the limit; its
+surface contribution vanishes as the sphere shrinks. The surface formula
+is an exact rewriting of the volume field, without extra physical surface
+charge. Density jumps at the outer boundary are represented by its surface
+term; $\nabla'\rho$ denotes the gradient inside $V$.
+
+For the constant-radius tube, write $b=L/2$ and
+$A=\{(u',y'):u'^2+y'^2<a^2\}$. Its boundary consists of the curved side
+and two planar disks,
+\begin{equation}
+ S_\pm=\{\mathbf X(u',y',\pm b):(u',y')\in A\},\qquad
+ \mathbf n'_\pm=\pm\mathbf e_s(\pm b),\qquad
+ \dd S'=\dd u'\dd y'.
+ \label{eq:cap-geometry}
+\end{equation}
+These \emph{end caps} close the charge volume where the bunch stops.
+They are not electrodes or imposed potential boundaries. Their normals
+follow the local tangent, so the two cap planes are not parallel in a bend.
+If $\rho_\pm$ are the density limits approached from inside the bunch,
+their contribution to the surface representation is
+\begin{equation}
+ \mathbf E_{\rm caps}=\kC\sum_{\sigma=\pm1}
+ \sigma\rho_\sigma\,\mathbf e_s(\sigma b)
+ \int_A\frac{\dd u'\dd y'}
+ {|\mathbf X_t-\mathbf X(u',y',\sigma b)|}.
+ \label{eq:cap-field}
+\end{equation}
+Uniform density has $\nabla'\rho=0$ inside: the curved side and both caps
+supply the complete field. For the triangular profile, $\rho_\pm=0$, so
+the caps contribute zero, while the side and interior gradient remain.
+These terms still include the finite-end field.
+In physical curved coordinates this gradient is
+\begin{equation}
+ \nabla'\rho=\frac{\mathbf e_s(s')}{J'}
+             \frac{\lambda'(s')}{\pi a^2}.
+ \label{eq:sacr-gradient}
+\end{equation}
+The factor $1/J'$ cancels the volume Jacobian in the gradient integral.
+The continuous triangular cusp at $s'=0$ changes the slope but adds no
+surface term. Analytic longitudinal primitives and converged geometric
+quadrature evaluate the remaining integrals; target-centred quadrature
+resolves the integrable singularity without softening.
+\begin{figure}[ht]
+\centering\input{figures/sacr.tikz}
+\caption{Free-space SACR geometry. The dashed Coulomb chord can pass outside
+the charged tube; the uncharged region does not screen the interaction.
+Orange marks the two end faces of the charge volume. Each is a disk normal
+to its local reference tangent, with outward normal
+$\mathbf n'_\pm=\pm\mathbf e_s(\pm b)$. These faces are not conducting plates.
+The right panel shows their common cross-section. Tube thickness is exaggerated.}
+\label{fig:sacr}
+\end{figure}
+
+The first SACR verification used a different source: a bent,
+uniform-density ellipsoid with tapered semiaxes
+\begin{equation}
+ a(s)=a_0\sqrt{1-s^2/b^2},\qquad
+ c(s)=c_0\sqrt{1-s^2/b^2},\qquad
+ \lambda_{\rm E}(s)=\frac{3Q}{4b}\left(1-\frac{s^2}{b^2}\right).
+ \label{eq:sacr-ellipsoid}
+\end{equation}
+At fixed $a_0,b,c_0,Q$, $R\to\infty$ gives Dubin's Cartesian uniform
+ellipsoid~\cite{dubin}. Its cross-section shrinks to a point at each end;
+there are no finite-area planar caps. This paper instead keeps radius $a$
+constant and prescribes uniform or triangular line density. The same SACR
+Coulomb method applies, but its straight limit is the corresponding finite
+cylinder, not the ellipsoid. Changing the line density inside a fixed
+cylinder is different from tapering its cross-section.
+
+\begin{samepage}
+Independent Cartesian volume integration and scalar-potential differences
+check the field, alongside reflection symmetries, Gauss's law and the
+straight-radius limit. The current uniform-cylinder axis has the exact
+charged-disk check~\cite{disk},
+\begin{equation}
+ E_s(0,0,s)=\frac{\rho_0}{2\eps}\left[
+ 2s+\sqrt{(b-s)^2+a^2}-\sqrt{(b+s)^2+a^2}\right],\qquad |s|<b,
+ \label{eq:axis}
+\end{equation}
+where $\rho_0=Q/(\pi a^2L)$. These checks keep the reference independent of
+the original and corrected slice approximations.
+\end{samepage}
+
+\subsection{PyORBIT model used here}
+We use PyORBIT's native \texttt{SpaceChargeCalcSliceBySlice2D} without a
+conducting boundary, together with \texttt{LSpaceChargeCalc} in gradient
+mode~\cite{pyorbit,pyorbitcode}. It supplies independent transverse slice
+fields and the same prescribed $g=6.36$ longitudinal closure. The constructor
+ratio encodes this coefficient only; it does not introduce a physical pipe.
+Source coordinates, particle charges, mesh spacing and longitudinal period
+match original OPALX. Both use the reference polyline; corrected OPALX
+uses the same Cartesian particles with exact-circle coordinates and period.
+These standard PyORBIT modules contain no circular Coulomb coupling.
+
+\begin{figure}[ht]
+\centering
+\input{figures/models.tikz}
+\caption{The model operations. All branches start from the same source.
+The auxiliary $u'\rho$ is a mathematical moment, not additional physical
+charge. SACR integrates the full curved source; the corrected slice model
+adds its first-order transverse curvature contribution.}
+\label{fig:models}
+\end{figure}
+
+\input{results/reference-extension.tex}
+
+\section{Straight-bunch comparison}
+We first set $\kappa=0$. Original 2D5 and its curvature-corrected slice
+limit coincide, so one native slice result represents both. The separate
+straight finite-source 3D FFT branch is excluded from this comparison.
+Equal-charge sources and matched probe-only companions remove diagnostic
+particle fields. Numerical source, mesh and reference errors are checked
+separately. Signed field and residual axes include zero.
+\IfFileExists{results/straight.tex}{\input{results/straight.tex}}{}
+
+\section{Circular-bunch comparison}
+The second case uses the same physical density with $R=\SI{2}{m}$.
+The curvature-corrected OPALX run uses Eq.~\eqref{eq:correction}; original
+OPALX and PyORBIT retain their slice approximations. We compare the centre
+radial field separately from the much larger transverse field gradient.
+\IfFileExists{results/curved.tex}{\input{results/curved.tex}}{}
+
+\input{results/tracking.tex}
+
+\section{Scope}
+The field comparisons test prescribed frozen charge profiles. The ten-step
+tracking comparison tests consistency of the original slice models under
+the stated transport approximations. It does not establish step convergence,
+energy conservation or accuracy of curvature-corrected tracking. The
+transverse curvature extension leaves the original longitudinal model
+unchanged; sharp ends test a different limitation from the bulk curvature field.
+\input{references.tex}
+\end{document}

@@ -1,0 +1,77 @@
+[
+  {
+    "original": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/sources/bend-uniform-n1048576.dist",
+    "relative": "assets/bend-source.dist",
+    "remote": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/bend-source.dist",
+    "sha256": "c96c7ba5d152b8956155c297d7016c466d7be6835374632816956958de885329"
+  },
+  {
+    "original": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/sources/bend-uniform-n1048576.npz",
+    "relative": "assets/bend-source.npz",
+    "remote": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/bend-source.npz",
+    "sha256": "4cf23b08e775af54ab1b4d0cd25d090793d36d0735c6c0bd332ddc1af3939c59"
+  },
+  {
+    "original": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-local-original/opalx/inputs/uniform-By-R2-Z10m.g4blmap",
+    "relative": "assets/uniform-By.map",
+    "remote": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/uniform-By.map",
+    "sha256": "721ad12f31b68a54d1ce7c3256d5632902f8415e07cdf8be29fb4845eda8e35e"
+  },
+  {
+    "original": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/sources/circle-R2-step0.005.dat",
+    "relative": "assets/circle-reference.dat",
+    "remote": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/circle-reference.dat",
+    "sha256": "560d8aaee3964f98ff81d10f067471ec35640bc7a828a93c1ac65b4421ca74eb"
+  },
+  {
+    "original": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility/initial-state.h5",
+    "relative": "assets/dba-initial-state.h5",
+    "remote": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/dba-initial-state.h5",
+    "sha256": "4d6adf38da35d9168f9cdb10847786eb1ea64d27e13e521211173901037e19f5"
+  },
+  {
+    "original": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility/particles.txt",
+    "relative": "assets/dba-particles.txt",
+    "remote": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/dba-particles.txt",
+    "sha256": "e4ed5735e21af00d116690d0a623f13545475a3435776e52c4a4abdc4a89f9e3"
+  },
+  {
+    "original": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility/reference-path.dat",
+    "relative": "assets/dba-reference.dat",
+    "remote": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/dba-reference.dat",
+    "sha256": "562590c1ca8b167affb53f662843f7a0618212bac66bd1ea5b103e6c88c4f121"
+  },
+  {
+    "original": "/Users/adelmann/git/dba-lattice/comparison-20261104/charged-kv/q5.602212nC/source.npz",
+    "relative": "assets/dba-source.npz",
+    "remote": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/dba-source.npz",
+    "sha256": "97943097cf785f64019b7092bd52bbf57eca77bdfbe07cdef288d9ac5732d923"
+  },
+  {
+    "original": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility/source.json",
+    "relative": "assets/dba-source.json",
+    "remote": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/dba-source.json",
+    "sha256": "3c52b858fbab63091ab5ef7f69dadc793b00f538a2bb5337d0f927ae732d98b4"
+  },
+  {
+    "original": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-bend/ZeroSC/track.in",
+    "relative": "inputs/bend-ZeroSC.in",
+    "remote": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/inputs/bend-ZeroSC.in",
+    "sha256": "1cecba5f3c890d3736c775b6f8961270113c59e1a41a2d32ed75a9a11bc9e8a4",
+    "adaptation": "absolute source/map/path replacements only"
+  },
+  {
+    "original": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/pr-bend/10pC/track.in",
+    "relative": "inputs/bend-10pC.in",
+    "remote": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/inputs/bend-10pC.in",
+    "sha256": "1a613fdd8e70ed774bbfbe797980cbbe3f140a0759456cd9e8bf9b5e17810aa4",
+    "adaptation": "absolute source/map/path replacements only"
+  },
+  {
+    "original": "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility/omp4-100steps/case.in",
+    "relative": "inputs/dba-pilot.in",
+    "remote": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/inputs/dba-pilot.in",
+    "sha256": "f6b5ce075a32fa8ea4968738f26970089a3bb4acd06b11b3cced252dd21c9b3a",
+    "adaptation": "absolute source/reference path replacements only"
+  }
+]

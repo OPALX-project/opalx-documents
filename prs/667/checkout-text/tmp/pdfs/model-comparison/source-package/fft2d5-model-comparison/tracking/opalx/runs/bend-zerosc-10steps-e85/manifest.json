@@ -1,0 +1,101 @@
+{
+  "name": "bend-ZeroSC-10steps-e85",
+  "geometry": "bend",
+  "zero_sc": true,
+  "self_field_model": "NONE",
+  "original_solver": true,
+  "nonlocal_3D_operator": false,
+  "g": 6.36,
+  "source": {
+    "geometry": "bend",
+    "profile": "uniform",
+    "source_particles": 1048576,
+    "charge_C": 1e-11,
+    "macrocharge_C": 9.5367431640625e-18,
+    "full_length_m": 5.0,
+    "cross_section_radius_m": 0.02,
+    "nominal_rms_x_m": 0.01,
+    "nominal_rms_y_m": 0.01,
+    "bend_radius_m": 2.0,
+    "beta": 0.001,
+    "momentum_betagamma": 0.001000000500000375,
+    "ns": 64,
+    "nrad": 64,
+    "nphi": 256,
+    "material_mean_m": [
+      4.999999999999947e-05,
+      -4.171327072497722e-20,
+      0.0
+    ],
+    "material_std_m": [
+      0.009999874999218741,
+      0.01,
+      1.4433756729320566
+    ],
+    "material_raw_rms_m": [
+      0.01,
+      0.01,
+      1.4433756729320566
+    ],
+    "longitudinal_period_m": 12.566370614359172,
+    "sampling": "audited D4 phases; physical-volume J sampling in bend; no fitted rescaling",
+    "npz": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/sources/bend-uniform-n1048576.npz",
+    "npz_sha256": "4cf23b08e775af54ab1b4d0cd25d090793d36d0735c6c0bd332ddc1af3939c59",
+    "distribution": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/sources/bend-uniform-n1048576.dist",
+    "distribution_sha256": "c96c7ba5d152b8956155c297d7016c466d7be6835374632816956958de885329",
+    "generator": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/prepare_shared.py",
+    "generator_sha256": "afa593953661d3bf96260729cb9b14ca75785669ec73948521443e2e529b1f42",
+    "helper_sha256": {
+      "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/opalx/run_straight_octets.py": "226bba4e492061077a72efccdd180c19c6a587a71781eb796a9f41af76fc9eda",
+      "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/source_geometry.py": "7d5c280bda720bb5d6f55acd16b32aebe640e260445c30ac9e63e7bb1fb72760"
+    }
+  },
+  "source_json": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/sources/bend-uniform-n1048576.json",
+  "source_json_sha256": "05e2b4556bc8dd2b57cb3e828be3800463d09908755c4b43e336855aa462ef86",
+  "expected_particles": 1048576,
+  "assigned_charge_C": 1e-11,
+  "macrocharge_C": 9.5367431640625e-18,
+  "beta": 0.001,
+  "steps": 10,
+  "dt_s": 3.3356409519815204e-07,
+  "total_time_s": 3.3356409519815205e-06,
+  "nominal_design_path_advance_m": 1.0,
+  "mesh": [
+    128,
+    128,
+    512
+  ],
+  "box_m": [
+    0.048,
+    0.048
+  ],
+  "reference_path": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/sources/circle-R2-step0.005.dat",
+  "reference_path_sha256": "560d8aaee3964f98ff81d10f067471ec35640bc7a828a93c1ac65b4421ca74eb",
+  "longitudinal_period_m": 12.566367358402026,
+  "fieldmap": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/opalx/inputs/uniform-By-R2.g4blmap",
+  "fieldmap_sha256": "1e811389c0afa768307d87976e38cf8ec0df8b73288ed444a0baf7bd336bebeb",
+  "By_T": 0.0015648701831191426,
+  "reference_radius_m": 2.0,
+  "sc_field_update": "MIDPOINT",
+  "phase_space_output_interval": 1,
+  "binary": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/binaries/opalx-before-e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+  "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+  "directory": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/opalx/runs/bend-ZeroSC-10steps-e85",
+  "h5": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/opalx/runs/bend-ZeroSC-10steps-e85/track.h5",
+  "stat": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/opalx/runs/bend-ZeroSC-10steps-e85/track.stat",
+  "generator_sha256": "af9e7ecbdd04a0f166f95b2f11b9ebda9b8871a2bbca7ae8087ffb37d9a94220",
+  "generator_snapshot": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/opalx/provenance/run_tracking-af9e7ecbdd04a0f166f95b2f11b9ebda9b8871a2bbca7ae8087ffb37d9a94220.py",
+  "input_sha256": "81ecc8d62201bb998e7fb7d23c56cf2a9ddf613b21d7622fd4d9b096c5955296",
+  "mpi_ranks": 1,
+  "omp_threads": 4,
+  "nominal_reference_convention": "straight centroid=design; bend centroid reference differs from R2 design orbit",
+  "command": [
+    "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/fix-longitudinal/binaries/opalx-before-e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+    "track.in",
+    "--info",
+    "4"
+  ],
+  "returncode": 0,
+  "elapsed_s": 2.1560108330158982,
+  "integrity_passed": true
+}

@@ -1,0 +1,293 @@
+{
+  "opalx_native_pairs": 6,
+  "opalx_native_points": 1098,
+  "opalx_max_shared_field_difference_Vpm": 0.0,
+  "opalx_max_physical_metric_difference_percent": 7.105427357601002e-15,
+  "opalx_max_native_metric_difference_percent": 7.282369152150636e-15,
+  "pyorbit_cases": [
+    {
+      "case": "rb-128x128x128-r1",
+      "native_points": 183,
+      "mpi_size": 1,
+      "source_particles": 4194304,
+      "native_weight_count_checks_present": false,
+      "actual_source_harness_probe_hashes_pass": true,
+      "geometry_matches_common_input": true,
+      "energy_to_field_conversion_pass": true,
+      "radial_coefficient_pass": true,
+      "shared_csv_checked": true,
+      "output_csv_hashes": {
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/rb-128x128x128-r1/probes-rank0.csv": "45732a0c23566c978ccaeb97ec021f3141cc0290ef229f35a792fa93c9827060"
+      }
+    },
+    {
+      "case": "rb-128x128x256-ns65536-r1",
+      "native_points": 183,
+      "mpi_size": 1,
+      "source_particles": 33554432,
+      "native_weight_count_checks_present": true,
+      "actual_source_harness_probe_hashes_pass": true,
+      "geometry_matches_common_input": true,
+      "energy_to_field_conversion_pass": true,
+      "radial_coefficient_pass": true,
+      "shared_csv_checked": true,
+      "output_csv_hashes": {
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/rb-128x128x256-ns65536-r1/probes-rank0.csv": "56e571ff27b647c0c524cbc8cd1baa68df961b305e2e650028ac46ee24588ff9"
+      }
+    },
+    {
+      "case": "rb-128x128x256-r1",
+      "native_points": 183,
+      "mpi_size": 1,
+      "source_particles": 4194304,
+      "native_weight_count_checks_present": false,
+      "actual_source_harness_probe_hashes_pass": true,
+      "geometry_matches_common_input": true,
+      "energy_to_field_conversion_pass": true,
+      "radial_coefficient_pass": true,
+      "shared_csv_checked": true,
+      "output_csv_hashes": {
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/rb-128x128x256-r1/probes-rank0.csv": "d40ec8fd22088e26a59094e535297751c374e363c4c1fc57398be831a376655d"
+      }
+    },
+    {
+      "case": "slice-128x128x128-r1",
+      "native_points": 183,
+      "mpi_size": 1,
+      "source_particles": 4194304,
+      "native_weight_count_checks_present": false,
+      "actual_source_harness_probe_hashes_pass": true,
+      "geometry_matches_common_input": true,
+      "energy_to_field_conversion_pass": true,
+      "radial_coefficient_pass": true,
+      "shared_csv_checked": true,
+      "output_csv_hashes": {
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-128x128x128-r1/probes-rank0.csv": "9c9e31469671e22ff9e3960415c3533836270cf0c7eaec45c8aff041f669a65f"
+      }
+    },
+    {
+      "case": "slice-256x256x128-r1",
+      "native_points": 183,
+      "mpi_size": 1,
+      "source_particles": 4194304,
+      "native_weight_count_checks_present": false,
+      "actual_source_harness_probe_hashes_pass": true,
+      "geometry_matches_common_input": true,
+      "energy_to_field_conversion_pass": true,
+      "radial_coefficient_pass": true,
+      "shared_csv_checked": true,
+      "output_csv_hashes": {
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-256x256x128-r1/probes-rank0.csv": "45191fbc1c60cf984810ac2a6258b5884a62feedde114f4efa6a6145cea79bc3"
+      }
+    },
+    {
+      "case": "slice-256x256x256-ns65536-r1",
+      "native_points": 183,
+      "mpi_size": 1,
+      "source_particles": 33554432,
+      "native_weight_count_checks_present": false,
+      "actual_source_harness_probe_hashes_pass": true,
+      "geometry_matches_common_input": true,
+      "energy_to_field_conversion_pass": true,
+      "radial_coefficient_pass": true,
+      "shared_csv_checked": true,
+      "output_csv_hashes": {
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-256x256x256-ns65536-r1/probes-rank0.csv": "2181faadd127d240f452cf88dc0cb9ae72ffda53d450f608b3e4e1703e34fb70"
+      }
+    },
+    {
+      "case": "slice-256x256x256-r1",
+      "native_points": 183,
+      "mpi_size": 1,
+      "source_particles": 4194304,
+      "native_weight_count_checks_present": false,
+      "actual_source_harness_probe_hashes_pass": true,
+      "geometry_matches_common_input": true,
+      "energy_to_field_conversion_pass": true,
+      "radial_coefficient_pass": true,
+      "shared_csv_checked": true,
+      "output_csv_hashes": {
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-256x256x256-r1/probes-rank0.csv": "f5ef5d373ee10e0d7a3cc14b7b159f0b1387d852917ba12a30a0f2c23e35f7e5"
+      }
+    },
+    {
+      "case": "slice-256x256x64-r1",
+      "native_points": 183,
+      "mpi_size": 1,
+      "source_particles": 4194304,
+      "native_weight_count_checks_present": true,
+      "actual_source_harness_probe_hashes_pass": true,
+      "geometry_matches_common_input": true,
+      "energy_to_field_conversion_pass": true,
+      "radial_coefficient_pass": true,
+      "shared_csv_checked": true,
+      "output_csv_hashes": {
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-256x256x64-r1/probes-rank0.csv": "7237cb8691e7d29b7ae48242d5fc7ea31244b3f93ea5347ba96fdc5cadf67c04"
+      }
+    },
+    {
+      "case": "slice-512x512x128-nativeaudit-r1",
+      "native_points": 183,
+      "mpi_size": 1,
+      "source_particles": 4194304,
+      "native_weight_count_checks_present": true,
+      "actual_source_harness_probe_hashes_pass": true,
+      "geometry_matches_common_input": true,
+      "energy_to_field_conversion_pass": true,
+      "radial_coefficient_pass": true,
+      "shared_csv_checked": true,
+      "output_csv_hashes": {
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-nativeaudit-r1/probes-rank0.csv": "81542972324d1467d0e17222175dfbb5f7a8bbde3e74fb92a2c2347065c62a88"
+      }
+    },
+    {
+      "case": "slice-512x512x128-nativeaudit-r2",
+      "native_points": 183,
+      "mpi_size": 2,
+      "source_particles": 4194304,
+      "native_weight_count_checks_present": true,
+      "actual_source_harness_probe_hashes_pass": true,
+      "geometry_matches_common_input": true,
+      "energy_to_field_conversion_pass": true,
+      "radial_coefficient_pass": true,
+      "shared_csv_checked": true,
+      "output_csv_hashes": {
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-nativeaudit-r2/probes-rank0.csv": "610d8668eec96389da5f469e337382340c527028b7f6739a76b237b1c5642c8c",
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-nativeaudit-r2/probes-rank1.csv": "b02c00a1bd05c1fa17f170ce97a91c7bab76fa8659b9e3343c0e2a3bd4aa8dee"
+      }
+    },
+    {
+      "case": "slice-512x512x128-nr32np64-boundary256m64-r1",
+      "native_points": 183,
+      "mpi_size": 1,
+      "source_particles": 16777216,
+      "native_weight_count_checks_present": true,
+      "actual_source_harness_probe_hashes_pass": true,
+      "geometry_matches_common_input": true,
+      "energy_to_field_conversion_pass": true,
+      "radial_coefficient_pass": true,
+      "shared_csv_checked": true,
+      "output_csv_hashes": {
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-nr32np64-boundary256m64-r1/probes-rank0.csv": "b73aeb969f5e3ef476cf72f63b99128ece37d19d69313fac46bc9558cf3e84ff"
+      }
+    },
+    {
+      "case": "slice-512x512x128-nr32np64-r1",
+      "native_points": 183,
+      "mpi_size": 1,
+      "source_particles": 16777216,
+      "native_weight_count_checks_present": false,
+      "actual_source_harness_probe_hashes_pass": true,
+      "geometry_matches_common_input": true,
+      "energy_to_field_conversion_pass": true,
+      "radial_coefficient_pass": true,
+      "shared_csv_checked": true,
+      "output_csv_hashes": {
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-nr32np64-r1/probes-rank0.csv": "eccb4c5cc12637b93bf617a068fea7473bc10bb0e6aacb0fa6318796465347d4"
+      }
+    },
+    {
+      "case": "slice-512x512x128-r1",
+      "native_points": 183,
+      "mpi_size": 1,
+      "source_particles": 4194304,
+      "native_weight_count_checks_present": false,
+      "actual_source_harness_probe_hashes_pass": true,
+      "geometry_matches_common_input": true,
+      "energy_to_field_conversion_pass": true,
+      "radial_coefficient_pass": true,
+      "shared_csv_checked": true,
+      "output_csv_hashes": {
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-r1/probes-rank0.csv": "81542972324d1467d0e17222175dfbb5f7a8bbde3e74fb92a2c2347065c62a88"
+      }
+    },
+    {
+      "case": "slice-512x512x128-r2",
+      "native_points": 183,
+      "mpi_size": 2,
+      "source_particles": 4194304,
+      "native_weight_count_checks_present": false,
+      "actual_source_harness_probe_hashes_pass": true,
+      "geometry_matches_common_input": true,
+      "energy_to_field_conversion_pass": true,
+      "radial_coefficient_pass": true,
+      "shared_csv_checked": true,
+      "output_csv_hashes": {
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-r2/probes-rank0.csv": "610d8668eec96389da5f469e337382340c527028b7f6739a76b237b1c5642c8c",
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-r2/probes-rank1.csv": "b02c00a1bd05c1fa17f170ce97a91c7bab76fa8659b9e3343c0e2a3bd4aa8dee"
+      }
+    },
+    {
+      "case": "slice-64x64x128-r1",
+      "native_points": 183,
+      "mpi_size": 1,
+      "source_particles": 4194304,
+      "native_weight_count_checks_present": false,
+      "actual_source_harness_probe_hashes_pass": true,
+      "geometry_matches_common_input": true,
+      "energy_to_field_conversion_pass": true,
+      "radial_coefficient_pass": true,
+      "shared_csv_checked": true,
+      "output_csv_hashes": {
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-64x64x128-r1/probes-rank0.csv": "62a1677ee217d165ae4051b555370ddbd26f973cdcd07bfb4f46d70362b40ced"
+      }
+    },
+    {
+      "case": "slice-64x64x64-r1",
+      "native_points": 183,
+      "mpi_size": 1,
+      "source_particles": 4194304,
+      "native_weight_count_checks_present": false,
+      "actual_source_harness_probe_hashes_pass": true,
+      "geometry_matches_common_input": true,
+      "energy_to_field_conversion_pass": true,
+      "radial_coefficient_pass": true,
+      "shared_csv_checked": true,
+      "output_csv_hashes": {
+        "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-64x64x64-r1/probes-rank0.csv": "691a2418fb47d5a84fbbe0d3c7bdb50512e1df5b29949516fcf3fdaf53dba243"
+      }
+    }
+  ],
+  "pyorbit_mpi_comparison": {
+    "cases": [
+      "slice-512x512x128-r1",
+      "slice-512x512x128-r2"
+    ],
+    "max_absolute_Es_difference_Vpm": 1.5279510989785194e-10,
+    "max_relative_characteristic_scale": 1.4387041534890218e-14,
+    "all_targets_compared": 183
+  },
+  "pyorbit_mpi_and_harness_comparisons": [
+    {
+      "cases": [
+        "slice-512x512x128-r1",
+        "slice-512x512x128-r2"
+      ],
+      "max_absolute_Es_difference_Vpm": 1.5279510989785194e-10,
+      "max_relative_characteristic_scale": 1.4387041534890218e-14,
+      "all_targets_compared": 183
+    },
+    {
+      "cases": [
+        "slice-512x512x128-nativeaudit-r1",
+        "slice-512x512x128-nativeaudit-r2"
+      ],
+      "max_absolute_Es_difference_Vpm": 1.5279510989785194e-10,
+      "max_relative_characteristic_scale": 1.4387041534890218e-14,
+      "all_targets_compared": 183
+    },
+    {
+      "cases": [
+        "slice-512x512x128-r1",
+        "slice-512x512x128-nativeaudit-r1"
+      ],
+      "max_absolute_Es_difference_Vpm": 0.0,
+      "max_relative_characteristic_scale": 0.0,
+      "all_targets_compared": 183
+    }
+  ],
+  "checks_pass": true,
+  "script_sha256": "2fff9454d1a0820781162e34c031c56dcb109e99b5828e03c40211693246cd2f",
+  "shared_fields_sha256": "8453a3a6067da5f7455b5e360b726b8800228cf23f009a59f473b2cbb7057037",
+  "shared_summary_sha256": "98d70505e442e0c610ea524559bb628ab4396c80dbbdc279816ef23f2e1b6504"
+}

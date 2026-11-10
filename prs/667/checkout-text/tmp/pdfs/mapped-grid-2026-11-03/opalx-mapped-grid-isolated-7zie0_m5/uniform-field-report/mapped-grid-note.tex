@@ -1,0 +1,26 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=21mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,bm,booktabs,array,graphicx}
+\usepackage{siunitx,xcolor,enumitem,fancyhdr,caption,float}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,decorations.markings}
+\usepackage[hyphens]{url}
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\hypersetup{pdftitle={Uniform IPPL grid and curved-source field operator},pdfauthor={OPALX numerical validation},pdfsubject={Mapped coordinates and nonlocal FFT2D5 OPEN implementation}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+\setlist{nosep,leftmargin=1.5em}
+\captionsetup{font=small,labelfont=bf}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small OPALX / mapped-grid field operator}
+\fancyhead[R]{\small Technical note / 3 November 2026}
+\fancyfoot[C]{\thepage}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\eps}{\epsilon_0}
+\newcommand{\code}[1]{{\small\nolinkurl{#1}}}
+\begin{document}
+\input{mapped-grid.tex}
+\end{document}

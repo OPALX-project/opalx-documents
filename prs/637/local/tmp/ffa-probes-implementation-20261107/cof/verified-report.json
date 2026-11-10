@@ -1,0 +1,19 @@
+{
+  "binary_sha256": "b13e9e5354a4434826ebf9844b05ebed6c3e6534a2b48fcc867dd6329cd80ef5",
+  "runs": [
+    {
+      "probes": false,
+      "exit_code": 0,
+      "elapsed_s": 10.433619542047381,
+      "directory": "/Users/adelmann/git/opalx-master/tmp/ffa-probes-implementation-20261107/cof/verified-off"
+    },
+    {
+      "probes": true,
+      "exit_code": 0,
+      "elapsed_s": 10.500154290988576,
+      "directory": "/Users/adelmann/git/opalx-master/tmp/ffa-probes-implementation-20261107/cof/verified-on"
+    }
+  ],
+  "cof_results_identical": true,
+  "probe_files_created": 0
+}

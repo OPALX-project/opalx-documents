@@ -1,0 +1,31 @@
+module load: unstable module has been loaded -- openmpi/5.0.10_slurm
+JobID|JobName|Partition|State|ExitCode|Elapsed|AllocCPUS
+354773|pr637-scaling-a100|gwendolen|COMPLETED|0:0|00:14:06|32
+354773.batch|batch||COMPLETED|0:0|00:14:06|32
+354773.extern|extern||COMPLETED|0:0|00:14:06|32
+a9d38caa4f88433a5de1508b3d5c7d01bdfea95a
+## 615-probe-command-does-not-work...origin/615-probe-command-does-not-work [ahead 3]
+?? slurm-354769.out
+?? tmp/
+dependency-after	ippl-src	704932fdaa390f883524cf53588c92386294add4
+dependency-after	ippl-build/_deps/kokkos-src	8e15454876298832f013ebcaf08d53825b5bda40
+dependency-after	ippl-build/_deps/heffte-src	6e16996e5a3eb65c60fd62fd4d93c4b2df833033
+dependency-after	gtest-src	6910c9d9165801d8827d628cb72eb7ea9dd538c5
+0e8d81df683ba589c8dc820bb87bb50cc4d570a349e39079335df215af46526d  /data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestMultipoleT
+2bf4cd66cd569fe3ea17ec617fff3b5db5e3e21c8c5e4175b6bf371d53ef32cf  /data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestMultipoleTBase
+8e93c484cbb965215538cfd302c790376a586cca116cd27d5d65d6fc2051aef2  /data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestMultipoleTStraight
+c9472f7e7c6b0bd03bedb91f36b3adae1b3c5a1eba995d18db9ff4141ffc3026  /data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestScalingFFAMagnet
+c95829e5beafe4bf9407819df647361da7083eb9eed28af177f94992a053a861  /data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestDeviceExternalField
+74e6c3269c40a36b684e39e864263c213572a05b3f6328c5b4929dafe0692192  /data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestTrackReferenceStep
+892ff495ede45e475ee503bfe91e6ffea78c4fed4d8985b3c7a41eaf52c9d015  /data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/opalx
+f4ce20f795a2a7f4aafcbc814a2d8fae2b3a5c0e149b3b6585e2ee80a0066c27  /data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/lib/libopalx.so
+ARCH:STRING=AMPERE80
+CMAKE_BUILD_TYPE:STRING=Release
+CMAKE_CUDA_ARCHITECTURES:STRING=80
+CMAKE_CUDA_COMPILER:FILEPATH=/opt/psi/Programming/cuda/13.2.1/bin/nvcc
+CMAKE_CXX_COMPILER:FILEPATH=/opt/psi/Programming/gcc/14.3.0/bin/g++
+IPPL_PLATFORMS:STRING=CUDA;SERIAL
+OPALX_DEFAULT_TEST_PROCS:STRING=1
+OPALX_PLATFORMS:STRING=CUDA;SERIAL
+PLATFORMS:STRING=CUDA;SERIAL
+KOKKOS_CFG_DAG_ARCH:INTERNAL=On

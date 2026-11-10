@@ -1,0 +1,276 @@
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index b6a9449bf..ed7f14536 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -130,6 +130,26 @@ target_link_libraries(opalx PUBLIC
+ )
+ target_link_libraries(opalx PRIVATE OPALX::lapacke)
+ 
++# FFTW threading is optional: heFFTe also accepts serial-only FFTW installations.
++# Probe the actual imported link interface, without modifying IPPL or heFFTe.
++if(TARGET Heffte::FFTW)
++  include(CMakePushCheckState)
++  include(CheckCXXSourceCompiles)
++  cmake_push_check_state(RESET)
++  set(CMAKE_REQUIRED_LIBRARIES Heffte::FFTW)
++  unset(OPALX_HAVE_FFTW_THREADS CACHE)
++  check_cxx_source_compiles("#include <fftw3.h>
++    int main() {
++      if (!fftw_init_threads()) return 1;
++      fftw_plan_with_nthreads(1);
++      return fftw_planner_nthreads() != 1;
++    }" OPALX_HAVE_FFTW_THREADS)
++  cmake_pop_check_state()
++  if(OPALX_HAVE_FFTW_THREADS)
++    target_compile_definitions(opalx PUBLIC OPALX_HAVE_FFTW_THREADS=1)
++  endif()
++endif()
++
+ target_include_directories(opalx PRIVATE
+   ${HDF5_INCLUDE_DIR}
+   ${H5HUT_INCLUDE_DIR}
+diff --git a/src/Main.cpp b/src/Main.cpp
+index 84fd17b29..e52e3d33e 100644
+--- a/src/Main.cpp
++++ b/src/Main.cpp
+@@ -30,6 +30,7 @@ extern "C" {
+ #include "OpalConfigure/Configure.h"
+ #include "OpalParser/FileStream.h"
+ #include "OpalParser/OpalParser.h"
++#include "SpaceCharge/FFT2D5/FFT2D5Poisson.h"
+ #include "Structure/CheckpointFile.h"
+ #include "Utilities/Timer.h"
+ 
+@@ -175,6 +176,8 @@ namespace OPALXMAIN {
+         *ippl::Info << "   --restart [<fname>]      : Restart from checkpoint file <fname>.\n";
+         *ippl::Info << "   --2D5BatchSize <n>       : Batch n transverse FFT2D5 slices (positive "
+                        "integer; default: serial).\n";
++        *ippl::Info << "   --2D5FFTThreads <n>      : Maximum FFTW threads per FFT2D5 plan "
++                       "(default: 1).\n";
+         //*ippl::printHelp();
+         *ippl::Info << "   --help-command <command> : Display the help for the command <command>\n";
+         *ippl::Info << "   --help                   : Display this command-line summary.\n";
+@@ -266,13 +269,18 @@ int main(int argc, char* argv[]) {
+             }
+             const auto optionConsumesArgument = [](const std::string& option) {
+                 return option == "--help-command" || option == "--input" || option == "--info"
+-                       || option == "--overallocate" || option == "--2D5BatchSize";
++                       || option == "--overallocate" || option == "--2D5BatchSize"
++                       || option == "--2D5FFTThreads";
+             };
+ 
+             const auto hasLaterInputArgument = [&](int first) {
+                 for (int jj = first; jj < argc; ++jj) {
+                     const std::string arg(argv[jj]);
+-                    if (optionConsumesArgument(arg)) {
++                    if (arg == "--input") {
++                        if (jj + 1 >= argc) return false;
++                        const std::string next(argv[jj + 1]);
++                        return !next.empty() && next.front() != '-';
++                    } else if (optionConsumesArgument(arg)) {
+                         ++jj;
+                     } else if (arg == "--restart") {
+                         continue;
+@@ -380,7 +388,7 @@ int main(int argc, char* argv[]) {
+                         }
+                     }
+                     continue;
+-                } else if (argStr == "--2D5BatchSize") {
++                } else if (argStr == "--2D5BatchSize" || argStr == "--2D5FFTThreads") {
+                     int value  = 0;
+                     bool valid = ii + 1 < argc;
+                     if (valid) {
+@@ -392,10 +400,13 @@ int main(int argc, char* argv[]) {
+                     }
+                     if (!valid) {
+                         if (ippl::Comm->rank() == 0)
+-                            std::cerr << "--2D5BatchSize requires a positive integer" << std::endl;
++                            std::cerr << argStr << " requires a positive integer" << std::endl;
+                         exit(1);
+                     }
+-                    Options::fft2d5BatchSize = value;
++                    if (argStr == "--2D5BatchSize")
++                        Options::fft2d5BatchSize = value;
++                    else
++                        Options::fft2d5FFTThreads = value;
+                     continue;
+                 } else if (argStr == std::string("--info")) {
+                     ++ii;
+@@ -420,6 +431,8 @@ int main(int argc, char* argv[]) {
+                 }
+             }
+ 
++            // Initialize before input commands can construct any host FFTW plans.
++            FFT2D5Poisson::initializeFFTWThreading();
+             OPALXMAIN::printStdoutHeader();
+             if (inputFileArgument == -1) {
+                 *ippl::Info << "No input file provided!" << endl;
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp b/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp
+index 7f1b5f7ca..6f01765db 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp
+@@ -28,8 +28,36 @@
+ #include "FFT2D5Poisson.h"
+ 
+ #include "OpalException.h"
++#include "Utilities/Options.h"
+ 
+-FFT2D5Poisson::FFT2D5Poisson() {
++void FFT2D5Poisson::initializeFFTWThreading() {
++#ifdef OPALX_HAVE_FFTW_THREADS
++    if constexpr (std::is_same_v<MemSpace, Kokkos::HostSpace>) {
++        static const bool initialized = fftw_init_threads() != 0;
++        if (!initialized)
++            throw OpalException("FFT2D5Poisson", "FFTW thread initialization failed.");
++    }
++#endif
++}
++
++int FFT2D5Poisson::setFFTWPlannerThreads(int threads) {
++    if (threads < 1) throw OpalException("FFT2D5Poisson", "Positive FFTW thread count required.");
++#ifdef OPALX_HAVE_FFTW_THREADS
++    if constexpr (std::is_same_v<MemSpace, Kokkos::HostSpace>) {
++        initializeFFTWThreading();
++        const int previous = fftw_planner_nthreads();
++        fftw_plan_with_nthreads(threads);
++        return previous;
++    }
++#endif
++    if (threads != 1)
++        throw OpalException(
++                "FFT2D5Poisson",
++                "--2D5FFTThreads greater than one requires a thread-enabled host FFTW backend.");
++    return 1;
++}
++
++FFT2D5Poisson::FFT2D5Poisson() : fftwThreads_m(Options::fft2d5FFTThreads) {
+     params_m.add("use_heffte_defaults", false);
+     params_m.add("use_pencils", true);
+     params_m.add("use_gpu_aware", true);
+@@ -82,8 +110,20 @@ void FFT2D5Poisson::initialiseViews(const ScalarField2_t& chargeDensity) {
+             greensFnTr_m.updateLayout(complexLayout_m);
+         }
+         // Create the FFT
+-        fft_m = std::make_unique<FFT_t>(doubledLayout_m, complexLayout_m, this->params_m);
+-        fft_m->warmup(doubledRho_m, doubledRhoTr_m);  // Really?
++        const int previousThreads = setFFTWPlannerThreads(fftwThreads_m);
++        try {
++            fft_m = std::make_unique<FFT_t>(doubledLayout_m, complexLayout_m, this->params_m);
++            // heFFTe creates FFTW plans lazily during execution, not its constructor.
++            fft_m->warmup(doubledRho_m, doubledRhoTr_m);
++        } catch (...) {
++            setFFTWPlannerThreads(previousThreads);
++            throw;
++        }
++        setFFTWPlannerThreads(previousThreads);
++#ifdef OPALX_HAVE_FFTW_THREADS
++        if constexpr (std::is_same_v<MemSpace, Kokkos::HostSpace>)
++            *ippl::Info << "FFT2D5: FFTW planner maximum threads " << fftwThreads_m << endl;
++#endif
+         // And the Greens function
+         makeGreensFn();
+     }
+@@ -227,16 +267,34 @@ void FFT2D5Poisson::solveBatched(
+                 {0, 0, 0}, {static_cast<long long>(nx2_ - 1), static_cast<long long>(ny2_ - 1), 0});
+         const heffte::box3d<long long> outbox(
+                 {0, 0, 0}, {static_cast<long long>(ncx - 1), static_cast<long long>(ny2_ - 1), 0});
+-        batchPlan_m = std::make_unique<BatchPlan>(
+-                inbox, outbox, 0, ippl::Comm->getCommunicator(),
+-                ippl::fft::makeHeffteOptions<BatchBackend::backend_t>(params_m));
+-        batchWorkspace_m = BatchWorkspace(batchPlan_m->size_workspace() * capacity);
+-        batchReal_m      = decltype(batchReal_m)("FFT2D5BatchReal", nr * capacity);
+-        batchSpectrum_m  = decltype(batchSpectrum_m)("FFT2D5BatchSpectrum", nc * capacity);
+-        batchGreen_m     = decltype(batchGreen_m)("FFT2D5BatchGreen", nc);
+-        batchNx_m        = nx2_;
+-        batchNy_m        = ny2_;
+-        batchCapacity_m  = capacity;
++        const int previousThreads = setFFTWPlannerThreads(fftwThreads_m);
++        try {
++            batchPlan_m = std::make_unique<BatchPlan>(
++                    inbox, outbox, 0, ippl::Comm->getCommunicator(),
++                    ippl::fft::makeHeffteOptions<BatchBackend::backend_t>(params_m));
++            batchWorkspace_m = BatchWorkspace(batchPlan_m->size_workspace() * capacity);
++            batchReal_m      = decltype(batchReal_m)("FFT2D5BatchReal", nr * capacity);
++            batchSpectrum_m  = decltype(batchSpectrum_m)("FFT2D5BatchSpectrum", nc * capacity);
++            batchGreen_m     = decltype(batchGreen_m)("FFT2D5BatchGreen", nc);
++            // Prime every lazy executor with one slot; its per-slice plan is shared
++            // by all slots. No particle density or output field is touched by warmup.
++            Kokkos::deep_copy(batchReal_m, 0.);
++            Kokkos::fence();
++            batchPlan_m->forward(
++                    1, batchReal_m.data(), batchSpectrum_m.data(), batchWorkspace_m.data(),
++                    heffte::scale::full);
++            batchPlan_m->backward(
++                    1, batchSpectrum_m.data(), batchReal_m.data(), batchWorkspace_m.data(),
++                    heffte::scale::none);
++            Kokkos::fence();
++        } catch (...) {
++            setFFTWPlannerThreads(previousThreads);
++            throw;
++        }
++        setFFTWPlannerThreads(previousThreads);
++        batchNx_m       = nx2_;
++        batchNy_m       = ny2_;
++        batchCapacity_m = capacity;
+     }
+     if (batchSlices_m.extent(0) < occupied.size())
+         batchSlices_m = decltype(batchSlices_m)("FFT2D5BatchSlices", occupied.size());
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Poisson.h b/src/SpaceCharge/FFT2D5/FFT2D5Poisson.h
+index e38e847bb..aa27e0c3f 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Poisson.h
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Poisson.h
+@@ -51,6 +51,9 @@ public:
+ 
+     // API
+     FFT2D5Poisson();
++    /// Initialize double-precision host FFTW thread support once; no planner-count change.
++    /// Called by Main before input processing and by standalone numerical tests as needed.
++    static void initializeFFTWThreading();
+     void solve(ScalarField2_t& chargeDensity, VectorField2_t& electricField);
+ 
+     /**
+@@ -173,6 +176,12 @@ private:
+     size_t batchNx_m = 0, batchNy_m = 0;
+     int batchCapacity_m = 0;
+ 
++    /// Scope FFTW's process-wide setting through creation AND warmup of lazy heFFTe plans.
++    /// Existing plans retain their own count after the caller's setting is restored.
++    /// Plan creation is serialized by the caller, as required by FFTW itself.
++    static int setFFTWPlannerThreads(int threads);
++    int fftwThreads_m = 1;
++
+     size_t nx2_{};
+     size_t ny2_{};
+     Vector2_t dr_{};
+diff --git a/src/Utilities/Options.cpp b/src/Utilities/Options.cpp
+index d742225f6..031c4fef9 100644
+--- a/src/Utilities/Options.cpp
++++ b/src/Utilities/Options.cpp
+@@ -25,9 +25,10 @@ namespace Options {
+     // The global program options.
+     bool echo = false;
+ 
+-    bool info           = true;
+-    int infoLevel       = 1;
+-    int fft2d5BatchSize = 0;
++    bool info            = true;
++    int infoLevel        = 1;
++    int fft2d5BatchSize  = 0;
++    int fft2d5FFTThreads = 1;
+ 
+     bool mtrace = false;
+ 
+diff --git a/src/Utilities/Options.h b/src/Utilities/Options.h
+index 13de0e51a..831c0567a 100644
+--- a/src/Utilities/Options.h
++++ b/src/Utilities/Options.h
+@@ -39,6 +39,9 @@ namespace Options {
+     /// Explicit FFT2D5 slice batch size; zero retains the serial slice path.
+     extern int fft2d5BatchSize;
+ 
++    /// Maximum FFTW threads per FFT2D5 plan; independent of Kokkos/OpenMP, default one.
++    extern int fft2d5FFTThreads;
++
+     /// Trace flag.
+     //  If true, print CPU time before and after each command.
+     extern bool mtrace;

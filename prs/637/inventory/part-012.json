@@ -1,0 +1,2083 @@
+[
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/old-school/prepare_and_run.py",
+    "sha256": "45275781b3ff5dd0b4d0fd7b369dbddff84ceedf2a6f9b2b3cc82b90cf9eeb56",
+    "bytes": 4376,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/old-school/prepare_and_run.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plot_school_probe_comparison.py",
+    "sha256": "a48fe9364cb021f893f09709b1f5dfb92b36e6376fc40b01555c037d2beb62a1",
+    "bytes": 5808,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/plot_school_probe_comparison.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/16-cell-radial.csv",
+    "sha256": "f626ca409dd244d01019caa4c81e9ca35f50d83ce248eb47100e53bd11acf59d",
+    "bytes": 92401,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/plots/16-cell-radial.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/16-cell-radial.json",
+    "sha256": "e6842572b4c1180f42d88db3aee33f072d5723b0e472cbb710d814acbac1dda7",
+    "bytes": 1462,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/plots/16-cell-radial.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/16-cell-radial.pdf",
+    "sha256": "0427952e61be6ed4931be73e2ed45e67c25c02211f3aea3feaf7ff38ea70f851",
+    "bytes": 39949,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/16-cell-radial.png",
+    "sha256": "6dd9945a511d9582d6d9c1db91550243bba6c079ca58ac8bea7cf0dccf2ba7f3",
+    "bytes": 773533,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/16-cell-vertical.csv",
+    "sha256": "5b4792f3cfe7d7354246332ad3978ef9145e53337dbe0667daa9e99576afce86",
+    "bytes": 70857,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/plots/16-cell-vertical.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/16-cell-vertical.json",
+    "sha256": "d8f9cba878bb184c0638a979b9ab154e526c6fde1b03cfecc5c858910095798f",
+    "bytes": 1011,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/plots/16-cell-vertical.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/16-cell-vertical.pdf",
+    "sha256": "cd031b0e89c9952a18323f66e5b39c0411eb3bccc973b792bd654b3b027e5c47",
+    "bytes": 34341,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/16-cell-vertical.png",
+    "sha256": "cf719faa23f14c725025b163a2dd0561efd1033facec9d6f503b0576eafe039b",
+    "bytes": 617534,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/55deg-d-off-radial.csv",
+    "sha256": "88a38c9b792e42d00c4336acad184b2136d704b14248853f34734b45812f4db3",
+    "bytes": 77251,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/plots/55deg-d-off-radial.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/55deg-d-off-radial.json",
+    "sha256": "d6b0ddd76e0b3d82f1cd0b6d9e6652cec026e70a160386b457046acf146de49d",
+    "bytes": 997,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/plots/55deg-d-off-radial.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/55deg-d-off-radial.pdf",
+    "sha256": "653d69f72711816a0e49d32f514a7316a4064cfe30841fa29d635a5e7e86336c",
+    "bytes": 33717,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/55deg-d-off-radial.png",
+    "sha256": "9a9d03e0f58ed0b01e9dc650820188069ea92bfe24416ddba4d33013e6e84026",
+    "bytes": 694879,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/55deg-d-off-vertical.csv",
+    "sha256": "223167a309bb2fc9649705cf0d6cd7b55396affcab4328ec92e498bff7ef7da4",
+    "bytes": 76069,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/plots/55deg-d-off-vertical.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/55deg-d-off-vertical.json",
+    "sha256": "5d4d5e152268858226c882d0ee3ec0a01ea6c74979762dbdd3856bafed739cc4",
+    "bytes": 1002,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/plots/55deg-d-off-vertical.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/55deg-d-off-vertical.pdf",
+    "sha256": "3922da8a82c4dace33d15b8da58af3dbbf9f3d22518f13aa9754e67062f1a899",
+    "bytes": 34439,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/55deg-d-off-vertical.png",
+    "sha256": "2f54f3b2ecd665c85bb18824cfd1f743ffd053cefd8866d43a28d5568151ca6f",
+    "bytes": 655124,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/fourfold-radial.csv",
+    "sha256": "99b771548252ca91d284d44c540f17972a2800aaaf7030aeada9f425462f8aeb",
+    "bytes": 19224,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/plots/fourfold-radial.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/fourfold-radial.json",
+    "sha256": "184bee56c2f84ec960cc656fdc51c913cc9dc300c6bb37a45c8758929a59e447",
+    "bytes": 990,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/plots/fourfold-radial.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/fourfold-radial.pdf",
+    "sha256": "a6e8df24bc84c8515e50406a0987729c79563d4d5a26b3f0f82d4a0dea6cd077",
+    "bytes": 26850,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/fourfold-radial.png",
+    "sha256": "43d983f1fba8ea0306723b05ad858a3e0336130ae0bb709af358ce0ad268bd1b",
+    "bytes": 446378,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/fourfold-vertical.csv",
+    "sha256": "c0f199a4d3898544082821a663a3cf040a952853c59dd4b6d53474b506574134",
+    "bytes": 19154,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/plots/fourfold-vertical.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/fourfold-vertical.json",
+    "sha256": "cc8699feb68bd1b3cd9eca154b62a5dab8a751fe08cf22e47ad57e58689cdfc4",
+    "bytes": 992,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/plots/fourfold-vertical.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/fourfold-vertical.pdf",
+    "sha256": "318045de62edd2a95efde4030c4505ac2835fe4d05d8ca127f9983250e39c981",
+    "bytes": 27229,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/plots/fourfold-vertical.png",
+    "sha256": "6c37bd1e0e3231079d0d07212818deba5d5e7e7b6b30eaf2609579150ad21a37",
+    "bytes": 421652,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/probe-final-tests.log",
+    "sha256": "8607ab21ab40f36338ab41766ffb5b4a60784af55650c64ef6f42e669f2c9240",
+    "bytes": 492,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/probe-final-tests.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/source-790abac19643.tar.gz",
+    "sha256": "79fecb6412362da127d7a9e42bb1a18a7699e267d0c85e8bcd44a0d9bcce2624",
+    "bytes": 2041020,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/source-manifest.json",
+    "sha256": "3ce9c13d5faa14afeb78f1853d8e88fb72450b57ad863a34f4602b81a777b82e",
+    "bytes": 116618,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/source-manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/summarize_validation.py",
+    "sha256": "13c791ed9e532ec36a364374122212fd91f8a323ce2b4943cfc1a0110ee23a39",
+    "bytes": 18333,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/summarize_validation.py"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/LOCAL_RESULTS.json",
+    "sha256": "4beeea4e09ca1272dde486bfae7c6356bffa2026b5b7899b8fd34cb8fb784dc7",
+    "bytes": 383,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/local_results.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/REPORT.md",
+    "sha256": "2ee537366a731b7486525e750411981280aded27ac1710ca7dad0541b1e661cd",
+    "bytes": 5313,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/report.md"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/RESULTS.json",
+    "sha256": "bfe6b508d8dfc954f8a9e72a3833cea6b17c23ff6bcaada24f1fef70091fc3af",
+    "bytes": 5659,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/results.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/ROOT_VERIFICATION.json",
+    "sha256": "27a096493992820c0f6f0353977c7ea23c487a3e85ffefe85a577317686cf9bc",
+    "bytes": 1022,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/root_verification.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/STATE.md",
+    "sha256": "0656cbe40976ebe6065ea0f68819051fb2f918f03ba039e65783b80a021f8a62",
+    "bytes": 3208,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/state.md"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/approved-commit-message.txt",
+    "sha256": "e2d380855d20dd98e324948fbb4a17bec0670a0d024979d034c29f0bb797fc96",
+    "bytes": 1270,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/approved-commit-message.txt"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/build-local.log",
+    "sha256": "9cbc23d8944cd19196f64d65342a0e69d366e967bf0fd350104377eb0cfbe1c5",
+    "bytes": 705,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/build-local.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/fix.patch",
+    "sha256": "fac4abc475ef9e706eac77bbf50ccb85f35c7faed70ad56662c4bcddd2ec0cb2",
+    "bytes": 4955,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/fix.patch"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/intended-file.json",
+    "sha256": "d6bfb0474d5634e9da88fdd415692d22ef506969f2ae37d41ee385efcd051332",
+    "bytes": 484,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/intended-file.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/REPORT.md",
+    "sha256": "853082bf7e7f45546dc64bc6d06faf2e27bd7b9d82d934d4dab8417c1f96cdbc",
+    "bytes": 2747,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/report.md"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/STATE.md",
+    "sha256": "94f1707a3300bba722a689de733e9889cb02175ac12caafc932f854b59c3b6ab",
+    "bytes": 2487,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/state.md"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/archive-remote.log",
+    "sha256": "85ea98d121314c8948ab5dd4fc2dfb2499e87d2be5dd5220e014b5a29f728e81",
+    "bytes": 579,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/archive-remote.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/archive.json",
+    "sha256": "1c8011f0e2c5619cdd360627d5736898174ab93ed7f22239429a520314bb1382",
+    "bytes": 290,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/archive.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/audit.json",
+    "sha256": "354b56291389b5b647c9c66819eaa99b42129f47c5ad810a057d769c0fe1f3ce",
+    "bytes": 2843,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/audit.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/audit.log",
+    "sha256": "354b56291389b5b647c9c66819eaa99b42129f47c5ad810a057d769c0fe1f3ce",
+    "bytes": 2843,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/audit.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/audit_linux.py",
+    "sha256": "9b5815c2934c7329c9862145298b1313f1e4f0ea4dcd2139a10495ea84409f41",
+    "bytes": 4408,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/audit_linux.py"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/fixed-TestGaussian.cpp",
+    "sha256": "6569cabdd647bd40dcbbeb280819aca92ea724b5f06b30972975b5bf830fa4ce",
+    "bytes": 26005,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/fixed-testgaussian.cpp"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/input-archive.json",
+    "sha256": "62f30ce6fdfd73dd7dd255fcec0cc6a78ee86e26291f309d9c0b67d05c777880",
+    "bytes": 289,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/input-archive.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/input.json",
+    "sha256": "43e031a5801027b0b1e70295dcff8c6d5c25b0e56fb38f5d3742119faf200d73",
+    "bytes": 756,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/input.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/input.tgz",
+    "sha256": "d135812f7178445ac29772e908f93cc0a95e2456faf1d2a9cf804c3d261593e7",
+    "bytes": 9670,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/inventory.json",
+    "sha256": "279a0a7524470d854d2f981c60ad5cc4194c08ead5d1161ca8399b030d2bc718",
+    "bytes": 117876,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/inventory.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/inventory.log",
+    "sha256": "5e8158bb8f13c5bf01a9ea1421ffb81c5376c85ff5cc0c34d03a5bc2bb360a2b",
+    "bytes": 113844,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/inventory.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/monitor.py",
+    "sha256": "5ed143cbd2c5f15fab713c3bb9486cc30b5fa5da84d1ed795522f06ddcccfdfe",
+    "bytes": 1955,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/monitor.py"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/STATE.md",
+    "sha256": "a6caea3e2ef14a58801437a1cbf7f39256b4d642535775a3804b85d4c7d0a3d4",
+    "bytes": 388,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/state.md"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/binary-proof.json",
+    "sha256": "a3fce29a167463dc55e4ced282f77e2302188a84b0d606eec08006701f8b70ed",
+    "bytes": 496,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/binary-proof.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/build.log",
+    "sha256": "81c042078b1af4ac11e7f3963dd85770832baaf3ec6071b9ea9b21b3d2e12058",
+    "bytes": 1632,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/build.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/distribution.log",
+    "sha256": "28cac35d97e10e06e3754ada655428dbe659fe8d3c119d818510fa217dbf3a96",
+    "bytes": 13047,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/distribution.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/distribution.xml",
+    "sha256": "a34e69205e88ae2a27142f94153c3421070bcd23d07876f08b5ca973df4607d4",
+    "bytes": 8357,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/distribution.xml"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/full-suite-result.json",
+    "sha256": "abb9ab7cc77f3381d8a19aa93ee5560591ba4060ed269bc819298844fb0959db",
+    "bytes": 73,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/full-suite-result.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/full-suite.log",
+    "sha256": "1246881e098a75df5db8e7619621a23974aac7b036b4eb17922b4a1a93be68a6",
+    "bytes": 16037,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/full-suite.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/full-suite.xml",
+    "sha256": "dd7129bba64f0d39c42f705956eb1cf1bfe0d6d73b4e6224c745f2e3a4a303af",
+    "bytes": 174985,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/full-suite.xml"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/gaussian-r1-t1.log",
+    "sha256": "1d855a211ea0bc726c1a7d253567dc2134dd585661f8b85a6addbb52d1752c71",
+    "bytes": 1530,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/gaussian-r1-t1.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/gaussian-r1-t4.log",
+    "sha256": "71c75cd03390d71027150150ce090f2c7ef3c473ed243e2fd497d49d16bf5efb",
+    "bytes": 1522,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/gaussian-r1-t4.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/gaussian-r2-t1.log",
+    "sha256": "dae21334751115b83c5b7ab99e2543de5f3a17707348b49f545f1d1a27756dde",
+    "bytes": 3001,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/gaussian-r2-t1.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/gaussian-r2-t4.log",
+    "sha256": "a0e991f7255832fb9c6845a8818951c84af5caf25446766c02a45da573cba863",
+    "bytes": 2990,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/gaussian-r2-t4.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/gaussian-variants.json",
+    "sha256": "9f6b1f54a481538594c0cd69adad42f81a887de19140af0064924d1217d8ac93",
+    "bytes": 1099,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/gaussian-variants.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/job.log",
+    "sha256": "ed2c094f9956878ec85105858964a94386e7bfbd3c1d1c37599a166f9cfecc71",
+    "bytes": 3737,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/job.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/progress.json",
+    "sha256": "25b367f5125b3f14e702d63b58d46476f1770ee5cdc0f50973f77a0616782543",
+    "bytes": 3089,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/progress.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/slurm-355097.out",
+    "sha256": "ed2c094f9956878ec85105858964a94386e7bfbd3c1d1c37599a166f9cfecc71",
+    "bytes": 3737,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/slurm-355097.out"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/status.tsv",
+    "sha256": "84b5da8d156cf53cdbc18ae7c05dcd1feeaabfd0a7ae499b1538427992b0c7ea",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/status.tsv"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/terminal.json",
+    "sha256": "12afdacd9aa5a05adb725c27fd01eabf5f45e9cf1166b56d4b1813c0d9bad135",
+    "bytes": 1674,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/after/terminal.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/before/inventory.json",
+    "sha256": "279a0a7524470d854d2f981c60ad5cc4194c08ead5d1161ca8399b030d2bc718",
+    "bytes": 117876,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/before/inventory.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/before/original-TestGaussian.cpp",
+    "sha256": "0dc5c3c23ca4921838e4a6a771ae6d3ba3cdc4e6765d52f56d33d5a925449477",
+    "bytes": 23833,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/before/original-testgaussian.cpp"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/before/prior-full-suite.log",
+    "sha256": "dc1fd34323dd1b30a327d224ccf8c77366b9ed79e7e84d730e6ac8733b3d8d63",
+    "bytes": 17923,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/before/prior-full-suite.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/before/prior-full-suite.xml",
+    "sha256": "232e1ae910dc39ad77383295967a1f38eb73fc5c85f2d0609fbeb6e8b4790b4d",
+    "bytes": 175655,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/before/prior-full-suite.xml"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/build/CMakeCache.txt",
+    "sha256": "02f563fc99620b3d4a84a5b9fcfcf9a8661f4a6ada836ed0957589e637b71f2a",
+    "bytes": 106664,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/build/cmakecache.txt"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/fixed-TestGaussian.cpp",
+    "sha256": "6569cabdd647bd40dcbbeb280819aca92ea724b5f06b30972975b5bf830fa4ce",
+    "bytes": 26005,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/fixed-testgaussian.cpp"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/input.json",
+    "sha256": "43e031a5801027b0b1e70295dcff8c6d5c25b0e56fb38f5d3742119faf200d73",
+    "bytes": 756,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/input.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/input.tgz",
+    "sha256": "d135812f7178445ac29772e908f93cc0a95e2456faf1d2a9cf804c3d261593e7",
+    "bytes": 9670,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/job-accounting.txt",
+    "sha256": "d3c1477c83c144c9e372669c8d12fde077a4570b47d17a72fe19fbaf8efea920",
+    "bytes": 262,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/job-accounting.txt"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/run.py",
+    "sha256": "518842a303bb81bf052a5962d09594eaaae4162499057f98c447f5dacea73a5f",
+    "bytes": 4956,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/run.py"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/run.sbatch",
+    "sha256": "0dc8b313ef585150e6bc366960427fe4ff543d0306c0f6c696aa8f524d95ed22",
+    "bytes": 835,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/run.sbatch"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/stage.json",
+    "sha256": "09ca885dbb88b80989554f8816d9acafc55cfc47c7a1456d89530ee58adf6e70",
+    "bytes": 118830,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/stage.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/stage.py",
+    "sha256": "0c13da70b7bee22967c1c13f4d2330476675e8444ca0537132a2946a96b1cf6c",
+    "bytes": 1728,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/stage.py"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/submission-stdout.log",
+    "sha256": "77da2bcfbe2f2579999af460e862969d9304b0500dba103f890d3ff667f43c35",
+    "bytes": 16,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/submission-stdout.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/submission.json",
+    "sha256": "44c25f05a59e84a07a5b0ddf431f18e6588cd5b4398b907398c9dec933ec5105",
+    "bytes": 369,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/submission.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/remote-evidence/task-jobs-terminal.json",
+    "sha256": "62129663b146857f77d10a871ae08f9b374cb93aff722f0c172001575a8057a6",
+    "bytes": 77,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/remote-evidence/task-jobs-terminal.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/retrieve.log",
+    "sha256": "94dbeecfedf57900fced12d73898498aca6d71ec748d21eae0e0cf23f3c901ad",
+    "bytes": 219,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/retrieve.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/run.py",
+    "sha256": "518842a303bb81bf052a5962d09594eaaae4162499057f98c447f5dacea73a5f",
+    "bytes": 4956,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/run.py"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/run.sbatch",
+    "sha256": "0dc8b313ef585150e6bc366960427fe4ff543d0306c0f6c696aa8f524d95ed22",
+    "bytes": 835,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/run.sbatch"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/stage-and-submit.log",
+    "sha256": "58d773b95df7526209090572518bbf54045f2468e2ffcdace7df4bdc0978689f",
+    "bytes": 2828,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/stage-and-submit.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/stage.py",
+    "sha256": "0c13da70b7bee22967c1c13f4d2330476675e8444ca0537132a2946a96b1cf6c",
+    "bytes": 1728,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/stage.py"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/status.json",
+    "sha256": "837e737aa8b013f26e05e514060502e812a262b27dbd143a9b503a3f07db8260",
+    "bytes": 12145,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/status.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/status.log",
+    "sha256": "53c378011f6a0d5a9998ec3ae5006a8095d677748337a350a5acdc51166c5673",
+    "bytes": 10595,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/status.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/submission.json",
+    "sha256": "44c25f05a59e84a07a5b0ddf431f18e6588cd5b4398b907398c9dec933ec5105",
+    "bytes": 369,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/linux/submission.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/upload.log",
+    "sha256": "94dbeecfedf57900fced12d73898498aca6d71ec748d21eae0e0cf23f3c901ad",
+    "bytes": 219,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/linux/upload.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/linux/validation-evidence.tgz",
+    "sha256": "f21f064d3def3d9429038c4321512aacd6ef5c6cd7c3dc7f4baf3eaded171063",
+    "bytes": 201776,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/local-full-suite.log",
+    "sha256": "820f3282dca67ab2a7dde30db8f86cd35368ef242f1de54d9987c88b7fce367a",
+    "bytes": 16123,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/local-full-suite.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/local-full-suite.xml",
+    "sha256": "ae1e3e526fc5333a159b923d780946fdb790819cff1f1aca10c68c6f387c5f58",
+    "bytes": 171389,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/local-full-suite.xml"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/local-gaussian.log",
+    "sha256": "aa1d0d18607bb0c74b36c4939bf163c91a385c144e1e071ab964d77ebc549b6c",
+    "bytes": 2985,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/local-gaussian.log"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/local-gaussian.xml",
+    "sha256": "6768810951de68b7c1d17954942977f8ae1427cdc4534e737f5bc739319b6bc7",
+    "bytes": 1539,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gaussian-statistical-check-20261109/local-gaussian.xml"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/original-TestGaussian.cpp",
+    "sha256": "0dc5c3c23ca4921838e4a6a771ae6d3ba3cdc4e6765d52f56d33d5a925449477",
+    "bytes": 23833,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/original-testgaussian.cpp"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/pr-body-before-publication-update.txt",
+    "sha256": "c1e83d498512276d6f1b9f806248713ecfc71aa25e4ba231317385ad5583d30f",
+    "bytes": 6430,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/pr-body-before-publication-update.txt"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/pr-body-storage-tests.txt",
+    "sha256": "8c8dc0cc157c16d0be9b84d948772a89d1aeab2b5935154e52904227e5a749ff",
+    "bytes": 8754,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/pr-body-storage-tests.txt"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/prior-files.json",
+    "sha256": "2ad76bdab463a85ecb19300493829700f705351f90221e852c6a9e2a1ec7c7ad",
+    "bytes": 4339,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/prior-files.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/statistical-audit.json",
+    "sha256": "5ddad8530149fc871bfd44c691a13a1dbbe2db46a03086931a717b2c324728fa",
+    "bytes": 3719,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/statistical-audit.json"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/statistical-audit.md",
+    "sha256": "c64e97e75467cd4a180604b7a450182b15c51575357313fe12b7dff711667da9",
+    "bytes": 2597,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/statistical-audit.md"
+  },
+  {
+    "original": "tmp/gaussian-statistical-check-20261109/statistical-audit.py",
+    "sha256": "bf0eb722b8191dae7d3e959ef0d3df9f11f5bfabceda358c4a7e22c1fabf499e",
+    "bytes": 9557,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gaussian-statistical-check-20261109/statistical-audit.py"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/PROBE_CUDA_DIAGNOSIS.md",
+    "sha256": "eb1e626c910bc34db978e3d1461e979211782bdd079d661ec55652c8a7ad135e",
+    "bytes": 5982,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/probe_cuda_diagnosis.md"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/REPORT.md",
+    "sha256": "e41f87a3c5f7af958d5d1a10f8f7fa7778268dbdf37f74b8e3c9122dc95509f4",
+    "bytes": 5254,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/report.md"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/a100-probe-615-evidence.tgz",
+    "sha256": "7c116d8d9d54dfe800e593b9fd4b683d26b2071aa5c4814550d9f67a739692fe",
+    "bytes": 87467,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/build.log",
+    "sha256": "1b1825a940e62337318e4b48e0c0372b27ef3706b39f5b11dc205326a0ba042c",
+    "bytes": 208073,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/build.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/configure.log",
+    "sha256": "6f2963ee429f78cb886cf7e624c57bc6a8a525804eb5fb95426a57076a84e3bc",
+    "bytes": 20771,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/configure.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/dependency-revisions-complete.tsv",
+    "sha256": "c405b9c3cd65ca8749fc5923811ac796e12d4c98deba3b70c1d64015c6f41ad5",
+    "bytes": 419,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/dependency-revisions-complete.tsv"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/dependency-revisions.tsv",
+    "sha256": "912d994ece49f07713b28fc27acd76fbf7a8f28c43b2c28ba9c5bc507c3af953",
+    "bytes": 46,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/dependency-revisions.tsv"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/first-throw-backtrace.log",
+    "sha256": "b37c66e046886722ed8ab5de46153f8356edc51b272bf7403e26f5548af26507",
+    "bytes": 9820,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/first-throw-backtrace.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/isolated-1-rank.log",
+    "sha256": "51a20be4f56cce6640745c2f3e5ad331d06d8e93be5e40fdbc3d81d8f3e74c01",
+    "bytes": 1198,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/isolated-1-rank.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/isolated-2-rank.log",
+    "sha256": "8a94995c47bff2f6374bda26ed6b1eb7f1aa8c33b95ab63fcd9043c3164fd2a8",
+    "bytes": 2705,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/isolated-2-rank.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/job.log",
+    "sha256": "b384bc4582a7439f59c44631d7ae43c7bbeacac93d17041d274dc39c138346a1",
+    "bytes": 255811,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/job.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/junit.xml",
+    "sha256": "9df9832079fc939ac918fa69dfeea805cc332e9988dd5c18bb7eb37a78f8c148",
+    "bytes": 11652,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/junit.xml"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/opalx-link.txt",
+    "sha256": "c30a6f0be2ae279c62a8ff62d223466a9301e91eab8090653e9dee748e531c0a",
+    "bytes": 18103,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/opalx-link.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/probe-compile-commands.json",
+    "sha256": "77857e9399ea01e11315b875c272dd6074d90a8c5d3e1bc74f28c0143f01bf1e",
+    "bytes": 14541,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/probe-compile-commands.json"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/probe-link.txt",
+    "sha256": "1d008980aa457ccc2b800dc91d390e0388925ce883aeb9ea9c5c9a9e5767c757",
+    "bytes": 1339,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/probe-link.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/run.sbatch",
+    "sha256": "2796acc165b80be4559532089e4ccaef789c109327fed90a3393cf81e1722d8a",
+    "bytes": 3487,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/run.sbatch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/slurm-354754.err",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/slurm-354754.err"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/slurm-354754.out",
+    "sha256": "b384bc4582a7439f59c44631d7ae43c7bbeacac93d17041d274dc39c138346a1",
+    "bytes": 255811,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/slurm-354754.out"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/source-sha.txt",
+    "sha256": "76bcf28219d926bfde2c38f6f2ed11804fa6e34b245fad8347a3496975c833ca",
+    "bytes": 41,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/source-sha.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/status.tsv",
+    "sha256": "fa3f8745a84dd9b51878c69310de6da7f0278b4bb2680e3da0de9cf156ef80fd",
+    "bytes": 157,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/status.tsv"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/submission.txt",
+    "sha256": "b9b4efdbaf431438078822d774969ac99a8653f872bdf66fb0d7833701fd09d4",
+    "bytes": 16,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/submission.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/test-commands.log",
+    "sha256": "3c1412028960a70513505da2a86a65cd5d7b5e78fd32d1f953ea9fb06381e53d",
+    "bytes": 1308,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/test-commands.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/tests.log",
+    "sha256": "a74da972a2890c503727ad2c19073a384aff36bcf072e4788f0de914a44e6c3e",
+    "bytes": 24185,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132/tests.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/build.log",
+    "sha256": "13e6e64a66cc541dbf06916a926f41b6ad5ae09f4459da8713489bc366511833",
+    "bytes": 1483,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/build.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/configure.log",
+    "sha256": "69464ec46674ee75f88591b879859642692f7a3e60fc108e5bcf87e4dcf80a99",
+    "bytes": 7764,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/configure.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/dependency-revisions.tsv",
+    "sha256": "912d994ece49f07713b28fc27acd76fbf7a8f28c43b2c28ba9c5bc507c3af953",
+    "bytes": 46,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/dependency-revisions.tsv"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/first-throw-backtrace.log",
+    "sha256": "1fd59292d3e205c69603680529317ebed22e1545b0c40fb7a3942d2c2a57699d",
+    "bytes": 4148,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/first-throw-backtrace.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/isolated-1-rank.log",
+    "sha256": "fb7b9e6e8db0c2545d84c27875d6b3849f0e1db35e7106c97717a5674b62a614",
+    "bytes": 2499,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/isolated-1-rank.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/isolated-2-rank.log",
+    "sha256": "0479ca00b948d9adc3fd0d6e3b2e84be157cdc54d4c5480ba085d2658102ad00",
+    "bytes": 4671,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/isolated-2-rank.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/job.log",
+    "sha256": "d2d6e1495b7d42a1228f238b0e005a4157c839243679acd409d186892cfeec3d",
+    "bytes": 28023,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/job.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/junit.xml",
+    "sha256": "2d37f8643c7cb2abb7d0526047dad55103cc595537b4af259c4781584a17a978",
+    "bytes": 7613,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/junit.xml"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/run.sbatch",
+    "sha256": "9116e8f6015f18af535a9dab0fe6d4896f171fd38bd7133c376613bd71cc9936",
+    "bytes": 3568,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/run.sbatch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/slurm-354756.err",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/slurm-354756.err"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/slurm-354756.out",
+    "sha256": "d2d6e1495b7d42a1228f238b0e005a4157c839243679acd409d186892cfeec3d",
+    "bytes": 28023,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/slurm-354756.out"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/source-sha.txt",
+    "sha256": "76bcf28219d926bfde2c38f6f2ed11804fa6e34b245fad8347a3496975c833ca",
+    "bytes": 41,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/source-sha.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/source.patch",
+    "sha256": "d178f43dd464868b33a5a606a5bc5b3c6a8c4e354f7edf802b4003fc76808229",
+    "bytes": 919,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/source.patch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/status.tsv",
+    "sha256": "688df3059b671488c624ce5ab95d218ec425e2b2aa6c0c9ccc6e3ef6c6f8ddeb",
+    "bytes": 161,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/status.tsv"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/submission.txt",
+    "sha256": "f2dac35f6a2625bb20f4ce6041a1371b4effd9e0a0f2c79239bb32645a0b0ffc",
+    "bytes": 16,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/submission.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/test-commands.log",
+    "sha256": "3c1412028960a70513505da2a86a65cd5d7b5e78fd32d1f953ea9fb06381e53d",
+    "bytes": 1308,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/test-commands.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/tests.log",
+    "sha256": "7a2ff1eceb8be70bfb3d516f8fc875533061748b947192e7a710a62994bf3399",
+    "bytes": 15955,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-hidden/tests.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/build.log",
+    "sha256": "d2e1db103fb6f7df9df2811c12d3a07c0ce0de3bcb02c44099a6ed7708defde3",
+    "bytes": 746,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/build.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/configure.log",
+    "sha256": "c7a7857217d0688ba4dba1db1448d6492d66363dba72a991a6d8b4b06e9fdb3b",
+    "bytes": 7764,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/configure.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/dependency-revisions.tsv",
+    "sha256": "912d994ece49f07713b28fc27acd76fbf7a8f28c43b2c28ba9c5bc507c3af953",
+    "bytes": 46,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/dependency-revisions.tsv"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/job.log",
+    "sha256": "bd9323d0928f98cdcbdda542d31a29fe3883f314e6687e2f0a5d6ec37078452d",
+    "bytes": 14464,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/job.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/rejected.patch",
+    "sha256": "6088e945a54b932cbb90d01c516b9d45b1d72698efca49681f5e6e982ff3c6ff",
+    "bytes": 798,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/rejected.patch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/run.sbatch",
+    "sha256": "0d2247ebc1948a635c61a6fad3417d4dbd617a5fa5a20508d80204f2f284faed",
+    "bytes": 3819,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/run.sbatch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/single-rank-full-suite.log",
+    "sha256": "8496834fda08ac60cdc5edd6740370a9cd234ef41adc0d983ae091a17c14d720",
+    "bytes": 3514,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/single-rank-full-suite.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/slurm-354758.err",
+    "sha256": "d71f0ab7793297c9ca7348c20e4077672cdb3692f7059a1eb9aa61042b8ed6fe",
+    "bytes": 126,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/slurm-354758.err"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/slurm-354758.out",
+    "sha256": "bd9323d0928f98cdcbdda542d31a29fe3883f314e6687e2f0a5d6ec37078452d",
+    "bytes": 14464,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/slurm-354758.out"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/source-sha.txt",
+    "sha256": "76bcf28219d926bfde2c38f6f2ed11804fa6e34b245fad8347a3496975c833ca",
+    "bytes": 41,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/source-sha.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/source.patch",
+    "sha256": "6088e945a54b932cbb90d01c516b9d45b1d72698efca49681f5e6e982ff3c6ff",
+    "bytes": 798,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/source.patch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/status.tsv",
+    "sha256": "db9e82db12b9be2bd8bac594c1af2de505ecd4524ab2d8d07a85a733d23e00b0",
+    "bytes": 82,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/status.tsv"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/submission.txt",
+    "sha256": "7604705499af1d6882ce378d43b02e577ef090915e6ca063182c8d8d219c7a98",
+    "bytes": 16,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/submission.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/test-commands.log",
+    "sha256": "f87dcc915f97bed808df442c509d605db040c52b664d614ee038e0eb37a7bf45",
+    "bytes": 915,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/test-commands.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/tests.log",
+    "sha256": "6b66c17edc005fdf7610a62fd3586da9a4a06cebb068835b90da813536aba452",
+    "bytes": 3555,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/cuda132-inline/tests.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/job.log",
+    "sha256": "e42f4ccd488b9c31673a47e575b93b785cca4fdc598e8c1ae3a484f704370d09",
+    "bytes": 628,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/job.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/run.sbatch",
+    "sha256": "628c7f17ed98139c6451eb0bbe1a1d75e539759aee0b6ab1843189ef742a57ec",
+    "bytes": 3440,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/run.sbatch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/slurm-354752.err",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/slurm-354752.err"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/slurm-354752.out",
+    "sha256": "e42f4ccd488b9c31673a47e575b93b785cca4fdc598e8c1ae3a484f704370d09",
+    "bytes": 628,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/slurm-354752.out"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/slurm-accounting.txt",
+    "sha256": "5b911185b2bca7e545cfd5f58c25e41b4dda4af33c01086adb611d1b991186b1",
+    "bytes": 784,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/slurm-accounting.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/status.tsv",
+    "sha256": "8f40aef8f3f18f4ed9bf9016e9df7f8ddd19c08020245187c8f32a65a4a15768",
+    "bytes": 20,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/status.tsv"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/submission.txt",
+    "sha256": "132b144f1821a488233e08760b4b33d8d420d5ee4b7c3ac26c7969434472ae11",
+    "bytes": 16,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/submission.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/visibility-fix.patch",
+    "sha256": "d178f43dd464868b33a5a606a5bc5b3c6a8c4e354f7edf802b4003fc76808229",
+    "bytes": 919,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/all-runs/tmp/a100-probe-20261025-61c90499/visibility-fix.patch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/build.log",
+    "sha256": "1b1825a940e62337318e4b48e0c0372b27ef3706b39f5b11dc205326a0ba042c",
+    "bytes": 208073,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/build.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/configure.log",
+    "sha256": "6f2963ee429f78cb886cf7e624c57bc6a8a525804eb5fb95426a57076a84e3bc",
+    "bytes": 20771,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/configure.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/dependency-revisions-complete.tsv",
+    "sha256": "c405b9c3cd65ca8749fc5923811ac796e12d4c98deba3b70c1d64015c6f41ad5",
+    "bytes": 419,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/dependency-revisions-complete.tsv"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/dependency-revisions.tsv",
+    "sha256": "912d994ece49f07713b28fc27acd76fbf7a8f28c43b2c28ba9c5bc507c3af953",
+    "bytes": 46,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/dependency-revisions.tsv"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/first-throw-backtrace.log",
+    "sha256": "b37c66e046886722ed8ab5de46153f8356edc51b272bf7403e26f5548af26507",
+    "bytes": 9820,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/first-throw-backtrace.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/isolated-1-rank.log",
+    "sha256": "51a20be4f56cce6640745c2f3e5ad331d06d8e93be5e40fdbc3d81d8f3e74c01",
+    "bytes": 1198,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/isolated-1-rank.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/isolated-2-rank.log",
+    "sha256": "8a94995c47bff2f6374bda26ed6b1eb7f1aa8c33b95ab63fcd9043c3164fd2a8",
+    "bytes": 2705,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/isolated-2-rank.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/job.log",
+    "sha256": "b384bc4582a7439f59c44631d7ae43c7bbeacac93d17041d274dc39c138346a1",
+    "bytes": 255811,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/job.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/junit.xml",
+    "sha256": "9df9832079fc939ac918fa69dfeea805cc332e9988dd5c18bb7eb37a78f8c148",
+    "bytes": 11652,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/junit.xml"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/opalx-link.txt",
+    "sha256": "c30a6f0be2ae279c62a8ff62d223466a9301e91eab8090653e9dee748e531c0a",
+    "bytes": 18103,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/opalx-link.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/probe-compile-commands.json",
+    "sha256": "77857e9399ea01e11315b875c272dd6074d90a8c5d3e1bc74f28c0143f01bf1e",
+    "bytes": 14541,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/probe-compile-commands.json"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/probe-link.txt",
+    "sha256": "1d008980aa457ccc2b800dc91d390e0388925ce883aeb9ea9c5c9a9e5767c757",
+    "bytes": 1339,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/probe-link.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/run.sbatch",
+    "sha256": "2796acc165b80be4559532089e4ccaef789c109327fed90a3393cf81e1722d8a",
+    "bytes": 3487,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/run.sbatch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/slurm-354754.err",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/slurm-354754.err"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/slurm-354754.out",
+    "sha256": "b384bc4582a7439f59c44631d7ae43c7bbeacac93d17041d274dc39c138346a1",
+    "bytes": 255811,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/slurm-354754.out"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/source-sha.txt",
+    "sha256": "76bcf28219d926bfde2c38f6f2ed11804fa6e34b245fad8347a3496975c833ca",
+    "bytes": 41,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/source-sha.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/status.tsv",
+    "sha256": "fa3f8745a84dd9b51878c69310de6da7f0278b4bb2680e3da0de9cf156ef80fd",
+    "bytes": 157,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/status.tsv"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/submission.txt",
+    "sha256": "b9b4efdbaf431438078822d774969ac99a8653f872bdf66fb0d7833701fd09d4",
+    "bytes": 16,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/submission.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/test-commands.log",
+    "sha256": "3c1412028960a70513505da2a86a65cd5d7b5e78fd32d1f953ea9fb06381e53d",
+    "bytes": 1308,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/test-commands.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/tests.log",
+    "sha256": "a74da972a2890c503727ad2c19073a384aff36bcf072e4788f0de914a44e6c3e",
+    "bytes": 24185,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/cuda132/tests.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/job.log",
+    "sha256": "e42f4ccd488b9c31673a47e575b93b785cca4fdc598e8c1ae3a484f704370d09",
+    "bytes": 628,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/job.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/run.sbatch",
+    "sha256": "628c7f17ed98139c6451eb0bbe1a1d75e539759aee0b6ab1843189ef742a57ec",
+    "bytes": 3440,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/run.sbatch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/slurm-354752.err",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/slurm-354752.err"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/slurm-354752.out",
+    "sha256": "e42f4ccd488b9c31673a47e575b93b785cca4fdc598e8c1ae3a484f704370d09",
+    "bytes": 628,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/slurm-354752.out"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/status.tsv",
+    "sha256": "8f40aef8f3f18f4ed9bf9016e9df7f8ddd19c08020245187c8f32a65a4a15768",
+    "bytes": 20,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/status.tsv"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/baseline/submission.txt",
+    "sha256": "132b144f1821a488233e08760b4b33d8d420d5ee4b7c3ac26c7969434472ae11",
+    "bytes": 16,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/baseline/submission.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/accounting.tsv",
+    "sha256": "d2da4766777f811117bf06df612f4db6c3e92d190e1ec3516c5180ab02bd1723",
+    "bytes": 508,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/accounting.tsv"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/baseline-after.sha256",
+    "sha256": "16712354e2dd03d8ab19f837ecd987a61654e22fc074c1a49fb76b5eae8165d1",
+    "bytes": 518,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/baseline-after.sha256"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/baseline-before.sha256",
+    "sha256": "16712354e2dd03d8ab19f837ecd987a61654e22fc074c1a49fb76b5eae8165d1",
+    "bytes": 518,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/baseline-before.sha256"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/baseline-junit.xml",
+    "sha256": "db6e1c41ea2064611520d3736c7bbc2e6c637dba6d8ba190c9d747cad4f3b908",
+    "bytes": 11652,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/baseline-junit.xml"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/baseline-libraries.log",
+    "sha256": "fb6bfbdc0e5ef7ff8b2c1584e3c43a2be733a2932889264d0e6dc9e7312302ae",
+    "bytes": 3657,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/baseline-libraries.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/baseline-registration.json",
+    "sha256": "5499d2bc9a3e78450cbf3b46d582fa0c80188f621d564ef8853567eddede46d0",
+    "bytes": 43940,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/baseline-registration.json"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/baseline-registration.log",
+    "sha256": "a0414ccb0415f8a467959e62bc3b2a3024f88d40bf62e9c9374cbe753c38dbb5",
+    "bytes": 25099,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/baseline-registration.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/baseline-tests.log",
+    "sha256": "94c6fcd18c669cf80e88565d54c62d86af639be56ecb83b6f64730f96b214ab1",
+    "bytes": 13555,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/baseline-tests.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/elf-inspection.txt",
+    "sha256": "7ba98f140e1011ce4c91d939fe9baa4d34c034a846f4a0c247211c0d3bcd4d49",
+    "bytes": 55624,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/elf-inspection.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/job.log",
+    "sha256": "6d37306072f8399bbeec8a1ca5c3eb481a2a479b92078a9b5b59c01d1a8ff643",
+    "bytes": 703,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/job.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/link-control-command.json",
+    "sha256": "d56644656741fa06bec4c48571e5ff79e1b2be66311ab0e5c86867ab1df6cb39",
+    "bytes": 20833,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/link-control-command.json"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/local-functions-junit.xml",
+    "sha256": "c2d57c6862bede5833f5750c68e616a58c1a06483e8e143fc0dd461cc75ff8ee",
+    "bytes": 4230,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/local-functions-junit.xml"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/local-functions-libraries.log",
+    "sha256": "39a7b7be1be0d098cc7b0543e0c130a36a91288d145bed2fe803a5d51e807627",
+    "bytes": 3656,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/local-functions-libraries.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/local-functions-registration.json",
+    "sha256": "47d89909d8e0d7cd5558afac53f39a788a4b0c76868e4eda8c466278804ed4a9",
+    "bytes": 49657,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/local-functions-registration.json"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/local-functions-registration.log",
+    "sha256": "0700a2c63a51e4398798613ede2c63529ce484a2acf6047fcfcc137f439021a5",
+    "bytes": 16659,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/local-functions-registration.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/local-functions-tests.log",
+    "sha256": "dec8055be2981ffa1910751e7effc4a5b33e8326fcea4c60300fb522c020199d",
+    "bytes": 6769,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/local-functions-tests.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow-job.log",
+    "sha256": "cedaa25e6cf0b3d736bb32d9d0811e02e271b6e3068f992a26cfe2bd55d5266f",
+    "bytes": 10239,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow-job.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow-slurm-354762.err",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow-slurm-354762.err"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow-slurm-354762.out",
+    "sha256": "28afa793083bcddc7bc154749b8253ddf5407cea19127567179bc1add0f66949",
+    "bytes": 929,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow-slurm-354762.out"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow-slurm-354763.err",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow-slurm-354763.err"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow-slurm-354763.out",
+    "sha256": "cedaa25e6cf0b3d736bb32d9d0811e02e271b6e3068f992a26cfe2bd55d5266f",
+    "bytes": 10239,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow-slurm-354763.out"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow.prterun-merlin-g-100-4044625@1.0.err",
+    "sha256": "ccee85a4432a44a8220747f1917a52daeb209760ddec6d5a9046ef657f6b5dbc",
+    "bytes": 134,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow.prterun-merlin-g-100-4044625@1.0.err"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow.prterun-merlin-g-100-4044625@1.1.err",
+    "sha256": "ccee85a4432a44a8220747f1917a52daeb209760ddec6d5a9046ef657f6b5dbc",
+    "bytes": 134,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow.prterun-merlin-g-100-4044625@1.1.err"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow.prterun-merlin-g-100-4046500@1.0.err",
+    "sha256": "4685c3e9a6b81922e8f6feacbe80f010557703fa4097f7752689d5cb1c3f7970",
+    "bytes": 285,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow.prterun-merlin-g-100-4046500@1.0.err"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow.prterun-merlin-g-100-4046500@1.0.out",
+    "sha256": "35e493c6badaf22059f5b292093844ef21415a87d0c449be019cc7fc0d5172af",
+    "bytes": 6481,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow.prterun-merlin-g-100-4046500@1.0.out"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow.prterun-merlin-g-100-4046500@1.1.err",
+    "sha256": "af4854309ed2d91a8ae4eccea616bda01821af77df9544dba93ad85290c51156",
+    "bytes": 181,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow.prterun-merlin-g-100-4046500@1.1.err"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow.prterun-merlin-g-100-4046500@1.1.out",
+    "sha256": "cb974fa1bcf1395fde93aec08273ec8d65854223815f08afb67b293c5c73000a",
+    "bytes": 1408,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow.prterun-merlin-g-100-4046500@1.1.out"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow.py",
+    "sha256": "3eae4c7d5cc9b4ea767fea1bd1a4fd0311f5c685cf2101c20532bfd3ef1ad0d7",
+    "bytes": 537,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/mpi-firstthrow.py"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/probe-cause-link-control.sbatch",
+    "sha256": "4af4c44f1750e221c962de3692e46accefce13600f4d8fd5ffff81b7ec9cc0c9",
+    "bytes": 3427,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/probe-cause-link-control.sbatch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/probe-cuda-registration-trace.py",
+    "sha256": "50700b97b6218a737b2396076b7ae5cbe4327654f39ce766a12e695acb9e9efa",
+    "bytes": 2292,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/probe-cuda-registration-trace.py"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/probe-mpi-firstthrow.py",
+    "sha256": "3eae4c7d5cc9b4ea767fea1bd1a4fd0311f5c685cf2101c20532bfd3ef1ad0d7",
+    "bytes": 537,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/probe-mpi-firstthrow.py"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/probe-mpi-firstthrow.sbatch",
+    "sha256": "1765af1c32ba00c8977553ed535e8923ec8d352adf89b7459b3686f858692813",
+    "bytes": 1254,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/probe-mpi-firstthrow.sbatch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/rank-4036990-hang.log",
+    "sha256": "f03385ca834834027171edfb37a54872cb9c4f0ae75d39b81dd3581ef1f6e8da",
+    "bytes": 2029,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/rank-4036990-hang.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/rank-4037019-hang.log",
+    "sha256": "3a4d777157e6525b7918c0d771c80785d553c35fe4c166b763afdb79eabf4879",
+    "bytes": 6747,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/rank-4037019-hang.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/rank-4037020-hang.log",
+    "sha256": "65a76ef45faf8727e626a21f4921cf640a9b6f2b2479cdbfc3e9cd201970a773",
+    "bytes": 6520,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/rank-4037020-hang.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/relink.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/relink.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/slurm-354760.err",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/slurm-354760.err"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/slurm-354760.out",
+    "sha256": "6d37306072f8399bbeec8a1ca5c3eb481a2a479b92078a9b5b59c01d1a8ff643",
+    "bytes": 703,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/slurm-354760.out"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/source-revision.txt",
+    "sha256": "76bcf28219d926bfde2c38f6f2ed11804fa6e34b245fad8347a3496975c833ca",
+    "bytes": 41,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/source-revision.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/source-status.txt",
+    "sha256": "01c1d120ecaad67531ff8b0b7f186a6fe49ab8eab5ddb1ab094f0e412ef0e11b",
+    "bytes": 84,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/source-status.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/state-vtable.txt",
+    "sha256": "e45f3fecda89b2efea065b568a69360be2c850c6ffecb02136bfda18549ae3ec",
+    "bytes": 286,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/state-vtable.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/status.tsv",
+    "sha256": "9344566420c31f2a81e4d116fb68ea4e7427ddbbcffb47e517c6359ac0fb3908",
+    "bytes": 265,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/status.tsv"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/submission.txt",
+    "sha256": "cbfe4ac4bd33b5da0ae531426a09a79aaa16477e061afde61c33f8078054aa5d",
+    "bytes": 16,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/submission.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/cause/trace.py",
+    "sha256": "50700b97b6218a737b2396076b7ae5cbe4327654f39ce766a12e695acb9e9efa",
+    "bytes": 2292,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/cause/trace.py"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/probe-cause-20261025-61c90499-evidence.tgz",
+    "sha256": "4e361ba2dc8361d551f60e2bdb789e7cb939b9b9ff2a58386fbc7c755e0c39c9",
+    "bytes": 30969,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/run.sbatch",
+    "sha256": "cbb7d21039783737cad2f7ebc55dd1523d57cc1254050aabeab0e1cfb8504234",
+    "bytes": 3486,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/run.sbatch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/VALIDATION.md",
+    "sha256": "91994bdaf147db9861b85296515645650222892a5b47eb15f14a04462d836865",
+    "bytes": 5365,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/validation.md"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/accounting.tsv",
+    "sha256": "63a20e2740539f0a76385c4841593012ce035267985f31c8790a2c5ba0e6b2e4",
+    "bytes": 171,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/accounting.tsv"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/binaries.sha256",
+    "sha256": "1c0f3c3cb0016076e672919763b829c275001bf45f0ee0118484084b688714b6",
+    "bytes": 344,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/binaries.sha256"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/build.log",
+    "sha256": "b7d733cd46b111532e20edb8dfc111cd11c684600d273d85c743d72715519384",
+    "bytes": 12824,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/build.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/configure.log",
+    "sha256": "53382d35481e0dfca22d0cb7625b665cee7233ad225cb2168f365aca05d5bcd8",
+    "bytes": 7764,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/configure.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/executable-all-state-definitions.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/executable-all-state-definitions.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/executable-dynamic-section.txt",
+    "sha256": "b50fc307289cbac8937f6ec21cfbd9412918cc5bcd161f48bb288f93efd562e6",
+    "bytes": 2847,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/executable-dynamic-section.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/executable-mpi-early-state-definitions.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/executable-mpi-early-state-definitions.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/executable-one-state-definitions.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/executable-one-state-definitions.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/executable-state-definitions.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/executable-state-definitions.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/job.log",
+    "sha256": "868893a9b99711dda5bd14dac7507f3dbceb5d43bd74b8e0bcbcfe16082fbea8",
+    "bytes": 43481,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/job.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/junit.xml",
+    "sha256": "5b5e928d93d3c00cc8a7c39b338e348f8a3b3924efdd8c82ff2bc52cb20b95c4",
+    "bytes": 8237,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/junit.xml"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/library-all-state-definitions.txt",
+    "sha256": "0169c7b8db116bd743446e961bd2bc82251e67a222f618ff8389cc70b575ad9d",
+    "bytes": 87912,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/library-all-state-definitions.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/library-inspection-note.txt",
+    "sha256": "a9e198c4de3a71e25712418e99f2933a75a972e5ac60a46280f9eb0660caedc7",
+    "bytes": 202,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/library-inspection-note.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/library-link.txt",
+    "sha256": "c30a6f0be2ae279c62a8ff62d223466a9301e91eab8090653e9dee748e531c0a",
+    "bytes": 18103,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/library-link.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/library-state-definitions.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/library-state-definitions.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/library-state-methods-summary.txt",
+    "sha256": "4a28bc00b965d5e23c354618a68e6820108699b124d30db2a3a6536c1e4b2304",
+    "bytes": 2507,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/library-state-methods-summary.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/login-only-library-inspection.txt",
+    "sha256": "2035b50b2e66a92857b072f4fe46b187b008c376ae2050814360637e5de84f8b",
+    "bytes": 7827,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/login-only-library-inspection.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/probe-mpi-flags.make",
+    "sha256": "6475288ee0802c54721bb6c256d913780f4d28aaedaa269c65497333e00b7252",
+    "bytes": 3872,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/probe-mpi-flags.make"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/source-after.patch",
+    "sha256": "553eb6c9eea830354187fc1c75c327fc4122d124fd6c189c1a1140501bbe5603",
+    "bytes": 10444,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/source-after.patch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/source-status.txt",
+    "sha256": "297026f98fecfb0371debca883da380dac412b58b3583b48fcf655d518aaccd3",
+    "bytes": 352,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/source-status.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/source.patch",
+    "sha256": "553eb6c9eea830354187fc1c75c327fc4122d124fd6c189c1a1140501bbe5603",
+    "bytes": 10444,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/source.patch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/status.tsv",
+    "sha256": "64a421b52ca5706a11b2adf2e5cef6e8a392b1cb798d2e0c6da4db0a68edba1e",
+    "bytes": 103,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/status.tsv"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/test-commands.log",
+    "sha256": "fbe6077bd45cd8d16f29e1e42376155f629880d771b3b47c30414a2dd31d0fe4",
+    "bytes": 3016,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/test-commands.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/test-summary.txt",
+    "sha256": "38bcb267ed84907eeef75a6cca624b611639e469efc9b7239e99eea3f42020a8",
+    "bytes": 3282,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/test-summary.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/tests.log",
+    "sha256": "674a3d57a0346b901d0b8f4f7adb3ade7bd30bd5713183c693604d53778fdc65",
+    "bytes": 21626,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/cuda/tests.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/openmp-build.log",
+    "sha256": "874ae1c58aeb50b28320bb6cfc7c0cdd1c0e3df2d948bd317dcd173a0f81a477",
+    "bytes": 12550,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/openmp-build.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/openmp-commands.log",
+    "sha256": "399e719c92751568c8f69280805f5837b3269022c3ede5aa98a6d031829ae61e",
+    "bytes": 2478,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/openmp-commands.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/openmp-configure.log",
+    "sha256": "d5fd7812159c606975c134fbf3cf808886411e30be3373875d4932eeb02431ff",
+    "bytes": 7016,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/openmp-configure.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/openmp-junit.xml",
+    "sha256": "ee5a5d6763bc5356bf24cd455b81d69b76d33cc7200c06137a6994e266fdbf43",
+    "bytes": 8249,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/openmp-junit.xml"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/openmp-tests.log",
+    "sha256": "53fa07204031700698e3502571d00678ac13d179c524072d2597962b12530c62",
+    "bytes": 23753,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/openmp-tests.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/probe-storage-fix-20261025-evidence.tgz",
+    "sha256": "4b7acf74bb644d31fe0c5a5bca78f573ab4bbe94c80c1edf839631d7f6d577ed",
+    "bytes": 31766,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/source-comments.patch",
+    "sha256": "c0e72d3fd4b8eba146aa655a4d0899d107ac93a3a70d8d36375aa6bb9cf8c099",
+    "bytes": 7502,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/source-comments.patch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/source-with-comments.patch",
+    "sha256": "7f3517b0629539d4feaf945239ba9324455db2d88b458e00cf9552e703935790",
+    "bytes": 15335,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/source-with-comments.patch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/source.patch",
+    "sha256": "553eb6c9eea830354187fc1c75c327fc4122d124fd6c189c1a1140501bbe5603",
+    "bytes": 10444,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/a100-merlin6/storage-fix/source.patch"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/cdash-debug-4374545.txt",
+    "sha256": "91f4b205dd2b98a6daf0179fd09ed90f902c69f21f8d3b8bc75c4998a3321d58",
+    "bytes": 22033,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/cdash-debug-4374545.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/cdash-release-4374547.txt",
+    "sha256": "22e7b454b205326789c0e16837a939549e408447f5e989a48ddfeaad2a42288d",
+    "bytes": 22281,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/cdash-release-4374547.txt"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/cdash-test-547111660.json",
+    "sha256": "e8c12696a5ffac6ec180a0c5ddad84ea439f41fd2a016cb64150d6ecf029eaba",
+    "bytes": 9054,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/cdash-test-547111660.json"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/focused-tests.log",
+    "sha256": "29dbdfb14c8e9dc89ef62791b582ddfe0561ac2502f85f550bfa042ac4c64d14",
+    "bytes": 903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/focused-tests.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/followup-1223UTC/opalx-gh200-followup-index-20261025.json",
+    "sha256": "ad52172cfc52193a51825a75bcd352f0e7c417af9409ce7690ecb8c82e557ba0",
+    "bytes": 23374,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/followup-1223utc/opalx-gh200-followup-index-20261025.json"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/followup-1223UTC/opalx-gh200-followup-revisions-20261025.json",
+    "sha256": "63f77d42fc57b9062c9877fa9d179ea5a942775d2e8eeadbbc74f585f9157235",
+    "bytes": 217958,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/followup-1223utc/opalx-gh200-followup-revisions-20261025.json"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/nvcc-syntax-validation/README.md",
+    "sha256": "d55a0a86f9c22ebb221fedc734c39636bb6b989a574be639bb488b32d747d101",
+    "bytes": 1435,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/nvcc-syntax-validation/readme.md"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/nvcc-syntax-validation/bad_private_payload.cu",
+    "sha256": "34bce71a2a56b820ef5d49fd0a6926668df9d0494e3727031afd21dc5acda566",
+    "bytes": 401,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/nvcc-syntax-validation/bad_private_payload.cu"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/nvcc-syntax-validation/bad_private_payload.log",
+    "sha256": "87cb01817110cfdec6336410c74430c01a3d20f27ccce5cee5ef52aa018d632a",
+    "bytes": 350,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/nvcc-syntax-validation/bad_private_payload.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/nvcc-syntax-validation/bad_private_testbody.cu",
+    "sha256": "1c3d1b70d9dd0f514b9dbb4b2c9739f86a1d90868f9846cbfd7a45803c94a654",
+    "bytes": 358,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/nvcc-syntax-validation/bad_private_testbody.cu"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/nvcc-syntax-validation/bad_private_testbody.log",
+    "sha256": "9b3b97b9d12acdc6424b4a418b994484c4d0079cadc589f860a849f23a42d7f2",
+    "bytes": 356,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/nvcc-syntax-validation/bad_private_testbody.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/nvcc-syntax-validation/environment.log",
+    "sha256": "dc9999e384ddeb598230532fcb3436715d8da774c1d3b5b23053969d11065664",
+    "bytes": 601,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/nvcc-syntax-validation/environment.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/nvcc-syntax-validation/fixed_namespace_helper.cu",
+    "sha256": "eff69d92bd56b4a94b1ae98e8b8cb908550c8fa1f44c3810bef448166d7f4969",
+    "bytes": 405,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/nvcc-syntax-validation/fixed_namespace_helper.cu"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/nvcc-syntax-validation/fixed_namespace_helper.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/nvcc-syntax-validation/fixed_namespace_helper.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/nvcc-syntax-validation/fixed_namespace_payload.cu",
+    "sha256": "ec5be254f970b0d7303a06c24d40c92f3d629784cfb6d19e5eb5ee42b58942a7",
+    "bytes": 439,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/nvcc-syntax-validation/fixed_namespace_payload.cu"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/nvcc-syntax-validation/fixed_namespace_payload.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/nvcc-syntax-validation/fixed_namespace_payload.log"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/nvcc-syntax-validation/run.sh",
+    "sha256": "b606e1b6d4614b9df858ea92a3621aaf1066464f0fab2316a10a055a305ed9b6",
+    "bytes": 606,
+    "disposition": "retained-text",
+    "archive": "local/tmp/gh200-build-fix-20261025/nvcc-syntax-validation/run.sh"
+  },
+  {
+    "original": "tmp/gh200-build-fix-20261025/nvcc-syntax-validation/status.tsv",
+    "sha256": "ebf97ce42c08e53a441c3021c37a2e235d97515327361e95fa79c59838cd70c3",
+    "bytes": 96,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/gh200-build-fix-20261025/nvcc-syntax-validation/status.tsv"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/REPORT.md",
+    "sha256": "c0af59f203d0fb9b5668398cdd55aaaa37ff99755d3f795937639c4999d28bbb",
+    "bytes": 5156,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/report.md"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/RESULTS.json",
+    "sha256": "c9fd27226a7f4e17cd12222eec88d1f7fd6feb15d779a8c3caa8c0ede6de7ee6",
+    "bytes": 4248,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/results.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/ROOT_VERIFICATION.json",
+    "sha256": "2490b2f178e0e761acc00c57114b30fd98672caf13ee56d4ae529d12c8ef88fe",
+    "bytes": 1098,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/root_verification.json"
+  },
+  {
+    "original": "tmp/lossdatasink-linux-debug-20261109/STATE.md",
+    "sha256": "78310e265e8e6965fd4f54a00b5be66e15adecf4ca61cf3d3c0102ebd0341338",
+    "bytes": 3911,
+    "disposition": "retained-text",
+    "archive": "local/tmp/lossdatasink-linux-debug-20261109/state.md"
+  }
+]

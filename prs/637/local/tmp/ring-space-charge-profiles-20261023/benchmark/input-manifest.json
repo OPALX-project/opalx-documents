@@ -1,0 +1,25 @@
+{
+  "particles": 262144,
+  "grid": [
+    32,
+    32,
+    32
+  ],
+  "charge_C": 3.948667324777887e-11,
+  "equivalent_current_A": 0.002,
+  "launch_reference_p": [
+    -0.36920124,
+    0.0,
+    -0.151830777
+  ],
+  "seeded_samples_source": "/Users/adelmann/git/regression-tests-x/RegressionTests/Cyclotron-SC-Midpoint/gauss.dat",
+  "sample_transform": "center fixed samples; rigid y-rotation from local +z to established acceleration reference; replace mean momentum",
+  "dt_s": 4.113195129976966e-11,
+  "hashes": {
+    "acceleration.in": "194261617df5e7e6d8932c596b83cc56215ec6c9ad5235f482705972b6720a0d",
+    "bunch.dat": "6bb2233aec1c06529089ca6e349fea2b2a9b0f570bfbffe708e9970d4958014b",
+    "bfield.dat": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "rffield2.dat": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "rffield1.dat": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b"
+  }
+}

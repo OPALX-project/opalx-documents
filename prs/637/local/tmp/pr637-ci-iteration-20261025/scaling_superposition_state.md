@@ -1,0 +1,33 @@
+# ScalingFFA field-superposition correction
+
+Goal: diagnose/fix particle/reference disagreement caused by ScalingFFAMagnet overwriting existing magnetic field contributions. Root owns publication; do not commit/push.
+
+Inspection confirms `apply(pc)` delegates to the raw batch getter, which writes all Cartesian B components even when its contribution is zero outside support. Scalar apply delegates to a raw overwrite getter too. The reference integrator independently zero-initializes and sums each element's local field. MultipoleT/Cyclotron apply methods add contributions, establishing the intended element superposition contract.
+
+Plan: demonstrate with a native self-contained C++ test, then keep public raw getters' overwrite contract and add an internal uniform accumulation mode used by apply(pc). Scalar apply computes its own field and adds it. Preserve all field formulas, units, support boundaries, public signatures and existing tolerances. No extra device allocation or launch is needed. Document local Cartesian SI units and contribution-versus-raw-getter distinction.
+
+Current change: TestScalingFFAMagnet.cpp adds a four-position actual particle-view kernel test with seeded B/E, two overlapping elements, second-element-only exclusions, radial/azimuthal exclusions, scalar/reference parity and raw getter overwrite checks. No external scripts/data/executable invocation is used by the native test. Initial test-only build in progress (2 workers), before production edits.
+
+Next: run new test against old library and preserve failure; implement minimal correction; focused native tests; relink and unchanged 1000-step one-rank manual Scaling case, compare mean particle/reference separation; report residual issues honestly.
+
+Pre-fix native test compiled and failed as intended; log `scaling-superposition-before-test.log` shows accumulator components erased in particle/scalar/reference paths, including outside-support contributions. Raw overwrite assertions pass.
+
+Correction stable in ScalingFFAMagnet.cpp/.h: apply selects private shared evaluateField with accumulation enabled; raw batch lookup disables accumulation. The existing final kernel rotates into a stack-local contribution, then either adds or replaces. Scalar apply adds its calculated contribution. No extra allocation/launch, formula, support, public signature, existing tolerance or MPI-order change. Changes alter floating-point field summation where overwrite previously discarded contributions; this is the intended superposition correction. Doxygen defines local Cartesian positions [m], B [T], E [V/m], zero outside support and host/device contract.
+
+Focused native target build passed; CTest and corrected executable relink are running. Four unchanged files include the pre-existing FODO native analytic test and new Scaling test; no reference checkout edits.
+
+Initial correction validation passed 39/39 native cases across ScalingFFAMagnet (18), TrackReferenceStep (11), DeviceExternalField (10), one rank OMP2; the new superposition case also passed on two MPI ranks. Unchanged 1000-step one-rank integration (`scaling-superposition-fixed/`) reduced final mean separation from clean-master 1.22201416922 m to 7.93193944105e-13 m, maximum ten sampled rows 8.32714522919e-13 m, retains all10 particles and bunch charge, energy variation8.46e-13 MeV.
+
+Independent review caught an NVCC extended-lambda rule before publication: enclosing a device lambda in a private member launcher is forbidden. Adjusted launcher ownership to namespace-scope internal `scaling_ffa_detail::FieldEvaluator` with a public static evaluate method and friendship only for the existing private coordinate/rotation helpers. Element public signatures and access stay unchanged. No state, allocations, launches or field math changed. Doxygen explains why the internal struct/public launcher is needed. Final rebuild/retest and fresh manual integration are in progress; first-correction evidence is retained separately. CUDA backend validation remains root-owned.
+
+## Final validation (complete, source frozen)
+
+Final shared namespace launcher build passed. Native tests: 39/39 cases in three targets (18 ScalingFFAMagnet,11 TrackReferenceStep,10 DeviceExternalField), one MPI rank, OpenMP2; the new actual-particle-kernel superposition regression also passes on two MPI ranks. `git diff --check` passes. Native tests remain self-contained C++, with no external data/Python/OPALX launch.
+
+Final binary SHA256 `f74521aa6946df75713915e2818b85fec8403ef411e561efd53ecb17ac051497`. Fresh unchanged1000-step one-rank manual integration in `scaling-superposition-final/` completed exit0. It yields final mean separation7.931939441046071e-13m versus named pre-PR master1.2220141692200102m; final mean_x=-3.807387546355404e-13m, mean_s=-6.958409543011967e-13m. Maximum of the10 sampled rows8.327145229187566e-13m. All10 particles retained, charge error7.89e-31C, energy range8.46e-13MeV. `analyse_comparison.py` is a reproducible manual analysis artifact only. This verifies this unchanged fixture, not general FFA convergence or actual CUDA/HIP execution.
+
+Changed files for this correction: src/AbsBeamline/ScalingFFAMagnet.cpp, .h, unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp. The fourth tracked change, TestMultipoleTStraight.cpp, is the separately authorized FODO analytic fringe/reference/device regression. No references/input/tolerances modified. Independent reviewer is checking final CUDA-friendly source ownership before root publication. Root owns actual GPU/backend validation, standard reference regeneration and commits/pushes. No active child build or simulation.
+
+## Committed-source reference draft
+
+Parent committed the reviewed four files as a9d38caa4f88433a5de1508b3d5c7d01bdfea95a, not yet pushed at request time. Reconfigured locally with fully/updating disconnected dependencies and rebuilt executable with8 workers; fresh copied binarySHA68fad17728ccb7ed11f51e906bd739d6c59fe1ab646749ef9a54737292242590 embeds exacta9. Both FODO and corrected1000-step Scaling reference drafts were standard-generated from isolated exact regression737547e6 copies.9/9 non-reference files unchanged,6/6 MD5s pass,10/10 original-tolerance comparisons pass, expected2001/10 outputrows and1000/10 particle counts, charge/energy invariants verified. Combined12-file generated-only patchSHA05b649a08c40f351a048f9b4b051e832a2288032ab19a48d40a35cea9865ea4e applies to isolated exact737 base. `reference-drafts-a9d38caa/PROVENANCE.md` has reviewable rationale, exact commands/hashes/limitations. Maintained regression checkout unchanged; parent handles actualGPUresults and publication. No active build/simulation.

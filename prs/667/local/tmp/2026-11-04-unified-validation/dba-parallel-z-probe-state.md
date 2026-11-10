@@ -1,0 +1,14 @@
+# PARFFTZ / four-rank DBA pilot — attempted; unsupported configuration
+
+User authorized inputPARFFTZTRUE andsmall4MPIrankstest,resultscomparison;no16turns. Exactcurrentbuild-ompexecutableSHA4fd718db8dea unchanged;currentHEAD40856f1a2 source/testclean( unrelatedlocalsuntouched).
+OnlychangedPARFFTZFALSE->TRUE inCOPIESofsame100step100k64x64x5125.602nC3pspilot. Raw /Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-parallel-z-probe. OriginalbaselineinputSHAf669... preserved.
+-4MPIx1OMP: launchapprovedtool escalationmpiexec--map-byslot--bind-tonone--oversubscribe-n4. NativevalidationrejectsFFT2D5 supports onlyoneMPIrank,exit156.
+-1MPIx4OMP: rejectsFFT2D5serialslices/PARFFTflagsmustFALSE,exit156.
+BothBEFOREtrackstart,0steps,noH5fields/noresultcomparisonpossible. DoNOTclaimnewdecompositionorperformancepoint. Initialinvocationwrongworkingdirfailedtofindcase.in;preservedwrong-cwd-launch.log;correctattemptsthenranandproducedexplicitvalidationerrors.
+Sourceproof:SpaceChargeConfigBuilder.cpp308rejectsMPI>1;SpaceChargeConfig.cpp126rejectsparallelgridflags;FFT2D5Algorithm.cpp52rejectsmultirankruntime;FFT2D5FieldStorage.cpp78 hardcodes3DlayoutallFALSE and2DsliceMPI_COMM_WORLD/allFALSE;hpp564 loopsallglobal512sliceswithsharedworkspace. No distributedparticles-to-slabexchange/localZindexing/periodicrankhalo/gatherimplemented. Cannotjustremoveguards.
+PARFFTZ isMPIgriddecompositionrequest,notOpenMPthreadslice scheduling. OMPsliceparallelismneedsbatchedorthread-safeindependentworkspaces/backend;currentoneworkspacecannotconcurrentlyserveallslices. MPIzsupportrequiresownership/routinginreferencepaths,local/globalZ+periodichalosandlocal2Dsolvercommunicators,followedbycharge/field/per-IDcomparisonagainst1rankespeciallyrankboundaries/seam.
+NoC++edits,norebuild,guardbypass,commit,pushor16turns. Next: reportfailedattemptandimplementationrequirement,savecuratedinputs/logsunderopalx-documents. Do notsilentlyimplementmajorMPIbackendfromparameterrequest.
+
+Completed:8curatedassetswithverifiedSHAinventorysavedinopalx-documents/examples/2026/2d5-1/dba-parallel-z-probe-2026-11-04. No furthernativejobsrunning.
+
+User requested input revert. Both working case.in copies now have PARFFTZ=FALSE and exactly match validated baseline SHA f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38. Attempted TRUE inputs retained as attempted-parfftz-true.in beside logs; manifests identify historical attempted and current hashes separately. Curated historical failure evidence remains unchanged. No run launched.

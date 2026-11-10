@@ -1,0 +1,123 @@
+% Mapped-grid schematic, not an IPPL curved-mesh implementation.
+% Physical centreline: X=((R+u)cos(s/R)-R,y,(R+u)sin(s/R)); R=2 m.
+% The origin of s is shifted to the charged-beam midpoint for this figure.
+% Visible physical tube thickness and grid spacing are deliberately schematic.
+\begin{tikzpicture}[
+  x=1cm,y=1cm,font=\small,>=Latex,
+  mggrid/.style={line width=.4pt,black!30},
+  mgsource/.style={blue!65!black,line width=.8pt},
+  mgcoupling/.style={blue!55!black,opacity=.3,line width=.45pt},
+  mgaxis/.style={->,black!75,line width=.6pt},
+  mgdim/.style={<->,black!70,line width=.55pt},
+  mgtarget/.style={fill=orange!85!black,draw=white,line width=.65pt},
+  mglabel/.style={fill=white,inner sep=2pt}
+]
+ \path[use as bounding box] (0,0) rectangle (16.6,9.0);
+ \node[anchor=north west,font=\bfseries\small,align=left,text width=7.4cm]
+   at (.1,8.9) {(a) Physical image of coordinate cells};
+ \node[anchor=north west,font=\bfseries\small,align=left,text width=7.7cm]
+   at (8.65,8.9) {(b) Uniform IPPL coordinate array};
+ \node[anchor=north west,black!65] at (.1,8.35)
+   {Orbit-plane view; $y$ out of the page};
+ \node[anchor=north west,black!65] at (8.65,8.35)
+   {$u\times y\times s$: $64\times32\times8192$ cells};
+
+ % Physical circular arc: theta=s/R, -1.25 <= theta <= 1.25 rad.
+ \coordinate (mgO) at (1.5,5.0);
+ \coordinate (mgT) at ($(mgO)+(0:2.55)$);
+ \fill[blue!9] ($(mgO)+(-71.619724:2.43)$)
+   arc[start angle=-71.619724,end angle=71.619724,radius=2.43]
+   -- ($(mgO)+(71.619724:2.67)$)
+   arc[start angle=71.619724,end angle=-71.619724,radius=2.67] -- cycle;
+ \foreach \rad in {2.43,2.67} {
+   \draw[mggrid] ($(mgO)+(-71.619724:\rad)$)
+     arc[start angle=-71.619724,end angle=71.619724,radius=\rad];
+ }
+ \draw[mgsource] ($(mgO)+(-71.619724:2.55)$)
+   arc[start angle=-71.619724,end angle=71.619724,radius=2.55];
+ \foreach \theta in {-71.619724,-65,-58.5,-52,-45.5,-39,-32.5,-26,-19.5,-13,-6.5,0,6.5,13,19.5,26,32.5,39,45.5,52,58.5,65,71.619724} {
+   \draw[mggrid] ($(mgO)+(\theta:2.43)$) -- ($(mgO)+(\theta:2.67)$);
+ }
+ \foreach \theta in {-71.619724,-59.6831,-47.7465,-35.8099,-23.8732,-11.9366,11.9366,23.8732,35.8099,47.7465,59.6831,71.619724} {
+   \draw[mgcoupling] ($(mgO)+(\theta:2.55)$) -- (mgT);
+   \fill[blue!65!black] ($(mgO)+(\theta:2.55)$) circle[radius=1.35pt];
+ }
+ \fill[black!65] (mgO) circle[radius=1.1pt];
+ \draw[mgdim] ($(mgO)+(.08,0)$) -- ($(mgT)+(-.12,0)$)
+   node[midway,above=3pt,mglabel] {$R=2\,\mathrm m$};
+ \node[anchor=north,align=center] at ($(mgO)+(0,-.16)$)
+   {Curvature\\centre};
+ \draw[mgaxis] (mgT) -- ($(mgT)+(.85,0)$) node[right] {$u$};
+ \draw[mgaxis] (mgT) -- ($(mgT)+(0,.85)$) node[above] {$s$};
+ \fill[mgtarget] (mgT) circle[radius=2.6pt];
+ \node[anchor=west,align=left] at ($(mgT)+(1.05,-.65)$)
+   {Observation\\point};
+ \node[anchor=south,mglabel] at ($(mgO)+(71.619724:2.55)+(0,.12)$)
+   {$s=+2.5\,\mathrm m$};
+ \node[anchor=west,mglabel] at ($(mgO)+(-71.619724:2.55)+(.3,-.1)$)
+   {$s=-2.5\,\mathrm m$};
+ \node[anchor=west,align=left] at (.15,1.95)
+   {$5\,\mathrm m$ charged arc\\$143.24^\circ$ bend};
+ \node[anchor=west,black!65] at (.15,1.05)
+   {Tube thickness enlarged};
+
+ % True transverse aspect ratio a/c=10, drawn at a separate magnification.
+ \coordinate (mgS) at (5.2,1.1);
+ \draw[mgsource,fill=blue!9] (mgS) ellipse[x radius=1.15,y radius=.115];
+ \draw[mgaxis] ($(mgS)+(-1.35,0)$) -- ($(mgS)+(1.55,0)$) node[right] {$u$};
+ \draw[mgaxis] (mgS) -- ($(mgS)+(0,.65)$) node[above] {$y$};
+ \node[anchor=north,align=center] at ($(mgS)+(0,-.3)$)
+   {Beam semiaxes $(a,c)=(5,0.5)\,\mathrm{mm}$};
+
+ % A rectangular array in logical coordinates. s is long; u is the slanted
+ % depth direction; y is vertical. Physical aspect ratios are not drawn to scale.
+ \begin{scope}[shift={(8.65,4.6)},x={(.71cm,0cm)},y={(.88cm,.62cm)},z={(0cm,1.55cm)}]
+   \fill[blue!11] (1.5,0,1) -- (6.5,0,1) -- (6.5,1,1) -- (1.5,1,1) -- cycle;
+   \fill[blue!7] (1.5,0,0) -- (6.5,0,0) -- (6.5,0,1) -- (1.5,0,1) -- cycle;
+   \draw[mggrid] (0,0,0) -- (8,0,0) -- (8,1,0) -- (0,1,0) -- cycle;
+   \draw[mggrid] (0,0,1) -- (8,0,1) -- (8,1,1) -- (0,1,1) -- cycle;
+   \foreach \ss in {0,8} {
+     \foreach \uu in {0,1} {\draw[mggrid] (\ss,\uu,0) -- (\ss,\uu,1);}
+   }
+   \foreach \ss in {0,.4,...,8} {
+     \draw[mggrid] (\ss,0,0) -- (\ss,0,1) -- (\ss,1,1);
+   }
+   \foreach \qq in {.2,.4,.6,.8} {
+     \draw[mggrid] (0,0,\qq) -- (8,0,\qq);
+     \draw[mggrid] (0,\qq,1) -- (8,\qq,1);
+   }
+   \foreach \ss in {1.5,6.5} {
+     \draw[mgsource] (\ss,0,0) -- (\ss,0,1) -- (\ss,1,1);
+   }
+   \foreach \ss/\uu/\yy in {1.5/.25/.3,2/.75/.75,2.5/.4/.5,3/.7/.25,3.5/.3/.7,4.5/.8/.4,5/.25/.8,5.5/.6/.3,6/.3/.6,6.5/.75/.5} {
+     \draw[mgcoupling] (\ss,\uu,\yy) -- (4,.5,.5);
+     \fill[blue!65!black] (\ss,\uu,\yy) circle[radius=1.3pt];
+   }
+   \draw[orange!75!black,line width=.65pt,fill=orange!7,fill opacity=.35]
+     (4,0,0) -- (4,0,1) -- (4,1,1) -- (4,1,0) -- cycle;
+   \fill[mgtarget] (4,.5,.5) circle[radius=2.6pt];
+   \draw[mgaxis] (0,0,1.13) -- (0,1,1.13) node[above right] {$u$};
+   \draw[mgaxis] (8.25,1,0) -- (8.25,1,1.13) node[above] {$y$};
+   \coordinate (mgAL) at (0,0,0);
+   \coordinate (mgAR) at (8,0,0);
+   \coordinate (mgCL) at (1.5,0,0);
+   \coordinate (mgCR) at (6.5,0,0);
+ \end{scope}
+ \draw[mgsource] ($(mgCL)+(0,-.35)$) -- ($(mgCR)+(0,-.35)$);
+ \foreach \pp in {mgCL,mgCR} {\draw[mgsource] ($(\pp)+(0,-.28)$) -- ($(\pp)+(0,-.42)$);}
+ \node[anchor=north] at ($(mgCL)!.5!(mgCR)+(0,-.48)$) {$5\,\mathrm m$ charged};
+ \draw[mgaxis] ($(mgAL)+(0,-1.1)$) -- ($(mgAR)+(.25,-1.1)$) node[right] {$s$};
+ \foreach \pp/\val in {mgAL/-4,mgAR/4} {
+   \draw[black!65,line width=.5pt] ($(\pp)+(0,-1.04)$) -- ($(\pp)+(0,-1.16)$);
+   \node[anchor=north] at ($(\pp)+(0,-1.23)$) {$\val$};
+ }
+ \node[anchor=north] at ($(mgAL)!.5!(mgAR)+(0,-1.23)$) {$0$};
+ \node[align=center] at (12.3,2.3)
+   {$8\,\mathrm m$ numerical path; $s$ in metres\\
+    $12\,\mathrm{mm}\times1.5\,\mathrm{mm}\times8\,\mathrm m$ domain};
+ \node[align=center,black!65,text width=7.5cm] at (12.3,1.15)
+   {Grid lines and transverse dimensions schematic\\
+    Array coordinates do not straighten physical distances};
+ \node[anchor=west,black!65] at (8.65,.25)
+   {Blue: charged source \quad Orange: observation point};
+\end{tikzpicture}

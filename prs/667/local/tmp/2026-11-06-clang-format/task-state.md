@@ -1,0 +1,1 @@
+Done: clang-format21.1.8matchesCI;22PRC++filespassdry-runWerror. Whitespace-only3files FFT2D5Poisson.cpp/.h andFieldSolverCmd.h committed50c231c89,authorizedsubmitpushPR667. Unrelatedchangespreserved. No numericalimplementationormean-momentoptimizationmade;no rebuild/testsnecessaryforverifiedwhitespaceonly;executablesunchanged.

@@ -1,0 +1,34 @@
+{
+  "description": "Final selected longitudinal triangular-bunch conducting-pipe benchmark results; no solver modifications or fitted constants.",
+  "primary_cases": {
+    "OPALX": "source16384",
+    "PyORBIT_slice": "slice-512x512x128-nr32np64-r1",
+    "PyORBIT_Baartman": "rb-128x128x256-ns65536-r1"
+  },
+  "comparison_windows": {
+    "axis": "kind=axis, 1<=abs(s_m)<=4; 62 fixed target IDs",
+    "radial": "kind=radial at s=+/-2.5m, -a<=x<=a,y=0; 82 target IDs",
+    "tolerance": "1 percent physical local-relative field error; numerical controls quoted separately; no cusp/end claim"
+  },
+  "mesh_series": {
+    "pyorbit_transverse_fixed_NZ128": [
+      "slice-64x64x128-r1",
+      "slice-128x128x128-r1",
+      "slice-256x256x128-r1",
+      "slice-512x512x128-r1"
+    ],
+    "opalx_matched_dense_source": [
+      "m128-source16384",
+      "source16384"
+    ]
+  },
+  "controls": "controls.csv; source-quadrature.json; full fields/summary retain all successful native runs, including unresolved/source-alias diagnostics.",
+  "scope_limits": [
+    "Only the longitudinal-force part of the published triangular-bunch benchmark.",
+    "Frozen native fields/kicks; no tune shifts or self-consistent tracking.",
+    "PyORBIT slice imposes grounded circular boundary; OPALX CIRCULAR is a longitudinal g model with open transverse solves. Its numerical width W is also used as the effective pipe radius; W=b for primary case.",
+    "Different known constants in PyORBIT alter reference at approximately1e-7 relative; figures use one independent common physical reference.",
+    "No production solver or numerical tolerance changes; no commit or push."
+  ]
+}
+

@@ -1,0 +1,74 @@
+{
+  "zip_path": "/Users/adelmann/git/opalx/output/pdf/fft2d5-uniform-field-validation-source.zip",
+  "zip_sha256": "e27d3bef7c501c6cbc129015538ac430db232658b198c4c1208bcaea1af25fa3",
+  "directory": "/Users/adelmann/git/opalx/tmp/pdfs/mapped-grid-2026-11-03/opalx-mapped-grid-isolated-7zie0_m5",
+  "zip_files": 1165,
+  "zip_crc_bad": null,
+  "archive_source_counts": {
+    "data": 1057,
+    "figures": 48,
+    "other_source": 60
+  },
+  "archive_vs_current_differences": [],
+  "commands": [
+    {
+      "command": [
+        "/Users/adelmann/.venv-h6/bin/python",
+        "verify_evidence.py"
+      ],
+      "returncode": 0,
+      "log": "/Users/adelmann/git/opalx/tmp/pdfs/mapped-grid-2026-11-03/opalx-mapped-grid-isolated-7zie0_m5/command-1.log"
+    },
+    {
+      "command": [
+        "latexmk",
+        "-pdf",
+        "-halt-on-error",
+        "-interaction=nonstopmode",
+        "-outdir=.build",
+        "main.tex"
+      ],
+      "returncode": 0,
+      "log": "/Users/adelmann/git/opalx/tmp/pdfs/mapped-grid-2026-11-03/opalx-mapped-grid-isolated-7zie0_m5/command-2.log"
+    },
+    {
+      "command": [
+        "latexmk",
+        "-pdf",
+        "-halt-on-error",
+        "-interaction=nonstopmode",
+        "-outdir=.build",
+        "mapped-grid-note.tex"
+      ],
+      "returncode": 0,
+      "log": "/Users/adelmann/git/opalx/tmp/pdfs/mapped-grid-2026-11-03/opalx-mapped-grid-isolated-7zie0_m5/command-3.log"
+    }
+  ],
+  "pdf_comparisons": [
+    {
+      "name": "fft2d5-uniform-field-validation",
+      "expected_path": "/Users/adelmann/git/opalx/output/pdf/fft2d5-uniform-field-validation.pdf",
+      "isolated_path": "/Users/adelmann/git/opalx/tmp/pdfs/mapped-grid-2026-11-03/opalx-mapped-grid-isolated-7zie0_m5/uniform-field-report/.build/main.pdf",
+      "expected_pages": 36,
+      "isolated_pages": 36,
+      "different_text_pages": [],
+      "text_sha256": "a25fa878f3ad05314547debb5a04b5b9e8241ce03ca5984d4944de4dc36c4229",
+      "expected_pdf_sha256": "b26b1e325c70b3f66e4279bc73153d80b6064a8f260ff7e8c19d23eb7f1de9d6",
+      "isolated_pdf_sha256": "d8042f4f926d16dc2e94b00fc0c12afc770fdccee75ee843b8b929500f058fca",
+      "latex_warnings": []
+    },
+    {
+      "name": "fft2d5-mapped-grid-explanation",
+      "expected_path": "/Users/adelmann/git/opalx/output/pdf/fft2d5-mapped-grid-explanation.pdf",
+      "isolated_path": "/Users/adelmann/git/opalx/tmp/pdfs/mapped-grid-2026-11-03/opalx-mapped-grid-isolated-7zie0_m5/uniform-field-report/.build/mapped-grid-note.pdf",
+      "expected_pages": 6,
+      "isolated_pages": 6,
+      "different_text_pages": [],
+      "text_sha256": "ad3fd63bb04af08d6c8ced7c272a0f880795fb9dcaed34f7ae6856120c4c78f8",
+      "expected_pdf_sha256": "dd747e784c68b599478935caee7ca94322aa40569ec86848d459fcc4a356b2e8",
+      "isolated_pdf_sha256": "1cca614006fae078358a5b4f1839166769111e90c4d24ed0b13380b783e3d2bd",
+      "latex_warnings": []
+    }
+  ],
+  "passed": true
+}

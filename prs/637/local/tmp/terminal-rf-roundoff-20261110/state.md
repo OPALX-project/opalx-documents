@@ -1,0 +1,9 @@
+Goal: locally fix PR #637 review 5648819570 terminal RF missed kick. Complete; no commit or push.
+Changed: src/Algorithms/TrackReferenceStep.h and unit_tests/Algorithms/TestRFEventStep.cpp.
+Decision: allow strict upstream starts inside roundoff band; preserve increasing signed distance, final endpoint within band, finite gap support and visited-gap exclusion. Caller stops after terminal step; no persistent state or tolerance increase.
+Native test: inclusive -roundoff boundary and interior start both fail before fix; pass afterward for host/device-policy execution. Already visited gap stays excluded. Existing stationary/receding/on-plane/outside-band/support checks pass. Native tests use no external scripts/data.
+Validation: Release/OpenMP local build; 4/4 CTest targets (TestCyclotronRF, TestTrackReferenceStep, TestRFEventStep, TestRFEventStepMPI). Manual full RF suite 16 tests passes with 1 and 2 ranks, OMP_NUM_THREADS=2. git diff --check passes; reviewed two-file diff.
+Integration: reviewer DT=4.1130163908723769e-11, Cyclotron-RF-Stop, 1 and 2 ranks. Before reference 73.27309820425874 MeV vs particle 72.80055857663777 MeV (1 rank). After particle 73.27309820443624 MeV on both rank counts; difference 1.77494e-10 MeV; successful exits and complete-gap EKINSTOP message. See results.json/analyse.py.
+Build note: opalx target is the static library; initial after runs used stale executable, preserved in stale-executable-r*. Built opalx_exe and reran fresh after-r* directories for the verified results.
+Limitations: local CPU/OpenMP only; no fresh CUDA or Linux run. No full suite rerun for this narrow change. Existing terminal resolution convention still includes physically later arrivals within the arithmetic allowance.
+Next: user review; no commit/push authorized for this fix.

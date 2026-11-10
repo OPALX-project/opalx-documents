@@ -1,0 +1,30 @@
+{
+  "full_length_m": 5.0,
+  "charge_C": 1e-11,
+  "radial_semiaxis_m": 0.02,
+  "vertical_semiaxis_m": 0.02,
+  "rms_x_m": 0.01,
+  "rms_y_m": 0.01,
+  "profiles": [
+    "uniform",
+    "triangle"
+  ],
+  "curved_radius_m": 2.0,
+  "targets": 51,
+  "original_targets": 43,
+  "prior_target_file": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/points_extended.csv",
+  "prior_target_sha256": "5db3d25964f7ba296bc5adaf8a102ad0ee6f5bad77f9f864fc74af4ce4eab46a",
+  "unchanged_longitudinal_coordinates": true,
+  "axis_end_distances_m": [
+    0.00010000000000021103,
+    0.0009999999999998899,
+    0.0049999999999998,
+    0.0099999999999997,
+    0.0499999999999998,
+    0.25,
+    1.25,
+    2.45,
+    2.49,
+    2.5
+  ]
+}
