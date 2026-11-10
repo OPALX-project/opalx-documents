@@ -1,0 +1,114 @@
+{
+  "goal": "Remove historical build artifacts while preserving patches and source archives",
+  "date": "2026-11-10",
+  "status": "complete",
+  "preserved_sha256": {
+    "/Users/adelmann/git/opalx-658-build-record/uncommitted-tracked.patch": "af5ef495723727942fa550a3acc77694c68f7ab22dd8e13dead2986f371b55ab",
+    "/Users/adelmann/git/opalx-checkout-667-record/untracked-work.tar.gz": "30daaac4b0bd9488aa6a4423d269cf9481cb297e644140eceeb2086c0c2a2344",
+    "/Users/adelmann/git/opalx-checkout-667-record/staged-changes.patch": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/adelmann/git/opalx-checkout-667-record/tracked-changes.patch": "4d343f98dd505185c0a5a5a7230f3a6b4e8d9863ae3a675f2be932f10571c82f",
+    "/Users/adelmann/git/opalx-local-build-record/untracked-code.tar.gz": "31a66a6f45a615a62a562da421912c7bc1af14686c8751592f7c14f1bc62628b",
+    "/Users/adelmann/git/opalx-local-build-record/local-changes.patch": "af5ef495723727942fa550a3acc77694c68f7ab22dd8e13dead2986f371b55ab"
+  },
+  "removed_paths": [
+    "/Users/adelmann/git/opalx-658-build-record/mpi-two-rank-rejection.log",
+    "/Users/adelmann/git/opalx-658-build-record/opalx-658-committed-fd6ba8dc5-ab1febaafc26",
+    "/Users/adelmann/git/opalx-658-build-record/configure.log",
+    "/Users/adelmann/git/opalx-658-build-record/fft2d5-launch-check.log",
+    "/Users/adelmann/git/opalx-658-build-record/ctest-omp1-oversubscribe.log",
+    "/Users/adelmann/git/opalx-658-build-record/build-sdk-pinned.log",
+    "/Users/adelmann/git/opalx-658-build-record/configure-sdk-pinned.log",
+    "/Users/adelmann/git/opalx-658-build-record/ctest-omp4-fft2d5.log",
+    "/Users/adelmann/git/opalx-658-build-record/ctest-omp1.log",
+    "/Users/adelmann/git/opalx-658-build-record/opalx-existing-a0a922982baa",
+    "/Users/adelmann/git/opalx-658-build-record/configure-test-launch.log",
+    "/Users/adelmann/git/opalx-658-build-record/build.log",
+    "/Users/adelmann/git/opalx-build-667-record/build-executable.log",
+    "/Users/adelmann/git/opalx-build-667-record/build-build.log",
+    "/Users/adelmann/git/opalx-build-667-record/opalx-before-pr667-build-a2c872761067",
+    "/Users/adelmann/git/opalx-build-667-record/build-configure.log",
+    "/Users/adelmann/git/opalx-build-667-record/build-omp-configure.log",
+    "/Users/adelmann/git/opalx-build-667-record/build-omp-build.log",
+    "/Users/adelmann/git/opalx-local-build-record/opalx-local-fd6ba8dc5-a0a922982baa",
+    "/Users/adelmann/git/opalx-local-build-record/ctest-fft2d5.log",
+    "/Users/adelmann/git/opalx-local-build-record/opalx-before-local-build-a0a922982baa",
+    "/Users/adelmann/git/opalx-local-build-record/ctest-fft2d5-omp4.log",
+    "/Users/adelmann/git/opalx-local-build-record/configure-test-launch.log",
+    "/Users/adelmann/git/opalx-local-build-record/build.log",
+    "/Users/adelmann/git/opalx-original-model-pr-record/plot-replay.log",
+    "/Users/adelmann/git/opalx-original-model-pr-record/configure.log",
+    "/Users/adelmann/git/opalx-original-model-pr-record/ctest-omp4.log",
+    "/Users/adelmann/git/opalx-original-model-pr-record/ctest-omp1.log",
+    "/Users/adelmann/git/opalx-original-model-pr-record/build.log",
+    "/Users/adelmann/git/opalx-original-model-switch-record/opalx-local-original-switch-a2c872761067",
+    "/Users/adelmann/git/opalx-original-model-switch-record/ctest-omp4.log",
+    "/Users/adelmann/git/opalx-original-model-switch-record/ctest-omp1.log",
+    "/Users/adelmann/git/opalx-original-model-switch-record/build.log",
+    "/Users/adelmann/git/opalx-658-build-record/dependency-sources"
+  ],
+  "decisions": "Retain metadata, handoffs, scripts, smoke results and non-src-keep. Remove saved executables, logs and copied dependency sources.",
+  "tests": "All 6 patches/source archives have unchanged SHA256 hashes; all selected artifacts removed",
+  "next_step": "None",
+  "remaining_risks": "Historical executables, dependency copies and logs are no longer available; retained handoffs may reference removed artifacts.",
+  "source_comparison": {
+    "current_commit": "4ade4a0c062daf5c420d2305c3525d56ee001c98",
+    "files": [
+      {
+        "path": "src/AbsBeamline/ScalingFFASupport.h",
+        "exists_in_current_checkout": true,
+        "archived_blob_in_local_git_object_database": true
+      },
+      {
+        "path": "src/SpaceCharge/FFT2D5/FFT2D5Curvature.cpp",
+        "exists_in_current_checkout": false,
+        "archived_blob_in_local_git_object_database": true
+      },
+      {
+        "path": "src/SpaceCharge/FFT2D5/FFT2D5Curvature.h",
+        "exists_in_current_checkout": false,
+        "archived_blob_in_local_git_object_database": true
+      },
+      {
+        "path": "src/SpaceCharge/FFT2D5/FFT2D5Geometry.cpp",
+        "exists_in_current_checkout": false,
+        "archived_blob_in_local_git_object_database": true
+      },
+      {
+        "path": "src/SpaceCharge/FFT2D5/FFT2D5Geometry.h",
+        "exists_in_current_checkout": false,
+        "archived_blob_in_local_git_object_database": true
+      },
+      {
+        "path": "unit_tests/SpaceCharge/TestFFT2D5Curvature.cpp",
+        "exists_in_current_checkout": false,
+        "archived_blob_in_local_git_object_database": true
+      },
+      {
+        "path": "unit_tests/SpaceCharge/TestFFT2D5Geometry.cpp",
+        "exists_in_current_checkout": false,
+        "archived_blob_in_local_git_object_database": true
+      }
+    ],
+    "recommendation": "Preserve curvature and geometry sources with tests, free-space companion files and tracked patches as historical experimental work. Current ScalingFFASupport supersedes archived implementation. No sources restored or executed.",
+    "validation": "Read-only source diffs, current build/configuration inspection, all-ref path history and exact Git blob presence checks; no compilation needed."
+  },
+  "archive_migration": {
+    "destination": "/Users/adelmann/git/opalx-documents/prs/667/local/build-records",
+    "status": "complete",
+    "inventory": "/Users/adelmann/git/opalx-documents/prs/667/local/build-records/inventory.json",
+    "removed_redundant_paths": [
+      "/Users/adelmann/git/opalx-local-build-record/untracked-code.tar.gz",
+      "/Users/adelmann/git/opalx-658-build-record/uncommitted-tracked.patch",
+      "/Users/adelmann/git/opalx-checkout-667-record/staged-changes.patch",
+      "/Users/adelmann/git/opalx-checkout-667-record/tracked-changes.patch",
+      "/Users/adelmann/git/opalx-local-build-record/local-changes.patch"
+    ],
+    "retained_mixed_archive": "/Users/adelmann/git/opalx-checkout-667-record/untracked-work.tar.gz"
+  },
+  "followup_issue": {
+    "url": "https://github.com/OPALX-project/OPALX/issues/678",
+    "status": "open",
+    "purpose": "Review archived curvature/free-space model work relative to FFT2D5MODEL=ORIGINAL",
+    "archive_publication": "Still local and unpublished; issue explicitly records this limitation"
+  }
+}
