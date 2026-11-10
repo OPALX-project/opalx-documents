@@ -1,0 +1,19 @@
+{
+  "status": "complete",
+  "pull_request": {
+    "baseRefName": "master",
+    "headRefName": "codex/fft2d5-explicit-original-model",
+    "headRefOid": "d47703aff69879de8e3a87f862a171926b288f69",
+    "isDraft": true,
+    "number": 667,
+    "url": "https://github.com/OPALX-project/OPALX/pull/667"
+  },
+  "scope": "Explicit ORIGINAL selection only; original mainline default preserved; no experimental solver operators.",
+  "tests": {
+    "PR_head_configuration_OMP1": "passed",
+    "PR_head_configuration_OMP4": "passed",
+    "local_full_six_target_subset_OMP1_OMP4": "passed"
+  },
+  "benchmarks": "Local ORIGINAL build10m10stepsZeroSC10pC comparedwithcommitted658andPyORBIT; allcompleted andplotsattached; explicitlyreference data notPRheadtracking.",
+  "original_working_checkout_not_committed": true
+}

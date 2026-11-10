@@ -1,0 +1,20 @@
+{
+  "binary": "/Users/adelmann/git/opalx-original-model-switch-record/opalx-local-original-switch-a2c872761067",
+  "binary_sha256": "a2c87276106782554324753c889db203629f1b7f645d35e2f1bd30b00e32fa9e",
+  "head": "fd6ba8dc5c952ce034869dc40e963ecabef7cfa8",
+  "includes_prior_local_changes": true,
+  "model": "ORIGINAL",
+  "default_model_preserved": "FINITE_SOURCE",
+  "source_sha256": {
+    "unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp": "4e3ebd7ce0f3fdc62af18719ffb3fab6024846477342811a5556fe6f26e212d2",
+    "unit_tests/SpaceCharge/TestSpaceChargeConfig.cpp": "2dda951e78f0c60f3478dd3ec24e6c82afea3dbaa2f2dff5a3e1d9b995162b55",
+    "src/SpaceCharge/SpaceChargeConfig.h": "7aade960324c7c6134c167793f8ee674ad7b975b70f60a4ab2621f3793ba8ebc",
+    "src/SpaceCharge/SpaceChargeConfigBuilder.cpp": "c384b47a8b36b73f66d5392dae203c10a4b41b6c3fee73b25b565f287eddc0d1",
+    "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h": "962c1f7d456334e65b81ab4c2dc8fadadb3d317eb83bd0e35f08ceea4ad660cd",
+    "src/Structure/FieldSolverCmd.h": "11391ec3a88dd6e20f2636ab5e357a45b3be20816b20860ecad9386bc252df2b",
+    "src/Structure/FieldSolverCmd.cpp": "361109cb82f8b731b9bb424bae49c41b52dcb8f694d9d84901c800e93174110a",
+    "README.md": "3df02c17dde73ef0cb6cf3323187bbffe216c277c45420ab1976e931eebca0c5",
+    "docs/validation/fft2d5/model-selection.md": "bc6b54511cbd79e21c440b8130157e827978b30717a59b10e25fa134a36e2eb2"
+  },
+  "campaign": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-local-original"
+}

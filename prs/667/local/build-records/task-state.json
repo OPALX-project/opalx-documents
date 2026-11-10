@@ -1,0 +1,32 @@
+{
+  "goal": "Archive preserved FFT2D5 source bundle and unique patches, verify, remove redundant copies",
+  "status": "complete",
+  "date": "2026-11-10",
+  "decisions": [
+    "Preserve original bytes with lowercase archive paths",
+    "Retain larger mixed-content untracked-work.tar.gz",
+    "Archive ancillary historical FFA header to cover all members of smaller source archive"
+  ],
+  "tests": [
+    "All destination bytes match original SHA-256 and size",
+    "All 11 file members of smaller archive covered",
+    "Both archives have identical scoped source members; duplicate origins recorded",
+    "Independent inventory and manifest hash/size coverage check passed",
+    "All 38 archive files are UTF-8, contain no NUL and are <=1 MiB",
+    "Repository validator unchanged: seven baseline errors, no new errors",
+    "git diff --check passed"
+  ],
+  "next_step": "None",
+  "removed_redundant_copies": [
+    "/Users/adelmann/git/opalx-local-build-record/untracked-code.tar.gz",
+    "/Users/adelmann/git/opalx-658-build-record/uncommitted-tracked.patch",
+    "/Users/adelmann/git/opalx-checkout-667-record/staged-changes.patch",
+    "/Users/adelmann/git/opalx-checkout-667-record/tracked-changes.patch",
+    "/Users/adelmann/git/opalx-local-build-record/local-changes.patch"
+  ],
+  "retained_mixed_archive": "/Users/adelmann/git/opalx-checkout-667-record/untracked-work.tar.gz",
+  "remaining_risks": [
+    "Historical code was not compiled or numerically revalidated; do not apply directly to current sources.",
+    "Full repository validator has seven pre-existing unrelated uncataloged files."
+  ]
+}
