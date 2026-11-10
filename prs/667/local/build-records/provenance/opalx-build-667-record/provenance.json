@@ -1,0 +1,36 @@
+{
+  "status": "complete",
+  "commit": "d47703aff69879de8e3a87f862a171926b288f69",
+  "original_executable_backup": "/Users/adelmann/git/opalx-build-667-record/opalx-before-pr667-build-a2c872761067",
+  "original_executable_sha256": "a2c87276106782554324753c889db203629f1b7f645d35e2f1bd30b00e32fa9e",
+  "source_matches_pr667": true,
+  "preserved_non_src_tests_not_built": true,
+  "future_default_executable": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+  "running_simulation_keeps_archived_a2_binary": true,
+  "variants": {
+    "build": {
+      "passed": true,
+      "executable": "/Users/adelmann/git/opalx/build/src/opalx",
+      "sha256": "de6f5d7c4736a9a51494d7c6263e70bafac1bafadb3c57fcbd7a69431cba15c6",
+      "steps": 2,
+      "particles": 1,
+      "space_charge": false,
+      "expected_backend": "Serial",
+      "log": "/Users/adelmann/git/opalx-build-667-record/smoke-build/smoke.out"
+    },
+    "build-omp": {
+      "passed": true,
+      "executable": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "sha256": "f10675a9374993f1b3bc7d623e981e0a0060df8fbb24c5d0876d8b5ec183d5c2",
+      "steps": 2,
+      "particles": 1,
+      "space_charge": false,
+      "expected_backend": "OpenMP",
+      "log": "/Users/adelmann/git/opalx-build-667-record/smoke-build-omp/smoke.out"
+    }
+  },
+  "default_executable": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+  "source_commit": "d47703aff69879de8e3a87f862a171926b288f69",
+  "tracking_version_note": "Already-running100step experiment remains archived local ORIGINAL a2c872...,not these PR667 builds.",
+  "unit_tests_note": "Preserved non-src local tests reference experimental code; executable-only builds configured with unit tests OFF. PR-head configuration tests already passed in isolated checkout."
+}

@@ -38,5 +38,10 @@ remain with the separate OPAL documentation and must not be copied here.
 5. Run `ruby scripts/validate_repository.rb`.
 6. Confirm that Git LFS tracks the file before committing it.
 
+The validator checks tracked files and untracked files that Git does not ignore.
+Git ignore rules exclude local caches and Finder metadata from the asset scan;
+tracked files and explicit manifest entries remain subject to validation even
+if an ignore rule matches them.
+
 The repository deliberately has no generated website, Doxygen output, LaTeX
 auxiliary files, or generated archives of documentation sites.

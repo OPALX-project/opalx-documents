@@ -38,3 +38,7 @@ Archive checks verify all retained original hashes, catalog digests and the smal
 At the user's request, removed bulk logs/statistics, generated orbit/element-position displays, font caches and high-resolution raw tables. All 151 LaTeX files, TikZ fragments, the directly named OPALX/PyORBIT input package, non-generated analysis code and compact validation summaries remain. Byte-identical JSON/CSV copies in historical report bundles share canonical files through inventory aliases. The build tool restores their original paths in its disposable checkout. All 14 standalone documents were rebuilt successfully after compaction; see `latex-validation/compact-rebuild.json`.
 
 Archived `.gitignore` files are now named `original-gitignore.txt` so their historical rules cannot silently exclude archived sources. The original paths and hashes remain in the inventories. Removed records are explicitly marked, rather than claimed as retained. `compaction.json` records the size reduction. Source checkouts, PR #637, published PDFs and external figure assets were not changed by this compaction.
+
+## Preserved experimental source bundle
+
+[Historical FFT2D5 sources, tests, unique patches and build provenance](local/build-records/readme.md) were archived on 2026-11-10. The bundle is separate from the merged ORIGINAL solver; original paths, source dates and SHA-256 hashes are recorded in its inventory.

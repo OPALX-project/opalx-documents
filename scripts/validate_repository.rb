@@ -13,9 +13,15 @@ INFRASTRUCTURE = Set.new([".gitattributes", ".gitignore", "README.md", "manifest
 REQUIRED = Set.new(%w[title date category source destination description status sha256])
 LFS_SUFFIXES = Set.new(%w[.pdf .ppt .pptx .doc .docx .xls .xlsx .zip .7z .gz .tgz .xz .nar .opal .mp4 .mov])
 
-def catalog_files
-  ROOT.glob("**/*", File::FNM_DOTMATCH).select(&:file?).map do |path|
-    relative = path.relative_path_from(ROOT).to_s
+def catalog_files(cataloged)
+  output, status = Open3.capture2e(
+    "git", "ls-files", "--cached", "--others", "--exclude-standard", "-z", chdir: ROOT.to_s
+  )
+  raise "git ls-files failed: #{output}" unless status.success?
+
+  (output.split("\0") | cataloged.to_a).map do |relative|
+    path = ROOT / relative
+    next unless path.file?
     next if path.each_filename.include?(".git")
     next if path.each_filename.include?(".github")
     next if path.each_filename.include?("scripts")
@@ -80,7 +86,7 @@ data["assets"].each_with_index do |asset, index|
   end
 end
 
-actual = catalog_files
+actual = catalog_files(destinations)
 (actual - destinations).sort.each { |path| errors += error("uncataloged file: #{path}") }
 (destinations - actual).sort.each { |path| errors += error("manifest destination is not an asset file: #{path}") }
 

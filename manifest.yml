@@ -36167,7 +36167,7 @@ assets:
     destination: "prs/667/readme.md"
     description: "PR folders contain small text only. Required compact LaTeX figure assets and compiled reports are cataloged separately. Historical experimental models are distinguished from merged solver behavior."
     status: "archived"
-    sha256: "bd76f82bbc930d2409528e0006b038cdf17b12720633535c15e47e430eb2f120"
+    sha256: "b903897fdd8a0a40bc7af113f26135ae5dd48a94816a4496c01207a7e4931b40"
 
   - title: "Merged PR archive — prs/667/recovery-exact.json"
     date: null
@@ -54708,3 +54708,384 @@ assets:
     description: "PR folders contain small text only. Required compact LaTeX figure assets and compiled reports are cataloged separately. Historical experimental models are distinguished from merged solver behavior."
     status: "archived"
     sha256: "2f5f87a3439a38d48140a1a515cb08c083559e3ebf16680601a41dc5df7a34b0"
+
+  - title: PR 667 preserved build records — inventory.json
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/inventory.json
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 109269e40b0d747a3a79eb8aefded713e80cdaca37ed72405a15d4a89099015e
+  - title: PR 667 preserved build records — patches/tracked-changes.patch
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/patches/tracked-changes.patch
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 4d343f98dd505185c0a5a5a7230f3a6b4e8d9863ae3a675f2be932f10571c82f
+  - title: PR 667 preserved build records — patches/uncommitted-tracked.patch
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/patches/uncommitted-tracked.patch
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: af5ef495723727942fa550a3acc77694c68f7ab22dd8e13dead2986f371b55ab
+  - title: PR 667 preserved build records — provenance/opalx-658-build-record/configure-command.json
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-658-build-record/configure-command.json
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: e62b047cd23f5f4cf6405bd5fad8e7dd7e4587fe0758b0b1852fb134582e3685
+  - title: PR 667 preserved build records — provenance/opalx-658-build-record/dependencies.json
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-658-build-record/dependencies.json
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 662778070027bcf8293b1887e813f58a581dec15bf6592945419d2aad5e635bf
+  - title: PR 667 preserved build records — provenance/opalx-658-build-record/handoff.md
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-658-build-record/handoff.md
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 79bbe6d6fc3a0c4be749ccfca32c4b77be167ebb52a1f5ad2838baf107949d2e
+  - title: PR 667 preserved build records — provenance/opalx-658-build-record/provenance.json
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-658-build-record/provenance.json
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 2310c88ed1cc4c0484d49f9326565cba335e40b54a9db8f0393361fbfbf5d6f3
+  - title: PR 667 preserved build records — provenance/opalx-build-667-record/build_variant.py
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-build-667-record/build_variant.py
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: e2857fd3a9629779bb5f5ff75e58859a6b00f13a75e24a3d9fac232953c8ccdb
+  - title: PR 667 preserved build records — provenance/opalx-build-667-record/configure-commands.json
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-build-667-record/configure-commands.json
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: eab10623c7b7f43f3e6a88930e10cc97a5c9d0c2a103429f80a7aeca0520f454
+  - title: PR 667 preserved build records — provenance/opalx-build-667-record/handoff.md
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-build-667-record/handoff.md
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 19e4dbace61369d418b042239faa09b8547fdedd629f7c6d6089b8abfcfa491e
+  - title: PR 667 preserved build records — provenance/opalx-build-667-record/provenance.json
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-build-667-record/provenance.json
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: acccc8505e192772123eaac0f93a5f3715af1b7f0623c89cd4c75659b4a2d29a
+  - title: PR 667 preserved build records — provenance/opalx-build-667-record/smoke.py
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-build-667-record/smoke.py
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: b67b67b68ac598b980d272bbdd9a42e72202b728ade2a56423e8171e1e7486b5
+  - title: PR 667 preserved build records — provenance/opalx-checkout-667-record/completion.json
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-checkout-667-record/completion.json
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: fae6c8fcf0021874ac384b681740d4fc0a29b4ecd1065bb487728ad19d62f76a
+  - title: PR 667 preserved build records — provenance/opalx-checkout-667-record/snapshot.json
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-checkout-667-record/snapshot.json
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: b2e39dfbee68da76ade8e0e34fc21e20b7c8f3a0776da4a1e1911510c21a6be2
+  - title: PR 667 preserved build records — provenance/opalx-checkout-667-record/status-before.txt
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-checkout-667-record/status-before.txt
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 039f7b9447a9b41ebc79dfaf42559ac0c63bec3e8a8f3eced45d31c207d1e475
+  - title: PR 667 preserved build records — provenance/opalx-local-build-record/handoff.md
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-local-build-record/handoff.md
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: feb5e7340456ef6e7d1e763a21b56e7be30bdb41e4ebc431b3caf533be36afc6
+  - title: PR 667 preserved build records — provenance/opalx-local-build-record/provenance.json
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-local-build-record/provenance.json
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 9a02402a45f83c6efc98bd2389eed6232a6d3d8ef6395c8e296f76c4be0201f1
+  - title: PR 667 preserved build records — provenance/opalx-original-model-pr-record/branch-cleanup.json
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-original-model-pr-record/branch-cleanup.json
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 6cedf96b3171c22bf79f54a3411140b70feea1263981284b9570c1e87b0301f8
+  - title: PR 667 preserved build records — provenance/opalx-original-model-pr-record/completion.json
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-original-model-pr-record/completion.json
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 798b4e53f27304b2c7997f1a42b2fe46ab5d3882ecc1d924f3bc3e2a6fc189ad
+  - title: PR 667 preserved build records — provenance/opalx-original-model-pr-record/configure-command.json
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-original-model-pr-record/configure-command.json
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 927c93cf812def38ff0e941c2e549e2b9187710038815039726461b6995d0614
+  - title: PR 667 preserved build records — provenance/opalx-original-model-pr-record/handoff.md
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-original-model-pr-record/handoff.md
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 5f6561cb363dfdef0482da1d96394a69174d246ddefdd119e3369561f457fd13
+  - title: PR 667 preserved build records — provenance/opalx-original-model-pr-record/pr_body.md
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-original-model-pr-record/pr_body.md
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 484938712fabb54b9b677e861ab3e0fb70a0abb22d03f38e027203f509e15bcd
+  - title: PR 667 preserved build records — provenance/opalx-original-model-pr-record/pull-request-url.txt
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-original-model-pr-record/pull-request-url.txt
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 4a80896dca4df126112bb6f15b4d936463b3d201d8ae2f52f5ecf398b5b0a46c
+  - title: PR 667 preserved build records — provenance/opalx-original-model-switch-record/handoff.md
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-original-model-switch-record/handoff.md
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 79ae226d428a8ebe1aff6918aed5d678221f36c69f9b9de72fc1da978b2571f5
+  - title: PR 667 preserved build records — provenance/opalx-original-model-switch-record/provenance.json
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/provenance/opalx-original-model-switch-record/provenance.json
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 10eb76bc182432557fe22c6f57b018b66bd5a79b4d10a9ee0a155ac5a8d33fb8
+  - title: PR 667 preserved build records — readme.md
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/readme.md
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: beadaa407686178b2ba992bc437f44018c585ac295f9c858d4959e25cc77a8ea
+  - title: PR 667 preserved build records — sources/src/absbeamline/scalingffasupport.h
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/sources/src/absbeamline/scalingffasupport.h
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: e238112e27c1e61884222e4690a72e2ae2bef6ef9ce88de32130df5a5ce4e2f2
+  - title: PR 667 preserved build records — sources/src/spacecharge/fft2d5/fft2d5curvature.cpp
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/sources/src/spacecharge/fft2d5/fft2d5curvature.cpp
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 95a9eb0b811a8658ad321d3d9e91165d5cbd62c36265c24290e65938475b77d9
+  - title: PR 667 preserved build records — sources/src/spacecharge/fft2d5/fft2d5curvature.h
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/sources/src/spacecharge/fft2d5/fft2d5curvature.h
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 5050d8c21f063553d3d4ebf2b089a6de6ee6dc7a788b45d0c4ca5272ac9e7735
+  - title: PR 667 preserved build records — sources/src/spacecharge/fft2d5/fft2d5freespace.cpp
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/sources/src/spacecharge/fft2d5/fft2d5freespace.cpp
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: e8db67d653caeddba1cbab26ad70ad7a059011da27b4cd48876cda9a7aec08d0
+  - title: PR 667 preserved build records — sources/src/spacecharge/fft2d5/fft2d5freespace.h
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/sources/src/spacecharge/fft2d5/fft2d5freespace.h
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 1c311451d6524fd6f03e3a97ca08b341fe74cfed0f4a1c41b16a3df9c8ffbc65
+  - title: PR 667 preserved build records — sources/src/spacecharge/fft2d5/fft2d5freespacekernel.h
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/sources/src/spacecharge/fft2d5/fft2d5freespacekernel.h
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 2143ae7d2502b077f1e80b68e8b237955c415cab2a64cae29b81c41cc14b2a92
+  - title: PR 667 preserved build records — sources/src/spacecharge/fft2d5/fft2d5geometry.cpp
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/sources/src/spacecharge/fft2d5/fft2d5geometry.cpp
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: e77294decc2ce5ab330bacdf79917d16b2e16b2688771bc07f5c96aa53bb7d29
+  - title: PR 667 preserved build records — sources/src/spacecharge/fft2d5/fft2d5geometry.h
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/sources/src/spacecharge/fft2d5/fft2d5geometry.h
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 4914d2cc550d4bf2a00cf149dadb1308b52169d5942f19e0e62c1017e8d2b7c7
+  - title: PR 667 preserved build records — sources/unit_tests/spacecharge/testfft2d5curvature.cpp
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/sources/unit_tests/spacecharge/testfft2d5curvature.cpp
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 446503bb94eb8db0fd62c6beac96e5062a5da294d7b7aad55c14be3d55f7c06b
+  - title: PR 667 preserved build records — sources/unit_tests/spacecharge/testfft2d5freespace.cpp
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/sources/unit_tests/spacecharge/testfft2d5freespace.cpp
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 59bb4cddfc15c7ecc8abcfceb636025a1b4b3cfc8c77f25e5235d42c4cb80c45
+  - title: PR 667 preserved build records — sources/unit_tests/spacecharge/testfft2d5geometry.cpp
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/sources/unit_tests/spacecharge/testfft2d5geometry.cpp
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 582263d903bab83cc30c98eab5d5938da79effe9a6b33a8c817c5f2f784318f7
+  - title: PR 667 preserved build records — task-state.json
+    date: null
+    category: prs
+    source: Local opalx-*-record recovery files; exact origin paths, archive member
+      dates and SHA-256 in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/task-state.json
+    description: Historical experimental source, test, patch or provenance text; not
+      a validated current solver.
+    status: archived
+    sha256: 049ce678321880f743e8e6fad5ff7343b22f46824b7d77dac9d3f1405c6bc975
