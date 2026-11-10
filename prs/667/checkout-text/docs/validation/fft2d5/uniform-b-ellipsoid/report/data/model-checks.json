@@ -1,0 +1,42 @@
+{
+  "model": "nonrelativistic electrostatic affine cold uniform-volume ellipsoid",
+  "particle": "proton",
+  "initial_semiaxes_m": [
+    0.005,
+    0.05,
+    0.0005
+  ],
+  "orbit_radius_m": 1.0,
+  "centroid_beta": 0.01,
+  "Bz_T": 0.03129738805598163,
+  "omega_rad_per_s": 2997924.58,
+  "initial_velocity": "rigid co-rotation: Adot=Omega*J*A",
+  "duration_s": 1.047922510975841e-06,
+  "checks": {
+    "0.0": {
+      "energy_max_relative_drift": 1.1702039337535552e-10,
+      "canonical_Lz_max_relative_drift": 1.1702039337535552e-10,
+      "max_sum_D_error": 4.440892098500626e-16,
+      "upper_bound_particle_beta": 0.01050000000001836,
+      "min_det_A_m3": 1.2499999998537256e-07,
+      "zero_charge_rigid_rotation_max_absolute_error_m": 2.8866298240615152e-12
+    },
+    "1e-13": {
+      "energy_max_relative_drift": 1.2591228060188087e-10,
+      "canonical_Lz_max_relative_drift": 1.262213666919365e-10,
+      "max_sum_D_error": 5.551115123125783e-16,
+      "upper_bound_particle_beta": 0.010500004070802219,
+      "min_det_A_m3": 1.2500000000000005e-07
+    },
+    "1e-12": {
+      "energy_max_relative_drift": 9.34765598259446e-11,
+      "canonical_Lz_max_relative_drift": 9.550693569337909e-11,
+      "max_sum_D_error": 4.440892098500626e-16,
+      "upper_bound_particle_beta": 0.010500264004762732,
+      "min_det_A_m3": 1.2500000000000005e-07
+    }
+  },
+  "centroid_max_error_m": 3.823941163716427e-12,
+  "tighter_integrator_max_relative_envelope_change": 5.931932722802458e-11,
+  "script_sha256": "fa868b75bf1d0dade70cd41b7ee5182cafdf87711d94d73d471325572b960708"
+}

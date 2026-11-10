@@ -1,0 +1,22 @@
+{
+  "command": [
+    "mpirun",
+    "-np",
+    "1",
+    "/Users/adelmann/git/opalx-master/tmp/ring-space-charge-profiles-20261023/opalx-flush-run",
+    "acceleration.in",
+    "--info",
+    "2"
+  ],
+  "ranks": 1,
+  "threads": 4,
+  "dt_s": 1.6452780519907864e-10,
+  "binary_sha256": "0c4f905d4aec6b0766a29e8619296b52cff337b6ef75a952718d5cc1477734fd",
+  "input_sha256": "8e5a96bde740d40d82a2a42c92e53688fd4bb32afbf80a0cb2da3a457f055404",
+  "start_unix": 1792756231.535672,
+  "git_revision": "6d2f011572f9cb1aa38c01e1b9d529e1ab58eb21",
+  "git_diff": " src/AbsBeamline/CyclotronSector.cpp            |  36 +----\n src/AbsBeamline/CyclotronSector.h              |  63 ++++++++\n src/AbsBeamline/Probe.h                        |   6 +\n src/AbsBeamline/RFCavity.h                     |  23 ++-\n src/Algorithms/CMakeLists.txt                  |   5 +\n src/Algorithms/ParallelTracker.cpp             | 192 ++++++++++++++++++++++--\n src/Algorithms/ParallelTracker.h               |  10 ++\n src/Elements/OpalProbe.cpp                     |  11 +-\n src/Fields/CyclotronRFProfile.h                |  15 +-\n src/PartBunch/ParticleContainer.hpp            |  20 +++\n src/Track/TrackRun.cpp                         |  14 --\n unit_tests/AbsBeamline/CMakeLists.txt          |   1 +\n unit_tests/AbsBeamline/TestCyclotronRF.cpp     |   2 +-\n unit_tests/AbsBeamline/TestCyclotronSector.cpp | 195 +++++++++++++++++++++++++\n unit_tests/Algorithms/CMakeLists.txt           |   3 +\n 15 files changed, 530 insertions(+), 66 deletions(-)\n",
+  "pid": 23586,
+  "returncode": 0,
+  "elapsed_s": 431.2616460323334
+}

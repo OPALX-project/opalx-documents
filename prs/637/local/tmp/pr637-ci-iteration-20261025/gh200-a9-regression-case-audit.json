@@ -1,0 +1,206 @@
+{
+  "source_sha": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+  "job": 17451990424,
+  "queried_utc": "2026-10-25T21:58:51.640241+00:00",
+  "url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17451990424/raw",
+  "case_launch_count": 39,
+  "normal_input_end_count": 39,
+  "done_parallel_tracker_count": 39,
+  "cases": [
+    {
+      "case": "./AWAGun-1-emittedfromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./AWAGun-1-p3m-emittedfromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Cyclotron-Coasting.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Cyclotron-RF-Stop.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Cyclotron-SC-Midpoint.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Cyclotron-SC-Prestep.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./DBA-COF-Gauss.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./DBA-COF-Track-1.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Dist-emittedfromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Dist-flattop.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Dist-fromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Dist-gauss.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Dist-gauss-bins.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Dist-multivariate.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Dist-opalflattop.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Dist-uniform.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Drift-1-fromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Drift-3-open-fromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Drift-3-open-integrated-fromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Drift-3-p3m-periodic-fromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Drift-3-periodic-fromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Drift-4-multi-emit-open.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Drift-4-open-bins-fromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Drift-4m-open-fromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./FodoCell-fromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./FodoCell-multipoleT-fromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./FodoCell-quad-fromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./IdealRFCavity.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./MuE4-Solenoid-Bend-fromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Quad-Simple-Test-1-fromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./RBend-legacy-dogleg.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./RFCavity.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./RFCavity-3DDynamic-fromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./ScalingFFABasicPlacements.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Solenoid-1-fromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./Spin-Bend-Solenoid.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./SwissFEL-booster-SC-emittedfromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./TWCavity-fromfile.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    },
+    {
+      "case": "./dih-p3m-open.local",
+      "normal_input_end": true,
+      "done_parallel_tracker": true
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "source_revision": "28df66018aebe4e2b780b9747f4a2d7b8430a5c0",
+  "source_tree_clean": true,
+  "source_url": "https://github.com/PyORBIT-Collaboration/PyORBIT3",
+  "source_sha256": {
+    "src/spacecharge/SpaceChargeCalcSliceBySlice2D.cc": "6377410245772b196199944cb47d100666b868dc2418067fe3a1ac27a3c4a595",
+    "src/spacecharge/SpaceChargeCalcSliceBySlice2D.hh": "1393743d8a07554e93fca3ae3372f63e1ef27a47aa0a4d1feaeabf8e41ca52f2",
+    "src/spacecharge/SpaceChargeCalc2p5Drb.cc": "bb09034cfbe2334ee97bc0182dc1a18bcadd375c4a8852b17bdef488393155af",
+    "src/spacecharge/Grid3D.cc": "f559c39a139331ad63b6962ac81267c60019f537b97afc4d9f020b8829750d34",
+    "src/spacecharge/Grid2D.cc": "a5756a6fc6b923b30a7fa7c7ea48f6dac4c9861c2fc4b752dfb0dc4c0d51c261",
+    "src/spacecharge/Grid1D.cc": "61e8c7999b7c1256dda1e18f00db7ca45b56c66716d34b32638c6ed6633e93d1",
+    "src/spacecharge/PoissonSolverFFT2D.cc": "5298791c2010e991fffc3b2f8dfc37d9235da44c3672230d485b3c836d21fdaa",
+    "src/spacecharge/ShapedBoundary2D.cc": "9fde1fcaf85da737107b8ea1b706f0bdef7ca22c528155b4128ce07182e53860",
+    "src/spacecharge/BaseBoundary2D.cc": "ed6815ee05cdea4d4907c504ae3ef5b2370bc16e1d61c82c216c2fe45f8e6fe4",
+    "src/orbit/Bunch.cc": "711fb995c815d0fd272c52664a42cfa7f081a332059c97de9e8dff810299eedd",
+    "src/meson.build": "52e72e152d52de9f86b16a99b90409486687eede31e0c0dda21dec50e9ff3fc7",
+    "meson.build": "485bd379a94038c83d715bb4b3d7fa82ed6cb717593b10a2f903fde358ee05c2",
+    "meson_options.txt": "ce71e4fe9ecc05896e19530cc9ad3f6a265d79828fd4681781e94da67622a7dc",
+    "pyproject.toml": "68eb5a0a1c7cc7648feda717258eb5afd322a7089793bcf716b118dadfc05284",
+    "LICENSE.txt": "6ecf884db92999f36a7f3a27ac567ed9f7e3474360d8a55ae80f77ed4ffb316d",
+    "examples/SpaceCharge/scSliceBySlice2D/sc_Slice2D_driftLatt_longitudinal_test.py": "839f7d1e139413f8a774cb3d01bdad79eb66c8852e19cc43975499b3bafa739f"
+  },
+  "native_files": [
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/aperture.cpython-311-darwin.so",
+      "sha256": "0d9a71d8a850e5ae4d3e280ca346cd3ddf4b652a141faa4d6f75ccfdc49342ba",
+      "bytes": 49968
+    },
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/bunch.cpython-311-darwin.so",
+      "sha256": "3539a2cb884d21a15945278b92fb5a203e5f1d9173fa436cb41b36676c88d85e",
+      "bytes": 49944
+    },
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/collimator.cpython-311-darwin.so",
+      "sha256": "740e6d9e2c36e2ea9e3679f102bb6a3cb6607a31388c85e0f5907ad80e98fcc5",
+      "bytes": 49968
+    },
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/error_base.cpython-311-darwin.so",
+      "sha256": "23cfa6fa84ce4de5151fa884a8eb4bf738d49d7cc8421134d26d7ad4c39224a3",
+      "bytes": 49968
+    },
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/field_sources.cpython-311-darwin.so",
+      "sha256": "314b708ad400a068239339b0e7889fe40a5f63016327a135443c20128965ed7f",
+      "bytes": 49984
+    },
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/fieldtracker.cpython-311-darwin.so",
+      "sha256": "f1b30314d92aadaebc38dc13e824ff8524a3647c17e5c70959789c5b805130d7",
+      "bytes": 49984
+    },
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/foil.cpython-311-darwin.so",
+      "sha256": "ef8416df00e40782407a037dda38d77bd95c0d8a495bbb9c1322b05c74d2392a",
+      "bytes": 49944
+    },
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/impedances.cpython-311-darwin.so",
+      "sha256": "c6b0472fb050450e320cea6d94faa6c2efc0e05039d863068d4c83750ed45c32",
+      "bytes": 49968
+    },
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/linac.cpython-311-darwin.so",
+      "sha256": "6925dd4e577bbc01ad5d82c4f11e551931374af8fb357893ae122e082fb2ce50",
+      "bytes": 49944
+    },
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/orbit_mpi.cpython-311-darwin.so",
+      "sha256": "c31bcbfa9bcc5bbac935301e0b219a416780d2e64c91e50721bce0cccecbab3c",
+      "bytes": 49968
+    },
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/orbit_utils.cpython-311-darwin.so",
+      "sha256": "6e0429084d538452c65e525eeb6d3f9f963e576cc6e03589e8fd239cad990f98",
+      "bytes": 49968
+    },
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/rfcavities.cpython-311-darwin.so",
+      "sha256": "cf4872d81170a4eea0447ef6ecf3cf77927f7b3c35b230463ae5186b2f1754ea",
+      "bytes": 49968
+    },
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/spacecharge.cpython-311-darwin.so",
+      "sha256": "bd4db69db21aa2fd2bcffdeb5e2f10b51e256b814d7d3199e3d35c2f3626ee68",
+      "bytes": 49968
+    },
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/teapot_base.cpython-311-darwin.so",
+      "sha256": "0a06f175d8ff7203bb690aefebff6d149445ef188a5797d3e3458aa0c31a9695",
+      "bytes": 49968
+    },
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/trackerrk4.cpython-311-darwin.so",
+      "sha256": "3294feaec8213e2259ce08654fd2b1f79de3801daa0b3c8566d8521e85d1cc70",
+      "bytes": 49968
+    },
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/.pyorbit.mesonpy.libs/libcore.dylib",
+      "sha256": "dc1c2495c606d9762e24435fb8c3623a9a858ca51c875ce7bdc0089ee0e7de38",
+      "bytes": 2164320
+    }
+  ],
+  "libcore_link_dependencies": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/.pyorbit.mesonpy.libs/libcore.dylib:\n\t@rpath/libcore.dylib (compatibility version 0.0.0, current version 0.0.0)\n\t/opt/homebrew/opt/open-mpi/lib/libmpi.40.dylib (compatibility version 81.0.0, current version 81.7.0)\n\t/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 2200.32.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.40.3)",
+  "compiler": "Homebrew clang version 21.1.8\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /opt/homebrew/Cellar/llvm@21/21.1.8/bin\nConfiguration file: /opt/homebrew/etc/clang/arm64-apple-darwin25.cfg",
+  "mpi": "mpirun (Open MPI) 5.0.8\n\nReport bugs to https://www.open-mpi.org/community/help/",
+  "fftw_pkgconfig_version": "3.3.10",
+  "python": "/Users/adelmann/.venv-h6/bin/python",
+  "python_version": "3.11.15 (main, Mar  7 2026, 04:57:07) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "build_dependencies": {
+    "vcs-versioning": "2.6.0",
+    "pyproject-metadata": "0.12.1",
+    "setuptools": "84.2.1",
+    "packaging": "26.3",
+    "meson-python": "0.22.1",
+    "ninja": "1.13.2",
+    "meson": "1.12.1",
+    "setuptools-scm": "10.3.4"
+  },
+  "native_distribution_version": "3.2.dev59+g28df66018",
+  "build_log_sha256": "fd30009e33ab95f44399dfe51297bde0434d5076eb9038f338d0387b09cae006",
+  "build_argv": [
+    "python",
+    "-m",
+    "pip",
+    "install",
+    "--no-build-isolation",
+    "--no-deps",
+    "--target",
+    "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package",
+    "--config-settings=setup-args=-DUSE_MPI=ompi",
+    "--config-settings=compile-args=-j4",
+    "."
+  ],
+  "build_env": {
+    "PYTHONPATH": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/build-python",
+    "PATH": "build-python/bin plus venv, Homebrew OpenMPI and system compiler paths"
+  },
+  "compiled_source_modifications": "None; pinned upstream unmodified",
+  "external_binary_redistribution": "No native binaries copied into report evidence; paths/hashes only",
+  "harness_revisions": [
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/harness-snapshots/run_native-7252e67cdc0f8c3f5151e534cd6cef88031f414b3b029baec5d6e5bdbab4becb.py",
+      "sha256": "7252e67cdc0f8c3f5151e534cd6cef88031f414b3b029baec5d6e5bdbab4becb"
+    },
+    {
+      "path": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/harness-snapshots/run_native-9999de9ff21e51e63d02296a6dcc2a13944ac1888238dc94fa09292956bf73f6.py",
+      "sha256": "9999de9ff21e51e63d02296a6dcc2a13944ac1888238dc94fa09292956bf73f6"
+    }
+  ]
+}

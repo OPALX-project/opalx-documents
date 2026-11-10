@@ -1,0 +1,45 @@
+{
+  "source_revision": "8c1a862369fb05034bb27aa1111d63a7b1e16c02",
+  "dependencies": {
+    "IPPL": {
+      "source": "/Users/adelmann/git/opalx-master/build_openmp/_deps/ippl-src",
+      "revision": "704932fdaa390f883524cf53588c92386294add4",
+      "status_before": "",
+      "status_after": ""
+    },
+    "H5HUT": {
+      "source": "/Users/adelmann/git/opalx-master/build_openmp/_deps/h5hut-src",
+      "revision": "b5c74f760bc9919d409f46b5472e9eedf9a764d5",
+      "status_before": "",
+      "status_after": ""
+    },
+    "HDF5": {
+      "source": "/Users/adelmann/git/opalx-master/build_openmp/_deps/hdf5-src",
+      "tree_sha256_before": "d87ddcffa908d17c6fe06fa64d0bd7f135da6bd900450b8f6b4864d370cd0540",
+      "tree_sha256_after": "d87ddcffa908d17c6fe06fa64d0bd7f135da6bd900450b8f6b4864d370cd0540"
+    },
+    "OPALX_LAPACK": {
+      "source": "/Users/adelmann/git/opalx-master/build_openmp/_deps/opalx_lapack-src",
+      "tree_sha256_before": "91d8a349be663dc21e4638b8441ec4c5b3d13a4fe57d7714b7bca18c0926d9d0",
+      "tree_sha256_after": "91d8a349be663dc21e4638b8441ec4c5b3d13a4fe57d7714b7bca18c0926d9d0"
+    },
+    "KOKKOS": {
+      "source": "/Users/adelmann/git/opalx-master/build_openmp/_deps/ippl-build/_deps/kokkos-src",
+      "revision": "d9397f95a04a0334d327647e64ab7f1882ca0664",
+      "status_before": "",
+      "status_after": ""
+    },
+    "HEFFTE": {
+      "source": "/Users/adelmann/git/opalx-master/build_openmp/_deps/ippl-build/_deps/heffte-src",
+      "revision": "6e16996e5a3eb65c60fd62fd4d93c4b2df833033",
+      "status_before": "",
+      "status_after": ""
+    }
+  },
+  "started_utc": "2026-10-25T20:20:51.443878+00:00",
+  "configure_exit": 0,
+  "build_exit": 0,
+  "executable_sha256": "de8fd16697d9dcaeae8af96fdeac25c936e1a9ff2ddf7729806c2b1ea19d9d17",
+  "source_status_after": "",
+  "finished_utc": "2026-10-25T20:24:26.340146+00:00"
+}

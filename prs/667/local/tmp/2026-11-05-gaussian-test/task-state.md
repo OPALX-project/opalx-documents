@@ -1,0 +1,3 @@
+Fix only Gaussian largeCutoffDisablesTruncation: replace deterministic max bound with binomial tail-count check at3sigma, Bernstein+union family false rejection<=1e-9; preserve RMS tolerances/z cutoff, check finitenessall6coords. FFA tests hash-preserved. BuildonlyTestGaussian in build-omp; testOMP1/4/16 ranks1and2; negativecontrol finite3sigma cutoff shouldfail. No source/physics implementation changes.
+
+Done:8casespass5repeatsOMP1/4/16MPI1,andMPI2OMP1/4. Negativecontrol3sigmacut rejectedbytailcountassertions. Correctsource restored; invalidatedsame-secondstaleobjectandrebuilt;allverificationrerunpasses. All3FFAfilehashesunchanged;othertrackeddiffidenticaltopretask. No sourcephysicschanges orcommits. summary.jsonrecordsresults.

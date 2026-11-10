@@ -1,0 +1,297 @@
+{
+  "accounting": "355097|COMPLETED|0:0|00:04:44|2026-11-09T17:48:51|2026-11-09T17:53:35|merlin-g-100\n355097.batch|COMPLETED|0:0|00:04:44|2026-11-09T17:48:51|2026-11-09T17:53:35|merlin-g-100\n355097.extern|COMPLETED|0:0|00:04:44|2026-11-09T17:48:51|2026-11-09T17:53:35|merlin-g-100\n",
+  "progress": [
+    {
+      "phase": "source-verified",
+      "utc_epoch": 1794242943.0583253,
+      "source_files": 1073
+    },
+    {
+      "phase": "build-gaussian",
+      "utc_epoch": 1794242943.0597727
+    },
+    {
+      "phase": "binary-verified",
+      "utc_epoch": 1794242963.3993351,
+      "source_sha256": "6569cabdd647bd40dcbbeb280819aca92ea724b5f06b30972975b5bf830fa4ce",
+      "source_mtime_ns": 1794242943057049370,
+      "object_mtime_ns": 1794242961065972730,
+      "binary_mtime_ns": 1794242962670061800,
+      "binary_sha256": "e698c5e7201e16b431a5fb8f517c3fff9829476a7dbd4ad3f3beb56db6ad83cb",
+      "before_binary_sha256": "d77683a27d7659847aed15d100ed588aada507ef28884b890b9a6039d5f443e2",
+      "production_library_sha256": "b8c48c6930df7121b0bd0e39dba18239808f64dc50146652d5b5f10cad3bc859"
+    },
+    {
+      "phase": "gaussian-r1-t1",
+      "utc_epoch": 1794242963.4000568
+    },
+    {
+      "phase": "gaussian-r1-t4",
+      "utc_epoch": 1794242968.0416281
+    },
+    {
+      "phase": "gaussian-r2-t1",
+      "utc_epoch": 1794242971.2645614
+    },
+    {
+      "phase": "gaussian-r2-t4",
+      "utc_epoch": 1794242976.1403444
+    },
+    {
+      "phase": "distribution-group",
+      "utc_epoch": 1794242980.6151307
+    },
+    {
+      "phase": "full-suite",
+      "utc_epoch": 1794242990.9026337
+    },
+    {
+      "phase": "complete",
+      "utc_epoch": 1794243215.3087535,
+      "source_files_verified": 1073,
+      "changed_file": "unit_tests/Distribution/TestGaussian.cpp",
+      "new_source_sha256": "6569cabdd647bd40dcbbeb280819aca92ea724b5f06b30972975b5bf830fa4ce",
+      "production_library_unchanged": true,
+      "both_prior_archives_unchanged": true,
+      "test_binary_unchanged_during_checks": true,
+      "gaussian_variants": [
+        {
+          "label": "gaussian-r1-t1",
+          "ranks": 1,
+          "threads": 1,
+          "returncode": 0,
+          "native_cases_run": 8,
+          "native_cases_passed": 8,
+          "native_cases_skipped": 0,
+          "OMP_NUM_THREADS": "1",
+          "IPPL_OPENMP_THREADS": "1",
+          "KOKKOS_NUM_THREADS": "1"
+        },
+        {
+          "label": "gaussian-r1-t4",
+          "ranks": 1,
+          "threads": 4,
+          "returncode": 0,
+          "native_cases_run": 8,
+          "native_cases_passed": 8,
+          "native_cases_skipped": 0,
+          "OMP_NUM_THREADS": "4",
+          "IPPL_OPENMP_THREADS": "4",
+          "KOKKOS_NUM_THREADS": "4"
+        },
+        {
+          "label": "gaussian-r2-t1",
+          "ranks": 2,
+          "threads": 1,
+          "returncode": 0,
+          "native_cases_run": 16,
+          "native_cases_passed": 16,
+          "native_cases_skipped": 0,
+          "OMP_NUM_THREADS": "1",
+          "IPPL_OPENMP_THREADS": "1",
+          "KOKKOS_NUM_THREADS": "1"
+        },
+        {
+          "label": "gaussian-r2-t4",
+          "ranks": 2,
+          "threads": 4,
+          "returncode": 0,
+          "native_cases_run": 16,
+          "native_cases_passed": 16,
+          "native_cases_skipped": 0,
+          "OMP_NUM_THREADS": "4",
+          "IPPL_OPENMP_THREADS": "4",
+          "KOKKOS_NUM_THREADS": "4"
+        }
+      ],
+      "distribution_targets_passed": 7,
+      "full_suite": {
+        "returncode": 0,
+        "targets": 137,
+        "passed": 137,
+        "failed": []
+      }
+    }
+  ],
+  "gaussian-variants": [
+    {
+      "label": "gaussian-r1-t1",
+      "ranks": 1,
+      "threads": 1,
+      "returncode": 0,
+      "native_cases_run": 8,
+      "native_cases_passed": 8,
+      "native_cases_skipped": 0,
+      "OMP_NUM_THREADS": "1",
+      "IPPL_OPENMP_THREADS": "1",
+      "KOKKOS_NUM_THREADS": "1"
+    },
+    {
+      "label": "gaussian-r1-t4",
+      "ranks": 1,
+      "threads": 4,
+      "returncode": 0,
+      "native_cases_run": 8,
+      "native_cases_passed": 8,
+      "native_cases_skipped": 0,
+      "OMP_NUM_THREADS": "4",
+      "IPPL_OPENMP_THREADS": "4",
+      "KOKKOS_NUM_THREADS": "4"
+    },
+    {
+      "label": "gaussian-r2-t1",
+      "ranks": 2,
+      "threads": 1,
+      "returncode": 0,
+      "native_cases_run": 16,
+      "native_cases_passed": 16,
+      "native_cases_skipped": 0,
+      "OMP_NUM_THREADS": "1",
+      "IPPL_OPENMP_THREADS": "1",
+      "KOKKOS_NUM_THREADS": "1"
+    },
+    {
+      "label": "gaussian-r2-t4",
+      "ranks": 2,
+      "threads": 4,
+      "returncode": 0,
+      "native_cases_run": 16,
+      "native_cases_passed": 16,
+      "native_cases_skipped": 0,
+      "OMP_NUM_THREADS": "4",
+      "IPPL_OPENMP_THREADS": "4",
+      "KOKKOS_NUM_THREADS": "4"
+    }
+  ],
+  "full-suite-result": {
+    "returncode": 0,
+    "targets": 137,
+    "passed": 137,
+    "failed": []
+  },
+  "terminal": {
+    "source_files_verified": 1073,
+    "changed_file": "unit_tests/Distribution/TestGaussian.cpp",
+    "new_source_sha256": "6569cabdd647bd40dcbbeb280819aca92ea724b5f06b30972975b5bf830fa4ce",
+    "production_library_unchanged": true,
+    "both_prior_archives_unchanged": true,
+    "test_binary_unchanged_during_checks": true,
+    "gaussian_variants": [
+      {
+        "label": "gaussian-r1-t1",
+        "ranks": 1,
+        "threads": 1,
+        "returncode": 0,
+        "native_cases_run": 8,
+        "native_cases_passed": 8,
+        "native_cases_skipped": 0,
+        "OMP_NUM_THREADS": "1",
+        "IPPL_OPENMP_THREADS": "1",
+        "KOKKOS_NUM_THREADS": "1"
+      },
+      {
+        "label": "gaussian-r1-t4",
+        "ranks": 1,
+        "threads": 4,
+        "returncode": 0,
+        "native_cases_run": 8,
+        "native_cases_passed": 8,
+        "native_cases_skipped": 0,
+        "OMP_NUM_THREADS": "4",
+        "IPPL_OPENMP_THREADS": "4",
+        "KOKKOS_NUM_THREADS": "4"
+      },
+      {
+        "label": "gaussian-r2-t1",
+        "ranks": 2,
+        "threads": 1,
+        "returncode": 0,
+        "native_cases_run": 16,
+        "native_cases_passed": 16,
+        "native_cases_skipped": 0,
+        "OMP_NUM_THREADS": "1",
+        "IPPL_OPENMP_THREADS": "1",
+        "KOKKOS_NUM_THREADS": "1"
+      },
+      {
+        "label": "gaussian-r2-t4",
+        "ranks": 2,
+        "threads": 4,
+        "returncode": 0,
+        "native_cases_run": 16,
+        "native_cases_passed": 16,
+        "native_cases_skipped": 0,
+        "OMP_NUM_THREADS": "4",
+        "IPPL_OPENMP_THREADS": "4",
+        "KOKKOS_NUM_THREADS": "4"
+      }
+    ],
+    "distribution_targets_passed": 7,
+    "full_suite": {
+      "returncode": 0,
+      "targets": 137,
+      "passed": 137,
+      "failed": []
+    }
+  },
+  "build-tail": [
+    "[ 85%] Built target H5hut",
+    "[100%] Built target opalx",
+    "[100%] Building CXX object unit_tests/Distribution/CMakeFiles/TestGaussian.dir/TestGaussian.cpp.o",
+    "/data/user/adelmann/opalx-dev/lossdatasink-linux-debug-20261109/baseline-3320cf6fc490/src/unit_tests/Distribution/TestGaussian.cpp: In member function \u2018virtual void GaussianTest_ZeroWidthAxesPreserveCountOffsetsAndFiniteMomenta_Test::TestBody()\u2019:",
+    "/data/user/adelmann/opalx-dev/lossdatasink-linux-debug-20261109/baseline-3320cf6fc490/src/unit_tests/Distribution/TestGaussian.cpp:479:24: warning: suggest explicit braces to avoid ambiguous \u2018else\u2019 [-Wdangling-else]",
+    "  479 |                     if (mask & (1u << d)) EXPECT_EQ(r(i)[d], offset[d]);",
+    "      |                        ^",
+    "/data/user/adelmann/opalx-dev/lossdatasink-linux-debug-20261109/baseline-3320cf6fc490/src/unit_tests/Distribution/TestGaussian.cpp:494:24: warning: suggest explicit braces to avoid ambiguous \u2018else\u2019 [-Wdangling-else]",
+    "  494 |                     if (!(mask & (1u << d))) EXPECT_NEAR(sd[d], sigma[d], 5e-5);",
+    "      |                        ^",
+    "[100%] Linking CXX executable TestGaussian",
+    "[100%] Built target TestGaussian"
+  ],
+  "build-failures": [],
+  "job-tail": [
+    "{\"phase\": \"gaussian-r1-t1\", \"utc_epoch\": 1794242963.4000568}",
+    "{\"label\": \"gaussian-r1-t1\", \"ranks\": 1, \"threads\": 1, \"returncode\": 0, \"native_cases_run\": 8, \"native_cases_passed\": 8, \"native_cases_skipped\": 0, \"OMP_NUM_THREADS\": \"1\", \"IPPL_OPENMP_THREADS\": \"1\", \"KOKKOS_NUM_THREADS\": \"1\"}",
+    "{\"phase\": \"gaussian-r1-t4\", \"utc_epoch\": 1794242968.0416281}",
+    "{\"label\": \"gaussian-r1-t4\", \"ranks\": 1, \"threads\": 4, \"returncode\": 0, \"native_cases_run\": 8, \"native_cases_passed\": 8, \"native_cases_skipped\": 0, \"OMP_NUM_THREADS\": \"4\", \"IPPL_OPENMP_THREADS\": \"4\", \"KOKKOS_NUM_THREADS\": \"4\"}",
+    "{\"phase\": \"gaussian-r2-t1\", \"utc_epoch\": 1794242971.2645614}",
+    "{\"label\": \"gaussian-r2-t1\", \"ranks\": 2, \"threads\": 1, \"returncode\": 0, \"native_cases_run\": 16, \"native_cases_passed\": 16, \"native_cases_skipped\": 0, \"OMP_NUM_THREADS\": \"1\", \"IPPL_OPENMP_THREADS\": \"1\", \"KOKKOS_NUM_THREADS\": \"1\"}",
+    "{\"phase\": \"gaussian-r2-t4\", \"utc_epoch\": 1794242976.1403444}",
+    "{\"label\": \"gaussian-r2-t4\", \"ranks\": 2, \"threads\": 4, \"returncode\": 0, \"native_cases_run\": 16, \"native_cases_passed\": 16, \"native_cases_skipped\": 0, \"OMP_NUM_THREADS\": \"4\", \"IPPL_OPENMP_THREADS\": \"4\", \"KOKKOS_NUM_THREADS\": \"4\"}",
+    "{\"phase\": \"distribution-group\", \"utc_epoch\": 1794242980.6151307}",
+    "{\"phase\": \"full-suite\", \"utc_epoch\": 1794242990.9026337}",
+    "{\"returncode\": 0, \"targets\": 137, \"passed\": 137, \"failed\": []}",
+    "{\"phase\": \"complete\", \"utc_epoch\": 1794243215.3087535, \"source_files_verified\": 1073, \"changed_file\": \"unit_tests/Distribution/TestGaussian.cpp\", \"new_source_sha256\": \"6569cabdd647bd40dcbbeb280819aca92ea724b5f06b30972975b5bf830fa4ce\", \"production_library_unchanged\": true, \"both_prior_archives_unchanged\": true, \"test_binary_unchanged_during_checks\": true, \"gaussian_variants\": [{\"label\": \"gaussian-r1-t1\", \"ranks\": 1, \"threads\": 1, \"returncode\": 0, \"native_cases_run\": 8, \"native_cases_passed\": 8, \"native_cases_skipped\": 0, \"OMP_NUM_THREADS\": \"1\", \"IPPL_OPENMP_THREADS\": \"1\", \"KOKKOS_NUM_THREADS\": \"1\"}, {\"label\": \"gaussian-r1-t4\", \"ranks\": 1, \"threads\": 4, \"returncode\": 0, \"native_cases_run\": 8, \"native_cases_passed\": 8, \"native_cases_skipped\": 0, \"OMP_NUM_THREADS\": \"4\", \"IPPL_OPENMP_THREADS\": \"4\", \"KOKKOS_NUM_THREADS\": \"4\"}, {\"label\": \"gaussian-r2-t1\", \"ranks\": 2, \"threads\": 1, \"returncode\": 0, \"native_cases_run\": 16, \"native_cases_passed\": 16, \"native_cases_skipped\": 0, \"OMP_NUM_THREADS\": \"1\", \"IPPL_OPENMP_THREADS\": \"1\", \"KOKKOS_NUM_THREADS\": \"1\"}, {\"label\": \"gaussian-r2-t4\", \"ranks\": 2, \"threads\": 4, \"returncode\": 0, \"native_cases_run\": 16, \"native_cases_passed\": 16, \"native_cases_skipped\": 0, \"OMP_NUM_THREADS\": \"4\", \"IPPL_OPENMP_THREADS\": \"4\", \"KOKKOS_NUM_THREADS\": \"4\"}], \"distribution_targets_passed\": 7, \"full_suite\": {\"returncode\": 0, \"targets\": 137, \"passed\": 137, \"failed\": []}}"
+  ],
+  "job-failures": [],
+  "distribution-tail": [
+    "\tTestGaussian",
+    "\tTestMultiVariateGaussian",
+    "\tTestEmittedFromFile",
+    "\tTestOpalFlatTop",
+    "\tTestFromFile",
+    "",
+    "100% tests passed out of 7",
+    "",
+    "Label Time Summary:",
+    "unit    =  38.01 sec*proc (7 tests)",
+    "",
+    "Total Test time (real) =  10.00 sec"
+  ],
+  "distribution-failures": [],
+  "full-suite-tail": [
+    "        Start 112: TestCartesianDomainUpdaterORB",
+    "136/137 Test #112: TestCartesianDomainUpdaterORB ......   Passed    2.75 sec",
+    "        Start 108: TestSpaceChargeSolver",
+    "137/137 Test #108: TestSpaceChargeSolver ..............   Passed    1.19 sec",
+    "",
+    "100% tests passed out of 137",
+    "",
+    "Label Time Summary:",
+    "parser    =   3.02 sec*proc (1 test)",
+    "unit      = 605.95 sec*proc (137 tests)",
+    "",
+    "Total Test time (real) = 223.96 sec"
+  ],
+  "full-suite-failures": []
+}

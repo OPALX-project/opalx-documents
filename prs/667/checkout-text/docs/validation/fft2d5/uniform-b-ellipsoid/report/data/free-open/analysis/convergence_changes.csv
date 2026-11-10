@@ -1,0 +1,76 @@
+case_a,case_b,profile,component,refinement,max_change_over_component_scale,centre_change_V_m,source_a,source_b,NZ_a,NZ_b
+triangle-cell-z2048-final,triangle-cell-z4096-final,triangle,r,mesh,0.00027564487747977354,-2.181348053229004e-06,4976640,4976640,2048,4096
+triangle-cell-z2048-final,triangle-cell-z4096-final,triangle,y,mesh,0.0003597731405445066,-4.9399720425391536e-14,4976640,4976640,2048,4096
+triangle-cell-z2048-final,triangle-cell-z4096-final,triangle,s,mesh,0.009610400293112591,-4.1741166485468986e-13,4976640,4976640,2048,4096
+triangle-cell-z2048-final,triangle-cell-z8192-final,triangle,r,mesh,0.0003983988196481802,-4.185501036008121e-06,4976640,4976640,2048,8192
+triangle-cell-z2048-final,triangle-cell-z8192-final,triangle,y,mesh,0.0005452285857168048,-1.9718818591862863e-13,4976640,4976640,2048,8192
+triangle-cell-z2048-final,triangle-cell-z8192-final,triangle,s,mesh,0.010456446190814716,2.2318179281464186e-12,4976640,4976640,2048,8192
+triangle-cell-z2048-final,triangle-control-mesh96-final,triangle,r,combined refinement,0.0003666366058390117,-6.2416064310066854e-06,4976640,10803200,2048,8192
+triangle-cell-z2048-final,triangle-control-mesh96-final,triangle,y,combined refinement,0.0018970327942537393,-2.706780112549101e-13,4976640,10803200,2048,8192
+triangle-cell-z2048-final,triangle-control-mesh96-final,triangle,s,combined refinement,0.01053540904172449,2.3128293769779783e-14,4976640,10803200,2048,8192
+triangle-cell-z2048-final,triangle-control-source96-final,triangle,r,combined refinement,0.00024863925185069583,4.695972002866089e-06,4976640,10803200,2048,8192
+triangle-cell-z2048-final,triangle-control-source96-final,triangle,y,combined refinement,0.0003969395878025122,-4.9339872465470336e-14,4976640,10803200,2048,8192
+triangle-cell-z2048-final,triangle-control-source96-final,triangle,s,combined refinement,0.010430757533895212,3.3802869992672e-13,4976640,10803200,2048,8192
+triangle-cell-z4096-final,triangle-cell-z8192-final,triangle,r,mesh,0.00012275394216840663,-2.004152982779117e-06,4976640,4976640,4096,8192
+triangle-cell-z4096-final,triangle-cell-z8192-final,triangle,y,mesh,0.00018545544517229823,-1.477884654932371e-13,4976640,4976640,4096,8192
+triangle-cell-z4096-final,triangle-cell-z8192-final,triangle,s,mesh,0.0008460459026022581,2.6492295930011083e-12,4976640,4976640,4096,8192
+triangle-cell-z4096-final,triangle-control-mesh96-final,triangle,r,combined refinement,0.0006422814833187852,-4.060258377777681e-06,4976640,10803200,4096,8192
+triangle-cell-z4096-final,triangle-control-mesh96-final,triangle,y,combined refinement,0.0015372596537092326,-2.2127829082951855e-13,4976640,10803200,4096,8192
+triangle-cell-z4096-final,triangle-control-mesh96-final,triangle,s,combined refinement,0.0009250087535499945,4.4053995862446964e-13,4976640,10803200,4096,8192
+triangle-cell-z4096-final,triangle-control-source96-final,triangle,r,combined refinement,0.00013399143567236906,6.877320056095093e-06,4976640,10803200,4096,8192
+triangle-cell-z4096-final,triangle-control-source96-final,triangle,y,combined refinement,4.296127043384042e-05,5.984795992119984e-17,4976640,10803200,4096,8192
+triangle-cell-z4096-final,triangle-control-source96-final,triangle,s,combined refinement,0.0008203572455502454,7.554403647814098e-13,4976640,10803200,4096,8192
+triangle-cell-z8192-final,triangle-control-mesh96-final,triangle,r,combined refinement,0.0007650354254871919,-2.056105394998564e-06,4976640,10803200,8192,8192
+triangle-cell-z8192-final,triangle-control-mesh96-final,triangle,y,combined refinement,0.0013518042085369343,-7.348982533628146e-14,4976640,10803200,8192,8192
+triangle-cell-z8192-final,triangle-control-mesh96-final,triangle,s,combined refinement,8.364324587625309e-05,-2.208689634376639e-12,4976640,10803200,8192,8192
+triangle-cell-z8192-final,triangle-control-source96-final,triangle,r,source sampling,0.0002566531919965299,8.88147303887421e-06,4976640,10803200,8192,8192
+triangle-cell-z8192-final,triangle-control-source96-final,triangle,y,source sampling,0.00014828899793815602,1.478483134531583e-13,4976640,10803200,8192,8192
+triangle-cell-z8192-final,triangle-control-source96-final,triangle,s,source sampling,3.7160054619459946e-05,-1.893789228219699e-12,4976640,10803200,8192,8192
+triangle-control-mesh96-final,triangle-control-source96-final,triangle,r,mesh,0.0005090217607588656,1.0937578433872774e-05,10803200,10803200,8192,8192
+triangle-control-mesh96-final,triangle-control-source96-final,triangle,y,mesh,0.0015000932064750904,2.2133813878943975e-13,10803200,10803200,8192,8192
+triangle-control-mesh96-final,triangle-control-source96-final,triangle,s,mesh,0.00011151212238066406,3.149004061569402e-13,10803200,10803200,8192,8192
+uniform-cell-z2048-final,uniform-cell-z4096-final,uniform,r,mesh,0.0011252346543591206,3.808262483140368e-09,4976640,4976640,2048,4096
+uniform-cell-z2048-final,uniform-cell-z4096-final,uniform,y,mesh,8.029545473214934e-05,-3.709012263986011e-14,4976640,4976640,2048,4096
+uniform-cell-z2048-final,uniform-cell-z4096-final,uniform,s,mesh,0.239061427908431,-1.0319913041281528e-13,4976640,4976640,2048,4096
+uniform-cell-z2048-final,uniform-cell-z8192-final,uniform,r,mesh,0.001749760591665926,4.921523112655368e-09,4976640,4976640,2048,8192
+uniform-cell-z2048-final,uniform-cell-z8192-final,uniform,y,mesh,0.0001222336439112135,-1.1079895681498364e-13,4976640,4976640,2048,8192
+uniform-cell-z2048-final,uniform-cell-z8192-final,uniform,s,mesh,0.2584533952627203,3.3045571856352493e-13,4976640,4976640,2048,8192
+uniform-cell-z2048-final,uniform-control-mesh96-final,uniform,r,combined refinement,0.001825969406932281,-1.0117696114947394e-06,4976640,10803200,2048,8192
+uniform-cell-z2048-final,uniform-control-mesh96-final,uniform,y,combined refinement,0.0013516994153104083,-2.1513216555413273e-13,4976640,10803200,2048,8192
+uniform-cell-z2048-final,uniform-control-mesh96-final,uniform,s,combined refinement,0.2583564424812625,-7.440934796870555e-13,4976640,10803200,2048,8192
+uniform-cell-z2048-final,uniform-control-path01-final,uniform,r,combined refinement,0.001749760591665851,4.921504599686433e-09,4976640,4976640,2048,8192
+uniform-cell-z2048-final,uniform-control-path01-final,uniform,y,combined refinement,0.0001222336439146483,-8.615200566830516e-14,4976640,4976640,2048,8192
+uniform-cell-z2048-final,uniform-control-path01-final,uniform,s,combined refinement,0.25845339526272043,3.3045571856351105e-13,4976640,4976640,2048,8192
+uniform-cell-z2048-final,uniform-control-source96-final,uniform,r,combined refinement,0.0018288417836046142,4.449641659860781e-06,4976640,10803200,2048,8192
+uniform-cell-z2048-final,uniform-control-source96-final,uniform,y,combined refinement,0.00014829821823673662,-1.233084814811214e-13,4976640,10803200,2048,8192
+uniform-cell-z2048-final,uniform-control-source96-final,uniform,s,combined refinement,0.25849906141044504,-6.543408657876165e-13,4976640,10803200,2048,8192
+uniform-cell-z4096-final,uniform-cell-z8192-final,uniform,r,mesh,0.0006245259375125867,1.1132606295150005e-09,4976640,4976640,4096,8192
+uniform-cell-z4096-final,uniform-cell-z8192-final,uniform,y,mesh,4.1938189217677236e-05,-7.370883417512353e-14,4976640,4976640,4096,8192
+uniform-cell-z4096-final,uniform-cell-z8192-final,uniform,s,mesh,0.01939196751126769,4.336548489763402e-13,4976640,4976640,4096,8192
+uniform-cell-z4096-final,uniform-control-mesh96-final,uniform,r,combined refinement,0.000763280279381404,-1.0155778739778798e-06,4976640,10803200,4096,8192
+uniform-cell-z4096-final,uniform-control-mesh96-final,uniform,y,combined refinement,0.001351699712062024,-1.7804204291427261e-13,4976640,10803200,4096,8192
+uniform-cell-z4096-final,uniform-control-mesh96-final,uniform,s,combined refinement,0.01929501472944058,-6.408943492742402e-13,4976640,10803200,4096,8192
+uniform-cell-z4096-final,uniform-control-path01-final,uniform,r,combined refinement,0.0006245259375110829,1.1132421165460649e-09,4976640,4976640,4096,8192
+uniform-cell-z4096-final,uniform-control-path01-final,uniform,y,combined refinement,4.1938189217677236e-05,-4.906188302844505e-14,4976640,4976640,4096,8192
+uniform-cell-z4096-final,uniform-control-path01-final,uniform,s,combined refinement,0.019391967511269467,4.3365484897632633e-13,4976640,4976640,4096,8192
+uniform-cell-z4096-final,uniform-control-source96-final,uniform,r,combined refinement,0.0007036071292488769,4.445833397377641e-06,4976640,10803200,4096,8192
+uniform-cell-z4096-final,uniform-control-source96-final,uniform,y,combined refinement,0.00014829792148210138,-8.621835884126128e-14,4976640,10803200,4096,8192
+uniform-cell-z4096-final,uniform-control-source96-final,uniform,s,combined refinement,0.019437633658561524,-5.511417353748013e-13,4976640,10803200,4096,8192
+uniform-cell-z8192-final,uniform-control-mesh96-final,uniform,r,combined refinement,0.0007632803664655698,-1.0166911346073948e-06,4976640,10803200,8192,8192
+uniform-cell-z8192-final,uniform-control-mesh96-final,uniform,y,combined refinement,0.0013516997261866402,-1.0433320873914909e-13,4976640,10803200,8192,8192
+uniform-cell-z8192-final,uniform-control-mesh96-final,uniform,s,combined refinement,9.695278182711117e-05,-1.0745491982505805e-12,4976640,10803200,8192,8192
+uniform-cell-z8192-final,uniform-control-path01-final,uniform,r,reference path,7.518494523253733e-15,-1.8512968935624485e-14,4976640,4976640,8192,8192
+uniform-cell-z8192-final,uniform-control-path01-final,uniform,y,reference path,2.468520260966565e-14,2.4646951146678475e-14,4976640,4976640,8192,8192
+uniform-cell-z8192-final,uniform-control-path01-final,uniform,s,reference path,5.191738708407038e-15,-1.3883951931889808e-26,4976640,4976640,8192,8192
+uniform-cell-z8192-final,uniform-control-source96-final,uniform,r,source sampling,0.0002564185383038993,4.444720136748126e-06,4976640,10803200,8192,8192
+uniform-cell-z8192-final,uniform-control-source96-final,uniform,y,source sampling,0.00014829790736473216,-1.250952466613775e-14,4976640,10803200,8192,8192
+uniform-cell-z8192-final,uniform-control-source96-final,uniform,s,source sampling,4.5666147724746226e-05,-9.847965843511416e-13,4976640,10803200,8192,8192
+uniform-control-mesh96-final,uniform-control-path01-final,uniform,r,combined refinement,0.0007632803664696298,1.0166911160944259e-06,10803200,4976640,8192,8192
+uniform-control-mesh96-final,uniform-control-path01-final,uniform,y,combined refinement,0.0013516997261715422,1.2898015988582756e-13,10803200,4976640,8192,8192
+uniform-control-mesh96-final,uniform-control-path01-final,uniform,s,combined refinement,9.695278182888729e-05,1.0745491982505666e-12,10803200,4976640,8192,8192
+uniform-control-mesh96-final,uniform-control-source96-final,uniform,r,mesh,0.0005075017617535166,5.461411271355521e-06,10803200,10803200,8192,8192
+uniform-control-mesh96-final,uniform-control-source96-final,uniform,y,mesh,0.0014999976335441252,9.182368407301134e-14,10803200,10803200,8192,8192
+uniform-control-mesh96-final,uniform-control-source96-final,uniform,s,mesh,0.00014261892918256082,8.975261389943893e-14,10803200,10803200,8192,8192
+uniform-control-path01-final,uniform-control-source96-final,uniform,r,combined refinement,0.00025641853829968896,4.444720155261095e-06,4976640,10803200,8192,8192
+uniform-control-path01-final,uniform-control-source96-final,uniform,y,combined refinement,0.00014829790737983013,-3.7156475812816225e-14,4976640,10803200,8192,8192
+uniform-control-path01-final,uniform-control-source96-final,uniform,s,combined refinement,4.56661477246096e-05,-9.847965843511276e-13,4976640,10803200,8192,8192

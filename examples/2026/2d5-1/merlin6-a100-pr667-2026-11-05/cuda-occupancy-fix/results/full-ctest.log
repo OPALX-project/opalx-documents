@@ -1,0 +1,385 @@
+Start testing: Nov 05 16:00 CET
+----------------------------------------------------------
+30/131 Testing: TestGaussian
+30/131 Test: TestGaussian
+Command: "/opt/psi/Compiler/openmpi/5.0.10_slurm/gcc/14.3.0/bin/mpiexec" "-n" "1" "/psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/unit_tests/Distribution/TestGaussian"
+Directory: /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/unit_tests/Distribution
+"TestGaussian" start time: Nov 05 16:00 CET
+Output:
+----------------------------------------------------------
+Warning: program compiled against libxml 210 using older 209
+Running main() from /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 8 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 8 tests from GaussianTest
+[ RUN      ] GaussianTest.meanR_stddevR
+[       OK ] GaussianTest.meanR_stddevR (22 ms)
+[ RUN      ] GaussianTest.cutoffR
+[       OK ] GaussianTest.cutoffR (11 ms)
+[ RUN      ] GaussianTest.meanP_and_steddevP
+[       OK ] GaussianTest.meanP_and_steddevP (6 ms)
+[ RUN      ] GaussianTest.largeCutoffDisablesTruncation
+[       OK ] GaussianTest.largeCutoffDisablesTruncation (12 ms)
+[ RUN      ] GaussianTest.noFixMean_keepsRawSample
+[       OK ] GaussianTest.noFixMean_keepsRawSample (8 ms)
+[ RUN      ] GaussianTest.ZeroWidthAxesPreserveCountOffsetsAndFiniteMomenta
+[       OK ] GaussianTest.ZeroWidthAxesPreserveCountOffsetsAndFiniteMomenta (77 ms)
+[ RUN      ] GaussianTest.ZeroWidthAppendPreservesExistingParticlesAndCutoff
+[       OK ] GaussianTest.ZeroWidthAppendPreservesExistingParticlesAndCutoff (4 ms)
+[ RUN      ] GaussianTest.OmittedSpatialWidthsCollapseWithoutSuppressingMomentumSpread
+[       OK ] GaussianTest.OmittedSpatialWidthsCollapseWithoutSuppressingMomentumSpread (4 ms)
+[----------] 8 tests from GaussianTest (148 ms total)
+
+[----------] Global test environment tear-down
+[==========] 8 tests from 1 test suite ran. (2195 ms total)
+[  PASSED  ] 8 tests.
+<end of output>
+Test time =   4.48 sec
+----------------------------------------------------------
+Test Passed.
+"TestGaussian" end time: Nov 05 16:00 CET
+"TestGaussian" time elapsed: 00:00:04
+----------------------------------------------------------
+
+99/131 Testing: TestSpaceChargeConfig
+99/131 Test: TestSpaceChargeConfig
+Command: "/opt/psi/Compiler/openmpi/5.0.10_slurm/gcc/14.3.0/bin/mpiexec" "-n" "1" "/psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/unit_tests/SpaceCharge/TestSpaceChargeConfig"
+Directory: /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/unit_tests/SpaceCharge
+"TestSpaceChargeConfig" start time: Nov 05 16:00 CET
+Output:
+----------------------------------------------------------
+Warning: program compiled against libxml 210 using older 209
+Running main() from /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 17 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 12 tests from SpaceChargeConfigTest
+[ RUN      ] SpaceChargeConfigTest.ExplicitOriginalModelPreservesDefaultAndRejectsOtherTypes
+[       OK ] SpaceChargeConfigTest.ExplicitOriginalModelPreservesDefaultAndRejectsOtherTypes (3 ms)
+[ RUN      ] SpaceChargeConfigTest.DerivesP3MParticleLayoutAndBoundaryMode
+[       OK ] SpaceChargeConfigTest.DerivesP3MParticleLayoutAndBoundaryMode (0 ms)
+[ RUN      ] SpaceChargeConfigTest.ValidatesP3MCutoffModes
+[       OK ] SpaceChargeConfigTest.ValidatesP3MCutoffModes (0 ms)
+[ RUN      ] SpaceChargeConfigTest.RejectsInvalidP3MCombinations
+[       OK ] SpaceChargeConfigTest.RejectsInvalidP3MCombinations (0 ms)
+[ RUN      ] SpaceChargeConfigTest.P3MAcceptsAnyBinCount
+[       OK ] SpaceChargeConfigTest.P3MAcceptsAnyBinCount (0 ms)
+[ RUN      ] SpaceChargeConfigTest.PairWeightNeedsP3MAndUnitRange
+[       OK ] SpaceChargeConfigTest.PairWeightNeedsP3MAndUnitRange (0 ms)
+[ RUN      ] SpaceChargeConfigTest.P3MShiftedPlaneRequiresOpenDomain
+[       OK ] SpaceChargeConfigTest.P3MShiftedPlaneRequiresOpenDomain (0 ms)
+[ RUN      ] SpaceChargeConfigTest.DerivesIndependentFFT2D5Domain
+[       OK ] SpaceChargeConfigTest.DerivesIndependentFFT2D5Domain (0 ms)
+[ RUN      ] SpaceChargeConfigTest.RejectsUnsupportedDirichletPlaneCombinations
+[       OK ] SpaceChargeConfigTest.RejectsUnsupportedDirichletPlaneCombinations (0 ms)
+[ RUN      ] SpaceChargeConfigTest.RejectsInvalidEnumValues
+[       OK ] SpaceChargeConfigTest.RejectsInvalidEnumValues (0 ms)
+[ RUN      ] SpaceChargeConfigTest.ValidatesPoissonDomainBoundaryMatrix
+[       OK ] SpaceChargeConfigTest.ValidatesPoissonDomainBoundaryMatrix (0 ms)
+[ RUN      ] SpaceChargeConfigTest.ShiftedGreenIsIndependentOfBinningAndKernelDiscretization
+[       OK ] SpaceChargeConfigTest.ShiftedGreenIsIndependentOfBinningAndKernelDiscretization (0 ms)
+[----------] 12 tests from SpaceChargeConfigTest (3 ms total)
+
+[----------] 5 tests from SpaceChargeConfigBuilderTest
+[ RUN      ] SpaceChargeConfigBuilderTest.BuildsP3MShiftedSourcePlane
+[       OK ] SpaceChargeConfigBuilderTest.BuildsP3MShiftedSourcePlane (0 ms)
+[ RUN      ] SpaceChargeConfigBuilderTest.RejectsRecognizedCGBeforeRuntimeConstruction
+[       OK ] SpaceChargeConfigBuilderTest.RejectsRecognizedCGBeforeRuntimeConstruction (0 ms)
+[ RUN      ] SpaceChargeConfigBuilderTest.ParserDefersCompatibilityAndReadsCurrentAttributes
+[       OK ] SpaceChargeConfigBuilderTest.ParserDefersCompatibilityAndReadsCurrentAttributes (0 ms)
+[ RUN      ] SpaceChargeConfigBuilderTest.SelectsOneP3MCutoffMode
+[       OK ] SpaceChargeConfigBuilderTest.SelectsOneP3MCutoffMode (0 ms)
+[ RUN      ] SpaceChargeConfigBuilderTest.RejectsInvalidMeshValuesBeforeIntegerConversion
+[       OK ] SpaceChargeConfigBuilderTest.RejectsInvalidMeshValuesBeforeIntegerConversion (0 ms)
+[----------] 5 tests from SpaceChargeConfigBuilderTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 17 tests from 2 test suites ran. (4 ms total)
+[  PASSED  ] 17 tests.
+<end of output>
+Test time =   1.57 sec
+----------------------------------------------------------
+Test Passed.
+"TestSpaceChargeConfig" end time: Nov 05 16:00 CET
+"TestSpaceChargeConfig" time elapsed: 00:00:01
+----------------------------------------------------------
+
+100/131 Testing: TestFFT2D5Algorithm
+100/131 Test: TestFFT2D5Algorithm
+Command: "/opt/psi/Compiler/openmpi/5.0.10_slurm/gcc/14.3.0/bin/mpiexec" "-n" "1" "/psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/unit_tests/SpaceCharge/TestFFT2D5Algorithm"
+Directory: /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/unit_tests/SpaceCharge
+"TestFFT2D5Algorithm" start time: Nov 05 16:00 CET
+Output:
+----------------------------------------------------------
+Warning: program compiled against libxml 210 using older 209
+Running main() from /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 11 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 11 tests from FFT2D5AlgorithmTest
+[ RUN      ] FFT2D5AlgorithmTest.LazyInitializationSkipsEmptySlices
+[       OK ] FFT2D5AlgorithmTest.LazyInitializationSkipsEmptySlices (23 ms)
+[ RUN      ] FFT2D5AlgorithmTest.RejectsFixedCartesianDomain
+[       OK ] FFT2D5AlgorithmTest.RejectsFixedCartesianDomain (1 ms)
+[ RUN      ] FFT2D5AlgorithmTest.RestoresTrackerFrameMoments
+[       OK ] FFT2D5AlgorithmTest.RestoresTrackerFrameMoments (169 ms)
+[ RUN      ] FFT2D5AlgorithmTest.LabPathFieldsSurviveReferenceFrameChanges
+[       OK ] FFT2D5AlgorithmTest.LabPathFieldsSurviveReferenceFrameChanges (184 ms)
+[ RUN      ] FFT2D5AlgorithmTest.RigidPlanarRotationPreservesLocalFields
+[       OK ] FFT2D5AlgorithmTest.RigidPlanarRotationPreservesLocalFields (41 ms)
+[ RUN      ] FFT2D5AlgorithmTest.ActiveContainersShareLabPathAcrossReferencePoses
+[       OK ] FFT2D5AlgorithmTest.ActiveContainersShareLabPathAcrossReferencePoses (30 ms)
+[ RUN      ] FFT2D5AlgorithmTest.CoverageFailureRestoresReferenceCoordinatesAndTimeSteps
+[       OK ] FFT2D5AlgorithmTest.CoverageFailureRestoresReferenceCoordinatesAndTimeSteps (3 ms)
+[ RUN      ] FFT2D5AlgorithmTest.ExplicitBatchSizesMatchSerialFullSolveAndBoundaryModes
+[       OK ] FFT2D5AlgorithmTest.ExplicitBatchSizesMatchSerialFullSolveAndBoundaryModes (232 ms)
+[ RUN      ] FFT2D5AlgorithmTest.HierarchyMatchesExhaustiveSegmentAndCoordinatesExactly
+[       OK ] FFT2D5AlgorithmTest.HierarchyMatchesExhaustiveSegmentAndCoordinatesExactly (35 ms)
+[ RUN      ] FFT2D5AlgorithmTest.PreparedProjectionsMatchUncachedStagesAfterSourceChanges
+[       OK ] FFT2D5AlgorithmTest.PreparedProjectionsMatchUncachedStagesAfterSourceChanges (62 ms)
+[ RUN      ] FFT2D5AlgorithmTest.RepeatedSolveReplacesFieldsAndPreservesInactiveContainer
+[       OK ] FFT2D5AlgorithmTest.RepeatedSolveReplacesFieldsAndPreservesInactiveContainer (16 ms)
+[----------] 11 tests from FFT2D5AlgorithmTest (801 ms total)
+
+[----------] Global test environment tear-down
+[==========] 11 tests from 1 test suite ran. (2622 ms total)
+[  PASSED  ] 11 tests.
+<end of output>
+Test time =   4.35 sec
+----------------------------------------------------------
+Test Passed.
+"TestFFT2D5Algorithm" end time: Nov 05 16:00 CET
+"TestFFT2D5Algorithm" time elapsed: 00:00:04
+----------------------------------------------------------
+
+101/131 Testing: TestFFT2D5Numerics
+101/131 Test: TestFFT2D5Numerics
+Command: "/opt/psi/Compiler/openmpi/5.0.10_slurm/gcc/14.3.0/bin/mpiexec" "-n" "1" "/psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/unit_tests/SpaceCharge/TestFFT2D5Numerics"
+Directory: /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/unit_tests/SpaceCharge
+"TestFFT2D5Numerics" start time: Nov 05 16:00 CET
+Output:
+----------------------------------------------------------
+Warning: program compiled against libxml 210 using older 209
+Running main() from /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 68 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 68 tests from TestSolve2d5
+[ RUN      ] TestSolve2d5.LoadReferencePath_Missing
+[       OK ] TestSolve2d5.LoadReferencePath_Missing (20 ms)
+[ RUN      ] TestSolve2d5.Configuration_SerialLayoutAccepted
+[       OK ] TestSolve2d5.Configuration_SerialLayoutAccepted (1 ms)
+[ RUN      ] TestSolve2d5.Configuration_ParallelLayoutRejected
+[       OK ] TestSolve2d5.Configuration_ParallelLayoutRejected (1 ms)
+[ RUN      ] TestSolve2d5.Configuration_BinningRejected
+[       OK ] TestSolve2d5.Configuration_BinningRejected (1 ms)
+[ RUN      ] TestSolve2d5.Configuration_MultipleRanksRejected
+./unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp:776: Skipped
+This validation requires multiple MPI ranks.
+
+[  SKIPPED ] TestSolve2d5.Configuration_MultipleRanksRejected (1 ms)
+[ RUN      ] TestSolve2d5.LoadReferencePath_ReadFail
+[       OK ] TestSolve2d5.LoadReferencePath_ReadFail (3 ms)
+[ RUN      ] TestSolve2d5.LoadReferencePath_Success
+[       OK ] TestSolve2d5.LoadReferencePath_Success (4 ms)
+[ RUN      ] TestSolve2d5.LoadReferencePath_SpecifiedFile
+[       OK ] TestSolve2d5.LoadReferencePath_SpecifiedFile (3 ms)
+[ RUN      ] TestSolve2d5.SliceSolverSetup
+[       OK ] TestSolve2d5.SliceSolverSetup (3 ms)
+[ RUN      ] TestSolve2d5.ToFrenetSerret_NoParticles
+[       OK ] TestSolve2d5.ToFrenetSerret_NoParticles (6 ms)
+[ RUN      ] TestSolve2d5.ToFrenetSerret_ShortReferencePath
+[       OK ] TestSolve2d5.ToFrenetSerret_ShortReferencePath (3 ms)
+[ RUN      ] TestSolve2d5.ToFrenetSerret_TrivialReferencePath
+[       OK ] TestSolve2d5.ToFrenetSerret_TrivialReferencePath (5 ms)
+[ RUN      ] TestSolve2d5.ToFrenetSerret_Simple
+[       OK ] TestSolve2d5.ToFrenetSerret_Simple (4 ms)
+[ RUN      ] TestSolve2d5.ToFrenetSerret_AtRefCorner
+[       OK ] TestSolve2d5.ToFrenetSerret_AtRefCorner (4 ms)
+[ RUN      ] TestSolve2d5.ToFrenetSerret_DegenerateRefPath
+[       OK ] TestSolve2d5.ToFrenetSerret_DegenerateRefPath (4 ms)
+[ RUN      ] TestSolve2d5.BoostToBeamFrame_Simple
+[       OK ] TestSolve2d5.BoostToBeamFrame_Simple (4 ms)
+[ RUN      ] TestSolve2d5.BoostToBeamFrame_SimpleInvalid
+[       OK ] TestSolve2d5.BoostToBeamFrame_SimpleInvalid (4 ms)
+[ RUN      ] TestSolve2d5.ScatterToGrid_SimpleCharge
+[       OK ] TestSolve2d5.ScatterToGrid_SimpleCharge (5 ms)
+[ RUN      ] TestSolve2d5.ScatterToGrid_ClosedRingChargeLo
+[       OK ] TestSolve2d5.ScatterToGrid_ClosedRingChargeLo (4 ms)
+[ RUN      ] TestSolve2d5.ScatterToGrid_ClosedRingChargeHi
+[       OK ] TestSolve2d5.ScatterToGrid_ClosedRingChargeHi (4 ms)
+[ RUN      ] TestSolve2d5.ScatterToGrid_SimpleChargeDensity
+[       OK ] TestSolve2d5.ScatterToGrid_SimpleChargeDensity (4 ms)
+[ RUN      ] TestSolve2d5.ScatterToGrid_ClosedRingChargeDensityLo
+[       OK ] TestSolve2d5.ScatterToGrid_ClosedRingChargeDensityLo (4 ms)
+[ RUN      ] TestSolve2d5.ScatterToGrid_ClosedRingChargeDensityHi
+[       OK ] TestSolve2d5.ScatterToGrid_ClosedRingChargeDensityHi (4 ms)
+[ RUN      ] TestSolve2d5.TotalDensity_Simple
+
+[       OK ] TestSolve2d5.TotalDensity_Simple (5 ms)
+[ RUN      ] TestSolve2d5.LineDensity_Simple
+
+[       OK ] TestSolve2d5.LineDensity_Simple (5 ms)
+[ RUN      ] TestSolve2d5.LineDensityGradient_Simple
+
+[       OK ] TestSolve2d5.LineDensityGradient_Simple (5 ms)
+[ RUN      ] TestSolve2d5.LineDensity_RingNotClosed
+
+[       OK ] TestSolve2d5.LineDensity_RingNotClosed (5 ms)
+[ RUN      ] TestSolve2d5.LineDensity_RingClosed
+
+[       OK ] TestSolve2d5.LineDensity_RingClosed (5 ms)
+[ RUN      ] TestSolve2d5.SolvePoissons_Simple
+[       OK ] TestSolve2d5.SolvePoissons_Simple (38 ms)
+[ RUN      ] TestSolve2d5.SliceWorkspaceKeepsNeutralSourcesAndClearsVacatedSlices
+[       OK ] TestSolve2d5.SliceWorkspaceKeepsNeutralSourcesAndClearsVacatedSlices (36 ms)
+[ RUN      ] TestSolve2d5.ToFrenetSerretGather_Simple
+[       OK ] TestSolve2d5.ToFrenetSerretGather_Simple (20 ms)
+[ RUN      ] TestSolve2d5.GatherEField_OneParticle
+[       OK ] TestSolve2d5.GatherEField_OneParticle (14 ms)
+[ RUN      ] TestSolve2d5.GatherEField_TwoParticles
+[       OK ] TestSolve2d5.GatherEField_TwoParticles (15 ms)
+[ RUN      ] TestSolve2d5.TransverseLabDensityAndMagneticCancellation
+[       OK ] TestSolve2d5.TransverseLabDensityAndMagneticCancellation (53 ms)
+[ RUN      ] TestSolve2d5.UniformCylinderMatchesGaussLaw
+[       OK ] TestSolve2d5.UniformCylinderMatchesGaussLaw (82 ms)
+[ RUN      ] TestSolve2d5.SmoothGaussianSlicesConvergeWithoutParticleNoise
+SMOOTH_GAUSSIAN mesh=64 radius=0 relative_rms_error=0.0110168
+SMOOTH_GAUSSIAN mesh=128 radius=0 relative_rms_error=0.00277764
+SMOOTH_GAUSSIAN mesh=256 radius=0 relative_rms_error=0.000695845
+SMOOTH_GAUSSIAN mesh=512 radius=0 relative_rms_error=0.000174057
+SMOOTH_GAUSSIAN mesh=64 radius=1 relative_rms_error=0.0110168
+SMOOTH_GAUSSIAN mesh=128 radius=1 relative_rms_error=0.00277764
+SMOOTH_GAUSSIAN mesh=256 radius=1 relative_rms_error=0.000695847
+SMOOTH_GAUSSIAN mesh=512 radius=1 relative_rms_error=0.000174058
+SMOOTH_GAUSSIAN mesh=64 radius=10 relative_rms_error=0.0110168
+SMOOTH_GAUSSIAN mesh=128 radius=10 relative_rms_error=0.00277764
+SMOOTH_GAUSSIAN mesh=256 radius=10 relative_rms_error=0.000695845
+SMOOTH_GAUSSIAN mesh=512 radius=10 relative_rms_error=0.000174057
+SMOOTH_GAUSSIAN mesh=64 radius=100 relative_rms_error=0.0110168
+SMOOTH_GAUSSIAN mesh=128 radius=100 relative_rms_error=0.00277764
+SMOOTH_GAUSSIAN mesh=256 radius=100 relative_rms_error=0.000695845
+SMOOTH_GAUSSIAN mesh=512 radius=100 relative_rms_error=0.000174057
+[       OK ] TestSolve2d5.SmoothGaussianSlicesConvergeWithoutParticleNoise (626 ms)
+[ RUN      ] TestSolve2d5.OpenReferencePathRejectsEndpointPileup
+[       OK ] TestSolve2d5.OpenReferencePathRejectsEndpointPileup (8 ms)
+[ RUN      ] TestSolve2d5.Deboost_TwoStationaryParticles
+[       OK ] TestSolve2d5.Deboost_TwoStationaryParticles (16 ms)
+[ RUN      ] TestSolve2d5.Deboost_TwoRelativisticParticles
+[       OK ] TestSolve2d5.Deboost_TwoRelativisticParticles (23 ms)
+[ RUN      ] TestSolve2d5.ParabolicLineDensityHasCenteredLongitudinalForce
+[       OK ] TestSolve2d5.ParabolicLineDensityHasCenteredLongitudinalForce (19 ms)
+[ RUN      ] TestSolve2d5.ClosedLongitudinalGatherWrapsCellCenters
+[       OK ] TestSolve2d5.ClosedLongitudinalGatherWrapsCellCenters (4 ms)
+[ RUN      ] TestSolve2d5.LongitudinalField_Simple
+
+[       OK ] TestSolve2d5.LongitudinalField_Simple (17 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_Simple
+[       OK ] TestSolve2d5.LabFrameFields_Simple (18 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_SimpleInvalid
+[       OK ] TestSolve2d5.LabFrameFields_SimpleInvalid (20 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_SimpleOutOfBoundsX
+[       OK ] TestSolve2d5.LabFrameFields_SimpleOutOfBoundsX (5 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_SimpleOutOfBoundsY
+[       OK ] TestSolve2d5.LabFrameFields_SimpleOutOfBoundsY (5 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_SimpleOutOfBoundsZ
+[       OK ] TestSolve2d5.LabFrameFields_SimpleOutOfBoundsZ (4 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_ClosedRing
+
+[       OK ] TestSolve2d5.LabFrameFields_ClosedRing (23 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_OpenRing
+
+[       OK ] TestSolve2d5.LabFrameFields_OpenRing (20 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_Pipe
+[       OK ] TestSolve2d5.LabFrameFields_Pipe (19 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_Plates
+[       OK ] TestSolve2d5.LabFrameFields_Plates (19 ms)
+[ RUN      ] TestSolve2d5.LoadReferencePath_Empty
+[       OK ] TestSolve2d5.LoadReferencePath_Empty (3 ms)
+[ RUN      ] TestSolve2d5.LoadReferencePath_EmptyClosedRing
+[       OK ] TestSolve2d5.LoadReferencePath_EmptyClosedRing (3 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_NoParticles
+[       OK ] TestSolve2d5.LabFrameFields_NoParticles (5 ms)
+[ RUN      ] TestSolve2d5.LabFrameFields_MainApi
+[       OK ] TestSolve2d5.LabFrameFields_MainApi (27 ms)
+[ RUN      ] TestSolve2d5.MainApiMatchesDirectStagesForScatterAndBoundaryModes
+[       OK ] TestSolve2d5.MainApiMatchesDirectStagesForScatterAndBoundaryModes (99 ms)
+[ RUN      ] TestSolve2d5.KvBeam_Charge
+[       OK ] TestSolve2d5.KvBeam_Charge (32 ms)
+[ RUN      ] TestSolve2d5.KvBeam_ChargeDensity
+[       OK ] TestSolve2d5.KvBeam_ChargeDensity (21 ms)
+[ RUN      ] TestSolve2d5.KvBeam_Potential
+[       OK ] TestSolve2d5.KvBeam_Potential (27 ms)
+[ RUN      ] TestSolve2d5.KvBeam_ElectricField
+[       OK ] TestSolve2d5.KvBeam_ElectricField (38 ms)
+[ RUN      ] TestSolve2d5.BatchedSlicesMatchSerialPotentialHaloAndFields
+[       OK ] TestSolve2d5.BatchedSlicesMatchSerialPotentialHaloAndFields (425 ms)
+[ RUN      ] TestSolve2d5.Poisson_Simple
+[       OK ] TestSolve2d5.Poisson_Simple (20 ms)
+[ RUN      ] TestSolve2d5.IntegratedPoissonHasNoBoundaryCellSelfForce
+[       OK ] TestSolve2d5.IntegratedPoissonHasNoBoundaryCellSelfForce (15 ms)
+[ RUN      ] TestSolve2d5.PoissonGradientUsesProvidedPotentialHalo
+[       OK ] TestSolve2d5.PoissonGradientUsesProvidedPotentialHalo (15 ms)
+[ RUN      ] TestSolve2d5.IntegratedPoissonSupportsSmallTransverseGrids
+[       OK ] TestSolve2d5.IntegratedPoissonSupportsSmallTransverseGrids (78 ms)
+[ RUN      ] TestSolve2d5.IntegratedLogKernelSelfAndAnisotropicCells
+[       OK ] TestSolve2d5.IntegratedLogKernelSelfAndAnisotropicCells (1 ms)
+[ RUN      ] TestSolve2d5.IntegratedLogKernelScaleChangesOnlyPotentialGauge
+[       OK ] TestSolve2d5.IntegratedLogKernelScaleChangesOnlyPotentialGauge (1 ms)
+[ RUN      ] TestSolve2d5.IntegratedPoissonForceConvergesAndIsIndependentOfLengthUnit
+[       OK ] TestSolve2d5.IntegratedPoissonForceConvergesAndIsIndependentOfLengthUnit (70 ms)
+[----------] 68 tests from TestSolve2d5 (2140 ms total)
+
+[----------] Global test environment tear-down
+[==========] 68 tests from 1 test suite ran. (3904 ms total)
+[  PASSED  ] 67 tests.
+[  SKIPPED ] 1 test, listed below:
+[  SKIPPED ] TestSolve2d5.Configuration_MultipleRanksRejected
+<end of output>
+Test time =   5.51 sec
+----------------------------------------------------------
+Test Passed.
+"TestFFT2D5Numerics" end time: Nov 05 16:01 CET
+"TestFFT2D5Numerics" time elapsed: 00:00:05
+----------------------------------------------------------
+
+109/131 Testing: TestPoissonSolver
+109/131 Test: TestPoissonSolver
+Command: "/opt/psi/Compiler/openmpi/5.0.10_slurm/gcc/14.3.0/bin/mpiexec" "-n" "1" "/psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/unit_tests/SpaceCharge/TestPoissonSolver"
+Directory: /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/unit_tests/SpaceCharge
+"TestPoissonSolver" start time: Nov 05 16:01 CET
+Output:
+----------------------------------------------------------
+Warning: program compiled against libxml 210 using older 209
+Running main() from /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from PoissonSolverTest
+[ RUN      ] PoissonSolverTest.FactoryPreservesMetadataAndSolvesEveryBackend
+[       OK ] PoissonSolverTest.FactoryPreservesMetadataAndSolvesEveryBackend (87 ms)
+[ RUN      ] PoissonSolverTest.RestoresOrdinaryKernelAfterShiftedSolve
+[       OK ] PoissonSolverTest.RestoresOrdinaryKernelAfterShiftedSolve (81 ms)
+[ RUN      ] PoissonSolverTest.RebuiltBackendMatchesFreshSolverOnChangedLayout
+[       OK ] PoissonSolverTest.RebuiltBackendMatchesFreshSolverOnChangedLayout (313 ms)
+[ RUN      ] PoissonSolverTest.RejectsUnsupportedRequestsBeforeModifyingFields
+[       OK ] PoissonSolverTest.RejectsUnsupportedRequestsBeforeModifyingFields (25 ms)
+[ RUN      ] PoissonSolverTest.P3MImageMatchesStandardOpenAfterSpacingChanges
+[       OK ] PoissonSolverTest.P3MImageMatchesStandardOpenAfterSpacingChanges (54 ms)
+[ RUN      ] PoissonSolverTest.RejectsInvalidConfigurationAndBindings
+[       OK ] PoissonSolverTest.RejectsInvalidConfigurationAndBindings (0 ms)
+[ RUN      ] PoissonSolverTest.ConcreteAdaptersRejectMismatchedBackendKinds
+[       OK ] PoissonSolverTest.ConcreteAdaptersRejectMismatchedBackendKinds (0 ms)
+[----------] 7 tests from PoissonSolverTest (563 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (2329 ms total)
+[  PASSED  ] 7 tests.
+<end of output>
+Test time =   3.97 sec
+----------------------------------------------------------
+Test Passed.
+"TestPoissonSolver" end time: Nov 05 16:01 CET
+"TestPoissonSolver" time elapsed: 00:00:03
+----------------------------------------------------------
+
+End testing: Nov 05 16:01 CET
+
+unit =  19.89 sec*proc
+

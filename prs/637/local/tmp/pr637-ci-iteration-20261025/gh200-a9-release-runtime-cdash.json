@@ -1,0 +1,64 @@
+{
+  "data": {
+    "b4375357": {
+      "id": "4375357",
+      "name": "PR-637-gpu-cuda-gh200-Release-4-ranks",
+      "configure": {
+        "command": "/user-environment/env/default/bin/cmake -S/ritom/scratch/cscs/biddisco/gitlab-runner/f7t/6/694321096757981 -B/ritom/scratch/cscs/biddisco/gitlab-runner/f7t/6/694321096757981/build-a9d38caa-release -GNinja --preset=alps-gh200 -DCMAKE_BUILD_TYPE=Release -DCMAKE_BUILD_RPATH_USE_ORIGIN=ON -DOPALX_USE_STANDARD_FOLDERS=ON -DIPPL_ENABLE_SOLVERS=ON -DIPPL_MARK_FAILING_TESTS=ON -DIPPL_GIT_TAG=master -DKokkos_ENABLE_DEBUG_BOUNDS_CHECK=OFF -DMPIEXEC_EXECUTABLE=/usr/bin/srun -DMPIEXEC_PREFLAGS:STRING=--uenv=/capstor/store/cscs/cscs/public/uenvs/opal-x-gh200-mpich-gcc-2026-10-01.squashfs;--view=default;--repo=/capstor/scratch/cscs/biddisco/.uenv-images-ci-daint;/user-environment/wrapper-mpi.sh -DMPIEXEC_MAX_NUMPROCS=4"
+      },
+      "passedTestsCount": 137,
+      "failedTestsCount": 0,
+      "notRunTestsCount": 0,
+      "critical": [
+        {
+          "id": "547300108",
+          "name": "TestLossDataSinkMPI",
+          "status": "PASSED",
+          "command": "/usr/bin/srun \"-n\" \"2\" \"--uenv=/capstor/store/cscs/cscs/public/uenvs/opal-x-gh200-mpich-gcc-2026-10-01.squashfs\" \"--view=default\" \"--repo=/capstor/scratch/cscs/biddisco/.uenv-images-ci-daint\" \"/user-environment/wrapper-mpi.sh\" \"/ritom/scratch/cscs/biddisco/gitlab-runner/f7t/1/694321096757981/build-a9d38caa-release/bin/TestLossDataSinkMPI\" \"--gtest_filter=LossDataSinkTest.EmptySinkDestructionIsRankLocal:LossDataSinkTest.EmptySinkUnwindingIsRankLocal:LossDataSinkTest.AsciiCreationDecisionIsCollectiveAcrossFileViews:LossDataSinkTest.OutputInspectionFailureIsCollective\""
+        },
+        {
+          "id": "547300122",
+          "name": "TestRFEventStepMPI",
+          "status": "PASSED",
+          "command": "/usr/bin/srun \"-n\" \"2\" \"--uenv=/capstor/store/cscs/cscs/public/uenvs/opal-x-gh200-mpich-gcc-2026-10-01.squashfs\" \"--view=default\" \"--repo=/capstor/scratch/cscs/biddisco/.uenv-images-ci-daint\" \"/user-environment/wrapper-mpi.sh\" \"/ritom/scratch/cscs/biddisco/gitlab-runner/f7t/1/694321096757981/build-a9d38caa-release/bin/TestRFEventStepMPI\""
+        },
+        {
+          "id": "547300135",
+          "name": "TestCyclotronProbeMPI",
+          "status": "PASSED",
+          "command": "/usr/bin/srun \"-n\" \"2\" \"--uenv=/capstor/store/cscs/cscs/public/uenvs/opal-x-gh200-mpich-gcc-2026-10-01.squashfs\" \"--view=default\" \"--repo=/capstor/scratch/cscs/biddisco/.uenv-images-ci-daint\" \"/user-environment/wrapper-mpi.sh\" \"/ritom/scratch/cscs/biddisco/gitlab-runner/f7t/1/694321096757981/build-a9d38caa-release/bin/TestCyclotronProbeMPI\""
+        }
+      ]
+    },
+    "b4375358": {
+      "id": "4375358",
+      "name": "PR-637-gpu-cuda-gh200-Release-1-rank",
+      "configure": {
+        "command": "/user-environment/env/default/bin/cmake -S/ritom/scratch/cscs/biddisco/gitlab-runner/f7t/6/694321096757981 -B/ritom/scratch/cscs/biddisco/gitlab-runner/f7t/6/694321096757981/build-a9d38caa-release -GNinja --preset=alps-gh200 -DCMAKE_BUILD_TYPE=Release -DCMAKE_BUILD_RPATH_USE_ORIGIN=ON -DOPALX_USE_STANDARD_FOLDERS=ON -DIPPL_ENABLE_SOLVERS=ON -DIPPL_MARK_FAILING_TESTS=ON -DIPPL_GIT_TAG=master -DKokkos_ENABLE_DEBUG_BOUNDS_CHECK=OFF -DMPIEXEC_EXECUTABLE=/usr/bin/srun -DMPIEXEC_PREFLAGS:STRING=--uenv=/capstor/store/cscs/cscs/public/uenvs/opal-x-gh200-mpich-gcc-2026-10-01.squashfs;--view=default;--repo=/capstor/scratch/cscs/biddisco/.uenv-images-ci-daint;/user-environment/wrapper-mpi.sh -DMPIEXEC_MAX_NUMPROCS=4"
+      },
+      "passedTestsCount": 137,
+      "failedTestsCount": 0,
+      "notRunTestsCount": 0,
+      "critical": [
+        {
+          "id": "547300245",
+          "name": "TestLossDataSinkMPI",
+          "status": "PASSED",
+          "command": "/usr/bin/srun \"-n\" \"2\" \"--uenv=/capstor/store/cscs/cscs/public/uenvs/opal-x-gh200-mpich-gcc-2026-10-01.squashfs\" \"--view=default\" \"--repo=/capstor/scratch/cscs/biddisco/.uenv-images-ci-daint\" \"/user-environment/wrapper-mpi.sh\" \"/ritom/scratch/cscs/biddisco/gitlab-runner/f7t/0/694321096757981/build-a9d38caa-release/bin/TestLossDataSinkMPI\" \"--gtest_filter=LossDataSinkTest.EmptySinkDestructionIsRankLocal:LossDataSinkTest.EmptySinkUnwindingIsRankLocal:LossDataSinkTest.AsciiCreationDecisionIsCollectiveAcrossFileViews:LossDataSinkTest.OutputInspectionFailureIsCollective\""
+        },
+        {
+          "id": "547300259",
+          "name": "TestRFEventStepMPI",
+          "status": "PASSED",
+          "command": "/usr/bin/srun \"-n\" \"2\" \"--uenv=/capstor/store/cscs/cscs/public/uenvs/opal-x-gh200-mpich-gcc-2026-10-01.squashfs\" \"--view=default\" \"--repo=/capstor/scratch/cscs/biddisco/.uenv-images-ci-daint\" \"/user-environment/wrapper-mpi.sh\" \"/ritom/scratch/cscs/biddisco/gitlab-runner/f7t/0/694321096757981/build-a9d38caa-release/bin/TestRFEventStepMPI\""
+        },
+        {
+          "id": "547300272",
+          "name": "TestCyclotronProbeMPI",
+          "status": "PASSED",
+          "command": "/usr/bin/srun \"-n\" \"2\" \"--uenv=/capstor/store/cscs/cscs/public/uenvs/opal-x-gh200-mpich-gcc-2026-10-01.squashfs\" \"--view=default\" \"--repo=/capstor/scratch/cscs/biddisco/.uenv-images-ci-daint\" \"/user-environment/wrapper-mpi.sh\" \"/ritom/scratch/cscs/biddisco/gitlab-runner/f7t/0/694321096757981/build-a9d38caa-release/bin/TestCyclotronProbeMPI\""
+        }
+      ]
+    }
+  }
+}

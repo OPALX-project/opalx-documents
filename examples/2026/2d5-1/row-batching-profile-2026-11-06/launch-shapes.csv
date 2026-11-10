@@ -1,0 +1,10 @@
+configuration,category,blocks_min,blocks_max,threads_per_block_min,threads_per_block_max,registers_per_thread_max,local_bytes_per_thread_max,mean_kernel_us,sm_count
+1 GPU,Serial geometry / hierarchy,1,1,128,128,46,0,3967.2998080808084,108
+1 GPU,Slice density reductions,34,34,256,256,30,0,11.29685020123106,108
+1 GPU,Particle projection,782,782,128,128,70,0,52.84326262626263,108
+"2 GPUs, rank 0",Serial geometry / hierarchy,1,1,128,128,46,0,4057.5968080808084,108
+"2 GPUs, rank 0",Slice density reductions,34,34,256,256,30,0,11.020962571450944,108
+"2 GPUs, rank 0",Particle projection,391,391,128,128,70,0,31.156010101010104,108
+"2 GPUs, rank 1",Serial geometry / hierarchy,1,1,128,128,46,0,4032.026363636364,108
+"2 GPUs, rank 1",Slice density reductions,34,34,256,256,30,0,10.999456189805027,108
+"2 GPUs, rank 1",Particle projection,391,391,128,128,70,0,34.1585404040404,108

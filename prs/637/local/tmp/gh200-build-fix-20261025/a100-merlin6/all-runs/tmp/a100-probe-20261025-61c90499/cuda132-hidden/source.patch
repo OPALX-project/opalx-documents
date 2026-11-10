@@ -1,0 +1,20 @@
+diff --git a/unit_tests/cmake/AddOPALXTest.cmake b/unit_tests/cmake/AddOPALXTest.cmake
+index c6de2f4df..17c555508 100644
+--- a/unit_tests/cmake/AddOPALXTest.cmake
++++ b/unit_tests/cmake/AddOPALXTest.cmake
+@@ -46,6 +46,15 @@ function(add_opalx_test TEST_NAME)
+ 
+   add_executable(${TEST_NAME} ${_sources})
+ 
++  # Keep CUDA kernel helpers local to the test executable when linking shared
++  # libraries, as Kokkos does for its own tests. Interposing these helpers across
++  # executable/library CUDA modules can produce invalid kernel handles.
++  if(BUILD_SHARED_LIBS AND "CUDA" IN_LIST OPALX_PLATFORMS)
++    set_target_properties(${TEST_NAME} PROPERTIES
++      CXX_VISIBILITY_PRESET hidden
++      VISIBILITY_INLINES_HIDDEN ON)
++  endif()
++
+   # Link libraries (opalx exports includes/flags/deps; pick your GTest flavor)
+   if(TEST_USE_GTEST_MAIN)
+     target_link_libraries(${TEST_NAME} PRIVATE opalx GTest::gtest_main)

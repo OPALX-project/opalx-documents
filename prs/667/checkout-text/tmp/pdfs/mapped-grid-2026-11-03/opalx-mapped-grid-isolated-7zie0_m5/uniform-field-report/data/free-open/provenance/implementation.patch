@@ -1,0 +1,1624 @@
+diff --git a/src/SpaceCharge/FFT2D5/CMakeLists.txt b/src/SpaceCharge/FFT2D5/CMakeLists.txt
+index e5bb50fab..db10d6e7d 100644
+--- a/src/SpaceCharge/FFT2D5/CMakeLists.txt
++++ b/src/SpaceCharge/FFT2D5/CMakeLists.txt
+@@ -3,6 +3,8 @@ set (_SRCS
+     ReferencePath.cpp
+     FFT2D5FieldStorage.cpp
+     FFT2D5Poisson.cpp
++    FFT2D5FreeSpace.cpp
++    FFT2D5Geometry.cpp
+     )
+ 
+ set (_PRIVATE_HDRS
+@@ -11,6 +13,8 @@ set (_PRIVATE_HDRS
+     ReferencePath.h
+     FFT2D5FieldStorage.h
+     FFT2D5Poisson.h
++    FFT2D5FreeSpace.h
++    FFT2D5Geometry.h
+     )
+ 
+ target_sources(opalx PRIVATE ${_SRCS} ${_PRIVATE_HDRS})
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
+index 9080c5137..efd5e7596 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
+@@ -68,6 +68,7 @@ namespace opalx::spacecharge {
+                                 * particles_m.front()->getToLabTrafo().inverted();
+         Kokkos::deep_copy(solveReferencePath_m, referencePath_m->deviceView());
+         labToSolve.transformBunchTo(solveReferencePath_m, solveReferencePath_m.extent(0));
++        if (finiteFreeSpace()) solveGeometry_m = laboratoryGeometry_m.transformed(labToSolve);
+ 
+         for (std::size_t index = 0; index < particles_m.size(); ++index) {
+             if (context.trackingActive()[index] != 0) {
+@@ -97,7 +98,8 @@ namespace opalx::spacecharge {
+         }
+         restoreFrames();
+         SpaceChargeSolveResult result;
+-        result.backendSolves = fieldStorage_m->backendSolves();
++        result.backendSolves = finiteFreeSpace() ? freeSpaceSolves_m
++                                                : fieldStorage_m->backendSolves();
+         return result;
+     }
+ 
+@@ -124,11 +126,74 @@ namespace opalx::spacecharge {
+         solveReferencePath_m = ReferenceView_t(
+                 "FFT2D5SolveReferencePath", referencePath_m->deviceView().extent(0));
+         Kokkos::deep_copy(solveReferencePath_m, referencePath_m->deviceView());
+-        fieldStorage_m = std::make_unique<FFT2D5FieldStorage>(config_m, referencePath_m->length());
++        double pathLength = referencePath_m->length();
++        if (finiteFreeSpace()) {
++            if (config_m.closedRing) {
++                throw OpalException(
++                        "FFT2D5Algorithm::ensureInitialized",
++                        "OPEN finite-source fields require an open reference path; closed rings "
++                        "are not yet supported by this backend.");
++            }
++            laboratoryGeometry_m = FFT2D5Geometry::fit(referencePath_m->deviceView());
++            solveGeometry_m = laboratoryGeometry_m;
++            pathLength = laboratoryGeometry_m.pathLength();
++            freeSpace_m = std::make_unique<FFT2D5FreeSpace>();
++        }
++        fieldStorage_m = std::make_unique<FFT2D5FieldStorage>(config_m, pathLength);
+         lineDensity_m  = LineDensityView_t(
+                 "FFT2D5LineDensity", fieldStorage_m->meshSize()[2] + LineDensityGhostCells);
+         lineDensityGradient_m =
+                 LineDensityView_t("FFT2D5LineDensityGradient", fieldStorage_m->meshSize()[2]);
+     }
+ 
++    void FFT2D5Algorithm::solveFreeSpace(const SpaceChargeSolveContext& context) {
++        double gamma = 1.0;
++        bool haveGamma = false;
++        double maximumMomentumSquared = 0.0;
++        for (std::size_t index = 0; index < particles_m.size(); ++index) {
++            if (context.trackingActive()[index] == 0) continue;
++            auto* pc = particles_m[index];
++            const auto p = pc->P.getView();
++            const auto invalid = pc->InvalidMask.getView();
++            double localMaximum = 0.0;
++            Kokkos::parallel_reduce(
++                    "FFT2D5::maximumMomentum", pc->getLocalNum(),
++                    KOKKOS_LAMBDA(const std::size_t n, double& maximum) {
++                        if (!invalid(n)) maximum = Kokkos::max(maximum, p(n).dot(p(n)));
++                    }, Kokkos::Max<double>(localMaximum));
++            maximumMomentumSquared = std::max(maximumMomentumSquared, localMaximum);
++            const auto mean = pc->getMeanP();
++            const double containerGamma = std::sqrt(1.0 + mean.dot(mean));
++            if (solveGeometry_m.isStraight() && pc->getTotalNum() != 0) {
++                if (haveGamma && std::abs(containerGamma - gamma)
++                                         > 64 * std::numeric_limits<double>::epsilon() * gamma) {
++                    throw OpalException(
++                            "FFT2D5Algorithm::solveFreeSpace",
++                            "Straight OPEN finite-source fields require a common mean gamma "
++                            "for all active particle containers.");
++                }
++                gamma = containerGamma;
++                haveGamma = true;
++            }
++        }
++        if (!solveGeometry_m.isStraight()) {
++            const double maximumBetaSquared = maximumMomentumSquared / (1 + maximumMomentumSquared);
++            // A curved bunch has no single inertial rest frame. This finite-arc
++            // backend solves instantaneous electrostatics; the neglected dynamic
++            // terms are O(beta^2). Do not silently apply a straight-beam boost.
++            if (maximumBetaSquared > 0.01) {
++                throw OpalException(
++                        "FFT2D5Algorithm::solveFreeSpace",
++                        "Curved OPEN finite-source fields currently require beta <= 0.1. "
++                        "Relativistic curved-beam electrodynamics is not implemented.");
++            }
++            gamma = 1.0;
++        }
++        freeSpaceFieldsReady_m = false;
++        freeSpaceSolves_m = freeSpace_m->solve(
++                fieldStorage_m->chargeDensity(), fieldStorage_m->electricField(),
++                solveGeometry_m.signedCurvature(), gamma);
++        freeSpaceFieldsReady_m = true;
++    }
++
+ }  // namespace opalx::spacecharge
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
+index 32f6522ea..15254dbd7 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
+@@ -23,6 +23,8 @@
+ #include <vector>
+ #include "PartBunch/ParticleContainer.hpp"
+ #include "SpaceCharge/FFT2D5/FFT2D5FieldStorage.h"
++#include "SpaceCharge/FFT2D5/FFT2D5FreeSpace.h"
++#include "SpaceCharge/FFT2D5/FFT2D5Geometry.h"
+ #include "SpaceCharge/FFT2D5/ReferencePath.h"
+ #include "SpaceCharge/SpaceChargeAlgorithm.h"
+ #include "SpaceCharge/SpaceChargeConfig.h"
+@@ -44,12 +46,11 @@ namespace opalx::spacecharge {
+      *    momenta are boosted; source positions and line charge retain laboratory normalization.
+      * 2. Do CiC scatter of charge into the 3D charge density grid.  This spreads the charge out
+      * both transversely and (optionally) longitudinally which should be a help in reducing noise.
+-     * 3. Copy each occupied transverse charge-density slice into one reusable 2D workspace.
+-     * 4. Perform the 2D Poisson solve to determine the X and Y electric field components;
+-     *    identically empty slices have zero field and need no FFT. Boundary conditions are open.
+-     * 5. Calculate the longitudinal S electric field component using the algorithm from PyHEADTAIL.
+-     *    This uses the local line density along the reference orbit and a geometry constant that
+-     *    encodes the effect of the beam pipe on the longitudinal component.
++     * 3. OPEN calculates one finite-source potential on the thin straight/circular mesh,
++     *    retaining the full arc chord and first-order transverse curvature. Its three electric
++     *    components derive from the same potential. Curved fields are electrostatic.
++     * 4. The local pipe/NONE modes instead solve occupied transverse slices sequentially
++     *    using one reusable 2D workspace, then apply their prescribed longitudinal closure.
+      * 6. Do CiC gather of fields for the particle positions.
+      * 7. Rotate the local Frenet-Serret fields into the common Cartesian frame and restore
+      *    each container's moving reference coordinates and fields.
+@@ -262,7 +263,7 @@ namespace opalx::spacecharge {
+                 size_t n, const VectorView_t& r, const VectorView_t& p, const ReferenceView_t& ref,
+                 T meanPs, const ScalarView_t& dt, const BooleanView_t& invalid, Vector3D_t invDr,
+                 int nGhost, ippl::NDIndex<3U> lDom, ScalarGridView3D_t rho, Vector3D_t origin,
+-                DiagnosticPolicy diagnostic);
++                DiagnosticPolicy diagnostic, FFT2D5Geometry geometry = {});
+ 
+         /**
+          * @brief Kokkos function that converts from lab to Frenet-Serret coordinates.
+@@ -339,7 +340,10 @@ namespace opalx::spacecharge {
+          * @param lDom Local domain of the charge-density grid.
+          * @param eField Electric field grid from the Poisson solver.
+          * @param origin Physical origin of the charge-density grid.
+-         * @param gBy4PiEpsilon0 Constant for the longitudinal field estimate.
++         * @param gBy4PiEpsilon0 Legacy constant or uniform-round on-axis coefficient.
++         * @param uniformRound Use the pointwise uniform-round grounded-pipe model.
++         * @param beamRadius Fixed uniform-round beam radius.
++         * @param pipeRadius Physical grounded-pipe radius, independent of the mesh.
+          * @param lineDensityGradient The longitudinal line charge density gradient.
+          * @param closedRing Whether interpolation wraps across the path endpoints.
+          * @param diagnostic Diagnostic policy used to record intermediate results.
+@@ -350,8 +354,9 @@ namespace opalx::spacecharge {
+                 T beamGamma, T beamBeta, const VectorView_t& e, const VectorView_t& b,
+                 const BooleanView_t& invalid, Vector3D_t invDr, int nGhost, ippl::NDIndex<3U> lDom,
+                 VectorGridView3D_t eField, Vector3D_t origin, T gBy4PiEpsilon0,
+-                LineDensityView_t lineDensityGradient, bool closedRing,
+-                DiagnosticPolicy diagnostic);
++                LineDensityView_t lineDensityGradient, bool closedRing, bool uniformRound,
++                T beamRadius, T pipeRadius, DiagnosticPolicy diagnostic,
++                FFT2D5Geometry geometry = {}, bool useNonlocalField = false);
+ 
+         /**
+          * @brief Kokkos function that gathers the boosted E field for a particle from
+@@ -533,12 +538,25 @@ namespace opalx::spacecharge {
+         const LineDensityView_t& getLineDensityGradient() const { return lineDensityGradient_m; }
+ 
+     private:
++        /** @brief Reject active particles outside the uniform-round model's physical pipe. */
++        void checkUniformRoundPipeCoverage(ParticleContainer* particles) const;
++
++        [[nodiscard]] bool finiteFreeSpace() const {
++            return config_m.longitudinalFieldMode == LongitudinalFieldMode::Open;
++        }
++        void solveFreeSpace(const SpaceChargeSolveContext& context);
++
+         FFT2D5Config config_m;
+         std::vector<ParticleContainer*> particles_m;
+         std::shared_ptr<const BunchStateHandler> bunchState_m;
+         std::unique_ptr<ReferencePath> referencePath_m;
++        FFT2D5Geometry laboratoryGeometry_m;
++        FFT2D5Geometry solveGeometry_m;
+         ReferenceView_t solveReferencePath_m;
+         std::unique_ptr<FFT2D5FieldStorage> fieldStorage_m;
++        std::unique_ptr<FFT2D5FreeSpace> freeSpace_m;
++        std::size_t freeSpaceSolves_m = 0;
++        bool freeSpaceFieldsReady_m = false;
+         LineDensityView_t lineDensity_m;
+         LineDensityView_t lineDensityGradient_m;
+         static constexpr size_t LineDensityGhostCells    = 2;
+@@ -549,7 +567,6 @@ namespace opalx::spacecharge {
+         // https://proceedings.jacow.org/hb2016/papers/mopr025.pdf
+         static constexpr T CircularPipeG0   = 0.67;
+         static constexpr T ParallelPlatesG0 = 0.67;
+-        static constexpr T OpenG0           = 6.36;
+     };
+ 
+ }  // namespace opalx::spacecharge
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
+index b35ea1871..b3172cd0e 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
+@@ -17,7 +17,8 @@
+  * @file FFT2D5Algorithm.hpp
+  * @brief Numerical routines retained from master a5c859240, PartBunch/Solve2d5.hpp.
+  *
+- * Arithmetic, interpolation, field signs, stage ordering, and diagnostic hooks are retained.
++ * Legacy modes retain their field conventions and diagnostic hooks. The explicit
++ * uniform-round longitudinal model uses a separate physical conducting-pipe radius.
+  * Integration changes replace PartBunch access with borrowed containers and per-call state,
+  * redirect workspace access, select tracking-active containers, and check deposition inputs.
+  */
+@@ -59,12 +60,13 @@ namespace opalx::spacecharge {
+             ippl::NDIndex<3U> lDom_m;
+             Algorithm::ScalarGridView3D_t rho_m;
+             Algorithm::Vector3D_t origin_m;
++            FFT2D5Geometry geometry_m;
+             DiagnosticPolicy diagnostic_m;
+ 
+             KOKKOS_FUNCTION void operator()(const size_t n) const {
+                 Algorithm::doScatterToGrid<ScatterLongitudinally>(
+                         n, r_m, p_m, ref_m, meanPs_m, dt_m, invalid_m, invDr_m, nGhost_m, lDom_m,
+-                        rho_m, origin_m, diagnostic_m);
++                        rho_m, origin_m, diagnostic_m, geometry_m);
+             }
+         };
+ 
+@@ -76,9 +78,15 @@ namespace opalx::spacecharge {
+             Algorithm::BooleanView_t invalid_m;
+             Algorithm::T length_m;
+             Algorithm::T tolerance_m;
++            FFT2D5Geometry geometry_m;
+ 
+             KOKKOS_FUNCTION void operator()(const size_t n, size_t& outside) const {
+                 if (invalid_m(n)) return;
++                if (geometry_m.isValid()) {
++                    const auto fs = geometry_m.toFrenet(r_m(n));
++                    if (fs[2] < -tolerance_m || fs[2] > length_m + tolerance_m) ++outside;
++                    return;
++                }
+                 Algorithm::Vector3D_t fsR, fsP, bUnit, nUnit, tUnit;
+                 Algorithm::convertToFrenetSerret(n, r_m, p_m, ref_m, fsR, fsP, bUnit, nUnit, tUnit);
+                 const Algorithm::Vector3D_t fromStart = r_m(n) - ref_m(0);
+@@ -92,6 +100,45 @@ namespace opalx::spacecharge {
+             }
+         };
+ 
++        /** @brief Enforce the physical circular domain independently of numerical mesh extents. */
++        struct CheckRoundPipeCoverageFunctor {
++            Algorithm::VectorView_t r_m;
++            Algorithm::VectorView_t p_m;
++            Algorithm::ReferenceView_t ref_m;
++            Algorithm::BooleanView_t invalid_m;
++            Algorithm::T maximumRadiusSquared_m;
++
++            KOKKOS_FUNCTION void operator()(const size_t n, size_t& outside) const {
++                if (invalid_m(n)) return;
++                Algorithm::Vector3D_t fsR, fsP, bUnit, nUnit, tUnit;
++                Algorithm::convertToFrenetSerret(n, r_m, p_m, ref_m, fsR, fsP, bUnit, nUnit, tUnit);
++                if (fsR[0] * fsR[0] + fsR[1] * fsR[1] > maximumRadiusSquared_m) ++outside;
++            }
++        };
++
++        /** Free-space convolution consumes physical source cells, so CIC must not lose charge
++         * into an unused mesh halo. Require a half-cell margin around every active source. */
++        struct CheckFreeSpaceMeshCoverageFunctor {
++            Algorithm::VectorView_t r_m;
++            Algorithm::BooleanView_t invalid_m;
++            FFT2D5Geometry geometry_m;
++            Algorithm::Vector3D_t origin_m, size_m, spacing_m;
++
++            KOKKOS_FUNCTION void operator()(const size_t n, size_t& outside) const {
++                if (invalid_m(n)) return;
++                const auto fs = geometry_m.toFrenet(r_m(n));
++                for (unsigned d = 0; d < 3; ++d) {
++                    const double tolerance = 64 * std::numeric_limits<double>::epsilon()
++                                             * Kokkos::max(1.0, size_m[d]);
++                    if (fs[d] < origin_m[d] + .5 * spacing_m[d] - tolerance
++                        || fs[d] > origin_m[d] + size_m[d] - .5 * spacing_m[d] + tolerance) {
++                        ++outside;
++                        return;
++                    }
++                }
++            }
++        };
++
+         /** @brief Fold deposited ghost charge into the opposite end of a closed ring. */
+         struct ScatterBoundariesFunctor {
+             Algorithm::ScalarGridView3D_t rhoView_m;
+@@ -219,13 +266,19 @@ namespace opalx::spacecharge {
+             Algorithm::T gBy4PiEpsilon0_m;
+             Algorithm::LineDensityView_t lineDensityGradient_m;
+             bool closedRing_m;
++            bool uniformRound_m;
++            Algorithm::T beamRadius_m;
++            Algorithm::T pipeRadius_m;
++            FFT2D5Geometry geometry_m;
++            bool useNonlocalField_m;
+             DiagnosticPolicy diagnostic_m;
+ 
+             KOKKOS_FUNCTION void operator()(const size_t n) const {
+                 Algorithm::doGatherFromGrid<ScatterLongitudinally>(
+                         n, r_m, p_m, ref_m, beamGamma_m, beamBeta_m, e_m, b_m, invalid_m, invDr_m,
+                         nGhost_m, lDom_m, eField_m, origin_m, gBy4PiEpsilon0_m,
+-                        lineDensityGradient_m, closedRing_m, diagnostic_m);
++                        lineDensityGradient_m, closedRing_m, uniformRound_m, beamRadius_m,
++                        pipeRadius_m, diagnostic_m, geometry_m, useNonlocalField_m);
+             }
+         };
+     }  // namespace fft2d5_detail
+@@ -234,8 +287,13 @@ namespace opalx::spacecharge {
+     void FFT2D5Algorithm::doRunSolver(
+             const SpaceChargeSolveContext& context, DiagnosticPolicy diagnostic) {
+         scatterToGrid<DiagnosticPolicy>(context, diagnostic);
+-        solvePoissons<DiagnosticPolicy>(diagnostic);
+-        calculateLineDensity<DiagnosticPolicy>(diagnostic);
++        if (finiteFreeSpace()) {
++            solveFreeSpace(context);
++            diagnostic.eField(fieldStorage_m->electricField().getView());
++        } else {
++            solvePoissons<DiagnosticPolicy>(diagnostic);
++            calculateLineDensity<DiagnosticPolicy>(diagnostic);
++        }
+         gatherFromGrid<DiagnosticPolicy>(context, diagnostic);
+     }
+ 
+@@ -248,6 +306,29 @@ namespace opalx::spacecharge {
+         return result;
+     }
+ 
++    inline void FFT2D5Algorithm::checkUniformRoundPipeCoverage(ParticleContainer* pc) const {
++        if (config_m.longitudinalFieldMode != LongitudinalFieldMode::UniformRound) return;
++        const T radius = config_m.pipeRadius.value();
++        // Permit only floating-point roundoff at the wall, not a mesh-sized physical margin.
++        const T maximumRadiusSquared =
++                radius * radius * (1 + 32 * std::numeric_limits<T>::epsilon());
++        size_t outside = 0;
++        Kokkos::parallel_reduce(
++                "Solver2d5::CheckRoundPipeCoverage", pc->getLocalNum(),
++                fft2d5_detail::CheckRoundPipeCoverageFunctor{
++                        pc->R.getView(), pc->P.getView(), solveReferencePath_m,
++                        pc->InvalidMask.getView(), maximumRadiusSquared},
++                outside);
++        if (outside != 0) {
++            throw OpalException(
++                    "FFT2D5Algorithm::checkUniformRoundPipeCoverage",
++                    "CIRCULAR_UNIFORM assumes a beam centred on the reference path inside "
++                    "PIPERADIUS; "
++                            + std::to_string(outside)
++                            + " active particles lie outside the physical pipe.");
++        }
++    }
++
+     // Place the charge from all the particles into the charge density grid.
+     // Multiple particle containers in the bunch are supported.
+     // The particle container array dt is temporarily used to contain the charge to deposit.
+@@ -273,6 +354,24 @@ namespace opalx::spacecharge {
+                 }
+                 auto* pc = particles_m[container];
+                 pc->updateMoments();
++                checkUniformRoundPipeCoverage(pc);
++                if (finiteFreeSpace()) {
++                    size_t outside = 0;
++                    Kokkos::parallel_reduce(
++                            "FFT2D5::checkFreeSpaceMeshCoverage", pc->getLocalNum(),
++                            fft2d5_detail::CheckFreeSpaceMeshCoverageFunctor{
++                                    pc->R.getView(), pc->InvalidMask.getView(), solveGeometry_m,
++                                    origin, fieldStorage_m->size(), fieldStorage_m->spacing()},
++                            outside);
++                    if (outside != 0) {
++                        throw OpalException(
++                                "FFT2D5Algorithm::scatterToGrid",
++                                "OPEN mesh/path must cover every active particle with at least "
++                                "a half-cell CIC margin; " + std::to_string(outside)
++                                + " particle(s) are outside. Increase PIPESIZEX/Y or extend "
++                                  "REFPATHFNAME to preserve all source charge.");
++                    }
++                }
+                 if (pc->getTotalNum() > 0 && pc->getChargePerParticle() == 0.0) {
+                     throw OpalException(
+                             "FFT2D5Algorithm::scatterToGrid",
+@@ -281,7 +380,8 @@ namespace opalx::spacecharge {
+                 // A clamped projection would put particles beyond a finite path
+                 // into its end slice. Fail before mutating the per-particle time steps.
+                 if (!config_m.closedRing) {
+-                    const auto length = referencePath_m->length();
++                    const auto length = finiteFreeSpace() ? solveGeometry_m.pathLength()
++                                                          : referencePath_m->length();
+                     const auto tolerance =
+                             64 * std::numeric_limits<T>::epsilon() * std::max(T(1), length);
+                     size_t outside = 0;
+@@ -289,7 +389,7 @@ namespace opalx::spacecharge {
+                             "FFT2D5::checkPathCoverage", pc->getLocalNum(),
+                             fft2d5_detail::CheckPathCoverageFunctor{
+                                     pc->R.getView(), pc->P.getView(), ref,
+-                                    pc->InvalidMask.getView(), length, tolerance},
++                                    pc->InvalidMask.getView(), length, tolerance, solveGeometry_m},
+                             outside);
+                     if (outside != 0) {
+                         throw OpalException(
+@@ -311,14 +411,14 @@ namespace opalx::spacecharge {
+                             fft2d5_detail::ScatterToGridFunctor<
+                                     true, DiagnosticPolicy, decltype(invDr)>{
+                                     r, p, ref, meanPs, dt, invalid, invDr, nGhost, lDom, rhoView,
+-                                    origin, diagnostic});
++                                    origin, solveGeometry_m, diagnostic});
+                 } else {
+                     Kokkos::parallel_for(
+                             "Solve2d5::scatterToGrid::scatter", pc->getLocalNum(),
+                             fft2d5_detail::ScatterToGridFunctor<
+                                     false, DiagnosticPolicy, decltype(invDr)>{
+                                     r, p, ref, meanPs, dt, invalid, invDr, nGhost, lDom, rhoView,
+-                                    origin, diagnostic});
++                                    origin, solveGeometry_m, diagnostic});
+                 }
+                 Kokkos::fence();
+                 diagnostic.scatterCharge(rhoView);
+@@ -367,11 +467,17 @@ namespace opalx::spacecharge {
+             const ReferenceView_t& ref, const T meanPs, const ScalarView_t& dt,
+             const BooleanView_t& invalid, const Vector3D_t invDr, const int nGhost,
+             const ippl::NDIndex<3U> lDom, const ScalarGridView3D_t rho, const Vector3D_t origin,
+-            DiagnosticPolicy diagnostic) {
++            DiagnosticPolicy diagnostic, FFT2D5Geometry geometry) {
+         if (!invalid(n)) {
+             // Into Frenet-Serret coordinates
+             Vector3D_t fsR, fsP, bUnit, nUnit, tUnit;
+-            convertToFrenetSerret(n, r, p, ref, fsR, fsP, bUnit, nUnit, tUnit);
++            if (geometry.isValid()) {
++                fsR = geometry.toFrenet(r(n));
++                geometry.basis(fsR[2], bUnit, nUnit, tUnit);
++                fsP = geometry.toLocalVector(p(n), fsR[2]);
++            } else {
++                convertToFrenetSerret(n, r, p, ref, fsR, fsP, bUnit, nUnit, tUnit);
++            }
+             diagnostic.frenetSerretScatter(n, fsR, fsP, invalid(n));
+             // Boost into the beam frame
+             boostToBeamFrame(meanPs, fsP);
+@@ -530,6 +636,7 @@ namespace opalx::spacecharge {
+ 
+     template <typename DiagnosticPolicy>
+     void FFT2D5Algorithm::solvePoissons(DiagnosticPolicy diagnostic) {
++        freeSpaceFieldsReady_m = false;
+         using Policy         = Kokkos::MDRangePolicy<Kokkos::Rank<2>>;
+         auto e3d             = fieldStorage_m->electricField().getView();
+         const auto rho3d     = fieldStorage_m->chargeDensity().getView();
+@@ -611,7 +718,8 @@ namespace opalx::spacecharge {
+                 if (context.trackingActive()[container] == 0) {
+                     continue;
+                 }
+-                auto* pc                       = particles_m[container];
++                auto* pc = particles_m[container];
++                checkUniformRoundPipeCoverage(pc);
+                 const auto r                   = pc->R.getView();
+                 const auto p                   = pc->P.getView();
+                 const auto ref                 = solveReferencePath_m;
+@@ -629,16 +737,18 @@ namespace opalx::spacecharge {
+                 const auto betaB               = meanPs / gammaB;
+                 const auto lineDensityGradient = lineDensityGradient_m;
+                 const auto eField              = fieldStorage_m->electricField().getView();
+-                const auto pipeRadius =
+-                        std::min(fieldStorage_m->size()[0], fieldStorage_m->size()[1]);
+-                T g;
+-                if (config_m.longitudinalFieldMode == LongitudinalFieldMode::Cylindrical) {
++                const auto pipeRadius          = config_m.pipeRadius.value_or(
++                        std::min(fieldStorage_m->size()[0], fieldStorage_m->size()[1]));
++                const bool uniformRound =
++                        config_m.longitudinalFieldMode == LongitudinalFieldMode::UniformRound;
++                T g = 0.0;
++                if (uniformRound) {
++                    g = 1 + 2 * Kokkos::log(pipeRadius / config_m.beamRadius);
++                } else if (config_m.longitudinalFieldMode == LongitudinalFieldMode::Cylindrical) {
+                     g = CircularPipeG0 + 2 * Kokkos::log(pipeRadius / config_m.beamRadius);
+                 } else if (config_m.longitudinalFieldMode == LongitudinalFieldMode::Plates) {
+                     g = ParallelPlatesG0
+                         + 2 * Kokkos::log(4 * pipeRadius / Physics::pi / config_m.beamRadius);
+-                } else {
+-                    g = OpenG0;
+                 }
+                 const T gBy4PiEpsilon0 = g / (4 * Physics::pi * Physics::epsilon_0);
+                 if (config_m.scatterLongitudinally) {
+@@ -646,17 +756,55 @@ namespace opalx::spacecharge {
+                             "Solver2d5::GatherFromGrid", pc->getLocalNum(),
+                             fft2d5_detail::GatherFromGridFunctor<
+                                     true, DiagnosticPolicy, decltype(invDr)>{
+-                                    r, p, ref, gammaB, betaB, e, b, invalid, invDr, nGhost, lDom,
+-                                    eField, origin, gBy4PiEpsilon0, lineDensityGradient,
+-                                    config_m.closedRing, diagnostic});
++                                    r,
++                                    p,
++                                    ref,
++                                    gammaB,
++                                    betaB,
++                                    e,
++                                    b,
++                                    invalid,
++                                    invDr,
++                                    nGhost,
++                                    lDom,
++                                    eField,
++                                    origin,
++                                    gBy4PiEpsilon0,
++                                    lineDensityGradient,
++                                    config_m.closedRing,
++                                    uniformRound,
++                                    config_m.beamRadius,
++                                    pipeRadius,
++                                    solveGeometry_m,
++                                    freeSpaceFieldsReady_m,
++                                    diagnostic});
+                 } else {
+                     Kokkos::parallel_for(
+                             "Solver2d5::GatherFromGrid", pc->getLocalNum(),
+                             fft2d5_detail::GatherFromGridFunctor<
+                                     false, DiagnosticPolicy, decltype(invDr)>{
+-                                    r, p, ref, gammaB, betaB, e, b, invalid, invDr, nGhost, lDom,
+-                                    eField, origin, gBy4PiEpsilon0, lineDensityGradient,
+-                                    config_m.closedRing, diagnostic});
++                                    r,
++                                    p,
++                                    ref,
++                                    gammaB,
++                                    betaB,
++                                    e,
++                                    b,
++                                    invalid,
++                                    invDr,
++                                    nGhost,
++                                    lDom,
++                                    eField,
++                                    origin,
++                                    gBy4PiEpsilon0,
++                                    lineDensityGradient,
++                                    config_m.closedRing,
++                                    uniformRound,
++                                    config_m.beamRadius,
++                                    pipeRadius,
++                                    solveGeometry_m,
++                                    freeSpaceFieldsReady_m,
++                                    diagnostic});
+                 }
+                 Kokkos::fence();
+             }
+@@ -671,11 +819,18 @@ namespace opalx::spacecharge {
+             const int nGhost, const ippl::NDIndex<3U> lDom, const VectorGridView3D_t eField,
+             const Vector3D_t origin, const T gBy4PiEpsilon0,
+             const LineDensityView_t lineDensityGradient, const bool closedRing,
+-            DiagnosticPolicy diagnostic) {
++            const bool uniformRound, const T beamRadius, const T pipeRadius,
++            DiagnosticPolicy diagnostic, FFT2D5Geometry geometry, const bool useNonlocalField) {
+         if (!invalid(n)) {
+             // Into Frenet-Serret coordinates
+             Vector3D_t fsR, fsP, bUnit, nUnit, tUnit;
+-            convertToFrenetSerret(n, r, p, ref, fsR, fsP, bUnit, nUnit, tUnit);
++            if (geometry.isValid()) {
++                fsR = geometry.toFrenet(r(n));
++                geometry.basis(fsR[2], bUnit, nUnit, tUnit);
++                fsP = geometry.toLocalVector(p(n), fsR[2]);
++            } else {
++                convertToFrenetSerret(n, r, p, ref, fsR, fsP, bUnit, nUnit, tUnit);
++            }
+             diagnostic.frenetSerretGather(n, fsR, fsP, invalid(n));
+             // CiC Gather the boosted E field
+             gatherFromEField<ScatterLongitudinally>(n, fsR, e, invDr, nGhost, lDom, eField, origin);
+@@ -683,6 +838,12 @@ namespace opalx::spacecharge {
+             // Complete the lab self-fields from the lab-density transverse solve
+             setTransverseLabMagneticField(n, beamBeta, e, b);
+             diagnostic.deboostFromBeam(n, e(n), b(n), invalid(n));
++            if (useNonlocalField) {
++                diagnostic.longitudinalField(n, e(n), b(n), invalid(n));
++                convertFromFrenetSerret(n, bUnit, nUnit, tUnit, e, b);
++                diagnostic.labFrameFields(n, e(n), b(n), invalid(n));
++                return;
++            }
+             // Calculate the longitudinal E field in Frenet-Serret coordinates
+             // Gradients live at cell centers (k+1/2)*dz, with no ghost offset.
+             // Use the same longitudinal shape as charge deposition. The old
+@@ -705,7 +866,24 @@ namespace opalx::spacecharge {
+             }
+             const T ldg = (1 - fraction) * lineDensityGradient(left)
+                           + fraction * lineDensityGradient(right);
+-            e(n).data_m[2] = -gBy4PiEpsilon0 * ldg / beamGamma / beamGamma;
++            T coefficient = gBy4PiEpsilon0;
++            if (uniformRound) {
++                // Integrate the uniform-disk radial field to the grounded pipe:
++                // phi/lambda = [1+2log(b/a)-r^2/a^2]/(4pi epsilon0) inside;
++                // the charge-free annulus instead has 2log(b/r)/(4pi epsilon0).
++                const T radiusSquared     = fsR[0] * fsR[0] + fsR[1] * fsR[1];
++                const T beamRadiusSquared = beamRadius * beamRadius;
++                const T inv4PiEpsilon0    = 1 / (4 * Physics::pi * Physics::epsilon_0);
++                if (radiusSquared <= beamRadiusSquared) {
++                    coefficient -= inv4PiEpsilon0 * radiusSquared / beamRadiusSquared;
++                } else {
++                    const T pipeRadiusSquared    = pipeRadius * pipeRadius;
++                    const T boundedRadiusSquared = Kokkos::min(radiusSquared, pipeRadiusSquared);
++                    coefficient =
++                            inv4PiEpsilon0 * Kokkos::log(pipeRadiusSquared / boundedRadiusSquared);
++                }
++            }
++            e(n).data_m[2] = -coefficient * ldg / beamGamma / beamGamma;
+             diagnostic.longitudinalField(n, e(n), b(n), invalid(n));
+             // And finally back into lab coordinates
+             convertFromFrenetSerret(n, bUnit, nUnit, tUnit, e, b);
+diff --git a/src/SpaceCharge/SpaceChargeConfig.cpp b/src/SpaceCharge/SpaceChargeConfig.cpp
+index 395c16261..5e6cbcc0a 100644
+--- a/src/SpaceCharge/SpaceChargeConfig.cpp
++++ b/src/SpaceCharge/SpaceChargeConfig.cpp
+@@ -146,11 +146,33 @@ namespace opalx::spacecharge {
+                 case FFT2D5LongitudinalFieldMode::Cylindrical:
+                 case FFT2D5LongitudinalFieldMode::Plates:
+                 case FFT2D5LongitudinalFieldMode::None:
++                case FFT2D5LongitudinalFieldMode::UniformRound:
+                     break;
+                 default:
+                     throw OpalException(
+                             "validateSpaceChargeConfig", "Unknown FFT2D5 longitudinal mode.");
+             }
++            const bool circular =
++                    config.longitudinalFieldMode == FFT2D5LongitudinalFieldMode::Cylindrical
++                    || config.longitudinalFieldMode == FFT2D5LongitudinalFieldMode::UniformRound;
++            if (config.pipeRadius.has_value()) {
++                if (!circular) {
++                    throw OpalException(
++                            "validateSpaceChargeConfig",
++                            "FFT2D5 PIPERADIUS is supported only by CIRCULAR and "
++                            "CIRCULAR_UNIFORM.");
++                }
++                if (!std::isfinite(*config.pipeRadius) || !(*config.pipeRadius > 0.0)
++                    || *config.pipeRadius < config.beamRadius) {
++                    throw OpalException(
++                            "validateSpaceChargeConfig",
++                            "FFT2D5 PIPERADIUS must be finite, positive and at least BEAMR.");
++                }
++            } else if (config.longitudinalFieldMode == FFT2D5LongitudinalFieldMode::UniformRound) {
++                throw OpalException(
++                        "validateSpaceChargeConfig",
++                        "FFT2D5 CIRCULAR_UNIFORM requires an explicit physical PIPERADIUS.");
++            }
+         }
+ 
+     }  // namespace
+diff --git a/src/SpaceCharge/SpaceChargeConfig.h b/src/SpaceCharge/SpaceChargeConfig.h
+index 24549f183..204bdda53 100644
+--- a/src/SpaceCharge/SpaceChargeConfig.h
++++ b/src/SpaceCharge/SpaceChargeConfig.h
+@@ -23,7 +23,13 @@ namespace opalx::spacecharge {
+     enum class FieldBoundaryCondition : std::uint8_t { Open, Dirichlet, Periodic };
+     enum class GreenFunctionType : std::uint8_t { Standard, Integrated };
+     enum class BinningVariable : std::uint8_t { VelocityZ, PositionZ, MomentumZ, GammaZ };
+-    enum class FFT2D5LongitudinalFieldMode : std::uint8_t { Open, Cylindrical, Plates, None };
++    enum class FFT2D5LongitudinalFieldMode : std::uint8_t {
++        Open,
++        Cylindrical,
++        Plates,
++        None,
++        UniformRound
++    };
+ 
+     /** @brief Backend-independent settings for a 3D Poisson solve. */
+     struct PoissonSolverConfig {
+@@ -110,8 +116,14 @@ namespace opalx::spacecharge {
+         double pipeSizeX                                  = 1.0;
+         double pipeSizeY                                  = 1.0;
+         double beamRadius                                 = 1.0;
+-        bool closedRing                                   = false;
+-        bool scatterLongitudinally                        = true;
++        /**
++         * @brief Physical circular-pipe radius, independent of the transverse numerical widths.
++         * Required by UniformRound; optional for the legacy Cylindrical moment model.
++         * An absent value retains the legacy Cylindrical width-based convention.
++         */
++        std::optional<double> pipeRadius;
++        bool closedRing            = false;
++        bool scatterLongitudinally = true;
+         std::string referencePathFile;
+     };
+ 
+diff --git a/src/SpaceCharge/SpaceChargeConfigBuilder.cpp b/src/SpaceCharge/SpaceChargeConfigBuilder.cpp
+index 15a5bf913..aa8e25a31 100644
+--- a/src/SpaceCharge/SpaceChargeConfigBuilder.cpp
++++ b/src/SpaceCharge/SpaceChargeConfigBuilder.cpp
+@@ -77,6 +77,9 @@ namespace opalx::spacecharge {
+             if (name == "CIRCULAR") {
+                 return FFT2D5LongitudinalFieldMode::Cylindrical;
+             }
++            if (name == "CIRCULAR_UNIFORM") {
++                return FFT2D5LongitudinalFieldMode::UniformRound;
++            }
+             if (name == "PLATES") {
+                 return FFT2D5LongitudinalFieldMode::Plates;
+             }
+@@ -298,6 +301,11 @@ namespace opalx::spacecharge {
+         grid.decomposition              = {decomposition[0], decomposition[1], decomposition[2]};
+         grid.boundingBoxIncreasePercent = fieldSolver.getBoxIncr();
+ 
++        if (fieldSolver.hasPipeRadius() && solverType != FieldSolverCmdType::FFT2D5) {
++            throw OpalException(
++                    "buildSpaceChargeConfig", "PIPERADIUS requires FIELDSOLVER TYPE=FFT2D5.");
++        }
++
+         if (solverType == FieldSolverCmdType::FFT2D5) {
+             if (ippl::Comm->size() != 1) {
+                 throw OpalException("buildSpaceChargeConfig", "FFT2D5 supports only one MPI rank.");
+@@ -332,6 +340,9 @@ namespace opalx::spacecharge {
+             values.pipeSizeX             = fieldSolver.getPipeSizeX();
+             values.pipeSizeY             = fieldSolver.getPipeSizeY();
+             values.beamRadius            = fieldSolver.getBeamRadius();
++            if (fieldSolver.hasPipeRadius()) {
++                values.pipeRadius = fieldSolver.getPipeRadius();
++            }
+             values.closedRing            = fieldSolver.getClosedRing();
+             values.scatterLongitudinally = fieldSolver.getScatterLongitudinally();
+             values.referencePathFile     = resolveReferencePath(fieldSolver);
+diff --git a/src/Structure/FieldSolverCmd.cpp b/src/Structure/FieldSolverCmd.cpp
+index c77678636..53b3c33ff 100644
+--- a/src/Structure/FieldSolverCmd.cpp
++++ b/src/Structure/FieldSolverCmd.cpp
+@@ -93,19 +93,26 @@ FieldSolverCmd::FieldSolverCmd()
+     // Attributes for FFT2D5 mode
+     itsAttr[FIELDSOLVER::PIPEMODE] = Attributes::makePredefinedString(
+             "PIPEMODE",
+-            "Longitudinal-field geometry model; transverse Poisson slices remain open [FFT2D5].",
+-            {"OPEN", "CIRCULAR", "PLATES", "NONE"}, "OPEN");
++            "OPEN: finite-source fields on a straight/circular thin mesh. Other values: open "
++            "transverse slices with a local longitudinal model; CIRCULAR_UNIFORM requires "
++            "PIPERADIUS [FFT2D5].",
++            {"OPEN", "CIRCULAR", "CIRCULAR_UNIFORM", "PLATES", "NONE"}, "OPEN");
+     itsAttr[FIELDSOLVER::BEAMR] =
+             Attributes::makeReal("BEAMR", "Beam radius in metres [FFT2D5 only]", 1.0);
++    itsAttr[FIELDSOLVER::PIPERADIUS] = Attributes::makeReal(
++            "PIPERADIUS",
++            "Physical circular-pipe radius in metres, independent of numerical widths; required "
++            "for CIRCULAR_UNIFORM and optional for legacy CIRCULAR [FFT2D5 only].",
++            0.0);
+     itsAttr[FIELDSOLVER::CLOSEDRING] =
+             Attributes::makeBool("CLOSEDRING", "TRUE if the ring is closed [FFT2D5 only]", false);
+     itsAttr[FIELDSOLVER::SCATTERLONGITUDINALLY] = Attributes::makeBool(
+             "SCATTERLONGITUDINALLY",
+             "TRUE to scatter charge longitudinally across slices [FFT2D5 only]", true);
+     itsAttr[FIELDSOLVER::PIPESIZEX] = Attributes::makeReal(
+-            "PIPESIZEX", "Beam pipe horizontal size in metres [FFT2D5 only]", 1.0);
++            "PIPESIZEX", "Full horizontal numerical width in metres [FFT2D5 only]", 1.0);
+     itsAttr[FIELDSOLVER::PIPESIZEY] = Attributes::makeReal(
+-            "PIPESIZEY", "Beam pipe vertical size in metres [FFT2D5 only]", 1.0);
++            "PIPESIZEY", "Full vertical numerical width in metres [FFT2D5 only]", 1.0);
+     itsAttr[FIELDSOLVER::REFPATHFNAME] =
+             Attributes::makeString("REFPATHFNAME", "Reference path file name [FFT2D5 only]", "");
+ 
+@@ -193,6 +200,12 @@ std::string FieldSolverCmd::getPipeMode() const {
+ double FieldSolverCmd::getBeamRadius() const {
+     return Attributes::getReal(itsAttr[FIELDSOLVER::BEAMR]);
+ }
++double FieldSolverCmd::getPipeRadius() const {
++    return Attributes::getReal(itsAttr[FIELDSOLVER::PIPERADIUS]);
++}
++bool FieldSolverCmd::hasPipeRadius() const {
++    return !itsAttr[FIELDSOLVER::PIPERADIUS].defaultUsed();
++}
+ bool FieldSolverCmd::getClosedRing() const {
+     return Attributes::getBool(itsAttr[FIELDSOLVER::CLOSEDRING]);
+ }
+@@ -214,6 +227,9 @@ void FieldSolverCmd::setPipeMode(const std::string& pipeMode) {
+ void FieldSolverCmd::setBeamRadius(const double beamRadius) {
+     Attributes::setReal(itsAttr[FIELDSOLVER::BEAMR], beamRadius);
+ }
++void FieldSolverCmd::setPipeRadius(const double pipeRadius) {
++    Attributes::setReal(itsAttr[FIELDSOLVER::PIPERADIUS], pipeRadius);
++}
+ void FieldSolverCmd::setClosedRing(const bool closedRing) {
+     Attributes::setBool(itsAttr[FIELDSOLVER::CLOSEDRING], closedRing);
+ }
+@@ -280,6 +296,16 @@ Inform& FieldSolverCmd::printInfo(Inform& os) const {
+         }
+     }
+ 
++    if (getType() == "FFT2D5") {
++        os << "* PIPEMODE     " << getPipeMode() << '\n'
++           << "* BEAMR        " << getBeamRadius() << " [m]" << '\n'
++           << "* PIPESIZEX    " << getPipeSizeX() << " [m, full numerical width]" << '\n'
++           << "* PIPESIZEY    " << getPipeSizeY() << " [m, full numerical width]" << '\n';
++        if (hasPipeRadius()) {
++            os << "* PIPERADIUS   " << getPipeRadius() << " [m, physical radius]" << endl;
++        }
++    }
++
+     if (Attributes::getBool(itsAttr[FIELDSOLVER::PARFFTX])) {
+         os << "* XDIM         parallel  " << endl;
+     } else {
+diff --git a/src/Structure/FieldSolverCmd.h b/src/Structure/FieldSolverCmd.h
+index cb1222f8e..145f8cbbe 100644
+--- a/src/Structure/FieldSolverCmd.h
++++ b/src/Structure/FieldSolverCmd.h
+@@ -35,27 +35,28 @@ enum class FieldSolverCmdType : short { NONE = -1, FFT = 0, OPEN = 1, CG = 2, P3
+ // The attributes of class FieldSolverCmd.
+ namespace FIELDSOLVER {
+     enum {
+-        TYPE,          // The field solver name
+-        BINS,          // Name of BINNING definition or NONE
+-        NX,            // mesh size in x
+-        NY,            // mesh size in y
+-        NZ,            // mesh size in z
+-        PARFFTX,       // parallelized grid in x
+-        PARFFTY,       // parallelized grid in y
+-        PARFFTZ,       // parallelized grid in z
+-        BCFFTX,        // Poisson-domain boundary in x
+-        BCFFTY,        // Poisson-domain boundary in y
+-        BCFFTZ,        // Poisson-domain boundary in z
+-        GREENSF,       // Green function for OPEN; P3M selects its kernel internally
+-        P3MRCUT,       // P3M particle-particle cutoff radius [m]
+-        P3MRCUTCELLS,  // P3M cutoff in units of the largest mesh spacing
+-        BBOXINCR,      // how much the boundingbox is increased
+-        PIPEMODE,      // One of OPEN, CIRCULAR, PLATES, NONE [FFT2D5 only]
+-        BEAMR,         // Beam radius in metres [FFT2D5 only]
+-        CLOSEDRING,    // TRUE if the ring is closed [FFT2D5 only]
+-        PIPESIZEX,     // Size of the pipe in meters in the transverse direction [FFT2D5 only]
+-        PIPESIZEY,     // Size of the pipe in meters in the vertical direction [FFT2D5 only]
+-        REFPATHFNAME,  // Reference path file name [FFT2D5 only]
++        TYPE,                   // The field solver name
++        BINS,                   // Name of BINNING definition or NONE
++        NX,                     // mesh size in x
++        NY,                     // mesh size in y
++        NZ,                     // mesh size in z
++        PARFFTX,                // parallelized grid in x
++        PARFFTY,                // parallelized grid in y
++        PARFFTZ,                // parallelized grid in z
++        BCFFTX,                 // Poisson-domain boundary in x
++        BCFFTY,                 // Poisson-domain boundary in y
++        BCFFTZ,                 // Poisson-domain boundary in z
++        GREENSF,                // Green function for OPEN; P3M selects its kernel internally
++        P3MRCUT,                // P3M particle-particle cutoff radius [m]
++        P3MRCUTCELLS,           // P3M cutoff in units of the largest mesh spacing
++        BBOXINCR,               // how much the boundingbox is increased
++        PIPEMODE,               // Longitudinal geometry/profile model [FFT2D5 only]
++        BEAMR,                  // Beam radius in metres [FFT2D5 only]
++        PIPERADIUS,             // Physical circular-pipe radius in metres [FFT2D5 only]
++        CLOSEDRING,             // TRUE if the ring is closed [FFT2D5 only]
++        PIPESIZEX,              // Full horizontal numerical width in metres [FFT2D5 only]
++        PIPESIZEY,              // Full vertical numerical width in metres [FFT2D5 only]
++        REFPATHFNAME,           // Reference path file name [FFT2D5 only]
+         SCATTERLONGITUDINALLY,  // Scatter charge between longitudinal slices [FFT2D5 only]
+         SIZE
+     };
+@@ -122,6 +123,8 @@ public:
+ 
+     std::string getPipeMode() const;
+     double getBeamRadius() const;
++    double getPipeRadius() const;
++    bool hasPipeRadius() const;
+     bool getClosedRing() const;
+     bool getScatterLongitudinally() const;
+     double getPipeSizeX() const;
+@@ -129,6 +132,7 @@ public:
+     std::string getRefPathFileName() const;
+     void setPipeMode(const std::string& pipeMode);
+     void setBeamRadius(double beamRadius);
++    void setPipeRadius(double pipeRadius);
+     void setClosedRing(bool closedRing);
+     void setScatterLongitudinally(bool val);
+     void setPipeSizeX(double pipeSizeX);
+diff --git a/unit_tests/SpaceCharge/CMakeLists.txt b/unit_tests/SpaceCharge/CMakeLists.txt
+index fb3f0b66f..b242ea761 100644
+--- a/unit_tests/SpaceCharge/CMakeLists.txt
++++ b/unit_tests/SpaceCharge/CMakeLists.txt
+@@ -3,6 +3,8 @@ message(STATUS "Adding unit tests found in ${_relPath}")
+ 
+ add_opalx_test(TestSpaceChargeConfig USE_GTEST_MAIN)
+ add_opalx_test(TestFFT2D5Algorithm USE_GTEST_MAIN RUN_SERIAL)
++add_opalx_test(TestFFT2D5Geometry USE_GTEST_MAIN RUN_SERIAL)
++add_opalx_test(TestFFT2D5FreeSpace USE_GTEST_MAIN RUN_SERIAL)
+ add_opalx_test(TestFFT2D5Numerics USE_GTEST_MAIN RUN_SERIAL)
+ add_opalx_test(TestSpaceChargeSolver USE_GTEST_MAIN RUN_SERIAL)
+ add_opalx_test(TestParticleBinTraversal USE_GTEST_MAIN RUN_SERIAL)
+diff --git a/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp b/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
+index 0551ab083..ee90203d0 100644
+--- a/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
++++ b/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
+@@ -250,7 +250,7 @@ namespace opalx::spacecharge {
+             SpaceChargeSolveContext context(activity, step);
+ 
+             const SpaceChargeSolveResult result = solver.solve(context);
+-            EXPECT_EQ(result.backendSolves, 4u);
++            EXPECT_EQ(result.backendSolves, 1u);
+             EXPECT_FALSE(particles_m->isMomentsDirty());
+             const auto restored = Kokkos::create_mirror_view_and_copy(
+                     Kokkos::HostSpace(), particles_m->R.getView());
+@@ -402,6 +402,67 @@ namespace opalx::spacecharge {
+             }
+         }
+ 
++        TEST_F(FFT2D5AlgorithmTest, CircularFiniteFieldsSurviveReferenceFrameChanges) {
++            // Physical circular source and path stay fixed while the tracker pose changes.
++            std::ofstream path(pathFile_m);
++            path << std::setprecision(17) << "s rx ry rz px py pz ex ey ez bx by bz ke t\n";
++            for (unsigned i = 0; i <= 40; ++i) {
++                const double s = -4.0 + .2 * i;
++                path << s + 4.0 << " " << 2.0 * (std::cos(s / 2.0) - 1.0)
++                     << " 0 " << 2.0 * std::sin(s / 2.0) << " 0 0 1 0 0 0 0 0 0 0 0\n";
++            }
++            path.close();
++            Vectors positions, momenta;
++            for (std::size_t i = 0; i < sourceSize; ++i) {
++                const double s = -2.0 + 4.0 * i / (sourceSize - 1);
++                const double u = .002 * (i % 2 ? 1.0 : -1.0);
++                positions[i] = Vector((2.0 + u) * std::cos(s / 2.0) - 2.0,
++                                      .0001 * (i % 2 ? -1.0 : 1.0),
++                                      (2.0 + u) * std::sin(s / 2.0));
++                momenta[i] = Vector(-.001 * std::sin(s / 2.0), 0.0,
++                                     .001 * std::cos(s / 2.0));
++            }
++            const auto setSource = [&](const CoordinateSystemTrafo& referenceToLab) {
++                setPhysicalSource(positions, Vector(0, 0, .001), referenceToLab);
++                auto p = particles_m->P.getHostMirror();
++                for (std::size_t i = 0; i < sourceSize; ++i)
++                    p(i) = referenceToLab.rotateFrom(momenta[i]);
++                Kokkos::deep_copy(particles_m->P.getView(), p);
++                particles_m->markMomentsDirty();
++                particles_m->updateMoments();
++            };
++            auto values = config(FFT2D5LongitudinalFieldMode::Open);
++            values.grid.meshSize = {16, 16, 64};
++            values.pipeSizeX = .02;
++            values.pipeSizeY = .004;
++            std::array particles{particles_m.get()};
++            FFT2D5Algorithm solver(values, particles, bunchState_m);
++            const std::array<std::uint8_t, 1> activity{1};
++            Vectors expected;
++            for (const double angle : {0.0, .45, 1.1}) {
++                const CoordinateSystemTrafo pose(Vector(.2, 0.0, -.3),
++                    Quaternion(std::cos(angle / 2), 0.0, std::sin(angle / 2), 0.0));
++                setSource(pose);
++                ASSERT_EQ(solver.solve({activity, alignedStep(-.37)}).backendSolves, 1u);
++                expectDepositedCharge(solver);
++                const auto actual = physicalFields(true);
++                if (angle == 0.0) expected = actual;
++                else for (std::size_t i = 0; i < sourceSize; ++i)
++                    for (unsigned d = 0; d < 3; ++d)
++                        EXPECT_NEAR(actual[i][d], expected[i][d], 1e-9);
++            }
++            // The curved backend cannot silently treat a relativistic source as electrostatic.
++            Kokkos::deep_copy(particles_m->P.getView(), Vector(0, 0, 1.0));
++            particles_m->markMomentsDirty();
++            particles_m->updateMoments();
++            const auto before = particles_m->R.getHostMirror();
++            Kokkos::deep_copy(before, particles_m->R.getView());
++            EXPECT_THROW(solver.solve({activity, alignedStep(0.0)}), OpalException);
++            const auto after = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), particles_m->R.getView());
++            for (std::size_t i = 0; i < sourceSize; ++i)
++                for (unsigned d = 0; d < 3; ++d) EXPECT_NEAR(after(i)[d], before(i)[d], 1e-13);
++        }
++
+         TEST_F(FFT2D5AlgorithmTest, CoverageFailureRestoresReferenceCoordinatesAndTimeSteps) {
+             Vectors positions = sourcePositions();
+             positions[0][2]   = 1.2;
+@@ -441,7 +502,7 @@ namespace opalx::spacecharge {
+             step.timeStep = 1.0e-12;
+             const std::array<std::uint8_t, 2> activity{1, 0};
+             SpaceChargeSolveContext context(activity, step);
+-            EXPECT_EQ(solver.solve(context).backendSolves, 4u);
++            EXPECT_EQ(solver.solve(context).backendSolves, 1u);
+             auto firstE = Kokkos::create_mirror_view_and_copy(
+                     Kokkos::HostSpace(), particles_m->E.getView());
+             auto firstB = Kokkos::create_mirror_view_and_copy(
+@@ -449,7 +510,7 @@ namespace opalx::spacecharge {
+             auto* fieldAllocation = particles_m->E.getView().data();
+             Kokkos::deep_copy(particles_m->E.getView(), Vector_t<double, 3>(123.0));
+             Kokkos::deep_copy(particles_m->B.getView(), Vector_t<double, 3>(456.0));
+-            EXPECT_EQ(solver.solve(context).backendSolves, 4u);
++            EXPECT_EQ(solver.solve(context).backendSolves, 1u);
+             EXPECT_EQ(particles_m->E.getView().data(), fieldAllocation);
+             auto repeatedE = Kokkos::create_mirror_view_and_copy(
+                     Kokkos::HostSpace(), particles_m->E.getView());
+diff --git a/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp b/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp
+index 2ad650423..e5146613c 100644
+--- a/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp
++++ b/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp
+@@ -102,6 +102,53 @@ namespace {
+         return force;
+     }
+ 
++    // Grounded round-pipe potential per unit line charge. Integrate the
++    // Gauss-law radial field in real space instead of reproducing the
++    // production longitudinal geometry factor. Split at the beam surface so
++    // Simpson quadrature sees smooth integrands on both intervals.
++    double referenceUniformRoundPipePotential(
++            const double radius, const double beamRadius, const double pipeRadius) {
++        const auto integrate = [](const double low, const double high, const auto& field) {
++            constexpr int intervals = 1024;
++            if (low == high) {
++                return 0.0;
++            }
++            const double step = (high - low) / intervals;
++            double sum        = field(low) + field(high);
++            for (int i = 1; i < intervals; ++i) {
++                sum += (i % 2 == 0 ? 2.0 : 4.0) * field(low + i * step);
++            }
++            return sum * step / 3.0;
++        };
++        const auto interior = [beamRadius](const double r) {
++            return r / (2 * Physics::pi * Physics::epsilon_0 * beamRadius * beamRadius);
++        };
++        const auto exterior = [](const double r) {
++            return 1 / (2 * Physics::pi * Physics::epsilon_0 * r);
++        };
++        if (radius < beamRadius) {
++            return integrate(radius, beamRadius, interior)
++                   + integrate(beamRadius, pipeRadius, exterior);
++        }
++        return integrate(radius, pipeRadius, exterior);
++    }
++
++    double referenceTriangularPipeField(
++            const double radius, const double z, const double beamRadius,
++            const double pipeRadius, const double longitudinalMomentum) {
++        constexpr double halfLength = 3.0, peakLineCharge = 1e-9, derivativeStep = 0.01;
++        const auto potential = [&](const double coordinate) {
++            const double lineCharge =
++                    peakLineCharge * (1 - std::abs(coordinate - halfLength) / halfLength);
++            return lineCharge
++                   * referenceUniformRoundPipePotential(radius, beamRadius, pipeRadius);
++        };
++        // A prescribed moving source has E_s=-gamma^-2*d(phi_lab)/ds.
++        // All targets lie on a linear branch, far from the cusp and ends.
++        return -(potential(z + derivativeStep) - potential(z - derivativeStep))
++               / (2 * derivativeStep * (1 + longitudinalMomentum * longitudinalMomentum));
++    }
++
+     class TestableFieldSolverCmd final : public FieldSolverCmd {
+     public:
+         void setType(const std::string& t) {
+@@ -354,6 +401,10 @@ namespace {
+             // Keep mesh small so scatter/solve/gather are quick.
+             fsCmd_m = std::make_shared<TestableFieldSolverCmd>();
+             fsCmd_m->setType("NONE");
++            // This fixture exercises the legacy transverse slice stages and
++            // polyline mapping. Finite-source OPEN has independent backend/API
++            // tests; tests of local longitudinal stages select CIRCULAR below.
++            fsCmd_m->setPipeMode("NONE");
+             fsCmd_m->setNX(nx);
+             fsCmd_m->setNY(ny);
+             fsCmd_m->setNZ(nz);
+@@ -427,6 +478,46 @@ namespace {
+             Kokkos::fence();
+         }
+ 
++        void setTriangularRoundLineDensity() const {
++            auto* rho       = solver_m->getRho();
++            const auto host = rho->getHostMirror();
++            Kokkos::deep_copy(host, 0.0);
++            const int ng = rho->getNghost();
++            const int mx = static_cast<int>(fsCmd_m->getNX());
++            const int my = static_cast<int>(fsCmd_m->getNY());
++            const int mz = static_cast<int>(fsCmd_m->getNZ());
++            const double wx = fsCmd_m->getPipeSizeX(), wy = fsCmd_m->getPipeSizeY();
++            const double dx = wx / mx, dy = wy / my, dz = 6.0 / mz;
++            const double beamRadius = fsCmd_m->getBeamRadius();
++            std::vector<std::array<int, 2>> occupied;
++            for (int i = 0; i < mx; ++i) {
++                for (int j = 0; j < my; ++j) {
++                    const double x = -0.5 * wx + (i + 0.5) * dx;
++                    const double y = -0.5 * wy + (j + 0.5) * dy;
++                    if (x * x + y * y < beamRadius * beamRadius) {
++                        occupied.push_back({i, j});
++                    }
++                }
++            }
++            ASSERT_FALSE(occupied.empty());
++            for (int k = 0; k < mz; ++k) {
++                const double z      = (k + 0.5) * dz;
++                const double lambda = 1e-9 * (1 - std::abs(z - 3.0) / 3.0);
++                // The finite disk cells have constant transverse density;
++                // normalize their area so the line charge is exact on every
++                // mesh. This isolates longitudinal physics from disk sampling.
++                const double density = lambda / (occupied.size() * dx * dy);
++                for (const auto& cell : occupied) {
++                    host(ng + cell[0], ng + cell[1], ng + k) = density;
++                }
++            }
++            Kokkos::deep_copy(rho->getView(), host);
++            Kokkos::deep_copy(solver_m->getEField()->getView(), Point_t(0, 0, 0));
++            pc_m->markMomentsDirty();
++            pc_m->updateMoments();
++            solver_m->calculateLineDensity();
++        }
++
+         SpaceChargeSolveContext context() const {
+             SpaceChargeStepState step;
+             step.timeStep = bunch_m->getdT();
+@@ -434,6 +525,16 @@ namespace {
+             return {activity_m, step};
+         }
+ 
++        double referenceCircularGeometryFactor() const {
++            // Legacy CIRCULAR uses the transverse-moment coefficient. Keep its
++            // specified geometry explicit rather than retaining OPEN's old 6.36.
++            const double radius =
++                    fsCmd_m->hasPipeRadius()
++                            ? fsCmd_m->getPipeRadius()
++                            : std::min(fsCmd_m->getPipeSizeX(), fsCmd_m->getPipeSizeY());
++            return 0.67 + 2.0 * std::log(radius / fsCmd_m->getBeamRadius());
++        }
++
+         void rebuildBunch() {
+             solver_m.reset();
+             pc_m.reset();
+@@ -1117,6 +1218,7 @@ namespace {
+     TEST_F(TestSolve2d5, TotalDensity_Simple) {
+         makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
++        fsCmd_m->setPipeMode("CIRCULAR");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+         fsCmd_m->setNZ(12);
+@@ -1134,6 +1236,7 @@ namespace {
+     TEST_F(TestSolve2d5, LineDensity_Simple) {
+         makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
++        fsCmd_m->setPipeMode("CIRCULAR");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+         fsCmd_m->setNZ(12);
+@@ -1151,6 +1254,7 @@ namespace {
+     TEST_F(TestSolve2d5, LineDensityGradient_Simple) {
+         makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
++        fsCmd_m->setPipeMode("CIRCULAR");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+         fsCmd_m->setNZ(12);
+@@ -1169,6 +1273,7 @@ namespace {
+     TEST_F(TestSolve2d5, LineDensity_RingNotClosed) {
+         makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
++        fsCmd_m->setPipeMode("CIRCULAR");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+         fsCmd_m->setNZ(12);
+@@ -1187,6 +1292,7 @@ namespace {
+     TEST_F(TestSolve2d5, LineDensity_RingClosed) {
+         makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
++        fsCmd_m->setPipeMode("CIRCULAR");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+         fsCmd_m->setNZ(12);
+@@ -1590,6 +1696,7 @@ namespace {
+     TEST_F(TestSolve2d5, OpenReferencePathRejectsEndpointPileup) {
+         makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
++        fsCmd_m->setPipeMode("OPEN");
+         fsCmd_m->setClosedRing(false);
+         for (const double z : {-0.1, 6.1}) {
+             SCOPED_TRACE(z);
+@@ -1669,7 +1776,7 @@ namespace {
+         fsCmd_m->setNZ(12);
+         fsCmd_m->setPipeSizeX(2);
+         fsCmd_m->setPipeSizeY(2);
+-        fsCmd_m->setPipeMode("OPEN");
++        fsCmd_m->setPipeMode("CIRCULAR");
+         constexpr double lambda0 = 1e-9, halfLength = 3.0, dz = 0.5;
+         for (const bool scatter : {false, true}) {
+             fsCmd_m->setScatterLongitudinally(scatter);
+@@ -1699,9 +1806,10 @@ namespace {
+                 solver_m->gatherFromGrid(context());
+                 const auto e =
+                         Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), pc_m->E.getView());
+-                const double coefficient = 6.36 * lambda0
+-                                           / (2 * Physics::pi * Physics::epsilon_0 * (1 + ps * ps)
+-                                              * halfLength * halfLength);
++                const double coefficient =
++                        referenceCircularGeometryFactor() * lambda0
++                        / (2 * Physics::pi * Physics::epsilon_0 * (1 + ps * ps) * halfLength
++                           * halfLength);
+                 double total = 0;
+                 for (std::size_t i = 0; i < probes.size(); ++i) {
+                     EXPECT_NEAR(e(i)[2], coefficient * (probes[i][2] - halfLength), 1e-9);
+@@ -1712,9 +1820,128 @@ namespace {
+         }
+     }
+ 
++    TEST_F(TestSolve2d5, UniformRoundPipeLongitudinalFieldMatchesGaussLawPotential) {
++        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        fsCmd_m->setType("FFT2D5");
++        fsCmd_m->setNX(32);
++        fsCmd_m->setNY(32);
++        fsCmd_m->setNZ(24);
++        fsCmd_m->setPipeSizeX(4);
++        fsCmd_m->setPipeSizeY(4);
++        fsCmd_m->setPipeMode("CIRCULAR_UNIFORM");
++        constexpr double beamRadius = 0.25, pipeRadius = 1.0;
++        fsCmd_m->setBeamRadius(beamRadius);
++        fsCmd_m->setPipeRadius(pipeRadius);
++        for (const bool scatter : {false, true}) {
++            fsCmd_m->setScatterLongitudinally(scatter);
++            for (const double ps : {0.0, 0.4, 1.0, -0.4}) {
++                SCOPED_TRACE(testing::Message() << "CIC=" << scatter << ", ps=" << ps);
++                rebuildBunch();
++                std::vector<Point_t> probes;
++                for (const double z : {1.35, 4.65}) {
++                    probes.emplace_back(0, 0, z);
++                    for (const double radius :
++                         {beamRadius / 2, beamRadius, (beamRadius + pipeRadius) / 2, pipeRadius}) {
++                        // Check both transverse axes and signs, including the
++                        // beam surface, vacuum annulus and grounded wall.
++                        probes.emplace_back(radius, 0, z);
++                        probes.emplace_back(-radius, 0, z);
++                        probes.emplace_back(0, radius, z);
++                        probes.emplace_back(0, -radius, z);
++                    }
++                }
++                createParticles(probes, std::vector<Point_t>(probes.size(), Point_t(0, 0, ps)));
++                setTriangularRoundLineDensity();
++                solver_m->gatherFromGrid(context());
++                const auto e =
++                        Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), pc_m->E.getView());
++                double total = 0;
++                for (size_t i = 0; i < probes.size(); ++i) {
++                    const double radius = std::hypot(probes[i][0], probes[i][1]);
++                    const double expected = referenceTriangularPipeField(
++                            radius, probes[i][2], beamRadius, pipeRadius, ps);
++                    // The independent 1024-panel radial quadrature and
++                    // finite-s derivative are accurate to much better than
++                    // this 2e-8 relative field tolerance for b/a<=6.
++                    EXPECT_NEAR(e(i)[2], expected, 2e-8 * std::max(1.0, std::abs(expected)));
++                    total += e(i)[2];
++                }
++                EXPECT_NEAR(total, 0.0, 2e-8);
++            }
++        }
++    }
++
++    TEST_F(TestSolve2d5, UniformRoundPipePhysicalRadiusIsIndependentOfMeshWidth) {
++        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        fsCmd_m->setType("FFT2D5");
++        fsCmd_m->setNX(32);
++        fsCmd_m->setNY(32);
++        fsCmd_m->setNZ(24);
++        fsCmd_m->setPipeMode("CIRCULAR_UNIFORM");
++        fsCmd_m->setScatterLongitudinally(true);
++        constexpr double beamRadius = 0.25, probeRadius = 0.125, ps = 0.4;
++        fsCmd_m->setBeamRadius(beamRadius);
++        std::array<double, 2> firstWidthFields{};
++        size_t widthIndex = 0;
++        for (const double width : {4.0, 6.0}) {
++            fsCmd_m->setPipeSizeX(width);
++            fsCmd_m->setPipeSizeY(width);
++            size_t radiusIndex = 0;
++            for (const double pipeRadius : {1.0, 1.5}) {
++                SCOPED_TRACE(testing::Message() << "width=" << width << ", b=" << pipeRadius);
++                fsCmd_m->setPipeRadius(pipeRadius);
++                rebuildBunch();
++                createParticles({{probeRadius, 0, 1.35}}, {{0, 0, ps}});
++                setTriangularRoundLineDensity();
++                solver_m->gatherFromGrid(context());
++                const auto e =
++                        Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), pc_m->E.getView());
++                const double expected = referenceTriangularPipeField(
++                        probeRadius, 1.35, beamRadius, pipeRadius, ps);
++                EXPECT_NEAR(e(0)[2], expected, 2e-8 * std::abs(expected));
++                if (widthIndex == 0) {
++                    firstWidthFields[radiusIndex] = e(0)[2];
++                } else {
++                    EXPECT_NEAR(e(0)[2], firstWidthFields[radiusIndex], 1e-10);
++                }
++                ++radiusIndex;
++            }
++            ++widthIndex;
++        }
++        // Increasing the physical wall radius changes the field through the
++        // added vacuum annulus; changing the open numerical box above did not.
++        EXPECT_LT(firstWidthFields[1], firstWidthFields[0]);
++        EXPECT_GT(std::abs(firstWidthFields[1] - firstWidthFields[0]), 1.0);
++    }
++
++    TEST_F(TestSolve2d5, UniformRoundPipeRejectsParticlesOutsidePhysicalWall) {
++        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++        fsCmd_m->setType("FFT2D5");
++        fsCmd_m->setNX(16);
++        fsCmd_m->setNY(16);
++        fsCmd_m->setNZ(12);
++        fsCmd_m->setPipeSizeX(4);
++        fsCmd_m->setPipeSizeY(4);
++        fsCmd_m->setPipeMode("CIRCULAR_UNIFORM");
++        fsCmd_m->setBeamRadius(0.25);
++        fsCmd_m->setPipeRadius(1.0);
++        rebuildBunch();
++        createParticles({{1.01, 0, 1.5}}, {{0, 0, 0}});
++        EXPECT_THROW(solver_m->scatterToGrid(context()), OpalException);
++        EXPECT_THROW(solver_m->gatherFromGrid(context()), OpalException);
++
++        rebuildBunch();
++        createParticles({{0, 0, 1.5}, {1.01, 0, 1.5}}, {{0, 0, 0}, {0, 0, 0}}, {false, true});
++        EXPECT_NO_THROW(solver_m->scatterToGrid(context()));
++        solver_m->calculateLineDensity();
++        Kokkos::deep_copy(solver_m->getEField()->getView(), Point_t(0, 0, 0));
++        EXPECT_NO_THROW(solver_m->gatherFromGrid(context()));
++    }
++
+     TEST_F(TestSolve2d5, ClosedLongitudinalGatherWrapsCellCenters) {
+         makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
++        fsCmd_m->setPipeMode("CIRCULAR");
+         fsCmd_m->setNZ(12);
+         fsCmd_m->setClosedRing(true);
+         fsCmd_m->setScatterLongitudinally(true);
+@@ -1728,7 +1955,7 @@ namespace {
+         Kokkos::deep_copy(solver_m->getEField()->getView(), Point_t(0, 0, 0));
+         solver_m->gatherFromGrid(context());
+         const auto e = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), pc_m->E.getView());
+-        const double expected = -6.36 / (4 * Physics::pi * Physics::epsilon_0) * 6.5e-9;
++        const double expected = -referenceCircularGeometryFactor() / (4 * Physics::pi * Physics::epsilon_0) * 6.5e-9;
+         EXPECT_NEAR(e(0)[2], expected, 1e-9);
+         EXPECT_NEAR(e(1)[2], expected, 1e-9);
+     }
+@@ -1736,6 +1963,7 @@ namespace {
+     TEST_F(TestSolve2d5, LongitudinalField_Simple) {
+         makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
++        fsCmd_m->setPipeMode("CIRCULAR");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+         fsCmd_m->setNZ(12);
+@@ -1904,6 +2132,7 @@ namespace {
+     TEST_F(TestSolve2d5, LabFrameFields_ClosedRing) {
+         makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
++        fsCmd_m->setPipeMode("CIRCULAR");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+         fsCmd_m->setNZ(12);
+@@ -1925,30 +2154,35 @@ namespace {
+         auto [e, b] = info->getParticleFields();
+         ASSERT_EQ(e.size(), 3);
+         ASSERT_EQ(b.size(), 3);
++// CIC gives lambda' = +0.5 at the pair and -1 at the endpoint;
++        // gamma²=2, so the endpoint Es is minus twice the pair Es.
++        const double longitudinalFieldScale =
++                referenceCircularGeometryFactor() / (16 * Physics::pi * Physics::epsilon_0);
+ #if OPALX_FFT2D5_ALGORITHM_USE_IPPL_2D_POISSON_SOLVER
+         expectParticleFields(
+-                0, e, b, {4493908875, 0, -6.36 / (16 * Physics::pi * Physics::epsilon_0)},
++                0, e, b, {4493908875, 0, -longitudinalFieldScale},
+                 {0, (4493908875.0 / (std::sqrt(2.0) * Physics::c)), 0}, 1e6, 1e-4);
+         expectParticleFields(
+-                1, e, b, {-4493908875, 0, -6.36 / (16 * Physics::pi * Physics::epsilon_0)},
++                1, e, b, {-4493908875, 0, -longitudinalFieldScale},
+                 {0, -(4493908875.0 / (std::sqrt(2.0) * Physics::c)), 0}, 1e6, 1e-4);
+-        expectParticleFields(2, e, b, {0, 0, 28.580515699e9}, {0, 0, 0}, 1e6, 1e-4);
++        expectParticleFields(2, e, b, {0, 0, 2 * longitudinalFieldScale}, {0, 0, 0}, 1e6, 1e-4);
+ #else
+         expectParticleFields(
+                 0, e, b,
+-                {referenceTwoParticleForce(), 0, -6.36 / (16 * Physics::pi * Physics::epsilon_0)},
++                {referenceTwoParticleForce(), 0, -longitudinalFieldScale},
+                 {0, (referenceTwoParticleForce() / (std::sqrt(2.0) * Physics::c)), 0}, 1e6, 1e-4);
+         expectParticleFields(
+                 1, e, b,
+-                {-referenceTwoParticleForce(), 0, -6.36 / (16 * Physics::pi * Physics::epsilon_0)},
++                {-referenceTwoParticleForce(), 0, -longitudinalFieldScale},
+                 {0, -(referenceTwoParticleForce() / (std::sqrt(2.0) * Physics::c)), 0}, 1e6, 1e-4);
+-        expectParticleFields(2, e, b, {0, 0, 28.580515699e9}, {0, 0, 0}, 1e6, 1e-4);
++        expectParticleFields(2, e, b, {0, 0, 2 * longitudinalFieldScale}, {0, 0, 0}, 1e6, 1e-4);
+ #endif
+     }
+ 
+     TEST_F(TestSolve2d5, LabFrameFields_OpenRing) {
+         makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
++        fsCmd_m->setPipeMode("CIRCULAR");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+         fsCmd_m->setNZ(12);
+@@ -2099,9 +2333,11 @@ namespace {
+         ASSERT_EQ(b.size(), 0);
+     }
+ 
++    // The main API must preserve the legacy CIRCULAR slice/local-gradient path.
+     TEST_F(TestSolve2d5, LabFrameFields_MainApi) {
+         makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
++        fsCmd_m->setPipeMode("CIRCULAR");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+         fsCmd_m->setNZ(12);
+@@ -2118,16 +2354,20 @@ namespace {
+         const auto bHost = pc.B.getHostMirror();
+         Kokkos::deep_copy(eHost, pc.E.getView());
+         Kokkos::deep_copy(bHost, pc.B.getView());
++// CIC gives lambda' = +0.5 at the pair and -1 at the endpoint;
++        // gamma²=2, so the endpoint Es is minus twice the pair Es.
++        const double longitudinalFieldScale =
++                referenceCircularGeometryFactor() / (16 * Physics::pi * Physics::epsilon_0);
+ #if OPALX_FFT2D5_ALGORITHM_USE_IPPL_2D_POISSON_SOLVER
+         EXPECT_NEAR(eHost(0).data_m[0], 4493908875, 1e6);
+         EXPECT_NEAR(eHost(0).data_m[1], 0, 1e6);
+-        EXPECT_NEAR(eHost(0).data_m[2], -6.36 / (16 * Physics::pi * Physics::epsilon_0), 1e6);
++        EXPECT_NEAR(eHost(0).data_m[2], -longitudinalFieldScale, 1e6);
+         EXPECT_NEAR(eHost(1).data_m[0], -4493908875, 1e6);
+         EXPECT_NEAR(eHost(1).data_m[1], 0, 1e6);
+-        EXPECT_NEAR(eHost(1).data_m[2], -6.36 / (16 * Physics::pi * Physics::epsilon_0), 1e6);
++        EXPECT_NEAR(eHost(1).data_m[2], -longitudinalFieldScale, 1e6);
+         EXPECT_NEAR(eHost(2).data_m[0], 0, 1e6);
+         EXPECT_NEAR(eHost(2).data_m[1], 0, 1e6);
+-        EXPECT_NEAR(eHost(2).data_m[2], 28.580515699e9, 1e6);
++        EXPECT_NEAR(eHost(2).data_m[2], 2 * longitudinalFieldScale, 1e6);
+         EXPECT_NEAR(bHost(0).data_m[0], 0, 1e-4);
+         EXPECT_NEAR(bHost(0).data_m[1], (4493908875.0 / (std::sqrt(2.0) * Physics::c)), 1e-4);
+         EXPECT_NEAR(bHost(0).data_m[2], 0, 1e-4);
+@@ -2140,13 +2380,13 @@ namespace {
+ #else
+         EXPECT_NEAR(eHost(0).data_m[0], referenceTwoParticleForce(), 1e6);
+         EXPECT_NEAR(eHost(0).data_m[1], 0, 1e6);
+-        EXPECT_NEAR(eHost(0).data_m[2], -6.36 / (16 * Physics::pi * Physics::epsilon_0), 1e6);
++        EXPECT_NEAR(eHost(0).data_m[2], -longitudinalFieldScale, 1e6);
+         EXPECT_NEAR(eHost(1).data_m[0], -referenceTwoParticleForce(), 1e6);
+         EXPECT_NEAR(eHost(1).data_m[1], 0, 1e6);
+-        EXPECT_NEAR(eHost(1).data_m[2], -6.36 / (16 * Physics::pi * Physics::epsilon_0), 1e6);
++        EXPECT_NEAR(eHost(1).data_m[2], -longitudinalFieldScale, 1e6);
+         EXPECT_NEAR(eHost(2).data_m[0], 0, 1e6);
+         EXPECT_NEAR(eHost(2).data_m[1], 0, 1e6);
+-        EXPECT_NEAR(eHost(2).data_m[2], 28.580515699e9, 1e6);
++        EXPECT_NEAR(eHost(2).data_m[2], 2 * longitudinalFieldScale, 1e6);
+         EXPECT_NEAR(bHost(0).data_m[0], 0, 1e-4);
+         EXPECT_NEAR(
+                 bHost(0).data_m[1], (referenceTwoParticleForce() / (std::sqrt(2.0) * Physics::c)),
+@@ -2163,9 +2403,12 @@ namespace {
+ #endif
+     }
+ 
++    // Compare the legacy CIRCULAR entry point with its individual slice stages,
++    // including periodic wrapping. Finite-source OPEN does not use these stages.
+     TEST_F(TestSolve2d5, MainApiMatchesDirectStagesForScatterAndBoundaryModes) {
+         makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
+         fsCmd_m->setType("FFT2D5");
++        fsCmd_m->setPipeMode("CIRCULAR");
+         fsCmd_m->setNX(12);
+         fsCmd_m->setNY(12);
+         fsCmd_m->setNZ(12);
+diff --git a/unit_tests/SpaceCharge/TestSpaceChargeConfig.cpp b/unit_tests/SpaceCharge/TestSpaceChargeConfig.cpp
+index 791fc451b..c71b3f9be 100644
+--- a/unit_tests/SpaceCharge/TestSpaceChargeConfig.cpp
++++ b/unit_tests/SpaceCharge/TestSpaceChargeConfig.cpp
+@@ -30,6 +30,7 @@
+ #include "AbstractObjects/OpalData.h"
+ #include "Attributes/Attributes.h"
+ #include "Distribution/Distribution.h"
++#include "Ippl.h"
+ #include "SpaceCharge/SpaceChargeConfig.h"
+ #include "SpaceCharge/SpaceChargeConfigBuilder.h"
+ #include "Structure/EmissionSource.h"
+@@ -50,6 +51,43 @@ namespace opalx::spacecharge {
+             void setCutoffCells(double cells) {
+                 Attributes::setReal(itsAttr[FIELDSOLVER::P3MRCUTCELLS], cells);
+             }
++            void setSerialDimensions() {
++                Attributes::setBool(itsAttr[FIELDSOLVER::PARFFTX], false);
++                Attributes::setBool(itsAttr[FIELDSOLVER::PARFFTY], false);
++                Attributes::setBool(itsAttr[FIELDSOLVER::PARFFTZ], false);
++            }
++        };
++
++        class FFT2D5ConfigBuilderTest : public ::testing::Test {
++        protected:
++            static void SetUpTestSuite() {
++                int argc    = 0;
++                char** argv = nullptr;
++                ippl::initialize(argc, argv);
++            }
++
++            static void TearDownTestSuite() { ippl::finalize(); }
++
++            void SetUp() override {
++                if (ippl::Comm->size() != 1) {
++                    GTEST_SKIP() << "FFT2D5 configuration construction requires one MPI rank.";
++                }
++            }
++
++            static std::unique_ptr<TestableFieldSolverCmd> command(const std::string& mode) {
++                auto result = std::make_unique<TestableFieldSolverCmd>();
++                result->setType("FFT2D5");
++                result->setNX(32);
++                result->setNY(32);
++                result->setNZ(64);
++                result->setSerialDimensions();
++                result->setPipeMode(mode);
++                result->setBeamRadius(0.005);
++                result->setPipeSizeX(0.020);
++                result->setPipeSizeY(0.020);
++                result->setRefPathFileName("straight-design-path.dat");
++                return result;
++            }
+         };
+ 
+         class TestableEmissionSource : public EmissionSource {
+@@ -224,6 +262,111 @@ namespace opalx::spacecharge {
+             EXPECT_FALSE(domain.periodicParticleBoundary);
+         }
+ 
++        TEST(SpaceChargeConfigTest, UniformRoundRequiresIndependentPhysicalPipeRadius) {
++            FFT2D5Config config;
++            config.longitudinalFieldMode = FFT2D5LongitudinalFieldMode::UniformRound;
++            config.beamRadius            = 0.005;
++            config.pipeSizeX             = 0.020;
++            config.pipeSizeY             = 0.020;
++            EXPECT_THROW(validateSpaceChargeConfig(config), OpalException);
++
++            config.pipeRadius = 0.020;
++            EXPECT_NO_THROW(validateSpaceChargeConfig(config));
++            // The numerical domain need not extend to the physical wall. Its
++            // width is not interpreted as a diameter or used to infer b.
++            config.pipeSizeX = 0.040;
++            config.pipeSizeY = 0.060;
++            EXPECT_NO_THROW(validateSpaceChargeConfig(config));
++            EXPECT_DOUBLE_EQ(*config.pipeRadius, 0.020);
++        }
++
++        TEST(SpaceChargeConfigTest, CircularModesRejectInvalidPhysicalPipeRadii) {
++            for (const auto mode :
++                 {FFT2D5LongitudinalFieldMode::Cylindrical,
++                  FFT2D5LongitudinalFieldMode::UniformRound}) {
++                FFT2D5Config config;
++                config.longitudinalFieldMode = mode;
++                config.beamRadius            = 0.005;
++                for (const double radius :
++                     {0.0, -0.020, 0.004, std::numeric_limits<double>::infinity(),
++                      std::numeric_limits<double>::quiet_NaN()}) {
++                    config.pipeRadius = radius;
++                    EXPECT_THROW(validateSpaceChargeConfig(config), OpalException);
++                }
++                config.pipeRadius = config.beamRadius;
++                EXPECT_NO_THROW(validateSpaceChargeConfig(config));
++            }
++        }
++
++        TEST(SpaceChargeConfigTest, PhysicalPipeRadiusCannotBeSilentlyIgnored) {
++            for (const auto mode :
++                 {FFT2D5LongitudinalFieldMode::Open, FFT2D5LongitudinalFieldMode::Plates,
++                  FFT2D5LongitudinalFieldMode::None}) {
++                FFT2D5Config config;
++                config.longitudinalFieldMode = mode;
++                config.beamRadius            = 0.005;
++                config.pipeRadius            = 0.020;
++                EXPECT_THROW(validateSpaceChargeConfig(config), OpalException);
++                config.pipeRadius.reset();
++                EXPECT_NO_THROW(validateSpaceChargeConfig(config));
++            }
++        }
++
++        TEST_F(FFT2D5ConfigBuilderTest, UniformRoundParsesExplicitRadiusIndependentlyOfMeshWidth) {
++            auto parsed = command("CIRCULAR_UNIFORM");
++            EXPECT_FALSE(parsed->hasPipeRadius());
++            EXPECT_THROW((void)buildSpaceChargeConfig(*parsed, {}), OpalException);
++            parsed->setPipeRadius(0.020);
++            EXPECT_TRUE(parsed->hasPipeRadius());
++            EXPECT_DOUBLE_EQ(parsed->getPipeRadius(), 0.020);
++            auto first = std::get<FFT2D5Config>(buildSpaceChargeConfig(*parsed, {}));
++            EXPECT_EQ(first.longitudinalFieldMode, FFT2D5LongitudinalFieldMode::UniformRound);
++            ASSERT_TRUE(first.pipeRadius.has_value());
++            EXPECT_DOUBLE_EQ(*first.pipeRadius, 0.020);
++            EXPECT_DOUBLE_EQ(first.pipeSizeX, 0.020);
++
++            parsed->setPipeSizeX(0.040);
++            parsed->setPipeSizeY(0.060);
++            auto second = std::get<FFT2D5Config>(buildSpaceChargeConfig(*parsed, {}));
++            EXPECT_DOUBLE_EQ(*second.pipeRadius, *first.pipeRadius);
++            EXPECT_DOUBLE_EQ(second.pipeSizeX, 0.040);
++            EXPECT_DOUBLE_EQ(second.pipeSizeY, 0.060);
++        }
++
++        TEST_F(FFT2D5ConfigBuilderTest,
++               LegacyCircularRetainsAbsentRadiusAndCanOptIntoPhysicalRadius) {
++            auto parsed = command("CIRCULAR");
++            auto legacy = std::get<FFT2D5Config>(buildSpaceChargeConfig(*parsed, {}));
++            EXPECT_EQ(legacy.longitudinalFieldMode, FFT2D5LongitudinalFieldMode::Cylindrical);
++            EXPECT_FALSE(legacy.pipeRadius.has_value());
++            EXPECT_DOUBLE_EQ(legacy.pipeSizeX, 0.020);
++            EXPECT_DOUBLE_EQ(legacy.beamRadius, 0.005);
++
++            parsed->setPipeRadius(0.020);
++            auto explicitRadius = std::get<FFT2D5Config>(buildSpaceChargeConfig(*parsed, {}));
++            EXPECT_EQ(explicitRadius.longitudinalFieldMode, legacy.longitudinalFieldMode);
++            ASSERT_TRUE(explicitRadius.pipeRadius.has_value());
++            EXPECT_DOUBLE_EQ(*explicitRadius.pipeRadius, 0.020);
++        }
++
++        TEST_F(FFT2D5ConfigBuilderTest, RejectsPhysicalRadiusForOtherLongitudinalModes) {
++            for (const std::string mode : {"OPEN", "PLATES", "NONE"}) {
++                auto parsed = command(mode);
++                parsed->setPipeRadius(0.020);
++                EXPECT_THROW((void)buildSpaceChargeConfig(*parsed, {}), OpalException);
++            }
++        }
++
++        TEST(SpaceChargeConfigBuilderTest, PhysicalPipeRadiusRequiresFFT2D5) {
++            TestableFieldSolverCmd parsed;
++            parsed.setType("OPEN");
++            parsed.setNX(16);
++            parsed.setNY(16);
++            parsed.setNZ(16);
++            parsed.setPipeRadius(0.020);
++            EXPECT_THROW((void)buildSpaceChargeConfig(parsed, {}), OpalException);
++        }
++
+         TEST(SpaceChargeConfigTest, RejectsUnsupportedDirichletPlaneCombinations) {
+             CartesianPIC3DConfig shifted;
+             shifted.backend             = PoissonSolverType::Open;

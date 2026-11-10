@@ -1,0 +1,10 @@
+Refresh FODO and ScalingFFA field-tracking references
+
+Regenerate both references with OPALX a9d38caa using the unchanged standard
+makeReference.sh and one MPI rank. Keep all inputs, particle data, launchers
+and comparison tolerances unchanged.
+
+FODO now reflects the existing MultipoleT fringe/reference behavior already
+present on clean master. ScalingFFA covers the maintained 1000-step input
+after the field-superposition correction, preserving particle/reference
+agreement instead of accepting the previous 1.22 m separation.

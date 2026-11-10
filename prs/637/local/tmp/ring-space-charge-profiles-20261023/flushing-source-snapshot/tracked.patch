@@ -1,0 +1,962 @@
+diff --git a/src/AbsBeamline/CyclotronSector.cpp b/src/AbsBeamline/CyclotronSector.cpp
+index f464e3423..fc0f6525a 100644
+--- a/src/AbsBeamline/CyclotronSector.cpp
++++ b/src/AbsBeamline/CyclotronSector.cpp
+@@ -4,34 +4,6 @@
+ #include "PartBunch/PartBunch.h"
+ #include "Utilities/OpalException.h"
+ 
+-namespace {
+-    /** @brief Common scalar/device field formula in the sector entrance frame.
+-     * grid contains F, dF/dr, dF/dtheta in SI units. Here dt is angular grid
+-     * spacing [rad], not a time step, and p is a position [m], not momentum.
+-     * Bounds are checked before interpolation. Contributions are added to b [T].
+-     * The legacy (x,y,z)->(x,-z,y) rotation makes By positive for positive map F.
+-     */
+-    template <class V, class C>
+-    KOKKOS_INLINE_FUNCTION void field(
+-            const V& grid, const C& coils, double rmin, double dr, double dt, int nr, int nt,
+-            double radius, double angle, double vmin, double vmax, double scale,
+-            const Vector_t<double, 3>& p, Vector_t<double, 3>& b) {
+-        const double x = p[0] + radius, z = p[2], r = Kokkos::sqrt(x * x + z * z);
+-        const double theta = Kokkos::atan2(z, x);
+-        if (theta < 0 || theta >= angle || r < rmin || r > rmin + (nr - 1) * dr || p[1] < vmin
+-            || p[1] > vmax)
+-            return;
+-        const double u = (r - rmin) / dr, v = theta / dt;
+-        double by = scale * CyclotronSectorFieldMap::interpolate(grid, 0, u, v, nr, nt);
+-        double br = scale * p[1] * CyclotronSectorFieldMap::interpolate(grid, 1, u, v, nr, nt);
+-        double bt = scale * p[1] / r * CyclotronSectorFieldMap::interpolate(grid, 2, u, v, nr, nt);
+-        for (size_t i = 0; i < coils.extent(0); ++i)
+-            coils(i).add(r, p[1], br, by);
+-        b[0] += br * x / r - bt * z / r;
+-        b[1] += by;
+-        b[2] += br * z / r + bt * x / r;
+-    }
+-}  // namespace
+ void CyclotronSector::configure(
+         std::shared_ptr<const CyclotronSectorFieldMap> input, int symmetry, double low, double high,
+         double factor, const std::vector<CyclotronTrimCoil>& models) {
+@@ -84,8 +56,9 @@ BoundingBox CyclotronSector::getBoundingBoxInLabCoords() const {
+ void CyclotronSector::apply(
+         const Vector_t<double, 3>& r, const Vector_t<double, 3>&, const double&,
+         Vector_t<double, 3>&, Vector_t<double, 3>& b) {
+-    field(map->host, hostCoils, map->rmin, map->dr, map->dtheta, map->nr, map->nt, radius, angle,
+-          vmin, vmax, scale, r, b);
++    cyclotron_field::field(
++            map->host, hostCoils, map->rmin, map->dr, map->dtheta, map->nr, map->nt, radius, angle,
++            vmin, vmax, scale, r, b);
+ }
+ void CyclotronSector::apply(const std::shared_ptr<ParticleContainer_t>& pc) {
+     const auto grid = map->data;
+@@ -96,6 +69,7 @@ void CyclotronSector::apply(const std::shared_ptr<ParticleContainer_t>& pc) {
+     const int nr = map->nr, nt = map->nt;
+     Kokkos::parallel_for(
+             "CyclotronSector::apply", pc->getLocalNum(), KOKKOS_LAMBDA(size_t i) {
+-                field(grid, trim, rmin, dr, dt, nr, nt, rm, a, lo, hi, f, r(i), b(i));
++                cyclotron_field::field(
++                        grid, trim, rmin, dr, dt, nr, nt, rm, a, lo, hi, f, r(i), b(i));
+             });
+ }
+diff --git a/src/AbsBeamline/CyclotronSector.h b/src/AbsBeamline/CyclotronSector.h
+index fe8e292c2..a9ec2de7f 100644
+--- a/src/AbsBeamline/CyclotronSector.h
++++ b/src/AbsBeamline/CyclotronSector.h
+@@ -44,6 +44,35 @@ struct CyclotronTrimCoil {
+     }
+ };
+ 
++namespace cyclotron_field {
++    /** @brief Common scalar/device field formula in the sector entrance frame.
++     * grid contains F, dF/dr, dF/dtheta in SI units. Here dt is angular grid
++     * spacing [rad], not a time step, and p is a position [m], not momentum.
++     * Bounds are checked before interpolation. Contributions are added to b [T].
++     * The legacy (x,y,z)->(x,-z,y) rotation makes By positive for positive map F.
++     */
++    template <class V, class C>
++    KOKKOS_INLINE_FUNCTION void field(
++            const V& grid, const C& coils, double rmin, double dr, double dt, int nr, int nt,
++            double radius, double angle, double vmin, double vmax, double scale,
++            const Vector_t<double, 3>& p, Vector_t<double, 3>& b) {
++        const double x = p[0] + radius, z = p[2], r = Kokkos::sqrt(x * x + z * z);
++        const double theta = Kokkos::atan2(z, x);
++        if (theta < 0 || theta >= angle || r < rmin || r > rmin + (nr - 1) * dr || p[1] < vmin
++            || p[1] > vmax)
++            return;
++        const double u = (r - rmin) / dr, v = theta / dt;
++        double by = scale * CyclotronSectorFieldMap::interpolate(grid, 0, u, v, nr, nt);
++        double br = scale * p[1] * CyclotronSectorFieldMap::interpolate(grid, 1, u, v, nr, nt);
++        double bt = scale * p[1] / r * CyclotronSectorFieldMap::interpolate(grid, 2, u, v, nr, nt);
++        for (size_t i = 0; i < coils.extent(0); ++i)
++            coils(i).add(r, p[1], br, by);
++        b[0] += br * x / r - bt * z / r;
++        b[1] += by;
++        b[2] += br * z / r + bt * x / r;
++    }
++}  // namespace cyclotron_field
++
+ /**
+  * @brief Static annular magnetic sector in the X-Z plane, with Y vertical.
+  *
+@@ -128,6 +157,40 @@ public:
+             std::shared_ptr<const CyclotronSectorFieldMap> map, int symmetry, double vmin,
+             double vmax, double scale, const std::vector<CyclotronTrimCoil>& coils);
+ 
++    /// Read-only device descriptor; caller must keep this configured sector alive.
++    struct DeviceField {
++        Kokkos::View<double***, Kokkos::MemoryTraits<Kokkos::Unmanaged>> grid;
++        Kokkos::View<CyclotronTrimCoil*, Kokkos::MemoryTraits<Kokkos::Unmanaged>> trim;
++        double rmin, dr, dtheta, radius, angle, vmin, vmax, scale;
++        int nr, nt;
++        KOKKOS_INLINE_FUNCTION bool add(
++                const Vector_t<double, 3>& r, Vector_t<double, 3>& b) const {
++            const double radial = Kokkos::sqrt((r(0) + radius) * (r(0) + radius) + r(2) * r(2));
++            const double theta  = Kokkos::atan2(r(2), r(0) + radius);
++            if (!(radial >= rmin && radial <= rmin + (nr - 1) * dr && theta >= 0 && theta < angle
++                  && r(1) >= vmin && r(1) <= vmax))
++                return false;
++            cyclotron_field::field(
++                    grid, trim, rmin, dr, dtheta, nr, nt, radius, angle, vmin, vmax, scale, r, b);
++            return true;
++        }
++    };
++    /// Configure before use; no allocations or field-data copies.
++    DeviceField deviceField() const {
++        return {decltype(DeviceField::grid)(map->data.data(), map->nr, map->nt + 1, 3),
++                decltype(DeviceField::trim)(coils.data(), coils.extent(0)),
++                map->rmin,
++                map->dr,
++                map->dtheta,
++                radius,
++                angle,
++                vmin,
++                vmax,
++                scale,
++                map->nr,
++                map->nt};
++    }
++
+ private:
+     Geometry geometry;
+     std::shared_ptr<const CyclotronSectorFieldMap> map;
+diff --git a/src/AbsBeamline/Probe.h b/src/AbsBeamline/Probe.h
+index d465eb8d5..171c0d6b9 100644
+--- a/src/AbsBeamline/Probe.h
++++ b/src/AbsBeamline/Probe.h
+@@ -25,6 +25,12 @@
+ 
+ class PeakFinder;
+ 
++/** @brief Legacy cyclotron segment configuration.
++ *
++ * ParallelTracker registers these configurations as passive global diagnostics
++ * through CyclotronProbeRecorder rather than the legacy PluginElement check path.
++ * Input endpoint Y names denote laboratory Z in the OPALX cyclotron X-Z plane.
++ */
+ class Probe : public PluginElement {
+ public:
+     /// Constructor with given name.
+diff --git a/src/AbsBeamline/RFCavity.h b/src/AbsBeamline/RFCavity.h
+index bbc6a5339..bee6d319d 100644
+--- a/src/AbsBeamline/RFCavity.h
++++ b/src/AbsBeamline/RFCavity.h
+@@ -62,12 +62,33 @@ public:
+      * @param t Absolute RF time [s].
+      * @param mass Proton rest energy [eV].
+      * @param[in,out] p Local mechanical momentum [beta*gamma].
+-     * @return False for out-of-support, non-median-plane or unphysical states.
++     * @return False for out-of-support, backward or unphysical states.
+      */
+     bool applyGapKick(double x, double t, double mass, Vector_t<double, 3>& p) const {
+         return cyclotronKick_m.apply(
+                 cyclotronProfile_m->host, (x - gapMin_m) / (gapMax_m - gapMin_m), t, mass, p);
+     }
++
++    /// Read-only device kick descriptor; the configured cavity owns the profile.
++    struct DeviceGap {
++        Kokkos::View<double**, Kokkos::MemoryTraits<Kokkos::Unmanaged>> profile;
++        CyclotronRFKick kick;
++        double minimum = 0, maximum = 0;
++        KOKKOS_INLINE_FUNCTION bool supports(double x) const {
++            return x >= minimum && x <= maximum;
++        }
++        KOKKOS_INLINE_FUNCTION bool apply(
++                double x, double t, double mass, Vector_t<double, 3>& p) const {
++            return supports(x)
++                   && kick.apply(profile, (x - minimum) / (maximum - minimum), t, mass, p);
++        }
++    };
++    /// SINGLEGAP must be configured before obtaining this descriptor.
++    DeviceGap deviceGap() const {
++        return {decltype(DeviceGap::profile)(
++                        cyclotronProfile_m->data.data(), cyclotronProfile_m->data.extent(0), 3),
++                cyclotronKick_m, gapMin_m, gapMax_m};
++    }
+     /// Discrete gaps never contribute to continuous field lookup or apertures.
+     bool isInsideBody(const Vector_t<double, 3>& r) const override {
+         return !isCyclotronGap() && ElementBase::isInsideBody(r);
+diff --git a/src/Algorithms/CMakeLists.txt b/src/Algorithms/CMakeLists.txt
+index d77c0f9d2..03d264f43 100644
+--- a/src/Algorithms/CMakeLists.txt
++++ b/src/Algorithms/CMakeLists.txt
+@@ -9,6 +9,7 @@ set (_SRCS
+     ExternalFieldRayTracker.cpp
+     DeviceExternalField.cpp
+     PassiveRingProbe.cpp
++    CyclotronProbeRecorder.cpp
+     OneTurnMap.cpp
+     ClosedOrbitSolver.cpp
+     LinearMapEigenAnalysis.cpp
+@@ -40,6 +41,10 @@ set (HDRS
+     ExternalFieldRayTracker.h
+     DeviceExternalField.h
+     PassiveProbe.h
++    CyclotronBunchStepper.h
++    CyclotronSectorCandidates.h
++    CyclotronProbe.h
++    CyclotronProbeRecorder.h
+     PassiveRingProbe.h
+     OneTurnMap.h
+     ClosedOrbitSolver.h
+diff --git a/src/Algorithms/ParallelTracker.cpp b/src/Algorithms/ParallelTracker.cpp
+index 1e9512ca1..f9c2aaeda 100644
+--- a/src/Algorithms/ParallelTracker.cpp
++++ b/src/Algorithms/ParallelTracker.cpp
+@@ -18,6 +18,7 @@
+  * along with OPAL. If not, see https://www.gnu.org/licenses/.
+  */
+ #include "Algorithms/ParallelTracker.h"
++#include "Algorithms/CyclotronSectorCandidates.h"
+ #include "AbsBeamline/VariableRFCavity.h"
+ 
+ #include <algorithm>
+@@ -218,6 +219,7 @@ void ParallelTracker::visitBeamline(const Beamline& bl) {
+ void ParallelTracker::execute() {
+     Inform m("ParallelTracker::execute");
+     terminalStepDt_m      = 0;
++    cyclotronBunchLattice_m.reset();
+     auto preparationState = OpalData::getInstance()->enterPreparationState();
+     StepSizeConfig::ResumePosition restartPosition{0, 0};
+     if (restarting_m) {
+@@ -268,6 +270,16 @@ void ParallelTracker::execute() {
+         restoreCavityPhases();
+     }
+ 
++    if (!cyclotronProbes_m.empty()) {
++        if (restarting_m || OpalData::getInstance()->hasPriorTrack())
++            throw OpalException("PROBE", "Cyclotron PROBE does not yet support restart or tracking continuation.");
++        bool cyclotron = false;
++        for (const auto& element : itsOpalBeamline_m.getElements())
++            cyclotron |= element->getType() == ElementType::CYCLOTRONSECTOR;
++        if (!cyclotron || !tuneInitial_m.empty())
++            throw OpalException("PROBE", "PROBE currently requires cyclotron-sector particle tracking; FFA probes are deferred.");
++    }
++
+     // Select the minimal time step from the configuration
+     double minTimeStep = stepSizes_m.getMinTimeStep();
+     m << level3 << "Selected minimum time step from configuration: " << minTimeStep << endl;
+@@ -611,6 +623,18 @@ void ParallelTracker::execute() {
+     // OrbitThreader and the other setup stages may cross diagnostic elements while constructing
+     // the reference map. Only crossings produced by the real tracking loop may write output.
+     preparationState.finish();
++    std::unique_ptr<CyclotronProbeRecorder> cyclotronRecorder;
++    std::vector<std::unique_ptr<DirectedTurnCounter>> probeTurns(nContainers);
++    if (!cyclotronProbes_m.empty()) {
++        cyclotronRecorder = std::make_unique<CyclotronProbeRecorder>(cyclotronProbes_m);
++        cyclotronRecorder->initialize(particleContainers);
++        for (std::size_t i = 0; i < nContainers; ++i) {
++            probeTurns[i] = std::make_unique<DirectedTurnCounter>(
++                    particleContainers[i]->getRefPartR(), particleContainers[i]->getRefPartP());
++            cyclotronRecorder->observe(
++                    particleContainers[i], itsBunch_m->getT(), static_cast<short>(i), 0);
++        }
++    }
+ 
+     // Main tracking loop over step size configurations
+     m << level5 << ">>>>>>>>>>>>>>>>>> Starting Tracking Loop >>>>>>>>>>>>>>>>>>" << endl;
+@@ -628,6 +652,18 @@ void ParallelTracker::execute() {
+         }
+         activateEmittingContainers(itsBunch_m->getT());
+         firstSegment = false;
++        // A container can resume after being inactive while another container
++        // advanced the global clock. Refresh its stationary accepted endpoint
++        // before the first new interval, without resetting crossing hysteresis.
++        if (cyclotronRecorder)
++            for (std::size_t i = 0; i < nContainers; ++i)
++                if (itsBunch_m->isPcActive(i)) {
++                    const auto turns = probeTurns[i]->count();
++                    if (turns > static_cast<unsigned long long>(std::numeric_limits<int>::max()))
++                        throw OpalException("PROBE", "Reference turn exceeds output integer range.");
++                    cyclotronRecorder->observe(
++                            particleContainers[i], itsBunch_m->getT(), static_cast<short>(i), static_cast<int>(turns));
++                }
+ 
+         // Inner loop over the number of steps for the current configuration
+         m << level2 << "Starting track with dt = " << Util::getTimeString(dtCurrentTrack_m)
+@@ -665,6 +701,18 @@ void ParallelTracker::execute() {
+             // bounds immediately after first emission) must not persist across steps.
+             globalEOL_m = false;
+ 
++            // Localize the reference terminal event before the PIC predictor and
++            // gather, so every particle and self-field uses the accepted duration.
++            if (kineticEnergyStop_m > 0 && hasCyclotronGaps()
++                && !(bareTracking_m && ippl::Comm->size()==1 && itsBunch_m->getTotalNumAllContainers()==1)) {
++                const auto pc=particleContainers.front();
++                pendingReferenceR_m=pc->getRefPartR();pendingReferenceP_m=pc->getRefPartP();
++                const double actual=advanceCyclotronGaps(pendingReferenceR_m,pendingReferenceP_m,
++                        itsBunch_m->getT(),itsBunch_m->getdT(),pc->getReference()->getM(),true);
++                pendingEnergyReference_m=true;
++                if(actual<itsBunch_m->getdT()) {terminalStepDt_m=actual;itsBunch_m->setdT(actual);pc->dt=actual;}
++            }
++
+             if (requestedTurns_m && turnCounters.front()->count() == requestedTurns_m - 1) {
+                 // Trial only the replicated reference on rank zero. Publish failures and
+                 // the accepted duration before any rank enters the particle kernels.
+@@ -762,7 +810,15 @@ void ParallelTracker::execute() {
+             m << level5 << "Spin T-BMT update done at step " << step << "." << endl;
+ 
+             // Second half of the time integration
+-            timeIntegration2(pusher);
++            try {
++                timeIntegration2(pusher);
++            } catch (const OpalException&) {
++                // SINGLEGAP errors are raised collectively after the device
++                // reduction (or deterministically by the replicated reference).
++                // Flush accepted endpoints only; never record the failed step.
++                if (cyclotronRecorder && hasCyclotronGaps()) cyclotronRecorder->save();
++                throw;
++            }
+             m << level4 << "timeIntegration2 done at step " << step << "." << endl;
+             itsBunch_m->updateAllParticleMoments();
+             m << level5 << "Particle moments updated after timeIntegration2." << endl;
+@@ -843,6 +899,22 @@ void ParallelTracker::execute() {
+             // records cannot feed back into fields, the pusher or its schedule.
+             if (passiveProbes)
+                 passiveProbes->observe(particleContainers.front(), itsBunch_m->getT());
++            if (cyclotronRecorder)
++                for (std::size_t i = 0; i < nContainers; ++i)
++                    if (itsBunch_m->isPcActive(i)) {
++                        const auto turns = probeTurns[i]->count();
++                        if (turns > static_cast<unsigned long long>(std::numeric_limits<int>::max()))
++                            throw OpalException("PROBE", "Reference turn exceeds output integer range.");
++                        cyclotronRecorder->observe(particleContainers[i], itsBunch_m->getT(),
++                                static_cast<short>(i), static_cast<int>(turns));
++                        probeTurns[i]->update(
++                                particleContainers[i]->getRefPartR(), particleContainers[i]->getRefPartP());
++                    }
++
++            // Bound buffered probe data and retain accepted crossings on disk
++            // even if a later step aborts. Every rank reaches this common cadence.
++            if (cyclotronRecorder && itsBunch_m->getGlobalTrackStep() % 100 == 0)
++                cyclotronRecorder->save();
+ 
+             // Dump phase space and statistics at configured intervals
+             bool const psDump = Options::psDumpFreq > 0
+@@ -954,6 +1026,7 @@ void ParallelTracker::execute() {
+             }
+         }
+     }
++    if (cyclotronRecorder) cyclotronRecorder->save();
+     bool const psDump = Options::psDumpFreq > 0
+                         && (((itsBunch_m->getGlobalTrackStep() - 1) % Options::psDumpFreq) + 1
+                             != Options::psDumpFreq);
+@@ -1103,7 +1176,19 @@ double ParallelTracker::advanceCyclotronGaps(
+  * @copybrief ParallelTracker::timeIntegration1
+  */
+ void ParallelTracker::timeIntegration1(BorisPusher& pusher) {
+-    if (hasCyclotronGaps()) return;  // Localized RF gap path owns both drifts.
++    if (hasCyclotronGaps()) {
++        // PIC gathers at a ballistic midpoint; undo this prediction before the
++        // split self-field/external step. PRESTEP deliberately samples R_n.
++        if (!bareTracking_m && spaceChargeFieldUpdate_m == SpaceChargeFieldUpdate::MIDPOINT) {
++            auto pc=itsBunch_m->getParticleContainer();
++            const auto r=pc->R.getView(),p=pc->P.getView();const double h=itsBunch_m->getdT();
++            Kokkos::parallel_for("Cyclotron::predictMidpoint",pc->getLocalNum(),KOKKOS_LAMBDA(size_t i){
++                r(i)+=(.5*h*Physics::c/Kokkos::sqrt(1+dot(p(i),p(i))))*p(i);
++            });
++            pc->markMomentsDirty();
++        }
++        return;
++    }
+     Inform m("ParallelTracker::timeIntegration1");
+     IpplTimings::startTimer(timeIntegrationTimer1_m);
+     const size_t n = itsBunch_m->getNumParticleContainers();
+@@ -1125,7 +1210,11 @@ void ParallelTracker::timeIntegration1(BorisPusher& pusher) {
+  * @copybrief ParallelTracker::timeIntegration2
+  */
+ void ParallelTracker::timeIntegration2(BorisPusher& pusher) {
+-    if (hasCyclotronGaps()) {
++    // Preserve the established single-particle event endpoint convention. At an
++    // RF impulse a sub-ulp arrival difference can otherwise place the particle
++    // on the opposite side of the reference's terminal discontinuity.
++    if (hasCyclotronGaps() && bareTracking_m && ippl::Comm->size()==1
++        && itsBunch_m->getNumParticleContainers()==1 && itsBunch_m->getTotalNumAllContainers()==1) {
+         if (ippl::Comm->size() != 1 || itsBunch_m->getNumParticleContainers() != 1
+             || itsBunch_m->getTotalNumAllContainers() != 1)
+             throw OpalException(
+@@ -1172,6 +1261,83 @@ void ParallelTracker::timeIntegration2(BorisPusher& pusher) {
+         pc->markMomentsDirty();
+         return;
+     }
++    if (hasCyclotronGaps()) {
++        if (itsBunch_m->getNumParticleContainers()!=1)
++            throw OpalException("ParallelTracker","SINGLEGAP currently requires one container.");
++        auto pc = itsBunch_m->getParticleContainer();
++        if (pc->hasSpin() || pc->getReference()->getQ() != 1 || restarting_m
++            || std::abs(pc->getReference()->getM() / (Physics::m_p * 1e9) - 1) > 1e-12)
++            throw OpalException(
++                    "ParallelTracker",
++                    "SINGLEGAP requires an unpolarized positive proton and does not support "
++                    "restart.");
++        const auto& toLab = pc->getToLabTrafo();
++        const double requestedDt = itsBunch_m->getdT();
++        double actualDt          = requestedDt;
++        if (!cyclotronBunchLattice_m) {
++            std::vector<cyclotron_bunch::Sector> sectors;
++            std::vector<std::pair<std::string,cyclotron_bunch::Gap>> gaps;
++            for(const auto& element:itsOpalBeamline_m.getElements()) {
++                const auto frame=element->getMisalignment()*itsOpalBeamline_m.getCSTrafoLab2Local(element);
++                const device_external::Rigid rigid{frame.getOrigin(),frame.getRotationMatrix()};
++                if(auto* sector=dynamic_cast<CyclotronSector*>(element.get()))
++                    sectors.push_back({rigid,sector->deviceField()});
++                else if(auto* gap=dynamic_cast<RFCavity*>(element.get());gap && gap->isCyclotronGap())
++                    gaps.push_back({gap->getName(),{rigid,gap->deviceGap()}});
++            }
++            std::sort(gaps.begin(),gaps.end(),[](const auto& a,const auto& b){return a.first<b.first;});
++            if(sectors.empty() || gaps.size()>64)
++                throw OpalException("ParallelTracker","SINGLEGAP requires magnetic sectors and at most 64 gaps.");
++            cyclotron_bunch::Lattice lattice;
++            lattice.sectors=decltype(lattice.sectors)("cyclotron_sectors",sectors.size());
++            lattice.gaps=decltype(lattice.gaps)("cyclotron_gaps",gaps.size());
++            auto hs=Kokkos::create_mirror_view(lattice.sectors);auto hg=Kokkos::create_mirror_view(lattice.gaps);
++            for(size_t j=0;j<sectors.size();++j) hs(j)=sectors[j];
++            for(size_t j=0;j<gaps.size();++j) hg(j)=gaps[j].second;
++            Kokkos::deep_copy(lattice.sectors,hs);Kokkos::deep_copy(lattice.gaps,hg);
++            cyclotronBunchLattice_m=lattice;
++        }
++        const auto lattice=*cyclotronBunchLattice_m;
++        const auto r=pc->R.getView(),p=pc->P.getView(),e=pc->E.getView(),b=pc->B.getView();
++        const device_external::Rigid frame{toLab.getOrigin(),toLab.getRotationMatrix()};
++        const double time=itsBunch_m->getT(),mass=pc->getReference()->getM();
++        const bool charged=!bareTracking_m;
++        const bool predicted=charged && spaceChargeFieldUpdate_m==SpaceChargeFieldUpdate::MIDPOINT;
++        Kokkos::View<cyclotron_bunch::Diagnostic*> diagnostics("cyclotron_failures",pc->getLocalNum());
++        int failures=0;
++        Kokkos::parallel_reduce("Cyclotron::bunchStep",pc->getLocalNum(),KOKKOS_LAMBDA(size_t i,int& failed){
++            auto localR=r(i);const auto localP=p(i);
++            if(predicted) localR-=(.5*requestedDt*Physics::c/Kokkos::sqrt(1+dot(localP,localP)))*localP;
++            auto position=frame.pointTo(localR),momentum=frame.vectorTo(localP);
++            cyclotron_bunch::Diagnostic diagnostic;
++            const bool ok=charged ? lattice.advanceWithSelfFields(position,momentum,frame.vectorTo(e(i)),frame.vectorTo(b(i)),time,actualDt,mass,&diagnostic)
++                                  : lattice.advance(position,momentum,time,actualDt,mass,&diagnostic);
++            diagnostics(i)=diagnostic;
++            if(!ok){++failed;return;}
++            r(i)=frame.pointFrom(position);p(i)=frame.vectorFrom(momentum);
++        },failures);
++        int globalFailures=0;
++        MPI_Allreduce(&failures,&globalFailures,1,MPI_INT,MPI_SUM,ippl::Comm->getCommunicator());
++        if(globalFailures) {
++            const auto host=Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(),diagnostics);
++            const auto ids=Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(),pc->ID.getView());
++            for(size_t i=0;i<pc->getLocalNum();++i) if(host(i).failure!=cyclotron_bunch::Failure::None) {
++                const auto& d=host(i);
++                *gmsg << level1 << "SINGLEGAP failure rank=" << ippl::Comm->rank() << " id=" << ids(i)
++                      << " cause=" << (d.failure==cyclotron_bunch::Failure::FieldSupport ? "field-support" : d.failure==cyclotron_bunch::Failure::GapKick ? "RF-kick" : "invalid-step")
++                      << " gap-index=" << d.gap << " t[s]=" << d.time << " Rlab[m]=" << d.position
++                      << " Plab[beta*gamma]=" << d.momentum << endl;
++                break;
++            }
++            throw OpalException("ParallelTracker","SINGLEGAP particle transport failed; see cause, ID and laboratory state above.");
++        }
++        if (energyTargetReached_m) {
++            itsBunch_m->setdT(actualDt);
++            pc->dt = actualDt;
++        }
++        pc->markMomentsDirty();
++        return;
++    }
+     // Legacy note: cathode transport/emission was sequenced after space charge so that
+     // the first step of newborn particles omits space-charges; multi-container emission
+     // is handled separately in execute().
+@@ -1385,6 +1551,8 @@ void ParallelTracker::forEachElementInBunchFrame(
+                 const std::shared_ptr<ElementBase>&, const std::shared_ptr<ParticleContainer_t>&)>&
+                 func,
+         bool spatialCandidates) {
++    const auto cyclotronSectors = ringPeriod_m > 0
++            ? itsOpalBeamline_m.getElementByType(ElementType::CYCLOTRONSECTOR) : ElementList{};
+     const size_t nContainers = itsBunch_m->getNumParticleContainers();
+     for (size_t ci = 0; ci < nContainers; ++ci) {
+         if (!itsBunch_m->isPcActive(ci)) {
+@@ -1453,13 +1621,18 @@ void ParallelTracker::forEachElementInBunchFrame(
+                 continue;
+             }
+ 
+-        // Frame round trips do not commute exactly in floating point. For the
+-        // bare analytic-ring benchmark, use prepared occurrence order rather
+-        // than allocation-dependent shared_ptr order. Include aperture/monitor
+-        // callbacks: they also transform the live arrays. Other configurations
+-        // retain their existing order, including cyclotron and charged tracking.
++        // The threader's measured first-turn period is not TRACK's orbit or
++        // every physical particle's orbit. Select mapped sectors spatially at
++        // the current midpoint, even when their path-index membership differs.
++        if (!cyclotronSectors.empty())
++            elements = cyclotron_candidates::select(
++                    cyclotronSectors, pc->getToLabTrafo(), rmin, rmax, std::move(elements));
++
++        // Frame round trips do not commute exactly in floating point. Use the
++        // prepared occurrence order for spatial cyclotron callbacks as well as
++        // bare analytic rings; include apertures, which also transform live data.
+         const auto ordered =
+-                spatialRing_m && bareTracking_m
++                (!cyclotronSectors.empty() || (spatialRing_m && bareTracking_m))
+                         ? device_external::orderedCandidates(itsOpalBeamline_m, elements)
+                         : std::vector<std::shared_ptr<ElementBase>>(
+                                   elements.begin(), elements.end());
+@@ -1940,6 +2113,7 @@ void ParallelTracker::prepareSections() {
+     // OpalBeamline::visit([ElemName], bunch):
+     // This initialises the ElementList elements_m object of OpalBeamline
+     // with clones of all the elements
++    cyclotronProbes_m.clear();
+     itsBeamline_m.accept(*this);
+ 
+     // Sorts the elements in OpalBeamline::elements_m by starting position
+diff --git a/src/Algorithms/ParallelTracker.h b/src/Algorithms/ParallelTracker.h
+index 3e5a21edd..56da37693 100644
+--- a/src/Algorithms/ParallelTracker.h
++++ b/src/Algorithms/ParallelTracker.h
+@@ -24,6 +24,7 @@
+ 
+ #include <optional>
+ #include "Algorithms/BorisStepControl.h"
++#include "Algorithms/CyclotronBunchStepper.h"
+ #include "Algorithms/ClosedOrbitInitialState.h"
+ #include "Algorithms/DeviceExternalField.h"
+ #include "Algorithms/SpectralTunes.h"
+@@ -55,6 +56,8 @@
+ #include "AbsBeamline/Laser.h"
+ #include "AbsBeamline/Marker.h"
+ #include "AbsBeamline/Monitor.h"
++#include "AbsBeamline/Probe.h"
++#include "Algorithms/CyclotronProbeRecorder.h"
+ #include "AbsBeamline/Multipole.h"
+ #include "AbsBeamline/MultipoleT.h"
+ #include "AbsBeamline/RBend.h"
+@@ -133,7 +136,13 @@ public:
+         itsOpalBeamline_m.visit(sector, *this, *itsBunch_m);
+     }
+ 
++    /// Register global diagnostics separately from field/placement elements.
++    void visitProbe(const Probe& probe) override {
++        cyclotronProbes_m.push_back(CyclotronProbeRecorder::configuration(probe));
++    }
++
+ private:
++    std::vector<CyclotronProbeRecorder::Config> cyclotronProbes_m;
+     friend class TrackRun;
+     bool bareTracking_m =
+             false;  ///< NONE backend; diagnostic eligibility is independent of retries.
+@@ -143,6 +152,7 @@ private:
+     std::vector<double> tuneInitial_m;
+     SpectralTunes::Settings tuneSettings_m;
+     bool hasCyclotronGaps();
++    std::optional<cyclotron_bunch::Lattice> cyclotronBunchLattice_m;
+     /** Host-only event integration for the initial one-proton RF milestone.
+      * R/P are in the tracking frame, t/dt in seconds. Splits Boris steps at
+      * directed gap-plane roots and applies full kicks in time order. Field
+diff --git a/src/Elements/OpalProbe.cpp b/src/Elements/OpalProbe.cpp
+index 044064a8a..6d27cf351 100644
+--- a/src/Elements/OpalProbe.cpp
++++ b/src/Elements/OpalProbe.cpp
+@@ -17,6 +17,7 @@
+ //
+ #include "Elements/OpalProbe.h"
+ #include "AbstractObjects/Attribute.h"
++#include "Algorithms/CyclotronProbeRecorder.h"
+ #include "Attributes/Attributes.h"
+ #include "BeamlineCore/ProbeRep.h"
+ #include "Physics/Physics.h"
+@@ -44,7 +45,10 @@ OpalProbe::~OpalProbe() {}
+ OpalProbe* OpalProbe::clone(const std::string& name) { return new OpalProbe(name, this); }
+ 
+ void OpalProbe::update() {
+-    OpalElement::update();
++    // A global detector segment contributes no path length to its sequence.
++    Attributes::setReal(itsAttr[LENGTH], 0.0);
++    // Endpoint coordinates are already global. Ordinary element placement
++    // validation would incorrectly require ELEMEDGE or a separate 6D pose.
+ 
+     ProbeRep* prob = dynamic_cast<ProbeRep*>(getElement());
+ 
+@@ -54,12 +58,11 @@ void OpalProbe::update() {
+     double yend   = Units::mm2m * Attributes::getReal(itsAttr[YEND]);
+     double step   = Units::mm2m * Attributes::getReal(itsAttr[STEP]);
+ 
+-    double length = Attributes::getReal(itsAttr[LENGTH]);
+-
+-    prob->getGeometry().setElementLength(length);  // is this needed here?
++    prob->getGeometry().setElementLength(0.0);
+     prob->setDimensions(xstart, xend, ystart, yend);
+     prob->setStep(step);
+     prob->setOutputFN(Attributes::getString(itsAttr[OUTFN]));
++    if (!isBuiltin()) CyclotronProbeRecorder::configuration(*prob);
+ 
+     // Transmit "unknown" attributes.
+     OpalElement::updateUnknown(prob);
+diff --git a/src/Fields/CyclotronRFProfile.h b/src/Fields/CyclotronRFProfile.h
+index efc1e0353..9cd1b3ddc 100644
+--- a/src/Fields/CyclotronRFProfile.h
++++ b/src/Fields/CyclotronRFProfile.h
+@@ -76,7 +76,7 @@ public:
+     }
+ };
+ 
+-/** @brief Device-copyable, static-frequency SINGLEGAP kick for median-plane protons.
++/** @brief Device-copyable, static-frequency SINGLEGAP kick for forward protons.
+  * Local x runs along the gap; local z is the positive crossing direction and y
+  * is vertical. Parameters use SI: voltage [V], omega [rad/s], phase [rad], width
+  * and profileLength [m]. Momentum is mechanical beta*gamma, mass is rest energy
+@@ -88,7 +88,10 @@ public:
+  * factor from this rotation deliberately reproduce OPAL 2022.1, not a rederived
+  * focusing model. Radial momentum is preserved before the rotation.
+  *
+- * This first contract is restricted to positive, forward, median-plane protons;
++ * The thin-gap extension preserves vertical momentum and rotates only the radial/
++ * longitudinal components. Its transit factor uses total speed; no vertical RF
++ * focusing or vertical variation of the voltage profile is modeled.
++ * This contract is restricted to positive, forward protons;
+  * invalid states return false without modifying momentum. It neither detects
+  * crossings nor advances time, and must be called once per accepted gap event.
+  */
+@@ -117,18 +120,18 @@ struct CyclotronRFKick {
+             const V& grid, double u, double time, double mass, Vector_t<double, 3>& p) const {
+         double f, derivative;
+         if (!(mass > 0) || !Kokkos::isfinite(mass) || !Kokkos::isfinite(time)
+-            || !Kokkos::isfinite(p[0]) || !Kokkos::isfinite(p[2]) || p[1] != 0 || !(p[2] > 0)
+-            || !CyclotronRFProfile::evaluate(grid, u, f, derivative))
++            || !Kokkos::isfinite(p[0]) || !Kokkos::isfinite(p[1]) || !Kokkos::isfinite(p[2])
++            || !(p[2] > 0) || !CyclotronRFProfile::evaluate(grid, u, f, derivative))
+             return false;
+         if (voltage == 0) return true;
+-        const double p2 = p[0] * p[0] + p[2] * p[2];
++        const double p2 = p[0] * p[0] + p[1] * p[1] + p[2] * p[2];
+         const double bg = Kokkos::sqrt(p2), gamma = Kokkos::sqrt(1 + p2);
+         const double beta          = bg / gamma;
+         const double a             = omega * width / (2 * Physics::c * beta);
+         const double transit       = Kokkos::abs(a) < 1e-8 ? 1 - a * a / 6 : Kokkos::sin(a) / a;
+         const double phi           = omega * time - phase;
+         const double finalGamma    = gamma + voltage * f * transit * Kokkos::cos(phi) / mass;
+-        const double longitudinal2 = finalGamma * finalGamma - 1 - p[0] * p[0];
++        const double longitudinal2 = finalGamma * finalGamma - 1 - p[0] * p[0] - p[1] * p[1];
+         if (!(finalGamma >= 1) || !(longitudinal2 > 0) || !Kokkos::isfinite(longitudinal2))
+             return false;
+         const double longitudinal = Kokkos::sqrt(longitudinal2);
+diff --git a/src/PartBunch/ParticleContainer.hpp b/src/PartBunch/ParticleContainer.hpp
+index 04e665d87..d2dd47b89 100644
+--- a/src/PartBunch/ParticleContainer.hpp
++++ b/src/PartBunch/ParticleContainer.hpp
+@@ -17,6 +17,7 @@
+ #include "PartBunch/ParticleContainerTypes.h"
+ 
+ #include "Algorithms/CoordinateSystemTrafo.h"
++#include "Algorithms/CyclotronProbe.h"
+ #include "Algorithms/DistributionMoments.h"
+ #include "Algorithms/PartData.h"
+ #include "Algorithms/Quaternion.hpp"
+@@ -179,6 +180,25 @@ public:
+     /// (enabled per beam when the BEAM has POLARIZATION set).
+     bool hasSpin() const { return spinEnabled_m; }
+ 
++    /** Optional diagnostic storage; IPPL migrates and sorts it with R/P/ID.
++     * Histories remain in laboratory coordinates when the tracking frame changes.
++     * Reused/new particle slots are recognized by their stable ID in update().
++     */
++    ParticleAttrib<cyclotron_probe::State>& probeHistory(std::size_t index) {
++        while (probeHistories_m.size() <= index) {
++            auto attribute = std::make_unique<ParticleAttrib<cyclotron_probe::State>>();
++            this->addAttribute(*attribute);
++            attribute->resize(this->R.size());
++            Kokkos::deep_copy(attribute->getView(), cyclotron_probe::State{});
++            probeHistories_m.push_back(std::move(attribute));
++        }
++        return *probeHistories_m[index];
++    }
++
++private:
++    std::vector<std::unique_ptr<ParticleAttrib<cyclotron_probe::State>>> probeHistories_m;
++
++public:
+     ParticleContainer(
+             Mesh_t<Dim>& mesh, FieldLayout_t<Dim>& FL, bool spinEnabled = false,
+             LayoutType layoutType = LayoutType::Spatial, T overlapCutoff = 0.0,
+diff --git a/src/Track/TrackRun.cpp b/src/Track/TrackRun.cpp
+index 821b855e9..c4eaac0df 100644
+--- a/src/Track/TrackRun.cpp
++++ b/src/Track/TrackRun.cpp
+@@ -640,20 +640,6 @@ void TrackRun::execute() {
+     */
+     Track::block->use->prepareForTracking();
+ 
+-    // Solver configuration now belongs to RUN, not PartBunch. Preserve the
+-    // SINGLEGAP restriction here, including gaps inside nested beamlines.
+-    if (fs_m->getType() != "NONE") {
+-        struct GapValidator : DefaultVisitor {
+-            using DefaultVisitor::DefaultVisitor;
+-            void visitRFCavity(const RFCavity& cavity) override {
+-                if (cavity.isCyclotronGap())
+-                    throw OpalException(
+-                            "TrackRun::execute", "SINGLEGAP requires TYPE=NONE field solver.");
+-            }
+-        } validator(*Track::block->use->fetchLine(), false, false);
+-        validator.execute();
+-    }
+-
+     auto maxSteps = Track::block->localTimeSteps;
+     auto sStop    = Track::block->zstop;
+     const bool isRing =
+diff --git a/unit_tests/AbsBeamline/CMakeLists.txt b/unit_tests/AbsBeamline/CMakeLists.txt
+index 7d61b4fdc..93223020e 100644
+--- a/unit_tests/AbsBeamline/CMakeLists.txt
++++ b/unit_tests/AbsBeamline/CMakeLists.txt
+@@ -3,6 +3,7 @@ message(STATUS "Adding unit tests found in ${_relPath}")
+ 
+ add_opalx_test(TestApertureHelper USE_GTEST_MAIN)
+ add_opalx_test(TestCyclotronSector USE_GTEST_MAIN)
++add_opalx_test(TestCyclotronSectorMPI SOURCES TestCyclotronSector.cpp NUM_PROCS 2 USE_GTEST_MAIN)
+ add_opalx_test(TestCyclotronRF USE_GTEST_MAIN)
+ add_opalx_test(TestBendFieldModel USE_GTEST_MAIN)
+ add_opalx_test(TestBox USE_GTEST_MAIN)
+diff --git a/unit_tests/AbsBeamline/TestCyclotronRF.cpp b/unit_tests/AbsBeamline/TestCyclotronRF.cpp
+index e80d2b226..237947052 100644
+--- a/unit_tests/AbsBeamline/TestCyclotronRF.cpp
++++ b/unit_tests/AbsBeamline/TestCyclotronRF.cpp
+@@ -111,7 +111,7 @@ TEST_F(CyclotronRFTest, FocusingDeviceParityAndInvalidState) {
+     for (int i = 0; i < 3; ++i)
+         EXPECT_NEAR(host(i), expected[i], 1e-14);
+     Vector_t<double, 3> unsupported(.01, .001, .4);
+-    EXPECT_FALSE(kick.apply(profile.host, .6, 0, 938272088.16, unsupported));
++    EXPECT_TRUE(kick.apply(profile.host, .6, 0, 938272088.16, unsupported));
+     EXPECT_EQ(unsupported[1], .001);
+     kick.omega = 0;
+     EXPECT_THROW(kick.validate(), OpalException);
+diff --git a/unit_tests/AbsBeamline/TestCyclotronSector.cpp b/unit_tests/AbsBeamline/TestCyclotronSector.cpp
+index b712f94d9..f0f8df565 100644
+--- a/unit_tests/AbsBeamline/TestCyclotronSector.cpp
++++ b/unit_tests/AbsBeamline/TestCyclotronSector.cpp
+@@ -3,7 +3,11 @@
+ #include <filesystem>
+ #include <fstream>
+ #include "AbsBeamline/CyclotronSector.h"
++#include "Algorithms/CyclotronBunchStepper.h"
++#include "Algorithms/CyclotronSectorCandidates.h"
+ #include "Algorithms/DirectedTurnCounter.h"
++#include "BeamlineCore/DriftRep.h"
++#include "BeamlineCore/RFCavityRep.h"
+ #include "PartBunch/BunchStateHandler.h"
+ #include "PartBunch/ParticleContainer.hpp"
+ #include "Utilities/OpalException.h"
+@@ -149,3 +153,194 @@ TEST_F(CyclotronTest, CountsDirectedReturnsWithoutInitialOrOppositeCrossing) {
+     EXPECT_FALSE(counter.update(origin, momentum));
+     EXPECT_EQ(counter.count(), 1);
+ }
++
++TEST_F(CyclotronTest, SpatialWedgeCandidatesAreConservativeAcrossFramesAndSeams) {
++    CyclotronSector sector("candidate");
++    sector.configure(CyclotronSectorFieldMap::read(filename), 8, -0.05, 0.05, 1, {});
++    const CoordinateSystemTrafo frame(
++            Vector_t<double, 3>(2, -3, 4),
++            Quaternion(std::cos(.3), Vector_t<double, 3>(0, std::sin(.3), 0)));
++    const auto& geometry = sector.getGeometry();
++    for (int i = 0; i <= 20; ++i) {
++        const double angle = (std::acos(-1.0) / 4) * i / 20;
++        const auto point   = frame.transformFrom(
++                Vector_t<double, 3>(1.25 * std::cos(angle) - 1.2, 0, 1.25 * std::sin(angle)));
++        EXPECT_TRUE(cyclotron_candidates::mayIntersect(geometry, frame, point, point)) << i;
++    }
++    const auto behind = frame.transformFrom(Vector_t<double, 3>(0, 0, -.1));
++    EXPECT_FALSE(cyclotron_candidates::mayIntersect(geometry, frame, behind, behind));
++    const auto beyond = frame.transformFrom(Vector_t<double, 3>(-.9, 0, 1));
++    EXPECT_FALSE(cyclotron_candidates::mayIntersect(geometry, frame, beyond, beyond));
++    // A finite bunch straddling the entrance must not be rejected by its centre.
++    EXPECT_TRUE(
++            cyclotron_candidates::mayIntersect(
++                    geometry, CoordinateSystemTrafo(), Vector_t<double, 3>(0, -.01, -.1),
++                    Vector_t<double, 3>(.1, .01, .1)));
++    EXPECT_TRUE(
++            cyclotron_candidates::mayIntersect(
++                    geometry, CoordinateSystemTrafo(), Vector_t<double, 3>(0, -100, 0),
++                    Vector_t<double, 3>(100, 100, 100)));
++    auto invalid = Vector_t<double, 3>(std::numeric_limits<double>::quiet_NaN());
++    EXPECT_TRUE(cyclotron_candidates::mayIntersect(geometry, frame, invalid, invalid));
++    // SYM=2 permits the complete upper half-plane, including negative local X.
++    const auto half = Geometry::makeSBend(1.2 * std::acos(-1.0), 1 / 1.2);
++    const Vector_t<double, 3> left(-2.4, 0, .1);
++    EXPECT_TRUE(cyclotron_candidates::mayIntersect(half, CoordinateSystemTrafo(), left, left));
++}
++
++TEST_F(CyclotronTest, SpatialSelectionRestoresOmittedDeviceFieldAndPreservesOtherCandidates) {
++    auto sector = std::make_shared<CyclotronSector>("active");
++    sector->configure(CyclotronSectorFieldMap::read(filename), 8, -.05, .05, 1, {});
++    sector->setCSTrafoGlobal2Local(CoordinateSystemTrafo(
++            Vector_t<double, 3>(.3, -.2, .4),
++            Quaternion(std::cos(.15), Vector_t<double, 3>(0, std::sin(.15), 0))));
++    sector->setMisalignment(CoordinateSystemTrafo(Vector_t<double, 3>(.01, 0, .02), Quaternion()));
++    std::shared_ptr<ElementBase> staleSector(sector->clone());
++    staleSector->setCSTrafoGlobal2Local(
++            CoordinateSystemTrafo(Vector_t<double, 3>(0, 0, 10), Quaternion()));
++    auto drift = std::make_shared<DriftRep>("preserved");
++    const CoordinateSystemTrafo toLab(
++            Vector_t<double, 3>(-.1, .2, -.3),
++            Quaternion(std::cos(.1), Vector_t<double, 3>(0, std::sin(.1), 0)));
++    const auto frame = sector->getMisalignment() * (sector->getCSTrafoGlobal2Local() * toLab);
++    const Vector_t<double, 3> local(1.25 * std::cos(.2) - 1.2, .01, 1.25 * std::sin(.2));
++    const auto point = frame.transformFrom(local);
++    // Model a stale periodic index selecting the neighbouring sector instead.
++    auto selected = cyclotron_candidates::select(
++            {sector, staleSector}, toLab, point, point, {staleSector, drift});
++    ASSERT_EQ(selected.size(), 2u);
++    EXPECT_EQ(selected.count(sector), 1u);
++    EXPECT_EQ(selected.count(staleSector), 0u);
++    EXPECT_EQ(selected.count(drift), 1u);
++
++    ippl::NDIndex<3> domain;
++    for (unsigned d = 0; d < 3; ++d)
++        domain[d] = ippl::Index(8);
++    Mesh_t<3> mesh(domain, Vector_t<double, 3>(1), Vector_t<double, 3>(-4));
++    std::array<bool, 3> decomp{true, true, true};
++    FieldLayout_t<3> layout(ippl::Comm->getCommunicator(), domain, decomp, true);
++    auto pc = std::make_shared<ParticleContainer_t>(mesh, layout);
++    pc->setBunchStateHandler(std::make_shared<BunchStateHandler>());
++    pc->createParticles(ippl::Comm->rank() == 0 ? 1 : 0);
++    Kokkos::deep_copy(pc->R.getView(), point);
++    const Vector_t<double, 3> momentum(.1, .2, .3);
++    Kokkos::deep_copy(pc->P.getView(), momentum);
++    Kokkos::deep_copy(pc->B.getView(), Vector_t<double, 3>(0));
++    Kokkos::deep_copy(pc->E.getView(), Vector_t<double, 3>(0));
++    pc->transformBunch(frame);
++    // Exercise the existing Kokkos kernel, not a host replacement field.
++    sector->apply(pc);
++    pc->transformBunch(frame.inverted());
++    const auto b = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), pc->B.getView());
++    const auto r = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), pc->R.getView());
++    const auto p = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), pc->P.getView());
++    Vector_t<double, 3> expected(0), e(0);
++    sector->apply(local, Vector_t<double, 3>(0), 0, e, expected);
++    expected = frame.rotateFrom(expected);
++    for (std::size_t i = 0; i < pc->getLocalNum(); ++i)
++        for (unsigned d = 0; d < 3; ++d) {
++            EXPECT_NEAR(b(i)(d), expected(d), 1e-14);
++            EXPECT_NEAR(r(i)(d), point(d), 1e-14);
++            EXPECT_NEAR(p(i)(d), momentum(d), 1e-14);
++        }
++}
++
++TEST_F(CyclotronTest, DeviceBunchTransportUsesIndividualArrivalTimesAndThreeDimensionalEnergy) {
++    const auto rfFile = filename + ".rf";
++    {
++        std::ofstream out(rfFile);
++        out << "2\n0 1 0\n1 1 0\n";
++    }
++    CyclotronSector sector("zero");
++    sector.configure(CyclotronSectorFieldMap::read(filename), 8, -.05, .05, 0, {});
++    RFCavityRep cavity("gap");
++    const double mass = 938272088.16, dt = 1e-11, time = 2e-9;
++    cavity.configureCyclotronGap(
++            rfFile, .001, 1, CyclotronRFKick{847000, Physics::two_pi * 50.65e6, 0, 0, .999});
++    cyclotron_bunch::Lattice lattice;
++    lattice.sectors = decltype(lattice.sectors)("sectors", 1);
++    lattice.gaps    = decltype(lattice.gaps)("gaps", 1);
++    auto sectors    = Kokkos::create_mirror_view(lattice.sectors);
++    auto gaps       = Kokkos::create_mirror_view(lattice.gaps);
++    const CoordinateSystemTrafo identity;
++    const device_external::Rigid frame{identity.getOrigin(), identity.getRotationMatrix()};
++    const Vector_t<double, 3> start(.02, .001, .25), momentum(.01, .002, .4);
++    const CoordinateSystemTrafo plane(Vector_t<double, 3>(0, 0, .2502), Quaternion());
++    sectors(0) = {frame, sector.deviceField()};
++    gaps(0)    = {{plane.getOrigin(), plane.getRotationMatrix()}, cavity.deviceGap()};
++    Kokkos::deep_copy(lattice.sectors, sectors);
++    Kokkos::deep_copy(lattice.gaps, gaps);
++    Kokkos::View<Vector_t<double, 3>*> result("result", 2);
++    Kokkos::View<int*> accepted("accepted", 2);
++    const size_t count = ippl::Comm->rank() == 0 ? 2 : 0;
++    Kokkos::parallel_for(
++            "bunch event test", count, KOKKOS_LAMBDA(size_t i) {
++                auto r = start, p = momentum;
++                r(2) -= i * .0001;
++                accepted(i) = lattice.advance(r, p, time, dt, mass);
++                result(i)   = p;
++            });
++    auto host          = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), result);
++    auto ok            = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), accepted);
++    const double gamma = std::sqrt(1 + dot(momentum, momentum));
++    for (size_t i = 0; i < count; ++i) {
++        ASSERT_EQ(ok(i), 1);
++        const double arrival  = (.0002 + i * .0001) * gamma / (Physics::c * momentum(2));
++        const double expected = 847000 * std::cos(Physics::two_pi * 50.65e6 * (time + arrival));
++        EXPECT_NEAR((std::sqrt(1 + dot(host(i), host(i))) - gamma) * mass, expected, 5e-7);
++        EXPECT_EQ(host(i)(1), momentum(1));
++        EXPECT_EQ(host(i)(0), momentum(0));
++    }
++    // Frozen uniform self-field split equals a full momentum impulse without RF.
++    lattice.gaps = decltype(lattice.gaps)("no gaps", 0);
++    const Vector_t<double, 3> electric(0, 1000, 0);
++    Kokkos::parallel_for(
++            "self field test", count, KOKKOS_LAMBDA(size_t i) {
++                auto r = start, p = momentum;
++                accepted(i) = lattice.advanceWithSelfFields(
++                        r, p, electric, Vector_t<double, 3>(0), time, dt, mass);
++                result(i) = p;
++            });
++    Kokkos::deep_copy(host, result);
++    Kokkos::deep_copy(ok, accepted);
++    for (size_t i = 0; i < count; ++i) {
++        ASSERT_EQ(ok(i), 1);
++        EXPECT_NEAR(host(i)(1), momentum(1) + dt * Physics::c / mass * 1000, 1e-16);
++    }
++    // Failures are transactional and distinguish support, input and RF causes.
++    Kokkos::parallel_for(
++            "support diagnostics", count, KOKKOS_LAMBDA(size_t i) {
++                auto r = start, p = momentum;
++                r(1) = 1;
++                cyclotron_bunch::Diagnostic diagnostic;
++                const bool ok = lattice.advance(r, p, time, dt, mass, &diagnostic);
++                accepted(i)   = ok;
++                result(i)     = Vector_t<double, 3>(int(diagnostic.failure), r(1), p(1));
++            });
++    Kokkos::deep_copy(host, result);
++    Kokkos::deep_copy(ok, accepted);
++    for (size_t i = 0; i < count; ++i) {
++        EXPECT_EQ(ok(i), 0);
++        EXPECT_EQ(host(i)(0), 1);
++        EXPECT_EQ(host(i)(1), 1);
++        EXPECT_EQ(host(i)(2), momentum(1));
++    }
++    lattice.gaps               = decltype(lattice.gaps)("invalid kick gap", 1);
++    gaps(0).field.kick.voltage = -1e12;
++    Kokkos::deep_copy(lattice.gaps, gaps);
++    Kokkos::parallel_for(
++            "kick diagnostics", count, KOKKOS_LAMBDA(size_t i) {
++                auto r = start, p = momentum;
++                cyclotron_bunch::Diagnostic diagnostic;
++                accepted(i) = lattice.advance(r, p, time, dt, mass, &diagnostic);
++                result(i)   = Vector_t<double, 3>(int(diagnostic.failure), diagnostic.gap, 0);
++            });
++    Kokkos::deep_copy(host, result);
++    Kokkos::deep_copy(ok, accepted);
++    for (size_t i = 0; i < count; ++i) {
++        EXPECT_EQ(ok(i), 0);
++        EXPECT_EQ(host(i)(0), 2);
++        EXPECT_EQ(host(i)(1), 0);
++    }
++    std::filesystem::remove(rfFile);
++}
+diff --git a/unit_tests/Algorithms/CMakeLists.txt b/unit_tests/Algorithms/CMakeLists.txt
+index 4b4f32ee3..895e5e377 100644
+--- a/unit_tests/Algorithms/CMakeLists.txt
++++ b/unit_tests/Algorithms/CMakeLists.txt
+@@ -22,3 +22,6 @@ add_opalx_test(TestClosedOrbitSolver USE_GTEST_MAIN)
+ add_opalx_test(TestLinearMapEigenAnalysis USE_GTEST_MAIN)
+ add_opalx_test(TestDistributionMoments USE_GTEST_MAIN)
+ add_opalx_test(TestStepSizeConfig USE_GTEST_MAIN)
++
++add_opalx_test(TestCyclotronProbe USE_GTEST_MAIN)
++add_opalx_test(TestCyclotronProbeMPI SOURCES TestCyclotronProbe.cpp NUM_PROCS 2 USE_GTEST_MAIN)

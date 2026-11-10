@@ -1,0 +1,681 @@
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
+index 9080c5137..3790ca83a 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
+@@ -101,6 +101,90 @@ namespace opalx::spacecharge {
+         return result;
+     }
+ 
++    void FFT2D5Algorithm::preparePathGeometryAndProjections(
++            const SpaceChargeSolveContext& context) {
++        const auto ref = solveReferencePath_m;
++        if (ref.extent(0) < 2) return;
++        const auto segments = ref.extent(0) - 1;
++        if (segmentGeometry_m.extent(0) != segments) {
++            segmentGeometry_m = SegmentGeometryView_t("FFT2D5SegmentGeometry", segments);
++        }
++        const auto geometry = segmentGeometry_m;
++        // This short serial prefix preserves increasing segment summation order.
++        Kokkos::parallel_for(
++                "FFT2D5::preparePathGeometry", 1, KOKKOS_LAMBDA(const size_t) {
++                    T prefix = 0.0;
++                    for (size_t i = 0; i < segments; ++i) {
++                        const Vector3D_t direction = ref(i + 1) - ref(i);
++                        const T length             = euclidean_norm(direction);
++                        for (unsigned d = 0; d < 3; ++d)
++                            geometry(i, d) = direction[d];
++                        geometry(i, 3) = direction.dot(direction);
++                        geometry(i, 4) = length;
++                        geometry(i, 5) = prefix;
++                        prefix += length;
++                    }
++                });
++        Kokkos::fence();
++        projectedPositions_m.resize(particles_m.size());
++        projectedSegments_m.resize(particles_m.size());
++        for (size_t container = 0; container < particles_m.size(); ++container) {
++            if (context.trackingActive()[container] == 0) continue;
++            const auto count = particles_m[container]->getLocalNum();
++            if (projectedPositions_m[container].extent(0) != count) {
++                projectedPositions_m[container] = VectorView_t("FFT2D5ProjectedPositions", count);
++                projectedSegments_m[container] =
++                        SegmentIndexView_t("FFT2D5ProjectedSegments", count);
++            }
++            const auto positions = particles_m[container]->R.getView();
++            const auto invalid   = particles_m[container]->InvalidMask.getView();
++            const auto projected = projectedPositions_m[container];
++            const auto indices   = projectedSegments_m[container];
++            Kokkos::parallel_for(
++                    "FFT2D5::prepareParticleProjections", count, KOKKOS_LAMBDA(const size_t n) {
++                        if (invalid(n)) {
++                            projected(n) = Vector3D_t(0.0);
++                            indices(n)   = segments;
++                            return;
++                        }
++                        const Vector3D_t position = positions(n);
++                        T bestDistance2           = Kokkos::Experimental::finite_max_v<T>;
++                        size_t best               = 0;
++                        T bestFraction            = 0.0;
++                        Vector3D_t closest(0.0);
++                        for (size_t i = 0; i < segments; ++i) {
++                            const T length2 = geometry(i, 3);
++                            if (length2 <= 0.0) continue;
++                            const Vector3D_t direction(
++                                    geometry(i, 0), geometry(i, 1), geometry(i, 2));
++                            const Vector3D_t start = ref(i);
++                            const T fraction       = Kokkos::clamp(
++                                    direction.dot(position - start) / length2, 0.0, 1.0);
++                            const Vector3D_t point      = start + fraction * direction;
++                            const Vector3D_t difference = position - point;
++                            const T distance2           = difference.dot(difference);
++                            if (distance2 < bestDistance2) {
++                                best          = i;
++                                bestFraction  = fraction;
++                                closest       = point;
++                                bestDistance2 = distance2;
++                            }
++                        }
++                        const Vector3D_t tangent =
++                                Vector3D_t(geometry(best, 0), geometry(best, 1), geometry(best, 2))
++                                / geometry(best, 4);
++                        const Vector3D_t normal(0.0, 1.0, 0.0);
++                        const Vector3D_t binormal = ippl::cross(normal, tangent);
++                        const Vector3D_t offset   = position - closest;
++                        projected(n)              = Vector3D_t(
++                                offset.dot(binormal), offset.dot(normal),
++                                geometry(best, 5) + bestFraction * geometry(best, 4));
++                        indices(n) = best;
++                    });
++        }
++        Kokkos::fence();
++    }
++
+     std::size_t FFT2D5Algorithm::sliceCount() const {
+         return fieldStorage_m == nullptr ? 0 : fieldStorage_m->meshSize()[2];
+     }
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
+index 32f6522ea..a8eb5cf78 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
+@@ -72,6 +72,8 @@ namespace opalx::spacecharge {
+         using BooleanView_t           = ParticleAttrib<bool>::view_type;
+         using ReferenceView_t         = Kokkos::View<Vector3D_t*>;
+         using LineDensityView_t       = Kokkos::View<T*>;
++        using SegmentGeometryView_t   = Kokkos::View<T* [6]>;
++        using SegmentIndexView_t      = Kokkos::View<size_t*>;
+         using ScalarGridView3D_t      = Field<T, 3U>::view_type;
+         using VectorGridView3D_t      = Field<Vector3D_t, 3U>::view_type;
+         using ScalarGridView2D_t      = Field<T, 2U>::view_type;
+@@ -165,6 +167,8 @@ namespace opalx::spacecharge {
+ 
+         /**
+          * @brief Deposits particle charge onto the 3D grid.
++         * @param usePreparedProjections Use the cache prepared by doRunSolver; standalone
++         *        diagnostic calls leave this false and calculate fresh projections.
+          *
+          * @tparam DiagnosticPolicy Diagnostic policy used to inspect the charge
+          *                           deposition process. Defaults to NullDiagnostic.
+@@ -173,7 +177,8 @@ namespace opalx::spacecharge {
+          */
+         template <typename DiagnosticPolicy = NullDiagnostic>
+         void scatterToGrid(
+-                const SpaceChargeSolveContext& context, DiagnosticPolicy diagnostic = {});
++                const SpaceChargeSolveContext& context, DiagnosticPolicy diagnostic = {},
++                bool usePreparedProjections = false);
+ 
+         /**
+          * @brief Solves the two-dimensional Poisson equations on the longitudinal slices.
+@@ -198,6 +203,8 @@ namespace opalx::spacecharge {
+ 
+         /**
+          * @brief Interpolates the calculated electric field back to the particles.
++         * @param usePreparedProjections Use only the current doRunSolver preparation;
++         *        standalone probe/diagnostic calls default to fresh conversion.
+          *
+          * @tparam DiagnosticPolicy Diagnostic policy used to inspect the field
+          *                           gathering process. Defaults to NullDiagnostic.
+@@ -206,7 +213,8 @@ namespace opalx::spacecharge {
+          */
+         template <typename DiagnosticPolicy = NullDiagnostic>
+         void gatherFromGrid(
+-                const SpaceChargeSolveContext& context, DiagnosticPolicy diagnostic = {});
++                const SpaceChargeSolveContext& context, DiagnosticPolicy diagnostic = {},
++                bool usePreparedProjections = false);
+ 
+         /**
+          * @brief Creates a diagnostic policy for use by the solver unit tests.
+@@ -256,16 +264,27 @@ namespace opalx::spacecharge {
+          * @param rho Charge-density grid onto which particle charge is deposited.
+          * @param origin Physical origin of the charge-density grid.
+          * @param diagnostic Diagnostic policy used to record intermediate results.
++         * @param geometry Current solve-frame segment geometry for prepared conversion.
++         * @param projectedR Prepared local coordinates; empty uses the original conversion.
++         * @param projectedSegment Nearest-segment indices paired with projectedR.
+          */
+         template <bool ScatterLongitudinally, typename DiagnosticPolicy = NullDiagnostic>
+         KOKKOS_FUNCTION static void doScatterToGrid(
+                 size_t n, const VectorView_t& r, const VectorView_t& p, const ReferenceView_t& ref,
+                 T meanPs, const ScalarView_t& dt, const BooleanView_t& invalid, Vector3D_t invDr,
+                 int nGhost, ippl::NDIndex<3U> lDom, ScalarGridView3D_t rho, Vector3D_t origin,
+-                DiagnosticPolicy diagnostic);
++                DiagnosticPolicy diagnostic, const SegmentGeometryView_t& geometry = {},
++                const VectorView_t& projectedR             = {},
++                const SegmentIndexView_t& projectedSegment = {});
+ 
+         /**
+          * @brief Kokkos function that converts from lab to Frenet-Serret coordinates.
++         * @details Empty projection views retain the original exhaustive conversion. With
++         * prepared views, reuse only position and segment selection; project the current
++         * momentum onto the same basis so diagnostic momentum values are never cached.
++         * @param geometry Current solve-frame segment geometry (optional cached mode).
++         * @param projectedR Prepared local particle coordinates (empty selects uncached mode).
++         * @param projectedSegment Prepared nearest-segment indices, paired with projectedR.
+          *
+          * @param n The particle number.
+          * @param r Particle positions.
+@@ -281,7 +300,9 @@ namespace opalx::spacecharge {
+         KOKKOS_FUNCTION static void convertToFrenetSerret(
+                 size_t n, const VectorView_t& r, const VectorView_t& p, const ReferenceView_t& ref,
+                 Vector3D_t& fsR, Vector3D_t& fsP, Vector3D_t& bUnit, Vector3D_t& nUnit,
+-                Vector3D_t& tUnit);
++                Vector3D_t& tUnit, const SegmentGeometryView_t& geometry = {},
++                const VectorView_t& projectedR             = {},
++                const SegmentIndexView_t& projectedSegment = {});
+ 
+         /**
+          * @brief Kokkos function that boosts coordinates into the beam reference frame.
+@@ -343,6 +364,9 @@ namespace opalx::spacecharge {
+          * @param lineDensityGradient The longitudinal line charge density gradient.
+          * @param closedRing Whether interpolation wraps across the path endpoints.
+          * @param diagnostic Diagnostic policy used to record intermediate results.
++         * @param geometry Current solve-frame segment geometry for prepared conversion.
++         * @param projectedR Prepared local coordinates; empty uses the original conversion.
++         * @param projectedSegment Nearest-segment indices paired with projectedR.
+          */
+         template <bool ScatterLongitudinally, typename DiagnosticPolicy = NullDiagnostic>
+         KOKKOS_FUNCTION static void doGatherFromGrid(
+@@ -350,8 +374,9 @@ namespace opalx::spacecharge {
+                 T beamGamma, T beamBeta, const VectorView_t& e, const VectorView_t& b,
+                 const BooleanView_t& invalid, Vector3D_t invDr, int nGhost, ippl::NDIndex<3U> lDom,
+                 VectorGridView3D_t eField, Vector3D_t origin, T gBy4PiEpsilon0,
+-                LineDensityView_t lineDensityGradient, bool closedRing,
+-                DiagnosticPolicy diagnostic);
++                LineDensityView_t lineDensityGradient, bool closedRing, DiagnosticPolicy diagnostic,
++                const SegmentGeometryView_t& geometry = {}, const VectorView_t& projectedR = {},
++                const SegmentIndexView_t& projectedSegment = {});
+ 
+         /**
+          * @brief Kokkos function that gathers the boosted E field for a particle from
+@@ -533,11 +558,77 @@ namespace opalx::spacecharge {
+         const LineDensityView_t& getLineDensityGradient() const { return lineDensityGradient_m; }
+ 
+     private:
++        /**
++         * @brief Prepare segment geometry and particle projections for one complete field solve.
++         *
++         * @details
++         * This single preparation call eliminates repeated path-only calculations and the
++         * second nearest-segment search during gather. It is called by doRunSolver after
++         * solve() has put the reference path and every active particle container into the
++         * same Cartesian solve frame, and before coverage checking or charge deposition.
++         * Two ordered device stages are required: one geometry kernel, followed by a
++         * projection kernel for each active container. Geometry must be complete before
++         * particles search it; no global inter-block barrier is assumed inside a kernel.
++         *
++         * For path points R_i, segment i stores six doubles:
++         * - columns 0..2: d_i = R_(i+1) - R_i;
++         * - column 3: d_i dot d_i;
++         * - column 4: l_i = |d_i|;
++         * - column 5: S_i = sum_(j<i) l_j, the arc length at the segment start.
++         * The squared length, rather than its reciprocal, retains the original division
++         * in the closest-point calculation. A short single-work-item geometry kernel
++         * accumulates S_i in increasing segment order; zero-length segments contribute
++         * zero length and remain excluded from the nearest-segment search.
++         *
++         * For each non-invalid particle x, search all segments in their original order:
++         * @f[
++         * u_i = clamp((x-R_i)\cdot d_i / |d_i|^2,0,1),\qquad
++         * q_i = R_i + u_i d_i.
++         * @f]
++         * The first strictly closest segment is retained, preserving the existing tie
++         * rule. Store its index and local coordinates (x_perp,y_perp,s), with
++         * @f$ s=S_i+u_i l_i @f$. The normal remains the existing (0,1,0), the tangent is
++         * d_i/l_i and the binormal is normal cross tangent. This preserves the present
++         * path/basis approximation; it introduces no smoothing or curvature correction.
++         * Pre-summing S_i changes floating-point association relative to adding preceding
++         * lengths to u_i*l_i for every particle; small rounding differences are expected.
++         *
++         * The resulting cache is read by open-path coverage checking, deposition and
++         * gather in this doRunSolver call. Those stages do not change particle positions,
++         * momenta, ordering or the solve frame. Momentum is deliberately not cached: its
++         * local components are recomputed by the conversion used for diagnostics. Invalid
++         * particles receive a sentinel segment index and are skipped by all consumers.
++         * Inactive containers are neither projected nor modified.
++         *
++         * @par Lifetime and storage
++         * Recompute geometry and every active particle projection on every complete solve,
++         * including after frame changes, particle movement, reordering or count changes.
++         * Reuse allocated views when their extents match; otherwise resize them before
++         * launching the particle kernel. Storage is O(M + N): 48*M bytes for M segments
++         * and (3*sizeof(double)+sizeof(size_t))*N bytes for local particle caches.
++         * Buffers of temporarily inactive containers may retain their previous allocation.
++         * Views are shared read-only by OpenMP workers; no N-by-M distance matrix exists.
++         * The remaining exhaustive search costs O(M*N) work, performed once per solve.
++         * Standalone scatterToGrid/gatherFromGrid diagnostic calls default to the uncached
++         * conversion, so a later probe edit or exception cannot reuse a stale projection.
++         *
++         * @param context Per-call container activity and tracker state.
++         * @pre The initialized path and particles use the same aligned solve frame.
++         * @pre Inspection-only diagnostic callbacks do not move or reorder particles
++         *      between preparation and the end of doRunSolver.
++         * @post Every active non-invalid particle has fresh local coordinates and a
++         *       nearest-segment index. No particle position, momentum, field or dt is changed.
++         */
++        void preparePathGeometryAndProjections(const SpaceChargeSolveContext& context);
++
+         FFT2D5Config config_m;
+         std::vector<ParticleContainer*> particles_m;
+         std::shared_ptr<const BunchStateHandler> bunchState_m;
+         std::unique_ptr<ReferencePath> referencePath_m;
+         ReferenceView_t solveReferencePath_m;
++        SegmentGeometryView_t segmentGeometry_m;
++        std::vector<VectorView_t> projectedPositions_m;
++        std::vector<SegmentIndexView_t> projectedSegments_m;
+         std::unique_ptr<FFT2D5FieldStorage> fieldStorage_m;
+         LineDensityView_t lineDensity_m;
+         LineDensityView_t lineDensityGradient_m;
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
+index b35ea1871..d509e3307 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
+@@ -51,6 +51,9 @@ namespace opalx::spacecharge {
+             Algorithm::VectorView_t r_m;
+             Algorithm::VectorView_t p_m;
+             Algorithm::ReferenceView_t ref_m;
++            Algorithm::SegmentGeometryView_t geometry_m;
++            Algorithm::VectorView_t projectedR_m;
++            Algorithm::SegmentIndexView_t projectedSegment_m;
+             Algorithm::T meanPs_m;
+             Algorithm::ScalarView_t dt_m;
+             Algorithm::BooleanView_t invalid_m;
+@@ -64,7 +67,8 @@ namespace opalx::spacecharge {
+             KOKKOS_FUNCTION void operator()(const size_t n) const {
+                 Algorithm::doScatterToGrid<ScatterLongitudinally>(
+                         n, r_m, p_m, ref_m, meanPs_m, dt_m, invalid_m, invDr_m, nGhost_m, lDom_m,
+-                        rho_m, origin_m, diagnostic_m);
++                        rho_m, origin_m, diagnostic_m, geometry_m, projectedR_m,
++                        projectedSegment_m);
+             }
+         };
+ 
+@@ -73,6 +77,9 @@ namespace opalx::spacecharge {
+             Algorithm::VectorView_t r_m;
+             Algorithm::VectorView_t p_m;
+             Algorithm::ReferenceView_t ref_m;
++            Algorithm::SegmentGeometryView_t geometry_m;
++            Algorithm::VectorView_t projectedR_m;
++            Algorithm::SegmentIndexView_t projectedSegment_m;
+             Algorithm::BooleanView_t invalid_m;
+             Algorithm::T length_m;
+             Algorithm::T tolerance_m;
+@@ -80,7 +87,9 @@ namespace opalx::spacecharge {
+             KOKKOS_FUNCTION void operator()(const size_t n, size_t& outside) const {
+                 if (invalid_m(n)) return;
+                 Algorithm::Vector3D_t fsR, fsP, bUnit, nUnit, tUnit;
+-                Algorithm::convertToFrenetSerret(n, r_m, p_m, ref_m, fsR, fsP, bUnit, nUnit, tUnit);
++                Algorithm::convertToFrenetSerret(
++                        n, r_m, p_m, ref_m, fsR, fsP, bUnit, nUnit, tUnit, geometry_m, projectedR_m,
++                        projectedSegment_m);
+                 const Algorithm::Vector3D_t fromStart = r_m(n) - ref_m(0);
+                 const auto before                     = fromStart.dot(tUnit);
+                 const Algorithm::Vector3D_t fromEnd   = r_m(n) - ref_m(ref_m.extent(0) - 1);
+@@ -206,6 +215,9 @@ namespace opalx::spacecharge {
+             Algorithm::VectorView_t r_m;
+             Algorithm::VectorView_t p_m;
+             Algorithm::ReferenceView_t ref_m;
++            Algorithm::SegmentGeometryView_t geometry_m;
++            Algorithm::VectorView_t projectedR_m;
++            Algorithm::SegmentIndexView_t projectedSegment_m;
+             Algorithm::T beamGamma_m;
+             Algorithm::T beamBeta_m;
+             Algorithm::VectorView_t e_m;
+@@ -225,7 +237,8 @@ namespace opalx::spacecharge {
+                 Algorithm::doGatherFromGrid<ScatterLongitudinally>(
+                         n, r_m, p_m, ref_m, beamGamma_m, beamBeta_m, e_m, b_m, invalid_m, invDr_m,
+                         nGhost_m, lDom_m, eField_m, origin_m, gBy4PiEpsilon0_m,
+-                        lineDensityGradient_m, closedRing_m, diagnostic_m);
++                        lineDensityGradient_m, closedRing_m, diagnostic_m, geometry_m, projectedR_m,
++                        projectedSegment_m);
+             }
+         };
+     }  // namespace fft2d5_detail
+@@ -233,10 +246,11 @@ namespace opalx::spacecharge {
+     template <typename DiagnosticPolicy>
+     void FFT2D5Algorithm::doRunSolver(
+             const SpaceChargeSolveContext& context, DiagnosticPolicy diagnostic) {
+-        scatterToGrid<DiagnosticPolicy>(context, diagnostic);
++        preparePathGeometryAndProjections(context);
++        scatterToGrid<DiagnosticPolicy>(context, diagnostic, true);
+         solvePoissons<DiagnosticPolicy>(diagnostic);
+         calculateLineDensity<DiagnosticPolicy>(diagnostic);
+-        gatherFromGrid<DiagnosticPolicy>(context, diagnostic);
++        gatherFromGrid<DiagnosticPolicy>(context, diagnostic, true);
+     }
+ 
+     template <typename DiagnosticPolicy>
+@@ -255,7 +269,8 @@ namespace opalx::spacecharge {
+     // The periodic boundary conditions are handled when the ring is marked as closed.
+     template <typename DiagnosticPolicy>
+     void FFT2D5Algorithm::scatterToGrid(
+-            const SpaceChargeSolveContext& context, DiagnosticPolicy diagnostic) {
++            const SpaceChargeSolveContext& context, DiagnosticPolicy diagnostic,
++            const bool usePreparedProjections) {
+         using Policy2D_t = Kokkos::MDRangePolicy<Kokkos::Rank<2>>;
+         using Policy3D_t = Kokkos::MDRangePolicy<Kokkos::Rank<3>>;
+         if (solveReferencePath_m.extent(0) > 1) {
+@@ -272,6 +287,13 @@ namespace opalx::spacecharge {
+                     continue;
+                 }
+                 auto* pc = particles_m[container];
++                const auto geometry =
++                        usePreparedProjections ? segmentGeometry_m : SegmentGeometryView_t();
++                const auto projectedR =
++                        usePreparedProjections ? projectedPositions_m[container] : VectorView_t();
++                const auto projectedSegment = usePreparedProjections
++                                                      ? projectedSegments_m[container]
++                                                      : SegmentIndexView_t();
+                 pc->updateMoments();
+                 if (pc->getTotalNum() > 0 && pc->getChargePerParticle() == 0.0) {
+                     throw OpalException(
+@@ -288,8 +310,8 @@ namespace opalx::spacecharge {
+                     Kokkos::parallel_reduce(
+                             "FFT2D5::checkPathCoverage", pc->getLocalNum(),
+                             fft2d5_detail::CheckPathCoverageFunctor{
+-                                    pc->R.getView(), pc->P.getView(), ref,
+-                                    pc->InvalidMask.getView(), length, tolerance},
++                                    pc->R.getView(), pc->P.getView(), ref, geometry, projectedR,
++                                    projectedSegment, pc->InvalidMask.getView(), length, tolerance},
+                             outside);
+                     if (outside != 0) {
+                         throw OpalException(
+@@ -310,15 +332,15 @@ namespace opalx::spacecharge {
+                             "Solve2d5::scatterToGrid::scatter", pc->getLocalNum(),
+                             fft2d5_detail::ScatterToGridFunctor<
+                                     true, DiagnosticPolicy, decltype(invDr)>{
+-                                    r, p, ref, meanPs, dt, invalid, invDr, nGhost, lDom, rhoView,
+-                                    origin, diagnostic});
++                                    r, p, ref, geometry, projectedR, projectedSegment, meanPs, dt,
++                                    invalid, invDr, nGhost, lDom, rhoView, origin, diagnostic});
+                 } else {
+                     Kokkos::parallel_for(
+                             "Solve2d5::scatterToGrid::scatter", pc->getLocalNum(),
+                             fft2d5_detail::ScatterToGridFunctor<
+                                     false, DiagnosticPolicy, decltype(invDr)>{
+-                                    r, p, ref, meanPs, dt, invalid, invDr, nGhost, lDom, rhoView,
+-                                    origin, diagnostic});
++                                    r, p, ref, geometry, projectedR, projectedSegment, meanPs, dt,
++                                    invalid, invDr, nGhost, lDom, rhoView, origin, diagnostic});
+                 }
+                 Kokkos::fence();
+                 diagnostic.scatterCharge(rhoView);
+@@ -367,11 +389,14 @@ namespace opalx::spacecharge {
+             const ReferenceView_t& ref, const T meanPs, const ScalarView_t& dt,
+             const BooleanView_t& invalid, const Vector3D_t invDr, const int nGhost,
+             const ippl::NDIndex<3U> lDom, const ScalarGridView3D_t rho, const Vector3D_t origin,
+-            DiagnosticPolicy diagnostic) {
++            DiagnosticPolicy diagnostic, const SegmentGeometryView_t& geometry,
++            const VectorView_t& projectedR, const SegmentIndexView_t& projectedSegment) {
+         if (!invalid(n)) {
+             // Into Frenet-Serret coordinates
+             Vector3D_t fsR, fsP, bUnit, nUnit, tUnit;
+-            convertToFrenetSerret(n, r, p, ref, fsR, fsP, bUnit, nUnit, tUnit);
++            convertToFrenetSerret(
++                    n, r, p, ref, fsR, fsP, bUnit, nUnit, tUnit, geometry, projectedR,
++                    projectedSegment);
+             diagnostic.frenetSerretScatter(n, fsR, fsP, invalid(n));
+             // Boost into the beam frame
+             boostToBeamFrame(meanPs, fsP);
+@@ -384,7 +409,18 @@ namespace opalx::spacecharge {
+     KOKKOS_INLINE_FUNCTION void FFT2D5Algorithm::convertToFrenetSerret(
+             const size_t n, const VectorView_t& r, const VectorView_t& p,
+             const ReferenceView_t& ref, Vector3D_t& fsR, Vector3D_t& fsP, Vector3D_t& bUnit,
+-            Vector3D_t& nUnit, Vector3D_t& tUnit) {
++            Vector3D_t& nUnit, Vector3D_t& tUnit, const SegmentGeometryView_t& geometry,
++            const VectorView_t& projectedR, const SegmentIndexView_t& projectedSegment) {
++        if (projectedR.extent(0) != 0) {
++            const auto segment = projectedSegment(n);
++            fsR                = projectedR(n);
++            tUnit = Vector3D_t(geometry(segment, 0), geometry(segment, 1), geometry(segment, 2))
++                    / geometry(segment, 4);
++            nUnit = {0, 1, 0};
++            bUnit = ippl::cross(nUnit, tUnit);
++            fsP   = Vector3D_t(p(n).dot(bUnit), p(n).dot(nUnit), p(n).dot(tUnit));
++            return;
++        }
+         // Find the segment with the shortest normal to the point
+         T bestDist2 = Kokkos::Experimental::finite_max_v<T>;
+         size_t bestI{};
+@@ -605,13 +641,21 @@ namespace opalx::spacecharge {
+ 
+     template <typename DiagnosticPolicy>
+     void FFT2D5Algorithm::gatherFromGrid(
+-            const SpaceChargeSolveContext& context, DiagnosticPolicy diagnostic) {
++            const SpaceChargeSolveContext& context, DiagnosticPolicy diagnostic,
++            const bool usePreparedProjections) {
+         if (solveReferencePath_m.extent(0) > 1) {
+             for (std::size_t container = 0; container < particles_m.size(); ++container) {
+                 if (context.trackingActive()[container] == 0) {
+                     continue;
+                 }
+                 auto* pc                       = particles_m[container];
++                const auto geometry =
++                        usePreparedProjections ? segmentGeometry_m : SegmentGeometryView_t();
++                const auto projectedR =
++                        usePreparedProjections ? projectedPositions_m[container] : VectorView_t();
++                const auto projectedSegment    = usePreparedProjections
++                                                         ? projectedSegments_m[container]
++                                                         : SegmentIndexView_t();
+                 const auto r                   = pc->R.getView();
+                 const auto p                   = pc->P.getView();
+                 const auto ref                 = solveReferencePath_m;
+@@ -646,17 +690,51 @@ namespace opalx::spacecharge {
+                             "Solver2d5::GatherFromGrid", pc->getLocalNum(),
+                             fft2d5_detail::GatherFromGridFunctor<
+                                     true, DiagnosticPolicy, decltype(invDr)>{
+-                                    r, p, ref, gammaB, betaB, e, b, invalid, invDr, nGhost, lDom,
+-                                    eField, origin, gBy4PiEpsilon0, lineDensityGradient,
+-                                    config_m.closedRing, diagnostic});
++                                    r,
++                                    p,
++                                    ref,
++                                    geometry,
++                                    projectedR,
++                                    projectedSegment,
++                                    gammaB,
++                                    betaB,
++                                    e,
++                                    b,
++                                    invalid,
++                                    invDr,
++                                    nGhost,
++                                    lDom,
++                                    eField,
++                                    origin,
++                                    gBy4PiEpsilon0,
++                                    lineDensityGradient,
++                                    config_m.closedRing,
++                                    diagnostic});
+                 } else {
+                     Kokkos::parallel_for(
+                             "Solver2d5::GatherFromGrid", pc->getLocalNum(),
+                             fft2d5_detail::GatherFromGridFunctor<
+                                     false, DiagnosticPolicy, decltype(invDr)>{
+-                                    r, p, ref, gammaB, betaB, e, b, invalid, invDr, nGhost, lDom,
+-                                    eField, origin, gBy4PiEpsilon0, lineDensityGradient,
+-                                    config_m.closedRing, diagnostic});
++                                    r,
++                                    p,
++                                    ref,
++                                    geometry,
++                                    projectedR,
++                                    projectedSegment,
++                                    gammaB,
++                                    betaB,
++                                    e,
++                                    b,
++                                    invalid,
++                                    invDr,
++                                    nGhost,
++                                    lDom,
++                                    eField,
++                                    origin,
++                                    gBy4PiEpsilon0,
++                                    lineDensityGradient,
++                                    config_m.closedRing,
++                                    diagnostic});
+                 }
+                 Kokkos::fence();
+             }
+@@ -671,11 +749,14 @@ namespace opalx::spacecharge {
+             const int nGhost, const ippl::NDIndex<3U> lDom, const VectorGridView3D_t eField,
+             const Vector3D_t origin, const T gBy4PiEpsilon0,
+             const LineDensityView_t lineDensityGradient, const bool closedRing,
+-            DiagnosticPolicy diagnostic) {
++            DiagnosticPolicy diagnostic, const SegmentGeometryView_t& geometry,
++            const VectorView_t& projectedR, const SegmentIndexView_t& projectedSegment) {
+         if (!invalid(n)) {
+             // Into Frenet-Serret coordinates
+             Vector3D_t fsR, fsP, bUnit, nUnit, tUnit;
+-            convertToFrenetSerret(n, r, p, ref, fsR, fsP, bUnit, nUnit, tUnit);
++            convertToFrenetSerret(
++                    n, r, p, ref, fsR, fsP, bUnit, nUnit, tUnit, geometry, projectedR,
++                    projectedSegment);
+             diagnostic.frenetSerretGather(n, fsR, fsP, invalid(n));
+             // CiC Gather the boosted E field
+             gatherFromEField<ScatterLongitudinally>(n, fsR, e, invDr, nGhost, lDom, eField, origin);
+diff --git a/unit_tests/SpaceCharge/README.md b/unit_tests/SpaceCharge/README.md
+index 280d1ab59..4306a1c0f 100644
+--- a/unit_tests/SpaceCharge/README.md
++++ b/unit_tests/SpaceCharge/README.md
+@@ -5,6 +5,13 @@ physical fields when the moving reference frame changes. It also covers
+ multiple active containers, repeated solves, inactive containers and restoration
+ of coordinates and time steps after an open-path coverage error.
+ 
++The complete solve prepares path geometry and particle projections once. A
++focused comparison against the uncached diagnostic stages checks deposited
++density and all electric/magnetic field components on nonuniform paths, including
++zero-length segments, corner ties, periodic-seam probes, invalid particles and
++changes of particle count, ordering and momentum. Standalone diagnostic stages
++recompute projections; cached entries are refreshed for every complete solve.
++
+ `TestFFT2D5Numerics` checks the transverse slice solver against independent
+ rectangular-cell logarithmic-potential quadrature and analytic Gaussian fields. It covers
+ anisotropic cells, changes of length unit, boundary-cell self-force, potential
+diff --git a/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp b/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
+index 0551ab083..5e20a535a 100644
+--- a/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
++++ b/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
+@@ -418,6 +418,103 @@ namespace opalx::spacecharge {
+             expectSourceRestored(positions, momentum);
+         }
+ 
++        TEST_F(FFT2D5AlgorithmTest, PreparedProjectionsMatchUncachedStagesAfterSourceChanges) {
++            // Nonuniform segments, a repeated vertex and a closed seam exercise geometry
++            // and first-nearest selection. Both boundary modes use this same spatial path.
++            {
++                std::ofstream path(pathFile_m);
++                path << std::setprecision(17);
++                path << "s rx ry rz px py pz ex ey ez bx by bz ke t\n";
++                for (const auto& point : std::array<Vector, 8>{
++                             Vector(0, 0, 0), Vector(0, 0, 0.37), Vector(0, 0, 1), Vector(-1, 0, 1),
++                             Vector(-1, 0, 1), Vector(-1, 0, 0), Vector(-0.4, 0, 0),
++                             Vector(0, 0, 0)}) {
++                    path << "0 " << point[0] << " " << point[1] << " " << point[2]
++                         << " 0 0 1 0 0 0 0 0 0 0 0\n";
++                }
++            }
++            setPhysicalSource(sourcePositions(), Vector(0, 0, 0.4), CoordinateSystemTrafo());
++            const std::array<std::uint8_t, 1> activity{1};
++            SpaceChargeStepState step;
++            step.timeStep = 1.0e-12;
++            SpaceChargeSolveContext context(activity, step);
++            size_t iteration = 0;
++            for (const bool closed : {false, true}) {
++                auto values          = config(FFT2D5LongitudinalFieldMode::Open);
++                values.grid.meshSize = {16, 16, 32};
++                values.closedRing    = closed;
++                std::array containers{particles_m.get()};
++                FFT2D5Algorithm solver(values, containers, bunchState_m);
++                for (unsigned repeat = 0; repeat < 2; ++repeat, ++iteration) {
++                    const size_t count = sourceSize + 4 * iteration;
++                    if (particles_m->getLocalNum() < count) {
++                        particles_m->createParticles(count - particles_m->getLocalNum());
++                    }
++                    particles_m->setQ(1.0e-12);
++                    particles_m->setM(Physics::m_e);
++                    auto positions = particles_m->R.getHostMirror();
++                    auto momenta   = particles_m->P.getHostMirror();
++                    auto mask      = particles_m->InvalidMask.getHostMirror();
++                    for (size_t n = 0; n < count; ++n) {
++                        // Reordering, movement and momentum changes must refresh every solve.
++                        positions(n) = sourcePositions()[(n + iteration) % sourceSize];
++                        positions(n)[0] += 0.002 * iteration;
++                        momenta(n) = Vector(0.002 * iteration, 0.001 * n, 0.4);
++                        mask(n)    = n + 1 == count;
++                    }
++                    positions(0) = Vector(-0.1, 0.01, 0);    // Last segment near periodic seam.
++                    positions(1) = Vector(0, -0.01, 0.001);  // First segment near periodic seam.
++                    positions(2) = Vector(0, 0, 1);          // Equal-distance corner tie.
++                    Kokkos::deep_copy(particles_m->R.getView(), positions);
++                    Kokkos::deep_copy(particles_m->P.getView(), momenta);
++                    Kokkos::deep_copy(particles_m->InvalidMask.getView(), mask);
++                    Kokkos::deep_copy(particles_m->dt.getView(), step.timeStep);
++                    particles_m->markMomentsDirty();
++                    particles_m->updateMoments();
++                    ASSERT_NO_THROW(static_cast<void>(solver.solve(context)));
++                    // create_mirror always allocates; create_mirror_view could alias on CPU.
++                    auto expectedE   = Kokkos::create_mirror(particles_m->E.getView());
++                    auto expectedB   = Kokkos::create_mirror(particles_m->B.getView());
++                    auto expectedRho = Kokkos::create_mirror(solver.getRho()->getView());
++                    Kokkos::deep_copy(expectedE, particles_m->E.getView());
++                    Kokkos::deep_copy(expectedB, particles_m->B.getView());
++                    Kokkos::deep_copy(expectedRho, solver.getRho()->getView());
++                    solver.scatterToGrid(context);  // Uncached original conversion is the oracle.
++                    const auto actualRho = Kokkos::create_mirror_view_and_copy(
++                            Kokkos::HostSpace(), solver.getRho()->getView());
++                    double rhoScale = 0.0;
++                    for (size_t i = 0; i < actualRho.extent(0); ++i)
++                        for (size_t j = 0; j < actualRho.extent(1); ++j)
++                            for (size_t k = 0; k < actualRho.extent(2); ++k)
++                                rhoScale = std::max(rhoScale, std::abs(expectedRho(i, j, k)));
++                    for (size_t i = 0; i < actualRho.extent(0); ++i)
++                        for (size_t j = 0; j < actualRho.extent(1); ++j)
++                            for (size_t k = 0; k < actualRho.extent(2); ++k)
++                                EXPECT_NEAR(
++                                        actualRho(i, j, k), expectedRho(i, j, k),
++                                        rhoScale * 1e-12 + 1e-30);
++                    solver.solvePoissons();
++                    solver.calculateLineDensity();
++                    solver.gatherFromGrid(context);
++                    const auto actualE = Kokkos::create_mirror_view_and_copy(
++                            Kokkos::HostSpace(), particles_m->E.getView());
++                    const auto actualB = Kokkos::create_mirror_view_and_copy(
++                            Kokkos::HostSpace(), particles_m->B.getView());
++                    double eScale = 0.0, bScale = 0.0;
++                    for (size_t n = 0; n < count; ++n)
++                        for (unsigned d = 0; d < 3; ++d) {
++                            eScale = std::max(eScale, std::abs(expectedE(n)[d]));
++                            bScale = std::max(bScale, std::abs(expectedB(n)[d]));
++                        }
++                    for (size_t n = 0; n < count; ++n)
++                        for (unsigned d = 0; d < 3; ++d) {
++                            EXPECT_NEAR(actualE(n)[d], expectedE(n)[d], eScale * 1e-12 + 1e-25);
++                            EXPECT_NEAR(actualB(n)[d], expectedB(n)[d], bScale * 1e-12 + 1e-25);
++                        }
++                }
++            }
++        }
++
+         TEST_F(FFT2D5AlgorithmTest, RepeatedSolveReplacesFieldsAndPreservesInactiveContainer) {
+             particles_m->createParticles(2);
+             particles_m->setQ(1.0e-15);

@@ -1,0 +1,282 @@
+[
+  {
+    "geometry": "straight",
+    "model": "Original 2D5",
+    "profile": "triangle",
+    "mesh": [
+      128,
+      128,
+      512
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/opalx/runs/triangle-octets-m128x128z512-e85/manifest.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/opalx/sources/triangle-octets-a0.02-L5-C12-ns128-nr128-np512.npz",
+    "source_sha256": "4ae9509c0f5e37283c75d87e25d94dc728274398a046586bfcc890c7a7f6269e",
+    "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+  },
+  {
+    "geometry": "straight",
+    "model": "Original 2D5",
+    "profile": "triangle",
+    "mesh": [
+      256,
+      256,
+      1024
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/opalx/runs/triangle-octets-m256x256z1024-e85/manifest.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/opalx/sources/triangle-octets-a0.02-L5-C12-ns128-nr128-np512.npz",
+    "source_sha256": "4ae9509c0f5e37283c75d87e25d94dc728274398a046586bfcc890c7a7f6269e",
+    "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+  },
+  {
+    "geometry": "straight",
+    "model": "Original 2D5",
+    "profile": "uniform",
+    "mesh": [
+      128,
+      128,
+      512
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/opalx/runs/uniform-octets-m128x128z512-e85/manifest.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/opalx/sources/uniform-octets-a0.02-L5-C12-ns128-nr128-np512.npz",
+    "source_sha256": "975c8d3beafa23d364c2edff445574850b12ef2f1c6fa3b7ac0b127ceb1c94e4",
+    "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+  },
+  {
+    "geometry": "straight",
+    "model": "Original 2D5",
+    "profile": "uniform",
+    "mesh": [
+      256,
+      256,
+      1024
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/opalx/runs/uniform-octets-m256x256z1024-e85/manifest.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/opalx/sources/uniform-octets-a0.02-L5-C12-ns128-nr128-np512.npz",
+    "source_sha256": "975c8d3beafa23d364c2edff445574850b12ef2f1c6fa3b7ac0b127ceb1c94e4",
+    "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+  },
+  {
+    "geometry": "curved",
+    "model": "Original 2D5",
+    "profile": "triangle",
+    "mesh": [
+      128,
+      128,
+      512
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/runs/triangle-octets-m128x128z512-e85/manifest.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/sources/triangle-octets-a0.02-ns128-nr128-np512-path0.005.npz",
+    "source_sha256": "0500e3e76f053ae966f19eb3a97048c45679ed27cfb47178c6abab0d46b32122",
+    "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+  },
+  {
+    "geometry": "curved",
+    "model": "Original 2D5",
+    "profile": "triangle",
+    "mesh": [
+      256,
+      256,
+      1024
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/runs/triangle-octets-m256x256z1024-e85/manifest.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/sources/triangle-octets-a0.02-ns128-nr128-np512-path0.005.npz",
+    "source_sha256": "0500e3e76f053ae966f19eb3a97048c45679ed27cfb47178c6abab0d46b32122",
+    "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+  },
+  {
+    "geometry": "curved",
+    "model": "Original 2D5",
+    "profile": "uniform",
+    "mesh": [
+      128,
+      128,
+      512
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/runs/uniform-octets-m128x128z512-e85/manifest.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/sources/uniform-octets-a0.02-ns128-nr128-np512-path0.005.npz",
+    "source_sha256": "f14526d298a5ee82435b54eb6ef14951d111c1248d5f0320e0962dfa61eb0dca",
+    "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+  },
+  {
+    "geometry": "curved",
+    "model": "Original 2D5",
+    "profile": "uniform",
+    "mesh": [
+      256,
+      256,
+      1024
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/runs/uniform-octets-m256x256z1024-e85/manifest.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/sources/uniform-octets-a0.02-ns128-nr128-np512-path0.005.npz",
+    "source_sha256": "f14526d298a5ee82435b54eb6ef14951d111c1248d5f0320e0962dfa61eb0dca",
+    "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+  },
+  {
+    "geometry": "curved",
+    "model": "Corrected 2D5",
+    "profile": "triangle",
+    "mesh": [
+      128,
+      128,
+      512
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/corrected/runs/triangle-corrected-m128x128x512/manifest.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/sources/triangle-octets-a0.02-ns128-nr128-np512-path0.005.npz",
+    "source_sha256": "0500e3e76f053ae966f19eb3a97048c45679ed27cfb47178c6abab0d46b32122",
+    "binary_sha256": "a0a922982baa205f6c1360f33627568c8393c49f2e046b651003dc6a6307bc27"
+  },
+  {
+    "geometry": "curved",
+    "model": "Corrected 2D5",
+    "profile": "triangle",
+    "mesh": [
+      256,
+      256,
+      1024
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/corrected/runs/triangle-corrected-m256x256x1024/manifest.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/sources/triangle-octets-a0.02-ns128-nr128-np512-path0.005.npz",
+    "source_sha256": "0500e3e76f053ae966f19eb3a97048c45679ed27cfb47178c6abab0d46b32122",
+    "binary_sha256": "a0a922982baa205f6c1360f33627568c8393c49f2e046b651003dc6a6307bc27"
+  },
+  {
+    "geometry": "curved",
+    "model": "Corrected 2D5",
+    "profile": "uniform",
+    "mesh": [
+      128,
+      128,
+      512
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/corrected/runs/uniform-corrected-m128x128x512/manifest.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/sources/uniform-octets-a0.02-ns128-nr128-np512-path0.005.npz",
+    "source_sha256": "f14526d298a5ee82435b54eb6ef14951d111c1248d5f0320e0962dfa61eb0dca",
+    "binary_sha256": "a0a922982baa205f6c1360f33627568c8393c49f2e046b651003dc6a6307bc27"
+  },
+  {
+    "geometry": "curved",
+    "model": "Corrected 2D5",
+    "profile": "uniform",
+    "mesh": [
+      256,
+      256,
+      1024
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/corrected/runs/uniform-corrected-m256x256x1024/manifest.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/sources/uniform-octets-a0.02-ns128-nr128-np512-path0.005.npz",
+    "source_sha256": "f14526d298a5ee82435b54eb6ef14951d111c1248d5f0320e0962dfa61eb0dca",
+    "binary_sha256": "a0a922982baa205f6c1360f33627568c8393c49f2e046b651003dc6a6307bc27"
+  },
+  {
+    "geometry": "curved",
+    "model": "PyORBIT",
+    "profile": "triangle",
+    "mesh": [
+      128,
+      128,
+      512
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/pyorbit/runs/circular-triangle-128x128-z512-gradient-octet/manifest-rank0.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/sources/triangle-octets-a0.02-ns128-nr128-np512-path0.005.npz",
+    "source_sha256": "0500e3e76f053ae966f19eb3a97048c45679ed27cfb47178c6abab0d46b32122",
+    "native_revision": "28df66018aebe4e2b780b9747f4a2d7b8430a5c0"
+  },
+  {
+    "geometry": "curved",
+    "model": "PyORBIT",
+    "profile": "triangle",
+    "mesh": [
+      256,
+      256,
+      1024
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/pyorbit/runs/circular-triangle-256x256-z1024-gradient-octet/manifest-rank0.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/sources/triangle-octets-a0.02-ns128-nr128-np512-path0.005.npz",
+    "source_sha256": "0500e3e76f053ae966f19eb3a97048c45679ed27cfb47178c6abab0d46b32122",
+    "native_revision": "28df66018aebe4e2b780b9747f4a2d7b8430a5c0"
+  },
+  {
+    "geometry": "curved",
+    "model": "PyORBIT",
+    "profile": "uniform",
+    "mesh": [
+      128,
+      128,
+      512
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/pyorbit/runs/circular-uniform-128x128-z512-gradient-octet/manifest-rank0.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/sources/uniform-octets-a0.02-ns128-nr128-np512-path0.005.npz",
+    "source_sha256": "f14526d298a5ee82435b54eb6ef14951d111c1248d5f0320e0962dfa61eb0dca",
+    "native_revision": "28df66018aebe4e2b780b9747f4a2d7b8430a5c0"
+  },
+  {
+    "geometry": "curved",
+    "model": "PyORBIT",
+    "profile": "uniform",
+    "mesh": [
+      256,
+      256,
+      1024
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/pyorbit/runs/circular-uniform-256x256-z1024-gradient-octet/manifest-rank0.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/opalx/sources/uniform-octets-a0.02-ns128-nr128-np512-path0.005.npz",
+    "source_sha256": "f14526d298a5ee82435b54eb6ef14951d111c1248d5f0320e0962dfa61eb0dca",
+    "native_revision": "28df66018aebe4e2b780b9747f4a2d7b8430a5c0"
+  },
+  {
+    "geometry": "straight",
+    "model": "PyORBIT",
+    "profile": "triangle",
+    "mesh": [
+      128,
+      128,
+      512
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/pyorbit/runs/straight-triangle-128x128-z512-gradient-octet/manifest-rank0.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/opalx/sources/triangle-octets-a0.02-L5-C12-ns128-nr128-np512.npz",
+    "source_sha256": "4ae9509c0f5e37283c75d87e25d94dc728274398a046586bfcc890c7a7f6269e",
+    "native_revision": "28df66018aebe4e2b780b9747f4a2d7b8430a5c0"
+  },
+  {
+    "geometry": "straight",
+    "model": "PyORBIT",
+    "profile": "triangle",
+    "mesh": [
+      256,
+      256,
+      1024
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/pyorbit/runs/straight-triangle-256x256-z1024-gradient-octet/manifest-rank0.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/opalx/sources/triangle-octets-a0.02-L5-C12-ns128-nr128-np512.npz",
+    "source_sha256": "4ae9509c0f5e37283c75d87e25d94dc728274398a046586bfcc890c7a7f6269e",
+    "native_revision": "28df66018aebe4e2b780b9747f4a2d7b8430a5c0"
+  },
+  {
+    "geometry": "straight",
+    "model": "PyORBIT",
+    "profile": "uniform",
+    "mesh": [
+      128,
+      128,
+      512
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/pyorbit/runs/straight-uniform-128x128-z512-gradient-octet/manifest-rank0.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/opalx/sources/uniform-octets-a0.02-L5-C12-ns128-nr128-np512.npz",
+    "source_sha256": "975c8d3beafa23d364c2edff445574850b12ef2f1c6fa3b7ac0b127ceb1c94e4",
+    "native_revision": "28df66018aebe4e2b780b9747f4a2d7b8430a5c0"
+  },
+  {
+    "geometry": "straight",
+    "model": "PyORBIT",
+    "profile": "uniform",
+    "mesh": [
+      256,
+      256,
+      1024
+    ],
+    "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/pyorbit/runs/straight-uniform-256x256-z1024-gradient-octet/manifest-rank0.json",
+    "source": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/opalx/sources/uniform-octets-a0.02-L5-C12-ns128-nr128-np512.npz",
+    "source_sha256": "975c8d3beafa23d364c2edff445574850b12ef2f1c6fa3b7ac0b127ceb1c94e4",
+    "native_revision": "28df66018aebe4e2b780b9747f4a2d7b8430a5c0"
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "rank": 0,
+    "kernels": [
+      {
+        "name": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<opalx::spacecharge::FFT2D5Algorithm::preparePathGeometryAndProjections(const opalx::spacecharge::SpaceChargeSolveContext &, bool)::[lambda() (instance 1)]::operator ()() const::[lambda(unsigned long) (instance 1)], Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>>(T1)",
+        "calls": 100,
+        "total_ms": 402.876329,
+        "average_ms": 4.02876329,
+        "min_ms": 3.887119,
+        "max_ms": 5.019338,
+        "first_start_ns": 7969774571
+      },
+      {
+        "name": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<opalx::spacecharge::FFT2D5Algorithm::preparePathGeometryAndProjections(const opalx::spacecharge::SpaceChargeSolveContext &, bool)::[lambda() (instance 1)]::operator ()() const::[lambda(unsigned long) (instance 2)], Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>>(T1)",
+        "calls": 200,
+        "total_ms": 6.181541,
+        "average_ms": 0.030907705,
+        "min_ms": 0.027328,
+        "max_ms": 0.03984,
+        "first_start_ns": 7975527537
+      }
+    ]
+  },
+  {
+    "rank": 1,
+    "kernels": [
+      {
+        "name": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<opalx::spacecharge::FFT2D5Algorithm::preparePathGeometryAndProjections(const opalx::spacecharge::SpaceChargeSolveContext &, bool)::[lambda() (instance 1)]::operator ()() const::[lambda(unsigned long) (instance 1)], Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>>(T1)",
+        "calls": 100,
+        "total_ms": 407.047022,
+        "average_ms": 4.07047022,
+        "min_ms": 3.884673,
+        "max_ms": 5.008609,
+        "first_start_ns": 7969785592
+      },
+      {
+        "name": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<opalx::spacecharge::FFT2D5Algorithm::preparePathGeometryAndProjections(const opalx::spacecharge::SpaceChargeSolveContext &, bool)::[lambda() (instance 1)]::operator ()() const::[lambda(unsigned long) (instance 2)], Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>>(T1)",
+        "calls": 200,
+        "total_ms": 7.024963,
+        "average_ms": 0.035124815000000004,
+        "min_ms": 0.030304,
+        "max_ms": 0.051616,
+        "first_start_ns": 7975548346
+      }
+    ]
+  }
+]

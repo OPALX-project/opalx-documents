@@ -1,0 +1,195 @@
+{
+  "generated_UTC": "2026-11-01T16:36:19.377972+00:00",
+  "passed": true,
+  "cases": [
+    {
+      "case": "fft-coarse-10pc",
+      "solver": "fft2d5",
+      "passed": true,
+      "issues": [],
+      "snapshots": 16,
+      "matched_STAT_snapshots": 16,
+      "initial_snapshots_without_STAT": 0,
+      "final_time_s": 1.0479225109758426e-06,
+      "expected_particles": 98304,
+      "assigned_charge_C": 1e-11,
+      "charge_attribute_present_at_every_snapshot": true,
+      "particle_charge_present_at_every_snapshot": true,
+      "particles_outside_fieldmap": 0,
+      "minimum_fieldmap_margin_m": 0.024854476070991244,
+      "max_HDF5_STAT_relative_RMS_difference": 1.2878587085651816e-14,
+      "max_HDF5_STAT_mean_difference_m": 2.825701912040346e-18,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+      "manifest_sha256": "27554ebe381f881f079c80462e55c728d6a85fcb6faac6277d7a7bb36efd6fa9",
+      "HDF5_sha256": "cf7c030b18486cc9ee3e359f6eccb71b821727249b18e1065ac1f215131cc897",
+      "STAT_sha256": "cc404c920f4ab17985e15b9c60e7ce181acfb70a2e53c974b2ff8a92fb10d31d",
+      "fieldmap_bounds_m": [
+        [
+          -2.2,
+          -0.05,
+          -0.5
+        ],
+        [
+          0.2,
+          0.05,
+          1.3
+        ]
+      ],
+      "particles_outside_transverse_box": 0,
+      "particles_in_outer_CIC_half_cell": 0,
+      "max_abs_circular_radial_m": 0.01622072040152056,
+      "max_abs_vertical_m": 0.02514552392900876
+    },
+    {
+      "case": "fft-fine-10pc",
+      "solver": "fft2d5",
+      "passed": true,
+      "issues": [],
+      "snapshots": 16,
+      "matched_STAT_snapshots": 16,
+      "initial_snapshots_without_STAT": 0,
+      "final_time_s": 1.0479225109758426e-06,
+      "expected_particles": 98304,
+      "assigned_charge_C": 1e-11,
+      "charge_attribute_present_at_every_snapshot": true,
+      "particle_charge_present_at_every_snapshot": true,
+      "particles_outside_fieldmap": 0,
+      "minimum_fieldmap_margin_m": 0.024401194170511526,
+      "max_HDF5_STAT_relative_RMS_difference": 1.1546319456101628e-14,
+      "max_HDF5_STAT_mean_difference_m": 3.1170812458958252e-18,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+      "manifest_sha256": "f2b3476c86f515fd879593d44f89a00c7e461c68fb9c692e17d630b15f7f1353",
+      "HDF5_sha256": "cd35f674371d821ceb17f56dbd15a4d8784d8676b00ff2e4553608008b318754",
+      "STAT_sha256": "d9160f6fa19431579af29c658577bc9d68402c45dc268259add001f657d9beb8",
+      "fieldmap_bounds_m": [
+        [
+          -2.2,
+          -0.05,
+          -0.5
+        ],
+        [
+          0.2,
+          0.05,
+          1.3
+        ]
+      ],
+      "particles_outside_transverse_box": 0,
+      "particles_in_outer_CIC_half_cell": 0,
+      "max_abs_circular_radial_m": 0.01622935228726341,
+      "max_abs_vertical_m": 0.025598805829488477
+    },
+    {
+      "case": "open-10pc",
+      "solver": "open",
+      "passed": true,
+      "issues": [],
+      "snapshots": 16,
+      "matched_STAT_snapshots": 16,
+      "initial_snapshots_without_STAT": 0,
+      "final_time_s": 1.0479225109758413e-06,
+      "expected_particles": 98304,
+      "assigned_charge_C": 1e-11,
+      "charge_attribute_present_at_every_snapshot": true,
+      "particle_charge_present_at_every_snapshot": true,
+      "particles_outside_fieldmap": 0,
+      "minimum_fieldmap_margin_m": 0.024138447059747128,
+      "max_HDF5_STAT_relative_RMS_difference": 1.1102230246251565e-14,
+      "max_HDF5_STAT_mean_difference_m": 7.146840492458159e-21,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+      "manifest_sha256": "61a4d7711ac12f9436980ceb04f314d8c5edeaa08f6a6bd7cec3010ec06c605c",
+      "HDF5_sha256": "2886a6a6743b31b138e92b33c4cf200e7b09ee86afa39709681522f142c01681",
+      "STAT_sha256": "1117eaebc5f8a5d24f226c7dde8d42761e81ce2d727b87224fff1447c67cad0d",
+      "fieldmap_bounds_m": [
+        [
+          -2.2,
+          -0.05,
+          -0.5
+        ],
+        [
+          0.2,
+          0.05,
+          1.3
+        ]
+      ]
+    },
+    {
+      "case": "zero128",
+      "solver": "none",
+      "passed": true,
+      "issues": [],
+      "snapshots": 16,
+      "matched_STAT_snapshots": 16,
+      "initial_snapshots_without_STAT": 0,
+      "final_time_s": 1.0479225109758426e-06,
+      "expected_particles": 98304,
+      "assigned_charge_C": 1e-13,
+      "charge_attribute_present_at_every_snapshot": true,
+      "particle_charge_present_at_every_snapshot": true,
+      "particles_outside_fieldmap": 0,
+      "minimum_fieldmap_margin_m": 0.049503070522486065,
+      "max_HDF5_STAT_relative_RMS_difference": 1.4654943925052066e-14,
+      "max_HDF5_STAT_mean_difference_m": 5.499096712252528e-21,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+      "manifest_sha256": "bf092f7a151b60946855ce3788a84e8f7b5d8f52c6860ca7d5b9f3f248057e80",
+      "HDF5_sha256": "21d20ba160338844b1e27960cd106aecb2ff8da21ff1535105afef5b81f4ed53",
+      "STAT_sha256": "d8d9677b9f124d4a7f1bfb4e689cd27b91b13aa0065b22dc44e8ca032282163a",
+      "fieldmap_bounds_m": [
+        [
+          -2.2,
+          -0.05,
+          -0.5
+        ],
+        [
+          0.2,
+          0.05,
+          1.3
+        ]
+      ]
+    },
+    {
+      "case": "zero256",
+      "solver": "none",
+      "passed": true,
+      "issues": [],
+      "snapshots": 16,
+      "matched_STAT_snapshots": 16,
+      "initial_snapshots_without_STAT": 0,
+      "final_time_s": 1.0479225109758413e-06,
+      "expected_particles": 98304,
+      "assigned_charge_C": 1e-13,
+      "charge_attribute_present_at_every_snapshot": true,
+      "particle_charge_present_at_every_snapshot": true,
+      "particles_outside_fieldmap": 0,
+      "minimum_fieldmap_margin_m": 0.049503070522486065,
+      "max_HDF5_STAT_relative_RMS_difference": 1.6653345369377348e-14,
+      "max_HDF5_STAT_mean_difference_m": 4.0498762790596235e-21,
+      "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+      "manifest_sha256": "c7a6d321dc8bf3607c5b4a89eb340f23a8cf216743653bd17825fd1249a2ee2f",
+      "HDF5_sha256": "73d493485c839cabd47061ab0bed1d99210121ce0b12d54d40a554cc48e85993",
+      "STAT_sha256": "157725c674a01687c8854b40389549c9a2085e6f84ee499afea82b9ebbd4a24f",
+      "fieldmap_bounds_m": [
+        [
+          -2.2,
+          -0.05,
+          -0.5
+        ],
+        [
+          0.2,
+          0.05,
+          1.3
+        ]
+      ]
+    }
+  ],
+  "scope": "Every retained HDF5 snapshot; clearance at unsaved times is not asserted",
+  "frame": "local positions @ yaw(RefPartP).T + RefPartR; unpopulated TaitBryantAngles not used",
+  "fieldmap_check": "Actual global particle coordinates inside the zero-pose Cartesian constant-field map",
+  "FFT_clearance_check": "Analytic circular radial coordinate and y; box half-width and outer CIC half-cell",
+  "tolerances": {
+    "HDF5_STAT_relative_RMS": 1e-10,
+    "HDF5_STAT_mean_m": 1e-12,
+    "geometry_roundoff_m": 1e-12,
+    "charge_relative": 1e-11
+  },
+  "script_sha256": "d34f00f5bebd8c94c8ab826e591b1b4b77ef0ca1e3ba4c8aef38c7eb8c50d4bd"
+}

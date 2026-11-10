@@ -1,0 +1,31 @@
+{
+  "command": [
+    "mpirun",
+    "-np",
+    "2",
+    "--map-by",
+    "slot",
+    "--bind-to",
+    "none",
+    "/psi/home/adelmann/opalx-dev/dba/validation-mpi-z-20261106/gpu_rank.sh",
+    "/psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/src/opalx",
+    "case.in",
+    "--info",
+    "1",
+    "--2D5BatchSize",
+    "64",
+    "--restart",
+    "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/dba-initial-state.h5"
+  ],
+  "ranks": 2,
+  "gpus": 2,
+  "omp_threads": 1,
+  "binary": "/psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/src/opalx",
+  "binary_sha256": "b181efbc6bba421f8e1c8907c0f141080e5fdc84f1c5e78f110390f862536abf",
+  "input_sha256": "93a0bed2bd3fd874bd9f6b7de73d19ec45ef427663481f4c4acd4f8a1bca8cf1",
+  "checkpoint_sha256": "4d6adf38da35d9168f9cdb10847786eb1ea64d27e13e521211173901037e19f5",
+  "job_id": "355028",
+  "returncode": 0,
+  "wall_seconds": 50.116147281834856,
+  "launcher": "OpenMPI mpirun; per-rank CUDA visibility; independently verified MPI size/GPU UUIDs"
+}

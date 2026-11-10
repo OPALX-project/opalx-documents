@@ -1,0 +1,18 @@
+[
+  {
+    "code": "Current OPALX",
+    "convention": "time",
+    "endpoint_error_percent": -0.027714908943710093,
+    "max_absolute_error_percent_analytic_peak": 0.12267375367600243,
+    "finite_source_audit_endpoint_error_percent": -0.021612896263034642,
+    "note": "endpoint_error_percent uses continuous disk quadrature; finite_source_audit uses published sampling-audit/references.csv (mm mrad converted to m). Curves unchanged."
+  },
+  {
+    "code": "PR: PyORBIT",
+    "convention": "station",
+    "endpoint_error_percent": 0.019224871269196697,
+    "max_absolute_error_percent_analytic_peak": 0.5889635542070898,
+    "finite_source_audit_endpoint_error_percent": 0.025330036825210733,
+    "note": "endpoint_error_percent uses continuous disk quadrature; finite_source_audit uses published sampling-audit/references.csv (mm mrad converted to m). Curves unchanged."
+  }
+]

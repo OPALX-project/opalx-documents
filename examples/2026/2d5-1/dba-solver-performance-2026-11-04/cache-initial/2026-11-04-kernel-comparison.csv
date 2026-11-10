@@ -1,0 +1,5 @@
+kernel,new_calls,old_calls,new_seconds,old_seconds
+for:FFT2D5::preparePathGeometry,100,0,0.0012662929999999,0.0
+for:FFT2D5::prepareParticleProjections,100,0,11.298413575999998,0.0
+for:Solve2d5::scatterToGrid::scatter,100,100,0.1141109999999999,16.592958713999998
+for:Solver2d5::GatherFromGrid,100,100,0.0724066729999999,16.482512373999995

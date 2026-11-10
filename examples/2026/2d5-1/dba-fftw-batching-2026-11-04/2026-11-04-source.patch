@@ -1,0 +1,855 @@
+diff --git a/src/Main.cpp b/src/Main.cpp
+index b04fd4db5..84fd17b29 100644
+--- a/src/Main.cpp
++++ b/src/Main.cpp
+@@ -50,6 +50,7 @@ extern "C" {
+ 
+ #include "Utilities/GSLCompat.h"
+ 
++#include <charconv>
+ #include <cstdint>
+ #include <filesystem>
+ #include <system_error>
+@@ -160,6 +161,7 @@ namespace OPALXMAIN {
+     }
+ 
+     void printHelp() {
++        ippl::Info->setOutputLevel(1);
+         OPALXMAIN::printStdoutHeader();
+ 
+         *ippl::Info << "\n";
+@@ -171,6 +173,8 @@ namespace OPALXMAIN {
+         *ippl::Info << "   --git-revision           : Print the revision hash of the repository.\n";
+         *ippl::Info << "   --input <fname>          : Specifies the input file <fname>.\n";
+         *ippl::Info << "   --restart [<fname>]      : Restart from checkpoint file <fname>.\n";
++        *ippl::Info << "   --2D5BatchSize <n>       : Batch n transverse FFT2D5 slices (positive "
++                       "integer; default: serial).\n";
+         //*ippl::printHelp();
+         *ippl::Info << "   --help-command <command> : Display the help for the command <command>\n";
+         *ippl::Info << "   --help                   : Display this command-line summary.\n";
+@@ -179,6 +183,11 @@ namespace OPALXMAIN {
+ }  // namespace OPALXMAIN
+ 
+ int main(int argc, char* argv[]) {
++    // Keep OPALX help (including OPALX-only options) from being intercepted by IPPL.
++    char opalxHelp[] = "-help";
++    for (int i = 1; i < argc; ++i)
++        if (std::strcmp(argv[i], "--help") == 0 || std::strcmp(argv[i], "-h") == 0)
++            argv[i] = opalxHelp;
+     ippl::initialize(argc, argv);
+     {
+         gmsg         = new Inform("OPAL-X");
+@@ -257,7 +266,7 @@ int main(int argc, char* argv[]) {
+             }
+             const auto optionConsumesArgument = [](const std::string& option) {
+                 return option == "--help-command" || option == "--input" || option == "--info"
+-                       || option == "--overallocate";
++                       || option == "--overallocate" || option == "--2D5BatchSize";
+             };
+ 
+             const auto hasLaterInputArgument = [&](int first) {
+@@ -371,6 +380,23 @@ int main(int argc, char* argv[]) {
+                         }
+                     }
+                     continue;
++                } else if (argStr == "--2D5BatchSize") {
++                    int value  = 0;
++                    bool valid = ii + 1 < argc;
++                    if (valid) {
++                        const std::string argument(argv[++ii]);
++                        const auto result = std::from_chars(
++                                argument.data(), argument.data() + argument.size(), value);
++                        valid = result.ec == std::errc{}
++                                && result.ptr == argument.data() + argument.size() && value > 0;
++                    }
++                    if (!valid) {
++                        if (ippl::Comm->rank() == 0)
++                            std::cerr << "--2D5BatchSize requires a positive integer" << std::endl;
++                        exit(1);
++                    }
++                    Options::fft2d5BatchSize = value;
++                    continue;
+                 } else if (argStr == std::string("--info")) {
+                     ++ii;
+                     continue;
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
+index d509e3307..a92f0dbd1 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
+@@ -593,32 +593,46 @@ namespace opalx::spacecharge {
+                 Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), occupiedSlices);
+         // All ranks must execute the same FFT calls, even if their local sources differ.
+         ippl::Comm->allreduce(occupiedHost.data(), numSlices, std::greater<int>());
+-        // Copy each source into the same 2D workspace, solve, and copy the resulting field back.
+-        // Independent slices need neither separate FFT plans nor separate solver buffers.
+-        const auto& s = fieldStorage_m->workspace();
+-        auto rho2d    = s.chargeDensity->getView();
+-        for (size_t z = 0; z < numSlices; ++z) {
+-            // Do the 2D solve to get Ex and Ey
+-            Kokkos::deep_copy(
+-                    rho2d, Kokkos::subview(rho3d, Kokkos::ALL(), Kokkos::ALL(), z + nGhost));
+-            if (occupiedHost(z) == 0) {
++        bool batched = false;
++        if constexpr (std::is_same_v<DiagnosticPolicy, NullDiagnostic>) {
++            if (fieldStorage_m->batchSize() > 0) {
++                std::vector<size_t> occupied;
++                for (size_t z = 0; z < numSlices; ++z)
++                    if (occupiedHost(z) != 0) occupied.push_back(z);
++                fieldStorage_m->solveBatchedSlices(occupied);
++                batched = true;
++            }
++        }
++        // Diagnostic policies retain the serial path and per-slice potential callbacks.
++        if (!batched) {
++            // Copy each source into the same 2D workspace, solve, and copy the resulting field
++            // back. Independent slices need neither separate FFT plans nor separate solver buffers.
++            const auto& s = fieldStorage_m->workspace();
++            auto rho2d    = s.chargeDensity->getView();
++            for (size_t z = 0; z < numSlices; ++z) {
++                // Do the 2D solve to get Ex and Ey
++                Kokkos::deep_copy(
++                        rho2d, Kokkos::subview(rho3d, Kokkos::ALL(), Kokkos::ALL(), z + nGhost));
++                if (occupiedHost(z) == 0) {
++                    diagnostic.potential(rho2d, z + nGhost);
++                    continue;
++                }
++                // Scale by the coupling constant then solve
++                Kokkos::parallel_for(
++                        "Solve2d5::solvePoissons::coupling",
++                        Policy({0, 0}, {rho2d.extent(0), rho2d.extent(1)}),
++                        fft2d5_detail::PoissonCouplingFunctor{rho2d});
++                fieldStorage_m->solveSlice();
++                Kokkos::fence();
+                 diagnostic.potential(rho2d, z + nGhost);
+-                continue;
++                auto e2d = s.electricField->getView();
++                // Copy the 2D E field into the 3D E field grid
++                Kokkos::parallel_for(
++                        "Solve2d5::solvePoissons::copy",
++                        Policy({0, 0}, {e2d.extent(0), e2d.extent(1)}),
++                        fft2d5_detail::CopySliceFieldFunctor{e2d, e3d, z + nGhost});
++                Kokkos::fence();
+             }
+-            // Scale by the coupling constant then solve
+-            Kokkos::parallel_for(
+-                    "Solve2d5::solvePoissons::coupling",
+-                    Policy({0, 0}, {rho2d.extent(0), rho2d.extent(1)}),
+-                    fft2d5_detail::PoissonCouplingFunctor{rho2d});
+-            fieldStorage_m->solveSlice();
+-            Kokkos::fence();
+-            diagnostic.potential(rho2d, z + nGhost);
+-            auto e2d = s.electricField->getView();
+-            // Copy the 2D E field into the 3D E field grid
+-            Kokkos::parallel_for(
+-                    "Solve2d5::solvePoissons::copy", Policy({0, 0}, {e2d.extent(0), e2d.extent(1)}),
+-                    fft2d5_detail::CopySliceFieldFunctor{e2d, e3d, z + nGhost});
+-            Kokkos::fence();
+         }
+         // Set the ghost slices
+         constexpr auto leftGhost = 0;
+@@ -648,7 +662,7 @@ namespace opalx::spacecharge {
+                 if (context.trackingActive()[container] == 0) {
+                     continue;
+                 }
+-                auto* pc                       = particles_m[container];
++                auto* pc = particles_m[container];
+                 const auto geometry =
+                         usePreparedProjections ? segmentGeometry_m : SegmentGeometryView_t();
+                 const auto projectedR =
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp b/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp
+index 9538ccc1d..2e762e8af 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp
+@@ -19,7 +19,9 @@
+  */
+ 
+ #include "SpaceCharge/FFT2D5/FFT2D5FieldStorage.h"
++#include "Physics/Physics.h"
+ #include "Utilities/OpalException.h"
++#include "Utilities/Options.h"
+ 
+ #include <array>
+ 
+@@ -85,6 +87,17 @@ namespace opalx::spacecharge {
+                     "The FFT2D5 reference-path length must be positive.");
+         }
+ 
++        batchSize_m = Options::fft2d5BatchSize;
++        if (batchSize_m > 0) {
++            if constexpr (!std::is_same_v<
++                                  FFT2D5Poisson::ScalarField2_t::view_type::memory_space,
++                                  Kokkos::HostSpace>)
++                throw OpalException(
++                        "FFT2D5FieldStorage",
++                        "Explicit slice batching is currently validated for host execution only.");
++            *ippl::Info << "FFT2D5: --2D5BatchSize " << batchSize_m
++                        << " (independent transverse slices)" << endl;
++        }
+         chargeDensity_m.initialize(mesh_m, layout_m);
+         electricField_m.initialize(mesh_m, layout_m);
+ 
+@@ -108,6 +121,18 @@ namespace opalx::spacecharge {
+ 
+     FFT2D5FieldStorage::~FFT2D5FieldStorage() = default;
+ 
++    void FFT2D5FieldStorage::solveBatchedSlices(std::span<const size_t> occupied) {
++#if OPALX_FFT2D5_ALGORITHM_USE_IPPL_2D_POISSON_SOLVER
++        throw OpalException(
++                "FFT2D5FieldStorage", "Batching requires the native OPALX slice solver.");
++#else
++        workspace_m.solver2->initialiseViews(*workspace_m.chargeDensity);
++        workspace_m.solver2->solveBatched(
++                chargeDensity_m, electricField_m, occupied, batchSize_m, 1 / Physics::epsilon_0);
++        backendSolves_m += occupied.size();
++#endif
++    }
++
+     void FFT2D5FieldStorage::solveSlice() {
+ #if OPALX_FFT2D5_ALGORITHM_USE_IPPL_2D_POISSON_SOLVER
+         workspace_m.solver->solve();
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h b/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h
+index dff23fe80..c229c5d11 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h
++++ b/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h
+@@ -27,6 +27,7 @@
+ 
+ #include <cstddef>
+ #include <memory>
++#include <span>
+ 
+ // The native solver integrates the logarithmic Green function over each source
+ // cell. IPPL's point-sampled 2D kernel has a spacing-independent self value,
+@@ -38,9 +39,11 @@ namespace opalx::spacecharge {
+     /**
+      * @brief Persistent fields and a reusable Poisson workspace for one FFT2D5 run.
+      *
+-     * The 3D fields stage deposition and gathering. Slices are solved sequentially, so they share
+-     * one pair of 2D IPPL fields and one FFT plan. The Field API cannot use a Kokkos subview as
+-     * its storage; each source slice is copied into this workspace before solving.
++     * The 3D fields stage deposition and gathering. The default serial path shares one pair
++     * of 2D IPPL fields and one FFT plan. Explicit --2D5BatchSize enables bounded native
++     * heFFTe batches owned by the same OPALX solver; no longitudinal transform is performed.
++     * The Field API cannot borrow a Kokkos subview, so the serial path copies each slice;
++     * batching instead packs physical cells directly into contiguous FFT buffers.
+      */
+     class FFT2D5FieldStorage final {
+     public:
+@@ -93,6 +96,10 @@ namespace opalx::spacecharge {
+          * to keep CUDA kernel stubs and their device registration in the same translation unit.
+          */
+         void solveSlice();
++        /// Explicit CLI opt-in; zero preserves the single-slice implementation.
++        [[nodiscard]] int batchSize() const { return batchSize_m; }
++        /// Solve the occupied physical slices together; counts mathematical slice solves.
++        void solveBatchedSlices(std::span<const size_t> occupied);
+ 
+     private:
+         std::array<std::size_t, 3> meshSize_m;
+@@ -110,6 +117,7 @@ namespace opalx::spacecharge {
+         ippl::ParameterList solverParameters_m;
+         Slice workspace_m;
+         std::size_t backendSolves_m = 0;
++        int batchSize_m             = 0;
+     };
+ 
+ }  // namespace opalx::spacecharge
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp b/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp
+index 41cbaeb36..7f1b5f7ca 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp
+@@ -55,9 +55,10 @@ void FFT2D5Poisson::initialiseViews(const ScalarField2_t& chargeDensity) {
+     const auto nx2     = nx * 2;
+     const auto ny2     = ny * 2;
+     if (nx2_ != nx2 || ny2_ != ny2 || dr_[X] != dr[X] || dr_[Y] != dr[Y]) {
+-        nx2_ = nx2;
+-        ny2_ = ny2;
+-        dr_  = dr;
++        const bool resizeFields = nx2_ != 0 && (nx2_ != nx2 || ny2_ != ny2);
++        nx2_                    = nx2;
++        ny2_                    = ny2;
++        dr_                     = dr;
+         // Create the doubled mesh
+         doubledDomain_m = {nx2, ny2};
+         doubledMesh_m.initialize(doubledDomain_m, {dr[X], dr[Y]}, {0, 0});
+@@ -72,6 +73,14 @@ void FFT2D5Poisson::initialiseViews(const ScalarField2_t& chargeDensity) {
+         doubledRhoTr_m.initialize(complexMesh_m, complexLayout_m);
+         greensFn_m.initialize(doubledMesh_m, doubledLayout_m);
+         greensFnTr_m.initialize(complexMesh_m, complexLayout_m);
++        // Field::initialize is deliberately a no-op after first allocation.
++        // Reuse its existing updateLayout API when a later solve changes the grid.
++        if (resizeFields) {
++            doubledRho_m.updateLayout(doubledLayout_m);
++            doubledRhoTr_m.updateLayout(complexLayout_m);
++            greensFn_m.updateLayout(doubledLayout_m);
++            greensFnTr_m.updateLayout(complexLayout_m);
++        }
+         // Create the FFT
+         fft_m = std::make_unique<FFT_t>(doubledLayout_m, complexLayout_m, this->params_m);
+         fft_m->warmup(doubledRho_m, doubledRhoTr_m);  // Really?
+@@ -190,3 +199,120 @@ void FFT2D5Poisson::determineField(const ScalarField2_t& potential, VectorField2
+             });
+     Kokkos::fence();
+ }
++
++void FFT2D5Poisson::solveBatched(
++        const ScalarField3_t& density, VectorField3_t& electric, std::span<const size_t> occupied,
++        int batchSize, double coupling, ScalarField3_t* potential) {
++    if (batchSize <= 0 || ippl::Comm->size() != 1)
++        throw OpalException(
++                "FFT2D5Poisson::solveBatched", "Positive batch size and one MPI rank required.");
++    const auto mesh = density.get_mesh();
++    const size_t nx = mesh.getGridsize(0), ny = mesh.getGridsize(1), nz = mesh.getGridsize(2);
++    const auto spacing = mesh.getMeshSpacing();
++    if (nx2_ != 2 * nx || ny2_ != 2 * ny || dr_[0] != spacing[0] || dr_[1] != spacing[1])
++        throw OpalException(
++                "FFT2D5Poisson::solveBatched",
++                "Initialize the matching transverse workspace before batching.");
++    for (size_t z : occupied)
++        if (z >= nz)
++            throw OpalException("FFT2D5Poisson::solveBatched", "Invalid physical slice index.");
++    const auto field = electric.getView();
++    Kokkos::deep_copy(field, Vector3_t(0.));
++    if (potential) Kokkos::deep_copy(potential->getView(), 0.);
++    if (occupied.empty()) return;
++    const int capacity = static_cast<int>(std::min(size_t(batchSize), nz));
++    const size_t nr = nx2_ * ny2_, ncx = nx2_ / 2 + 1, nc = ncx * ny2_;
++    if (!batchPlan_m || batchNx_m != nx2_ || batchNy_m != ny2_ || batchCapacity_m != capacity) {
++        const heffte::box3d<long long> inbox(
++                {0, 0, 0}, {static_cast<long long>(nx2_ - 1), static_cast<long long>(ny2_ - 1), 0});
++        const heffte::box3d<long long> outbox(
++                {0, 0, 0}, {static_cast<long long>(ncx - 1), static_cast<long long>(ny2_ - 1), 0});
++        batchPlan_m = std::make_unique<BatchPlan>(
++                inbox, outbox, 0, ippl::Comm->getCommunicator(),
++                ippl::fft::makeHeffteOptions<BatchBackend::backend_t>(params_m));
++        batchWorkspace_m = BatchWorkspace(batchPlan_m->size_workspace() * capacity);
++        batchReal_m      = decltype(batchReal_m)("FFT2D5BatchReal", nr * capacity);
++        batchSpectrum_m  = decltype(batchSpectrum_m)("FFT2D5BatchSpectrum", nc * capacity);
++        batchGreen_m     = decltype(batchGreen_m)("FFT2D5BatchGreen", nc);
++        batchNx_m        = nx2_;
++        batchNy_m        = ny2_;
++        batchCapacity_m  = capacity;
++    }
++    if (batchSlices_m.extent(0) < occupied.size())
++        batchSlices_m = decltype(batchSlices_m)("FFT2D5BatchSlices", occupied.size());
++    auto hostSlices = Kokkos::create_mirror_view(batchSlices_m);
++    for (size_t i = 0; i < occupied.size(); ++i)
++        hostSlices(i) = occupied[i];
++    Kokkos::deep_copy(batchSlices_m, hostSlices);
++    const auto green         = batchGreen_m;
++    const auto originalGreen = greensFnTr_m.getView();
++    const auto ng            = greensFnTr_m.getNghost();
++    // The native outbox is x-fastest, independent of the Field view's layout.
++    Kokkos::parallel_for(
++            "FFT2D5Batch::green", nc,
++            KOKKOS_LAMBDA(size_t p) { green(p) = originalGreen(p % ncx + ng, p / ncx + ng); });
++    const auto source   = density.getView();
++    const auto real     = batchReal_m;
++    const auto spectrum = batchSpectrum_m;
++    const auto slices   = batchSlices_m;
++    const auto ghost = density.getNghost(), eg = electric.getNghost();
++    const auto nx2 = nx2_, ny2 = ny2_;
++    const auto scaling  = nx2_ * ny2_ * dr_[0] * dr_[1];
++    const double inv2dx = 1. / (2 * dr_[0]), inv2dy = 1. / (2 * dr_[1]);
++    using Policy = Kokkos::MDRangePolicy<Kokkos::Rank<3>>;
++    for (size_t first = 0; first < occupied.size(); first += capacity) {
++        const int count = static_cast<int>(std::min(size_t(capacity), occupied.size() - first));
++        Kokkos::parallel_for(
++                "FFT2D5Batch::pack",
++                Policy({0, 0, 0},
++                       {count, static_cast<long long>(nx2), static_cast<long long>(ny2)}),
++                KOKKOS_LAMBDA(size_t b, size_t i, size_t j) {
++                    real(b * nr + i + nx2 * j) =
++                            (i < nx && j < ny)
++                                    ? source(i + ghost, j + ghost, slices(first + b) + ghost)
++                                              * coupling
++                                    : 0.;
++                });
++        Kokkos::fence();
++        batchPlan_m->forward(
++                count, real.data(), spectrum.data(), batchWorkspace_m.data(), heffte::scale::full);
++        Kokkos::fence();
++        Kokkos::parallel_for(
++                "FFT2D5Batch::applyGreen", size_t(count) * nc,
++                KOKKOS_LAMBDA(size_t p) { spectrum(p) *= green(p % nc) * scaling; });
++        Kokkos::fence();
++        batchPlan_m->backward(
++                count, spectrum.data(), real.data(), batchWorkspace_m.data(), heffte::scale::none);
++        Kokkos::fence();
++        Kokkos::parallel_for(
++                "FFT2D5Batch::field",
++                Policy({0, 0, 0}, {count, static_cast<long long>(nx), static_cast<long long>(ny)}),
++                KOKKOS_LAMBDA(size_t b, size_t i, size_t j) {
++                    const size_t base                             = b * nr;
++                    field(i + eg, j + eg, slices(first + b) + eg) = Vector3_t(
++                            -(real(base + (i + 1) % nx2 + nx2 * j)
++                              - real(base + (i + nx2 - 1) % nx2 + nx2 * j))
++                                    * inv2dx,
++                            -(real(base + i + nx2 * ((j + 1) % ny2))
++                              - real(base + i + nx2 * ((j + ny2 - 1) % ny2)))
++                                    * inv2dy,
++                            0.);
++                });
++        if (potential) {
++            const auto phi = potential->getView();
++            const auto pg  = potential->getNghost();
++            Kokkos::parallel_for(
++                    "FFT2D5Batch::potential",
++                    Policy({0, 0, 0}, {count, static_cast<long long>(phi.extent(0)),
++                                       static_cast<long long>(phi.extent(1))}),
++                    KOKKOS_LAMBDA(size_t b, size_t i, size_t j) {
++                        const size_t x = (static_cast<int>(i) - pg + static_cast<int>(nx2))
++                                         % static_cast<int>(nx2);
++                        const size_t y = (static_cast<int>(j) - pg + static_cast<int>(ny2))
++                                         % static_cast<int>(ny2);
++                        phi(i, j, slices(first + b) + pg) = real(b * nr + x + nx2 * y);
++                    });
++        }
++        Kokkos::fence();
++    }
++}
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Poisson.h b/src/SpaceCharge/FFT2D5/FFT2D5Poisson.h
+index f136111fd..e38e847bb 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Poisson.h
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Poisson.h
+@@ -31,6 +31,8 @@
+ // clang-format off
+ #include "Ippl.h"
+ #include "FFT/FFT.h"
++#include <span>
++#include "FFT/Backend/Heffte.h"
+ #include <Kokkos_MathematicalConstants.hpp>
+ #include <Kokkos_MathematicalFunctions.hpp>
+ // clang-format on
+@@ -95,6 +97,33 @@ public:
+         return -(Kokkos::log(scale) + average) / (2.0 * Kokkos::numbers::pi_v<double>);
+     }
+ 
++    using Mesh3_t        = ippl::UniformCartesian<double, 3>;
++    using ScalarField3_t = ippl::Field<double, 3, Mesh3_t, Cell>;
++    using VectorField3_t = ippl::Field<Vector3_t, 3, Mesh3_t, Cell>;
++
++    /**
++     * @brief Solve independent transverse slices in bounded batches using existing heFFTe R2C.
++     * @details Only x and y are transformed; slice indices are independent batch slots.
++     * Reuses the serial solver's cell-averaged Green spectrum, full forward/unscaled
++     * inverse normalization and source-cell-area scaling. The input density is unchanged.
++     * Coupling is applied while packing physical cells into zero-padded contiguous buffers.
++     * One batched Green multiplication and centered-gradient kernel replace per-slice
++     * staging. Negative transverse neighbours wrap into the doubled potential, preserving
++     * the free-space potential halo. No longitudinal FFT, interpolation or physics change.
++     * Persistent plans/buffers resize only for grid or batch-capacity changes; partial final
++     * batches use their actual count. Empty/non-selected slices and all field halos are
++     * cleared; the caller subsequently sets longitudinal field ghosts. Nonzero neutral
++     * slices must appear in occupied. Memory is O(batchSize*nx*ny), including workspace.
++     * The optional potential output includes its transverse halo for numerical verification.
++     * Native FFT arithmetic may remain sequential across slots; this is not MPI batching.
++     * @pre initialiseViews() has received a matching transverse workspace.
++     * @pre One MPI rank; unique occupied physical slice indices; matching source/output grids.
++     */
++    void solveBatched(
++            const ScalarField3_t& density, VectorField3_t& electric,
++            std::span<const size_t> occupied, int batchSize, double coupling = 1.,
++            ScalarField3_t* potential = nullptr);
++
+     // Accessors for unit tests
+     const ScalarField2_t& getGreensFn() const { return greensFn_m; }
+     const ComplexField2_t& getGreensFnTr() const { return greensFnTr_m; }
+@@ -131,6 +160,19 @@ private:
+         return (x < 0.0) != (y < 0.0) ? -value : value;
+     }
+ 
++    using MemSpace       = ScalarField2_t::view_type::memory_space;
++    using BatchBackend   = ippl::fft::HeffteR2C<double, 2, MemSpace>;
++    using BatchPlan      = BatchBackend::heffte_t;
++    using BatchWorkspace = BatchBackend::workspace_t;
++    using Complex        = Kokkos::complex<double>;
++    std::unique_ptr<BatchPlan> batchPlan_m;
++    BatchWorkspace batchWorkspace_m;
++    Kokkos::View<double*, MemSpace> batchReal_m;
++    Kokkos::View<Complex*, MemSpace> batchSpectrum_m, batchGreen_m;
++    Kokkos::View<size_t*, MemSpace> batchSlices_m;
++    size_t batchNx_m = 0, batchNy_m = 0;
++    int batchCapacity_m = 0;
++
+     size_t nx2_{};
+     size_t ny2_{};
+     Vector2_t dr_{};
+diff --git a/src/Utilities/Options.cpp b/src/Utilities/Options.cpp
+index d5a14cb01..d742225f6 100644
+--- a/src/Utilities/Options.cpp
++++ b/src/Utilities/Options.cpp
+@@ -25,8 +25,9 @@ namespace Options {
+     // The global program options.
+     bool echo = false;
+ 
+-    bool info     = true;
+-    int infoLevel = 1;
++    bool info           = true;
++    int infoLevel       = 1;
++    int fft2d5BatchSize = 0;
+ 
+     bool mtrace = false;
+ 
+diff --git a/src/Utilities/Options.h b/src/Utilities/Options.h
+index e9ce49e4b..13de0e51a 100644
+--- a/src/Utilities/Options.h
++++ b/src/Utilities/Options.h
+@@ -36,6 +36,9 @@ namespace Options {
+     extern bool info;
+     extern int infoLevel;
+ 
++    /// Explicit FFT2D5 slice batch size; zero retains the serial slice path.
++    extern int fft2d5BatchSize;
++
+     /// Trace flag.
+     //  If true, print CPU time before and after each command.
+     extern bool mtrace;
+diff --git a/unit_tests/SpaceCharge/README.md b/unit_tests/SpaceCharge/README.md
+index 43a7c6b08..ef1bc34a4 100644
+--- a/unit_tests/SpaceCharge/README.md
++++ b/unit_tests/SpaceCharge/README.md
+@@ -57,3 +57,19 @@ OMP_NUM_THREADS=1 OMP_PROC_BIND=false mpiexec -n 2 build-omp/unit_tests/SpaceCha
+ Tracking inputs, published plots and the analytic ZeroSC comparison are stored
+ in the separate `OPALX-project/opalx-documents` repository under
+ `examples/2026/2d5-1`.
++
++### Optional OPALX-side slice batching
++
++`opalx case.in --2D5BatchSize 8` groups eight independent transverse slice
++transforms using the existing native heFFTe R2C batch API. The option requires
++a positive integer; without it the serial slice path remains active. It is a
++host-only, single-MPI-rank optimization and does not transform the longitudinal
++axis or make the FFT arithmetic itself OpenMP-parallel. No IPPL source changes
++are required. Inspection policies retain serial per-slice potential callbacks.
++
++The batch tests compare potential including its transverse halo, all field
++components, unchanged input charge and cleared empty/vacated slices with the
++serial solver for sizes 1, 8, 32 and 64. They cover neutral sources, incomplete
++batches, anisotropic rectangular grids, grid/spacing changes and the complete
++solve under both open and closed longitudinal boundary modes. CLI parsing,
++normalization and the same 100-step tracking pilot are checked separately.
+diff --git a/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp b/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
+index 072136f93..c4ddc3448 100644
+--- a/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
++++ b/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
+@@ -5,6 +5,7 @@
+ #include "PartBunch/BunchStateHandler.h"
+ #include "Physics/Physics.h"
+ #include "SpaceCharge/FFT2D5/FFT2D5Algorithm.h"
++#include "Utilities/Options.h"
+ 
+ #include <array>
+ #include <cmath>
+@@ -420,6 +421,53 @@ namespace opalx::spacecharge {
+             expectSourceRestored(positions, momentum);
+         }
+ 
++        TEST_F(FFT2D5AlgorithmTest, ExplicitBatchSizesMatchSerialFullSolveAndBoundaryModes) {
++            if constexpr (!std::is_same_v<
++                                  FFT2D5Poisson::ScalarField2_t::view_type::memory_space,
++                                  Kokkos::HostSpace>)
++                GTEST_SKIP() << "Explicit batching currently supports host execution only";
++            setPhysicalSource(sourcePositions(), Vector(0., 0., 0.4), CoordinateSystemTrafo());
++            const std::array<std::uint8_t, 1> activity{1};
++            SpaceChargeStepState step = alignedStep(0.);
++            SpaceChargeSolveContext context(activity, step);
++            for (bool closed : {false, true}) {
++                auto settings          = config(FFT2D5LongitudinalFieldMode::Open);
++                settings.grid.meshSize = {16, 12, 11};
++                settings.closedRing    = closed;
++                std::array containers{particles_m.get()};
++                FFT2D5Algorithm serial(settings, containers, bunchState_m);
++                ASSERT_EQ(Options::fft2d5BatchSize, 0);
++                const auto reference = serial.solve(context);
++                auto expectedE       = Kokkos::create_mirror(particles_m->E.getView());
++                auto expectedB       = Kokkos::create_mirror(particles_m->B.getView());
++                Kokkos::deep_copy(expectedE, particles_m->E.getView());
++                Kokkos::deep_copy(expectedB, particles_m->B.getView());
++                for (int batch : {1, 8, 32, 64}) {
++                    Options::fft2d5BatchSize = batch;
++                    FFT2D5Algorithm solver(settings, containers, bunchState_m);
++                    solver.ensureInitialized();
++                    Options::fft2d5BatchSize = 0;
++                    const auto result        = solver.solve(context);
++                    EXPECT_EQ(result.backendSolves, reference.backendSolves);
++                    const auto actualE = Kokkos::create_mirror_view_and_copy(
++                            Kokkos::HostSpace(), particles_m->E.getView());
++                    const auto actualB = Kokkos::create_mirror_view_and_copy(
++                            Kokkos::HostSpace(), particles_m->B.getView());
++                    double scaleE = 0., scaleB = 0.;
++                    for (size_t n = 0; n < sourceSize; ++n)
++                        for (unsigned d = 0; d < 3; ++d) {
++                            scaleE = std::max(scaleE, std::abs(expectedE(n)[d]));
++                            scaleB = std::max(scaleB, std::abs(expectedB(n)[d]));
++                        }
++                    for (size_t n = 0; n < sourceSize; ++n)
++                        for (unsigned d = 0; d < 3; ++d) {
++                            EXPECT_NEAR(actualE(n)[d], expectedE(n)[d], scaleE * 1e-12 + 1e-30);
++                            EXPECT_NEAR(actualB(n)[d], expectedB(n)[d], scaleB * 1e-12 + 1e-30);
++                        }
++                }
++            }
++        }
++
+         TEST_F(FFT2D5AlgorithmTest, HierarchyMatchesExhaustiveSegmentAndCoordinatesExactly) {
+             const std::array<std::uint8_t, 1> activity{1};
+             SpaceChargeStepState step;
+diff --git a/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp b/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp
+index 2ad650423..55890d2b9 100644
+--- a/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp
++++ b/unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp
+@@ -1240,65 +1240,74 @@ namespace {
+     }
+ 
+     TEST_F(TestSolve2d5, SliceWorkspaceKeepsNeutralSourcesAndClearsVacatedSlices) {
+-        makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
+-        fsCmd_m->setType("FFT2D5");
+-        fsCmd_m->setNX(12);
+-        fsCmd_m->setNY(12);
+-        fsCmd_m->setNZ(12);
+-        fsCmd_m->setPipeSizeX(6);
+-        fsCmd_m->setPipeSizeY(6);
+-        rebuildBunch();
+-        const auto rho   = solver_m->getRho()->getView();
+-        const auto field = solver_m->getEField()->getView();
+-        auto source      = Kokkos::create_mirror_view(rho);
+-        Kokkos::deep_copy(source, 0.0);
+-        // This slice has zero signed total charge but a nonzero dipole field.
+-        source(3, 3, 4) = 1.0;
+-        source(8, 7, 4) = -1.0;
+-        Kokkos::deep_copy(rho, source);
+-        Kokkos::deep_copy(field, Vector_t<double, 3>(7.0));
+-        solver_m->solvePoissons();
+-        const auto first = Kokkos::create_mirror(field);
+-        Kokkos::deep_copy(first, field);
+-        double maximum = 0.0;
+-        for (size_t x = 0; x < first.extent(0); ++x) {
+-            for (size_t y = 0; y < first.extent(1); ++y) {
+-                for (unsigned d = 0; d < 3; ++d) {
+-                    maximum = std::max(maximum, std::abs(first(x, y, 4)[d]));
+-                    EXPECT_DOUBLE_EQ(first(x, y, 9)[d], 0.0);
++        for (int batch : {0, 8}) {
++            if (batch > 0
++                && !std::is_same_v<
++                        FFT2D5Poisson::ScalarField2_t::view_type::memory_space, Kokkos::HostSpace>)
++                continue;
++            makeReferencePathFile("data/unit_test_DesignPath.dat", {{0, 0, 0}, {0, 0, 6}});
++            fsCmd_m->setType("FFT2D5");
++            fsCmd_m->setNX(12);
++            fsCmd_m->setNY(12);
++            fsCmd_m->setNZ(12);
++            fsCmd_m->setPipeSizeX(6);
++            fsCmd_m->setPipeSizeY(6);
++            Options::fft2d5BatchSize = batch;
++            rebuildBunch();
++            Options::fft2d5BatchSize = 0;
++            const auto rho           = solver_m->getRho()->getView();
++            const auto field         = solver_m->getEField()->getView();
++            auto source              = Kokkos::create_mirror_view(rho);
++            Kokkos::deep_copy(source, 0.0);
++            // This slice has zero signed total charge but a nonzero dipole field.
++            source(3, 3, 4) = 1.0;
++            source(8, 7, 4) = -1.0;
++            Kokkos::deep_copy(rho, source);
++            Kokkos::deep_copy(field, Vector_t<double, 3>(7.0));
++            solver_m->solvePoissons();
++            const auto first = Kokkos::create_mirror(field);
++            Kokkos::deep_copy(first, field);
++            double maximum = 0.0;
++            for (size_t x = 0; x < first.extent(0); ++x) {
++                for (size_t y = 0; y < first.extent(1); ++y) {
++                    for (unsigned d = 0; d < 3; ++d) {
++                        maximum = std::max(maximum, std::abs(first(x, y, 4)[d]));
++                        EXPECT_DOUBLE_EQ(first(x, y, 9)[d], 0.0);
++                    }
+                 }
+             }
+-        }
+-        EXPECT_GT(maximum, 0.0);
++            EXPECT_GT(maximum, 0.0);
+ 
+-        // Move the same source to another slice; reusing the solver must leave no old field.
+-        Kokkos::deep_copy(source, 0.0);
+-        source(3, 3, 9) = 1.0;
+-        source(8, 7, 9) = -1.0;
+-        Kokkos::deep_copy(rho, source);
+-        solver_m->solvePoissons();
+-        const auto moved = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), field);
+-        for (size_t x = 0; x < moved.extent(0); ++x) {
+-            for (size_t y = 0; y < moved.extent(1); ++y) {
+-                for (size_t z = 0; z < moved.extent(2); ++z) {
+-                    for (unsigned d = 0; d < 3; ++d) {
+-                        if (z == 9) {
+-                            EXPECT_NEAR(moved(x, y, z)[d], first(x, y, 4)[d], maximum * 1.0e-13);
+-                        } else {
+-                            EXPECT_DOUBLE_EQ(moved(x, y, z)[d], 0.0);
++            // Move the same source to another slice; reusing the solver must leave no old field.
++            Kokkos::deep_copy(source, 0.0);
++            source(3, 3, 9) = 1.0;
++            source(8, 7, 9) = -1.0;
++            Kokkos::deep_copy(rho, source);
++            solver_m->solvePoissons();
++            const auto moved = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), field);
++            for (size_t x = 0; x < moved.extent(0); ++x) {
++                for (size_t y = 0; y < moved.extent(1); ++y) {
++                    for (size_t z = 0; z < moved.extent(2); ++z) {
++                        for (unsigned d = 0; d < 3; ++d) {
++                            if (z == 9) {
++                                EXPECT_NEAR(
++                                        moved(x, y, z)[d], first(x, y, 4)[d], maximum * 1.0e-13);
++                            } else {
++                                EXPECT_DOUBLE_EQ(moved(x, y, z)[d], 0.0);
++                            }
+                         }
+                     }
+                 }
+             }
+-        }
+-        Kokkos::deep_copy(rho, 0.0);
+-        solver_m->solvePoissons();
+-        const auto empty = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), field);
+-        for (size_t x = 0; x < empty.extent(0); ++x) {
+-            for (size_t y = 0; y < empty.extent(1); ++y) {
+-                for (size_t z = 0; z < empty.extent(2); ++z) {
+-                    for (unsigned d = 0; d < 3; ++d) {
+-                        EXPECT_DOUBLE_EQ(empty(x, y, z)[d], 0.0);
++            Kokkos::deep_copy(rho, 0.0);
++            solver_m->solvePoissons();
++            const auto empty = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), field);
++            for (size_t x = 0; x < empty.extent(0); ++x) {
++                for (size_t y = 0; y < empty.extent(1); ++y) {
++                    for (size_t z = 0; z < empty.extent(2); ++z) {
++                        for (unsigned d = 0; d < 3; ++d) {
++                            EXPECT_DOUBLE_EQ(empty(x, y, z)[d], 0.0);
++                        }
+                     }
+                 }
+             }
+@@ -2708,6 +2717,127 @@ namespace {
+         }
+     }
+ 
++    TEST_F(TestSolve2d5, BatchedSlicesMatchSerialPotentialHaloAndFields) {
++        if constexpr (!std::is_same_v<
++                              FFT2D5Poisson::ScalarField2_t::view_type::memory_space,
++                              Kokkos::HostSpace>)
++            GTEST_SKIP() << "Explicit batching currently supports host execution only";
++        FFT2D5Poisson batchSolver;
++        for (const auto shape : {std::array<int, 2>{6, 8}, std::array<int, 2>{8, 6}}) {
++            const double dx = shape[0] == 6 ? 0.3 : 0.17;
++            const double dy = shape[0] == 6 ? 0.1 : 0.29;
++            const ippl::NDIndex<3> domain3{shape[0], shape[1], 73};
++            FFT2D5Poisson::Mesh3_t mesh3(domain3, {dx, dy, 0.25}, {0., 0., 0.});
++            ippl::FieldLayout<3> layout3(MPI_COMM_WORLD, domain3, {false, false, false});
++            FFT2D5Poisson::ScalarField3_t density(mesh3, layout3), potential(mesh3, layout3);
++            FFT2D5Poisson::VectorField3_t field(mesh3, layout3);
++            const FFT2D5Poisson::NDIndex2_t domain2{shape[0], shape[1]};
++            FFT2D5Poisson::Mesh2_t mesh2(domain2, {dx, dy}, {0., 0.});
++            FFT2D5Poisson::Layout2_t layout2(MPI_COMM_WORLD, domain2, {false, false});
++            FFT2D5Poisson::ScalarField2_t slice(mesh2, layout2);
++            FFT2D5Poisson::VectorField2_t sliceField(mesh2, layout2);
++            FFT2D5Poisson serial;
++            batchSolver.initialiseViews(slice);
++            serial.initialiseViews(slice);
++            const auto bg = Kokkos::create_mirror_view_and_copy(
++                    Kokkos::HostSpace(), batchSolver.getGreensFnTr().getView());
++            const auto sg = Kokkos::create_mirror_view_and_copy(
++                    Kokkos::HostSpace(), serial.getGreensFnTr().getView());
++            ASSERT_EQ(bg.extent(0), sg.extent(0));
++            ASSERT_EQ(bg.extent(1), sg.extent(1));
++            for (size_t i = 0; i < bg.extent(0); ++i)
++                for (size_t j = 0; j < bg.extent(1); ++j)
++                    ASSERT_NEAR(Kokkos::abs(bg(i, j) - sg(i, j)), 0., 1e-13)
++                            << shape[0] << " " << i << " " << j;
++            const auto ghost = density.getNghost();
++            // 66 active slices exercise full batches and remainders for 8/32/64.
++            for (unsigned sourceCase = 0; sourceCase < 3; ++sourceCase) {
++                std::vector<size_t> active;
++                if (sourceCase == 0) {
++                    for (size_t z = 0; z < 73; ++z)
++                        if (z % 11 != 0) active.push_back(z);
++                } else if (sourceCase == 1)
++                    active = {2, 7, 72};
++                auto source = density.getHostMirror();
++                Kokkos::deep_copy(source, 0.);
++                auto expectedPhi = Kokkos::create_mirror(potential.getView());
++                Kokkos::deep_copy(expectedPhi, 0.);
++                auto expectedE = Kokkos::create_mirror(field.getView());
++                Kokkos::deep_copy(expectedE, FFT2D5Poisson::Vector3_t(0.));
++                for (size_t z : active) {
++                    auto rho = slice.getHostMirror();
++                    Kokkos::deep_copy(rho, 0.);
++                    for (int i = 0; i < shape[0]; ++i)
++                        for (int j = 0; j < shape[1]; ++j) {
++                            double value = (1. + 0.01 * z) * (0.3 + std::sin(0.7 * i + 0.9 * j));
++                            if (z == 2)
++                                value = (i == 0 && j == 0)                         ? 1.
++                                        : (i == shape[0] - 1 && j == shape[1] - 1) ? -1.
++                                                                                   : 0.;
++                            source(i + ghost, j + ghost, z + ghost) = value;
++                            rho(i + ghost, j + ghost)               = value * 1.7;
++                        }
++                    Kokkos::deep_copy(slice.getView(), rho);
++                    serial.solve(slice, sliceField);
++                    auto phi = Kokkos::create_mirror_view_and_copy(
++                            Kokkos::HostSpace(), slice.getView());
++                    auto electric = Kokkos::create_mirror_view_and_copy(
++                            Kokkos::HostSpace(), sliceField.getView());
++                    for (size_t i = 0; i < phi.extent(0); ++i)
++                        for (size_t j = 0; j < phi.extent(1); ++j) {
++                            expectedPhi(i, j, z + ghost) = phi(i, j);
++                            expectedE(i, j, z + ghost)   = FFT2D5Poisson::Vector3_t(
++                                    electric(i, j)[0], electric(i, j)[1], 0.);
++                        }
++                }
++                Kokkos::deep_copy(density.getView(), source);
++                auto originalSource = Kokkos::create_mirror(density.getView());
++                Kokkos::deep_copy(originalSource, density.getView());
++                for (int size : {1, 8, 32, 64}) {
++                    SCOPED_TRACE(
++                            ::testing::Message() << shape[0] << "x" << shape[1] << " batch=" << size
++                                                 << " source=" << sourceCase);
++                    Kokkos::deep_copy(field.getView(), FFT2D5Poisson::Vector3_t(123.));
++                    Kokkos::deep_copy(potential.getView(), 123.);
++                    batchSolver.solveBatched(density, field, active, size, 1.7, &potential);
++                    auto actualPhi = Kokkos::create_mirror_view_and_copy(
++                            Kokkos::HostSpace(), potential.getView());
++                    auto actualE = Kokkos::create_mirror_view_and_copy(
++                            Kokkos::HostSpace(), field.getView());
++                    auto actualRho = Kokkos::create_mirror_view_and_copy(
++                            Kokkos::HostSpace(), density.getView());
++                    double phiScale = 0., fieldScale = 0.;
++                    for (size_t i = 0; i < actualPhi.extent(0); ++i)
++                        for (size_t j = 0; j < actualPhi.extent(1); ++j)
++                            for (size_t z = 0; z < actualPhi.extent(2); ++z) {
++                                phiScale = std::max(phiScale, std::abs(expectedPhi(i, j, z)));
++                                for (unsigned d = 0; d < 3; ++d)
++                                    fieldScale =
++                                            std::max(fieldScale, std::abs(expectedE(i, j, z)[d]));
++                            }
++                    for (size_t i = 0; i < actualPhi.extent(0); ++i)
++                        for (size_t j = 0; j < actualPhi.extent(1); ++j)
++                            for (size_t z = 0; z < actualPhi.extent(2); ++z) {
++                                EXPECT_EQ(actualRho(i, j, z), originalSource(i, j, z));
++                                EXPECT_NEAR(
++                                        actualPhi(i, j, z), expectedPhi(i, j, z),
++                                        phiScale * 1e-12 + 1e-30);
++                                for (unsigned d = 0; d < 3; ++d)
++                                    EXPECT_NEAR(
++                                            actualE(i, j, z)[d], expectedE(i, j, z)[d],
++                                            fieldScale * 1e-12 + 1e-30);
++                            }
++                }
++            }
++            EXPECT_THROW(
++                    batchSolver.solveBatched(density, field, std::array<size_t, 1>{73}, 8),
++                    OpalException);
++            EXPECT_THROW(
++                    batchSolver.solveBatched(density, field, std::array<size_t, 1>{1}, 0),
++                    OpalException);
++        }
++    }
++
+     TEST_F(TestSolve2d5, Poisson_Simple) {
+         // Make a charge density
+         const FFT2D5Poisson::NDIndex2_t domain{6, 6};

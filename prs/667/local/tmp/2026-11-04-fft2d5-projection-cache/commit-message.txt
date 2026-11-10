@@ -1,0 +1,20 @@
+Cache FFT2D5 path geometry and reuse projections within each solve
+
+Precompute segment geometry and cumulative path lengths in one preparation
+call, then project each active particle once. Reuse the projections for
+coverage checking, charge deposition and field gathering.
+
+Refresh caches on every solve and resize buffers when particle counts change.
+Keep standalone diagnostic stages uncached. Preserve the existing search
+order, clamping and nearest-segment tie handling.
+
+Add detailed Doxygen documentation and unit checks against the uncached
+stages, covering density, E/B fields, seams, invalid particles and source
+changes.
+
+Validation:
+- Normal unit targets pass with 1 and 4 OpenMP threads.
+- Unsupported two-rank execution is still rejected.
+- Identical 100-step pilot runtime drops from 73.65 s to 50.78–54.85 s.
+- RMS/emittance differences remain below 1.75e-14 relative.
+- Original executable preserved; no 16-turn runs started.

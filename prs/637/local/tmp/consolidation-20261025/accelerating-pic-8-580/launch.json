@@ -1,0 +1,26 @@
+{
+  "command": [
+    "mpirun",
+    "-np",
+    "1",
+    "/Users/adelmann/git/opalx-master/tmp/consolidation-20261025/opalx-consolidated",
+    "acceleration.in",
+    "--info",
+    "2"
+  ],
+  "ranks": 1,
+  "threads": 4,
+  "binary_sha256": "ff839a2b4891fdc6c18f6f41ebde16fa43a7e7403fba89bece938df61656f207",
+  "input_sha256": {
+    "acceleration.in": "8e5a96bde740d40d82a2a42c92e53688fd4bb32afbf80a0cb2da3a457f055404",
+    "bunch.dat": "e1fdc4c7c113bf30aef627efd31b2da02858f1124e09d01ff5bd40ddb393a27b",
+    "bfield.dat": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "rffield2.dat": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "rffield1.dat": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b"
+  },
+  "baseline": "/Users/adelmann/git/opalx-master/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580",
+  "start_unix": 1792924041.6318889,
+  "pid": 45894,
+  "returncode": 0,
+  "elapsed_s": 516.3898129463196
+}

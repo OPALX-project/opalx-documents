@@ -1,0 +1,103 @@
+\section{Semi-analytic curved-tube reference (SACR)}
+\label{sec:sacr}
+SACR evaluates the free-space electrostatic field of a prescribed curved charge
+distribution without a three-dimensional mesh. The target geometry is a 5 m
+beam on a 2 m bend radius, spanning $143.24^\circ$, with 5 mm radial extent.
+This section uses an ellipsoidally tapered source to obtain an exact Dubin
+limit. \Cref{sec:frozen} extends the field comparison to a constant-section
+tube; neither test establishes its self-consistent tracking accuracy.
+
+\begin{figure}[H]
+ \centering
+ \input{figures/sacr-reference-geometry.tikz}
+ \caption{SACR is a mesh-free Coulomb reference for a prescribed physical
+ charge distribution. Source-surface patches contribute through their
+ outward vector areas and physical source-target separations. At fixed
+ semiaxes and charge, $R\to\infty$ maps the ellipsoidally tapered family to
+ Dubin's straight ellipsoid; a constant-section tube instead tends to a
+ finite elliptic cylinder. Surface-only integration shown here assumes
+ uniform physical density; a varying longitudinal density also requires
+ the volume-gradient term. Transverse dimensions are enlarged.}
+ \label{fig:sacr-reference-geometry}
+\end{figure}
+The finite-radius source is retained in the Coulomb distance. Its geometry
+is integrated directly, without the IPPL grid or the first-order transverse
+curvature expansion used by the OPALX OPEN backend. The two straight limits
+in the illustration therefore describe different physical reference sources.
+The reference-path coordinate map is orthogonal but not conformal: its scale
+factors are $1,1,1+u/R$. The curved fields are evaluated from physical Coulomb
+distances, rather than obtained by a conformal transformation of a straight
+beam solution.
+This describes the present method; it does not rule out other mapped
+formulations, which must still represent the physical three-dimensional
+source and its longitudinal coupling.
+
+\clearpage
+\subsection{Field model and straight limit}
+For reference arclength $s$, outward radial displacement $u$ and vertical
+coordinate $y$, the OPALX laboratory position and volume element are
+\begin{align}
+ \bm X(s,u,y)&=\big((R+u)\cos(s/R)-R,\ y,\ (R+u)\sin(s/R)\big)^\T,\\
+ \dd V&=\left(1+\frac{u}{R}\right)\dd s\,\dd u\,\dd y.
+ \label{eq:sacr-map}
+\end{align}
+For uniform physical volume density $\rho$, the Coulomb field has the exact
+surface form
+\begin{equation}
+ \bm E(\bm x)=\frac{\rho}{4\pi\eps}
+ \int_V\frac{\bm x-\bm x'}{|\bm x-\bm x'|^3}\,\dd V'
+ =\frac{\rho}{4\pi\eps}
+ \oint_{\partial V}\frac{\bm n'(\bm x')}{|\bm x-\bm x'|}\,\dd S'.
+ \label{eq:sacr-surface}
+\end{equation}
+The second equality follows from the divergence theorem, with outward source
+normal $\bm n'$. Two-dimensional boundary quadrature gives all three field
+components, without a fitted $g$ or softening length.
+
+For the Dubin comparison, choose
+\begin{equation}
+ a(s)=a_0\sqrt{1-s^2/b^2},\qquad
+ c(s)=c_0\sqrt{1-s^2/b^2},\qquad |s|\le b,\qquad L=2b.
+ \label{eq:sacr-taper}
+\end{equation}
+The physical density is constant, while the line density is parabolic.
+The volume remains $4\pi a_0bc_0/3$ under bending: the term odd in $u$ in
+\cref{eq:sacr-map} integrates to zero. At fixed semiaxes and charge,
+$R\to\infty$ gives the Cartesian ellipsoid and its exact field
+$E_i=\rho D_i x_i/\eps$ from Dubin~\cite{dubin}. Our $D_i$ equal half of
+Dubin's coefficients, so $\sum_iD_i=1$.
+
+A constant-section tube instead approaches a finite cylinder as $R\to\infty$;
+it is not the finite ellipsoid used in this check. The 0.5 mm vertical semiaxis
+in the thin verification cases is a benchmark choice, not a newly specified
+real-beam parameter.
+
+For an independent tangential check, let $A$ be the transverse ellipse
+$u^2/a_0^2+y^2/c_0^2\le1$. At target $(u_t,y_t,s_t)$ define
+$r_t=R+u_t$, $r_s=R+u$ and
+$s_\pm=\pm b\sqrt{1-u^2/a_0^2-y^2/c_0^2}$. Exact integration along each
+source filament gives
+\begin{equation}
+ E_s=\frac{\rho}{4\pi\eps}\int_A\frac{r_s}{r_t}
+ \left(\frac{1}{d_+}-\frac{1}{d_-}\right)\dd u\,\dd y,
+ \qquad d_\pm=|\bm X(s_t,u_t,y_t)-\bm X(s_\pm,u,y)|.
+ \label{eq:sacr-endpoint}
+\end{equation}
+The straight limit has $r_s/r_t\to1$; the tapered source requires these
+transverse-dependent ends.
+
+\subsection{Error measures}
+Fields are compared at matched material coordinates $\bm\xi=(u,y,s)$ and projected
+onto each target's local radial, vertical and tangential basis. Let
+$E_i^{\rm SACR}(R;\bm\xi)$ denote that local field and
+$\ell_i=(a_0,c_0,b)_i$. Define
+\begin{equation}
+ E_{i,*}=\frac{\rho}{\eps}D_i\ell_i,\qquad
+ \delta_i(R,\bm\xi)=\frac{E_i^{\rm SACR}(R;\bm\xi)-E_i^{\rm Dubin}(\bm\xi)}{E_{i,*}}.
+ \label{eq:sacr-error}
+\end{equation}
+This component scale retains targets where the exact field vanishes. Changes
+under quadrature refinement measure numerical resolution; finite-$R$
+differences from Dubin also contain the physical curvature effect.
+
+\input{sacr-results.tex}

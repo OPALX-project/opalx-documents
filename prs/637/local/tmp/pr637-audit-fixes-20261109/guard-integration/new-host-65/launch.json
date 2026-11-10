@@ -1,0 +1,24 @@
+{
+  "name": "new-host-65",
+  "binary": "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+  "binary_sha256": "a9026934deaf44ccc7000f917678ca97c40ef55516850770c070553f7d85cdf8",
+  "ranks": 1,
+  "returncode": 0,
+  "elapsed_s": 0.2907208329997957,
+  "expected": "success",
+  "passed": true,
+  "markers": [
+    "OPAL-X> * Done executing ParallelTracker at 11:57:31"
+  ],
+  "command": [
+    "mpirun",
+    "-np",
+    "1",
+    "/Users/adelmann/git/opalx-master/build_openmp/src/opalx",
+    "Cyclotron-RF-Stop.in",
+    "--info",
+    "2"
+  ],
+  "input_sha256": "56decd7f9ef96a83c1e0a9a07cf343f7626da3dafea6703c957e0d6286d7ce79",
+  "timeout": false
+}

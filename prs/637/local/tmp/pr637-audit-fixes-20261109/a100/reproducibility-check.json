@@ -1,0 +1,30 @@
+{
+  "analysis_only": true,
+  "native_tests_rerun": 0,
+  "simulations_rerun": 0,
+  "command": [
+    "/Users/adelmann/.venv-h6/bin/python",
+    "/Users/adelmann/git/opalx-master/tmp/pr637-audit-fixes-20261109/a100/audit_tracker_gpu.py",
+    "/Users/adelmann/git/opalx-master/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final",
+    "--run-dir",
+    "gpu-integration-final"
+  ],
+  "working_directory": "/Users/adelmann/git/opalx-master",
+  "extraction_root": "/Users/adelmann/git/opalx-master/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final",
+  "run_dir": "gpu-integration-final",
+  "extraction_paths_normalized": false,
+  "existing_json_files_verified_unchanged": 52,
+  "critical_json_sha256": {
+    "tracker-gpu-audit.json": "2012cb548e89275dbc1b43f44dd4f509a99a378859479a2f5c962a488ed76031",
+    "remote-tracker-final/tracker-gpu-audit.json": "2012cb548e89275dbc1b43f44dd4f509a99a378859479a2f5c962a488ed76031",
+    "summary.json": "cfa3d1a3116e79acfd794cdfad2d326c347d95690ea14edf3ccde52423d0161b",
+    "native-audit.json": "1ca083fcc27e66cd5be93cae2c97ee2d38e76021debe177cea61e2b8571f8852"
+  },
+  "canonical_script_sha256": "8de437ef466cc63a2cfe0f3f3f348051c26cb707ce24a947519dfaa8ba8c1560",
+  "original_successful_analysis_script": "audit_tracker_gpu_final.py",
+  "original_successful_analysis_command": [
+    "/Users/adelmann/.venv-h6/bin/python",
+    "/Users/adelmann/git/opalx-master/tmp/pr637-audit-fixes-20261109/a100/audit_tracker_gpu_final.py",
+    "/Users/adelmann/git/opalx-master/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final"
+  ]
+}

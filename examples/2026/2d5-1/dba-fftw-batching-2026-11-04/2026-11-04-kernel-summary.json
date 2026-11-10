@@ -1,0 +1,12 @@
+{
+  "batch_size": 8,
+  "profile_wall_s": 10.955590041994585,
+  "pack_s": 0.500627508,
+  "apply_green_s": 0.1740921999999995,
+  "field_s": 0.2409264259999999,
+  "green_pack_s": 0.001569416,
+  "projection_s": 0.3934435819999999,
+  "batch_chunks_over_100steps": 6400,
+  "remaining_serial_fft_copy_calls": 6,
+  "note": "Six FFT_toTemp and six FFT_fromTemp calls only for initial plan warmup/Green; no per-slice Field-wrapper copies. FFT arithmetic within native batches is still sequential."
+}

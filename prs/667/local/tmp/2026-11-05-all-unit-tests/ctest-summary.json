@@ -1,0 +1,42 @@
+[
+  {
+    "omp_threads": 1,
+    "mpi_ranks": 1,
+    "argv": [
+      "ctest",
+      "--test-dir",
+      "/Users/adelmann/git/opalx/build-omp",
+      "-L",
+      "unit",
+      "-E",
+      "^(TestDeviceExternalField|TestScalingFFAMagnet)$",
+      "--output-on-failure",
+      "--parallel",
+      "1",
+      "--output-junit",
+      "/Users/adelmann/git/opalx/tmp/2026-11-05-all-unit-tests/ctest-omp1.xml"
+    ],
+    "returncode": 8,
+    "elapsed_s": 59.78809599997476
+  },
+  {
+    "omp_threads": 4,
+    "mpi_ranks": 1,
+    "argv": [
+      "ctest",
+      "--test-dir",
+      "/Users/adelmann/git/opalx/build-omp",
+      "-L",
+      "unit",
+      "-E",
+      "^(TestDeviceExternalField|TestScalingFFAMagnet)$",
+      "--output-on-failure",
+      "--parallel",
+      "1",
+      "--output-junit",
+      "/Users/adelmann/git/opalx/tmp/2026-11-05-all-unit-tests/ctest-omp4.xml"
+    ],
+    "returncode": 8,
+    "elapsed_s": 11.634357250004541
+  }
+]

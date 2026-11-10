@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-09",
+  "commit": "b1551b9c337c0c57dd21a4e2e26ccaff10fdfc93",
+  "local_branch": "codex/ffa-probes-school-parity",
+  "remote_branch": "615-probe-command-does-not-work",
+  "pr": {
+    "headRefName": "615-probe-command-does-not-work",
+    "headRefOid": "b1551b9c337c0c57dd21a4e2e26ccaff10fdfc93",
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "0001-01-01T00:00:00Z",
+        "conclusion": "",
+        "detailsUrl": "https://github.com/OPALX-project/OPALX/actions/runs/42600761674/job/129104342419",
+        "name": "Build & Unit Tests",
+        "startedAt": "2026-11-09T10:25:27Z",
+        "status": "IN_PROGRESS",
+        "workflowName": "CPU OpenMP"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "0001-01-01T00:00:00Z",
+        "conclusion": "",
+        "detailsUrl": "https://github.com/OPALX-project/OPALX/actions/runs/42600761682/job/129104342387",
+        "name": "Build & Unit Tests",
+        "startedAt": "2026-11-09T10:25:27Z",
+        "status": "IN_PROGRESS",
+        "workflowName": "CPU Serial"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "0001-01-01T00:00:00Z",
+        "conclusion": "",
+        "detailsUrl": "https://github.com/OPALX-project/OPALX/actions/runs/42600761630/job/129104342551",
+        "name": "Compile",
+        "startedAt": "2026-11-09T10:25:27Z",
+        "status": "IN_PROGRESS",
+        "workflowName": "GPU CUDA"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "0001-01-01T00:00:00Z",
+        "conclusion": "",
+        "detailsUrl": "https://github.com/OPALX-project/OPALX/actions/runs/42600761687/job/129104342850",
+        "name": "Compile",
+        "startedAt": "2026-11-09T10:25:27Z",
+        "status": "IN_PROGRESS",
+        "workflowName": "GPU HIP"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "0001-01-01T00:00:00Z",
+        "conclusion": "",
+        "detailsUrl": "https://github.com/OPALX-project/OPALX/actions/runs/42600761722/job/129104343120",
+        "name": "Compile SYCL",
+        "startedAt": "2026-11-09T10:25:28Z",
+        "status": "IN_PROGRESS",
+        "workflowName": "GPU SYCL"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-09T10:25:43Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/OPALX-project/OPALX/actions/runs/42600761666/job/129104342129",
+        "name": "Check",
+        "startedAt": "2026-11-09T10:25:27Z",
+        "status": "COMPLETED",
+        "workflowName": "Check clang-format"
+      }
+    ],
+    "url": "https://github.com/OPALX-project/OPALX/pull/637"
+  },
+  "files": 12,
+  "tracked_working_tree_clean": true,
+  "authorization": "User explicitly requested commit and push to PR637 with the updated commit message.",
+  "validation": "Existing matching 137-target CPU, A100 1/2-rank, GPU and old-OPAL evidence; 50/50 general-adapter checks. No repeated simulations required for publication."
+}

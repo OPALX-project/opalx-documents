@@ -1,0 +1,1158 @@
+{
+  "snapshot_date": "2026-11-01",
+  "scope": "Frozen constant-section 5 m R=2 m tube; 21 native main/probe pairs and independent SACR/source controls",
+  "sources": [
+    {
+      "snapshot": "data/frozen-r2/HANDOFF.md",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/HANDOFF.md",
+      "sha256": "9734980a2e59bf8f11a353cf07d36868055754dab43bbd351e01ce6389e4dacb",
+      "bytes": 9137
+    },
+    {
+      "snapshot": "data/frozen-r2/README.md",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/README.md",
+      "sha256": "9e2077c5a7488a749c4e7a06ada9f3abb7876dac5c89d6848c789fca1c16db71",
+      "bytes": 5074
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/HANDOFF.md",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/HANDOFF.md",
+      "sha256": "55056d0f200928cdd2ef9ca96be3ecb702a52de328aa866182f70b9ba03f545e",
+      "bytes": 4050
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/README.md",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/README.md",
+      "sha256": "c4f151a1830f813f06fd9c351a09dd47c656a1baf95521ff49d6a8def8ed503a",
+      "bytes": 7215
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/acceptance.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/acceptance.json",
+      "sha256": "725f41d21669e6bdefaf3491931c157c3e09da541c56ef25f5055a58d88da8ae",
+      "bytes": 3778
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/analyze_fields.py",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/analyze_fields.py",
+      "sha256": "22ce2aee06ccab8a6e4d168c8c4d7a2a6d2b7d41268e066f65faa108994b79ef",
+      "bytes": 37478
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/cases_manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/cases_manifest.json",
+      "sha256": "58ddc20b4924634e387032c1c457b0de98b5e08dd75935cecfcfc05fe35027eb",
+      "bytes": 51259
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/centre_radial.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/centre_radial.csv",
+      "sha256": "a69bea5d03959973fa98a3c93da8b7fc920e2983e43919e41d1a1bd2a978fbae",
+      "bytes": 9916
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/end_profile_reference.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/end_profile_reference.csv",
+      "sha256": "c094271305d1c7252c18d4c7e90d97c9771f4a4dd5edee7145e761d2be652f90",
+      "bytes": 5546
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/field_summary.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/field_summary.csv",
+      "sha256": "2c256dbc6f47d4e8add81d044a174c3caf80124b8258b4ea2ee91acf2410aeca",
+      "bytes": 29658
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/fields_comparison.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/fields_comparison.csv",
+      "sha256": "72c9448674958e856ab0673578809e75a00de029dbb830d765e8b0c89ab371a8",
+      "bytes": 1184150
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/mesh_and_control_changes.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/mesh_and_control_changes.csv",
+      "sha256": "c60e23bebd78dc909e664263090d845620e00622fd48b44e6258d337cce5f8a3",
+      "bytes": 43191
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/native_profile_cache.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/native_profile_cache.json",
+      "sha256": "83bbc2a95d9fd9c6e6a92c9cafb90f39966badcb4f1b43f368d9a4c711a133b8",
+      "bytes": 428
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/native_profile_projection_check.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/native_profile_projection_check.json",
+      "sha256": "b578fb7b781228debf66652bd562ec6534cf8598474d924cb750abc088e1b20c",
+      "bytes": 225
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/native_profiles_comparison.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/native_profiles_comparison.csv",
+      "sha256": "3c1110707dfc439cfee022523447d3886ed045cab35820a20867aec4327debc7",
+      "bytes": 5165702
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/native_sacr_curve.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/native_sacr_curve.csv",
+      "sha256": "02c160b4cffe9f0a07a2d38b61ab2b130106c1d5a85ecd77d64323f7d7f7134e",
+      "bytes": 39634
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/native_sacr_interpolation_checks.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/native_sacr_interpolation_checks.json",
+      "sha256": "83e33d66f65fa3f8ba0d2027af7e77ff34ba49f3869155509a7db62709f6667a",
+      "bytes": 487
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/offline_replot_validation.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/offline_replot_validation.json",
+      "sha256": "aa241c869b015136bee8d416e55213b25c58ada39359ed4a2edd3609e4589769",
+      "bytes": 516
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/plot_selection.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/plot_selection.json",
+      "sha256": "6657f5d26563d8ce90ad5f0b898568c95adfdee1bd5a4e3de03a7696e0edc262",
+      "bytes": 457
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/run_integrity_checks.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/run_integrity_checks.csv",
+      "sha256": "b40f3fd2a35b25ce9f11914dcc11050825f8860b68cde786dd998d5276d60b84",
+      "bytes": 13795
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/source_checks.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/source_checks.csv",
+      "sha256": "c1b8b66b6a0a709f1a395d378f07840768acfe7fd7601d16b14d5621faad5a63",
+      "bytes": 1858
+    },
+    {
+      "snapshot": "data/frozen-r2/analysis/verify_offline_replot.py",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/analysis/verify_offline_replot.py",
+      "sha256": "a8f15bcacf76f7af1f6ebcac99ec3f206f553929032d431e98036f207d100a76",
+      "bytes": 2185
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/HANDOFF.md",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/HANDOFF.md",
+      "sha256": "61c6338427e0cd424de948d4ca4d2e3c7267b6cdc65d22b20cc96279ecc7aafa",
+      "bytes": 4306
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/README.md",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/README.md",
+      "sha256": "4761d6d2f03ecb65222a317ad8310d4fb1410e5c7682eb492d724a1c95c1ffc5",
+      "bytes": 6465
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/cartesian_native_runs.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/cartesian_native_runs.json",
+      "sha256": "6520a5d6ced37165b0380f7dfbbe04eec9c88c63bd55d8fbaabcf158164c7b77",
+      "bytes": 3471
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/cartesian_snapshot_acceptance.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/cartesian_snapshot_acceptance.json",
+      "sha256": "b5458013ecd7ff56d10bd19018b670ba1b0a3ebc9cf3f5bcf1db8ea85b2efbb3",
+      "bytes": 436
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/cartesian_snapshot_checks.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/cartesian_snapshot_checks.csv",
+      "sha256": "c88b3fa37bc51c045842f62127283983819125c83809ca7b63fb1d4b17ed30bd",
+      "bytes": 2347
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/extract_longitudinal_profiles.py",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/extract_longitudinal_profiles.py",
+      "sha256": "0bc79090398ace1e1faa89a619310ac755c1e8aa90b0a96283c88fa3be3d38c5",
+      "bytes": 7623
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/longitudinal_native_runs.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/longitudinal_native_runs.json",
+      "sha256": "c9e41707481d64f9edc1b7f5b38c55963dfe440017a770deffd98633f7dbbf8f",
+      "bytes": 7561
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/longitudinal_sampling.py",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/longitudinal_sampling.py",
+      "sha256": "3721adf0c6944bb66a89b2ace269f724902d699b3425eb486fe24133ff9fec4c",
+      "bytes": 6883
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/longitudinal_sampling_probes.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/longitudinal_sampling_probes.csv",
+      "sha256": "f85429610c1a1af063acee3d60a1008539d722428fcbc45ff18baf52408260d1",
+      "bytes": 44445
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/longitudinal_sampling_provenance.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/longitudinal_sampling_provenance.json",
+      "sha256": "916045ba0d93a66761196bd2e91b0d8d7e66ff5f0121c64e93c054e0df15def3",
+      "bytes": 1112
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/longitudinal_sampling_summary.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/longitudinal_sampling_summary.csv",
+      "sha256": "9f03422f93b856cbea9994df731e0f67d55190bd3e589e29053c13cd784c3b52",
+      "bytes": 1511
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/longitudinal_snapshot_acceptance.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/longitudinal_snapshot_acceptance.json",
+      "sha256": "be63383cf6e60d372e6237f1dbc9d3f8f267c5c069c64bfe8803479139a0ba98",
+      "bytes": 318
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/longitudinal_snapshot_checks.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/longitudinal_snapshot_checks.csv",
+      "sha256": "1e2094b32fd37760f771c8e9d02ffed2cc2ce6ad266f244625bda6704572c23f",
+      "bytes": 4622
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/native_longitudinal_profiles.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/native_longitudinal_profiles.csv",
+      "sha256": "abc8bace9ec40b52d2781b285f0bf824a4d16f82d16664fa5e6c4b92ca53a9be",
+      "bytes": 4229078
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/native_longitudinal_profiles_provenance.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/native_longitudinal_profiles_provenance.json",
+      "sha256": "c0785e6753c907bf863053ce3404ba4f060b0b6f71f8130938bda4f97c8ed514",
+      "bytes": 3834
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/probe_longitudinal_formula_checks.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/probe_longitudinal_formula_checks.csv",
+      "sha256": "2ed6dabe2265c5e1e055c95d291c0cad0966f9fdc75427fb593308bec93c8b68",
+      "bytes": 17887
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/run_longitudinal_sweep.py",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/run_longitudinal_sweep.py",
+      "sha256": "6ef56a6fc0c765398727dde1c49ea70a0015f1fa83174dde5613eb3aa6dd666e",
+      "bytes": 1984
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/verify_cartesian_runs.py",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/verify_cartesian_runs.py",
+      "sha256": "a2d7651e2996ae65c726880844a83dff24d765c177ba4fc4a77cfbee045a9847",
+      "bytes": 1561
+    },
+    {
+      "snapshot": "data/frozen-r2/audit/verify_longitudinal_runs.py",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/audit/verify_longitudinal_runs.py",
+      "sha256": "c649c8bc76508a6731221906bd9d7796b5488b9d3d43f924d7dfe03787145bd7",
+      "bytes": 4579
+    },
+    {
+      "snapshot": "data/frozen-r2/reference/HANDOFF.md",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/reference/HANDOFF.md",
+      "sha256": "021999eec904fc2bcd8b029d37990ca22667a6e996e9203594294f7f343fd8b6",
+      "bytes": 2192
+    },
+    {
+      "snapshot": "data/frozen-r2/reference/README.md",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/reference/README.md",
+      "sha256": "d91005fa10d5a5c26352c6a8f0a52f626f0cfc126aeb3040d4fadefc03613cd4",
+      "bytes": 4327
+    },
+    {
+      "snapshot": "data/frozen-r2/reference/acceptance.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/reference/acceptance.json",
+      "sha256": "1cc718283ba109c01d047003576cc3fab351b0e6c5997063d4d8f7a0de5c6b81",
+      "bytes": 1909
+    },
+    {
+      "snapshot": "data/frozen-r2/reference/build_reference.py",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/reference/build_reference.py",
+      "sha256": "6147b3b8c375d81510ddc6cfe6e913721dcb67ed338eec93d830225c815f9fa6",
+      "bytes": 12058
+    },
+    {
+      "snapshot": "data/frozen-r2/reference/endpoint_checks.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/reference/endpoint_checks.csv",
+      "sha256": "25cc9b6a6802e82196277689fb2933d109e3f99f70dc315686166e88343696d4",
+      "bytes": 3640
+    },
+    {
+      "snapshot": "data/frozen-r2/reference/fields_all_resolutions.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/reference/fields_all_resolutions.csv",
+      "sha256": "d81c237b4350beb9b433c45d6788f894c76ccd5f1a33e0c09af9ea2e2700e5ad",
+      "bytes": 29975
+    },
+    {
+      "snapshot": "data/frozen-r2/reference/fields_reference.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/reference/fields_reference.csv",
+      "sha256": "58a47b49449db59b24f448e33f50c6a680ba7aa11ef3beb4b9da039016daaf40",
+      "bytes": 19607
+    },
+    {
+      "snapshot": "data/frozen-r2/reference/pde_checks.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/reference/pde_checks.csv",
+      "sha256": "35c858a5417bf547d2b50678936e648368bde44ed334e1e35e50ebad77680aa1",
+      "bytes": 643
+    },
+    {
+      "snapshot": "data/frozen-r2/reference/points.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/reference/points.csv",
+      "sha256": "cd9b348db34c0a2919240ceb364c20b6c1720b0146e565a56028260b1d496bfd",
+      "bytes": 5147
+    },
+    {
+      "snapshot": "data/frozen-r2/reference/quadrature_changes.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/reference/quadrature_changes.csv",
+      "sha256": "0a47ae5105a0fc8635db5a97c96843c677a67a184f0275e1c60dc30f8cb72b89",
+      "bytes": 36214
+    },
+    {
+      "snapshot": "data/frozen-r2/reference/quadrature_summary.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/reference/quadrature_summary.csv",
+      "sha256": "f5aa90211ca7a86810d6c104c8e92112b2588f6d146b2ac16f42c60963ac185d",
+      "bytes": 658
+    },
+    {
+      "snapshot": "data/frozen-r2/reference/symmetry_checks.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/reference/symmetry_checks.csv",
+      "sha256": "9f3b9535b7d28af7b40ef27c1e213c3b8513300150a091969f0cfb67de9bd507",
+      "bytes": 4464
+    },
+    {
+      "snapshot": "data/frozen-r2/reference/tube_reference.py",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/reference/tube_reference.py",
+      "sha256": "358010db71fb4532a3ccfe47ba619486e27e9298ac770831d8eb4e8bf17c7213",
+      "bytes": 4729
+    },
+    {
+      "snapshot": "data/frozen-r2/reference/volume_surface_checks.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/reference/volume_surface_checks.csv",
+      "sha256": "bf21ecf91158815a294ac79149bfd4904189512152f9566a0ef7e78e812035ed",
+      "bytes": 305
+    },
+    {
+      "snapshot": "data/frozen-r2/run_meshes.py",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/run_meshes.py",
+      "sha256": "10d46e8f1b4cd6112a88e592d1e1779d8adaa056157a31afe637205c04ab297d",
+      "bytes": 448
+    },
+    {
+      "snapshot": "data/frozen-r2/run_study.py",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/run_study.py",
+      "sha256": "2039f3843a0114dc1694a060f4888d373dd692001b2ff47741f82c6845477529",
+      "bytes": 9435
+    },
+    {
+      "snapshot": "data/frozen-r2/run_transverse.py",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/run_transverse.py",
+      "sha256": "224d93a55e4d62254f53b773c60bbc409bf990250ffce4cc3b10a818325e6262",
+      "bytes": 410
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z1024/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z1024/manifest.json",
+      "sha256": "486dd498e363484ad99fe1818177e7dbd6fe7b7438eed5b0117075d5a9daec52",
+      "bytes": 2300
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z1024/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z1024/tube.in",
+      "sha256": "eaf08d4d46feef63ba2ab6f3a6898adb8076f660ba968048683da089c452ba2c",
+      "bytes": 1194
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z1024/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z1024/tube.out",
+      "sha256": "c0a20fe9876f1f7211f277abcefe4696285c2b0fb7b9eec8222a09026dd61991",
+      "bytes": 16153
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z1024-ns5120/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z1024-ns5120/manifest.json",
+      "sha256": "03da458db7258afbb4e2296b4de6ec6012e4389793ee9be24d9b8a05f6653895",
+      "bytes": 2323
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z1024-ns5120/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z1024-ns5120/tube.in",
+      "sha256": "0f9fbb31d49de35701e20edac096d0e2900393e6972a1660fb3c36348b45b6a4",
+      "bytes": 1194
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z1024-ns5120/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z1024-ns5120/tube.out",
+      "sha256": "1d084c40c5ea08b749f01f3dd7fcae7584f0c2229c93ca8699c28e50e3bcc68c",
+      "bytes": 16150
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z1024-ns5120-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z1024-ns5120-probes/manifest.json",
+      "sha256": "a83c6ec271b4736e7304135a3e26c518253fbdf4d0ac61402085742790d5fef5",
+      "bytes": 2362
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z1024-ns5120-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z1024-ns5120-probes/tube.in",
+      "sha256": "ad5ce453ddc6bf80d006a29f8fcd0cc5ad0079ad766cbb7fb1a30af392476e88",
+      "bytes": 1192
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z1024-ns5120-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z1024-ns5120-probes/tube.out",
+      "sha256": "665a83ca730a97b4fc4ec0483d9bb1f4481e3611446b1ea508261492198206bf",
+      "bytes": 16090
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z1024-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z1024-probes/manifest.json",
+      "sha256": "54a17ed80b98d950935fe5e7d6a778eab96a464f8210ca797350e0d12d37c2bb",
+      "bytes": 2333
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z1024-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z1024-probes/tube.in",
+      "sha256": "85bfa0ff9073e9f73ffd6ac7285c7815f8e5758ae9e72442753c5e54d958a278",
+      "bytes": 1185
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z1024-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z1024-probes/tube.out",
+      "sha256": "47673c4883e2dfd70ac87710b7a1c2d7630ec477ac48d64151997ae342a4618a",
+      "bytes": 16081
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z2048/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z2048/manifest.json",
+      "sha256": "099d7053b7e2a26566b4c248f0f43321a3033e50072fc849d36215954f1d0b28",
+      "bytes": 2300
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z2048/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z2048/tube.in",
+      "sha256": "256246a4eb1e8d1ed0276376ae4129cba8dbb81f48c3188929c41cebc54a47c0",
+      "bytes": 1194
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z2048/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z2048/tube.out",
+      "sha256": "5676108578d69ea309baf1566e9b44629baf398dee9ccc16d230e1525901aeb6",
+      "bytes": 16153
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z2048-ns5120/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z2048-ns5120/manifest.json",
+      "sha256": "d8c910823be1829c628582e09ca83f941efaa079f174ee189b9378066e0c6504",
+      "bytes": 2323
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z2048-ns5120/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z2048-ns5120/tube.in",
+      "sha256": "ca9c7148ab83fe3932e4a7c6f1fa44cb5ce8a5957811d2ad09abd32aa756a16c",
+      "bytes": 1194
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z2048-ns5120/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z2048-ns5120/tube.out",
+      "sha256": "b70d841d724a21c1497a6aca1d1ac1757c5e03d74047a4938d6f2d2511ef6f6c",
+      "bytes": 16150
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z2048-ns5120-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z2048-ns5120-probes/manifest.json",
+      "sha256": "4511c5224dbdf59a8276e3a5f62ca4ab6aad7246762f84124821a55dd10168e1",
+      "bytes": 2363
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z2048-ns5120-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z2048-ns5120-probes/tube.in",
+      "sha256": "df0fbfd08ab73566ff0cf82c887f4184428ead1939153a653e494d73a7e575c1",
+      "bytes": 1192
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z2048-ns5120-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z2048-ns5120-probes/tube.out",
+      "sha256": "1deb4e0fffe62bb922152eec30897a41cac151b7ff66f32f615dbd203ed8b52a",
+      "bytes": 16090
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z2048-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z2048-probes/manifest.json",
+      "sha256": "275054fb62306a6903327c7c7bb3d460748b9510e8c163164bc5810f5cdbffbe",
+      "bytes": 2333
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z2048-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z2048-probes/tube.in",
+      "sha256": "6331ef63ee15ef2a2cdf4c9eb9f1138d38119f3d6690044310a644006962f233",
+      "bytes": 1185
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z2048-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z2048-probes/tube.out",
+      "sha256": "a3744895097c71bf83b5e84c57affdb00c6e4fa6aa1a89fbe9b6b3f61bc5461a",
+      "bytes": 16082
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns10240/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns10240/manifest.json",
+      "sha256": "660fb70aba0f1b666169b368a2dea4293f263602930a0a075191c02072175846",
+      "bytes": 2331
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns10240/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns10240/tube.in",
+      "sha256": "a555d1bb5c32137f5f0f799959615bedc5c4b3757009cd8d44e863d7fe5846de",
+      "bytes": 1197
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns10240/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns10240/tube.out",
+      "sha256": "38402456f886dc2f9554459ea21cef8a1782281142ee6fb7f60c873329518e6b",
+      "bytes": 16162
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns10240-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns10240-probes/manifest.json",
+      "sha256": "fe3f74063cc75e65ed2e5b27917f2a131b03c8fe707e20f2542bfcdf8543f6f6",
+      "bytes": 2372
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns10240-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns10240-probes/tube.in",
+      "sha256": "485ddaf15d431909671ff7ddea1e9650ed82fc795a8d67aa13ce619461b9e96c",
+      "bytes": 1193
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns10240-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns10240-probes/tube.out",
+      "sha256": "0e726692fcabf1d5168323c8cec6293300fb4cd44e83068c9d7b9956c0c8c135",
+      "bytes": 16089
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns5120/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns5120/manifest.json",
+      "sha256": "bc2542b77cb610e8069bda10dbe5b5e0b5bdf40dd565372f890d5851505956ae",
+      "bytes": 2322
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns5120/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns5120/tube.in",
+      "sha256": "346b0154d97f732936629d947bc3a0e0fb33f673ffcf744fd599aefa3b3c98dc",
+      "bytes": 1194
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns5120/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns5120/tube.out",
+      "sha256": "ae98907fa658aaabd87719397af7f04d31df839a71997e671a8c747eff3ee341",
+      "bytes": 16155
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns5120-path01/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns5120-path01/manifest.json",
+      "sha256": "6e2e875801fb2e016cd14b47bb04f683fcad2b93635addaa802a4183bf12473b",
+      "bytes": 2344
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns5120-path01/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns5120-path01/tube.in",
+      "sha256": "19e76d8c622489637df36a87673bfdffd3fabb213b893a4a86f03597b9695653",
+      "bytes": 1194
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns5120-path01/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns5120-path01/tube.out",
+      "sha256": "9fe7188b1992621d6db6cbcc9ea30358e519f9dcc70c804fc1fbf4b4f73673fa",
+      "bytes": 16150
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns5120-path01-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns5120-path01-probes/manifest.json",
+      "sha256": "4c765c44897d27a499fdb53281f9f326978dd840db70134dd71025d09810cd79",
+      "bytes": 2390
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns5120-path01-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns5120-path01-probes/tube.in",
+      "sha256": "b2bf1f00f83f46591458ed87198f83a663f92e48c2764f2c5dfe8ac5174107ed",
+      "bytes": 1199
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns5120-path01-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns5120-path01-probes/tube.out",
+      "sha256": "3c1acdca393d8b2e0b2cd7a38d64f0870bd2e8369b62837f59068aa63c24a67d",
+      "bytes": 16102
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns5120-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns5120-probes/manifest.json",
+      "sha256": "a8b6ea9e542ba5b5795da46dbc03b83176f4d51d465e2e002bd7aa6419b7388e",
+      "bytes": 2362
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns5120-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns5120-probes/tube.in",
+      "sha256": "f6f71a8f15392011a17b4504861601fd941ada07dfd81316e00cfbfaffa3635c",
+      "bytes": 1192
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z4096-ns5120-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z4096-ns5120-probes/tube.out",
+      "sha256": "0ecb775a009316bed68f3962f6b5d6e649748d38e652de6dcf89a8ce3996287b",
+      "bytes": 16089
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512/manifest.json",
+      "sha256": "e953e5ae90e779bb289ae2d9fdc250ecce7d7fc9f2b3f95c2078f759d46067d3",
+      "bytes": 2297
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512/tube.in",
+      "sha256": "876090b50e0d801c8cc4a2e4fe2665c81af2c8bc34519ed09c82c9efca5f7100",
+      "bytes": 1193
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512/tube.out",
+      "sha256": "3f604b4d230dec92a4fbd84592a03e2ac74aaed35a2753884bc84d97830a8747",
+      "bytes": 16149
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-cart/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-cart/manifest.json",
+      "sha256": "80fb01050b83463fd2b56340757b2483e56011a18ea91cc1a9daf9a45a97b096",
+      "bytes": 2377
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-cart/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-cart/tube.in",
+      "sha256": "c883c601c49e979672ad269ca20f8d68f56dd47a31fc7d2f3788cd027b3b7d64",
+      "bytes": 1207
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-cart/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-cart/tube.out",
+      "sha256": "f2b07a71de6983e85f9849db1b0c95957721720a7b0170c46ca7fbcc6ebd088a",
+      "bytes": 16161
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-cart-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-cart-probes/manifest.json",
+      "sha256": "1e6429a63f2ca93d4af281543933a05171d1543876c15be607e727b69f3c7479",
+      "bytes": 2403
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-cart-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-cart-probes/tube.in",
+      "sha256": "e7a9f6adf3b90fe5e41ec1c676158112b1a7a6c66bb07660370d1e52800421e2",
+      "bytes": 1189
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-cart-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-cart-probes/tube.out",
+      "sha256": "0e34cef50a3b4610ad99b1506c1e30f5de8cddab88426217bcb30cb7bcb8522b",
+      "bytes": 16076
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-n16384/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-n16384/manifest.json",
+      "sha256": "2aee7f9ff5eff708ae6f1a96255055310ab06cc08af1982fd7ef9b23074e435a",
+      "bytes": 2317
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-n16384/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-n16384/tube.in",
+      "sha256": "44f970eafccfe019eb70975223fd3f6d15d2649eefee44d80252b43e4b3a2e48",
+      "bytes": 1195
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-n16384/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-n16384/tube.out",
+      "sha256": "39666d8b3c4b122f72aacaf26922cd693fb51c3b5c36ece4357593bba473d5c3",
+      "bytes": 16159
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-n16384-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-n16384-probes/manifest.json",
+      "sha256": "0372c4409f78d480f835720f9e872df824848b3e1eae5a9df023c376ba806178",
+      "bytes": 2356
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-n16384-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-n16384-probes/tube.in",
+      "sha256": "68410e7b846be63301be7488b4b0316d4e5aa6a72929262666dc161ae0c446a5",
+      "bytes": 1190
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-n16384-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-n16384-probes/tube.out",
+      "sha256": "720124c7553a2e6ca052be28fa0ba7aaf192ad3188e40d0f24304fd5ffebe135",
+      "bytes": 16085
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-ns5120/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-ns5120/manifest.json",
+      "sha256": "feb4c35223f0c12eec8d00de848172ec2f777e227479c54c438c536b0aaf8a74",
+      "bytes": 2319
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-ns5120/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-ns5120/tube.in",
+      "sha256": "e971cce7f9b60f4751d675f18275224aaa89ba8d8db38d263bacb76cd6dac249",
+      "bytes": 1193
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-ns5120/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-ns5120/tube.out",
+      "sha256": "e4231a3287c849c31662267c85c3d6e4fe72a70ca658e5d43fcb58ec40315e3f",
+      "bytes": 16139
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-ns5120-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-ns5120-probes/manifest.json",
+      "sha256": "22ab92b01701416c3ac2ad7f736e4e93d6fa1f509013a2b374cde31516b22154",
+      "bytes": 2358
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-ns5120-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-ns5120-probes/tube.in",
+      "sha256": "e7ac48927990b5e5628a6da80368890b64ee34f7b95dcb6feba7d83919f49039",
+      "bytes": 1190
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-ns5120-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-ns5120-probes/tube.out",
+      "sha256": "850df0f1c9696ad1df407ef99fecb44eb16392da173b0be5f073c9b10db15e26",
+      "bytes": 16083
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-probes/manifest.json",
+      "sha256": "f9f5e9b9e7461a4fb11ac6fefa7bb32740814ee5b909aa1798f4d6ec04dd842e",
+      "bytes": 2328
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-probes/tube.in",
+      "sha256": "49b51829d518dc2f1929c5b44b35a89bb7f9f8fedd5fc2a557ef545bfac5b749",
+      "bytes": 1183
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy128-z512-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy128-z512-probes/tube.out",
+      "sha256": "71d0282356ca69b42f1cdd4208da73d1fd90cea4a85439bba59145daf34b687e",
+      "bytes": 16078
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512/manifest.json",
+      "sha256": "7073012c3d2acb33e69db0fb01bf8485ec000aeaebd6aa7cdb45e8f1ffafc6f5",
+      "bytes": 2295
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512/tube.in",
+      "sha256": "a84c06e04c87026bff45a1efcf787ba8e8ea32d14a9afa68411dbe3bd5cc856f",
+      "bytes": 1194
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512/tube.out",
+      "sha256": "f40ec6cb07e0f1d58c9355b51d2c336cef5953f27e1c36172d7802889deda4a0",
+      "bytes": 16152
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-cart/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-cart/manifest.json",
+      "sha256": "901ee94049249042b0c5176ac6fc52fc28ae750ec3abc8bc61d739a37f3f7ab7",
+      "bytes": 2378
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-cart/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-cart/tube.in",
+      "sha256": "fb471626d46eaa234ff0e163ea40fd66c549a061d27d367018ad12bc1110692d",
+      "bytes": 1208
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-cart/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-cart/tube.out",
+      "sha256": "1c475368c3b6f28b5464867f1f9a6cf3ea8400219570632805a42033ded41ef3",
+      "bytes": 16170
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-cart-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-cart-probes/manifest.json",
+      "sha256": "47c45dd1eed2c5ad93f196d060a0964bbd33d9fac305b25caf329a59263eda70",
+      "bytes": 2404
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-cart-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-cart-probes/tube.in",
+      "sha256": "1d4479d01097c9189ffc7a86b7c89b733f7baf1c8b4e437652c62a3534f957d4",
+      "bytes": 1190
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-cart-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-cart-probes/tube.out",
+      "sha256": "c4d57705fdfc6d44e82b4967be4297a3adfcdee5806964551b063c14670f0b25",
+      "bytes": 16091
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-n16384/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-n16384/manifest.json",
+      "sha256": "75a091646784841b40509a64bc39e0b67c1a01f866c098055dec4c4ce8539179",
+      "bytes": 2318
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-n16384/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-n16384/tube.in",
+      "sha256": "bb497a3ac5d00bfb478c387ae61c1917dc94331e9a8186cd6a830bce5cabad77",
+      "bytes": 1196
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-n16384/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-n16384/tube.out",
+      "sha256": "075d7e40bc471645e899192d6a12333d68726d00e491909055c8f3ba73d53229",
+      "bytes": 16164
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-n16384-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-n16384-probes/manifest.json",
+      "sha256": "4a0196ba759e0fc2423be1b31b81f538310a08a56389997b349a3a2457331dab",
+      "bytes": 2356
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-n16384-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-n16384-probes/tube.in",
+      "sha256": "daa6b7eb73f2879880d33f03e80c7648ccea3008a5733844b288b135917ee062",
+      "bytes": 1191
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-n16384-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-n16384-probes/tube.out",
+      "sha256": "3910169302e3c399067f417e3ec5c13f067a02a389509c7be4bf5ad83dd7cad6",
+      "bytes": 16087
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-n4096/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-n4096/manifest.json",
+      "sha256": "18e956d83f35aabb805ff19ec8484f68e207ee0f10963496a9e6fee13d178ecd",
+      "bytes": 2320
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-n4096/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-n4096/tube.in",
+      "sha256": "1e76d578dc44d55f0c8d4ab1d7259c25cdee0a6230e24e4683f287ace6006927",
+      "bytes": 1197
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-n4096/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-n4096/tube.out",
+      "sha256": "db5a311887c1bfd52e46aec1013f59a3125fee6dbb82b20ffeca52ae14d0d39b",
+      "bytes": 16152
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-n4096-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-n4096-probes/manifest.json",
+      "sha256": "b116d9943c74486a2b208fa4c198be86001bff895bf376e8e766aee2a988369a",
+      "bytes": 2357
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-n4096-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-n4096-probes/tube.in",
+      "sha256": "26b03f05633b4ec220310636ec8ced90b9f02e7cef87ca6263582b4ddff46ce7",
+      "bytes": 1190
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-n4096-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-n4096-probes/tube.out",
+      "sha256": "156e76ab3067276b54cf15cbd526117fe2241ebed79861b59240729f9825de73",
+      "bytes": 16079
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-probes/manifest.json",
+      "sha256": "cf528694fc341966e7f247ea85b2ac322e49dcc1605de2e30b4433aca1896759",
+      "bytes": 2330
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-probes/tube.in",
+      "sha256": "158cbc5ed774382420c697d0ca6656edc1ffb67fd25cf655aa1ecde00165a43b",
+      "bytes": 1184
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy256-z512-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy256-z512-probes/tube.out",
+      "sha256": "8167a645572be89f124ee59238b4e867ae6f762b42e83944f1626571c2f1488a",
+      "bytes": 16075
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-cart/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-cart/manifest.json",
+      "sha256": "7cc91aa53e43cc860cced4a744748cdba5d4e8a83ed27e48e07c9d0c53c67e7d",
+      "bytes": 2378
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-cart/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-cart/tube.in",
+      "sha256": "3aa0ba51a57c5a775a04b403e0e0c86bbbba01639fbe265a1d1152022a61258d",
+      "bytes": 1208
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-cart/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-cart/tube.out",
+      "sha256": "29bf55339067dd7bc1ccc5a68eb7d643278d111ea9737b00e688e5095971a686",
+      "bytes": 16163
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-cart-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-cart-probes/manifest.json",
+      "sha256": "7d8566008de251a2957768af0e3301e92a982251902409b317a685f70ff9a78c",
+      "bytes": 2403
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-cart-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-cart-probes/tube.in",
+      "sha256": "870dc328239a74fa7a9f6057061fd37f78b69889abdea5f82b2956823f3b85c1",
+      "bytes": 1190
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-cart-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-cart-probes/tube.out",
+      "sha256": "42aa64d90a1b54030e8719c54ff9eb5795ef67c3134f4e3c13f8e7738fb8d2fd",
+      "bytes": 16080
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n16384/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n16384/manifest.json",
+      "sha256": "3adc61285f057e9bc96528969b79c36a480d04e5e2077c3d383d9959e523ac3f",
+      "bytes": 2317
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n16384/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n16384/tube.in",
+      "sha256": "74523022f66f775bf263413df0a9a8566f3ce6ccdc7858bd21b237021aabf7cc",
+      "bytes": 1196
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n16384/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n16384/tube.out",
+      "sha256": "01a4d9412c1cfccf7cf48ef07e770ce4c1f4a21c4a821ef6795e331daf464d32",
+      "bytes": 16158
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n16384-ns320/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n16384-ns320/manifest.json",
+      "sha256": "a1cb5ac3d994832a47294c21a4e83c8ed3420132d8494ac64271095ae700e666",
+      "bytes": 2333
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n16384-ns320/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n16384-ns320/tube.in",
+      "sha256": "90831afeaeda90aff8c69752223b96b828399b7ed21455b70d8288f268721435",
+      "bytes": 1194
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n16384-ns320/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n16384-ns320/tube.out",
+      "sha256": "712b91af5a34d284fdc0031d8cce0a0a2c0a4ed53a603ca4fba24ab32865f2cf",
+      "bytes": 16148
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n16384-ns320-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n16384-ns320-probes/manifest.json",
+      "sha256": "a8cebfdf9c4f5e70d78f7aa4ce536c2d50a5203d4c1e02383789d81c6a87153b",
+      "bytes": 2377
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n16384-ns320-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n16384-ns320-probes/tube.in",
+      "sha256": "bc6c3dc68d4bdffeaf6586ea4eacf51d29961f7ae1fc98e1d3bbf1092feab444",
+      "bytes": 1197
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n16384-ns320-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n16384-ns320-probes/tube.out",
+      "sha256": "5cb73d9992dad84aa0721684827df5bceed8978f6fac03f1a49bc462c53417f0",
+      "bytes": 16093
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n16384-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n16384-probes/manifest.json",
+      "sha256": "9538593f4c43176096af7658e233273482ed67e4704a0b71fc1f6771446b744c",
+      "bytes": 2356
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n16384-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n16384-probes/tube.in",
+      "sha256": "cd19c6c1a1d27930108cfb714eadfe5a3a8b3cfe194bfa8bd16d6613e8e443f7",
+      "bytes": 1191
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n16384-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n16384-probes/tube.out",
+      "sha256": "6f02e79fdcfba63444850d5fc7a320ee828edb557fe2341b667f22945e62eb83",
+      "bytes": 16088
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n65536-ns320/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n65536-ns320/manifest.json",
+      "sha256": "30109ccb3e565bcb21f2b1a1adf3d65b0047ff3b9c607ab7abe97d6c9847acb6",
+      "bytes": 2338
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n65536-ns320/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n65536-ns320/tube.in",
+      "sha256": "2444a2a74afb581b206bb8621cab93e9c3cf09f963204bd343b72e24b7c0a1ac",
+      "bytes": 1197
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n65536-ns320/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n65536-ns320/tube.out",
+      "sha256": "ec3398de925d6022f57e39749f318a518d0065b4aaeff28edccaf7898e53e9e0",
+      "bytes": 16151
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n65536-ns320-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n65536-ns320-probes/manifest.json",
+      "sha256": "2244eaaabcc904bcf42bd9c2e71048b0e6368673a6d55c1b828bf198cd9ec57a",
+      "bytes": 2381
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n65536-ns320-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n65536-ns320-probes/tube.in",
+      "sha256": "a5659b6f7986cf8e75476e3c64e67ad000eba293d72a1eb1e8b756f98b50ce8f",
+      "bytes": 1197
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy512-z512-n65536-ns320-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy512-z512-n65536-ns320-probes/tube.out",
+      "sha256": "625f21203b64f8c51f0906dee23f5ab2ef65c9cdfa3980cd03fb18045cafc34c",
+      "bytes": 16092
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy64-z512/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy64-z512/manifest.json",
+      "sha256": "ff6f9e5109607104faaed8f1cbeb9cc23f52cfa3c1c253d6973a10fe00a3407d",
+      "bytes": 2292
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy64-z512/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy64-z512/tube.in",
+      "sha256": "75a8a91cbe32b470c403fb74c2592b07d9a1273decdca7d0f0729257a6fca0a5",
+      "bytes": 1192
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy64-z512/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy64-z512/tube.out",
+      "sha256": "f8ccb94110b1852718e8f9248e7fa9d74b84e487948161a0e9a4111cc9f81d52",
+      "bytes": 16140
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy64-z512-n16384/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy64-z512-n16384/manifest.json",
+      "sha256": "9bc2c944e9c6f84c2e645e293af3ce14274dc955f378090fa71fa84311a3cd59",
+      "bytes": 2313
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy64-z512-n16384/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy64-z512-n16384/tube.in",
+      "sha256": "64819014ebcf90349bab9b0b133ba641f4f24eab3dbf20cd6100cb86e5b4cc87",
+      "bytes": 1194
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy64-z512-n16384/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy64-z512-n16384/tube.out",
+      "sha256": "623d8dd5828aa04274797b291dfe6828b883ce2dd3204875776b04dda1c223cd",
+      "bytes": 16158
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy64-z512-n16384-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy64-z512-n16384-probes/manifest.json",
+      "sha256": "fb51771bb5beef8636857ccd09829ef9e3cd1e7e3b19702e0a08ab55b01d053e",
+      "bytes": 2351
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy64-z512-n16384-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy64-z512-n16384-probes/tube.in",
+      "sha256": "7c48aacc1a25845d5279612223fcd76c3d149a822c9bfa9e8aaae78ec338d1c1",
+      "bytes": 1188
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy64-z512-n16384-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy64-z512-n16384-probes/tube.out",
+      "sha256": "e59a1a15468f484f78cd849cc764bd97700a7bc5172508948250b16b0542e3ea",
+      "bytes": 16079
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy64-z512-probes/manifest.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy64-z512-probes/manifest.json",
+      "sha256": "41cf02bf616f35adb7c3b8d28f8a1ac2c88681cbe9ee9ee861d2d1d5aa500dd7",
+      "bytes": 2324
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy64-z512-probes/tube.in",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy64-z512-probes/tube.in",
+      "sha256": "cad65b72e553750da4bd3ba8981d07a0f5220c6fcea85cc7d5f3ce3f181eedd3",
+      "bytes": 1181
+    },
+    {
+      "snapshot": "data/frozen-r2/runs/xy64-z512-probes/tube.out",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/runs/xy64-z512-probes/tube.out",
+      "sha256": "f627cb03877fe7fe7b85278288a5624a288051de2c7bd6d48e99a6e656eaa588",
+      "bytes": 16074
+    },
+    {
+      "snapshot": "data/frozen-r2/source-controls/README.md",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/source-controls/README.md",
+      "sha256": "3adb9c5634fb843435ef9ddd4e5635ee6bf30b924c3dafd5d152ac14285d6f0f",
+      "bytes": 2057
+    },
+    {
+      "snapshot": "data/frozen-r2/source-controls/check_transverse_quadrature.py",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/source-controls/check_transverse_quadrature.py",
+      "sha256": "c6da7648df94005fd0ec1d0001f670e03cd93448bd28cb7235114b7587403152",
+      "bytes": 4716
+    },
+    {
+      "snapshot": "data/frozen-r2/source-controls/fields.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/source-controls/fields.csv",
+      "sha256": "0afabdfaee1a9a0f81a85ec250baecabcaed4d2e188c8acbfe7f03f566f30d41",
+      "bytes": 6725
+    },
+    {
+      "snapshot": "data/frozen-r2/source-controls/quadrature_changes.csv",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/source-controls/quadrature_changes.csv",
+      "sha256": "5982c7d67cfbd363ec79605c6af8b01f5f96e5dc9f61f7ed2eac7edd8144be3d",
+      "bytes": 171
+    },
+    {
+      "snapshot": "data/frozen-r2/source-controls/summary.json",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/source-controls/summary.json",
+      "sha256": "0c5cf1a769c5f4820995e1c0169d78444362dd13d51199e5d0ef2c1a773d44c7",
+      "bytes": 1123
+    },
+    {
+      "snapshot": "data/frozen-r2/sources/path-step0.005.dat",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/sources/path-step0.005.dat",
+      "sha256": "c7ca38061ec21b831d7f863be33b7acdf97501f4c5a45b3208573018364fa394",
+      "bytes": 583936
+    },
+    {
+      "snapshot": "data/frozen-r2/sources/path-step0.01.dat",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/sources/path-step0.01.dat",
+      "sha256": "464e0105eeb9b5e57795541a3cfbfbf5dff46833169be218507fa16be0abc5cb",
+      "bytes": 294888
+    },
+    {
+      "snapshot": "data/frozen-r2/sources/path-step0.02.dat",
+      "source": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/frozen-r2/sources/path-step0.02.dat",
+      "sha256": "1d9f450c0b3a64d2cf512bdd021c669e111c501550ca10203f5e531946dbf1d7",
+      "bytes": 152898
+    }
+  ]
+}

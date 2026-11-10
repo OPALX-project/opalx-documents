@@ -1,0 +1,262 @@
+{
+  "status": "ahead",
+  "total_commits": 6,
+  "commits": [
+    {
+      "sha": "d3a2bc70ff5ed90b48f77bc018faccbafa5a8273",
+      "message": "AWAGun but with full P3M and binning"
+    },
+    {
+      "sha": "f2961e48fbe8dbcc60fa6632ba9825d0ddcabf11",
+      "message": "New reference for multipoleT-fromfile, see #75"
+    },
+    {
+      "sha": "9140bbe202fd5323251896f6b27cd5d337d0b28e",
+      "message": "Merge pull request #76 from OPALX-project/74-change-awagun-p3m-test-to-binned-p3m-test\n\nAWAGun but with full P3M and binning"
+    },
+    {
+      "sha": "0b0bbf2aae4a2f482dff87886a4cee627405eaa5",
+      "message": "Merge pull request #77 from OPALX-project/75-fodocell-multipolet-fromfile-needs-a-new-reference\n\nNew reference for multipoleT-fromfile"
+    },
+    {
+      "sha": "5b9166a673cf38a5eb77926255950a5a732f35d8",
+      "message": "Redo scalingFFA references and make them fromfile for better reproducibility"
+    },
+    {
+      "sha": "6c95b46a18599b2247fcc6eaff53a9f692d498bf",
+      "message": "Merge pull request #79 from OPALX-project/78-scalingffa-tests-seems-to-be-broken\n\nRedo scalingFFA references and make them fromfile"
+    }
+  ],
+  "files": [
+    {
+      "filename": "RegressionTests/AWAGun-1-p3m-emittedfromfile/AWAGun-1-p3m-emittedfromfile.local",
+      "status": "removed",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-1-p3m-emittedfromfile/reference/AWAGun-1-p3m-emittedfromfile.out",
+      "status": "removed",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-1-p3m-emittedfromfile/reference/AWAGun-1-p3m-emittedfromfile.out.md5",
+      "status": "removed",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-1-p3m-emittedfromfile/reference/AWAGun-1-p3m-emittedfromfile.stat",
+      "status": "removed",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-1-p3m-emittedfromfile/reference/AWAGun-1-p3m-emittedfromfile.stat.md5",
+      "status": "removed",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-1-p3m-emittedfromfile/reference/timing.dat",
+      "status": "removed",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-1-p3m-emittedfromfile/reference/timing.dat.md5",
+      "status": "removed",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-binned-p3m-emittedfromfile/AWAGun-binned-p3m-emittedfromfile.in",
+      "status": "renamed",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-binned-p3m-emittedfromfile/AWAGun-binned-p3m-emittedfromfile.local",
+      "status": "added",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-binned-p3m-emittedfromfile/AWAGun-binned-p3m-emittedfromfile.rt",
+      "status": "renamed",
+      "patch": "@@ -1,4 +1,4 @@\n-\"AWAGun-1-p3m-emittedfromfile: AWA photoinjector with EMITTEDFROMFILE source, shifted P3M solver, adaptive binning, and reduced-cost time stepping.\"\n+\"AWAGun-binned-p3m-emittedfromfile: AWA photoinjector with EMITTEDFROMFILE source, shifted P3M solver, adaptive binning, and reduced-cost time stepping.\"\n stat \"rms_x\"        avg 1E-3\n stat \"rms_s\"        avg 1E-3\n stat \"rms_px\"       avg 1E-2"
+    },
+    {
+      "filename": "RegressionTests/AWAGun-binned-p3m-emittedfromfile/BF_550.T7",
+      "status": "renamed",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-binned-p3m-emittedfromfile/DriveGun.T7",
+      "status": "renamed",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-binned-p3m-emittedfromfile/M_440.T7",
+      "status": "renamed",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-binned-p3m-emittedfromfile/opal-AWAGun-1_DIST.dat",
+      "status": "renamed",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-binned-p3m-emittedfromfile/reference/AWAGun-binned-p3m-emittedfromfile.out",
+      "status": "added",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-binned-p3m-emittedfromfile/reference/AWAGun-binned-p3m-emittedfromfile.out.md5",
+      "status": "added",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-binned-p3m-emittedfromfile/reference/AWAGun-binned-p3m-emittedfromfile.stat",
+      "status": "added",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-binned-p3m-emittedfromfile/reference/AWAGun-binned-p3m-emittedfromfile.stat.md5",
+      "status": "added",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-binned-p3m-emittedfromfile/reference/timing.dat",
+      "status": "added",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/AWAGun-binned-p3m-emittedfromfile/reference/timing.dat.md5",
+      "status": "added",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/FodoCell-multipoleT-fromfile/reference/FodoCell-multipoleT-fromfile.out",
+      "status": "modified",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/FodoCell-multipoleT-fromfile/reference/FodoCell-multipoleT-fromfile.out.md5",
+      "status": "modified",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/FodoCell-multipoleT-fromfile/reference/FodoCell-multipoleT-fromfile.stat",
+      "status": "modified",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/FodoCell-multipoleT-fromfile/reference/FodoCell-multipoleT-fromfile.stat.md5",
+      "status": "modified",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/FodoCell-multipoleT-fromfile/reference/timing.dat",
+      "status": "modified",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/FodoCell-multipoleT-fromfile/reference/timing.dat.md5",
+      "status": "modified",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFABasicPlacements/ScalingFFABasicPlacements.in",
+      "status": "modified",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFABasicPlacements/ScalingFFABasicPlacements.rt",
+      "status": "modified",
+      "patch": "@@ -1,4 +1,6 @@\n-\"Just a simple test to check that magnets get put in the right place\"\n+\"Ten protons on the reference orbit through seven overlapping SCALINGFFAMAGNETs; checks particle/reference agreement and the reference path\"\n stat \"mean_x\" avg 1E-4\n stat \"mean_y\" avg 1E-4\n-stat \"mean_s\" avg 1E-4\n\\ No newline at end of file\n+stat \"mean_s\" avg 1E-4\n+stat \"ref_x\" avg 1E-6\n+stat \"ref_z\" avg 1E-6"
+    },
+    {
+      "filename": "RegressionTests/ScalingFFABasicPlacements/distr-scalingffa.txt",
+      "status": "removed",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFABasicPlacements/inputdistr.dat",
+      "status": "added",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFABasicPlacements/reference/ScalingFFABasicPlacements.out",
+      "status": "modified",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFABasicPlacements/reference/ScalingFFABasicPlacements.out.md5",
+      "status": "modified",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFABasicPlacements/reference/ScalingFFABasicPlacements.stat",
+      "status": "modified",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFABasicPlacements/reference/ScalingFFABasicPlacements.stat.md5",
+      "status": "modified",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFABasicPlacements/reference/timing.dat",
+      "status": "modified",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFABasicPlacements/reference/timing.dat.md5",
+      "status": "modified",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFARealisticLattice/ScalingFFARealisticLattice.in",
+      "status": "modified",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFARealisticLattice/ScalingFFARealisticLattice.rt",
+      "status": "modified",
+      "patch": "@@ -1,6 +1,6 @@\n-\"Add one line of meaningful explanation of your test\"\n-stat \"mean_x\" avg 1E-3\n-stat \"mean_y\" avg 1E-3\n-stat \"mean_z\" avg 1E-3\n-stat \"rms_x\" avg 1E-3\n-stat \"rms_y\" avg 1E-3\n+\"12 MeV protons, 1000 Gaussian particles plus one reference particle from file, about 2.1 turns (ZSTOP) in a 16-cell spiral scaling FFA ring, no space charge\"\n+stat \"mean_x\" avg 1E-4\n+stat \"mean_y\" avg 1E-4\n+stat \"mean_s\" avg 1E-4\n+stat \"rms_x\" avg 1E-4\n+stat \"rms_y\" avg 1E-4"
+    },
+    {
+      "filename": "RegressionTests/ScalingFFARealisticLattice/distr-scalingffa.txt",
+      "status": "removed",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFARealisticLattice/inputdistr.dat",
+      "status": "added",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFARealisticLattice/reference/ScalingFFARealisticLattice.out",
+      "status": "added",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFARealisticLattice/reference/ScalingFFARealisticLattice.out.md5",
+      "status": "added",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFARealisticLattice/reference/ScalingFFARealisticLattice.stat",
+      "status": "added",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFARealisticLattice/reference/ScalingFFARealisticLattice.stat.md5",
+      "status": "added",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFARealisticLattice/reference/timing.dat",
+      "status": "modified",
+      "patch": null
+    },
+    {
+      "filename": "RegressionTests/ScalingFFARealisticLattice/reference/timing.dat.md5",
+      "status": "added",
+      "patch": null
+    }
+  ]
+}

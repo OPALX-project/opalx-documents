@@ -1,0 +1,106 @@
+{
+  "passed": true,
+  "physical_parameters": {
+    "a_m": 0.02,
+    "c_m": 0.02,
+    "full_length_m": 5.0,
+    "charge_C": 1e-11
+  },
+  "radius_values_m": [
+    2.0,
+    5.0,
+    10.0,
+    20.0,
+    50.0,
+    100.0,
+    200.0,
+    500.0,
+    1000.0,
+    null
+  ],
+  "infinity_represented_by_null": true,
+  "fixed_material_target_ids": [
+    "centre",
+    "axis_r_-0.5",
+    "axis_r_+0.5",
+    "axis_r_+0.9",
+    "axis_y_-0.5",
+    "axis_y_+0.5",
+    "axis_s_-0.500",
+    "axis_s_+0.500",
+    "axis_s_+0.998",
+    "bulk_-0.50_+0.25_+0.50",
+    "bulk_+0.50_-0.25_+0.90",
+    "end_-0.50_-0.25_-0.996",
+    "end_+0.50_+0.25_+0.996",
+    "extra_axis_-2.4999",
+    "extra_axis_+2.4999"
+  ],
+  "targets": 15,
+  "profiles": [
+    "uniform",
+    "triangle"
+  ],
+  "field_units": "SI electrostatic V/m, local outward-u/y/s basis",
+  "physical_source": "same rho(s), Q, physical ellipse and material coordinates at every radius; J=1+u/R",
+  "normalization": "fixed component maxima from each full51 straight reference, never a per-point near-zero denominator",
+  "fixed_full51_straight_scales_V_m": {
+    "uniform": {
+      "u": 1.6177075577095417,
+      "y": 1.6177075577095417,
+      "s": 1.7849501959515144
+    },
+    "triangle": {
+      "u": 3.2127360070260464,
+      "y": 3.2127360070260464,
+      "s": 0.13744637960137
+    }
+  },
+  "quadrature_tolerance_V_m": 2e-08,
+  "independent_angular_and_radial_checks": true,
+  "endpoint_checks": [
+    {
+      "profile": "uniform",
+      "R2_vs_existing_full51_reference_max_V_m": 3.774758283725532e-15
+    },
+    {
+      "profile": "uniform",
+      "curved_producer_inf_vs_archived_straight_max_V_m": 6.8833827526759706e-15,
+      "curved_producer_inf_vs_independent_straight_max_V_m": 6.8833827526759706e-15
+    },
+    {
+      "profile": "triangle",
+      "R2_vs_existing_full51_reference_max_V_m": 0.0
+    },
+    {
+      "profile": "triangle",
+      "curved_producer_inf_vs_archived_straight_max_V_m": 6.217248937900877e-15,
+      "curved_producer_inf_vs_independent_straight_max_V_m": 6.217248937900877e-15
+    }
+  ],
+  "worst_recorded_quadrature_change_V_m": 3.774758283725532e-15,
+  "source_sha256": {
+    "uniform_reference-358010db71fb4532a3ccfe47ba619486e27e9298ac770831d8eb4e8bf17c7213.py": "358010db71fb4532a3ccfe47ba619486e27e9298ac770831d8eb4e8bf17c7213",
+    "profile_reference-8c9dc4004dd65f818be688e674b57b923e19ba959b9eb9c928f90d09386825ae.py": "8c9dc4004dd65f818be688e674b57b923e19ba959b9eb9c928f90d09386825ae",
+    "straight_reference-61b3b91f6234a841c3a54a866a0b2ce6a546186340c33e98b19d2867a3df45a9.py": "61b3b91f6234a841c3a54a866a0b2ce6a546186340c33e98b19d2867a3df45a9"
+  },
+  "input_reference_sha256": {
+    "straight_points.csv": "0d58653a7da79c18c1f4557c6ac70cd5956cd4e4d18a49b9236aa015a549cb6e",
+    "straight_uniform_fields.csv": "76e604f32bfbcfd9421e972b7593e239f06583fe3f91f2c8cd10e03aac66a676",
+    "straight_triangle_fields.csv": "56cf2eeec097fc7aefa1e25cef22f1dfb88af8d0aa7b6099e4cbe6015ed828ec",
+    "curved_R2_uniform_fields.csv": "06f873104497ed51d4c7aa7849d4d5785fcd530d8b18f7eff43d26dae7f1c538",
+    "curved_R2_triangle_fields.csv": "7b71c4f88542ef02419a9395781177b8baccc0d4ae12f80981b9afc67d472774"
+  },
+  "script_sha256": "58fb8f65e9d109bba31066f080b4e46fb06c85590f64081930208748dd059900",
+  "output_sha256": {
+    "selected-points.csv": "aa80b0bc4319113307f6ebfe9bb02918ff9f411b2285fa84c0e0d85012cf5992",
+    "radius_fields.csv": "cc36350ef84bafe0490d066eaf11c1e160707e7a4b5b9d4edafef267c6554ff5",
+    "radius-errors.csv": "9e70706be6ee002620cc8a44cf994c7f8a1d3221880a1bfe510c51aa6ba2c0c9",
+    "quadrature-convergence.csv": "4fdbdf1625f9142a8f5a1b814e3011d334a8be90f3fc600a90807bafe5fed8ef",
+    "quadrature-fields.csv": "6b8e5217ff9afcf4224b0e9f2d56db647880b0a456dd4207e358e87299b1369b",
+    "radius-error-summary.csv": "7bc4b56516efb8e68f2515c6d071e16515cf4030460bb26bf4ccc56908a98348"
+  },
+  "elapsed_seconds": 10.99228604201926,
+  "no_fit_no_softening": true,
+  "no_native_solver_runs": true
+}

@@ -1,0 +1,1 @@
+Removed uncommitted FFTW threading implementation, CLI, CMake probe, dedicated test and documentation. Restored committed batching implementation. Preserved independent restart/explicit-input parsing fix in Main.cpp and unrelated edits. Existing executable and benchmark archive unchanged; no rebuild requested. Checked diff/absence of threading symbols.

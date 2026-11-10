@@ -1,0 +1,306 @@
+\section{Uniform IPPL grid and curved-source field operator}
+\label{sec:mapped-grid}
+
+\subsection{What the grid represents}
+IPPL still stores a uniform Cartesian grid. No curved-mesh class, curved-cell
+connectivity or general curvilinear Poisson solver has been added to IPPL.
+The new OPALX OPEN backend interprets the three array coordinates as radial
+offset $u$, vertical offset $y$ and reference-path arc length $s$. OPALX supplies
+the coordinate map, the curvature-dependent Coulomb operator and the field
+transformations. IPPL supplies uniform field storage and FFT operations.
+
+\begin{figure}[H]
+ \centering
+ \input{figures/mapped-grid-geometry.tikz}
+ \caption{Two representations of the same source. Left: the physical image of
+ reference-path coordinate cells on a circular arc, with transverse thickness
+ enlarged. Right: the ordinary rectangular IPPL array indexed by $(u,y,s)$.
+ The rectangular drawing does not straighten the source in the Coulomb
+ calculation. Lines joining source sections to an observation point illustrate
+ nonlocal coupling, not computed field vectors or magnitudes. Only a schematic
+ subset of grid lines is drawn; the empty interior of the bend is not meshed.}
+ \label{fig:mg-geometry}
+\end{figure}
+
+\begin{center}\small
+\begin{tabular}{ll}\toprule
+Quantity & Frozen-field benchmark\\\midrule
+Charged length; bending radius & $L=5$ m; $R=2$ m\\
+Total source angle; radial thinness & $L/R=2.5$ rad $=143.24^\circ$; $a/R=0.0025$\\
+Radial / vertical source semiaxes & $a=5$ mm; $c=0.5$ mm\\
+Uniform coordinate domain & $12$ mm $\times1.5$ mm $\times8$ m\\
+Primary field grid & $64\times32\times8192$ cells\\\bottomrule
+\end{tabular}
+\end{center}
+
+This is a nonlocal three-dimensional field calculation specialized to a thin
+circular tube, selected through the existing \code{FFT2D5} interface. It
+replaces the OPEN slice calculation; it is more than a correction to a local
+longitudinal coefficient. The other pipe modes retain their separate slice
+calculations and longitudinal closures.
+
+\clearpage
+\subsection{Coordinate map and charge deposition}
+For an explanatory circle centred at $(-R,0,0)$, choose $s=0$ at the middle
+of the charged arc and define
+\begin{equation}
+ \bm X(u,y,s)=
+ \begin{pmatrix}(R+u)\cos(s/R)-R\\ y\\(R+u)\sin(s/R)\end{pmatrix},
+ \qquad -L/2\le s\le L/2.
+ \label{eq:mg-map}
+\end{equation}
+The implementation instead starts $s=0$ at the first reference-path point.
+An arc-length origin shift and a rigid rotation/translation connect the two
+conventions. They do not change source-target separations or the calculation.
+Path and particle coordinates are placed in one common solve frame.
+
+For $\kappa=1/R$, the local radial, vertical and tangent unit vectors are
+\begin{equation}
+ \bm e_u=(\cos\kappa s,0,\sin\kappa s),\quad
+ \bm e_y=(0,1,0),\quad
+ \bm e_s=(-\sin\kappa s,0,\cos\kappa s).
+ \label{eq:mg-basis}
+\end{equation}
+The coordinate scale factors are $(1,1,h)$, where
+\begin{equation}
+ h(u)=1+\kappa u,\qquad
+ \dd\ell^2=\dd u^2+\dd y^2+h^2\dd s^2,\qquad
+ \dd V=h\,\dd u\,\dd y\,\dd s.
+ \label{eq:mg-metric}
+\end{equation}
+Thus uniform intervals in $s$ are uniform reference-path arc intervals.
+At a radial offset $u$, their physical tangential length is $h\,\Delta s$.
+The mapped physical cells have different tangential lengths even though the
+IPPL coordinate spacing is constant.
+
+OPALX first maps each particle position to $(u,y,s)$ and then applies ordinary
+cloud-in-cell deposition on that uniform coordinate grid. Its cell centres are
+\begin{equation}
+ (u_i,y_j,s_k)=
+ (u_{\min}+(i+\tfrac12)\Delta u,\;
+  y_{\min}+(j+\tfrac12)\Delta y,\;
+  s_{\min}+(k+\tfrac12)\Delta s).
+ \label{eq:mg-grid}
+\end{equation}
+The primary spacings are $\Delta u=0.1875$ mm, $\Delta y=0.046875$ mm and
+$\Delta s=0.9765625$ mm. The stored source is charge per \emph{coordinate}
+volume, not charge per physical volume:
+\begin{equation}
+ \rho_c=\frac{\dd q}{\dd u\,\dd y\,\dd s}
+       =h\rho_{\rm phys},\qquad
+ \int\rho_c\,\dd u\,\dd y\,\dd s=Q.
+ \label{eq:mg-density}
+\end{equation}
+Depositing actual particle charges already represents this Jacobian. Applying
+an additional factor $h$ to the deposited source would count it twice. A
+uniform physical density therefore corresponds to coordinate density
+proportional to $h$, rather than a constant array value.
+
+Merely mapping coordinates and calling a Cartesian Poisson solver would omit
+the geometric terms. For constant curvature, the physical Laplacian is
+\begin{equation}
+ \nabla^2\Phi=\frac1h\partial_u(h\partial_u\Phi)
+       +\partial_y^2\Phi+\frac1{h^2}\partial_s^2\Phi.
+ \label{eq:mg-laplacian}
+\end{equation}
+The current backend does not discretize this mapped PDE. It instead constructs
+an approximate physical free-space Green function and evaluates its integral.
+
+\clearpage
+\subsection{How the curved Coulomb interaction becomes FFT convolutions}
+In the low-speed curved case, the electrostatic potential is
+\begin{equation}
+ \Phi(u,y,s)=\frac1{4\pi\eps}
+ \int\frac{\rho_c(u',y',s')}{d(u,y,s;u',y',s')}
+           \,\dd u'\,\dd y'\,\dd s',
+ \label{eq:mg-exact-potential}
+\end{equation}
+where $d=|\bm X(u,y,s)-\bm X(u',y',s')|$ is a physical Cartesian distance.
+For a circular reference, introduce $x=u-u'$, $v=y-y'$ and $\tau=s-s'$.
+The exact squared distance is
+\begin{align}
+ \xi(\tau)&=\frac{2\sin(\kappa\tau/2)}{\kappa},\qquad
+ D^2=x^2+v^2+\xi^2,\nonumber\\
+ d^2&=x^2+v^2+\xi^2(1+\kappa u)(1+\kappa u')
+     =D^2+\xi^2[\kappa(u+u')+\kappa^2uu'].
+ \label{eq:mg-distance}
+\end{align}
+The chord $\xi$ retains the full angular separation. At the two source ends,
+$|\tau|=5$ m gives a centreline chord of $3.79594$ m, rather than the 5 m
+arc length. A small transverse ratio $a/R$ therefore does not justify
+replacing the strongly bent source by a straight beam.
+
+The exact kernel depends separately on $u$ and $u'$ through their metric
+factors. It is \emph{not} a single translation-invariant convolution in all
+three logical coordinates. The implementation expands in small transverse
+curvature, while retaining the full chord:
+\begin{equation}
+ \frac1d\simeq G-\frac\kappa2(u+u')H,
+ \qquad G=D^{-1},\quad H=\xi^2D^{-3},\quad F=xH.
+ \label{eq:mg-expansion}
+\end{equation}
+Using $u'=u-x$ rewrites the first-order kernel as
+$G-\kappa uH+\kappa F/2$. Each of $G,H,F$ now depends only on
+$(u-u',y-y',s-s')$. With $*$ denoting three-dimensional convolution,
+\begin{equation}
+ \boxed{\displaystyle
+ \Phi^{(1)}=\frac1{4\pi\eps}
+ \left[G*\rho_c-\kappa u(H*\rho_c)+\frac\kappa2(F*\rho_c)\right].}
+ \label{eq:mg-three-convolutions}
+\end{equation}
+The remaining factor $u$ is applied at the observation cell after convolution.
+This decomposition, rather than a curved IPPL mesh, enables the FFT method.
+No fitted geometry factor or prescribed uniform/triangular profile enters
+the production kernel.
+
+At $\kappa\to0$, $\xi\to\tau$ and the correction terms vanish, recovering
+the ordinary three-dimensional Coulomb kernel. At finite curvature the
+operator is approximate: quadratic transverse-curvature terms are omitted.
+Small potential truncation error does not guarantee the same relative error
+in a weak field component formed by cancellation; componentwise reference
+checks remain necessary. General varying-curvature paths do not have this
+simple three-convolution form and are not implemented.
+
+\clearpage
+\subsection{What IPPL computes and how fields return to particles}
+\begin{figure}[H]
+ \centering
+ \input{figures/mapped-grid-pipeline.tikz}
+ \caption{Division of responsibility in the implemented OPEN calculation.
+ OPALX handles the physical geometry, source interpretation, custom kernels,
+ metric gradient and field rotations. IPPL stores ordinary uniform arrays
+ and performs FFTs. The existing Cartesian Poisson operator is not used for
+ this curved-source convolution.}
+ \label{fig:mg-pipeline}
+\end{figure}
+
+The source array is transformed once per solve. For each of $G,H,F$, the
+backend constructs the cell-integrated kernel, transforms it, multiplies its
+spectrum by the same source spectrum, inverse-transforms and accumulates the
+appropriate term of \cref{eq:mg-three-convolutions}. FFT plans and work arrays
+persist while the mesh shape and spacing remain unchanged. A straight source
+needs only $G$; the curved source uses all three kernels.
+
+The discrete FFT is periodic algebraically, so the code embeds the density
+in zero-padded arrays to evaluate a free-space linear convolution. In each
+direction, the padded length is an even 2/3/5-smooth integer at least $2N+4$.
+The extra support accommodates the two-cell potential halo. This numerical
+padding does not introduce a physical conducting boundary or a periodic beam.
+The singular flat-cell kernel integrals are analytic; a smooth
+curved-minus-flat correction is evaluated by quadrature.
+
+For the curved electrostatic case, all local electric components come from
+the same potential:
+\begin{equation}
+ E_u=-\partial_u\Phi^{(1)},\qquad
+ E_y=-\partial_y\Phi^{(1)},\qquad
+ E_s=-\frac1h\partial_s\Phi^{(1)}.
+ \label{eq:mg-field}
+\end{equation}
+Physical-cell derivatives use fourth-order centred differences. OPALX
+interpolates these components to each particle in logical coordinates and
+then rotates them into Cartesian directions:
+\begin{equation}
+ \bm E_{\rm Cartesian}
+ =E_u\bm e_u(s)+E_y\bm e_y+E_s\bm e_s(s).
+ \label{eq:mg-rotate}
+\end{equation}
+The geometry used for mapping, field evaluation and rotation is consistent
+within one common solve frame. Interpolating without the metric factor, or
+returning local components as fixed Cartesian components, would change the
+physical result.
+
+\clearpage
+\subsection{Computational cost and the change from a slice model}
+The conventional slice calculation solves transverse Poisson problems
+independently and supplies a separate local longitudinal approximation.
+The revised OPEN backend couples the entire deposited three-dimensional
+source. It retains the FFT2D5 interface and reference-path organization, but
+has genuine three-dimensional FFT cost.
+
+\begin{center}\small
+\begin{tabular}{p{0.21\linewidth}p{0.33\linewidth}p{0.36\linewidth}}\toprule
+Property & Retained slice/pipe calculation & Revised free-space OPEN\\\midrule
+Transverse coupling & Within each transverse slice & Across the finite source\\
+Longitudinal field & Separate local closure & Gradient of a common nonlocal potential\\
+Numerical transforms & Repeated transverse 2D FFTs & Three-coordinate FFT convolutions\\
+Geometry treatment & Local reference-path slices & Smooth circular map and first-order curved-source kernel\\
+PyORBIT control & Straight conducting-pipe longitudinal model & Not a curved free-space cross-code comparison\\\bottomrule
+\end{tabular}
+\end{center}
+
+For $N=N_uN_yN_s$, a three-dimensional transform scales as $O(N\log N)$,
+with additional work for the three kernel convolutions. Padding is required
+in all three directions. Persistent convolution storage includes one padded
+real field, two half-complex fields and an unpadded potential with a halo;
+the deposited fields, particle arrays and FFT workspaces add further memory.
+Measured peak native-run memory was approximately 13.8 GB for
+$64\times32\times8192$ and 27.1 GB for $96\times48\times8192$.
+These are whole-run measurements, not the byte count of one grid or a
+universal memory forecast.
+
+The reference-path coordinates still save the large empty space inside the
+bend. A Cartesian box spanning metre-scale orbit dimensions would require
+many cells unrelated to the millimetre-scale beam cross-section if comparable
+resolution were imposed. The coordinate-array approach avoids that geometric
+cost, but does not retain the computational cost of independent 2D slices.
+
+Nonlocal source coupling is needed to reproduce the finite curved Coulomb
+reference being tested. A 3D FFT is one way to evaluate it, not a mathematical
+necessity. A reduced approach could combine local transverse solves with a
+nonlocal longitudinal/curvature correction or a hierarchical interaction
+method. Such an efficient replacement has not been demonstrated here.
+Agreement of the present OPEN backend with SACR therefore validates a
+different, more expensive operator; it does not prove that the earlier
+inexpensive slice approximation meets the same curved-beam target.
+
+\clearpage
+\subsection{Validation scope, restrictions and code correspondence}
+The completed comparison uses $Q=10$ pC, $\beta=0.001$, the geometry in
+\cref{fig:mg-geometry} and uniform or triangular physical longitudinal density.
+It tests native particle deposition, solution and gathering against the
+independent exact-geometry SACR reference. The primary-grid maximum pointwise
+relative errors over the original 43 sampled positions per profile are
+\begin{center}\small
+\begin{tabular}{lrrr}\toprule
+Profile & Radial $E_u$ & Vertical $E_y$ & Tangential $E_s$\\\midrule
+Uniform & 0.07084\% & 0.07789\% & 0.55443\%\\
+Triangular & 0.06613\% & 0.08660\% & 0.08299\%\\\bottomrule
+\end{tabular}
+\end{center}
+Those positions are at least 5 mm inside the source ends. Across the seven
+qualified fine/control cases, the worst nonzero-component relative error is
+0.56413\%. The extra uniform-source diagnostic 0.1 mm inside a sharp end
+still has 20.66\% tangential error. There is no claim of 1\% accuracy at every
+position, or of validated self-consistent tracking.
+
+The current implementation has the following restrictions:
+\begin{itemize}
+ \item Straight references or horizontal constant-curvature circular arcs
+ shorter than one turn, followed by a common rigid solve-frame transformation.
+ General paths and closed rings are rejected; near-full-turn accuracy is untested.
+ \item One MPI rank and $\max|\kappa u|\le0.01$ across the coordinate domain
+ and two-cell potential halo. Every source particle needs a half-cell CIC margin.
+ \item Curved fields use instantaneous electrostatics. The code rejects
+ $\beta>0.1$, but that cutoff is not a componentwise 1\% error guarantee.
+ The local magnetic-field prescription is not a nonlocal Biot--Savart solve;
+ retardation, radiation and relativistic curved tracking are unvalidated.
+ \item Straight references instead use a common mean-$\gamma$ longitudinal
+ stretch and field transformation. The curved formulas above use $\gamma=1$.
+\end{itemize}
+
+\begin{center}\small
+\begin{tabular}{p{0.43\linewidth}p{0.51\linewidth}}\toprule
+Implementation component & Responsibility\\\midrule
+\code{FFT2D5Geometry} & Fit supported references; map positions and construct the local basis\\
+\code{FFT2D5FieldStorage} & Uniform IPPL coordinate arrays and retained slice workspace\\
+\code{FFT2D5Algorithm} & Common solve frame, CIC deposition/gathering, coverage checks and rotations\\
+\code{FFT2D5FreeSpaceKernel.h} & Cell-integrated $G,H,F$ kernels and curved chord\\
+\code{FFT2D5FreeSpace} & Padded 3D FFT convolutions, potential assembly and metric gradient\\\bottomrule
+\end{tabular}
+\end{center}
+The separate straight conducting-pipe comparison with PyORBIT tests the
+retained local model: its maximum OPALX--PyORBIT slice-field difference is
+0.447\%. It is not independent cross-code validation of this nonlocal curved
+OPEN operator. No simulation or production-code change is introduced by this
+explanation.

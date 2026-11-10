@@ -15,7 +15,11 @@ meetings/YYYY/
 tutorials/YYYY/
 examples/YYYY/
 datasets/YYYY/
+prs/<number>/
 ```
+
+`prs/<number>/` holds small text records for a pull request; published reports
+and figures remain in their original categories.
 
 Use `<category>/undated/` only when the creation year cannot be established.
 Exact dates use a `YYYY-MM-DD-` filename prefix. Month-only and year-only

@@ -1,0 +1,200 @@
+{
+  "source_id": "3320cf6fc490a8be7dc2a33468b35cd99804cf179fd13d07f4d62d00e4bc2ae3",
+  "ranks": {
+    "1": {
+      "particles": 256,
+      "total_charge_C": 0.0,
+      "ids_unique": true,
+      "ids_equal_cpu_as_set": true,
+      "all_finite": true,
+      "max_abs_gpu_cpu": {
+        "x": 5.812407846694789e-15,
+        "y": 4.336808689942018e-18,
+        "z": 6.866740249328318e-15,
+        "px": 1.3384221709449376e-15,
+        "py": 3.2526065174565133e-18,
+        "pz": 3.219646771412954e-15,
+        "SPOS": 8.881784197001252e-16,
+        "RefPartR": 2.220446049250313e-16,
+        "RefPartP": 1.6653345369377348e-16
+      },
+      "gpu_mapping": [
+        {
+          "rank": 0,
+          "local_rank": 0,
+          "pid": 3806645,
+          "host": "merlin-g-100.psi.ch",
+          "inherited_cuda_visible_devices": "0,1",
+          "selected_cuda_visible_device": "0",
+          "cuda_runtime_library": "/opt/psi/Programming/cuda/13.2.1/targets/x86_64-linux/lib/libcudart.so.13.2.75",
+          "probe_cuda_runtime_library": "/opt/psi/Programming/cuda/13.2.1/targets/x86_64-linux/lib/libcudart.so.13.2.75",
+          "uuid_api": "cudaGetDeviceProperties(logical0).uuid, compiled against installed headers",
+          "probe_binary_sha256": "e1367fc48d216389292e3df46f8bddfe04f0a2cd518b77903eb4040056fd21f1",
+          "kokkos_logical_device_id": 0,
+          "executable": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/opalx",
+          "runtime_device_count": 1,
+          "cuda_runtime_version": 13020,
+          "compiled_cudart_version": 13020,
+          "gpu_uuid": "GPU-dbbd7375-8fc1-093d-f86b-ae1f64b87448"
+        }
+      ],
+      "binary_sha256": "6cd248ee531a5e36318335a82949041c01fb3e50189e40a9683bec11174823de",
+      "input_sha256": "0eafda92517b6c47a7c094ef31a03445dd738c60ba7a7db6bf28d37c1a4c5222",
+      "particle_sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52"
+    },
+    "2": {
+      "particles": 256,
+      "total_charge_C": 0.0,
+      "ids_unique": true,
+      "ids_equal_cpu_as_set": true,
+      "all_finite": true,
+      "max_abs_gpu_cpu": {
+        "x": 5.812407846694789e-15,
+        "y": 3.903127820947816e-18,
+        "z": 6.866740249328318e-15,
+        "px": 1.3384221709449376e-15,
+        "py": 3.2255014631443757e-18,
+        "pz": 3.219646771412954e-15,
+        "SPOS": 8.881784197001252e-16,
+        "RefPartR": 2.220446049250313e-16,
+        "RefPartP": 1.6653345369377348e-16
+      },
+      "gpu_mapping": [
+        {
+          "rank": 0,
+          "local_rank": 0,
+          "pid": 3806868,
+          "host": "merlin-g-100.psi.ch",
+          "inherited_cuda_visible_devices": "0,1",
+          "selected_cuda_visible_device": "0",
+          "cuda_runtime_library": "/opt/psi/Programming/cuda/13.2.1/targets/x86_64-linux/lib/libcudart.so.13.2.75",
+          "probe_cuda_runtime_library": "/opt/psi/Programming/cuda/13.2.1/targets/x86_64-linux/lib/libcudart.so.13.2.75",
+          "uuid_api": "cudaGetDeviceProperties(logical0).uuid, compiled against installed headers",
+          "probe_binary_sha256": "e1367fc48d216389292e3df46f8bddfe04f0a2cd518b77903eb4040056fd21f1",
+          "kokkos_logical_device_id": 0,
+          "executable": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/opalx",
+          "runtime_device_count": 1,
+          "cuda_runtime_version": 13020,
+          "compiled_cudart_version": 13020,
+          "gpu_uuid": "GPU-dbbd7375-8fc1-093d-f86b-ae1f64b87448"
+        },
+        {
+          "rank": 1,
+          "local_rank": 1,
+          "pid": 3806869,
+          "host": "merlin-g-100.psi.ch",
+          "inherited_cuda_visible_devices": "0,1",
+          "selected_cuda_visible_device": "1",
+          "cuda_runtime_library": "/opt/psi/Programming/cuda/13.2.1/targets/x86_64-linux/lib/libcudart.so.13.2.75",
+          "probe_cuda_runtime_library": "/opt/psi/Programming/cuda/13.2.1/targets/x86_64-linux/lib/libcudart.so.13.2.75",
+          "uuid_api": "cudaGetDeviceProperties(logical0).uuid, compiled against installed headers",
+          "probe_binary_sha256": "e1367fc48d216389292e3df46f8bddfe04f0a2cd518b77903eb4040056fd21f1",
+          "kokkos_logical_device_id": 0,
+          "executable": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/opalx",
+          "runtime_device_count": 1,
+          "cuda_runtime_version": 13020,
+          "compiled_cudart_version": 13020,
+          "gpu_uuid": "GPU-ddaf526c-0266-266a-8606-0f82d8aa1f8d"
+        }
+      ],
+      "binary_sha256": "6cd248ee531a5e36318335a82949041c01fb3e50189e40a9683bec11174823de",
+      "input_sha256": "0eafda92517b6c47a7c094ef31a03445dd738c60ba7a7db6bf28d37c1a4c5222",
+      "particle_sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52"
+    }
+  },
+  "failure_runs": [
+    {
+      "ranks": 1,
+      "returncode": 156,
+      "timeout": false,
+      "elapsed_s": 4.225077301962301,
+      "captured_failures": [
+        "OPAL-X> SINGLEGAP failure rank=0 id=0 cause=field-support gap-index=-1 t[s]=0.000000e+00 Rlab[m]=( -6.984201e-01 , 1.000035e+01 , 1.913732e+00 ) Plab[beta*gamma]=( -3.690638e-01 , -7.821739e-05 , -1.519270e-01 )"
+      ],
+      "gpu_mapping": [
+        {
+          "rank": 0,
+          "local_rank": 0,
+          "pid": 3807058,
+          "host": "merlin-g-100.psi.ch",
+          "inherited_cuda_visible_devices": "0,1",
+          "selected_cuda_visible_device": "0",
+          "cuda_runtime_library": "/opt/psi/Programming/cuda/13.2.1/targets/x86_64-linux/lib/libcudart.so.13.2.75",
+          "probe_cuda_runtime_library": "/opt/psi/Programming/cuda/13.2.1/targets/x86_64-linux/lib/libcudart.so.13.2.75",
+          "uuid_api": "cudaGetDeviceProperties(logical0).uuid, compiled against installed headers",
+          "probe_binary_sha256": "e1367fc48d216389292e3df46f8bddfe04f0a2cd518b77903eb4040056fd21f1",
+          "kokkos_logical_device_id": 0,
+          "executable": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/opalx",
+          "runtime_device_count": 1,
+          "cuda_runtime_version": 13020,
+          "compiled_cudart_version": 13020,
+          "gpu_uuid": "GPU-dbbd7375-8fc1-093d-f86b-ae1f64b87448"
+        }
+      ],
+      "input_sha256": "72016817ba4040d1483d9c0b8e411920933ac6c3afadd5fe676d4da9b077b662",
+      "particle_sha256": "384a1df37d509c39fbb46bf61d8b79af6b29fed47b8cc91b65a21e75c4dabca5"
+    },
+    {
+      "ranks": 2,
+      "returncode": 156,
+      "timeout": false,
+      "elapsed_s": 5.828045113012195,
+      "captured_failures": [
+        "OPAL-X{0}> SINGLEGAP failure rank=0 id=0 cause=field-support gap-index=-1 t[s]=0.000000e+00 Rlab[m]=( -6.984201e-01 , 1.000035e+01 , 1.913732e+00 ) Plab[beta*gamma]=( -3.690638e-01 , -7.821739e-05 , -1.519270e-01 )"
+      ],
+      "gpu_mapping": [
+        {
+          "rank": 0,
+          "local_rank": 0,
+          "pid": 3807108,
+          "host": "merlin-g-100.psi.ch",
+          "inherited_cuda_visible_devices": "0,1",
+          "selected_cuda_visible_device": "0",
+          "cuda_runtime_library": "/opt/psi/Programming/cuda/13.2.1/targets/x86_64-linux/lib/libcudart.so.13.2.75",
+          "probe_cuda_runtime_library": "/opt/psi/Programming/cuda/13.2.1/targets/x86_64-linux/lib/libcudart.so.13.2.75",
+          "uuid_api": "cudaGetDeviceProperties(logical0).uuid, compiled against installed headers",
+          "probe_binary_sha256": "e1367fc48d216389292e3df46f8bddfe04f0a2cd518b77903eb4040056fd21f1",
+          "kokkos_logical_device_id": 0,
+          "executable": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/opalx",
+          "runtime_device_count": 1,
+          "cuda_runtime_version": 13020,
+          "compiled_cudart_version": 13020,
+          "gpu_uuid": "GPU-dbbd7375-8fc1-093d-f86b-ae1f64b87448"
+        },
+        {
+          "rank": 1,
+          "local_rank": 1,
+          "pid": 3807109,
+          "host": "merlin-g-100.psi.ch",
+          "inherited_cuda_visible_devices": "0,1",
+          "selected_cuda_visible_device": "1",
+          "cuda_runtime_library": "/opt/psi/Programming/cuda/13.2.1/targets/x86_64-linux/lib/libcudart.so.13.2.75",
+          "probe_cuda_runtime_library": "/opt/psi/Programming/cuda/13.2.1/targets/x86_64-linux/lib/libcudart.so.13.2.75",
+          "uuid_api": "cudaGetDeviceProperties(logical0).uuid, compiled against installed headers",
+          "probe_binary_sha256": "e1367fc48d216389292e3df46f8bddfe04f0a2cd518b77903eb4040056fd21f1",
+          "kokkos_logical_device_id": 0,
+          "executable": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/opalx",
+          "runtime_device_count": 1,
+          "cuda_runtime_version": 13020,
+          "compiled_cudart_version": 13020,
+          "gpu_uuid": "GPU-ddaf526c-0266-266a-8606-0f82d8aa1f8d"
+        }
+      ],
+      "input_sha256": "72016817ba4040d1483d9c0b8e411920933ac6c3afadd5fe676d4da9b077b662",
+      "particle_sha256": "384a1df37d509c39fbb46bf61d8b79af6b29fed47b8cc91b65a21e75c4dabca5"
+    }
+  ],
+  "absolute_comparison_bound": 1e-10,
+  "note": "Short NONE-solver tracker correctness checks; not GPU PIC throughput or mesh convergence. Existing 1e-10 absolute bounds retained; no physics tolerance change.",
+  "max_abs_two_gpu_one_gpu": {
+    "x": 1.6263032587282567e-18,
+    "y": 4.336808689942018e-19,
+    "z": 2.220446049250313e-16,
+    "px": 0.0,
+    "py": 1.3552527156068805e-19,
+    "pz": 0.0,
+    "SPOS": 0.0,
+    "RefPartR": 0.0,
+    "RefPartP": 0.0
+  }
+}

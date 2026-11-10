@@ -1,0 +1,45 @@
+{
+  "snapshot_pairs": 133,
+  "last_common_time_us": 21.88219809147617,
+  "axis_convention": {
+    "x": "radial/transverse",
+    "y": "vertical",
+    "z": "longitudinal along OPALX reference momentum"
+  },
+  "emittance_definition": "sqrt(var(r)*var(p)-cov(r,p)^2), p=beta*gamma; population moments",
+  "source_frames": "Legacy global phase space rotated into OPALX reference axes; OPALX reference-coordinate snapshots used directly",
+  "limitations": [
+    "Snapshots are 1000 steps apart; fast envelope oscillations are under-sampled.",
+    "Last matched time precedes the localized580MeV terminal state; no mismatched endpoint comparison.",
+    "Projected emittances depend on the stated shared frame; raw lab-frame legacy stat values are not overlaid.",
+    "ID0 exclusion does not undo different reference charge contribution during tracking."
+  ],
+  "last_common_rows": [
+    {
+      "code": "OPAL 2022.1",
+      "time_us": 21.88219809147617,
+      "step_from_time": 133000,
+      "particles_excluding_id0": 4095,
+      "mean_energy_MeV": 576.2267267642449,
+      "rms_x_mm": 1.3710450530272202,
+      "emit_x_mm_mrad": 5.008369877695726,
+      "rms_y_mm": 3.8516420858474,
+      "emit_y_mm_mrad": 2.3820137753306203,
+      "rms_z_mm": 5.722116432858915,
+      "emit_z_mm_mrad": 5.002614398094655
+    },
+    {
+      "code": "OPALX",
+      "time_us": 21.88219809147617,
+      "step_from_time": 133000,
+      "particles_excluding_id0": 4048,
+      "mean_energy_MeV": 575.9944327890045,
+      "rms_x_mm": 1.3161032299014679,
+      "emit_x_mm_mrad": 3.2187559019599723,
+      "rms_y_mm": 4.495642727760661,
+      "emit_y_mm_mrad": 2.5099609240357728,
+      "rms_z_mm": 3.9579999514287336,
+      "emit_z_mm_mrad": 4.751373508346513
+    }
+  ]
+}

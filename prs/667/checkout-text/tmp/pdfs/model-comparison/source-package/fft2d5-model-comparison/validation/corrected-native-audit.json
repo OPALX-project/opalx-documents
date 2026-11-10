@@ -1,0 +1,403 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "triangle-corrected-m128x128x512",
+      "profile": "triangle",
+      "mesh": [
+        128,
+        128,
+        512
+      ],
+      "passed": true,
+      "binary_sha256": "a0a922982baa205f6c1360f33627568c8393c49f2e046b651003dc6a6307bc27",
+      "source_sha256": "0500e3e76f053ae966f19eb3a97048c45679ed27cfb47178c6abab0d46b32122",
+      "source_hash_checks": {
+        "FFT2D5Algorithm.cpp": true,
+        "FFT2D5Algorithm.h": true,
+        "FFT2D5Algorithm.hpp": true,
+        "FFT2D5Curvature.cpp": true,
+        "FFT2D5Curvature.h": true,
+        "FFT2D5Geometry.cpp": true,
+        "FFT2D5Geometry.h": true,
+        "FFT2D5Poisson.cpp": true,
+        "FFT2D5Poisson.h": true
+      },
+      "full": {
+        "passed": true,
+        "directory": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/corrected/runs/triangle-corrected-m128x128x512",
+        "h5_sha256": "417827eb83a82770f1762f09d15e93a7e4c6f5564844eb5b54e6bdd63a58be4d",
+        "every_particle_id_present_once": true,
+        "particles": 8388659,
+        "every_particle_position_checked": true,
+        "total_charge_C": 1.0000060796737665e-11,
+        "macrocharge_C": 1.1920928955078124e-18,
+        "macrocharge_max_relative_error": 3.3306690738754696e-16,
+        "time_s": 1e-17,
+        "maximum_particle_displacement_m": 2.9948097598286013e-12,
+        "maximum_particle_kinematic_residual_m": 3.1061246546355545e-14,
+        "global_field_h5_to_csv_max_error_V_m": 0.0,
+        "electric_field_units": {
+          "ExUnit": "V/m",
+          "EyUnit": "V/m",
+          "EzUnit": "V/m"
+        },
+        "reference_gamma_squared": 1.000000768052781
+      },
+      "charged_probe_companion": {
+        "passed": true,
+        "directory": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/corrected/runs/triangle-corrected-m128x128x512-probes",
+        "h5_sha256": "c33860d676365ce544d50a684217d9f73eb4e5c4d5b2933991307ffc4e021d97",
+        "every_particle_id_present_once": true,
+        "particles": 51,
+        "every_particle_position_checked": true,
+        "total_charge_C": 6.079673767089842e-17,
+        "macrocharge_C": 1.1920928955078124e-18,
+        "macrocharge_max_relative_error": 0.0,
+        "time_s": 1e-17,
+        "maximum_particle_displacement_m": 2.998323124411757e-12,
+        "maximum_particle_kinematic_residual_m": 9.56805278233239e-16,
+        "global_field_h5_to_csv_max_error_V_m": 0.0,
+        "electric_field_units": {
+          "ExUnit": "V/m",
+          "EyUnit": "V/m",
+          "EzUnit": "V/m"
+        },
+        "reference_gamma_squared": 1.0000003741842811
+      },
+      "physical_source_max_kappa_abs_u": 0.009980265454822846,
+      "physical_thin_limit_unchanged": 0.01,
+      "exact_circle_period_m": 12.566370614359172,
+      "source_projection_period_m": 12.566367358402026,
+      "no_field_scale_fit": true,
+      "centre_Eu_native_V_m": 0.0636074770488182,
+      "centre_Eu_SACR_V_m": 0.0636871061814463,
+      "centre_relative_error_percent": -0.12503179591993882
+    },
+    {
+      "case": "triangle-corrected-m256x256x1024",
+      "profile": "triangle",
+      "mesh": [
+        256,
+        256,
+        1024
+      ],
+      "passed": true,
+      "binary_sha256": "a0a922982baa205f6c1360f33627568c8393c49f2e046b651003dc6a6307bc27",
+      "source_sha256": "0500e3e76f053ae966f19eb3a97048c45679ed27cfb47178c6abab0d46b32122",
+      "source_hash_checks": {
+        "FFT2D5Algorithm.cpp": true,
+        "FFT2D5Algorithm.h": true,
+        "FFT2D5Algorithm.hpp": true,
+        "FFT2D5Curvature.cpp": true,
+        "FFT2D5Curvature.h": true,
+        "FFT2D5Geometry.cpp": true,
+        "FFT2D5Geometry.h": true,
+        "FFT2D5Poisson.cpp": true,
+        "FFT2D5Poisson.h": true
+      },
+      "full": {
+        "passed": true,
+        "directory": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/corrected/runs/triangle-corrected-m256x256x1024",
+        "h5_sha256": "4bc4e2e8736f69a2b828ab61aa428138ea3390dd81ebf9ea71202d323f616c99",
+        "every_particle_id_present_once": true,
+        "particles": 8388659,
+        "every_particle_position_checked": true,
+        "total_charge_C": 1.0000060796737665e-11,
+        "macrocharge_C": 1.1920928955078124e-18,
+        "macrocharge_max_relative_error": 3.3306690738754696e-16,
+        "time_s": 1e-17,
+        "maximum_particle_displacement_m": 2.9948097598286013e-12,
+        "maximum_particle_kinematic_residual_m": 3.1061246546355545e-14,
+        "global_field_h5_to_csv_max_error_V_m": 0.0,
+        "electric_field_units": {
+          "ExUnit": "V/m",
+          "EyUnit": "V/m",
+          "EzUnit": "V/m"
+        },
+        "reference_gamma_squared": 1.000000768052781
+      },
+      "charged_probe_companion": {
+        "passed": true,
+        "directory": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/corrected/runs/triangle-corrected-m256x256x1024-probes",
+        "h5_sha256": "2f440871ccabda4310336d1466729b82fa50715279b3ee34d126d08248bb6a2e",
+        "every_particle_id_present_once": true,
+        "particles": 51,
+        "every_particle_position_checked": true,
+        "total_charge_C": 6.079673767089842e-17,
+        "macrocharge_C": 1.1920928955078124e-18,
+        "macrocharge_max_relative_error": 0.0,
+        "time_s": 1e-17,
+        "maximum_particle_displacement_m": 2.998323124411757e-12,
+        "maximum_particle_kinematic_residual_m": 9.56805278233239e-16,
+        "global_field_h5_to_csv_max_error_V_m": 0.0,
+        "electric_field_units": {
+          "ExUnit": "V/m",
+          "EyUnit": "V/m",
+          "EzUnit": "V/m"
+        },
+        "reference_gamma_squared": 1.0000003741842811
+      },
+      "physical_source_max_kappa_abs_u": 0.009980265454822846,
+      "physical_thin_limit_unchanged": 0.01,
+      "exact_circle_period_m": 12.566370614359172,
+      "source_projection_period_m": 12.566367358402026,
+      "no_field_scale_fit": true,
+      "centre_Eu_native_V_m": 0.06357628636165377,
+      "centre_Eu_SACR_V_m": 0.0636871061814463,
+      "centre_relative_error_percent": -0.17400668115896956
+    },
+    {
+      "case": "uniform-corrected-m128x128x512",
+      "profile": "uniform",
+      "mesh": [
+        128,
+        128,
+        512
+      ],
+      "passed": true,
+      "binary_sha256": "a0a922982baa205f6c1360f33627568c8393c49f2e046b651003dc6a6307bc27",
+      "source_sha256": "f14526d298a5ee82435b54eb6ef14951d111c1248d5f0320e0962dfa61eb0dca",
+      "source_hash_checks": {
+        "FFT2D5Algorithm.cpp": true,
+        "FFT2D5Algorithm.h": true,
+        "FFT2D5Algorithm.hpp": true,
+        "FFT2D5Curvature.cpp": true,
+        "FFT2D5Curvature.h": true,
+        "FFT2D5Geometry.cpp": true,
+        "FFT2D5Geometry.h": true,
+        "FFT2D5Poisson.cpp": true,
+        "FFT2D5Poisson.h": true
+      },
+      "full": {
+        "passed": true,
+        "directory": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/corrected/runs/uniform-corrected-m128x128x512",
+        "h5_sha256": "536e4be7e6942d643981f16cd297b73fa0a5380d1202f1d8db39ed5cf23d5b07",
+        "every_particle_id_present_once": true,
+        "particles": 8388659,
+        "every_particle_position_checked": true,
+        "total_charge_C": 1.0000060796737665e-11,
+        "macrocharge_C": 1.1920928955078124e-18,
+        "macrocharge_max_relative_error": 3.3306690738754696e-16,
+        "time_s": 1e-17,
+        "maximum_particle_displacement_m": 3.0397721836057715e-12,
+        "maximum_particle_kinematic_residual_m": 5.6648030039284085e-14,
+        "global_field_h5_to_csv_max_error_V_m": 0.0,
+        "electric_field_units": {
+          "ExUnit": "V/m",
+          "EyUnit": "V/m",
+          "EzUnit": "V/m"
+        },
+        "reference_gamma_squared": 1.0000005763651718
+      },
+      "charged_probe_companion": {
+        "passed": true,
+        "directory": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/corrected/runs/uniform-corrected-m128x128x512-probes",
+        "h5_sha256": "bb9b652c897431e84948d8581f62d327817ce3fe0bc6a86ecdb1eda77c5cf27d",
+        "every_particle_id_present_once": true,
+        "particles": 51,
+        "every_particle_position_checked": true,
+        "total_charge_C": 6.079673767089842e-17,
+        "macrocharge_C": 1.1920928955078124e-18,
+        "macrocharge_max_relative_error": 0.0,
+        "time_s": 1e-17,
+        "maximum_particle_displacement_m": 2.998323124411757e-12,
+        "maximum_particle_kinematic_residual_m": 9.56805278233239e-16,
+        "global_field_h5_to_csv_max_error_V_m": 0.0,
+        "electric_field_units": {
+          "ExUnit": "V/m",
+          "EyUnit": "V/m",
+          "EzUnit": "V/m"
+        },
+        "reference_gamma_squared": 1.0000003741842811
+      },
+      "physical_source_max_kappa_abs_u": 0.009980265454822846,
+      "physical_thin_limit_unchanged": 0.01,
+      "exact_circle_period_m": 12.566370614359172,
+      "source_projection_period_m": 12.566367358402026,
+      "no_field_scale_fit": true,
+      "centre_Eu_native_V_m": 0.04092510292355892,
+      "centre_Eu_SACR_V_m": 0.04093597601179356,
+      "centre_relative_error_percent": -0.02656120433406519
+    },
+    {
+      "case": "uniform-corrected-m256x256x1024",
+      "profile": "uniform",
+      "mesh": [
+        256,
+        256,
+        1024
+      ],
+      "passed": true,
+      "binary_sha256": "a0a922982baa205f6c1360f33627568c8393c49f2e046b651003dc6a6307bc27",
+      "source_sha256": "f14526d298a5ee82435b54eb6ef14951d111c1248d5f0320e0962dfa61eb0dca",
+      "source_hash_checks": {
+        "FFT2D5Algorithm.cpp": true,
+        "FFT2D5Algorithm.h": true,
+        "FFT2D5Algorithm.hpp": true,
+        "FFT2D5Curvature.cpp": true,
+        "FFT2D5Curvature.h": true,
+        "FFT2D5Geometry.cpp": true,
+        "FFT2D5Geometry.h": true,
+        "FFT2D5Poisson.cpp": true,
+        "FFT2D5Poisson.h": true
+      },
+      "full": {
+        "passed": true,
+        "directory": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/corrected/runs/uniform-corrected-m256x256x1024",
+        "h5_sha256": "bd47b4c21b749227d8637d7bdae71c0477933edf0bb79e624b2d153747c60213",
+        "every_particle_id_present_once": true,
+        "particles": 8388659,
+        "every_particle_position_checked": true,
+        "total_charge_C": 1.0000060796737665e-11,
+        "macrocharge_C": 1.1920928955078124e-18,
+        "macrocharge_max_relative_error": 3.3306690738754696e-16,
+        "time_s": 1e-17,
+        "maximum_particle_displacement_m": 3.0397721836057715e-12,
+        "maximum_particle_kinematic_residual_m": 5.6648030039284085e-14,
+        "global_field_h5_to_csv_max_error_V_m": 0.0,
+        "electric_field_units": {
+          "ExUnit": "V/m",
+          "EyUnit": "V/m",
+          "EzUnit": "V/m"
+        },
+        "reference_gamma_squared": 1.0000005763651718
+      },
+      "charged_probe_companion": {
+        "passed": true,
+        "directory": "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/curved/corrected/runs/uniform-corrected-m256x256x1024-probes",
+        "h5_sha256": "df5beda660d836630636f46192ea723b9059d812c40e0a99de6add79d6ac01aa",
+        "every_particle_id_present_once": true,
+        "particles": 51,
+        "every_particle_position_checked": true,
+        "total_charge_C": 6.079673767089842e-17,
+        "macrocharge_C": 1.1920928955078124e-18,
+        "macrocharge_max_relative_error": 0.0,
+        "time_s": 1e-17,
+        "maximum_particle_displacement_m": 2.998323124411757e-12,
+        "maximum_particle_kinematic_residual_m": 9.56805278233239e-16,
+        "global_field_h5_to_csv_max_error_V_m": 0.0,
+        "electric_field_units": {
+          "ExUnit": "V/m",
+          "EyUnit": "V/m",
+          "EzUnit": "V/m"
+        },
+        "reference_gamma_squared": 1.0000003741842811
+      },
+      "physical_source_max_kappa_abs_u": 0.009980265454822846,
+      "physical_thin_limit_unchanged": 0.01,
+      "exact_circle_period_m": 12.566370614359172,
+      "source_projection_period_m": 12.566367358402026,
+      "no_field_scale_fit": true,
+      "centre_Eu_native_V_m": 0.04092939371045427,
+      "centre_Eu_SACR_V_m": 0.04093597601179356,
+      "centre_relative_error_percent": -0.016079502629639378
+    }
+  ],
+  "sources": [
+    {
+      "passed": true,
+      "profile": "triangle",
+      "source_particles": 8388608,
+      "equal_macrocharge_C": 1.1920928955078124e-18,
+      "total_bulk_charge_C": 1e-11,
+      "hashes": {
+        "shared_npz": "0500e3e76f053ae966f19eb3a97048c45679ed27cfb47178c6abab0d46b32122",
+        "probes_csv": "6f31608301f08ec50ca7579834c488d06c1bc951b9c404f3648c45c0880087a8",
+        "reference_path": "560d8aaee3964f98ff81d10f067471ec35640bc7a828a93c1ac65b4421ca74eb"
+      },
+      "physical_material_moments": {
+        "mean_u_m": 4.9999999999999494e-05,
+        "mean_y_m": -1.7787691892340307e-20,
+        "mean_s_m": 0.0,
+        "mean_u2_m2": 0.0001,
+        "mean_y2_m2": 0.00010000000000000002,
+        "mean_s2_m2": 1.041666664662726,
+        "mean_J": 1.000025
+      },
+      "exact_continuum_moments": {
+        "mean_u_m": 5e-05,
+        "mean_y_m": 0.0,
+        "mean_s_m": 0.0,
+        "mean_u2_m2": 0.0001,
+        "mean_y2_m2": 0.0001,
+        "mean_s2_m2": 1.0416666666666667,
+        "mean_J": 1.000025
+      },
+      "inverse_J_angular_CDF_max_residual_rad": 1.7763568394002505e-15,
+      "equal_area_radial_coordinate_max_error": 5.551115123125783e-16,
+      "repeated_cross_section_max_error_m": 0.0,
+      "longitudinal_reflection_max_error_m": 0.0,
+      "longitudinal_inverse_CDF_stagger_max_rank_error": 2.1316282072803006e-14,
+      "all_segment_projection_samples": 518,
+      "all_segment_source_max_error_m": 1.7763568394002505e-15,
+      "all_51_probe_projection_max_error_m": 1.7763568394002505e-15,
+      "all_51_probe_basis_max_error": 0.0,
+      "maximum_material_to_polyline_coordinate_change_m": [
+        1.5628406962540226e-06,
+        0.0,
+        2.5105468644204265e-05
+      ],
+      "physical_circle_circumference_m": 12.566370614359172,
+      "metadata_polyline_circumference_m": 12.566367358402026,
+      "brute_sequential_polyline_circumference_m": 12.566367358401669,
+      "period_accumulation_difference_m": 3.5704772471945034e-13,
+      "source_mean_was_not_subtracted": true
+    },
+    {
+      "passed": true,
+      "profile": "uniform",
+      "source_particles": 8388608,
+      "equal_macrocharge_C": 1.1920928955078124e-18,
+      "total_bulk_charge_C": 1e-11,
+      "hashes": {
+        "shared_npz": "f14526d298a5ee82435b54eb6ef14951d111c1248d5f0320e0962dfa61eb0dca",
+        "probes_csv": "6f31608301f08ec50ca7579834c488d06c1bc951b9c404f3648c45c0880087a8",
+        "reference_path": "560d8aaee3964f98ff81d10f067471ec35640bc7a828a93c1ac65b4421ca74eb"
+      },
+      "physical_material_moments": {
+        "mean_u_m": 4.9999999999999494e-05,
+        "mean_y_m": -1.7787691892340307e-20,
+        "mean_s_m": 0.0,
+        "mean_u2_m2": 0.0001,
+        "mean_y2_m2": 0.00010000000000000002,
+        "mean_s2_m2": 2.0833333333314386,
+        "mean_J": 1.000025
+      },
+      "exact_continuum_moments": {
+        "mean_u_m": 5e-05,
+        "mean_y_m": 0.0,
+        "mean_s_m": 0.0,
+        "mean_u2_m2": 0.0001,
+        "mean_y2_m2": 0.0001,
+        "mean_s2_m2": 2.0833333333333335,
+        "mean_J": 1.000025
+      },
+      "inverse_J_angular_CDF_max_residual_rad": 1.7763568394002505e-15,
+      "equal_area_radial_coordinate_max_error": 5.551115123125783e-16,
+      "repeated_cross_section_max_error_m": 0.0,
+      "longitudinal_reflection_max_error_m": 0.0,
+      "longitudinal_inverse_CDF_stagger_max_rank_error": 0.0,
+      "all_segment_projection_samples": 518,
+      "all_segment_source_max_error_m": 1.7763568394002505e-15,
+      "all_51_probe_projection_max_error_m": 1.7763568394002505e-15,
+      "all_51_probe_basis_max_error": 0.0,
+      "maximum_material_to_polyline_coordinate_change_m": [
+        1.562840696319942e-06,
+        0.0,
+        2.5400667550634637e-05
+      ],
+      "physical_circle_circumference_m": 12.566370614359172,
+      "metadata_polyline_circumference_m": 12.566367358402026,
+      "brute_sequential_polyline_circumference_m": 12.566367358401669,
+      "period_accumulation_difference_m": 3.5704772471945034e-13,
+      "source_mean_was_not_subtracted": true
+    }
+  ],
+  "max_absolute_even_field_relative_error_percent": 0.674333324872313,
+  "reference_acceptance_sha256": "5c89262990faca346961cf2fcbbde2669366e288ec0e33b5f600086c93c4d3f1",
+  "limits": [
+    "Acceptance checks weak centre radial fields separately; no all-target/end/longitudinal/tracking success is implied.",
+    "Original/PyORBIT numerical geometry uses the recorded polyline coordinates; the corrected backend uses the exact circle."
+  ]
+}

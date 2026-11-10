@@ -1,0 +1,250 @@
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
+index 2546da827..e865ba6c2 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
+@@ -242,38 +242,51 @@ namespace opalx::spacecharge {
+             const auto geometry = segmentGeometry_m;
+             // Migration changes particle ownership, not the path geometry.
+             if (rebuildGeometry) {
+-                // This short serial prefix preserves increasing segment summation order.
++                // Independent segment arithmetic and endpoint boxes span the device.
+                 Kokkos::parallel_for(
+-                        "FFT2D5::preparePathGeometry", 1, KOKKOS_LAMBDA(const size_t) {
+-                            T prefix = 0.0;
+-                            for (size_t i = 0; i < segments; ++i) {
++                        "FFT2D5::preparePathSegments", leaves, KOKKOS_LAMBDA(const size_t i) {
++                            if (i < segments) {
+                                 const Vector3D_t direction = ref(i + 1) - ref(i);
+                                 const T length             = euclidean_norm(direction);
+                                 for (unsigned d = 0; d < 3; ++d)
+                                     geometry(i, d) = direction[d];
+                                 geometry(i, 3) = direction.dot(direction);
+                                 geometry(i, 4) = length;
+-                                geometry(i, 5) = prefix;
+-                                prefix += length;
+                             }
+-                            // Heap leaves follow segment order; padded leaves have empty boxes.
+-                            for (size_t i = 0; i < leaves; ++i) {
+-                                for (unsigned d = 0; d < 3; ++d) {
+-                                    bounds(leaves + i, d) =
+-                                            i < segments ? Kokkos::min(ref(i)[d], ref(i + 1)[d])
+-                                                         : Kokkos::Experimental::finite_max_v<T>;
+-                                    bounds(leaves + i, d + 3) =
+-                                            i < segments ? Kokkos::max(ref(i)[d], ref(i + 1)[d])
+-                                                         : -Kokkos::Experimental::finite_max_v<T>;
+-                                }
++                            for (unsigned d = 0; d < 3; ++d) {
++                                bounds(leaves + i, d) =
++                                        i < segments ? Kokkos::min(ref(i)[d], ref(i + 1)[d])
++                                                     : Kokkos::Experimental::finite_max_v<T>;
++                                bounds(leaves + i, d + 3) =
++                                        i < segments ? Kokkos::max(ref(i)[d], ref(i + 1)[d])
++                                                     : -Kokkos::Experimental::finite_max_v<T>;
+                             }
+-                            for (size_t i = leaves - 1; i > 0; --i) {
+-                                for (unsigned d = 0; d < 3; ++d) {
+-                                    bounds(i, d) =
+-                                            Kokkos::min(bounds(2 * i, d), bounds(2 * i + 1, d));
+-                                    bounds(i, d + 3) = Kokkos::max(
+-                                            bounds(2 * i, d + 3), bounds(2 * i + 1, d + 3));
++                        });
++                // The preceding kernel completes before this team reads its output.
++                // Keep the prefix ordered; a parallel scan would reassociate additions.
++                Kokkos::parallel_for(
++                        "FFT2D5::preparePathHierarchy", Kokkos::TeamPolicy<>(1, Kokkos::AUTO),
++                        KOKKOS_LAMBDA(const Kokkos::TeamPolicy<>::member_type& team) {
++                            Kokkos::single(Kokkos::PerTeam(team), [&] {
++                                T prefix = 0.0;
++                                for (size_t i = 0; i < segments; ++i) {
++                                    geometry(i, 5) = prefix;
++                                    prefix += geometry(i, 4);
+                                 }
++                            });
++                            for (size_t first = leaves / 2; first > 0; first /= 2) {
++                                Kokkos::parallel_for(
++                                        Kokkos::TeamThreadRange(team, first), [&](const size_t j) {
++                                            const size_t i = first + j;
++                                            for (unsigned d = 0; d < 3; ++d) {
++                                                bounds(i, d) = Kokkos::min(
++                                                        bounds(2 * i, d), bounds(2 * i + 1, d));
++                                                bounds(i, d + 3) = Kokkos::max(
++                                                        bounds(2 * i, d + 3),
++                                                        bounds(2 * i + 1, d + 3));
++                                            }
++                                        });
++                                team.team_barrier();
+                             }
+                         });
+                 Kokkos::fence();
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
+index cb64823ba..b1c155b06 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
+@@ -548,6 +548,9 @@ namespace opalx::spacecharge {
+          * For use only by test cases.
+          */
+         const ReferenceView_t& getReferencePath() const { return referencePathView(); }
++        /// Read-only handles for independent geometry and hierarchy validation.
++        const SegmentGeometryView_t& getSegmentGeometry() const { return segmentGeometry_m; }
++        const SegmentGeometryView_t& getSegmentBounds() const { return segmentBounds_m; }
+ 
+         /**
+          * @return Returns the 3D charge density view for the Frenet-Serret domain.
+@@ -589,9 +592,10 @@ namespace opalx::spacecharge {
+          * second nearest-segment search during gather. It is called by doRunSolver after
+          * solve() has put the reference path and every active particle container into the
+          * same Cartesian solve frame, and before coverage checking or charge deposition.
+-         * Two ordered device stages are required: one geometry kernel, followed by a
+-         * projection kernel for each active container. Geometry must be complete before
+-         * particles search it; no global inter-block barrier is assumed inside a kernel.
++         * Two ordered preparation kernels precede the projection kernel for each active
++         * container: independent segments/leaves, then one team for prefix and hierarchy. Geometry
++         * must be complete before particles search it; no global inter-block barrier is assumed
++         * inside a kernel.
+          *
+          * For path points R_i, segment i stores six doubles:
+          * - columns 0..2: d_i = R_(i+1) - R_i;
+@@ -599,9 +603,9 @@ namespace opalx::spacecharge {
+          * - column 4: l_i = |d_i|;
+          * - column 5: S_i = sum_(j<i) l_j, the arc length at the segment start.
+          * The squared length, rather than its reciprocal, retains the original division
+-         * in the closest-point calculation. A short single-work-item geometry kernel
+-         * accumulates S_i in increasing segment order; zero-length segments contribute
+-         * zero length and remain excluded from the nearest-segment search.
++         * in the closest-point calculation. One team thread
++         * accumulates S_i in increasing segment order from the stored lengths; zero-length segments
++         * contribute zero length and remain excluded from the nearest-segment search.
+          *
+          * For each non-invalid particle x, the unchanged segment projection is:
+          * @f[
+@@ -610,7 +614,9 @@ namespace opalx::spacecharge {
+          * @f]
+          * A balanced implicit binary hierarchy encloses contiguous segments in
+          * axis-aligned endpoint boxes. Its power-of-two leaves retain segment indices;
+-         * padded leaves are empty. Rebuild all boxes in the geometry kernel, so frame
++         * padded leaves are empty. Team threads merge one level at a time, with a team
++         * barrier between levels. No inter-block barrier or parallel prefix scan is used.
++         * Rebuild all boxes each solve, so frame
+          * or path changes cannot leave stale bounds. Search nearer boxes first, using
+          * the previous segment only as an initial upper bound (or segment zero for a
+          * new/invalid cache). Movement and reordering cannot restrict the search.
+diff --git a/unit_tests/SpaceCharge/README.md b/unit_tests/SpaceCharge/README.md
+index 9b11ec656..0a628a318 100644
+--- a/unit_tests/SpaceCharge/README.md
++++ b/unit_tests/SpaceCharge/README.md
+@@ -12,6 +12,11 @@ zero-length segments, corner ties, periodic-seam probes, invalid particles and
+ changes of particle count, ordering and momentum. Standalone diagnostic stages
+ recompute projections; cached entries are refreshed for every complete solve.
+ 
++The parallel segment/leaf build and team-parallel hierarchy are checked entry by
++entry against the previous serial device build: all six geometry columns and every
++used/padded bounding box must match exactly. Arc lengths retain the original
++increasing-index addition order; no parallel scan reassociates the sum.
++
+ The nearest-segment hierarchy is checked directly against an independent exhaustive
+ scan: segment indices and all three cached coordinates must match exactly, with
+ no numerical tolerance. Probes include self-intersections, repeated segments and
+diff --git a/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp b/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
+index a9ee1fe5d..f5147377b 100644
+--- a/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
++++ b/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp
+@@ -74,6 +74,49 @@ namespace opalx::spacecharge {
+                     });
+         }
+ 
++        // Preserve the previous serial device build as an independent exact oracle.
++        void launchSerialGeometryOracle(
++                FFT2D5Algorithm::ReferenceView_t ref,
++                FFT2D5Algorithm::SegmentGeometryView_t geometry,
++                FFT2D5Algorithm::SegmentGeometryView_t bounds) {
++            using T               = FFT2D5Algorithm::T;
++            using Vector3D_t      = FFT2D5Algorithm::Vector3D_t;
++            const size_t segments = ref.extent(0) - 1;
++            const size_t leaves   = bounds.extent(0) / 2;
++            Kokkos::parallel_for(
++                    "serialGeometryOracle", 1, KOKKOS_LAMBDA(size_t) {
++                        T prefix = 0.0;
++                        for (size_t i = 0; i < segments; ++i) {
++                            const Vector3D_t direction = ref(i + 1) - ref(i);
++                            const T length             = euclidean_norm(direction);
++                            for (unsigned d = 0; d < 3; ++d)
++                                geometry(i, d) = direction[d];
++                            geometry(i, 3) = direction.dot(direction);
++                            geometry(i, 4) = length;
++                            geometry(i, 5) = prefix;
++                            prefix += length;
++                        }
++                        // Heap leaves follow segment order; padded leaves have empty boxes.
++                        for (size_t i = 0; i < leaves; ++i) {
++                            for (unsigned d = 0; d < 3; ++d) {
++                                bounds(leaves + i, d) =
++                                        i < segments ? Kokkos::min(ref(i)[d], ref(i + 1)[d])
++                                                     : Kokkos::Experimental::finite_max_v<T>;
++                                bounds(leaves + i, d + 3) =
++                                        i < segments ? Kokkos::max(ref(i)[d], ref(i + 1)[d])
++                                                     : -Kokkos::Experimental::finite_max_v<T>;
++                            }
++                        }
++                        for (size_t i = leaves - 1; i > 0; --i) {
++                            for (unsigned d = 0; d < 3; ++d) {
++                                bounds(i, d) = Kokkos::min(bounds(2 * i, d), bounds(2 * i + 1, d));
++                                bounds(i, d + 3) =
++                                        Kokkos::max(bounds(2 * i, d + 3), bounds(2 * i + 1, d + 3));
++                            }
++                        }
++                    });
++        }
++
+         class FFT2D5AlgorithmTest : public ::testing::Test {
+         protected:
+             using ParticleContainer = FFT2D5Algorithm::ParticleContainer;
+@@ -571,7 +614,7 @@ namespace opalx::spacecharge {
+             SpaceChargeSolveContext context(activity, step);
+             // Self-intersections, non-power-of-two leaf counts, repeated vertices,
+             // very large translations, tiny/large scales and equal-distance winners.
+-            for (unsigned scenario = 0; scenario < 7; ++scenario) {
++            for (unsigned scenario = 0; scenario < 8; ++scenario) {
+                 const double scale = scenario == 3   ? 1e-140
+                                      : scenario == 4 ? 1e140
+                                      : scenario == 6 ? 1e-160
+@@ -582,7 +625,9 @@ namespace opalx::spacecharge {
+                     points = {Vector(0, 0, 0), Vector(0, 0, 1), Vector(1, 0, 1), Vector(1, 0, 0),
+                               Vector(0, 0, 0), Vector(0, 0, 1), Vector(0, 0, 1), Vector(0, 0, 0)};
+                 } else {
+-                    const unsigned intervals = (scenario == 0 || scenario == 6) ? 1 : 257;
++                    const unsigned intervals = (scenario == 0 || scenario == 6) ? 1
++                                               : scenario == 7                  ? 2606
++                                                                                : 257;
+                     for (unsigned i = 0; i <= intervals; ++i) {
+                         const double angle = 2 * Physics::pi * i / intervals;
+                         points.push_back(
+@@ -632,6 +677,29 @@ namespace opalx::spacecharge {
+                     const auto r    = particles_m->R.getView();
+                     const auto mask = particles_m->InvalidMask.getView();
+                     const auto ref  = solver.getReferencePath();
++                    FFT2D5Algorithm::SegmentGeometryView_t serialGeometry(
++                            "serialGeometry", solver.getSegmentGeometry().extent(0));
++                    FFT2D5Algorithm::SegmentGeometryView_t serialBounds(
++                            "serialBounds", solver.getSegmentBounds().extent(0));
++                    launchSerialGeometryOracle(ref, serialGeometry, serialBounds);
++                    auto expectedGeometry = Kokkos::create_mirror_view_and_copy(
++                            Kokkos::HostSpace(), serialGeometry);
++                    auto expectedBounds =
++                            Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), serialBounds);
++                    auto actualGeometry = Kokkos::create_mirror_view_and_copy(
++                            Kokkos::HostSpace(), solver.getSegmentGeometry());
++                    auto actualBounds = Kokkos::create_mirror_view_and_copy(
++                            Kokkos::HostSpace(), solver.getSegmentBounds());
++                    for (size_t i = 0; i < serialGeometry.extent(0); ++i)
++                        for (unsigned d = 0; d < 6; ++d)
++                            ASSERT_EQ(actualGeometry(i, d), expectedGeometry(i, d))
++                                    << scenario << " " << repeat << " segment=" << i
++                                    << " col=" << d;
++                    // Heap index zero is unused and intentionally uninitialized.
++                    for (size_t i = 1; i < serialBounds.extent(0); ++i)
++                        for (unsigned d = 0; d < 6; ++d)
++                            ASSERT_EQ(actualBounds(i, d), expectedBounds(i, d))
++                                    << scenario << " " << repeat << " node=" << i << " col=" << d;
+                     FFT2D5Algorithm::VectorView_t expected("exhaustiveCoordinates", count);
+                     FFT2D5Algorithm::SegmentIndexView_t winners("exhaustiveSegments", count);
+                     launchExhaustiveProjectionOracle(r, mask, ref, count, expected, winners);

@@ -1,0 +1,243 @@
+{
+  "queried_utc": "2026-10-25T22:00:44Z",
+  "source_sha": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+  "pipelines": [
+    {
+      "backend": "GH200",
+      "project": 82981356,
+      "pipeline": 2987151470,
+      "jobs": [
+        {
+          "id": 17451990424,
+          "name": "opalx-regression-cuda13-sm90-release",
+          "stage": "opalx_regression",
+          "status": "failed",
+          "started_at": "2026-10-25T21:38:10.331Z",
+          "finished_at": "2026-10-25T21:59:00.948Z",
+          "duration": 1250.61679,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17451990424",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151470
+        },
+        {
+          "id": 17451990423,
+          "name": "opalx-test-cuda13-sm90-release-4-ranks",
+          "stage": "opalx_test",
+          "status": "success",
+          "started_at": "2026-10-25T21:38:10.040Z",
+          "finished_at": "2026-10-25T21:46:38.835Z",
+          "duration": 508.794267,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17451990423",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151470
+        },
+        {
+          "id": 17451990422,
+          "name": "opalx-test-cuda13-sm90-release-1-rank",
+          "stage": "opalx_test",
+          "status": "success",
+          "started_at": "2026-10-25T21:38:09.694Z",
+          "finished_at": "2026-10-25T21:46:51.387Z",
+          "duration": 521.692637,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17451990422",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151470
+        },
+        {
+          "id": 17451990421,
+          "name": "opalx-test-cuda13-sm90-debug-1-rank",
+          "stage": "opalx_test",
+          "status": "success",
+          "started_at": "2026-10-25T21:39:27.733Z",
+          "finished_at": "2026-10-25T21:49:24.289Z",
+          "duration": 596.556662,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17451990421",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151470
+        },
+        {
+          "id": 17451990420,
+          "name": "opalx-build-cuda13-sm90-release",
+          "stage": "opalx_build",
+          "status": "success",
+          "started_at": "2026-10-25T20:56:05.776Z",
+          "finished_at": "2026-10-25T21:38:07.722Z",
+          "duration": 2521.945801,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17451990420",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151470
+        },
+        {
+          "id": 17451990419,
+          "name": "opalx-build-cuda13-sm90-debug",
+          "stage": "opalx_build",
+          "status": "success",
+          "started_at": "2026-10-25T20:56:05.214Z",
+          "finished_at": "2026-10-25T21:39:25.509Z",
+          "duration": 2600.295008,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17451990419",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151470
+        }
+      ]
+    },
+    {
+      "backend": "OpenMP",
+      "project": 83034039,
+      "pipeline": 2987151576,
+      "jobs": [
+        {
+          "id": 17451990959,
+          "name": "opalx-regression-openmp-release",
+          "stage": "opalx_regression",
+          "status": "failed",
+          "started_at": "2026-10-25T21:04:25.331Z",
+          "finished_at": "2026-10-25T21:20:58.260Z",
+          "duration": 992.928116,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17451990959",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151576
+        },
+        {
+          "id": 17451990958,
+          "name": "opalx-test-openmp-release-4-ranks",
+          "stage": "opalx_test",
+          "status": "success",
+          "started_at": "2026-10-25T21:04:24.651Z",
+          "finished_at": "2026-10-25T21:10:41.349Z",
+          "duration": 376.698572,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17451990958",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151576
+        },
+        {
+          "id": 17451990957,
+          "name": "opalx-test-openmp-release-1-rank",
+          "stage": "opalx_test",
+          "status": "success",
+          "started_at": "2026-10-25T21:04:24.449Z",
+          "finished_at": "2026-10-25T21:10:46.140Z",
+          "duration": 381.690774,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17451990957",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151576
+        },
+        {
+          "id": 17451990956,
+          "name": "opalx-test-openmp-debug-1-rank",
+          "stage": "opalx_test",
+          "status": "success",
+          "started_at": "2026-10-25T21:04:50.140Z",
+          "finished_at": "2026-10-25T21:13:10.056Z",
+          "duration": 499.91605,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17451990956",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151576
+        },
+        {
+          "id": 17451990955,
+          "name": "opalx-build-openmp-release",
+          "stage": "opalx_build",
+          "status": "success",
+          "started_at": "2026-10-25T20:56:09.194Z",
+          "finished_at": "2026-10-25T21:04:22.406Z",
+          "duration": 493.211924,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17451990955",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151576
+        },
+        {
+          "id": 17451990954,
+          "name": "opalx-build-openmp-debug",
+          "stage": "opalx_build",
+          "status": "success",
+          "started_at": "2026-10-25T20:56:09.071Z",
+          "finished_at": "2026-10-25T21:04:47.637Z",
+          "duration": 518.566085,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17451990954",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151576
+        }
+      ]
+    },
+    {
+      "backend": "MI300",
+      "project": 83033814,
+      "pipeline": 2987151523,
+      "jobs": [
+        {
+          "id": 17451990683,
+          "name": "opalx-regression-rocm6_3-mi300-release",
+          "stage": "opalx_regression",
+          "status": "failed",
+          "started_at": "2026-10-25T21:01:17.114Z",
+          "finished_at": "2026-10-25T21:27:27.585Z",
+          "duration": 1570.471209,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/jobs/17451990683",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151523
+        },
+        {
+          "id": 17451990682,
+          "name": "opalx-test-rocm6_3-release-4-ranks",
+          "stage": "opalx_test",
+          "status": "success",
+          "started_at": "2026-10-25T21:01:16.551Z",
+          "finished_at": "2026-10-25T21:07:59.024Z",
+          "duration": 402.473125,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/jobs/17451990682",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151523
+        },
+        {
+          "id": 17451990681,
+          "name": "opalx-test-rocm6_3-release-1-rank",
+          "stage": "opalx_test",
+          "status": "success",
+          "started_at": "2026-10-25T21:01:16.445Z",
+          "finished_at": "2026-10-25T21:08:07.156Z",
+          "duration": 410.710924,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/jobs/17451990681",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151523
+        },
+        {
+          "id": 17451990680,
+          "name": "opalx-test-rocm6_3-debug-1-rank",
+          "stage": "opalx_test",
+          "status": "success",
+          "started_at": "2026-10-25T21:01:52.328Z",
+          "finished_at": "2026-10-25T21:12:27.320Z",
+          "duration": 634.991955,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/jobs/17451990680",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151523
+        },
+        {
+          "id": 17451990679,
+          "name": "opalx-build-rocm6_3-release",
+          "stage": "opalx_build",
+          "status": "success",
+          "started_at": "2026-10-25T20:56:07.163Z",
+          "finished_at": "2026-10-25T21:01:14.490Z",
+          "duration": 307.327157,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/jobs/17451990679",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151523
+        },
+        {
+          "id": 17451990678,
+          "name": "opalx-build-rocm6_3-debug",
+          "stage": "opalx_build",
+          "status": "success",
+          "started_at": "2026-10-25T20:56:06.465Z",
+          "finished_at": "2026-10-25T21:01:50.045Z",
+          "duration": 343.580704,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/jobs/17451990678",
+          "commit": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+          "pipeline": 2987151523
+        }
+      ]
+    }
+  ]
+}

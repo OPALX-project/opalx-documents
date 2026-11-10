@@ -1,0 +1,3 @@
+Authorized commit/push only Main.cpp and TestGaussian.cpp on current OPALX feature branch. Reviewed exact diff; Gaussian repeated/multirank and clipping negativecontrol passed. FocusedCLI3help-exit parsing checks passed. Preserve unrelatedtrackedwork hashes in preserve.json. Nextfetch,stage/commit2logicalfixes,pushnormal,verifyremoteSHAandFFAhashes. No documentsrepo push or PRbodyedit.
+
+Done:07e6fbb54 Main.cpp;6301c2cab Gaussian. Normalpushsuccessoriginfeaturebranch,remoteHEADverified6301c2cab10bf164e6d1ea60de5d0d25cdd0ca8a. Exactly2requestedfilesincommits;allunrelatedtrackedworkhashesunchangedandFFA3filesstillmodifiedunstaged.

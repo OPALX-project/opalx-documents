@@ -1,0 +1,114 @@
+\clearpage
+\section{Literature context and interpretation}
+\label{sec:literature}
+The archived frozen test identifies limits of the earlier FFT2D5 closures for a
+specified source and observable. It does not show that all 2.5D methods fail.
+Numerical convergence, physical-model accuracy and tracking accuracy remain
+separate questions.
+
+\subsection{The longitudinal closure matters}
+The label 2.5D does not specify a unique solver. For example, ImpactX
+distinguishes line-density-weighted transverse fields with a density-derivative
+longitudinal kick from its Gaussian potential-based model and full 3D
+models~\cite{impactx}. The archived OPALX operator solves separate transverse slices and adds
+the open-space local closure
+\begin{equation}
+ E_s^{\rm local}(s)=-\frac{g_0}{4\pi\eps\gamma^2}
+ \frac{\dd\lambda}{\dd s},\qquad g_0=6.36.
+ \label{eq:literature-local}
+\end{equation}
+The value and formula are verified in the tested source code. For the
+constant-section source, $\lambda$ is constant inside its sharp ends.
+Therefore no finite choice of $g_0$ can recover a nonzero interior end field
+where $\lambda'=0$. Refinement can resolve the density step more sharply
+without recovering the finite-width Coulomb response in \cref{fig:frozen-end}.
+This is our closure-level inference, independent of numerical end padding.
+
+de Hoon et al.'s author manuscript derives a nonlocal Fourier--Bessel field and recovers the local
+$g$ approximation by Taylor expansion; they explicitly identify end-region
+breakdown~\cite{dehoon}. Their field is transversely averaged for a straight,
+circularized beam in a conducting circular pipe. It supports the scope
+diagnosis, not a quantitative prediction for our open elliptical arc; their
+$R$ denotes pipe radius, not bending radius.
+
+Oeftiger and Hegglin's equivalent longitudinal model uses a parabolic line
+density; their Figure 1 gives $g_0=6.36$ for one free-space example. Their
+$z_m>3r_p$ pipe-validity condition concerns a round conducting pipe,
+not our free-space source~\cite{oeftiger}.
+Oeftiger's thesis makes the ellipsoid's free-space $g_0$ shape-dependent~\cite{oeftigerthesis}.
+Thus the matching code constant is a provenance clue, not a universal value
+or proof of the original developer's intent.
+
+Baartman distinguishes on-axis from transversely averaged forces in a round
+grounded pipe; even their additive constants differ~\cite{baartman}.
+Pipe, open-space, averaging and transverse-profile conventions must therefore
+be matched before comparing numerical $g$ values.
+
+Venturini and Wang--Li retain wavelength-dependent longitudinal response
+rather than one constant~\cite{venturini,wangli}. Wang--Li include a 20 keV
+$\mathrm H_2^+$ case with $\beta\simeq0.0046$ and 5 mm radius, but for a
+straight round beam. These kernels motivate a nonlocal longitudinal model; they are not
+already references for our finite curved ellipse.
+
+\clearpage
+\subsection{Curvature and validation scope}
+For our geometry, the local metric and total-angle measures are different:
+\begin{equation}
+ \frac{a}{R}=0.0025,\qquad \frac{L}{R}=2.5\ {\rm rad},\qquad
+ \frac{\gamma\sigma_s}{\sigma_r}\simeq577,
+ \quad \sigma_s=\frac{L}{\sqrt{12}},\quad\sigma_r\simeq\frac a2.
+ \label{eq:literature-geometry}
+\end{equation}
+Small $a/R$ is consistent with a local weak-curvature expansion. The
+$143.24^\circ$ span does not by itself invalidate it, while global Cartesian
+slicing would misrepresent the arc. The RMS aspect ratio uses the radial
+width consistently; the still larger ratio based on the thin vertical width
+does not remove the radial or end-field question.
+
+Qiang's 2025 solver derives all kicks from one potential and treats curvature
+perturbatively for smooth long bunches. Its Gaussian aspect-ratio illustration
+above 1000 is not a strict 1\% validity bound~\cite{qiang2025}.
+The improved 2026 preprint adds free-space reference-radius matching in
+Eqs. 48--54~\cite{qiang2026}; that material must not be attributed to the
+published 2025 version.
+
+The 2026 regularized Gaussian curvature potential adds a linear term to
+remove an integral divergence. Its displayed correction has zero on-axis
+radial derivative as written~\cite{qiang2026}; this derivative statement is
+our inference. It therefore does not directly predict our finite-arc centre
+field of $+0.055092$ V/m. Comparison requires matching the global physical
+source, boundary conditions and reference-force convention, which is distinct
+from numerical mesh padding. No intent to remove a reference force is inferred.
+
+Zhou et al.'s HB2025 study shows why long-arc frame reconstruction must be
+checked independently of the field closure~\cite{zhou2025}.
+The accepted 2026 paper describes a dynamic orbit-based frame, but only its
+abstract was accessible; no radius-specific error bound can be extracted
+from it~\cite{zhou2026}. Our frame controls address this numerical concern;
+they do not supply the missing nonlocal end or curvature field.
+
+Validation observables also differ. ImpactX's Gaussian single-kick example
+tests a reduced-model kick against the same model's analytic prediction;
+its acceptance tolerances are not a universal 1\% physical guarantee~\cite{impactx}.
+SACR instead supplies an independent Coulomb reference for our prescribed
+physical density. The sign error at the reference-path midpoint and the
+5 mm end-field deficit limit the accuracy claim for the archived closure in
+this stress case. They neither invalidate smooth-bunch applications nor
+establish tracking errors.
+
+Our 43-target metrics use raw laboratory electric fields. A charge-weighted
+transverse average for the curved source would instead be
+\begin{equation}
+ \overline E_s(s)=\frac{\int_A\rho J E_s\,\dd u\,\dd y}
+ {\int_A\rho J\,\dd u\,\dd y},\qquad J=1+u/R.
+ \label{eq:literature-average}
+\end{equation}
+This average has not been computed; the 43 diagnostic points are not a
+charge-weighted quadrature.
+
+These findings motivated the nonuniform-density SACR extension and nonlocal
+OPEN operator in \cref{sec:free-open}. Its triangular reference uses a weighted
+boundary plus density-gradient volume term, rather than the earlier uniform
+boundary-only identity. The new test compares the same finite physical source
+with its full Coulomb field. Varying-curvature paths, retarded fields and
+self-consistent curved tracking remain separate validation questions.

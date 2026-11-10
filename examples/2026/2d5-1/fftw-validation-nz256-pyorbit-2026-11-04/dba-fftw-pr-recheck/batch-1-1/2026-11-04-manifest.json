@@ -1,0 +1,36 @@
+{
+  "case": "batch-1-1",
+  "argv": [
+    "/Users/adelmann/git/opalx/build-omp/src/opalx",
+    "case.in",
+    "--restart",
+    "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility/initial-state.h5",
+    "--info",
+    "1",
+    "--2D5BatchSize",
+    "1"
+  ],
+  "batch_size": 1,
+  "repeat": 1,
+  "profile": false,
+  "binary_sha256": "91a50ddc25ed0ccc92ce3cfd29fef214a39818311b08505d6a840b582c80ba27",
+  "source_head": "a28af04173af9c9e122891c7b6c4f8d8d387ac16",
+  "source_diff_sha256": "9b87546ec9d27975fc712fe4610b209d2583776ba6cbeaefaaea4d546511faeb",
+  "input_sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38",
+  "initial_state_sha256": "4d6adf38da35d9168f9cdb10847786eb1ea64d27e13e521211173901037e19f5",
+  "mpi_ranks": 1,
+  "omp_threads": 4,
+  "steps": 100,
+  "dt_s": 3e-12,
+  "charge_C": 5.602212333965894e-09,
+  "particles": 100000,
+  "mesh": [
+    64,
+    64,
+    512
+  ],
+  "scope": "100step timing/numerical comparison only; no16turnrun",
+  "returncode": 0,
+  "completed": true,
+  "elapsed_seconds": 12.87423212500289
+}

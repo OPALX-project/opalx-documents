@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=.72,>=Stealth,font=\small]
+ \fill[gray!18] (0,0) circle[radius=.5];
+ \draw[gray!40,step=.25,very thin] (-1,-1) grid (1,1);
+ \draw[blue!65!black,dashed,thick] (-1,-1) rectangle (1,1);
+ \draw[black,thick] (0,0) circle[radius=2];
+ \draw[gray!75] (0,0) circle[radius=.5];
+ \draw[->,gray!65] (-2.2,0)--(2.35,0) node[right] {$x$};
+ \draw[->,gray!65] (0,-2.2)--(0,2.35) node[above] {$y$};
+ \draw[<->,black] (0,0)--(1.4142,1.4142)
+   node[pos=.65,above,sloped,fill=white,inner sep=1pt] {$b=20$ mm};
+ \draw[<->,black] (0,0)--(.5,0);
+ \node[anchor=west,fill=white,inner sep=1pt] at (.57,.27) {$a=5$ mm};
+ \draw[<->,blue!65!black] (-1,-1.15)--(1,-1.15)
+   node[midway,below,fill=white,inner sep=1pt] {$W=20$ mm};
+ \node[font=\footnotesize,align=center] at (0,-2.65)
+   {Physical pipe: circle $b$\\Open numerical mesh: square $W$};
+\end{tikzpicture}

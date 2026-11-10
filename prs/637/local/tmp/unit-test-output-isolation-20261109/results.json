@@ -1,0 +1,71 @@
+{
+  "status": "complete; ownership fixes and all relevant tests pass; separate Gaussian assertion remains",
+  "scope": {
+    "changed_test_cpp_files": 29,
+    "new_test_helper": "unit_tests/TemporaryDirectory.h",
+    "production_or_cmake_changes_this_task": false,
+    "numerical_assertions_tolerances_or_seeds_changed": false,
+    "new_native_test_cases": false,
+    "prior_seven_files_preserved": true
+  },
+  "local": {
+    "status": "all affected local tests pass; full suite has separate unchanged Gaussian failure",
+    "source_files_new_task": 30,
+    "affected_targets_passed": 29,
+    "full_suite_passed": 136,
+    "full_suite_total": 137,
+    "full_suite_failed": [
+      "TestGaussian"
+    ],
+    "parallel_fm2d_repetitions": {
+      "TestFM2DDynamic": 20,
+      "TestFM2DMagnetoStatic": 20
+    },
+    "concurrent_checkpoint_copies": [
+      {
+        "copy": 1,
+        "passed_cases": 2
+      },
+      {
+        "copy": 2,
+        "passed_cases": 2
+      }
+    ],
+    "frozen_source_hashes_verified": true,
+    "prior_seven_file_hashes_unchanged": true,
+    "linux_after_job": 355096,
+    "linux_status": "running/pending; do not claim after pass yet"
+  },
+  "linux": {
+    "status": "ownership fixes and all relevant checks passed; separate Gaussian assertion remains",
+    "archive_sha256": "e06d7b6d09d549b42d24260608b88633f14c1284a71fb609816c5582e0cf575f",
+    "changed_cpp_files": 29,
+    "new_helper_files": 1,
+    "all_current_source_hashes_verified": 1073,
+    "prior_seven_files_unchanged": true,
+    "linux": "Debug/OpenMP",
+    "before_isolated_targets_passed": 2,
+    "before_first_concurrent_pair_failed": true,
+    "affected_linux_targets_passed": 29,
+    "fm2d_concurrent_pairs_passed": 20,
+    "fm2d_native_case_executions": 840,
+    "manual_mpi_launches_passed": 5,
+    "manual_mpi_native_case_executions": 18,
+    "manual_mpi_skips": 0,
+    "full_linux_suite_passed": 136,
+    "full_linux_suite_total": 137,
+    "full_linux_suite_failed": [
+      "TestGaussian"
+    ],
+    "all_29_test_binaries_recompiled_and_changed": true,
+    "production_library_unchanged": true,
+    "prior_frozen_loss_fix_archive_unchanged": true,
+    "after_job": "355096 COMPLETED0:0",
+    "staged_files": [],
+    "committed_or_pushed": false
+  },
+  "source_manifest": "intended-files.json",
+  "commit_or_push": false,
+  "staged_files": [],
+  "all_task_jobs_terminal": true
+}

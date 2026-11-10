@@ -1,0 +1,14 @@
+module load: unstable module has been loaded -- openmpi/5.0.10_slurm
+gmerlin6|gwendolen|adelmann|||
+CLUSTER: gmerlin6
+       JOBID        STATE         USER TRES_PER_NOD          NODELIST(REASON)            TIME_LEFT
+      354991      PENDING     adelmann          N/A            (AssocGrpGRES)           1-00:00:00
+      354992      PENDING     adelmann          N/A            (AssocGrpGRES)              1:00:00
+      354990      RUNNING     khoras_a   gres/gpu:1              merlin-g-100           5-23:04:46
+      354982      RUNNING     khoras_a   gres/gpu:1              merlin-g-100           1-21:41:42
+      354981      RUNNING     khoras_a   gres/gpu:1              merlin-g-100           1-21:41:41
+      354954      RUNNING     khoras_a   gres/gpu:1              merlin-g-100           3-19:08:19
+CLUSTER: gmerlin6
+             JOBID PARTITION     NAME     USER ST          START_TIME  NODES SCHEDNODES           NODELIST(REASON)
+            354991 gwendolen opalx-db adelmann PD 2026-11-07T15:33:09      1 (null)               (AssocGrpGRES)
+            354992 gwendolen opalx-be adelmann PD 2026-11-07T15:33:09      1 (null)               (AssocGrpGRES)

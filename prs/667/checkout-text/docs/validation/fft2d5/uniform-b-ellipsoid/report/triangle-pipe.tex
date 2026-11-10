@@ -1,0 +1,163 @@
+\clearpage
+\section{Triangular bunch in a conducting circular pipe}
+\label{sec:triangle-pipe}
+This control reproduces the longitudinal-force component of the straight
+round-pipe triangular-profile benchmark used in ORBIT~\cite{orbit2006,pyorbit3triangle}.
+The new explicit \code{CIRCULAR_UNIFORM} model is compared with the
+analytic solution, the earlier \code{CIRCULAR} model and repeated PyORBIT
+calculations. This is a frozen-field test, not a tune-shift or tracking test.
+
+The source has fixed circular radius $a=5$ mm, full length $L=10$ m,
+$N=10^{14}$ protons and kinetic energy $0.4$ GeV. The grounded pipe radius
+is $b=20$ mm. With $s=0$ at the bunch centre,
+\begin{align}
+ \lambda(s)&=\frac{2Q}{L}\left(1-\frac{2|s|}{L}\right),\quad |s|<L/2,
+ & E_s(r,s)&=-\frac{\lambda'(s)}{4\pi\eps\gamma^2}\,g(r),\label{eq:triangle-pipe}\\
+ g(r)&=\begin{cases}
+ 1+2\ln(b/a)-r^2/a^2,&0\le r\le a,\\
+ 2\ln(b/r),&a<r\le b.
+ \end{cases}
+ \label{eq:triangle-pointwise-g}
+\end{align}
+The density vanishes outside its support. On axis, $g=3.772589$ and
+$E_*=|E_s|=10.681199$ kV/m; its uniform-disk average is
+$\overline g=1/2+2\ln(b/a)$~\cite{baartman}.
+Acceptance uses the same 62 on-axis and 82 radial targets at
+$1\le|s|\le4$ m, excluding the cusp and ends. No coefficient is fitted.
+A proton's equivalent one-metre kick is $\Delta W[\mathrm{eV}]=E_s[\mathrm{V/m}]$.
+
+\reportfigure{triangle-pipe-fixed-fields}{Frozen on-axis fields and signed
+difference from the physical analytic solution (black dashed). Gray crosses
+retain the pre-change CIRCULAR result; blue circles use CIRCULAR\_UNIFORM.
+PyORBIT variants are rerun independently. Residuals use the fixed scale
+$E_*$; gray regions are excluded and the gray band marks $\pm1\%$.
+The displayed cusp transition has no accuracy claim.}{fig:triangle-pipe-fixed-fields}
+\tabfile{triangle-fixed-results}
+Both columns are maximum pointwise relative physical field errors; accepted
+reference values are nonzero. The fine new OPALX model meets 1\% on both
+target sets. Its maximum differences from PyORBIT slices and Baartman
+are 0.447\% and 0.167\%, respectively, relative to the local analytic field.
+
+\clearpage
+\subsection{Separate physical geometry from the numerical mesh}
+The pointwise model requires explicit \code{PIPERADIUS}$=b\ge a$ and
+\code{BEAMR}$=a$. \code{PIPESIZEX/Y} specify full open numerical widths
+$W_x,W_y$. The physical radius is independent of these widths.
+\begin{figure}[H]
+\centering
+\begin{minipage}[c]{0.53\linewidth}
+\small
+Model-specific settings for this benchmark:
+\begin{verbatim}
+FS: FIELDSOLVER, TYPE="FFT2D5",
+ PIPEMODE="CIRCULAR_UNIFORM",
+ BEAMR=0.005, PIPERADIUS=0.020,
+ PIPESIZEX=0.020, PIPESIZEY=0.020,
+ NX=128, NY=128, NZ=128,
+ PARFFTX=FALSE, PARFFTY=FALSE,
+ PARFFTZ=FALSE,
+ REFPATHFNAME="straight-path.dat";
+\end{verbatim}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.44\linewidth}
+\centering\input{figures/pipe-model-geometry.tikz}
+\end{minipage}
+\caption{The circle is the physical longitudinal-model pipe; the square is
+the open transverse numerical grid. Distribution, beam and tracking commands
+are supplied by the archived complete input. A transverse conducting wall
+is not solved. For this centred round source, the local transverse image
+field vanishes.}
+\label{fig:pipe-model-geometry}
+\end{figure}
+\reportfigure{triangle-pipe-fixed-controls}{Left: radial dependence at
+$s=+2.5$ m for the same selected results. Right: physical on-axis errors
+under matched mesh changes. OPALX uses one source over $64^3,128^3,256^3$;
+the historical PyORBIT transverse scan holds $N_z=128$ and its 16-ring source
+fixed. The primary PyORBIT curve on the left uses 32 rings. Zero remains
+visible; no monotonic or joint asymptotic convergence is claimed.}
+{fig:triangle-pipe-fixed-controls}
+
+All numerical changes quoted here use the 144 accepted targets. The last
+matched OPALX mesh change is 0.1373\% of $E_*$. Doubling numerical width
+and transverse cell count at fixed $b$ changes the field by less than
+$5.5\times10^{-12}\%$; changing physical $b$ from 20 to 10 mm instead
+reproduces its distinct analytic field. The initial PyORBIT ring-quadrature
+bias and longitudinal sampling controls remain archived; repeated primary
+results reproduce their earlier values.
+
+Legacy \code{CIRCULAR} retains the moment coefficient
+$0.67+2\ln(b/a)$~\cite{oeftiger}, with its historical width fallback when
+\code{PIPERADIUS} is absent. Its unchanged lack of radial dependence explains
+the earlier pointwise discrepancy. A matched legacy rerun with the new
+executable agrees with its archived result within $7.4\times10^{-13}\%$ of
+$E_*$. The pipe model is selected explicitly and retains the legacy CIRCULAR
+closure. The later OPEN replacement is tested separately in \cref{sec:free-open}.
+
+\clearpage
+\subsection{Independent unit tests and an OPALX regression run}
+\label{sec:pipe-gates}
+The new physics unit tests compute the reference by integrating Gauss' law
+to the grounded wall and differentiating the potential longitudinally.
+They cover inside-beam, vacuum-annulus and wall fields, a non-unit Lorentz
+factor, physical-radius versus mesh-width changes and rejection of particles
+outside the physical pipe. Configuration tests check the explicit radius
+contract and reject unsupported or inconsistent settings.
+
+\begin{center}\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.29\linewidth}>{\raggedright\arraybackslash}p{0.63\linewidth}}
+\toprule Check & Result and scope\\\midrule
+C++ unit tests & 100 pass; one MPI-only test is skipped in the single-rank run.
+The addition contains three independent physics tests and seven configuration
+tests.\\
+Reference quadrature & Independent integration/differentiation check:
+maximum relative discrepancy $1.06\times10^{-11}$, below the justified
+$2\times10^{-8}$ unit tolerance.\\
+Native study & Six new OPALX source/probe pairs and three repeated PyORBIT
+configurations. Fields, charge, positions, input and binary hashes are checked.\\
+Actual OPALX regression & \code{FFT2D5-TriangularPipe} executes OPALX and checks
+its H5 fields at eight nonzero targets plus two wall targets against an
+independent Gauss-integral reference. Maximum physical error is 0.00352\%;
+wall field is exactly zero.\\
+Negative control & The same native case with the legacy model is rejected
+by the physical validator; a probe-only solve confirms negligible longitudinal
+probe contribution.\\
+Smoke integration & STAT reference checks and the field-physics validator pass
+through the local smoke runner. No remote CI execution is claimed.\\
+Historical OPEN compatibility & At the pipe-update executable, ZeroSC and 1 pC regressions pass all
+128 samples and six STAT reference checks with the new binary. The largest
+RMS difference from their stored baseline is $4.05\times10^{-10}$ relative.\\
+\bottomrule
+\end{tabular}
+\end{center}
+The native field tolerance remains 1\%; wall targets use an absolute
+$10^{-4}$ V/m tolerance because their analytic field is zero.
+OPALX uses a $10^{-20}$ s readout and matched probe subtraction in the full
+study. PyORBIT uses zero-charge probes and fixed-position kicks.
+The repeated PyORBIT one-/two-rank fields agree within
+$2.6\times10^{-12}\%$ of $E_*$; FFT2D5 remains single-rank.
+
+The earlier benchmark is identified by binary
+\begin{quote}\small
+\path{e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf};
+\end{quote}
+the explicit pointwise model and its native tests use
+\begin{quote}\small
+\path{9d3771d58f0de7bf913909955e4ef81aef69a33341202edefa9553bb78ead8b5}.
+\end{quote}
+The before/after fine comparison uses the same physical source, targets and
+$256^3$ mesh. Previous tracking and curved-tube results retain their original
+binaries and interpretations.
+
+PyORBIT slices obtain longitudinal kicks by differentiating the same grounded
+slice potential used for their transverse kicks. OPALX instead combines the
+analytic uniform-round $g(r)$ with its sampled $\lambda'$ and open transverse
+Poisson solves. Their continuum fields coincide for this prescribed source;
+this comparison does not establish a general common-potential PIC map or
+symplectic tracking.
+
+\textbf{Limit.} This validates a fixed-radius, coaxial uniform round beam's
+local longitudinal pipe model on its linear density branches. Transverse
+slices remain open. The model does not add nonlocal end fields, a curvature
+operator or a general conducting-pipe solution. Those historical OPEN reruns test backward
+compatibility only; full-drift and curved-source accuracy of the new
+\code{CIRCULAR_UNIFORM} model are not established.

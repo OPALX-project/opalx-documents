@@ -1,0 +1,26 @@
+Running main() from /Users/adelmann/git/opalx/build-omp/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from FFT2D5ParallelTest
+Running main() from /Users/adelmann/git/opalx/build-omp/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from FFT2D5ParallelTest
+[ RUN      ] FFT2D5ParallelTest.MigrationHalosAndFieldsMatchDirectConvolution
+[ RUN      ] FFT2D5ParallelTest.MigrationHalosAndFieldsMatchDirectConvolution
+[       OK ] FFT2D5ParallelTest.MigrationHalosAndFieldsMatchDirectConvolution (150 ms)
+[ RUN      ] FFT2D5ParallelTest.BatchedLineDensityMatchesHostSumsOnTinySlabs
+[       OK ] FFT2D5ParallelTest.MigrationHalosAndFieldsMatchDirectConvolution (150 ms)
+[ RUN      ] FFT2D5ParallelTest.BatchedLineDensityMatchesHostSumsOnTinySlabs
+[       OK ] FFT2D5ParallelTest.BatchedLineDensityMatchesHostSumsOnTinySlabs (7 ms)
+[       OK ] FFT2D5ParallelTest.BatchedLineDensityMatchesHostSumsOnTinySlabs (7 ms)
+[----------] 2 tests from FFT2D5ParallelTest (158 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (166 ms total)
+[  PASSED  ] 2 tests.
+[----------] 2 tests from FFT2D5ParallelTest (158 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (167 ms total)
+[  PASSED  ] 2 tests.

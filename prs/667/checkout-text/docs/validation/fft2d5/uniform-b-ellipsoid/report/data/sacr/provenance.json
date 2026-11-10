@@ -1,0 +1,30 @@
+{
+  "script_sha256": "7cf76f8e07d0d297f58f7550ea7988272dd8c19aa37bbddc6bfcdee4ed1d2d92",
+  "prototype_sha256": "acb8e0ba8713b907f667eeb8d35cd3ce5efa440b0930c951b89bcc08feba3034",
+  "cases_semiaxes_r_s_y_m": {
+    "sphere": [
+      0.005,
+      0.005,
+      0.005
+    ],
+    "previous_100mm_ellipsoid": [
+      0.005,
+      0.05,
+      0.0005
+    ],
+    "five_metre_ellipsoid": [
+      0.005,
+      2.5,
+      0.0005
+    ]
+  },
+  "target_coordinates": "u/a, y/c, s/b; field order radial,vertical,tangential",
+  "radius_comparison": "same material target points; local target Frenet field components",
+  "normalization": "E/(k*rho), k=1/(4*pi*epsilon0), has units metre",
+  "density": "uniform physical volume density; parabolic line density; sameQatallR",
+  "vertical_size": "0.5mm is a chosen verification semiaxis, not a confirmed real-beam parameter",
+  "quadrature": "periodic phi midpoint rule; adaptive mu quad_vec; 128/256/512 allpoints, furtherdoublingwhenneeded",
+  "sampling_scope": "33 selected interior points, maximum scaled radius<0.95; no boundary/exterior guarantee",
+  "numpy_version": "2.4.6",
+  "pandas_version": "3.0.3"
+}

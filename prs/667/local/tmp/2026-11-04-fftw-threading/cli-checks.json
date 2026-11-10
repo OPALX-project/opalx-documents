@@ -1,0 +1,160 @@
+[
+  {
+    "args": [
+      "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "--2D5BatchSize"
+    ],
+    "returncode": 1,
+    "check": "invalid option rejected"
+  },
+  {
+    "args": [
+      "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "--2D5BatchSize",
+      "0"
+    ],
+    "returncode": 1,
+    "check": "invalid option rejected"
+  },
+  {
+    "args": [
+      "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "--2D5BatchSize",
+      "-1"
+    ],
+    "returncode": 1,
+    "check": "invalid option rejected"
+  },
+  {
+    "args": [
+      "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "--2D5BatchSize",
+      "8junk"
+    ],
+    "returncode": 1,
+    "check": "invalid option rejected"
+  },
+  {
+    "args": [
+      "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "--2D5BatchSize",
+      "1.5"
+    ],
+    "returncode": 1,
+    "check": "invalid option rejected"
+  },
+  {
+    "args": [
+      "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "--2D5BatchSize",
+      "2147483648"
+    ],
+    "returncode": 1,
+    "check": "invalid option rejected"
+  },
+  {
+    "args": [
+      "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "--2D5FFTThreads"
+    ],
+    "returncode": 1,
+    "check": "invalid option rejected"
+  },
+  {
+    "args": [
+      "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "--2D5FFTThreads",
+      "0"
+    ],
+    "returncode": 1,
+    "check": "invalid option rejected"
+  },
+  {
+    "args": [
+      "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "--2D5FFTThreads",
+      "-1"
+    ],
+    "returncode": 1,
+    "check": "invalid option rejected"
+  },
+  {
+    "args": [
+      "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "--2D5FFTThreads",
+      "8junk"
+    ],
+    "returncode": 1,
+    "check": "invalid option rejected"
+  },
+  {
+    "args": [
+      "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "--2D5FFTThreads",
+      "1.5"
+    ],
+    "returncode": 1,
+    "check": "invalid option rejected"
+  },
+  {
+    "args": [
+      "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "--2D5FFTThreads",
+      "2147483648"
+    ],
+    "returncode": 1,
+    "check": "invalid option rejected"
+  },
+  {
+    "args": [
+      "--help"
+    ],
+    "returncode": 0,
+    "check": "help/placement/restart parsing"
+  },
+  {
+    "args": [
+      "-h"
+    ],
+    "returncode": 0,
+    "check": "help/placement/restart parsing"
+  },
+  {
+    "args": [
+      "--2D5FFTThreads",
+      "4",
+      "--2D5BatchSize",
+      "8",
+      "--input",
+      "nonexistent.in"
+    ],
+    "returncode": 1,
+    "check": "help/placement/restart parsing"
+  },
+  {
+    "args": [
+      "--input",
+      "nonexistent.in",
+      "--2D5BatchSize",
+      "8",
+      "--2D5FFTThreads",
+      "16"
+    ],
+    "returncode": 1,
+    "check": "help/placement/restart parsing"
+  },
+  {
+    "args": [
+      "--restart",
+      "missing.h5",
+      "--2D5FFTThreads",
+      "4",
+      "--2D5BatchSize",
+      "8",
+      "--input",
+      "nonexistent.in"
+    ],
+    "returncode": 1,
+    "check": "help/placement/restart parsing"
+  }
+]

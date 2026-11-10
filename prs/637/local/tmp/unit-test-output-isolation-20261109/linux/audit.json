@@ -1,0 +1,106 @@
+{
+  "status": "ownership fixes and all affected checks passed; full suite retains known Gaussian failure",
+  "before": {
+    "isolated_targets_passed": 2,
+    "first_concurrent_pair_failed": true,
+    "failed_native_cases": [
+      "FM2DDynamicTest.FrequencyParsing",
+      "FM2DDynamicTest.OutsideRadialRange",
+      "FM2DDynamicTest.OutsideZRange",
+      "FM2DDynamicTest.ParseZXOrientation",
+      "FM2DMagnetoStaticTest.GridPointAccuracy",
+      "FM2DMagnetoStaticTest.ParseXZOrientation",
+      "FM2DMagnetoStaticTest.ParseZXOrientation",
+      "FM2DMagnetoStaticTest.RadialFieldProjection",
+      "FM2DMagnetoStaticTest.ReadFreeCycle",
+      "FM2DMagnetoStaticTest.UniformFieldStrength"
+    ],
+    "direct_error": "Directory not empty [/tmp/opalx_fm2d_test]"
+  },
+  "after": {
+    "job": 355096,
+    "job_terminal": "COMPLETED0:0",
+    "source_files_verified_against_current_checkout": 1073,
+    "changed_files": 30,
+    "prior7files_unchanged": true,
+    "affected_targets_passed": 29,
+    "freshly_compiled_and_relinked_target_count": 29,
+    "fm2d_pairs_passed": 20,
+    "fm2d_native_case_executions": 840,
+    "fm2d_skips": 0,
+    "manual_mpi": [
+      {
+        "name": "checkpoint-r2",
+        "target": "TestCheckpointFile",
+        "ranks": 2,
+        "filter": null,
+        "returncode": 0,
+        "run_cases": 4,
+        "passed_cases": 4,
+        "skipped_cases": 0
+      },
+      {
+        "name": "multicontainer-rewind-r2",
+        "target": "TestMultiContainerPartBunch",
+        "ranks": 2,
+        "filter": "MultiContainerPartBunchTest.DataSink_RewindToCheckpointAppendsDiagnosticH5InPlace",
+        "returncode": 0,
+        "run_cases": 2,
+        "passed_cases": 2,
+        "skipped_cases": 0
+      },
+      {
+        "name": "orb-updater-r2",
+        "target": "TestCartesianDomainUpdaterORB",
+        "ranks": 2,
+        "filter": null,
+        "returncode": 0,
+        "run_cases": 2,
+        "passed_cases": 2,
+        "skipped_cases": 0
+      },
+      {
+        "name": "orb-load-balancing-r4",
+        "target": "TestCartesianDomainLoadBalancing",
+        "ranks": 4,
+        "filter": null,
+        "returncode": 0,
+        "run_cases": 8,
+        "passed_cases": 8,
+        "skipped_cases": 0
+      },
+      {
+        "name": "fft2d5-reject-r2",
+        "target": "TestFFT2D5Numerics",
+        "ranks": 2,
+        "filter": "TestSolve2d5.Configuration_MultipleRanksRejected",
+        "returncode": 0,
+        "run_cases": 2,
+        "passed_cases": 2,
+        "skipped_cases": 0
+      }
+    ],
+    "manual_native_case_executions": 18,
+    "manual_skips": 0,
+    "full_suite_passed": 136,
+    "full_suite_total": 137,
+    "full_suite_failed": [
+      "TestGaussian"
+    ],
+    "gaussian_concrete_failure": "5.5717775960503042 exceeds5.5 maximum; unchanged",
+    "production_library_sha256_unchanged": "b8c48c6930df7121b0bd0e39dba18239808f64dc50146652d5b5f10cad3bc859",
+    "prior_archive_sha256_unchanged": "3260c12c40b93741ad335e48b5f908d860db4c0cc6f88c04f85df9988e793bb2"
+  },
+  "scope": [
+    "All30intended files are unit-test C++ sources/header only; production and CMake source hashes unchanged",
+    "Existing seven audit/loss files unchanged",
+    "Default load-balancing target skips without4ranks; explicit4rankrun executes its8native case instances",
+    "No Gaussian source/seed/tolerance change or additional Gaussian rerun",
+    "No commit or push; task jobs355094and355096terminal"
+  ],
+  "environment": [
+    "Linux kernel5.14el9_8 onmerlin-g-100, GCC14.3/OpenMPI5/CMake4.4, CPU Debug/OpenMP,4OMPthreads",
+    "SSHloginRHEL8.10 is not used to infer compute-node userland",
+    "Kokkos5.2.2 differs from CI5.2.0; not exact GitHubUbuntu image"
+  ]
+}

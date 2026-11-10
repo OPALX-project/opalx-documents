@@ -1,0 +1,1079 @@
+
+#ifndef OPAL_PARTICLE_CONTAINER_H
+#define OPAL_PARTICLE_CONTAINER_H
+
+// #include <functional>
+#include <cmath>
+#include <cstddef>
+#include <functional>
+#include <iomanip>
+#include <memory>
+#include <numeric>
+#include <string>
+#include <vector>
+
+#include "Manager/BaseManager.h"
+
+#include "PartBunch/ParticleContainerTypes.h"
+
+#include "Algorithms/CoordinateSystemTrafo.h"
+#include "Algorithms/DistributionMoments.h"
+#include "Algorithms/PartData.h"
+#include "Algorithms/Quaternion.hpp"
+#include "PartBunch/BunchStateHandler.h"
+
+#include "Utilities/OpalException.h"
+#include "Utilities/Options.h"
+
+#include "Physics/Physics.h"
+
+// ParticleSpatialOverlapLayout.hpp currently includes IPPL's Alpine example ParticleContainer,
+// whose global class name collides with OPALX's container. The layout itself does not depend on
+// that example type, so suppress only that application header while including the IPPL layout.
+#ifndef IPPL_PARTICLE_CONTAINER_H
+#define OPALX_SUPPRESS_IPPL_ALPINE_PARTICLE_CONTAINER
+#define IPPL_PARTICLE_CONTAINER_H
+#endif
+#include "Particle/ParticleSpatialOverlapLayout.h"
+#ifdef OPALX_SUPPRESS_IPPL_ALPINE_PARTICLE_CONTAINER
+#undef IPPL_PARTICLE_CONTAINER_H
+#undef OPALX_SUPPRESS_IPPL_ALPINE_PARTICLE_CONTAINER
+#endif
+
+// #include <Kokkos_Core.hpp>
+
+template <typename T>
+using ParticleAttrib = ippl::ParticleAttrib<T>;
+
+using size_type = ippl::detail::size_type;
+
+#include "Processes/GlobalProcesses/GlobalProcess.h"
+
+/**
+ * @class ParticleContainer
+ * @brief Container for all per-particle (and per-simulation) fields tracked during OPALX tracking.
+ *
+ * The values tracked in Kokkos::Views during the simulation are:
+ * R  - Position (from base class)
+ * P  - Momentum [beta*gamma]
+ * dt - Time step
+ * Phi- Scalar potential
+ * Bin- Energy bin
+ * E  - Electric field
+ * B  - Magnetic field
+ *
+ * Charge (Q) and mass (M):
+ * - Default: QM_MODE="SINGLE" -> QMStorageMode=SingleValue
+ *   * Q and M are stored as a single shared value per container (memory-efficient).
+ *   * Access via `getQView()` / `getMView()` returns the shared views.
+ * - Alternative: QM_MODE="ATTRIBUTES" -> QMStorageMode=Attributes
+ *   * Q and M are stored as per-particle attributes.
+ *   * Access via `getQView()` / `getMView()` returns the per-particle attribute views.
+ *
+ * Access to Q/M should be done with `getQView()` / `getMView()`.
+ * They automatically select the correct underlying storage mode.
+ */
+template <typename T, unsigned Dim = 3>
+class ParticleContainer
+    : public ippl::ParticleBase<
+              ippl::ParticleSpatialLayout<T, Dim, ippl::UniformCartesian<T, Dim>>,
+              Kokkos::DefaultExecutionSpace::memory_space> {
+    /**
+     * @brief Alias for the `ippl::ParticleBase` specialization this container inherits from.
+     *
+     * The second template argument is a parameter pack of Kokkos view properties forwarded to
+     * the optional `ID` attribute's storage. IPPL gates the `ID` attribute on
+     * `sizeof...(IDProperties) > 0`, so passing any property here turns IDs ON; an empty pack
+     * would leave them disabled. We pass `Kokkos::DefaultExecutionSpace::memory_space` so the
+     * ID view lives in the same space as the rest of the bunch (host or device, matching the
+     * build backend). With IDs enabled, IPPL auto-assigns globally unique `std::int64_t` IDs in
+     * `Base::create()`.
+     */
+    using Base = ippl::ParticleBase<
+            ippl::ParticleSpatialLayout<T, Dim, ippl::UniformCartesian<T, Dim>>,
+            Kokkos::DefaultExecutionSpace::memory_space>;
+
+private:
+    /**
+     * Forbid access of the following functions outside of the ParticleContainer wrappers! This is
+     * for safety, since it might lead to undefined behaviour. The idea is to handle particle count
+     * changes completely through the ParticleContainer!
+     */
+    using Base::alloc;
+    using Base::create;
+    using Base::destroy;
+
+public:
+    using SpatialLayout_t = ippl::ParticleSpatialLayout<T, Dim, ippl::UniformCartesian<T, Dim>>;
+    using P3MLayout_t = ippl::ParticleSpatialOverlapLayout<T, Dim, ippl::UniformCartesian<T, Dim>>;
+
+    enum class LayoutType { Spatial, SpatialOverlap };
+
+    enum class QMStorageMode { SingleValue, Attributes };
+
+    /// Defines which type to use as a particle bin.
+    using bin_index_type = short int;  // Needed in AdaptBins class
+
+    /// View types of Q and M values
+    using qm_view_type = typename ippl::ParticleAttrib<double>::view_type;
+
+    /// Per-particle polarization vector type: 3D vector in double precision, |Pol| in [0, 1].
+    /// Double, like R and P, because Pol is rotated with every frame change (transformBunch)
+    /// and float storage would round it again at each rotation.
+    using spin_vector_type = ippl::Vector<double, 3>;
+
+public:
+    /// Charge view in [Cb].
+    /// In `SingleValue` mode this is a rank-1 view of length 1.
+    /// In `Attributes` mode this is the per-particle attribute view.
+    qm_view_type getQView() const {
+        if (qmStorageMode_m == QMStorageMode::Attributes) {
+            return QAttr.getView();
+        }
+        return QView_m;
+    }
+
+    /// Charge view in [Cb] over the full attribute storage.
+    /// In `Attributes` mode it also covers the ghost particles that a spatial-overlap layout
+    /// stores after the local ones, where `getQView()` ends at the local count.
+    qm_view_type getQStorageView() const {
+        if (qmStorageMode_m == QMStorageMode::Attributes) {
+            return qm_view_type(QAttr.getView().data(), QAttr.size());
+        }
+        return QView_m;
+    }
+
+    /// Mass view in [GeV].
+    /// In `SingleValue` mode this is a rank-1 view of length 1.
+    /// In `Attributes` mode this is the per-particle attribute view.
+    qm_view_type getMView() const {
+        if (qmStorageMode_m == QMStorageMode::Attributes) {
+            return MAttr.getView();
+        }
+        return MView_m;
+    }
+
+    /// timestep in [s]
+    ippl::ParticleAttrib<double> dt;
+
+    /// the scalar potential in [Cb/s]
+    ippl::ParticleAttrib<double> Phi;
+
+    /// the energy bin the particle is in
+    ippl::ParticleAttrib<bin_index_type> Bin;
+
+    /// the particle specis
+    short Sp = 0;
+
+    /// particle momenta [\beta\gamma]
+    typename Base::particle_position_type P;
+
+    /// electric field at particle position
+    typename Base::particle_position_type E;
+
+    /// electric field for gun simulation with bins
+    // typename Base::particle_position_type Etmp; // TODO: might not need this...
+
+    /// magnetic field at particle position
+    typename Base::particle_position_type B;
+
+    /// particle deletion mask (indicates which particles are deleted every timestep)
+    ippl::ParticleAttrib<bool> InvalidMask;
+
+    /// Per-particle polarization vector (rest-frame Pauli expectation values along the same
+    /// axes as P, i.e. the bunch frame; |Pol| in [0, 1]). Registered only when spinEnabled_m
+    /// is true.
+    ippl::ParticleAttrib<spin_vector_type> Pol;
+
+    /// Returns true when per-particle spin storage was enabled at construction
+    /// (enabled per beam when the BEAM has POLARIZATION set).
+    bool hasSpin() const { return spinEnabled_m; }
+
+    ParticleContainer(
+            Mesh_t<Dim>& mesh, FieldLayout_t<Dim>& FL, bool spinEnabled = false,
+            LayoutType layoutType = LayoutType::Spatial, T overlapCutoff = 0.0,
+            ippl::BC particleBC = ippl::BC::PERIODIC)
+        : spatialLayout_m(
+                  layoutType == LayoutType::Spatial ? std::make_unique<SpatialLayout_t>(FL, mesh)
+                                                    : nullptr),
+          overlapLayout_m(
+                  layoutType == LayoutType::SpatialOverlap
+                          ? std::make_unique<P3MLayout_t>(FL, mesh, overlapCutoff)
+                          : nullptr),
+          qmStorageMode_m(
+                  Options::useQMAttributes ? QMStorageMode::Attributes
+                                           : QMStorageMode::SingleValue),
+          distMoments_m(),
+          QView_m("ParticleContainer::QView_m", 1),
+          MView_m("ParticleContainer::MView_m", 1),
+          spinEnabled_m(spinEnabled) {
+        this->initialize(getPL());
+        registerAttributes();
+        setupBCs(particleBC);
+        Kokkos::deep_copy(QView_m, 0.0);
+        Kokkos::deep_copy(MView_m, 0.0);
+    }
+
+    ~ParticleContainer() {}
+
+    void registerAttributes() {
+        // register the particle attributes
+        this->addAttribute(dt);
+        this->addAttribute(Phi);
+        this->addAttribute(Bin);
+        this->addAttribute(P);
+        this->addAttribute(E);
+        this->addAttribute(B);
+        this->addAttribute(InvalidMask);
+        if (qmStorageMode_m == QMStorageMode::Attributes) {
+            this->addAttribute(QAttr);
+            this->addAttribute(MAttr);
+        }
+        if (spinEnabled_m) {
+            this->addAttribute(Pol);
+        }
+    }
+
+    /** Scratch Cartesian positions registered lazily so OPEN-style spatial migration
+     * carries them with every other particle attribute. No allocation for other solvers. */
+    ippl::ParticleAttrib<ippl::Vector<T, Dim>>& migrationPositions() {
+        if (!migrationPositions_m) {
+            migrationPositions_m = std::make_unique<ippl::ParticleAttrib<ippl::Vector<T, Dim>>>();
+            this->addAttribute(*migrationPositions_m);
+            migrationPositions_m->create(0);
+        }
+        return *migrationPositions_m;
+    }
+
+    void setupBCs(ippl::BC particleBC) { this->setParticleBC(particleBC); }
+
+    /// Apply coordinate transform to local particles: translate R, rotate P, E, B and Pol.
+    void transformBunch(const CoordinateSystemTrafo& trafo) {
+        const size_t nLoc = this->getLocalNum();
+        trafo.transformBunchTo(this->R.getView(), nLoc);
+        trafo.rotateBunchTo(this->P.getView(), nLoc);
+        trafo.rotateBunchTo(this->E.getView(), nLoc);
+        trafo.rotateBunchTo(this->B.getView(), nLoc);
+        if (spinEnabled_m) {
+            trafo.rotateBunchTo(this->Pol.getView(), nLoc);
+        }
+        markMomentsDirty();
+    }
+    SpatialLayout_t& getPL() {
+        return overlapLayout_m ? static_cast<SpatialLayout_t&>(*overlapLayout_m) : *spatialLayout_m;
+    }
+
+    const SpatialLayout_t& getPL() const {
+        return overlapLayout_m ? static_cast<const SpatialLayout_t&>(*overlapLayout_m)
+                               : *spatialLayout_m;
+    }
+
+    bool hasP3MLayout() const { return overlapLayout_m != nullptr; }
+
+    P3MLayout_t& getP3MLayout() {
+        if (!overlapLayout_m) {
+            throw OpalException(
+                    "ParticleContainer::getP3MLayout",
+                    "The particle container does not use ParticleSpatialOverlapLayout.");
+        }
+        return *overlapLayout_m;
+    }
+
+    const P3MLayout_t& getP3MLayout() const {
+        if (!overlapLayout_m) {
+            throw OpalException(
+                    "ParticleContainer::getP3MLayout",
+                    "The particle container does not use ParticleSpatialOverlapLayout.");
+        }
+        return *overlapLayout_m;
+    }
+
+    void updateLayout(FieldLayout_t<Dim>& FL, Mesh_t<Dim>& mesh) {
+        if (overlapLayout_m) {
+            overlapLayout_m->updateLayout(FL, mesh);
+        } else {
+            spatialLayout_m->updateLayout(FL, mesh);
+        }
+    }
+
+    /**
+     * @brief Update the overlap layout and its P3M cutoff together.
+     * @param overlapCutoff Cutoff in metres, checked against the new rank regions; it takes
+     * effect at the next update().
+     */
+    void updateLayout(FieldLayout_t<Dim>& FL, Mesh_t<Dim>& mesh, T overlapCutoff) {
+        getP3MLayout().updateLayout(FL, mesh, overlapCutoff);
+    }
+
+    void update() {
+        if (overlapLayout_m) {
+            overlapLayout_m->update(*this);
+        } else {
+            spatialLayout_m->update(*this);
+        }
+    }
+
+    void setBunchStateHandler(std::shared_ptr<BunchStateHandler> handler) {
+        // We only keep the slot: per-container flags own their own sync, so
+        // no back-reference to the handler is needed. The handler itself
+        // manages bunch-wide state, which ParticleContainer never touches.
+        containerState_m = handler->registerContainer();
+        distMoments_m.setContainerState(containerState_m);
+    }
+
+    // -- per-container state pass-throughs --------------------------------
+    // Thin wrappers around the slot's own API so callers don't need to reach
+    // into `containerState_m` directly.
+
+    bool isUnitlessPositions() const { return containerState_m->unitlessPositions; }
+
+    bool isMomentsDirty() const { return containerState_m->momentsDirty; }
+    void markMomentsDirty() { containerState_m->markMomentsDirty(); }
+    void markMomentsClean() { containerState_m->markMomentsClean(); }
+
+    void updateMoments() {
+        /*
+        Quick check that this container was registered with a BunchStateHandler. If not, throw an
+        error. This seems to be an easy to make error when interacting (e.g. through unit tests)
+        with the ParticleContainer.
+        */
+        if (!containerState_m) {
+            throw OpalException(
+                    "ParticleContainer::updateMoments",
+                    "BunchStateHandler not set in ParticleContainer (containerState is null).");
+        }
+
+        size_t Np = this->getTotalNum();
+        Np = (Np == 0) ? 1 : Np;  // only used for normalization in the moments class --> avoid
+                                  // division by zero
+
+        size_t Nlocal = this->getLocalNum();
+
+        distMoments_m.computeMoments(this->R.getView(), this->P.getView(), getMView(), Np, Nlocal);
+
+        if (spinEnabled_m) {
+            distMoments_m.computePolarizationMoments(Pol.getView(), Np, Nlocal);
+        }
+    }
+
+    void setEnergyReferenceMass(double referenceMassGeV, bool rescaleToReference = true) {
+        distMoments_m.setEnergyReferenceMass(referenceMassGeV, rescaleToReference);
+    }
+
+    Vector_t<double, 3> getMeanP() const { return distMoments_m.getMeanMomentum(); }
+
+    Vector_t<double, 3> getRmsP() const { return distMoments_m.getStandardDeviationMomentum(); }
+
+    Vector_t<double, 3> getMeanR() const { return distMoments_m.getMeanPosition(); }
+
+    Vector_t<double, 3> getRmsR() const { return distMoments_m.getStandardDeviationPosition(); }
+
+    Vector_t<double, 3> getRmsRP() const { return distMoments_m.getStandardDeviationRP(); }
+
+    /// Mean polarization vector across the bunch: $\langle \vec P \rangle$.
+    /// Returns the zero vector when the container does not track spin (the
+    /// moments are then never computed and stay zeroed by reset()).
+    Vector_t<double, 3> getMeanPol() const { return distMoments_m.getMeanPolarization(); }
+
+    /// Per-component RMS of the polarization vector across the bunch.
+    /// Defined as $\sqrt{\langle P_i^2\rangle - \langle P_i\rangle^2}$. Returns
+    /// the zero vector when the container does not track spin.
+    Vector_t<double, 3> getRmsPol() const {
+        return distMoments_m.getStandardDeviationPolarization();
+    }
+
+    /// Magnitude of the mean polarization vector, $|\langle \vec P \rangle|$.
+    /// This is the standard depolarization observable — distinct from
+    /// $\langle |\vec P|\rangle$.
+    double getMeanPolMagnitude() const {
+        const Vector_t<double, 3> mean = getMeanPol();
+        return Kokkos::sqrt(mean[0] * mean[0] + mean[1] * mean[1] + mean[2] * mean[2]);
+    }
+
+    void computeMinMaxR() {
+        size_t Nlocal = this->getLocalNum();
+        distMoments_m.computeMinMaxPosition(this->R.getView(), Nlocal);
+    }
+
+    Vector_t<double, 3> getMinR() const { return distMoments_m.getMinPosition(); }
+
+    Vector_t<double, 3> getMaxR() const { return distMoments_m.getMaxPosition(); }
+
+    matrix6x6_t getCovMatrix() const { return distMoments_m.getMoments6x6(); }
+
+    double getMeanKineticEnergy() const { return distMoments_m.getMeanKineticEnergy(); }
+
+    double getStdKineticEnergy() const { return distMoments_m.getStdKineticEnergy(); }
+
+    Vector_t<double, 6> getMeans() const { return distMoments_m.getMeans(); }
+
+    Vector_t<double, 6> getCentroid() const { return distMoments_m.getCentroid(); }
+
+    Vector_t<double, 3> getNormEmit() const { return distMoments_m.getNormalizedEmittance(); }
+
+    Vector_t<double, 3> getGeometricEmit() const { return distMoments_m.getGeometricEmittance(); }
+
+    double getDx() const { return distMoments_m.getDx(); }
+
+    double getDDx() const { return distMoments_m.getDDx(); }
+
+    double getDy() const { return distMoments_m.getDy(); }
+
+    double getDDy() const { return distMoments_m.getDDy(); }
+
+    double getDebyeLength() const { return distMoments_m.getDebyeLength(); }
+
+    double getMeanGammaZ() const { return distMoments_m.getMeanGammaZ(); }
+
+    double getTemperature() const { return distMoments_m.getTemperature(); }
+
+    double getPlasmaParameter() const { return distMoments_m.getPlasmaParameter(); }
+
+    double computeDebyeLength(double density) {
+        size_t Np = this->getTotalNum();
+        Np = (Np == 0) ? 1 : Np;  // only used for normalization in the moments class --> avoid
+                                  // division by zero
+
+        size_t Nlocal = this->getLocalNum();
+        distMoments_m.computeDebyeLength(this->P.getView(), Np, Nlocal, density);
+        return distMoments_m.getDebyeLength();
+    }
+
+    /**
+     * @brief Set particle charge for the active Q storage mode.
+     * @param q Charge value in [Cb].
+     *
+     * In `QMStorageMode::Attributes`, this assigns `q` to every local particle.
+     * In `QMStorageMode::SingleValue`, this updates the shared scalar charge view.
+     */
+    void setQ(double q) {
+        if (qmStorageMode_m == QMStorageMode::Attributes) {
+            auto view         = QAttr.getView();
+            const size_type n = this->getLocalNum();
+            if (n == 0) {
+                return;
+            }
+            Kokkos::parallel_for(
+                    "ParticleContainer::setQ", n,
+                    KOKKOS_LAMBDA(const size_type i) { view(i) = q; });
+            Kokkos::fence();
+        } else {
+            Kokkos::deep_copy(QView_m, q);
+        }
+    }
+
+    /// @brief Get charge per particle [Cb].
+    double getChargePerParticle() const {
+        if (qmStorageMode_m == QMStorageMode::Attributes) {
+            auto view = QAttr.getView();
+            if (view.extent(0) == 0) {
+                return 0.0;
+            }
+            double q = 0.0;
+            Kokkos::deep_copy(q, Kokkos::subview(view, 0));
+            return q;
+        }
+        double q = 0.0;
+        Kokkos::deep_copy(q, Kokkos::subview(QView_m, 0));
+        return q;
+    }
+
+    /// @brief Get total charge [Cb] in this container.
+    double getTotalCharge() const { return getChargePerParticle() * this->getTotalNum(); }
+
+    /**
+     * @brief Set particle mass for the active M storage mode.
+     * @param m Mass value in [GeV].
+     *
+     * In `QMStorageMode::Attributes`, this assigns `m` to every local particle.
+     * In `QMStorageMode::SingleValue`, this updates the shared scalar mass view.
+     */
+    void setM(double m) {
+        if (qmStorageMode_m == QMStorageMode::Attributes) {
+            auto view         = MAttr.getView();
+            const size_type n = view.extent(0);
+
+            Kokkos::parallel_for(
+                    "ParticleContainer::setM", n,
+                    KOKKOS_LAMBDA(const size_type i) { view(i) = m; });
+            Kokkos::fence();
+        } else {
+            Kokkos::deep_copy(MView_m, m);
+        }
+    }
+
+    /// @brief Get mass per particle [GeV].
+    double getMassPerParticle() const {
+        if (qmStorageMode_m == QMStorageMode::Attributes) {
+            auto view = MAttr.getView();
+            if (view.extent(0) == 0) {
+                return 0.0;
+            }
+            double m = 0.0;
+            Kokkos::deep_copy(m, Kokkos::subview(view, 0));
+            return m;
+        }
+        double m = 0.0;
+        Kokkos::deep_copy(m, Kokkos::subview(MView_m, 0));
+        return m;
+    }
+
+    /// @brief Get total mass [GeV] in this container.
+    double getTotalMass() const { return getMassPerParticle() * this->getTotalNum(); }
+
+    /// @brief Get the reference particle position (const).
+    const Vector_t<double, Dim>& getRefPartR() const { return refPartR_m; }
+
+    /// @brief Get the reference particle position.
+    Vector_t<double, Dim>& getRefPartR() { return refPartR_m; }
+
+    /// @brief Set the reference particle position.
+    void setRefPartR(const Vector_t<double, Dim>& refPartR) { refPartR_m = refPartR; }
+
+    /// @brief Get the reference particle momentum (const).
+    const Vector_t<double, Dim>& getRefPartP() const { return refPartP_m; }
+
+    /// @brief Get the reference particle momentum.
+    Vector_t<double, Dim>& getRefPartP() { return refPartP_m; }
+
+    /// @brief Set the reference particle momentum.
+    void setRefPartP(const Vector_t<double, Dim>& refPartP) { refPartP_m = refPartP; }
+
+    /// @brief Set reference particle data.
+    void setReference(const PartData* ref) {
+        reference_m = ref;
+        if (reference_m) {
+            // PartData mass is stored in eV; DistributionMoments expects GeV.
+            setEnergyReferenceMass(reference_m->getM() * Units::eV2GeV, true);
+        }
+    }
+
+    /// @brief Get reference particle data.
+    const PartData* getReference() const { return reference_m; }
+
+    /// @brief Set longitudinal position along design trajectory.
+    void set_sPos(double sPos) { sPos_m = sPos; }
+
+    /// @brief Get longitudinal position along design trajectory.
+    double get_sPos() const { return sPos_m; }
+
+    /// @brief Set global-to-local rotation quaternion.
+    void setGlobalToLocalQuaternion(const Quaternion_t& globalToLocalQuaternion) {
+        globalToLocalQuaternion_m = globalToLocalQuaternion;
+    }
+
+    /// @brief Get global-to-local rotation quaternion.
+    Quaternion_t getGlobalToLocalQuaternion() const { return globalToLocalQuaternion_m; }
+
+    /// @brief Get local-to-lab coordinate transformation (const).
+    const CoordinateSystemTrafo& getToLabTrafo() const { return toLabTrafo_m; }
+
+    /// @brief Get local-to-lab coordinate transformation.
+    CoordinateSystemTrafo& getToLabTrafo() { return toLabTrafo_m; }
+
+    /// @brief Set local-to-lab coordinate transformation.
+    void setToLabTrafo(const CoordinateSystemTrafo& toLabTrafo) { toLabTrafo_m = toLabTrafo; }
+
+    /**
+     * @brief Advance reference/lab transform state and map bunch accordingly.
+     * @return The frame change applied to the bunch (old bunch frame to new bunch frame), so
+     *   containers that use this container's reference can apply the same change.
+     */
+    CoordinateSystemTrafo updateRefToLabCSTrafo(double bunchDT) {
+        Vector_t<double, 3> R = toLabTrafo_m.transformFrom(refPartR_m);
+        Vector_t<double, 3> P = toLabTrafo_m.rotateFrom(refPartP_m);
+
+        const double ds =
+                std::copysign(1.0, bunchDT) * std::sqrt(R[0] * R[0] + R[1] * R[1] + R[2] * R[2]);
+        sPos_m += ds;
+
+        CoordinateSystemTrafo update(R, getQuaternion(P, Vector_t<double, 3>(0, 0, 1)));
+        transformBunch(update);
+        toLabTrafo_m = toLabTrafo_m * update.inverted();
+        return update;
+    }
+
+    /**
+     * @brief Take over another container's reference particle, frame and path length.
+     *
+     * Used for a decay daughter container, which has no reference particle of its own. The
+     * particles are not moved; use this only when both containers already share a frame or
+     * this container is empty.
+     *
+     * @param root Container whose reference particle this container uses.
+     */
+    void copyReferenceOf(const ParticleContainer& root) {
+        refPartR_m   = root.refPartR_m;
+        refPartP_m   = root.refPartP_m;
+        toLabTrafo_m = root.toLabTrafo_m;
+        sPos_m       = root.sPos_m;
+    }
+
+    /**
+     * @brief Follow a frame change of the container whose reference particle this one uses.
+     *
+     * Applies @p update (the value returned by @p root's updateRefToLabCSTrafo, or the
+     * identity) to this container's particles, then copies @p root's reference particle,
+     * frame and path length. The particles' lab positions do not change.
+     *
+     * @param root Container whose reference particle this container uses.
+     * @param update Frame change @p root applied to its own particles in this step.
+     */
+    void followFrameOf(const ParticleContainer& root, const CoordinateSystemTrafo& update) {
+        transformBunch(update);
+        copyReferenceOf(root);
+    }
+
+    /// @brief Apply a fractional Boris step and update reference/lab transform state.
+    template <typename Pusher>
+    void applyFractionalStep(const Pusher& pusher, double tau, double pathLengthTarget) {
+        refPartR_m /= (Physics::c * 2 * tau);
+        pusher.push(refPartR_m, refPartP_m, tau);
+        refPartR_m *= (Physics::c * 2 * tau);
+
+        sPos_m = pathLengthTarget;
+        toLabTrafo_m.transformFrom(refPartR_m);
+        Vector_t<double, 3> R = refPartR_m;
+        toLabTrafo_m.rotateFrom(refPartP_m);
+        Vector_t<double, 3> P = refPartP_m;
+        CoordinateSystemTrafo update(R, getQuaternion(P, Vector_t<double, 3>(0, 0, 1)));
+        toLabTrafo_m = toLabTrafo_m * update.inverted();
+    }
+
+    /**
+     * @brief Scale particle time-step weights by charge before scatter.
+     *
+     * Multiplies each local `dt[i]` by the corresponding charge used for deposition.
+     * In `QMStorageMode::Attributes`, the per-particle `QAttr(i)` is used.
+     * In `QMStorageMode::SingleValue`, the shared scalar `QView_m(0)` is used.
+     *
+     */
+    void scaleDtByCharge() {
+        auto dtView       = dt.getView();
+        const size_type n = this->getLocalNum();
+        if (n == 0) {
+            return;
+        }
+
+        if (qmStorageMode_m == QMStorageMode::Attributes) {
+            auto qView = QAttr.getView();
+            Kokkos::parallel_for(
+                    "ParticleContainer::scaleDtByCharge(attrs)", n,
+                    KOKKOS_LAMBDA(const size_type i) { dtView(i) *= qView(i); });
+        } else {
+            auto QView = QView_m;
+            Kokkos::parallel_for(
+                    "ParticleContainer::scaleDtByCharge(single)", n,
+                    KOKKOS_LAMBDA(const size_type i) { dtView(i) *= QView(0); });
+        }
+        Kokkos::fence();
+    }
+
+    /**
+     * @brief Restore original `dt` values after `scaleDtByCharge()`.
+     *
+     * Divides each local `dt[i]` by the same charge factor applied in
+     * `scaleDtByCharge()`.
+     *
+     */
+    void unscaleDtByCharge() {
+        auto dtView       = dt.getView();
+        const size_type n = this->getLocalNum();
+        if (n == 0) {
+            return;
+        }
+
+        if (qmStorageMode_m == QMStorageMode::Attributes) {
+            auto qView = QAttr.getView();
+            Kokkos::parallel_for(
+                    "ParticleContainer::unscaleDtByCharge(attrs)", n,
+                    KOKKOS_LAMBDA(const size_type i) { dtView(i) /= qView(i); });
+        } else {
+            auto QView = QView_m;
+            Kokkos::parallel_for(
+                    "ParticleContainer::unscaleDtByCharge(single)", n,
+                    KOKKOS_LAMBDA(const size_type i) { dtView(i) /= QView(0); });
+        }
+        Kokkos::fence();
+    }
+
+    /**
+     * @brief Transform positions to unitless coordinates using each particle's dt[i].
+     *
+     * Applies \f$ R'_i = R_i / (c \, dt_i) \f$. Requires valid non-zero dt values per particle.
+     *
+     * @throws OpalException if this container is already in unitless positions.
+     */
+    void switchToUnitlessPositions() {
+        if (containerState_m->unitlessPositions) {
+            throw OpalException(
+                    "ParticleContainer::switchToUnitlessPositions",
+                    "ParticleContainer is already in unitless positions!");
+        }
+        auto Rview             = this->R.getView();
+        auto dtview            = this->dt.getView();
+        const size_type nLocal = this->getLocalNum();
+        Kokkos::parallel_for(
+                "ParticleContainer::switchToUnitlessPositions", nLocal,
+                KOKKOS_LAMBDA(const size_type i) { Rview(i) *= 1.0 / (Physics::c * dtview(i)); });
+        Kokkos::fence();
+        containerState_m->setUnitlessPositions(true);
+    }
+
+    /**
+     * @brief Restore physical positions from unitless form using each particle's dt[i].
+     *
+     * Applies \f$ R_i = R'_i \, c \, dt_i \f$.
+     *
+     * @throws OpalException if this container is not currently in unitless positions.
+     */
+    void switchOffUnitlessPositions() {
+        if (!containerState_m->unitlessPositions) {
+            throw OpalException(
+                    "ParticleContainer::switchOffUnitlessPositions",
+                    "ParticleContainer is already in physical positions!");
+        }
+        auto Rview             = this->R.getView();
+        auto dtview            = this->dt.getView();
+        const size_type nLocal = this->getLocalNum();
+        Kokkos::parallel_for(
+                "ParticleContainer::switchOffUnitlessPositions", nLocal,
+                KOKKOS_LAMBDA(const size_type i) { Rview(i) *= Physics::c * dtview(i); });
+        Kokkos::fence();
+        containerState_m->setUnitlessPositions(false);
+    }
+    QMStorageMode getQMStorageMode() const { return qmStorageMode_m; }
+
+    void setGlobalProcesses(std::vector<std::unique_ptr<GlobalProcess>> processes) {
+        globalProcesses_m = std::move(processes);
+    }
+
+    const std::vector<std::unique_ptr<GlobalProcess>>& getGlobalProcesses() const {
+        return globalProcesses_m;
+    }
+
+    /**
+     * @brief Mark particles whose position is more than sigmasAway standard deviations
+     *        from the bunch mean in any spatial dimension.
+     *
+     * Recomputes distribution moments, then ORs the outlier decision into
+     * InvalidMask. Deletion is intentionally deferred to deleteInvalidParticles().
+     *
+     * @param sigmasAway Number of standard deviations defining the boundary.
+     * @return Global number of newly marked particles (across all MPI ranks).
+     */
+    size_type markParticlesOutside(double sigmasAway) {
+        size_type nLocal = this->getLocalNum();
+
+        if (nLocal == 0 && this->getTotalNum() == 0) return 0;
+        if (sigmasAway <= 0.0) return 0;
+
+        // Force fresh moments: cached values may not reflect the exact particle state at this
+        // point because emission or migration can shift R between statistics updates.
+        // Safety-critical deletion always recomputes.
+        markMomentsDirty();
+        updateMoments();
+
+        Vector_t<double, Dim> meanR = getMeanR();
+        Vector_t<double, Dim> rmsR  = getRmsR();
+
+        double lb0 = meanR[0] - sigmasAway * rmsR[0];
+        double lb1 = meanR[1] - sigmasAway * rmsR[1];
+        double lb2 = meanR[2] - sigmasAway * rmsR[2];
+        double ub0 = meanR[0] + sigmasAway * rmsR[0];
+        double ub1 = meanR[1] + sigmasAway * rmsR[1];
+        double ub2 = meanR[2] + sigmasAway * rmsR[2];
+
+        auto invalid = InvalidMask.getView();
+        auto Rview   = this->R.getView();
+
+        size_type localMarkedNum = 0;
+        Kokkos::parallel_reduce(
+                "ParticleContainer::markParticlesOutside", nLocal,
+                KOKKOS_LAMBDA(const size_type i, size_type& count) {
+                    bool outside = (Rview(i)[0] < lb0 || Rview(i)[0] > ub0)
+                                   || (Rview(i)[1] < lb1 || Rview(i)[1] > ub1)
+                                   || (Rview(i)[2] < lb2 || Rview(i)[2] > ub2);
+                    const bool newlyMarked = outside && !invalid(i);
+                    invalid(i)             = invalid(i) || outside;
+                    count += newlyMarked ? 1 : 0;
+                },
+                localMarkedNum);
+        Kokkos::fence();  // not needed, but also doesn't hurt
+
+        size_type globalMarkedNum = 0;
+        ippl::Comm->allreduce(localMarkedNum, globalMarkedNum, 1, std::plus<size_type>());
+        return globalMarkedNum;
+    }
+
+    /**
+     * @brief Create/allocate a specified number of particles.
+     *
+     * This function creates a given number of particles in the container. It's a wrapper around the
+     * non destructive IPPL particle create function, but will print out a warning if the create
+     * call led to unnecessary reallocation (i.e. if the new total number of particles exceeds the
+     * previous capacity).
+     *
+     * @note The underlying `create` is a collective call, so all MPI ranks must call this function.
+     * IPPL automatically handles the short-circuit if internal capacity is sufficient.
+     *
+     * @param numParticles The number of particles to create.
+     */
+    void createParticles(size_type numParticles) {
+        Inform m("ParticleContainer::createParticles");
+
+        // Total allocated capacity of the underlying view
+        size_type oldCapacity = this->R.size();
+        size_type oldLocalNum = this->getLocalNum();
+        this->create(numParticles, true);  // non_destructive = true
+        size_type newCapacity = this->R.size();
+
+        // Initialize newly active slots.  Emitted particles are created after
+        // the per-step field reset, so E/B must be explicitly cleared here.
+        /// \todo: can probably be removed later, after my flattop debugging
+        auto invalid = InvalidMask.getView();
+        auto dtView  = dt.getView();
+        auto phiView = Phi.getView();
+        auto binView = Bin.getView();
+        auto eView   = E.getView();
+        auto bView   = B.getView();
+        Kokkos::parallel_for(
+                "ParticleContainer::createParticles::initializeNewSlots", numParticles,
+                KOKKOS_LAMBDA(const size_type i) {
+                    const size_type idx = oldLocalNum + i;
+                    invalid(idx)        = false;
+                    dtView(idx)         = 0.0;
+                    phiView(idx)        = 0.0;
+                    binView(idx)        = 0;
+                    eView(idx)          = Vector_t<double, Dim>(0.0);
+                    bView(idx)          = Vector_t<double, Dim>(0.0);
+                });
+        // A reused slot still holds the spin of a deleted particle. Pol exists only with spin.
+        if (spinEnabled_m) {
+            auto polView = Pol.getView();
+            Kokkos::parallel_for(
+                    "ParticleContainer::createParticles::resetPol", numParticles,
+                    KOKKOS_LAMBDA(const size_type i) {
+                        polView(oldLocalNum + i) = spin_vector_type(0.0);
+                    });
+        }
+        Kokkos::fence();
+
+        // Pretty print numParticles, newCapacity and new totalNum + localNum after creation
+        constexpr int labelWidth = 32;
+        m << level4 << std::left << std::setw(labelWidth) << "Requested creation:" << numParticles
+          << " particles" << endl;
+        m << level4 << std::setw(labelWidth) << "New total number:" << this->getTotalNum()
+          << " (local: " << this->getLocalNum() << ")" << endl;
+        m << level4 << std::setw(labelWidth) << "Underlying view capacity:" << newCapacity << endl;
+
+        if (newCapacity != oldCapacity) {
+            m << level1
+              << "WARNING: createParticles triggered a reallocation of the underlying particle "
+                 "views! This can be a costly operation. To avoid this, consider increasing "
+                 "preallocation (BEAM::NALLOC) or the overallocation factor."
+              << endl;
+        }
+    }
+
+    void allocateParticles(size_type numParticles) {
+        Inform m("ParticleContainer::allocateParticles");
+
+        // Total allocated capacity of the underlying view
+        size_type oldCapacity = this->R.size();
+        if (oldCapacity != 0) {
+            throw OpalException(
+                    "ParticleContainer::allocateParticles",
+                    "Underlying views already allocated. This function is meant to be called on an "
+                    "empty container, since it is destructive on existing particles. If you want "
+                    "to create particles without deallocating existing ones, use createParticles() "
+                    "instead.");
+        }
+
+        this->alloc(numParticles);  // alloc is always destructive
+
+        m << level4 << std::left << std::setw(32) << "Requested allocation:" << numParticles
+          << " particles" << endl;
+        m << level4 << std::setw(32) << "Size of underlying view:" << this->R.size() << endl;
+    }
+
+    void printRankLoadInfo(const std::string& label = "") const {
+        const int nranks = ippl::Comm->size();
+        const int rank   = ippl::Comm->rank();
+        const int root   = 0;
+
+        std::vector<size_type> localParticles(static_cast<size_t>(nranks), 0);
+        std::vector<size_type> localCapacity(static_cast<size_t>(nranks), 0);
+        std::vector<size_type> rankParticles(static_cast<size_t>(nranks), 0);
+        std::vector<size_type> rankCapacity(static_cast<size_t>(nranks), 0);
+
+        localParticles[static_cast<size_t>(rank)] = this->getLocalNum();
+        localCapacity[static_cast<size_t>(rank)]  = this->R.size();
+
+        ippl::Comm->reduce(
+                localParticles.data(), rankParticles.data(), nranks, std::plus<size_type>(), root);
+        ippl::Comm->reduce(
+                localCapacity.data(), rankCapacity.data(), nranks, std::plus<size_type>(), root);
+
+        if (rank != root) {
+            return;
+        }
+
+        const size_type totalParticles =
+                std::accumulate(rankParticles.begin(), rankParticles.end(), size_type{0});
+        const size_type totalCapacity =
+                std::accumulate(rankCapacity.begin(), rankCapacity.end(), size_type{0});
+
+        auto percent = [](size_type value, size_type total) {
+            return total > 0 ? 100.0 * static_cast<double>(value) / static_cast<double>(total)
+                             : 0.0;
+        };
+        auto localRatioPercent = [](size_type numerator, size_type denominator) {
+            return denominator > 0 ? 100.0 * static_cast<double>(numerator)
+                                             / static_cast<double>(denominator)
+                                   : 0.0;
+        };
+
+        Inform m("ParticleContainer::printRankLoadInfo", root);
+        constexpr int labelWidth = 24;
+        constexpr int colWidth   = 12;
+
+        m << level2 << "Particle load by rank";
+        if (!label.empty()) {
+            m << " (" << label << ")";
+        }
+        m << endl;
+        m << level2 << std::left << std::setw(labelWidth) << "Metric";
+        for (int r = 0; r < nranks; ++r) {
+            m << " | " << std::right << std::setw(colWidth) << ("Rank " + std::to_string(r));
+        }
+        m << endl;
+
+        m << level2 << std::left << std::setw(labelWidth) << "Particles [%]" << std::fixed
+          << std::setprecision(2);
+        for (int r = 0; r < nranks; ++r) {
+            m << " | " << std::right << std::setw(colWidth)
+              << percent(rankParticles[static_cast<size_t>(r)], totalParticles);
+        }
+        m << endl;
+
+        m << level2 << std::left << std::setw(labelWidth) << "Allocated memory [%]" << std::fixed
+          << std::setprecision(2);
+        for (int r = 0; r < nranks; ++r) {
+            m << " | " << std::right << std::setw(colWidth)
+              << percent(rankCapacity[static_cast<size_t>(r)], totalCapacity);
+        }
+        m << endl;
+
+        m << level2 << std::left << std::setw(labelWidth) << "Overallocation [%]" << std::fixed
+          << std::setprecision(2);
+        for (int r = 0; r < nranks; ++r) {
+            const auto i = static_cast<size_t>(r);
+            m << " | " << std::right << std::setw(colWidth)
+              << localRatioPercent(rankCapacity[i], rankParticles[i]);
+        }
+        m << endl;
+    }
+
+    /**
+     * @brief Delete particles currently marked in InvalidMask.
+     *
+     * This is the only ParticleContainer function that is allowed to compact the
+     * IPPL particle arrays. All deletion producers must only update InvalidMask.
+     *
+     * @return Global number of particles deleted (across all MPI ranks).
+     */
+    size_type deleteInvalidParticles() {
+        Inform m("ParticleContainer::deleteInvalidParticles");
+
+        const size_type nLocal = this->getLocalNum();
+        auto invalid           = InvalidMask.getView();
+        if (invalid.extent(0) < nLocal) {
+            throw OpalException(
+                    "ParticleContainer::deleteInvalidParticles",
+                    "InvalidMask extent (" + std::to_string(invalid.extent(0))
+                            + ") is smaller than local particle count (" + std::to_string(nLocal)
+                            + ").");
+        }
+
+        size_type localDestroyNum = 0;
+        Kokkos::parallel_reduce(
+                "ParticleContainer::deleteInvalidParticles::count", nLocal,
+                KOKKOS_LAMBDA(const size_type i, size_type& count) { count += invalid(i) ? 1 : 0; },
+                localDestroyNum);
+        Kokkos::fence();
+
+        size_type globalDestroyNum = 0;
+        ippl::Comm->allreduce(localDestroyNum, globalDestroyNum, 1, std::plus<size_type>());
+
+        // This is a collective call! All ranks must execute it. Note that this is safe with the
+        // current IPPL implementation: ParticleBase::internalDestroy() first consumes the invalid
+        // view to build internal deleteIndex_m and keepIndex_m arrays. Meaning, the fact that
+        // destroy edits the InvalidMask while using it is not a problem.
+        Base::destroy(invalid, localDestroyNum);
+
+        // Mark moments dirty only if there were changes globally.
+        if (globalDestroyNum > 0) {
+            markMomentsDirty();
+        }
+
+        // Reset particle mask after deletion.
+        InvalidMask = false;
+        Kokkos::fence();
+
+        constexpr int labelWidth = 32;
+        m << level4 << std::left << std::setw(labelWidth)
+          << "Requested destruction:" << localDestroyNum << " particles" << endl
+          << std::setw(labelWidth) << "New total number:" << this->getTotalNum()
+          << " (local: " << this->getLocalNum() << ")" << endl;
+
+        return globalDestroyNum;
+    }
+
+private:
+    std::unique_ptr<ippl::ParticleAttrib<ippl::Vector<T, Dim>>> migrationPositions_m;
+    std::unique_ptr<SpatialLayout_t> spatialLayout_m;
+    std::unique_ptr<P3MLayout_t> overlapLayout_m;
+
+    QMStorageMode qmStorageMode_m = QMStorageMode::SingleValue;
+
+    DistributionMoments distMoments_m;
+
+    /// Per-container state slot allocated by the handler at `setBunchStateHandler`.
+    /// Owned here as the only strong reference; the handler keeps a weak_ptr, so
+    /// destroying this container automatically releases the slot. The slot's own
+    /// methods handle MPI consistency, so no direct handler reference is needed.
+    std::shared_ptr<BunchStateHandler::ContainerState> containerState_m;
+
+    // Single shared scalar mode stored as a length-1 Kokkos view.
+    qm_view_type QView_m;
+    qm_view_type MView_m;
+
+    // Per-particle attributes mode
+    ippl::ParticleAttrib<double> QAttr;
+    ippl::ParticleAttrib<double> MAttr;
+
+    // Whether the spin attribute is registered on this container.
+    bool spinEnabled_m = false;
+
+    // Reference particle information
+    Vector_t<double, Dim> refPartR_m;
+    Vector_t<double, Dim> refPartP_m;
+
+    // Global to local quaternion
+    Quaternion_t globalToLocalQuaternion_m;
+
+    // Reference particle to lab transformation
+    CoordinateSystemTrafo toLabTrafo_m;
+
+    // Particle reference data (!= reference particle)
+    const PartData* reference_m = nullptr;
+
+    // Distance along the beamline
+    double sPos_m = 0.0;
+
+    /// Global physics processes attached to this container.
+    std::vector<std::unique_ptr<GlobalProcess>> globalProcesses_m;
+};
+
+#endif

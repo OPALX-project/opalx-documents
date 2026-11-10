@@ -1,0 +1,28 @@
+{
+  "command": [
+    "mpirun",
+    "-np",
+    "2",
+    "--map-by",
+    "slot",
+    "--bind-to",
+    "none",
+    "/psi/home/adelmann/opalx-dev/dba/validation-mpi-z-20261106/gpu_rank.sh",
+    "/psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/src/opalx.pre-longitudinal-density-20261106",
+    "case.in",
+    "--info",
+    "1",
+    "--2D5BatchSize",
+    "64",
+    "--restart",
+    "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/dba-initial-state.h5"
+  ],
+  "ranks": 2,
+  "returncode": 0,
+  "wall_seconds": 31.07748433109373,
+  "job": "355046",
+  "binary_sha256": "be82331b32e3ae85e09ab608fc516f13eaceb44c27b0a92cc58960282c7b4a74",
+  "source_base_commit": "57f3997293fb0994267804257a825ded2b909f73",
+  "mode": "before",
+  "steps": 1000
+}

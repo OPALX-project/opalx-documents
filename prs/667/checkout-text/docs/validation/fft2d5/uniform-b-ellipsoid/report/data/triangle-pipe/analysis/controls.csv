@@ -1,0 +1,14 @@
+case_a,case_b,kind,points,max_change_axis_scale_percent
+m64,m128,OPALX coupled mesh,144,0.062682589911872
+m128,m256,OPALX coupled mesh,144,0.5511130020224085
+m256,source16384,OPALX longitudinal source,144,0.551425023442331
+m128-source16384,source16384,OPALX matched finer-source mesh,144,0.12527981139672256
+slice-64x64x128-r1,slice-128x128x128-r1,PyORBIT transverse mesh,144,2.3088607619774386
+slice-128x128x128-r1,slice-256x256x128-r1,PyORBIT transverse mesh,144,0.8269001385531587
+slice-256x256x128-r1,slice-512x512x128-r1,PyORBIT transverse mesh,144,0.33835187184203463
+slice-256x256x128-r1,slice-256x256x256-ns65536-r1,PyORBIT longitudinal mesh plus source,144,2.1968473077377257e-11
+slice-512x512x128-r1,slice-512x512x128-nr32np64-r1,PyORBIT cross-section source,144,0.2838486630289782
+slice-512x512x128-r1,slice-512x512x128-r2,PyORBIT MPI ranks,144,1.421990311597675e-12
+slice-512x512x128-r1,slice-512x512x128-nativeaudit-r2,PyORBIT native-audited MPI ranks,144,1.421990311597675e-12
+slice-512x512x128-nr32np64-r1,slice-512x512x128-nr32np64-boundary256m64-r1,PyORBIT conducting boundary resolution,144,6.353810338524323e-09
+rb-128x128x128-r1,rb-128x128x256-ns65536-r1,PyORBIT RB longitudinal mesh plus source,144,6.957734153793064e-05

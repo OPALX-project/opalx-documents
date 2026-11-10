@@ -1,0 +1,9 @@
+{
+  "before_bytes": 77759912,
+  "removed_bytes": 58381246,
+  "removed_files": 1879,
+  "deduplicated_files": 918,
+  "protected_latex_sources": 174,
+  "protected_input_support_files": 19,
+  "policy": "Preserve LaTeX/TikZ and build inventories, OPALX/PyORBIT input packages, analysis code, notes and compact summaries. Remove bulk logs/statistics, generated displays, high-resolution raw tables and caches. Deduplicate byte-identical historical report JSON/CSV through inventory aliases."
+}

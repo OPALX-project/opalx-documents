@@ -1,0 +1,14 @@
+{
+  "cpp_path": "unit_tests/Distribution/TestGaussian.cpp",
+  "before_sha256": "0dc5c3c23ca4921838e4a6a771ae6d3ba3cdc4e6765d52f56d33d5a925449477",
+  "after_sha256": "6569cabdd647bd40dcbbeb280819aca92ea724b5f06b30972975b5bf830fa4ce",
+  "parent_manifest": {
+    "head": "b1551b9c337c0c57dd21a4e2e26ccaff10fdfc93",
+    "changed_file": "unit_tests/Distribution/TestGaussian.cpp",
+    "before_sha256": "0dc5c3c23ca4921838e4a6a771ae6d3ba3cdc4e6765d52f56d33d5a925449477",
+    "after_sha256": "6569cabdd647bd40dcbbeb280819aca92ea724b5f06b30972975b5bf830fa4ce",
+    "prior_files_preserved": 37,
+    "tail_check_family_failure_probability": 1e-06,
+    "alpha_allocation": "half Bernstein counts, half normal union-bound maximum; existing RMS checks unchanged"
+  }
+}

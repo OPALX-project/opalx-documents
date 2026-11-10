@@ -1,0 +1,767 @@
+{
+  "study": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe",
+  "date": "2026-11-02",
+  "scope": "Completed native frozen triangular-pipe fields/kicks; no tracking or tunes",
+  "sources": [
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/HANDOFF.md",
+      "snapshot": "data/triangle-pipe/HANDOFF.md",
+      "sha256": "5d3c2356999fb90542a8591a1247372d4f9866029bc8ffce60b16331a04cd0f8"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/README.md",
+      "snapshot": "data/triangle-pipe/README.md",
+      "sha256": "0b72c8c9f043a7458db691ab9b5d126e642f53d520305c371fd599f0a439b973"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/analysis/analyze.py",
+      "snapshot": "data/triangle-pipe/analysis/analyze.py",
+      "sha256": "a037a40bb6959daed9b2dbce9be082286754fb9aacccca6cf4d7007c9f527ba5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/analysis/controls.csv",
+      "snapshot": "data/triangle-pipe/analysis/controls.csv",
+      "sha256": "fa2bdb3baa99bc8f1ffe778836954d71e12207ce292057b41ee5a67a18f588ae"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/analysis/fields.csv",
+      "snapshot": "data/triangle-pipe/analysis/fields.csv",
+      "sha256": "8453a3a6067da5f7455b5e360b726b8800228cf23f009a59f473b2cbb7057037"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/analysis/integrity.json",
+      "snapshot": "data/triangle-pipe/analysis/integrity.json",
+      "sha256": "f8f914ba2a0f03210437c45efd015bce14f6624119f81f4d1d056afc08f17630"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/analysis/selection.json",
+      "snapshot": "data/triangle-pipe/analysis/selection.json",
+      "sha256": "c0c9920eb4c3a68a6b4f79240949cd79760c3996d1160df43efc51d5c2db9685"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/analysis/source-quadrature.json",
+      "snapshot": "data/triangle-pipe/analysis/source-quadrature.json",
+      "sha256": "7a07dab4f2e8ecdb33f511147e6acd7161b8e3ef38cffee75cc40a9f8ee74263"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/analysis/summary.csv",
+      "snapshot": "data/triangle-pipe/analysis/summary.csv",
+      "sha256": "98d70505e442e0c610ea524559bb628ab4396c80dbbdc279816ef23f2e1b6504"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/analytic-audit/AUDIT.md",
+      "snapshot": "data/triangle-pipe/analytic-audit/AUDIT.md",
+      "sha256": "05abac2645e448a5681c1182cf3ce3896f8927818aba334492611f328663e71c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/analytic-audit/HANDOFF.md",
+      "snapshot": "data/triangle-pipe/analytic-audit/HANDOFF.md",
+      "sha256": "2ade12f7ddd88664192bece5861b998577003dd2e710fb26188ffaa615fb99e2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/analytic-audit/analytic-checks.json",
+      "snapshot": "data/triangle-pipe/analytic-audit/analytic-checks.json",
+      "sha256": "302b17e9effce3840603be2af409e2605ffad3df74377c84c840e502b163d70c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/analytic-audit/analytic-reference.csv",
+      "snapshot": "data/triangle-pipe/analytic-audit/analytic-reference.csv",
+      "sha256": "0c2e3070eb4e942132867c577cf35e514cd67bccedca5ac588b0cd35aeb9057a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/analytic-audit/analytic-reference.json",
+      "snapshot": "data/triangle-pipe/analytic-audit/analytic-reference.json",
+      "sha256": "198403c9f0fe67a41c0929035b4ccc75153b5fdf30cb0710a4b7efa55cc0144e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/analytic-audit/analytic.py",
+      "snapshot": "data/triangle-pipe/analytic-audit/analytic.py",
+      "sha256": "fcb93255f2eddd659a9a73047465758297cdb42b41c37d318b3f934c8378a55f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/analytic-audit/verify.py",
+      "snapshot": "data/triangle-pipe/analytic-audit/verify.py",
+      "sha256": "0787883d5bbdccbfe021dfdbf159aa7f66de1dba93f0d9544387ba545d48dc87"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/common/config.json",
+      "snapshot": "data/triangle-pipe/common/config.json",
+      "sha256": "3681b5dbf244857af7dd16081f200149f1bf0df79b06e8ec8801c3c1a18d1ed1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/common/probes.csv",
+      "snapshot": "data/triangle-pipe/common/probes.csv",
+      "sha256": "6ac0f7e96086d0e8dc61566c69d36bd92183682197bba5694ab9a383f2007f58"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/common/straight-path.dat",
+      "snapshot": "data/triangle-pipe/common/straight-path.dat",
+      "sha256": "01706a98a7b65504e10f3141944ed6f87d3285185d160e80e9555da97a98a62a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/common/triangle-ns16384-nr16-np32.json",
+      "snapshot": "data/triangle-pipe/common/triangle-ns16384-nr16-np32.json",
+      "sha256": "180862dcd060afb919099c9f05af6cc147833e2daeb7f516f81b5ff2823e8f2a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/common/triangle-ns65536-nr16-np32-compact.json",
+      "snapshot": "data/triangle-pipe/common/triangle-ns65536-nr16-np32-compact.json",
+      "sha256": "c8838fe035e5dd70c0b77a57b272cb1ecb60c87ea1e7f54236b237e2d23831b1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/common/triangle-ns8192-nr16-np32.json",
+      "snapshot": "data/triangle-pipe/common/triangle-ns8192-nr16-np32.json",
+      "sha256": "b344d677379ba1b2e4f209db0e2726adc9f32a4247025fede2eca62d0fdc4dc2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/common/triangle-ns8192-nr32-np64-compact.json",
+      "snapshot": "data/triangle-pipe/common/triangle-ns8192-nr32-np64-compact.json",
+      "sha256": "4d2f84e77733b6d695fcd35dbc73d56e1f27da6ce2626e3184dec432a687e631"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/run_opalx.py",
+      "snapshot": "data/triangle-pipe/opalx/run_opalx.py",
+      "sha256": "93cc21adcfcd53ba7ca0e0d4e88feff1eafa4cdd1bb4bb9494999234cede3037"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m128/manifest.json",
+      "snapshot": "data/triangle-pipe/opalx/runs/m128/manifest.json",
+      "sha256": "942aaaf0fe3d5113c6ecb38051663667a7de0db7ceeae35cf2254f91065fb3e7"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m128/triangle.in",
+      "snapshot": "data/triangle-pipe/opalx/runs/m128/triangle.in",
+      "sha256": "fb12fd7fc2e879c609f40bd05839ae390bfc2b4fec659482c3ccaa51b4364dbc"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m128/triangle.out",
+      "snapshot": "data/triangle-pipe/opalx/runs/m128/triangle.out",
+      "sha256": "e41dc51d5b7536b61fe580b9f37bf009c4bb4e9e81aa2dbe8842f711cec7b15f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m128/triangle.stat",
+      "snapshot": "data/triangle-pipe/opalx/runs/m128/triangle.stat",
+      "sha256": "ac0235e8c6f6910d5aaf99e2b7c35b5f193862df02bb1795b13dd784bd5af12f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m128-probes/manifest.json",
+      "snapshot": "data/triangle-pipe/opalx/runs/m128-probes/manifest.json",
+      "sha256": "f6f153003c7bfdb7d801cd75558cfef7f440dea62549e26a1a583682f9fb0352"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m128-probes/triangle.in",
+      "snapshot": "data/triangle-pipe/opalx/runs/m128-probes/triangle.in",
+      "sha256": "6679f91378f3f7d808f571033499e3b457662e39d5fd6b56b4d90378f8c2407a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m128-probes/triangle.out",
+      "snapshot": "data/triangle-pipe/opalx/runs/m128-probes/triangle.out",
+      "sha256": "94db7871dff41e14dce2a11db3d55ef2dcd5f8f4386d3bfc0ec32e86cf44ecc0"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m128-probes/triangle.stat",
+      "snapshot": "data/triangle-pipe/opalx/runs/m128-probes/triangle.stat",
+      "sha256": "a8e605d49d276ae2434f7acfc01e12d99082d3b9892ffa86fe16363e5fb82a9d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m128-source16384/manifest.json",
+      "snapshot": "data/triangle-pipe/opalx/runs/m128-source16384/manifest.json",
+      "sha256": "1171448224d0790b79ec6174582400372952db74d094fd010d4a575d536e2e6e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m128-source16384/triangle.in",
+      "snapshot": "data/triangle-pipe/opalx/runs/m128-source16384/triangle.in",
+      "sha256": "1ff7872593321bfb1856559a6779be1ef10d0798de1c58efc9fa8a2f8ee96d56"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m128-source16384/triangle.out",
+      "snapshot": "data/triangle-pipe/opalx/runs/m128-source16384/triangle.out",
+      "sha256": "ae2c623100f83b5d5f4576416225a44e808bf35aff3251ce609d27850bd25a71"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m128-source16384/triangle.stat",
+      "snapshot": "data/triangle-pipe/opalx/runs/m128-source16384/triangle.stat",
+      "sha256": "dceed6c1ae2a13a6d0a8c9af7ba5193b75d45236d8b14a8fde0798332d151ef5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m128-source16384-probes/manifest.json",
+      "snapshot": "data/triangle-pipe/opalx/runs/m128-source16384-probes/manifest.json",
+      "sha256": "ae54341cebd4747c4ecc3d7811b5c19fc6dab1829e8b40b4afeff0db625e98ad"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m128-source16384-probes/triangle.in",
+      "snapshot": "data/triangle-pipe/opalx/runs/m128-source16384-probes/triangle.in",
+      "sha256": "03e00cb8fb9c72d859d774cbeb4a130c1e05eac7ef00dd550c75ebd644695710"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m128-source16384-probes/triangle.out",
+      "snapshot": "data/triangle-pipe/opalx/runs/m128-source16384-probes/triangle.out",
+      "sha256": "4ffd8a400bb6175628a92a59ab47ec6b62ee1440fbec1d23131f1e615030e722"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m128-source16384-probes/triangle.stat",
+      "snapshot": "data/triangle-pipe/opalx/runs/m128-source16384-probes/triangle.stat",
+      "sha256": "7857b26c9a65c91a2d2572862caf8cd914d1a4fe9d7d8a12ebfe052bbdcd47d9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m256/manifest.json",
+      "snapshot": "data/triangle-pipe/opalx/runs/m256/manifest.json",
+      "sha256": "0d4a1ca43c062559f3c8ae40baa100ba99b3f7a96b8b0cb96edf80649bd90aa1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m256/triangle.in",
+      "snapshot": "data/triangle-pipe/opalx/runs/m256/triangle.in",
+      "sha256": "de85dad9f905513db9a45569fdff9579f3eebb004759be109f400bbda28dbd3f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m256/triangle.out",
+      "snapshot": "data/triangle-pipe/opalx/runs/m256/triangle.out",
+      "sha256": "734d78fe3b910766bdeef47c70ecfcdbab90c0884c873e583c147e434999eaec"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m256/triangle.stat",
+      "snapshot": "data/triangle-pipe/opalx/runs/m256/triangle.stat",
+      "sha256": "f29caa5a06f173202f3adb9921bfaa47a8e67c5f384456f7ae6e09038b10eb66"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m256-probes/manifest.json",
+      "snapshot": "data/triangle-pipe/opalx/runs/m256-probes/manifest.json",
+      "sha256": "e34fd3a61c367f0161ce670d2e27c28a462e197705373a6c14bfc1963e5fec6c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m256-probes/triangle.in",
+      "snapshot": "data/triangle-pipe/opalx/runs/m256-probes/triangle.in",
+      "sha256": "705aafa26da00daee5e0a871407aecb36fa8ceedcc3344c9163d25a42f53ffc5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m256-probes/triangle.out",
+      "snapshot": "data/triangle-pipe/opalx/runs/m256-probes/triangle.out",
+      "sha256": "3654dcdd2a3c1bb116ea81d9090276505f4026fffd830522a1e688cf8a7f3e9a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m256-probes/triangle.stat",
+      "snapshot": "data/triangle-pipe/opalx/runs/m256-probes/triangle.stat",
+      "sha256": "a9a869149bf4dbc8b99ae6452d323a6a0c47f756b242ae4e4127ef1585908f60"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m64/manifest.json",
+      "snapshot": "data/triangle-pipe/opalx/runs/m64/manifest.json",
+      "sha256": "19cb90482d0ca2d530caeb102aba74a4ec317744a1b83258a191971ed9d64a13"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m64/triangle.in",
+      "snapshot": "data/triangle-pipe/opalx/runs/m64/triangle.in",
+      "sha256": "96aaa77895f49ed67008c6149ebb60d9e19d0a7670edb504cd42212c7e752eb5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m64/triangle.out",
+      "snapshot": "data/triangle-pipe/opalx/runs/m64/triangle.out",
+      "sha256": "29d337fa30fb4b38e03228b40800e4a12fd277bfa7fd3a304155a61de8e3764a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m64/triangle.stat",
+      "snapshot": "data/triangle-pipe/opalx/runs/m64/triangle.stat",
+      "sha256": "97a848bf3fdae0442d3216a645391f4ae2e3223a16ef2539f56065de76a7665d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m64-probes/manifest.json",
+      "snapshot": "data/triangle-pipe/opalx/runs/m64-probes/manifest.json",
+      "sha256": "97bd28a29996ebc5a19dca30db825e547480e32224df40cbfda48dc3ac866938"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m64-probes/triangle.in",
+      "snapshot": "data/triangle-pipe/opalx/runs/m64-probes/triangle.in",
+      "sha256": "e9650d18c0fe7e5056beb0f11756a696f70de5bb224dc30427a1b1c0da0efc19"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m64-probes/triangle.out",
+      "snapshot": "data/triangle-pipe/opalx/runs/m64-probes/triangle.out",
+      "sha256": "6488eb9b18dc5cbb719dcc06ec92d14d4d23665239e23c21283659a8af347241"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/m64-probes/triangle.stat",
+      "snapshot": "data/triangle-pipe/opalx/runs/m64-probes/triangle.stat",
+      "sha256": "0215207d01f0869ad770b5a730361603600ef5ea32ab33e0c6ad1ea13933077d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/source16384/manifest.json",
+      "snapshot": "data/triangle-pipe/opalx/runs/source16384/manifest.json",
+      "sha256": "ebb01bdb43178e403ebd4ee2cea681e72da05a0bf4e73b29360b31905fe1b482"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/source16384/triangle.in",
+      "snapshot": "data/triangle-pipe/opalx/runs/source16384/triangle.in",
+      "sha256": "a2e598df1dba31dba01dfe9a34aa863a17b9f226f9ac677fdc55b7b5e81e549e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/source16384/triangle.out",
+      "snapshot": "data/triangle-pipe/opalx/runs/source16384/triangle.out",
+      "sha256": "5abbb05869e25046ebfcefae898c47c20791693306ffdcfff6793439fffc6fce"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/source16384/triangle.stat",
+      "snapshot": "data/triangle-pipe/opalx/runs/source16384/triangle.stat",
+      "sha256": "e59d54878788a93fa67d147b818088d00a968b5b887b940851073758a03c44b6"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/source16384-probes/manifest.json",
+      "snapshot": "data/triangle-pipe/opalx/runs/source16384-probes/manifest.json",
+      "sha256": "efc784bb1360116456e5faf1e4f6fc3451495e8c27d08138726f96e0ba4877ba"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/source16384-probes/triangle.in",
+      "snapshot": "data/triangle-pipe/opalx/runs/source16384-probes/triangle.in",
+      "sha256": "fb75250bb2dbd32019aba216daf5b68bf1bc0e6cc5d1120991e301566d383fe0"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/source16384-probes/triangle.out",
+      "snapshot": "data/triangle-pipe/opalx/runs/source16384-probes/triangle.out",
+      "sha256": "48a5e55cc22fcfb74223cb93d0182f3bdf74d514c0e1d2860011dec3cba5051d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/source16384-probes/triangle.stat",
+      "snapshot": "data/triangle-pipe/opalx/runs/source16384-probes/triangle.stat",
+      "sha256": "3c4249915ca4241dbd8374e998a438c488a64c39a579fb42433a60d9a6ace4a1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/wide256/manifest.json",
+      "snapshot": "data/triangle-pipe/opalx/runs/wide256/manifest.json",
+      "sha256": "fe1a777f3458f9256de040f6416d2c59d075eac577c193f301ddb9f844ac9bff"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/wide256/triangle.in",
+      "snapshot": "data/triangle-pipe/opalx/runs/wide256/triangle.in",
+      "sha256": "17f642316e94c180cb78786665c2b422d2dd2c98fa8b4da4c30e4003ae2fc0f5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/wide256/triangle.out",
+      "snapshot": "data/triangle-pipe/opalx/runs/wide256/triangle.out",
+      "sha256": "4caef5c6dd2c426c6516a705bfe0099b97562b5ca185e1fc35c94a26ce0d9085"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/wide256/triangle.stat",
+      "snapshot": "data/triangle-pipe/opalx/runs/wide256/triangle.stat",
+      "sha256": "75c7ba9b990765c0c8e6335996f901b684a5ae33d3162dfd6f5cde0b91c7ee66"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/wide256-probes/manifest.json",
+      "snapshot": "data/triangle-pipe/opalx/runs/wide256-probes/manifest.json",
+      "sha256": "67c536274c1b60377a43753a0a405b18b75184cd2ed83a1c6789f08dbfe3f492"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/wide256-probes/triangle.in",
+      "snapshot": "data/triangle-pipe/opalx/runs/wide256-probes/triangle.in",
+      "sha256": "049996b2db6f758e8f83ef3f8b6c8d04e7d7a87eab6e845273408854a8a7d196"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/wide256-probes/triangle.out",
+      "snapshot": "data/triangle-pipe/opalx/runs/wide256-probes/triangle.out",
+      "sha256": "573a4d87f04b421268e70aa7b19b1818f939d6aaaaf97372e09ad637e2bcd170"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx/runs/wide256-probes/triangle.stat",
+      "snapshot": "data/triangle-pipe/opalx/runs/wide256-probes/triangle.stat",
+      "sha256": "6f546997a5891393e5e6d1fc9ff51c777320cc369622de728de49d2ddfc92c1c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx-audit/HANDOFF.md",
+      "snapshot": "data/triangle-pipe/opalx-audit/HANDOFF.md",
+      "sha256": "1a810404d5bdb9d9723ec823c1871809ef3aa85078ab8d7e8dd0584072f107fb"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx-audit/check_consolidation.py",
+      "snapshot": "data/triangle-pipe/opalx-audit/check_consolidation.py",
+      "sha256": "2fff9454d1a0820781162e34c031c56dcb109e99b5828e03c40211693246cd2f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx-audit/check_native.py",
+      "snapshot": "data/triangle-pipe/opalx-audit/check_native.py",
+      "sha256": "1732dd5c5300800f40c97c383f12676a9d2fb7120f03c64e7ffa9e4b3c1df07a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx-audit/consolidation-checks.json",
+      "snapshot": "data/triangle-pipe/opalx-audit/consolidation-checks.json",
+      "sha256": "61fd48c65eea2b9855bc7d6960e077de4f4f062e818c25dd80c876b845348f63"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx-audit/consolidation.log",
+      "snapshot": "data/triangle-pipe/opalx-audit/consolidation.log",
+      "sha256": "61fd48c65eea2b9855bc7d6960e077de4f4f062e818c25dd80c876b845348f63"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx-audit/independent-longitudinal-metrics.csv",
+      "snapshot": "data/triangle-pipe/opalx-audit/independent-longitudinal-metrics.csv",
+      "sha256": "bd1041d57d69d43754b9e16b6531801d9439f80b7fdf13de3c5b4c768988b87c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx-audit/independent-probe-fields.csv",
+      "snapshot": "data/triangle-pipe/opalx-audit/independent-probe-fields.csv",
+      "sha256": "a0698501782543c9d5c0068272f1511287d05b5b35f488e2369ecbed3ee9e862"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx-audit/native-build-check.json",
+      "snapshot": "data/triangle-pipe/opalx-audit/native-build-check.json",
+      "sha256": "1388909bd606246caea69a370222abf5208cf121f04bcf408dfbe488ca32cbb5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx-audit/snapshot-checks.csv",
+      "snapshot": "data/triangle-pipe/opalx-audit/snapshot-checks.csv",
+      "sha256": "0d9270319af7b78c8f9d773c51e309535914d69c5e735eb1cdfceaaa21d5ab38"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/opalx-audit/summary.json",
+      "snapshot": "data/triangle-pipe/opalx-audit/summary.json",
+      "sha256": "6d96a692544d8c6f9e4b5f349527981867630be3bc994ca264910c60b9c7e9db"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/prepare_common.py",
+      "snapshot": "data/triangle-pipe/prepare_common.py",
+      "sha256": "1be01513fa1846df1bbed29d06645b5c0f691ece19de45481bd56f8885928a2d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/prepare_refinements.py",
+      "snapshot": "data/triangle-pipe/prepare_refinements.py",
+      "sha256": "8a82c813e8da9dc395189f2d9d0222f452479d8409e1eff03dbf1edc627b2939"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/HANDOFF.md",
+      "snapshot": "data/triangle-pipe/pyorbit/HANDOFF.md",
+      "sha256": "7e89a5e825fc14bb8db9252cc01ff5f8c5426f97bf4985409e101077aa365f23"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/README.md",
+      "snapshot": "data/triangle-pipe/pyorbit/README.md",
+      "sha256": "7fde6d60c199119b3fc4b2f36e9afb60aee165fb71875bc7ad652cd98d854f0a"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/build-provenance.json",
+      "snapshot": "data/triangle-pipe/pyorbit/build-provenance.json",
+      "sha256": "90dde473a63156bfa1b4e924df359f56b9c7ea6dda8da66bca096ae1658c9b1f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/build.log",
+      "snapshot": "data/triangle-pipe/pyorbit/build.log",
+      "sha256": "fd30009e33ab95f44399dfe51297bde0434d5076eb9038f338d0387b09cae006"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/collect_provenance.py",
+      "snapshot": "data/triangle-pipe/pyorbit/collect_provenance.py",
+      "sha256": "af66285b8ad9e0f2f70fcb041e076ad7d1f926604c3bfe7ec02d4cb937611aef"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/harness-snapshots/run_native-7252e67cdc0f8c3f5151e534cd6cef88031f414b3b029baec5d6e5bdbab4becb.py",
+      "snapshot": "data/triangle-pipe/pyorbit/harness-snapshots/run_native-7252e67cdc0f8c3f5151e534cd6cef88031f414b3b029baec5d6e5bdbab4becb.py",
+      "sha256": "7252e67cdc0f8c3f5151e534cd6cef88031f414b3b029baec5d6e5bdbab4becb"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/harness-snapshots/run_native-9999de9ff21e51e63d02296a6dcc2a13944ac1888238dc94fa09292956bf73f6.py",
+      "snapshot": "data/triangle-pipe/pyorbit/harness-snapshots/run_native-9999de9ff21e51e63d02296a6dcc2a13944ac1888238dc94fa09292956bf73f6.py",
+      "sha256": "9999de9ff21e51e63d02296a6dcc2a13944ac1888238dc94fa09292956bf73f6"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/original-example.log",
+      "snapshot": "data/triangle-pipe/pyorbit/original-example.log",
+      "sha256": "e718ee8d19580a04a21042e2cd9fb75b85d68c1d8a6c68d919344155eb19a1ac"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/prepare_controls.py",
+      "snapshot": "data/triangle-pipe/pyorbit/prepare_controls.py",
+      "sha256": "8257e9763e230980d17ad60669fe4caa3d68d844bc427dab52e539aa8094f6bc"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/provenance/METADATA",
+      "snapshot": "data/triangle-pipe/pyorbit/provenance/METADATA",
+      "sha256": "faf8858b242239c5955a269b43b57957ad06e47248924b90898e5bdc62e89d5f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/provenance/WHEEL",
+      "snapshot": "data/triangle-pipe/pyorbit/provenance/WHEEL",
+      "sha256": "ae0ad7b2b2825be0d3e9260ead4bdc777493ab28f32fda6cdb97bbfb6a258993"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/provenance/direct_url.json",
+      "snapshot": "data/triangle-pipe/pyorbit/provenance/direct_url.json",
+      "sha256": "1c8c7401bbad792e611f26b44f8f5ef5552c0475dd7b9d8b799aa5ef25723694"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/provenance/upstream-LICENSE.txt",
+      "snapshot": "data/triangle-pipe/pyorbit/provenance/upstream-LICENSE.txt",
+      "sha256": "6ecf884db92999f36a7f3a27ac567ed9f7e3474360d8a55ae80f77ed4ffb316d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/rb-128x128x128-r1.log",
+      "snapshot": "data/triangle-pipe/pyorbit/rb-128x128x128-r1.log",
+      "sha256": "5c0423745f438737355c9747550d5e0c89c28bdf0fdfc02dafba4f5d15e266cd"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/rb-128x128x256-ns65536-r1.log",
+      "snapshot": "data/triangle-pipe/pyorbit/rb-128x128x256-ns65536-r1.log",
+      "sha256": "4f3c86301336d0e7b1cf6c22079ecbeda3769ca51535c96609eccfd31caa3940"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/rb-128x128x256-r1.log",
+      "snapshot": "data/triangle-pipe/pyorbit/rb-128x128x256-r1.log",
+      "sha256": "0189f5e72e9bc9fbc6dbc7919edcd4b8b37af5f4d225bb52dfbe7245eeae15c9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/run_native.py",
+      "snapshot": "data/triangle-pipe/pyorbit/run_native.py",
+      "sha256": "9999de9ff21e51e63d02296a6dcc2a13944ac1888238dc94fa09292956bf73f6"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/rb-128x128x128-r1/manifest-rank0.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/rb-128x128x128-r1/manifest-rank0.json",
+      "sha256": "176549db7b953c78d07eb18d3bca91be7b536abaa22c268fb0694b93dccea7a9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/rb-128x128x128-r1/probes-rank0.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/rb-128x128x128-r1/probes-rank0.csv",
+      "sha256": "45732a0c23566c978ccaeb97ec021f3141cc0290ef229f35a792fa93c9827060"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/rb-128x128x256-ns65536-r1/manifest-rank0.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/rb-128x128x256-ns65536-r1/manifest-rank0.json",
+      "sha256": "6d7497a8207dde7249a94585e9e6fb6c02e2bdab06abe6e3679539bf63b2b3e5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/rb-128x128x256-ns65536-r1/probes-rank0.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/rb-128x128x256-ns65536-r1/probes-rank0.csv",
+      "sha256": "56e571ff27b647c0c524cbc8cd1baa68df961b305e2e650028ac46ee24588ff9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/rb-128x128x256-r1/manifest-rank0.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/rb-128x128x256-r1/manifest-rank0.json",
+      "sha256": "87c6a64cd09133b8d4dd53358b5c98d73ca2d1fa724e6352e9e7b5851271c7c2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/rb-128x128x256-r1/probes-rank0.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/rb-128x128x256-r1/probes-rank0.csv",
+      "sha256": "d40ec8fd22088e26a59094e535297751c374e363c4c1fc57398be831a376655d"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-128x128x128-r1/manifest-rank0.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-128x128x128-r1/manifest-rank0.json",
+      "sha256": "cf946d94e91a3c7a11ddc84deacd7a9f1366663a317a7d7f896d7411938e2880"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-128x128x128-r1/probes-rank0.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-128x128x128-r1/probes-rank0.csv",
+      "sha256": "9c9e31469671e22ff9e3960415c3533836270cf0c7eaec45c8aff041f669a65f"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-256x256x128-r1/manifest-rank0.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-256x256x128-r1/manifest-rank0.json",
+      "sha256": "09706ccaf6da71ccdbe1e5aa17a6b205a72509e70c397b5c9d6dd96fc3a535d9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-256x256x128-r1/probes-rank0.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-256x256x128-r1/probes-rank0.csv",
+      "sha256": "45191fbc1c60cf984810ac2a6258b5884a62feedde114f4efa6a6145cea79bc3"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-256x256x256-ns65536-r1/manifest-rank0.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-256x256x256-ns65536-r1/manifest-rank0.json",
+      "sha256": "d80cf39e1d4b949b15f0b946d96e544ca66ce187d11ab817409e3f65ff3c54ab"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-256x256x256-ns65536-r1/probes-rank0.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-256x256x256-ns65536-r1/probes-rank0.csv",
+      "sha256": "2181faadd127d240f452cf88dc0cb9ae72ffda53d450f608b3e4e1703e34fb70"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-256x256x256-r1/manifest-rank0.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-256x256x256-r1/manifest-rank0.json",
+      "sha256": "bca0ed892cf7d41ab93e99671278283da74aa7efe9abe962a286029ebc6f9edf"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-256x256x256-r1/probes-rank0.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-256x256x256-r1/probes-rank0.csv",
+      "sha256": "f5ef5d373ee10e0d7a3cc14b7b159f0b1387d852917ba12a30a0f2c23e35f7e5"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-256x256x64-r1/manifest-rank0.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-256x256x64-r1/manifest-rank0.json",
+      "sha256": "29fdd825cf89f459c952325367e584cf37f5ee8973cae05b283ddeb64699b489"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-256x256x64-r1/probes-rank0.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-256x256x64-r1/probes-rank0.csv",
+      "sha256": "7237cb8691e7d29b7ae48242d5fc7ea31244b3f93ea5347ba96fdc5cadf67c04"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-nativeaudit-r1/manifest-rank0.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-512x512x128-nativeaudit-r1/manifest-rank0.json",
+      "sha256": "352bb958bf0b5540f0f780f631ba4fc3081efd8ebd595fbefdf2493669c3e268"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-nativeaudit-r1/probes-rank0.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-512x512x128-nativeaudit-r1/probes-rank0.csv",
+      "sha256": "81542972324d1467d0e17222175dfbb5f7a8bbde3e74fb92a2c2347065c62a88"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-nativeaudit-r2/manifest-rank0.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-512x512x128-nativeaudit-r2/manifest-rank0.json",
+      "sha256": "f59fe687d0b2d1b0d16df7855e7fb8421e79f4d6f35fc43ad08af4da7c689eef"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-nativeaudit-r2/manifest-rank1.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-512x512x128-nativeaudit-r2/manifest-rank1.json",
+      "sha256": "139c2cc6d10c10edace2f0d8b5333ca2be73bda97daa371a0272ebea030918fe"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-nativeaudit-r2/probes-rank0.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-512x512x128-nativeaudit-r2/probes-rank0.csv",
+      "sha256": "610d8668eec96389da5f469e337382340c527028b7f6739a76b237b1c5642c8c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-nativeaudit-r2/probes-rank1.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-512x512x128-nativeaudit-r2/probes-rank1.csv",
+      "sha256": "b02c00a1bd05c1fa17f170ce97a91c7bab76fa8659b9e3343c0e2a3bd4aa8dee"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-nr32np64-boundary256m64-r1/manifest-rank0.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-512x512x128-nr32np64-boundary256m64-r1/manifest-rank0.json",
+      "sha256": "206d17f4a5149152e8e894454ddce673ecd3ec8dd8e9ba2023df4739ddb642f2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-nr32np64-boundary256m64-r1/probes-rank0.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-512x512x128-nr32np64-boundary256m64-r1/probes-rank0.csv",
+      "sha256": "b73aeb969f5e3ef476cf72f63b99128ece37d19d69313fac46bc9558cf3e84ff"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-nr32np64-r1/manifest-rank0.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-512x512x128-nr32np64-r1/manifest-rank0.json",
+      "sha256": "54415a9625fd71d956a8c48cb463fb5e3e337236a9b0369f271481b15761cfd9"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-nr32np64-r1/probes-rank0.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-512x512x128-nr32np64-r1/probes-rank0.csv",
+      "sha256": "eccb4c5cc12637b93bf617a068fea7473bc10bb0e6aacb0fa6318796465347d4"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-r1/manifest-rank0.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-512x512x128-r1/manifest-rank0.json",
+      "sha256": "955d7fe63dd970c3842dc58cc3a93a8f27e2695d49f92784d46b213eec9d3f2e"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-r1/probes-rank0.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-512x512x128-r1/probes-rank0.csv",
+      "sha256": "81542972324d1467d0e17222175dfbb5f7a8bbde3e74fb92a2c2347065c62a88"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-r2/manifest-rank0.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-512x512x128-r2/manifest-rank0.json",
+      "sha256": "788a7d980f0ea8367cb2ff114ad27eb5a60f8546450630ad09799a7393cafec0"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-r2/manifest-rank1.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-512x512x128-r2/manifest-rank1.json",
+      "sha256": "3709d5a5be89c96fe9f5ea36340be56b3d999a34cd6bfc05d71292005ca3a409"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-r2/probes-rank0.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-512x512x128-r2/probes-rank0.csv",
+      "sha256": "610d8668eec96389da5f469e337382340c527028b7f6739a76b237b1c5642c8c"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-512x512x128-r2/probes-rank1.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-512x512x128-r2/probes-rank1.csv",
+      "sha256": "b02c00a1bd05c1fa17f170ce97a91c7bab76fa8659b9e3343c0e2a3bd4aa8dee"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-64x64x128-r1/manifest-rank0.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-64x64x128-r1/manifest-rank0.json",
+      "sha256": "f94e851d8a360879e5cc009474599bc1106ead803834bdab6e4f2eb45e6dbee8"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-64x64x128-r1/probes-rank0.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-64x64x128-r1/probes-rank0.csv",
+      "sha256": "62a1677ee217d165ae4051b555370ddbd26f973cdcd07bfb4f46d70362b40ced"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-64x64x64-r1/manifest-rank0.json",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-64x64x64-r1/manifest-rank0.json",
+      "sha256": "0a691c955b84233d7e5db862e86ee78038c6080007e7149671ae10a8df996a89"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/runs/slice-64x64x64-r1/probes-rank0.csv",
+      "snapshot": "data/triangle-pipe/pyorbit/runs/slice-64x64x64-r1/probes-rank0.csv",
+      "sha256": "691a2418fb47d5a84fbbe0d3c7bdb50512e1df5b29949516fcf3fdaf53dba243"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/slice-128x128x128-r1.log",
+      "snapshot": "data/triangle-pipe/pyorbit/slice-128x128x128-r1.log",
+      "sha256": "6405f49931010aec4a5ac02f1fa93c35ed502e0e7019e22f0b1f08bcc9a05b6b"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/slice-256x256x128-r1.log",
+      "snapshot": "data/triangle-pipe/pyorbit/slice-256x256x128-r1.log",
+      "sha256": "e68bcc683e667520924bc938ffe8fe82462cad74d6903fd7af03f92cd41544fb"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/slice-256x256x256-ns65536-r1.log",
+      "snapshot": "data/triangle-pipe/pyorbit/slice-256x256x256-ns65536-r1.log",
+      "sha256": "d99aa478b117ea00f4ca38aff3d6ef50697857a9ae06764ad328e4261e576bdc"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/slice-256x256x256-r1.log",
+      "snapshot": "data/triangle-pipe/pyorbit/slice-256x256x256-r1.log",
+      "sha256": "35a2313f5330c50103eb0ddd3e99de9c58197bfdaf3276c9f66fc218a136c620"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/slice-256x256x64-r1.log",
+      "snapshot": "data/triangle-pipe/pyorbit/slice-256x256x64-r1.log",
+      "sha256": "7dec9c76ab4ee63be2eebd906941547beed66f9dab50cc5f75634bd359dc0109"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/slice-512x512x128-nativeaudit-r1.log",
+      "snapshot": "data/triangle-pipe/pyorbit/slice-512x512x128-nativeaudit-r1.log",
+      "sha256": "7a5c2be2bb5914abebdeffdcbc63034135f8b8265a3429a4fa2ca199eddba8ab"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/slice-512x512x128-nativeaudit-r2.log",
+      "snapshot": "data/triangle-pipe/pyorbit/slice-512x512x128-nativeaudit-r2.log",
+      "sha256": "bd1c9aeec23076c7736d1e881ac67732f45ca4a70d529fb511090dc19a5b1615"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/slice-512x512x128-nr32np64-boundary256m64-r1.log",
+      "snapshot": "data/triangle-pipe/pyorbit/slice-512x512x128-nr32np64-boundary256m64-r1.log",
+      "sha256": "f388d76983df077d10fe9a582698f5adee9d1e7c77b46a2b1c853ea0afc673ca"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/slice-512x512x128-nr32np64-r1.log",
+      "snapshot": "data/triangle-pipe/pyorbit/slice-512x512x128-nr32np64-r1.log",
+      "sha256": "d8ec220d697179723f28cb5acf71708c671355babadd57ca91b5596414254801"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/slice-512x512x128-r1.log",
+      "snapshot": "data/triangle-pipe/pyorbit/slice-512x512x128-r1.log",
+      "sha256": "aa9aabdab2d5a6da0f11a47078d2fdcccc12224d37f22bdf35c9e08c240e3c40"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/slice-512x512x128-r2.log",
+      "snapshot": "data/triangle-pipe/pyorbit/slice-512x512x128-r2.log",
+      "sha256": "6d11f2ef079589cc726981ca9008c6b0f9d96653254d1351da54841936b594a1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/slice-64x64x128-r1.log",
+      "snapshot": "data/triangle-pipe/pyorbit/slice-64x64x128-r1.log",
+      "sha256": "3aa0e783bc3cd5f530fe6dd9ab4280bb8e96721ebf5f54b16efd4dd59cdffde1"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/slice-64x64x64-r1.log",
+      "snapshot": "data/triangle-pipe/pyorbit/slice-64x64x64-r1.log",
+      "sha256": "1d042dab3677b830f97cbe09af11831927f7a802d3dee222164438bb612d35f7"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/sources/triangle-ns65536-nr16-np32.json",
+      "snapshot": "data/triangle-pipe/pyorbit/sources/triangle-ns65536-nr16-np32.json",
+      "sha256": "0c6a549e4e9774cbb1b03738613dfeba18dcc1aff6e0f5d024e5b092f30f9af2"
+    },
+    {
+      "original": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/sources/triangle-ns8192-nr32-np64.json",
+      "snapshot": "data/triangle-pipe/pyorbit/sources/triangle-ns8192-nr32-np64.json",
+      "sha256": "4515eab3dfe54331dc3c71fb534aeafc851b72f4a010a6562ae324bc86560054"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-01",
+  "source_commit": "fd6ba8dc5",
+  "binary_source": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+  "binary": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/strong-charge/completed-study/bin/opalx",
+  "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+  "source_sha256": {
+    "src/SpaceCharge/FFT2D5/CMakeLists.txt": "e0e913fd0b7de7b4568d13178ce947728c9231de072fff51fd27c7b545f0ef19",
+    "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp": "4e10759439180985eceaa1b60390b708ccc56dce1d041b5b63fd6fef1dc655ea",
+    "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h": "c058559215638f44244fac9df281855489d8fe0b2a1b9ffe69e3b2c66f167b29",
+    "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp": "03af517f9449975cb8072888360c63e1f9e09cad5c2472098a74382fca9dbab4",
+    "src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp": "2d431ba47731fb5098a5872fac535c37e9dd4d80b29380737448efe98262029a",
+    "src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h": "ce277b7ffa93a83db90a8fea68a5c2624ed8ed013de761e2c009bc3b71d7aec6",
+    "src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp": "964ea02ac1cb202cd621e45808c5d68fa8aa70da2cfdf861918c3c83401ae79c",
+    "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h": "099531e79a30257cd75746a5e744dd4263d83d75c2a634206f79188cb253291b",
+    "src/SpaceCharge/FFT2D5/ReferencePath.cpp": "a9ba3b8f7ca21ffee11de5ed87cec606310b114f7204280c80c15e3aa704f8b8",
+    "src/SpaceCharge/FFT2D5/ReferencePath.h": "363860e7ed1b3bd743cf1a68ed5ef5207793edd159a44741fadea0a7a13903bf",
+    "unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp": "839a23b841db31f4258ee0cf13d91bfe958a0e4d2cf7e358f8a7f542a4e60212",
+    "unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp": "e2e584c15966b521aff05fd85b0c40428a76d79d28509af072ad7a2ba7d8bbf8"
+  },
+  "comparison": "all fresh controls and tracking cases use this binary",
+  "prior_archived_binary_sha256": "ba08fdd0b0bb1e90a64ba0fd3763a8b6d044b128c0af9b9dfd215ad0ffac8fd4"
+}

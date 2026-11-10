@@ -1,0 +1,1667 @@
+schema-version: 1
+assets:
+  - title: MuE4 analytical trails — featured movie
+    date: "2026-10-30"
+    category: tutorials/features
+    source: 2026-10-30-mue4_analytical-trails.mp4, supplied in the local manual checkout
+    destination: tutorials/2026/features/2026-10-30-mue4_analytical-trails.mp4
+    description: MuE4 analytical-trails movie featured in the manual news strip.
+    status: experimental
+    sha256: 381915d4d8bc43665e318843416f1f91234641ecfd35d401c22866126c6264aa
+  - title: Physics Manual chapters 28–35 — recovered sandbox Python scripts
+    date: "2026-10-30"
+    category: examples/physics-audit
+    source: old-opal/opalx sandbox map-2, map-3, cyclotron and DBA-ring studies; exact file hashes in bundled SOURCE-MANIFEST.json
+    destination: examples/2026/physics-audit/2026-10-30-physics-manual-sandbox-python.tar.gz
+    description: 45 unchanged Python scripts and helpers with original directory layout and per-file SHA-256 provenance; no recovered script executed or tested. Inputs, results and executables are excluded.
+    status: experimental
+    sha256: 01bffb84785e706366e76be692859847161b34c44a3aebdfc3262d11c57ff008
+  - title: BeamBeam experiments 1–4 — runnable inputs and scripts
+    date: "2026-10-06"
+    category: examples/beam-beam
+    source: OPALX sandbox experiments 1–4 and shared scripts at 492bd6c08, including local study files identified by the bundled SHA-256 manifest
+    destination: examples/2026/beam-beam/2026-10-06-beam-beam-experiments.tar.gz
+    description: Source-only bundle preserving the shared launcher and cross-experiment helpers; excludes generated results, plots, caches, binaries and Python environments.
+    status: experimental
+    sha256: 34317cc36b2635dfacb325c6ce6fdb7da5231525da510ed07741b174b58bf9b3
+  - title: OPALX space-charge class diagram
+    date: "2026-09-07"
+    category: reports/design
+    source: 2026.09.07 Class Diagram Solver Refactor/SpaceCharge Dir Class Diagram.pdf
+    destination: reports/2026/design/2026-09-07-opalx-space-charge-class-diagram.pdf
+    description: Class ownership and dependency diagram for space-charge setup, runtime dispatch, CartesianPIC3D, Poisson adapters, and FFT2D5.
+    status: current
+    sha256: 6c530bf2a74f8837b15f16d6b7bd1f90f472b95d98cc0da412a9a3d568db4f3c
+  - title: OPALX space-charge solver flow
+    date: "2026-09-07"
+    category: reports/design
+    source: 2026.09.07 Class Diagram Solver Refactor/SpaceCharge Program Flow Diagram.pdf
+    destination: reports/2026/design/2026-09-07-opalx-space-charge-solver-flow.pdf
+    description: Per-call execution flow for runtime dispatch through CartesianPIC3D and FFT2D5 space-charge algorithms.
+    status: current
+    sha256: 4fb74ec42d9f2a516ccf4a329e11ad2ad87f2919413e9e4dea3be757dd7355cc
+  - title: A CUDA Extended-Lambda Linkage Bug
+    date: "2026-07-14"
+    category: reports/bugs
+    source: main.pdf
+    destination: reports/2026/bugs/2026-07-14-cuda-extended-lambda-linkage-bug.pdf
+    description: Investigation of an NVCC linkage bug affecting Kokkos extended lambdas instantiated across multiple CUDA translation units.
+    status: current
+    sha256: 1e85cca94d85f999f5162a06aa8b4b2bbb47fd582f358ff21b3841a246c73eea
+  - title: OPALX overview
+    date: "2026-04-06"
+    category: presentations/features
+    source: Manual/sections/appendices/developer-build/opalx-overview.pdf
+    destination: presentations/2026/features/2026-04-06-opalx-overview.pdf
+    description: Introductory overview of the OPALX project.
+    status: current
+    sha256: 6b48c340207c7d59efa232b5d01472ccf8ed9e71f39da43109bcc86682515013
+  - title: OpalElement layout proposal
+    date: "2026-04-30"
+    category: reports/design
+    source: PhysicsManual/etc/Proposal-Jon-OpalElementLayout.pdf
+    destination: reports/2026/design/2026-04-30-opal-element-layout-proposal.pdf
+    description: Design proposal for the OPALX element layout.
+    status: experimental
+    sha256: cde7ee429c168bee3d2a2945bdf8591007b3767a7973569ba105f56dc275cc5b
+  - title: Gamma-gamma benchmark reference data
+    date: "2026-04-25"
+    category: datasets/gamma-gamma
+    source: PhysicsManual/sections/gamma-gamma/figures/reference-data/*.csv
+    destination: datasets/2026/gamma-gamma/2026-04-25-gamma-gamma-reference-data.tar.gz
+    description: OPALX and CAIN histogram data used by the linear Compton benchmark figures.
+    status: experimental
+    sha256: 3c3384444ffe7cceffb8e7b680205bd4aeef4da368749e80260e59cef692b837
+
+  - title: "FFT2D5 benchmark \u2014 analytic_zero_sc.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/analytic_zero_sc.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 5cbe319724ec63b522d4459cb39f0e72ff8055ed5c61ae3e0522f442ff2644e1
+
+  - title: "FFT2D5 benchmark \u2014 emittance.png"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/emittance.png
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: c07b9d9568fc7b73273d2c87438f8ad6f1362d0020dbb318d8f36ea143b8310d
+
+  - title: "FFT2D5 benchmark \u2014 inputs/check_bend_kinematics.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/check_bend_kinematics.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 90aef6151ab1f3783587e7d5669b2021ff49880dbb769bfa02d2f8c7904a73b6
+
+  - title: "FFT2D5 benchmark \u2014 inputs/integer-roll-check.json"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/integer-roll-check.json
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 681ffdd8db74600d726530d6a01e5f250393d30e08c48ae420c68f906ea27ef0
+
+  - title: "FFT2D5 benchmark \u2014 inputs/opalx-10pC-100steps.in"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/opalx-10pc-100steps.in
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 86c07aed2d0467c4775ca4edb857e785821853c40c7c29052788379c9adf0500
+
+  - title: "FFT2D5 benchmark \u2014 inputs/provenance.json"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/provenance.json
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 72ee1af7216af026b410a15db89cd2adc9d301afb0e0d7bb6be8c3ad6e94c8b8
+
+  - title: "FFT2D5 benchmark \u2014 inputs/pyorbit-10pC-100steps.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/pyorbit-10pc-100steps.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 153f1811b82084914c9f29cde09f21172a4861334cc04ae5ad955fa7fc8284bc
+
+  - title: "FFT2D5 benchmark \u2014 inputs/pyorbit-command.json"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/pyorbit-command.json
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: c690982a9985471755444c2502690eddd6894f5ecfcd342ff38c789a720641fd
+
+  - title: "FFT2D5 benchmark \u2014 inputs/readme.md"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/readme.md
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 8aea0c52cd4ee193eed829357280493b1ec2d3bcf05580ea4cefe5d7f2867125
+
+  - title: "FFT2D5 benchmark \u2014 inputs/source.json"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/source.json
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 05e2b4556bc8dd2b57cb3e828be3800463d09908755c4b43e336855aa462ef86
+
+  - title: "FFT2D5 benchmark \u2014 plot_results.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/plot_results.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 56e957a72b8fbd6064b94ca9b9533e1be6ad123f56ac97df280994b4b6969358
+
+  - title: "FFT2D5 benchmark \u2014 readme.md"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/readme.md
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: a01abccf2979f75b49903bcea8486b49a51ed488ca45d6cd2c4964c58469b84a
+
+  - title: "FFT2D5 benchmark \u2014 results.csv"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/results.csv
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 971318196299035cadf6274be60717464e96ae96aeb28a1a643e9833e4e9ca7b
+
+  - title: "FFT2D5 benchmark \u2014 rms.png"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/rms.png
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: ea9453b69b833c990d2236af099bdc5810b7556851f9174c6589fd5b0164c24e
+
+  - title: "FFT2D5 benchmark \u2014 sampling-audit/check.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/sampling-audit/check.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: c25967eee554f0d65277edb3467961484887188d875bc8d0742d09f16271ec80
+
+  - title: "FFT2D5 benchmark \u2014 sampling-audit/plot.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/sampling-audit/plot.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 2af7ebe42f1ccc40d779310257f1741fce4f4429123ce88a2a3386e4c9b9b155
+
+  - title: "FFT2D5 benchmark \u2014 sampling-audit/references.csv"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/sampling-audit/references.csv
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 6dccab464bf57fbb92227540ec6c6b8d92a44dd0904ffe4fd52cc7bf3e362f76
+
+  - title: "FFT2D5 benchmark \u2014 sampling-audit/zero-sc-conventions.png"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/sampling-audit/zero-sc-conventions.png
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: f99acdc0273039026195a956b7e9b2ed5825291d3333a66168c90f82321d6779
+
+  - title: "FFT2D5 benchmark \u2014 series.csv"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/series.csv
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 4c23813f576712ae766ace1a992a329f0662d77749b48e1ee3597cd6e7c96694
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-run.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000"
+    destination: examples/2026/2d5-1/reduced-mesh-100k/2026-11-04-run.py
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: c9e01e7b3061de4cac774495cb3b3c20df8c9404f966131b9dcc5bc361678759
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-analyze.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000"
+    destination: examples/2026/2d5-1/reduced-mesh-100k/2026-11-04-analyze.py
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: d079af3107abd6d686d697e748fd5abc5c25be3cf0cb34610e59a0897a8e229e
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-series.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000"
+    destination: examples/2026/2d5-1/reduced-mesh-100k/2026-11-04-series.csv
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: 335cab64689cc15ed610ea3920b5e7d37f08f233a1a5f972c853cfe1c05ac226
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-endpoint-comparison.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000"
+    destination: examples/2026/2d5-1/reduced-mesh-100k/2026-11-04-endpoint-comparison.csv
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: bbea7d4b7a0b996b5660cf328bd514193ab76125f5f43bd7747a7e815b3c2f5f
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-results.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000"
+    destination: examples/2026/2d5-1/reduced-mesh-100k/2026-11-04-results.json
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: 2bdd0db0b7e74ba24923982210225404cb123ba72232254fec5d80e792f9ab32
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-comparison.png"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000"
+    destination: examples/2026/2d5-1/reduced-mesh-100k/2026-11-04-comparison.png
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: c7f74ab37f6538950a7f884c17be549ced21515a9058343833529f6f4d8e432b
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-comparison.pdf"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000"
+    destination: examples/2026/2d5-1/reduced-mesh-100k/2026-11-04-comparison.pdf
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: 06f4deca0e92961fdec438ffd7160ea93fd414276d5356763956c7059fd5be4c
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-track.in"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000"
+    destination: examples/2026/2d5-1/reduced-mesh-100k/2026-11-04-track.in
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: 786e9df266e9dc84ee7484b8b44f4fd842cde45c5d846d1cf8f9aead09b2f45a
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000"
+    destination: examples/2026/2d5-1/reduced-mesh-100k/2026-11-04-manifest.json
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: 2f2242d9e61a208fe990c2b44c4c9cc81f84721339209887dd4b0d6a86197924
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-bend-uniform-n100000.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000"
+    destination: examples/2026/2d5-1/reduced-mesh-100k/2026-11-04-bend-uniform-n100000.json
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: 3dd1d5296e8b466cea44ceaf392cdeba4f4c91b89c815df70ff3a12ca85b33cc
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-readme.md"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000"
+    destination: examples/2026/2d5-1/reduced-mesh-100k/2026-11-04-readme.md
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: afd088791915abd1456c464e4e7fffb6ae61dd30db0255f7cb8cdd8bda45c62a
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-run.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000-same-exe"
+    destination: examples/2026/2d5-1/reduced-mesh-100k-same-executable/2026-11-04-run.py
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: 16ae93f877e43f05679ea968e62bc66cfffe4369bc04bb5cbaea6ec197dc1833
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-analyze.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000-same-exe"
+    destination: examples/2026/2d5-1/reduced-mesh-100k-same-executable/2026-11-04-analyze.py
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: 636f46de97d5c70991207afe6034a79ed4410e9e94eefb0520bcf3808b20de4c
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-series.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000-same-exe"
+    destination: examples/2026/2d5-1/reduced-mesh-100k-same-executable/2026-11-04-series.csv
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: 651fce516adfe62dfca651e1c4ed68830daf4aa1ff85b60688f7419baf09e2a2
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-endpoint-comparison.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000-same-exe"
+    destination: examples/2026/2d5-1/reduced-mesh-100k-same-executable/2026-11-04-endpoint-comparison.csv
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: d153b72df7f4bfc2bb458e5adb9f8d96087328e469bdcdc75d4757084472679c
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-results.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000-same-exe"
+    destination: examples/2026/2d5-1/reduced-mesh-100k-same-executable/2026-11-04-results.json
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: 3f9c2b46f74f378debf2778c64cf6cfa819e790b6e534fa21c5e56a0095ec841
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-comparison.png"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000-same-exe"
+    destination: examples/2026/2d5-1/reduced-mesh-100k-same-executable/2026-11-04-comparison.png
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: e865b84dcc7fe90afb49d9a9989c833fd540fb4ea52c8807bca907443ac8fac3
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-comparison.pdf"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000-same-exe"
+    destination: examples/2026/2d5-1/reduced-mesh-100k-same-executable/2026-11-04-comparison.pdf
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: a8af420f75f1fa8ceb05847266d9245d1f402ee522d8335de5945ea77c5d8dcd
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-track.in"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000-same-exe"
+    destination: examples/2026/2d5-1/reduced-mesh-100k-same-executable/2026-11-04-track.in
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: 786e9df266e9dc84ee7484b8b44f4fd842cde45c5d846d1cf8f9aead09b2f45a
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000-same-exe"
+    destination: examples/2026/2d5-1/reduced-mesh-100k-same-executable/2026-11-04-manifest.json
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: 159ead70221b8f597be871fa0e676e108fb1bbc5421efab89a77466e541ebd1e
+
+  - title: "FFT2D5 reduced-mesh100k benchmark \u2014 2026-11-04-readme.md"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-32x32x512-n100000-same-exe"
+    destination: examples/2026/2d5-1/reduced-mesh-100k-same-executable/2026-11-04-readme.md
+    description: "10pC100-step reduced-mesh run; inputs, provenance, results and comparison with archived fine-grid benchmark."
+    status: experimental
+    sha256: daad931defb5b7b7f91aebecfbe4e2e5c5b7d58dca958cd8b5f95ab990c08e42
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-series.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-series.csv
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: 6b9d83b22fc85577ef3236605f4dac2bb894849ce8631f7862e16652dc185e65
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-endpoints.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-endpoints.csv
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: 4a6c92b87a6b9ccb0132bb2aa68c2d352e9c0b18e368ceffb6c7929de677c7f5
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-errors.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-errors.csv
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: 7b457af12a6f948a47041c321fad59be421d06a7b91e8ff7b05a669335dd79e5
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-runtimes.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-runtimes.csv
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: 5b3bbd376406a9f6c34c2c4c89e75e505bb634671cbb3a274c14c64b075d9663
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-results.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-results.json
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: 9aaa593d7a1e31367bb646f42390ee6ce5866f9e6800b53956ad6892bba90882
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-mesh-comparison.png"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-mesh-comparison.png
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: cdc84e86c403609e7f593794e731e1323cb6e45926f3f6fe18f186529ed94023
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-mesh-comparison.pdf"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-mesh-comparison.pdf
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: acf41d74bbb4d9c4e27c2a02899a6397212e88b357701046d45798292db245a5
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-runtimes.png"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-runtimes.png
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: 187d7d182fad4710b191b91bc904b29d12e1af043d49be2cf477eea72fda0a5e
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-runtimes.pdf"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-runtimes.pdf
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: 1952a37a47f83604f9d5e3a293f0290fe3768171d325a46ce037255942c28584
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-compare_campaign.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-compare_campaign.py
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: e7d264de2ac7bcca56b17427457895bfd6f16120d8b53d23ca156b0552cd1bd2
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-64-run.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-64-run.py
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: 673a296501e94f2cf35ba2ce458901af8a970014cc5d19f56ed7059c93df27d5
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-64-analyze.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-64-analyze.py
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: 9aaa22d7136eb37084170fced24f2d9a024f2e15f537bf74925d7f7c5d5ab0ae
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-64-track.in"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-64-track.in
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: 5482a052814a6906f0579f9a015849a533c13f6c810c30afd9b9cccb76ac4b18
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-64-manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-64-manifest.json
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: bf2a44c5f195ad55fed85f07839f933c76cd975f57ed167aba65f263181a5fcf
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-128-run.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-128-run.py
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: 2aaf0dd2e22c745264686936dfb719e3ba44f4ddc74ce515d1f57af7959ce691
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-128-analyze.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-128-analyze.py
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: 9f38c0b79f0f115f0bd638deab4a6010a765ca33444a430fdd30555f1101b3c2
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-128-track.in"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-128-track.in
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: 508a94c7ff83ff6bbddb884b6371695757f40e4c9097643ae8cac6bb2aca8bda
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-128-manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-128-manifest.json
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: 2ccfb59524d3f061875b2b3732e18911cc9aaab4e8ff08d1250ee9a3a8afff8f
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-replot.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-replot.py
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: 9566d3d30332f93aa8e7b53adb493d5a2ae9bd139e909216ccc716a216e11de3
+
+  - title: "FFT2D5 transverse-mesh comparison \u2014 2026-11-04-readme.md"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-transverse-mesh-study-100k"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-readme.md
+    description: "Same-executable32/64/128 transverse-grid study at100kparticles;512\u00b3fine reference at1048576particles; inputs, curves, endpoints andruntime."
+    status: experimental
+    sha256: a4ec3752c9d094dcbb7e7f5d912d6ba608fb20c5c2a17bd01f5e711a47e0f0f9
+
+  - title: "FFT2D5 mesh comparison \u2014 2026-11-04-pyorbit-series.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "Existing native PyORBIT100-step10pC benchmark; provenance in adjacent JSON."
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-pyorbit-series.csv
+    description: "PyORBIT512\u00b3/1048576particle reference added to RMS-size andemittance mesh-study plots."
+    status: experimental
+    sha256: 958951ab48fbdac1a94cba8094d47493c4f224e9ad61efba4118ca131fdaa481
+
+  - title: "FFT2D5 mesh comparison \u2014 2026-11-04-pyorbit-provenance.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "Existing native PyORBIT100-step10pC benchmark; provenance in adjacent JSON."
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-pyorbit-provenance.json
+    description: "PyORBIT512\u00b3/1048576particle reference added to RMS-size andemittance mesh-study plots."
+    status: experimental
+    sha256: 00731840e79739fd7d7715ba6bc303e7acd7b7e2f36a26266abd604affdcd499
+
+  - title: "FFT2D5 64-grid200k addition \u2014 2026-11-04-64-200k-run.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-64x64x512-n200000-same-exe"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-64-200k-run.py
+    description: "Same-executable100-step10pC run with64\u00d764\u00d7512mesh and200000particles; input,source andrun provenance."
+    status: experimental
+    sha256: f54c6a3589a5e85dbc6c9f08413cdba8706757c81d6f9646863c36042c44ef6e
+
+  - title: "FFT2D5 64-grid200k addition \u2014 2026-11-04-64-200k-analyze.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-64x64x512-n200000-same-exe"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-64-200k-analyze.py
+    description: "Same-executable100-step10pC run with64\u00d764\u00d7512mesh and200000particles; input,source andrun provenance."
+    status: experimental
+    sha256: 744fa1c2afd77760a1e71b3612dfbb100990e918f3567c56dbe67cd6aa8e3dd6
+
+  - title: "FFT2D5 64-grid200k addition \u2014 2026-11-04-64-200k-track.in"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-64x64x512-n200000-same-exe"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-64-200k-track.in
+    description: "Same-executable100-step10pC run with64\u00d764\u00d7512mesh and200000particles; input,source andrun provenance."
+    status: experimental
+    sha256: ffda606a191a1f3a398d0b7b317f98c87de44461df029d19e8a9050877312eff
+
+  - title: "FFT2D5 64-grid200k addition \u2014 2026-11-04-64-200k-manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-64x64x512-n200000-same-exe"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-64-200k-manifest.json
+    description: "Same-executable100-step10pC run with64\u00d764\u00d7512mesh and200000particles; input,source andrun provenance."
+    status: experimental
+    sha256: 027c106438a703803696cbcd00f289e332b4c0ca29a642d426b6c7a9763de501
+
+  - title: "FFT2D5 64-grid200k addition \u2014 2026-11-04-64-200k-source.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/bend-10m-100steps-64x64x512-n200000-same-exe"
+    destination: examples/2026/2d5-1/transverse-mesh-study-100k/2026-11-04-64-200k-source.json
+    description: "Same-executable100-step10pC run with64\u00d764\u00d7512mesh and200000particles; input,source andrun provenance."
+    status: experimental
+    sha256: 2aa6d3e8e8a4cef90b17685ff69eef3a9b2a9ea1c9b6429c71523e5ebdbca226
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-rms-current-vs-pr.png"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-rms-current-vs-pr.png
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 9665ff74b5cd5d2a99c20c2ed43d44865ca1f86b3644bd8fc4a1514ecc3405ae
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-rms-current-vs-pr.pdf"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-rms-current-vs-pr.pdf
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 2ce9c7663f168f4e4ee3ed0ba42dac8a0ecbccec63c75316c8574533a4b74e24
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-emittance-current-vs-pr.png"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-emittance-current-vs-pr.png
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 97802faa6dc69fff46a16dc42b2c0e1d6772ba5a3751e703006fbaf9e27aa94d
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-emittance-current-vs-pr.pdf"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-emittance-current-vs-pr.pdf
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 1edbcdf1eb5fdd1ad2ce96ba191c7fdf8aee1e55267c4a76bf58acd9cd6e6cc0
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-overlay-series.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-overlay-series.csv
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: b449e3732511e46366a38b0deef82b9da8a3bdda67b869007c36a78e45c0fec2
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-current-vs-published.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-current-vs-published.csv
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 6a0010bdc539b7a0d37586d6a8638e671919de8f72654e786493607f60d31c87
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-audit.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-audit.json
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: ba30efb3981b13c0760feca911b4950bc74d7aa893a5fc5774069a1695a05dd5
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-zero-sc-manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-zero-sc-manifest.json
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 7f792227783228e34252ac37e2e6ace526ced46df3588200288f24e2d4239b73
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-zero-sc.in"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-zero-sc.in
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 957a74c7e8bc24ce80e630840a0ace988e7daa040d3649ea01e08459eed3cb83
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-10pc-manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-10pc-manifest.json
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: ab9c53b5bce5208e61ecbf3766df4ab67efcac8c86ce8c76ba47571d8bc94035
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-10pc.in"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-10pc.in
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 86c07aed2d0467c4775ca4edb857e785821853c40c7c29052788379c9adf0500
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-validated-build.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-validated-build.json
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 0112bfe6a39af246a0793b9fb2e1008d05a19e9e0e33717ef58e07e72f63d7d1
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-source.patch"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-source.patch
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 885e59c8a4fe5c3751b0077db53051f7467667af1a4d0fee77b799b68ef6764a
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-checks.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-checks.json
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: f6e69ec3f719fa2cb1ad71561f44455f515c13139f602c73aad45e4afb523b52
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-frame-restoration.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-frame-restoration.json
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 9cdbcc20d850e89da8b30fdb94629017f01d5f6e250c1b03b7193e1b72e992c6
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-configure-command.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-configure-command.json
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 0fe5793fadd436b039289a8fec4868d6260a9fa7ce30cfb9265a725cd0a2587d
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-run.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-run.py
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 1f1c28404c2872a50a1e5ce8e77c544ace182ada938f128846ef325b80b9ed20
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-analyze.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-analyze.py
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: db658a8a2611c63a693295d8dea990b54ad7b1b91d6b24c4f35615a9239caf10
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-plot-source.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-plot-source.py
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 428ec21978f1570627e0b5e80c11545ec14b940828d7c76fa1f3ddac16069772
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-analytic-zero-sc.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-analytic-zero-sc.py
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 5cbe319724ec63b522d4459cb39f0e72ff8055ed5c61ae3e0522f442ff2644e1
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-endpoints.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-endpoints.csv
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 6b6040862152d748d4ef09f98dd578c48f1992fd12f47d0dd3170b739a019ed1
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-replot.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-replot.py
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 3368c50525283db73697e9f65ec5a63bcfd741b2e3d806aeb790f78a966be4f9
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-summary.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-summary.json
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: eac6cef3d7e9cb1c6903cf14444fc0e30f0ed277ac294542f670c9be40be5362
+
+  - title: "FFT2D5 current-build PR repeat \u2014 2026-11-04-readme.md"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/current-build-repeat-2026-11-04/2026-11-04-readme.md
+    description: "Current~/git/opalx/build-omp100-step ZeroSC/10pC repeat compared with immutable published PR667 data; provenance, inputs andplots."
+    status: experimental
+    sha256: 245bcc9d170beab206999360346ac775573e84a6995a3541a17b6c2d3f087201
+
+  - title: "DBA ZeroSC timestep study \u2014 2026-11-04-dba-zerosc-timestep-study-fine.pdf"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/dba-zerosc-timesteps-2026-11-04/2026-11-04-dba-zerosc-timestep-study-fine.pdf
+    description: "Current build-omp fixed-step DBA ZeroSC tune study; 4 ps full-record criterion, 3 ps stricter stability criterion; no space-charge runs."
+    status: experimental
+    sha256: 2f2aa0aa6e35a72594638edaea288b1acb7c82047617437f56bc3b62360a229c
+
+  - title: "DBA ZeroSC timestep study \u2014 2026-11-04-dba-zerosc-timestep-study-fine.png"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/dba-zerosc-timesteps-2026-11-04/2026-11-04-dba-zerosc-timestep-study-fine.png
+    description: "Current build-omp fixed-step DBA ZeroSC tune study; 4 ps full-record criterion, 3 ps stricter stability criterion; no space-charge runs."
+    status: experimental
+    sha256: 4519f7bfe6285073f70858a73e50afd6350a78307e21a300badb0617f728f9b3
+
+  - title: "DBA ZeroSC timestep study \u2014 2026-11-04-dba-zerosc-timestep-study.pdf"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/dba-zerosc-timesteps-2026-11-04/2026-11-04-dba-zerosc-timestep-study.pdf
+    description: "Current build-omp fixed-step DBA ZeroSC tune study; 4 ps full-record criterion, 3 ps stricter stability criterion; no space-charge runs."
+    status: experimental
+    sha256: 5ab38c0aa0b9b7d156ae7be1df54714274b1cb33ad1b96d7d27101a7268aaba8
+
+  - title: "DBA ZeroSC timestep study \u2014 2026-11-04-dba-zerosc-timestep-study.png"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/dba-zerosc-timesteps-2026-11-04/2026-11-04-dba-zerosc-timestep-study.png
+    description: "Current build-omp fixed-step DBA ZeroSC tune study; 4 ps full-record criterion, 3 ps stricter stability criterion; no space-charge runs."
+    status: experimental
+    sha256: b62f80007f2ea592f3b43a7a336274540731188bf5c0950918f8b2351a01df29
+
+  - title: "DBA ZeroSC timestep study \u2014 2026-11-04-fullring-particle-tunes.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/dba-zerosc-timesteps-2026-11-04/2026-11-04-fullring-particle-tunes.csv
+    description: "Current build-omp fixed-step DBA ZeroSC tune study; 4 ps full-record criterion, 3 ps stricter stability criterion; no space-charge runs."
+    status: experimental
+    sha256: e8bc4edd6f736c9aa6ba67e137192f2a89ba6b8c833e197b5454a972cb59df3e
+
+  - title: "DBA ZeroSC timestep study \u2014 2026-11-04-fullring-summary.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/dba-zerosc-timesteps-2026-11-04/2026-11-04-fullring-summary.csv
+    description: "Current build-omp fixed-step DBA ZeroSC tune study; 4 ps full-record criterion, 3 ps stricter stability criterion; no space-charge runs."
+    status: experimental
+    sha256: 8956d0f74facfc007fcc4a1935caf0188dacd5741b888920039d69089f96c122
+
+  - title: "DBA ZeroSC timestep study \u2014 2026-11-04-inputs-and-analysis.zip"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/dba-zerosc-timesteps-2026-11-04/2026-11-04-inputs-and-analysis.zip
+    description: "Current build-omp fixed-step DBA ZeroSC tune study; 4 ps full-record criterion, 3 ps stricter stability criterion; no space-charge runs."
+    status: experimental
+    sha256: b85cad1ca9a47e9598f159b2f45673906d54b7fdd80b29e398590cd2e6e05158
+
+  - title: "DBA ZeroSC timestep study \u2014 2026-11-04-particle-tunes.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/dba-zerosc-timesteps-2026-11-04/2026-11-04-particle-tunes.csv
+    description: "Current build-omp fixed-step DBA ZeroSC tune study; 4 ps full-record criterion, 3 ps stricter stability criterion; no space-charge runs."
+    status: experimental
+    sha256: 8ba994e580e5169e38eb8bf8ed2ba26dcd009ab196b867ec16026e2be689aa79
+
+  - title: "DBA ZeroSC timestep study \u2014 2026-11-04-readme.md"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/dba-zerosc-timesteps-2026-11-04/2026-11-04-readme.md
+    description: "Current build-omp fixed-step DBA ZeroSC tune study; 4 ps full-record criterion, 3 ps stricter stability criterion; no space-charge runs."
+    status: experimental
+    sha256: 14536f59bc1dd8f42e444a5507f0d43f92e8bd2d864835989986817d0c20c950
+
+  - title: "DBA ZeroSC timestep study \u2014 2026-11-04-replot.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/dba-zerosc-timesteps-2026-11-04/2026-11-04-replot.py
+    description: "Current build-omp fixed-step DBA ZeroSC tune study; 4 ps full-record criterion, 3 ps stricter stability criterion; no space-charge runs."
+    status: experimental
+    sha256: 762510b52d3e7a7a945017818dc1da01b5851fd0f67bb53eda08b9f65096078a
+
+  - title: "DBA ZeroSC timestep study \u2014 2026-11-04-selection.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/dba-zerosc-timesteps-2026-11-04/2026-11-04-selection.json
+    description: "Current build-omp fixed-step DBA ZeroSC tune study; 4 ps full-record criterion, 3 ps stricter stability criterion; no space-charge runs."
+    status: experimental
+    sha256: cf8fb7a2f4eaa70f6905c3baec178cba3141bff810ebaa2051fcf7bb75b33380
+
+  - title: "DBA ZeroSC timestep study \u2014 2026-11-04-timestep-summary.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/dba-zerosc-timesteps-2026-11-04/2026-11-04-timestep-summary.csv
+    description: "Current build-omp fixed-step DBA ZeroSC tune study; 4 ps full-record criterion, 3 ps stricter stability criterion; no space-charge runs."
+    status: experimental
+    sha256: 02a5187f86c9055860dc184ed3f0e756584fbdc2122f4376e6bd0e73a4b611ed
+
+  - title: "DBA ZeroSC timestep study \u2014 2026-11-04-tune-extraction-check.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/dba-zerosc-timesteps-2026-11-04/2026-11-04-tune-extraction-check.json
+    description: "Current build-omp fixed-step DBA ZeroSC tune study; 4 ps full-record criterion, 3 ps stricter stability criterion; no space-charge runs."
+    status: experimental
+    sha256: 49439c27c9edcd48ef184f66719d5770548d23d731a232a6d31d562fdc87268e
+
+  - title: "DBA ZeroSC timestep study \u2014 2026-11-04-validated-build.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current"
+    destination: examples/2026/2d5-1/dba-zerosc-timesteps-2026-11-04/2026-11-04-validated-build.json
+    description: "Current build-omp fixed-step DBA ZeroSC tune study; 4 ps full-record criterion, 3 ps stricter stability criterion; no space-charge runs."
+    status: experimental
+    sha256: 0112bfe6a39af246a0793b9fb2e1008d05a19e9e0e33717ef58e07e72f63d7d1
+
+  - title: "DBA SC feasibility pilot \u2014 2026-11-04-analyze.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility"
+    destination: examples/2026/2d5-1/dba-sc-feasibility-2026-11-04/2026-11-04-analyze.py
+    description: "Bounded100-step DBA timing pilot,100k matchedKV,64x64x512,3ps,ORIGINAL transverseSC; no full-turn launch."
+    status: experimental
+    sha256: 0a2cb340c87023ff15d10a4d0018d951e47d9bb60840a0a0f77444a603331746
+
+  - title: "DBA SC feasibility pilot \u2014 2026-11-04-omp1-100steps.in"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility"
+    destination: examples/2026/2d5-1/dba-sc-feasibility-2026-11-04/2026-11-04-omp1-100steps.in
+    description: "Bounded100-step DBA timing pilot,100k matchedKV,64x64x512,3ps,ORIGINAL transverseSC; no full-turn launch."
+    status: experimental
+    sha256: f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38
+
+  - title: "DBA SC feasibility pilot \u2014 2026-11-04-omp1-100steps.log"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility"
+    destination: examples/2026/2d5-1/dba-sc-feasibility-2026-11-04/2026-11-04-omp1-100steps.log
+    description: "Bounded100-step DBA timing pilot,100k matchedKV,64x64x512,3ps,ORIGINAL transverseSC; no full-turn launch."
+    status: experimental
+    sha256: f2a9555aa2592cd4cb2673b3ee7df21438a9ac4f0ece3644089e1150fa758020
+
+  - title: "DBA SC feasibility pilot \u2014 2026-11-04-omp1-100steps.manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility"
+    destination: examples/2026/2d5-1/dba-sc-feasibility-2026-11-04/2026-11-04-omp1-100steps.manifest.json
+    description: "Bounded100-step DBA timing pilot,100k matchedKV,64x64x512,3ps,ORIGINAL transverseSC; no full-turn launch."
+    status: experimental
+    sha256: 15db963dcccfcd877fc10231ca4a170309cde3da9f8577c6eb4672d60750914e
+
+  - title: "DBA SC feasibility pilot \u2014 2026-11-04-omp4-100steps.in"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility"
+    destination: examples/2026/2d5-1/dba-sc-feasibility-2026-11-04/2026-11-04-omp4-100steps.in
+    description: "Bounded100-step DBA timing pilot,100k matchedKV,64x64x512,3ps,ORIGINAL transverseSC; no full-turn launch."
+    status: experimental
+    sha256: f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38
+
+  - title: "DBA SC feasibility pilot \u2014 2026-11-04-omp4-100steps.log"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility"
+    destination: examples/2026/2d5-1/dba-sc-feasibility-2026-11-04/2026-11-04-omp4-100steps.log
+    description: "Bounded100-step DBA timing pilot,100k matchedKV,64x64x512,3ps,ORIGINAL transverseSC; no full-turn launch."
+    status: experimental
+    sha256: 75303e3d074f4aa2b6be9f39cad1feeb21d0d54c79b427c1508fa56b939ae2d4
+
+  - title: "DBA SC feasibility pilot \u2014 2026-11-04-omp4-100steps.manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility"
+    destination: examples/2026/2d5-1/dba-sc-feasibility-2026-11-04/2026-11-04-omp4-100steps.manifest.json
+    description: "Bounded100-step DBA timing pilot,100k matchedKV,64x64x512,3ps,ORIGINAL transverseSC; no full-turn launch."
+    status: experimental
+    sha256: 1b2d9c7ceb6535b49f824b6bb86acfb8a6c6f47559e4e91ed84172f3744d0a2a
+
+  - title: "DBA SC feasibility pilot \u2014 2026-11-04-readme.md"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility"
+    destination: examples/2026/2d5-1/dba-sc-feasibility-2026-11-04/2026-11-04-readme.md
+    description: "Bounded100-step DBA timing pilot,100k matchedKV,64x64x512,3ps,ORIGINAL transverseSC; no full-turn launch."
+    status: experimental
+    sha256: 21c48d55a5508808e6ace477f50e3514a250bf3573d6d1b6735ee93023f0dfd7
+
+  - title: "DBA SC feasibility pilot \u2014 2026-11-04-run.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility"
+    destination: examples/2026/2d5-1/dba-sc-feasibility-2026-11-04/2026-11-04-run.py
+    description: "Bounded100-step DBA timing pilot,100k matchedKV,64x64x512,3ps,ORIGINAL transverseSC; no full-turn launch."
+    status: experimental
+    sha256: 3a30b099416f30bdcddd4f3bd2f2d96a6826cd1d977e864872ab3eb54c3f66ea
+
+  - title: "DBA SC feasibility pilot \u2014 2026-11-04-summary.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility"
+    destination: examples/2026/2d5-1/dba-sc-feasibility-2026-11-04/2026-11-04-summary.json
+    description: "Bounded100-step DBA timing pilot,100k matchedKV,64x64x512,3ps,ORIGINAL transverseSC; no full-turn launch."
+    status: experimental
+    sha256: 5c136f59568a160f81da394fe595a2ffcdc0d2a2277b0e6f39ce73553c420351
+
+  - title: "DBA SC feasibility pilot \u2014 2026-11-04-timing-summary.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility"
+    destination: examples/2026/2d5-1/dba-sc-feasibility-2026-11-04/2026-11-04-timing-summary.csv
+    description: "Bounded100-step DBA timing pilot,100k matchedKV,64x64x512,3ps,ORIGINAL transverseSC; no full-turn launch."
+    status: experimental
+    sha256: a804c289b4c8bee52b1f9074e6f8d687818ffe0ddc4090362d73c82ebde5e4ac
+
+  - title: "DBA SC feasibility pilot \u2014 2026-11-04-zerosc-omp4-100steps.in"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility"
+    destination: examples/2026/2d5-1/dba-sc-feasibility-2026-11-04/2026-11-04-zerosc-omp4-100steps.in
+    description: "Bounded100-step DBA timing pilot,100k matchedKV,64x64x512,3ps,ORIGINAL transverseSC; no full-turn launch."
+    status: experimental
+    sha256: dc03e3a27afd051a353f929d467d8a43cbda1d74ff1d5dab22f6ebd20f68dbef
+
+  - title: "DBA SC feasibility pilot \u2014 2026-11-04-zerosc-omp4-100steps.log"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility"
+    destination: examples/2026/2d5-1/dba-sc-feasibility-2026-11-04/2026-11-04-zerosc-omp4-100steps.log
+    description: "Bounded100-step DBA timing pilot,100k matchedKV,64x64x512,3ps,ORIGINAL transverseSC; no full-turn launch."
+    status: experimental
+    sha256: 062c949773dbccbef42e50aa9648c576ffd6ed7906e7141f01ebb4521ccc3574
+
+  - title: "DBA SC feasibility pilot \u2014 2026-11-04-zerosc-omp4-100steps.manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-sc-feasibility"
+    destination: examples/2026/2d5-1/dba-sc-feasibility-2026-11-04/2026-11-04-zerosc-omp4-100steps.manifest.json
+    description: "Bounded100-step DBA timing pilot,100k matchedKV,64x64x512,3ps,ORIGINAL transverseSC; no full-turn launch."
+    status: experimental
+    sha256: 9138f8c832e922d7d89f678253cf5a9dee4417dd137a182aaa67d833f59397d1
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-analyze.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-analyze.py
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: 555a8d1dd579f5c973b5dc8260adc78e6907b94e8bf5ca184cadc13c1e17822a
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-backend-config.txt"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-backend-config.txt
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: 1dfec4431e783f4f19c8b924c802de6c42b36b9dbe48e7a3cbf6d450f50d02ed
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-case.in"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-case.in
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-compile-profiler.txt"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-compile-profiler.txt
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: a9ee6e234c054683de8daf70e26d27439dc1cbbe052a29a0ed2f5ecf19efe473
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-cpu-sample.txt"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-cpu-sample.txt
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: b43f68d861f12697ace375d82cb938d00f9b03bab713c4cd84665840a543b7a6
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-endpoint-audit.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-endpoint-audit.json
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: a63b715e524aa098fe2d3e56c8a942490085fbbc511eeb6fbc9e9ca9b8d5371e
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-kernel-summary.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-kernel-summary.csv
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: 02bd81c5159a963e271205d3214515346c1f557375b6bcbf230a3b6fbf2d38b4
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-kernel-timer.cpp"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-kernel-timer.cpp
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: 7270cb9f5d24f2960b34e78755123c0a81192681f9cdd7f12b1fc4440b3552bb
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-kernel-timings.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-kernel-timings.csv
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: 09fb21a3b0f2f6f8a62631297da264264820f27ae1c473372e4db7cc70e379e8
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-kernel.log"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-kernel.log
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: 1703baa4e8f611eca2cd4ab814f7a1f2c6a3fff1b78dbef1b9625613d82ae817
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-kernel.manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-kernel.manifest.json
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: 1ca57708ac7099be883099fffcdbc315663eb53455a6c9081dfadc54abab07d1
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-main-thread-sample-summary.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-main-thread-sample-summary.csv
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: 2a0437a8c17aaf9032090c545ce0f27415e4900713d7d0b9717f91a9bb0c7062
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-openmp-worker-sample-summary.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-openmp-worker-sample-summary.csv
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: 049663259cdec83773601879caec8456a0c64669d4fd3d88249b82dbade5a4d7
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-profile.pdf"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-profile.pdf
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: 2e3a08ea5ddc47604de254b9fd9c02125fb03b42dacaaa80264bc51be47afbd4
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-profile.png"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-profile.png
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: 4ba6cad7ef724c3b559583bf4956f52d017d6d463603c04a02144b508c1d88d6
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-readme.md"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-readme.md
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: e1c840119d6a985e6f7de4266f5d4457d1d3de172c843843537218085ae2db81
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-replot.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-replot.py
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: 6acc9b385f8bd1fe1de152fea07c5e3b9c0397d8c91d923aa4d4242713cd869c
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-run.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-run.py
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: 3893f865f7a2c42442752eb7eb37037645932332a798ceb8446dbbc26b6f5196
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-sample.log"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-sample.log
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: a602c2d2a29482d79b68832bee867631894d679237e975be2661cca55d73f7d4
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-sample.manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-sample.manifest.json
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: ac543e51fc8be08942406fe22483d62275a7066a6d8f8ad215cc24d5af56870c
+
+  - title: "DBA FFT2D5 profile \u2014 2026-11-04-summary.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-fft2d5-profile"
+    destination: examples/2026/2d5-1/dba-fft2d5-profile-2026-11-04/2026-11-04-summary.json
+    description: "Unchanged build-omp100-step SC pilot: Kokkos wall timers and CPU stack sampling identify path-projection and stock FFT costs."
+    status: experimental
+    sha256: 23a5ed1eb23b731e8a925be29815249f7208c6888a36fc3ab43806032d36df13
+
+  - title: "DBA PARFFTZ support probe \u2014 2026-11-04-mpi1-omp4.log"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-parallel-z-probe"
+    destination: examples/2026/2d5-1/dba-parallel-z-probe-2026-11-04/2026-11-04-mpi1-omp4.log
+    description: "Input-only PARFFTZ=TRUE probes on four MPI ranks and one rank/four threads; both rejected before tracking by current FFT2D5 support limits."
+    status: experimental
+    sha256: 6621089dff8d8620196e804cc0b0ff02496e5f2acf2d4466ab81f1b438cde46e
+
+  - title: "DBA PARFFTZ support probe \u2014 2026-11-04-mpi1-omp4.manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-parallel-z-probe"
+    destination: examples/2026/2d5-1/dba-parallel-z-probe-2026-11-04/2026-11-04-mpi1-omp4.manifest.json
+    description: "Input-only PARFFTZ=TRUE probes on four MPI ranks and one rank/four threads; both rejected before tracking by current FFT2D5 support limits."
+    status: experimental
+    sha256: 6755f50aeeecdba4c4c0e975763a3622f77b60d2c41cd4d01db8306d15443a41
+
+  - title: "DBA PARFFTZ support probe \u2014 2026-11-04-mpi4-omp1.log"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-parallel-z-probe"
+    destination: examples/2026/2d5-1/dba-parallel-z-probe-2026-11-04/2026-11-04-mpi4-omp1.log
+    description: "Input-only PARFFTZ=TRUE probes on four MPI ranks and one rank/four threads; both rejected before tracking by current FFT2D5 support limits."
+    status: experimental
+    sha256: 0ef777dd889c2973c351fc2ad80f71fc03e5786b1ac7ab71b18e34f44dad1b75
+
+  - title: "DBA PARFFTZ support probe \u2014 2026-11-04-mpi4-omp1.manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-parallel-z-probe"
+    destination: examples/2026/2d5-1/dba-parallel-z-probe-2026-11-04/2026-11-04-mpi4-omp1.manifest.json
+    description: "Input-only PARFFTZ=TRUE probes on four MPI ranks and one rank/four threads; both rejected before tracking by current FFT2D5 support limits."
+    status: experimental
+    sha256: c6cafae53b245d1bec75b0b0f0c5742158588e1b54e294bd1719a41cf1f90114
+
+  - title: "DBA PARFFTZ support probe \u2014 2026-11-04-parfftz-true.in"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-parallel-z-probe"
+    destination: examples/2026/2d5-1/dba-parallel-z-probe-2026-11-04/2026-11-04-parfftz-true.in
+    description: "Input-only PARFFTZ=TRUE probes on four MPI ranks and one rank/four threads; both rejected before tracking by current FFT2D5 support limits."
+    status: experimental
+    sha256: a957e296ed4057ee686c7c7435cb540e353eb120425244782f7a05080e3da1b5
+
+  - title: "DBA PARFFTZ support probe \u2014 2026-11-04-prepare.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-parallel-z-probe"
+    destination: examples/2026/2d5-1/dba-parallel-z-probe-2026-11-04/2026-11-04-prepare.py
+    description: "Input-only PARFFTZ=TRUE probes on four MPI ranks and one rank/four threads; both rejected before tracking by current FFT2D5 support limits."
+    status: experimental
+    sha256: 45285372800c1711c2efd7ddad5549dea192ddc3dd03814832872445b3ab6463
+
+  - title: "DBA PARFFTZ support probe \u2014 2026-11-04-readme.md"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-parallel-z-probe"
+    destination: examples/2026/2d5-1/dba-parallel-z-probe-2026-11-04/2026-11-04-readme.md
+    description: "Input-only PARFFTZ=TRUE probes on four MPI ranks and one rank/four threads; both rejected before tracking by current FFT2D5 support limits."
+    status: experimental
+    sha256: 913f20e2f525215cd3ec07de91623798a8d235f0fd987a6d1c7e5c3edda14140
+
+  - title: "DBA PARFFTZ support probe \u2014 2026-11-04-summary.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-parallel-z-probe"
+    destination: examples/2026/2d5-1/dba-parallel-z-probe-2026-11-04/2026-11-04-summary.json
+    description: "Input-only PARFFTZ=TRUE probes on four MPI ranks and one rank/four threads; both rejected before tracking by current FFT2D5 support limits."
+    status: experimental
+    sha256: e9dfc2485eddb3ec1937a384047bddbe54a3b6157b9579fc335eeea6526d4a99
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-analyze.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-analyze.py
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: 0a9ed05199df2c213035eaea68ccda04370a892d80ad5c2a3e40072c1e2c213e
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-baseline.log"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-baseline.log
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: 85e33f9a21cab8026f5be862344363c9d635e76662191febc48b894ceaa2ccf0
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-baseline.manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-baseline.manifest.json
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: 7ca15b3b572d3eaf6366797c4636e5a92571fb50e7985e99b06dbbcc0d183b46
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-build-final.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-build-final.json
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: be58f0c0a7cc342c479ced815d7303a53ec88052ce4b49f3ab1d9b0c45e0d0a9
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-comparison.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-comparison.csv
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: 79f9f91c9183e735b4084e9a8dc8499c28b44ebd37fa643ded98005ba8b1d44a
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-comparison.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-comparison.json
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: cbd4fc4afdba2c5cf311aa33b370aab12a3ef1ea2eb1580414230c7d5d27498a
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-ctest-final-omp1.log"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-ctest-final-omp1.log
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: cc853bef28927149228e9a0cf6de270a46345eee39cebbd3fb35ba8a8edb7b94
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-ctest-final-omp4.log"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-ctest-final-omp4.log
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: 4a154ff405e89910ee0cf7a2d743a1a0bfb9f11416836f2a2031a0f72d838af2
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-doxyfile"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-doxyfile
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: a437cf203c15dee3a64d90c30b89ced16dd3e99f0eab1dfa981d54e691a2d66a
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-doxygen-warnings.log"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-doxygen-warnings.log
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-function-doxygen.xml"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-function-doxygen.xml
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: c70eb224c169c60dedf11ba3cb7be77a7c5584ef347edd5fc931fda0c42f365e
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-kernel-comparison.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-kernel-comparison.csv
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: 07c309b884cf71b58376a716443179f78e347fa8e93621fcd528f6c1221ac672
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-mpi2-rejection.log"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-mpi2-rejection.log
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: 009bdeebaf07a9569e8f7ade217b7b11d9dcf37c6b46b5694c323fe38334187a
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-optimized-1.log"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-optimized-1.log
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: 88527046e9373f9e34d0ae52891c8cad334ab0cb56789211203b02a8fc03c8b1
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-optimized-1.manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-optimized-1.manifest.json
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: 1a546f4d298aa791acb8d8531417a8ef070241eb601f6dfa1a409e8ad0c2a6c0
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-optimized-2.log"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-optimized-2.log
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: c234a6b8f0fae46f3372faff4e349c4518aa9f84f21e9d4e95670ff1ca3b265a
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-optimized-2.manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-optimized-2.manifest.json
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: fb8c0a1a2d5f04b6b0308474b9187649e2cbdca5d0b6a510d35a388b78ed0854
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-optimized-kernel-timings.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-optimized-kernel-timings.csv
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: e9c31cf888f3d60e7c7076427efda981f3a76afa79f4c5412084976329c03336
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-optimized-profile.log"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-optimized-profile.log
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: c3ce3b241dde646fed0ae0fc54aa63396ad1c1ded45b10d1d3d525db01572ccf
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-optimized-profile.manifest.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-optimized-profile.manifest.json
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: 1f8ba0292546445e7effa81f03e71dd27a7552aa3b67b6f2cb45edfa23d78660
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-pilot.in"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-pilot.in
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-readme.md"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-readme.md
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: e5515e61ecaabffd904992b1d52bcc5347f73ea7e808e10266559efc9775eb6e
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-replot.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-replot.py
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: 8459027d49a2aad1e6c807c27206a85e8c738ee4eb42bf7840c8a7c846ec3a3b
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-run-pilot.py"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-run-pilot.py
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: 3427aca3eceac10fbee9867fd38d8610197879edee790c0c27103e82d7b5bedd
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-runtime.pdf"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-runtime.pdf
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: 19064ce5551089e21d0d05aa5eac9634e96eefb75a389a7be802430acf884e5a
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-runtime.png"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-runtime.png
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: 5609652591fb25b54bb18abb76592a285917d57f4311fed2eef0d44974a26948
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-source.patch"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-source.patch
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: af52ec6c874d20a405d2cfc4cac9bf27c162b153e69f9839ac9c51659cae2c60
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-stat-comparison.csv"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-stat-comparison.csv
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: 9320c10ee43cecebcd1746e0aade37e84cc9501863dc56b7d15cd8ec5dfb5dcb
+
+  - title: "DBA FFT2D5 projection cache \u2014 2026-11-04-tests-final.json"
+    date: "2026-11-04"
+    category: examples/2d5-1
+    source: "/Users/adelmann/git/dba-lattice/comparison-20261104/unified-current/dba-projection-cache"
+    destination: examples/2026/2d5-1/dba-projection-cache-2026-11-04/2026-11-04-tests-final.json
+    description: "Local geometry/projection reuse implementation, Doxygen, unit checks and identical100-step pilot comparison; original executable preserved."
+    status: experimental
+    sha256: b9e0ff3e82a6729ccdc83b234575133e3b5a16a9c9db9a6fec207ee058197229

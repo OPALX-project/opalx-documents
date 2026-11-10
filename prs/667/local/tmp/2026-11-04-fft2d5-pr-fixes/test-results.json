@@ -1,0 +1,28 @@
+[
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "/Users/adelmann/git/opalx/build-omp",
+      "-R",
+      "^(TestSpaceChargeConfig|TestFFT2D5Algorithm|TestFFT2D5Numerics)$",
+      "--output-on-failure"
+    ],
+    "omp_threads": 1,
+    "returncode": 0,
+    "log": "/Users/adelmann/git/opalx/tmp/2026-11-04-fft2d5-pr-fixes/ctest-omp1.log"
+  },
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "/Users/adelmann/git/opalx/build-omp",
+      "-R",
+      "^(TestSpaceChargeConfig|TestFFT2D5Algorithm|TestFFT2D5Numerics)$",
+      "--output-on-failure"
+    ],
+    "omp_threads": 4,
+    "returncode": 0,
+    "log": "/Users/adelmann/git/opalx/tmp/2026-11-04-fft2d5-pr-fixes/ctest-omp4.log"
+  }
+]

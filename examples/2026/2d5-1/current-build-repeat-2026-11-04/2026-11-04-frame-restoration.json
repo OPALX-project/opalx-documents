@@ -1,0 +1,46 @@
+{
+  "source_commit": "fd6ba8dc5c952ce034869dc40e963ecabef7cfa8",
+  "changes": "Restore committed shared particle/path solve frame, cell-integrated2DGreen andsingle-reusable-FFTworkspace; no finite-source/3D/curvature model added.",
+  "files": [
+    {
+      "path": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp",
+      "before_sha256": "1c20042ed7d90fd2151d5a0b06c6a6c6f6e74a021ec19816ce66463a4d091ace",
+      "after_sha256": "4e10759439180985eceaa1b60390b708ccc56dce1d041b5b63fd6fef1dc655ea"
+    },
+    {
+      "path": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+      "before_sha256": "4b09459fb04f5aeb19a43f55554efd08f6a90974fe8e78b1e313d0c1890fe8e0",
+      "after_sha256": "c058559215638f44244fac9df281855489d8fe0b2a1b9ffe69e3b2c66f167b29"
+    },
+    {
+      "path": "src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp",
+      "before_sha256": "bfdcccfeff6c93a693443e47315fb670ee73a7c1364165cd6bac445876fa06bc",
+      "after_sha256": "03af517f9449975cb8072888360c63e1f9e09cad5c2472098a74382fca9dbab4"
+    },
+    {
+      "path": "src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp",
+      "before_sha256": "c66c6f188199c097044743913b4e32565d2010df5a02e428fe207e1b73fab39d",
+      "after_sha256": "2d431ba47731fb5098a5872fac535c37e9dd4d80b29380737448efe98262029a"
+    },
+    {
+      "path": "src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h",
+      "before_sha256": "74e0998b8f0783e1ffded8fb08cfcb51ba0872dc7cf8ee8f58f1b5293f86fcf8",
+      "after_sha256": "ce277b7ffa93a83db90a8fea68a5c2624ed8ed013de761e2c009bc3b71d7aec6"
+    },
+    {
+      "path": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp",
+      "before_sha256": "c875395aeca961998b9d7b88dd50ab1fa7cf10e98b7f9b0d07bbba2b6808954a",
+      "after_sha256": "964ea02ac1cb202cd621e45808c5d68fa8aa70da2cfdf861918c3c83401ae79c"
+    },
+    {
+      "path": "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+      "before_sha256": "58e71e454f05fae428d9c87963b6a06d7f9467b1bd13aafed70438497ad6c904",
+      "after_sha256": "099531e79a30257cd75746a5e744dd4263d83d75c2a634206f79188cb253291b"
+    },
+    {
+      "path": "src/SpaceCharge/FFT2D5/ReferencePath.h",
+      "before_sha256": "136d78148dd4024ea509b07f6c283112cdfba489e72e0ba6577e838da7154b98",
+      "after_sha256": "363860e7ed1b3bd743cf1a68ed5ef5207793edd159a44741fadea0a7a13903bf"
+    }
+  ]
+}

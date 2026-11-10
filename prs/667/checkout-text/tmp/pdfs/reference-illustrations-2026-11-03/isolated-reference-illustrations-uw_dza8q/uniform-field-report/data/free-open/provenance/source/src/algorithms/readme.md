@@ -1,0 +1,1 @@
+ParallelTracker.cpp includes preserved unrelated working-tree FFA changes. Only provenance/weighted-checkpoint-preservation.patch is a change made by the FFT2D5 task. The source hash manifest pins the entire compiled file.

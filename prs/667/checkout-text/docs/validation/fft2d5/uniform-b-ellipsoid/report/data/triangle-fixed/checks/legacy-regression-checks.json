@@ -1,0 +1,206 @@
+{
+  "date": "2026-11-02",
+  "scope": "Backward-compatibility checks of existing OPEN tracking mode only; not tracking validation of the new CIRCULAR_UNIFORM model",
+  "binary": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+  "binary_sha256": "9d3771d58f0de7bf913909955e4ef81aef69a33341202edefa9553bb78ead8b5",
+  "all_passed": true,
+  "case_files_modified": false,
+  "runs": [
+    {
+      "case": "FFT2D5-UniformB-ZeroSC",
+      "mode": "OPEN",
+      "command": [
+        "/opt/homebrew/Cellar/open-mpi/5.0.8/bin/mpirun",
+        "--oversubscribe",
+        "--map-by",
+        "slot",
+        "--bind-to",
+        "none",
+        "--host",
+        "localhost:1",
+        "-np",
+        "1",
+        "/Users/adelmann/git/opalx/build-omp/src/opalx",
+        "FFT2D5-UniformB-ZeroSC.in",
+        "--info",
+        "2"
+      ],
+      "validator_command": [
+        "/Users/adelmann/.venv-h6/bin/python",
+        "/Users/adelmann/git/opalx/build-omp/smoke/FFT2D5-UniformB-ZeroSC/20261102T205631.951080Z/work/validate.py",
+        "--stat",
+        "/Users/adelmann/git/opalx/build-omp/smoke/FFT2D5-UniformB-ZeroSC/20261102T205631.951080Z/work/FFT2D5-UniformB-ZeroSC.stat",
+        "--output",
+        "/Users/adelmann/git/opalx/build-omp/smoke/FFT2D5-UniformB-ZeroSC/20261102T205631.951080Z/physics-validation.json"
+      ],
+      "return_code": 0,
+      "validator_return_code": 0,
+      "status": "passed",
+      "mpi_ranks": 1,
+      "openmp_threads": 4,
+      "samples": 128,
+      "expected_particles": 98304,
+      "final_time_s": 1.047922510975843e-06,
+      "maximum_relative_rms_errors": {
+        "rms_x": 0.0002951967410205203,
+        "rms_y": 3.552713678800501e-15,
+        "rms_s": 0.00010016185547989664
+      },
+      "maximum_relative_rms_error": 0.0002951967410205203,
+      "rms_relative_tolerance": 0.01,
+      "physics_validator_passed": true,
+      "baseline_comparison_checks": [
+        {
+          "aggregation": "last",
+          "column": "rms_x",
+          "output": 0.002236738958616111,
+          "passed": true,
+          "reference": 0.002236738958616111,
+          "relative_error": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "aggregation": "last",
+          "column": "rms_y",
+          "output": 0.0002236067977499782,
+          "passed": true,
+          "reference": 0.0002236067977499782,
+          "relative_error": 0.0,
+          "tolerance": 1e-05
+        },
+        {
+          "aggregation": "last",
+          "column": "rms_s",
+          "output": 0.02236291836553302,
+          "passed": true,
+          "reference": 0.02236291836553302,
+          "relative_error": 0.0,
+          "tolerance": 1e-05
+        }
+      ],
+      "maximum_baseline_relative_error": 0.0,
+      "binary_sha256": "9d3771d58f0de7bf913909955e4ef81aef69a33341202edefa9553bb78ead8b5",
+      "artifact_path": "/Users/adelmann/git/opalx/build-omp/smoke/FFT2D5-UniformB-ZeroSC/20261102T205631.951080Z",
+      "run_manifest_sha256": "1052425cd4ee351b6ab1fc9ebcb1702489d16c00e138c8644b3a2a96c60beb43",
+      "physics_report_sha256": "e14631735167b1aa3cf48564a231d640e4858e00aeb38a3184bb99e9871b2e79",
+      "staged_fixtures_equal_source": true,
+      "fixture_sha256": {
+        "FFT2D5-UniformB-ZeroSC.in": "6647d5205c841c6141f1c850669871ab074108d6297f84041f246f3f15dcceda",
+        "ellipsoid.dist": "da5607b38e39c45ca899b7d1577b1c682e3575c8f431435c978b15d04b78070a",
+        "ellipsoid_model.py": "fa868b75bf1d0dade70cd41b7ee5182cafdf87711d94d73d471325572b960708",
+        "FFT2D5-UniformB-ZeroSC.local": "d57b1de5b01427125c0d72d8063f30fc19a6938c815d4983d268cec842a23b16",
+        "FFT2D5-UniformB-ZeroSC.rt": "1dfeabb79a2af8ef587c9474dd52b07d5a28d13a86503fee4b8f74d0156bdff3",
+        "MODEL.md": "b18f87f9d4866fec195c24efe156a258c67e30cc948ff6f7797de771f6014d81",
+        "reference_provenance.json": "f48b2890e2faa72608ee1f49bcdf7c92bcc28c3c408035261751789f3f0f043e",
+        "analytic_covariance.csv": "b072ff0d28cd4168912d84c1b798c37cdbdd208c83e756b70136b0e41e49bda1",
+        "physics_config.json": "af7c7b40c47c7d08fb520de5dd84ffee85e0101e78289587355ee25ce4b0b68b",
+        "uniform-by.g4blmap": "4f3df35fa2bb8decc61f0007eb11ca38eb00805d033ac2e8805e8e3ba7755741",
+        "make_analytic_reference.py": "10cbfc41343380cf50590c71e35bf21322cfce3c03acf261ff55080621ac512c",
+        "reference_path.dat": "83aec299d216e5ab46f57897814d7c809ad5f106acac103b0174ec06cc5c93fd",
+        "validate.py": "1e2f9d01c0ab114fbf2633d08c173c04cbbe32fcf1e4513cdccf0047091b3338",
+        ".gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b",
+        ".gitattributes": "9a86676d4a5f9a55034deec4080afefbf391d7d99ceebcf3aea5f4367590758b",
+        "analytic_provenance.json": "e2183eefa3c144daab5c2fc34bc6746d0d9d271762d3fc85ea88ab4e98febea5",
+        "reference_validation.json": "e14631735167b1aa3cf48564a231d640e4858e00aeb38a3184bb99e9871b2e79"
+      }
+    },
+    {
+      "case": "FFT2D5-UniformB-1pC",
+      "mode": "OPEN",
+      "command": [
+        "/opt/homebrew/Cellar/open-mpi/5.0.8/bin/mpirun",
+        "--oversubscribe",
+        "--map-by",
+        "slot",
+        "--bind-to",
+        "none",
+        "--host",
+        "localhost:1",
+        "-np",
+        "1",
+        "/Users/adelmann/git/opalx/build-omp/src/opalx",
+        "FFT2D5-UniformB-1pC.in",
+        "--info",
+        "2"
+      ],
+      "validator_command": [
+        "/Users/adelmann/.venv-h6/bin/python",
+        "/Users/adelmann/git/opalx/build-omp/smoke/FFT2D5-UniformB-1pC/20261102T205631.951093Z/work/validate.py",
+        "--stat",
+        "/Users/adelmann/git/opalx/build-omp/smoke/FFT2D5-UniformB-1pC/20261102T205631.951093Z/work/FFT2D5-UniformB-1pC.stat",
+        "--output",
+        "/Users/adelmann/git/opalx/build-omp/smoke/FFT2D5-UniformB-1pC/20261102T205631.951093Z/physics-validation.json"
+      ],
+      "return_code": 0,
+      "validator_return_code": 0,
+      "status": "passed",
+      "mpi_ranks": 1,
+      "openmp_threads": 4,
+      "samples": 128,
+      "expected_particles": 98304,
+      "final_time_s": 1.047922510975843e-06,
+      "maximum_relative_rms_errors": {
+        "rms_x": 0.00903231265242721,
+        "rms_y": 0.004550470054246247,
+        "rms_s": 0.003837797722655578
+      },
+      "maximum_relative_rms_error": 0.00903231265242721,
+      "rms_relative_tolerance": 0.01,
+      "physics_validator_passed": true,
+      "baseline_comparison_checks": [
+        {
+          "aggregation": "last",
+          "column": "rms_x",
+          "output": 0.002953687934494406,
+          "passed": true,
+          "reference": 0.002953687933299796,
+          "relative_error": 4.0444690709829427e-10,
+          "tolerance": 1e-05
+        },
+        {
+          "aggregation": "last",
+          "column": "rms_y",
+          "output": 0.002125164649009495,
+          "passed": true,
+          "reference": 0.002125164649021437,
+          "relative_error": 5.6192523314008315e-12,
+          "tolerance": 1e-05
+        },
+        {
+          "aggregation": "last",
+          "column": "rms_s",
+          "output": 0.02270885041753489,
+          "passed": true,
+          "reference": 0.0227088504181683,
+          "relative_error": 2.789264887743967e-11,
+          "tolerance": 1e-05
+        }
+      ],
+      "maximum_baseline_relative_error": 4.0444690709829427e-10,
+      "binary_sha256": "9d3771d58f0de7bf913909955e4ef81aef69a33341202edefa9553bb78ead8b5",
+      "artifact_path": "/Users/adelmann/git/opalx/build-omp/smoke/FFT2D5-UniformB-1pC/20261102T205631.951093Z",
+      "run_manifest_sha256": "bd6f0b59eee0e7dc76bbc63192d2b66ce365e2ce9a016dd66fdc417ff29bd56f",
+      "physics_report_sha256": "83a963378007e159c14915ae71bd6a65cc01c433f60c7a003eba4475da7f40b2",
+      "staged_fixtures_equal_source": true,
+      "fixture_sha256": {
+        "ellipsoid.dist": "da5607b38e39c45ca899b7d1577b1c682e3575c8f431435c978b15d04b78070a",
+        "FFT2D5-UniformB-1pC.in": "f1253085d62401e376ee0bb43c7da68ec7f28b5e77ad879c37ea455db35c8e07",
+        "FFT2D5-UniformB-1pC.rt": "1dfeabb79a2af8ef587c9474dd52b07d5a28d13a86503fee4b8f74d0156bdff3",
+        "ellipsoid_model.py": "fa868b75bf1d0dade70cd41b7ee5182cafdf87711d94d73d471325572b960708",
+        "MODEL.md": "b18f87f9d4866fec195c24efe156a258c67e30cc948ff6f7797de771f6014d81",
+        "reference_provenance.json": "38023c5a459972556d1ccc9a3aa7c4b9eef022e3a6f000536579dfa8d641ab52",
+        "analytic_covariance.csv": "e074c2566f908603a426fc2b54fd7ae55881d276cc4001a1a7dc746e3dcc95c0",
+        "physics_config.json": "64186e535662814cc4a893ab9a1d65da1a06a87382b89387e8e61f8b8246de97",
+        "uniform-by.g4blmap": "4f3df35fa2bb8decc61f0007eb11ca38eb00805d033ac2e8805e8e3ba7755741",
+        "make_analytic_reference.py": "10cbfc41343380cf50590c71e35bf21322cfce3c03acf261ff55080621ac512c",
+        "reference_path.dat": "83aec299d216e5ab46f57897814d7c809ad5f106acac103b0174ec06cc5c93fd",
+        "validate.py": "1e2f9d01c0ab114fbf2633d08c173c04cbbe32fcf1e4513cdccf0047091b3338",
+        ".gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b",
+        ".gitattributes": "9a86676d4a5f9a55034deec4080afefbf391d7d99ceebcf3aea5f4367590758b",
+        "analytic_provenance.json": "4ab1afb0ef435fe484bae46356d0310b64b048b9694c13cc25d8f6327d3f9b05",
+        "reference_validation.json": "8e3b521f3fc7ea66f404ba3a78b3b965bb63ee6b3345e03a6f34b5ee6d1ae1ca",
+        "FFT2D5-UniformB-1pC.local": "ab04b90279f188682af878aa36b26e3d672e1ce2244e7b875c515927a3634624"
+      }
+    }
+  ]
+}

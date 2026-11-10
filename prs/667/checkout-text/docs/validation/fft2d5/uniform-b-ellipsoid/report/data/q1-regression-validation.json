@@ -1,0 +1,22 @@
+{
+  "case": "FFT2D5-UniformB-1pC",
+  "passed": true,
+  "criterion": "Every total RMS size within 1% of independent ellipsoid model at every STAT step; exact particle count, charge and full time coverage",
+  "model_charge_C": 1e-12,
+  "assigned_charge_C": 1e-12,
+  "stat_samples": 128,
+  "final_time_s": 1.047922510975843e-06,
+  "expected_particles": 98304,
+  "maximum_charge_relative_error": 0.0,
+  "rms_relative_tolerance": 0.01,
+  "maximum_relative_rms_errors": {
+    "rms_x": 0.009032312244327212,
+    "rms_y": 0.004550470054246247,
+    "rms_s": 0.003837797750655181
+  },
+  "worst_step": {
+    "rms_x": 128,
+    "rms_y": 64,
+    "rms_s": 128
+  }
+}

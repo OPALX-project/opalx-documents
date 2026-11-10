@@ -1,0 +1,37 @@
+{
+  "binary_sha256": "91a50ddc25ed0ccc92ce3cfd29fef214a39818311b08505d6a840b582c80ba27",
+  "source_diff_sha256": "9b87546ec9d27975fc712fe4610b209d2583776ba6cbeaefaaea4d546511faeb",
+  "preserved_binary_sha256": "4d627521ac4f33e2ba54d7e5b605a5fc536a41673b69c58fc28e3b04cb17e1ec",
+  "ctest_omp1": true,
+  "ctest_omp4": true,
+  "cli_checks": 17,
+  "mpi2_rejection": true,
+  "doxygen_warning_bytes": 0,
+  "unrelated_changes_preserved": {
+    ".github/workflows/cpu-serial.yml": true,
+    ".gitignore": true,
+    "README.md": true,
+    "tools/run_regression_smoke.py": true,
+    "unit_tests/AbsBeamline/TestScalingFFAMagnet.cpp": true,
+    "unit_tests/Algorithms/TestDeviceExternalField.cpp": true,
+    "unit_tests/Elements/TestOpalBeamlinePlacement.cpp": true
+  },
+  "source_files": [
+    "src/CMakeLists.txt",
+    "src/Main.cpp",
+    "src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp",
+    "src/SpaceCharge/FFT2D5/FFT2D5Poisson.h",
+    "src/Utilities/Options.cpp",
+    "src/Utilities/Options.h",
+    "unit_tests/SpaceCharge/README.md",
+    "unit_tests/SpaceCharge/TestFFT2D5Numerics.cpp"
+  ],
+  "ippl_edits": false,
+  "build_release": true,
+  "fftw_backend": true,
+  "limitations": [
+    "Single-rank host backend only; unsupported two-rank execution rejected.",
+    "GPU and serial-only FFTW installation fallback were not executed here.",
+    "No full-turn/16-turn runs. No commits/push/PR edits for this work."
+  ]
+}

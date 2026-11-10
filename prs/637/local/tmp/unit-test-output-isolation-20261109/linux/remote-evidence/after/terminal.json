@@ -1,0 +1,70 @@
+{
+  "source_files_verified": 1073,
+  "changed_files": 30,
+  "affected_targets_passed": 29,
+  "fm2d_concurrent_pairs_passed": 20,
+  "manual_mpi_cases": [
+    {
+      "name": "checkpoint-r2",
+      "target": "TestCheckpointFile",
+      "ranks": 2,
+      "filter": null,
+      "returncode": 0,
+      "run_cases": 4,
+      "passed_cases": 4,
+      "skipped_cases": 0
+    },
+    {
+      "name": "multicontainer-rewind-r2",
+      "target": "TestMultiContainerPartBunch",
+      "ranks": 2,
+      "filter": "MultiContainerPartBunchTest.DataSink_RewindToCheckpointAppendsDiagnosticH5InPlace",
+      "returncode": 0,
+      "run_cases": 2,
+      "passed_cases": 2,
+      "skipped_cases": 0
+    },
+    {
+      "name": "orb-updater-r2",
+      "target": "TestCartesianDomainUpdaterORB",
+      "ranks": 2,
+      "filter": null,
+      "returncode": 0,
+      "run_cases": 2,
+      "passed_cases": 2,
+      "skipped_cases": 0
+    },
+    {
+      "name": "orb-load-balancing-r4",
+      "target": "TestCartesianDomainLoadBalancing",
+      "ranks": 4,
+      "filter": null,
+      "returncode": 0,
+      "run_cases": 8,
+      "passed_cases": 8,
+      "skipped_cases": 0
+    },
+    {
+      "name": "fft2d5-reject-r2",
+      "target": "TestFFT2D5Numerics",
+      "ranks": 2,
+      "filter": "TestSolve2d5.Configuration_MultipleRanksRejected",
+      "returncode": 0,
+      "run_cases": 2,
+      "passed_cases": 2,
+      "skipped_cases": 0
+    }
+  ],
+  "full_suite": {
+    "returncode": 8,
+    "targets": 137,
+    "passed": 136,
+    "failed": [
+      "TestGaussian"
+    ],
+    "known_gaussian_failure_retained": true
+  },
+  "production_library_unchanged": true,
+  "source_and_test_binaries_unchanged_during_checks": true,
+  "prior_archive_unchanged": true
+}

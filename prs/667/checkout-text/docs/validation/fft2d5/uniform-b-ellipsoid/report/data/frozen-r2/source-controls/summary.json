@@ -1,0 +1,30 @@
+{
+  "scope": "Isolate cross-section sampling error using CIC and a 2D free-space convolution.\n\nThis is an independent Python reconstruction for a source-resolution control,\nnot an additional OPALX run or a curved-field oracle. The native OPALX mesh\nscan remains the solver comparison. The Green function is the cell-averaged\nlogarithmic kernel used by FFT2D5, then centred differences and CIC gather.\n",
+  "mesh": [
+    512,
+    256
+  ],
+  "source_grid_levels": [
+    512,
+    1024,
+    2048
+  ],
+  "component_scale_F_m": 0.005711986642890534,
+  "changes": [
+    {
+      "cross_grid": 1024,
+      "ncross": 128708,
+      "radial_max_change": 0.0005858646263962611,
+      "vertical_max_change": 8.819915056287632e-05
+    },
+    {
+      "cross_grid": 2048,
+      "ncross": 514748,
+      "radial_max_change": 8.152965092917785e-05,
+      "vertical_max_change": 0.00010405415642618708
+    }
+  ],
+  "reconstructed_flat_slice_center_Er_10pC_Vpm": -0.01633836653494143,
+  "analytic_flat_slice_center_Er_10pC_Vpm": -0.01634100324758327,
+  "source_sha256": "c6da7648df94005fd0ec1d0001f670e03cd93448bd28cb7235114b7587403152"
+}

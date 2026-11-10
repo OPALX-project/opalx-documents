@@ -1,0 +1,59 @@
+{
+  "case": "fourfold",
+  "source": "/Users/adelmann/git/FFA25-school/migration-audit/legacy-fourfold.in",
+  "source_sha256": "2704d6838ff54b14abe8f9cce5f2578c3497bda053b340d1c60ddfa47deeb380",
+  "original_notebook_spiral": 0.5235987755982988,
+  "steps": 10000,
+  "step_size_m": 0.01,
+  "nominal_energy_MeV": 3.0,
+  "actual_energy_MeV": 2.9999997190185437,
+  "input_mass_MeV": 938.272,
+  "physical_mass_MeV": 938.27208816,
+  "integer_steps_per_RF": 2393,
+  "raw_steps_per_RF": 2393.2771294202703,
+  "initial_old_x_y_z_px_py_pz": [
+    4.05,
+    0.0,
+    0.001,
+    0.0,
+    0.08003096964411771,
+    0.0
+  ],
+  "dt_s": 4.1788549937317174e-10,
+  "legacy_turn_period_s": 1e-06,
+  "stations": 4,
+  "NPART": 1,
+  "space_charge": "NONE",
+  "binary": "/Users/adelmann/OPAL-2022.1/bin/opal",
+  "binary_sha256": "3e20fe1e8b040e10dcbb958b2d1a92d5020f5397361b230a615c0e41ca0b5ecd",
+  "input_sha256": "e5a9951958990293a469aa587610e2e6ccd5768604c0434db271ff37426ebc6c",
+  "start_unix": 1794052490.8005571,
+  "command": [
+    "/bin/bash",
+    "-c",
+    "source /Users/adelmann/OPAL-2022.1/etc/profile.d/opal.sh && exec /Users/adelmann/OPAL-2022.1/bin/opal school.in"
+  ],
+  "pid": 98397,
+  "returncode": 0,
+  "elapsed_s": 0.39255380630493164,
+  "probe_files": [
+    "PROBE1.loss",
+    "PROBE2.loss",
+    "PROBE3.loss",
+    "RINGDEF.loss"
+  ],
+  "probe_rows": {
+    "RINGDEF.loss": 1,
+    "PROBE3.loss": 1,
+    "PROBE2.loss": 1,
+    "PROBE1.loss": 2
+  },
+  "distribution_sha256": "140c1830d09a99cfd49af9bcad0301b81ee3dbe30870f88c783fa299657bcc4a",
+  "binary_OPAL_revision": "a4e0e14466557289b4f7a843fb9eb72700ff1992",
+  "completed_recorded_steps": 1976,
+  "has_particle_loss": true,
+  "accepted_for_comparison": false,
+  "legacy_turn_semantics": "RF-step counter incremented after each integer_steps_per_RF, not directed physical revolution.",
+  "initial_duplicate_hits": 2,
+  "integrator": "RK4 (4th-order Runge-Kutta; confirmed in run.log)"
+}

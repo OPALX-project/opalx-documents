@@ -1,0 +1,71 @@
+{
+  "time": "2026-11-09T11:39:54.873733+00:00",
+  "queue": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "accounting": {
+    "returncode": 0,
+    "stdout": "355081|COMPLETED|0:0|00:32:21\n355081.batch|COMPLETED|0:0|00:32:21\n355081.extern|COMPLETED|0:0|00:32:21\n",
+    "stderr": ""
+  },
+  "status.tsv": {
+    "tail": [
+      "job\t355081",
+      "phase\tconfigure",
+      "phase\tbuild",
+      "phase\ttest",
+      "ctest\t0",
+      "phase\tcomplete",
+      "exit\t0"
+    ]
+  },
+  "configure.log": {
+    "tail": [
+      "-- HDF5 libraries: hdf5::hdf5",
+      "-- HDF5 include dir: ",
+      "-- H5HUT libraries: ",
+      "-- H5HUT include dir: ",
+      "-- Configuring done (60.8s)",
+      "-- Generating done (4.3s)",
+      "-- Build files have been written to: /data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build"
+    ],
+    "errors": []
+  },
+  "build.log": {
+    "tail": [
+      "[ 83%] Built target hdf5-shared",
+      "[ 83%] Built target ippl",
+      "[ 85%] Built target H5hut",
+      "[100%] Built target opalx",
+      "[100%] Building CXX object unit_tests/Algorithms/CMakeFiles/TestCyclotronProbeMPI.dir/TestCyclotronProbe.cpp.o",
+      "[100%] Linking CXX executable ../../bin/TestCyclotronProbeMPI",
+      "[100%] Built target TestCyclotronProbeMPI"
+    ],
+    "errors": []
+  },
+  "tests.log": {
+    "tail": [
+      "",
+      "100% tests passed out of 6",
+      "",
+      "Label Time Summary:",
+      "unit    =  29.16 sec*proc (6 tests)",
+      "",
+      "Total Test time (real) =  29.18 sec"
+    ],
+    "errors": []
+  },
+  "job.log": {
+    "tail": [
+      "",
+      "Label Time Summary:",
+      "unit    =  29.16 sec*proc (6 tests)",
+      "",
+      "Total Test time (real) =  29.18 sec",
+      "Verified source after tests: 3320cf6fc490a8be7dc2a33468b35cd99804cf179fd13d07f4d62d00e4bc2ae3 1072",
+      "Mon Nov  9 11:39:03 UTC 2026"
+    ]
+  }
+}

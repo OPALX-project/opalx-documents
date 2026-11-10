@@ -1,0 +1,14 @@
+{
+  "source": "local/src/fields/interpolation/polynomial_solve_with_smoothing.tex",
+  "source_sha256": "c45e954608fe21eef8612f5f57c190847665ac9bb12e3af4e42c994153dd41c3",
+  "command": [
+    "latexmk",
+    "-pdf",
+    "-halt-on-error",
+    "-interaction=nonstopmode",
+    "polynomial_solve_with_smoothing.tex"
+  ],
+  "returncode": 0,
+  "undefined_references": false,
+  "report": "reports/2026/pr637/interpolation-polynomial-smoothing.pdf"
+}

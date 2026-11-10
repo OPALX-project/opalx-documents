@@ -1,0 +1,20 @@
+{
+  "particles": 4096,
+  "mesh": [
+    8,
+    8,
+    8
+  ],
+  "target_reference_MeV": 580,
+  "charge_C": 3.948667324777887e-11,
+  "selection_seed": 6158,
+  "sample_transform": "subset centered and full 6D covariance matched to original16 case",
+  "mean_error": 1.1102230246251565e-16,
+  "hashes": {
+    "acceleration.in": "8e5a96bde740d40d82a2a42c92e53688fd4bb32afbf80a0cb2da3a457f055404",
+    "bunch.dat": "e1fdc4c7c113bf30aef627efd31b2da02858f1124e09d01ff5bd40ddb393a27b",
+    "bfield.dat": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "rffield2.dat": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "rffield1.dat": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b"
+  }
+}

@@ -1,0 +1,43 @@
+\clearpage
+\subsection{Native field comparison and convergence}
+One native $10^{-17}$ s step with zero external field supplies each frozen
+snapshot. A matched probe-only companion removes diagnostic charge; SACR is
+scaled to the actual bulk charge. This is a field-operator test, not a tracking
+test. The original 43 targets retain the historical comparison set, with
+end distances of at least 5 mm. Here the
+fixed component scales are $E_{i,*}=\max_{43}|E_i^{\rm SACR}|$ for each profile;
+8 added cusp/end targets are reported separately and do not change these scales.
+
+The table gives maximum pointwise relative errors over nonzero reference
+components at the original targets. Symmetry zeros remain in the signed
+fixed-scale residuals; the weak centre radial force has its own relative check.
+\tabfile{free-open-errors}
+
+\reportfigure{free-open-uniform}{Uniform physical-density tube. Black dashed:
+SACR exact Coulomb identity. Lower panels show signed differences from SACR;
+the gray band marks $\pm1\%$ of each fixed original-target component scale.
+All zero fields remain visible.}{fig:free-open-uniform}
+\reportfigure{free-open-triangle}{Same comparison for triangular physical
+density, with the identical production operator and no fitted parameter.}{fig:free-open-triangle}
+\input{generated/free-open-controls-text.tex}
+
+\clearpage
+\subsection{Weak curvature response, diagnostics and limits}
+\reportfigure{free-open-mesh}{Matched-source longitudinal mesh refinement, with source and reference
+path held fixed within each profile. Left: maximum nonzero-target physical
+errors. Right: the weak signed centre radial field; dashed lines are the SACR
+values, 0.055092 and 0.091839 V/m. Gray dotted: the earlier uniform slice result from its separate study,
+not a matched mesh datum. Errors use their own reference components, not the
+larger transverse scale.}{fig:free-open-mesh}
+The additional targets include 1 mm and 0.1 mm end distances and the triangular
+cusp neighbourhood. They do not alter the original acceptance scales.
+\tabfile{free-open-extra}
+
+The implementation accepts straight references or horizontal constant-radius
+arcs shorter than a full turn, $\max|\kappa u|\le0.01$ across the numerical
+mesh and halo, and one MPI rank. General varying-curvature paths are rejected.
+Curved OPEN uses an electrostatic approximation with an explicit
+$\beta\le0.1$ guard; the present validation uses $\beta=0.001$.
+The operator retains the full bend angle but does not include radiation or
+retarded curved-beam electrodynamics. Straight references retain their Lorentz
+stretch and field transformation. No percent-level tracking claim follows.

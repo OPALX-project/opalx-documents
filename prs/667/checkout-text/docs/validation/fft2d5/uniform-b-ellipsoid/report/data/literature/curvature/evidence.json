@@ -1,0 +1,86 @@
+{
+  "research_date": "2026-11-01",
+  "scope": "Primary curvature-aware 2.5D space-charge literature; no OPALX edits or new runs",
+  "papers": [
+    {
+      "id": "Qiang2025_updated2026",
+      "title": "Two-and-a-half dimensional symplectic space-charge solver",
+      "author": "Ji Qiang",
+      "journal": "Physical Review Accelerators and Beams 28, 114602",
+      "published": "2025-11-17",
+      "doi": "10.1103/npx1-nclt",
+      "primary_article_url": "https://journals.aps.org/prab/abstract/10.1103/npx1-nclt",
+      "published_pdf_url": "https://journals.aps.org/prab/pdf/10.1103/npx1-nclt",
+      "updated_preprint": "arXiv:2606.26484v1, 2026-06-25",
+      "updated_html_url": "https://arxiv.org/html/2606.26484v1",
+      "updated_pdf_url": "https://arxiv.org/pdf/2606.26484",
+      "version_note": "The updated preprint explicitly describes minor improvements over the published paper. Published PDF has 25 pages; updated PDF has 26.",
+      "author_claim_summary": "Potential-derived kicks share one Hamiltonian. The zeroth-order solver neglects longitudinal potential curvature for smooth long bunches; iteration can restore it. Gaussian field comparisons vary gamma; the conclusion describes good agreement above beam-frame aspect ratio 1000. Curvature illustrations use 1 mm round Gaussian beams at h=1,0.1,0.01 per metre; the large-ring estimate is O(h sigma), about 1e-5 at R above 100 m.",
+      "published_locators": {
+        "smooth_longitudinal_assumption": "Sec. III, pp. 114602-3 onward, Eqs. 15-17",
+        "same_potential_longitudinal_kick": "Sec. III.A, Eq. 33",
+        "Gaussian_field_benchmarks": "Figs. 5-6, pp. 114602-7 and 114602-8",
+        "curved_Poisson_operator": "Sec. IV, pp. 114602-11 and 114602-12, Eqs. 85-91",
+        "regularized_curvature_potential": "Eq. 91; Appendix E, Eq. E11, p. 114602-24",
+        "aspect_ratio_conclusion": "Sec. V, p. 114602-13"
+      },
+      "updated_preprint_locators": {
+        "free_space_reference_matching": "Eqs. 48-54, pp. 8-9: r0 minimizes on-axis 2.5D/3D Gaussian longitudinal-field discrepancy; round long-bunch limit r0 approximately 1.1 gamma sigma_z",
+        "curved_operator": "Eqs. 92-98, pp. 13-14",
+        "regularized_curvature_potential": "Eq. 98 and Appendix E Eq. 113"
+      },
+      "version_specific_warning": "The r0 matching/minimization section is present in the improved 2026 preprint and absent from the 2025 published PDF; do not assign its equation numbers or claim to the original version.",
+      "not_demonstrated": "No 1% finite hard-ended 143-degree uniform elliptical tube benchmark or full accelerator tracking validation appears in these illustrated field comparisons."
+    },
+    {
+      "id": "Zhou2026accepted",
+      "title": "Space charge modeling method in 2.5D for scaling fixed-field alternating-gradient accelerators",
+      "authors": ["Kai Zhou", "Ming-Yang Huang", "Xiao Li", "Bin Wu", "Hanyang Liu", "Shouyan Xu", "Sheng Wang"],
+      "status": "Accepted 2026-10-23; checked 2026-11-01",
+      "doi": "10.1103/q1xb-z29j",
+      "primary_url": "https://journals.aps.org/prab/accepted/10.1103/q1xb-z29j",
+      "read_scope": "Primary accepted abstract only. No accessible manuscript or arXiv preprint located through the searched official links.",
+      "author_claim_summary": "PyFFA reconstructs a dynamic local slicing frame from an energy-dependent family of closed orbits, solves transverse Poisson equations there, and restores global cylindrical fields. The abstract reports analytical comparisons of fields, tune shifts, RMS envelopes and longitudinal phase space.",
+      "limitations_of_available_evidence": "The abstract does not provide radius, beta, source profile, error norm or a 1% bound. Those quantitative details cannot be inferred or substituted from the older proceedings."
+    },
+    {
+      "id": "Zhou2025HB",
+      "title": "Modeling of long-bunch space charge in circular accelerators with unfixed closed orbit",
+      "authors": ["Kai Zhou", "Ming-Yang Huang", "Bin Wu", "Hanyang Liu", "Sheng Wang", "Xiao Li"],
+      "venue": "HB2025, THFA01",
+      "official_contribution_url": "https://indico.jacow.org/event/83/contributions/11624/",
+      "author_paper_pdf_url": "https://meow.elettra.eu/83/pdf/THFA01.pdf",
+      "read_scope": "Full four-page author proceedings paper",
+      "author_claim_summary": "Static cylindrical slicing can misproject long arc bunches, causing artificial edge fields and emittance growth. PyFFAG maps particles and fields through an energy-dependent reference orbit. Its stated model uses transverse 2D Poisson and azimuthal 1D Poisson. Preliminary 1000-turn results vary bunch duration 80/120 ns and intensity 5e12/2e13 protons, reporting emittance and tune-shift trends.",
+      "locators": {"geometry_and_solver": "p. 2, Space-charge model, Eq. 8", "tracking_results": "p. 3, Figs. 5-6"},
+      "limitations": "No finite-tube Coulomb end-field accuracy norm, matching R=2 m case or uniform 1% guarantee is provided. The manuscript labels development/validation preliminary."
+    }
+  ],
+  "our_case_independent_calculations": {
+    "R_m": 2.0,
+    "L_m": 5.0,
+    "a_m": 0.005,
+    "c_m": 0.0005,
+    "beta": 0.001,
+    "gamma": 1.000000500000375,
+    "arc_span_rad": 2.5,
+    "arc_span_deg": 143.2394487827058,
+    "a_over_R": 0.0025,
+    "c_over_R": 0.00025,
+    "sigma_s_m": 1.4433756729740645,
+    "sigma_r_m_approximately": 0.0025,
+    "sigma_y_m": 0.00025,
+    "gamma_sigma_s_over_sigma_r_approximately": 577.350557865977,
+    "gamma_sigma_s_over_sigma_y": 5773.50557865977,
+    "sigma_r_over_R": 0.00125,
+    "sigma_y_over_R": 0.000125,
+    "shape_note": "Constant uniform line density has sigma_s=L/sqrt(12); uniform elliptical section has transverse RMS semiaxes/2. The physical Jacobian gives a tiny radial centroid correction, immaterial at displayed precision."
+  },
+  "explicit_inferences_not_author_claims": [
+    "Small h*x is a local transverse metric condition; a total bunch angle L/R of 2.5 radians does not itself violate h*x<<1. It does make a global Cartesian bunch interpretation inappropriate.",
+    "A sharp density step has arbitrarily short longitudinal scales. Therefore overall L/a=1000 does not establish the slow-variation assumption at its ends; our finite-end test probes that local failure.",
+    "Small potential or dominant-transverse-field corrections do not bound fractional error in the much smaller curvature-only on-axis radial field.",
+    "Qiang's displayed regularized Gaussian correction is proportional to x times an integral whose numerator vanishes quadratically at x=y=0. Its on-axis radial derivative therefore vanishes as written. It does not directly predict the sign or magnitude of our finite-tube on-axis hoop field; matching global geometry/boundaries would be necessary for that claim.",
+    "The geometry-remapping literature supports checking frame consistency separately from the physical end and curvature operator. Passing a mapping test does not establish finite-end Coulomb accuracy."
+  ]
+}

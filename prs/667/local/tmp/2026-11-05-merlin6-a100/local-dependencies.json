@@ -1,0 +1,36 @@
+{
+  "ippl": {
+    "path": "/Users/adelmann/git/opalx/build-omp/_deps/ippl-src",
+    "sha": "d6216553e39dcf4405849c027517cc3401fefee5",
+    "dirty": ""
+  },
+  "kokkos": {
+    "path": "/Users/adelmann/git/opalx/build-omp/_deps/ippl-build/_deps/kokkos-src",
+    "sha": "d9397f95a04a0334d327647e64ab7f1882ca0664",
+    "dirty": ""
+  },
+  "heffte": {
+    "path": "/Users/adelmann/git/opalx/build-omp/_deps/ippl-build/_deps/heffte-src",
+    "sha": "4d8d4597b479d1e4709a2b1b4cd7d8922600045f",
+    "dirty": ""
+  },
+  "hdf5": {
+    "version": "2.2.0",
+    "source": "tarball",
+    "sha256": "1a1ab8209b35586fbc1aa279ba76d102130b95badcb20ca329587219112d8c16"
+  },
+  "h5hut": {
+    "path": "/Users/adelmann/git/opalx/build-omp/_deps/h5hut-src",
+    "sha": "b5c74f760bc9919d409f46b5472e9eedf9a764d5",
+    "dirty": ""
+  },
+  "gtest": {
+    "path": "/Users/adelmann/git/opalx/build-omp/_deps/gtest-src",
+    "sha": "6910c9d9165801d8827d628cb72eb7ea9dd538c5",
+    "dirty": ""
+  },
+  "lapack": {
+    "source": "tarball",
+    "note": "CMake LapackDependency.cmake records exact version/hash"
+  }
+}

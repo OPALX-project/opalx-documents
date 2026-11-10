@@ -1,0 +1,271 @@
+# OPALX
+
+## Continuous Integration
+
+[![CPU Serial](https://github.com/OPALX-project/OPALX/actions/workflows/cpu-serial.yml/badge.svg)](https://github.com/OPALX-project/OPALX/actions/workflows/cpu-serial.yml)
+[![CPU OpenMP](https://github.com/OPALX-project/OPALX/actions/workflows/cpu-openmp.yml/badge.svg)](https://github.com/OPALX-project/OPALX/actions/workflows/cpu-openmp.yml)
+[![GPU CUDA](https://github.com/OPALX-project/OPALX/actions/workflows/gpu-cuda.yml/badge.svg)](https://github.com/OPALX-project/OPALX/actions/workflows/gpu-cuda.yml)
+[![GPU HIP](https://github.com/OPALX-project/OPALX/actions/workflows/gpu-hip.yml/badge.svg)](https://github.com/OPALX-project/OPALX/actions/workflows/gpu-hip.yml)
+[![GPU SYCL](https://github.com/OPALX-project/OPALX/actions/workflows/gpu-sycl.yml/badge.svg)](https://github.com/OPALX-project/OPALX/actions/workflows/gpu-sycl.yml)
+<a href="https://my.cdash.org/index.php?project=OPALX">
+    <img alt="CI/CD CSCS" height="20" src="https://my.cdash.org/img/cdash.svg">
+</a>
+
+OPALX uses GitHub Actions for required and non-required pull request checks. The compile CI workflows run on non-draft pull requests to `master` when the `compile-ci` label is selected. Required checks have to pass before a PR can be merged; non-required checks provide additional feedback but are not part of the required branch protection status checks.
+
+### Formatting Checks
+
+- `Check clang-format`: checks the formatting of changed source and unit test files in the pull request using clang-format 21.1.8. This check is **not required**.
+
+See [IPPL's formatting documentation](https://ippl-framework.github.io/Manual/sections/for-developers/workflow/index.html#automatic-code-formatting) for instructions on setting up pre-commit hooks.
+
+### Compilation
+
+- `CPU Serial`: compiles debug OPALX and the unit tests with `PLATFORMS=SERIAL`. This check is **required**.
+- `CPU OpenMP`: compiles debug OPALX and the unit tests with `PLATFORMS=OPENMP`. This check is **required**.
+- `GPU CUDA`: compiles debug OPALX and the unit tests with CUDA for NVIDIA `AMPERE80`. This check is **required**.
+- `GPU HIP`: compiles debug OPALX and the unit tests with HIP for AMD `AMD_GFX90A`. This check is **required**.
+- `GPU SYCL`: compiles release OPALX and the unit tests with SYCL for Intel `INTEL_PVC`. This check is **not required**, because the CI runner can compile this configuration but cannot test it.
+
+### Running Tests
+
+- Unit tests run with the `CPU Serial` build.
+- Unit tests run with the `CPU OpenMP` build.
+- A subset of fast regression tests from [OPALX-project/regression-tests-x](https://github.com/OPALX-project/regression-tests-x) runs with the `CPU Serial` binary and checks results against the tests' `.rt` metrics. The current regression subset is:
+  - `Drift-1-fromfile`
+  - `Drift-4-multi-emit-open`
+  - `FodoCell-fromfile`
+
+
+## Manual and Documentation
+
+[OPALX documentation](https://opalx-project.github.io/opalx-manual)
+
+## Dependencies
+
+In order to compile OPALX, make sure you have the following dependencies installed on your system:
+
+```
+cmake/3.25.2
+openmpi/4.1.5_slurm
+gcc/12.3.0             
+gnutls/3.5.19
+cuda/12.8.1
+```
+
+Other dependencies are fetched and installed in the opalx installation.
+
+A Fortran compiler (for example `gfortran`) is also required. Reference
+BLAS/LAPACK and LAPACKE 3.12.1 are fetched with a pinned archive checksum;
+no separate LAPACK installation is needed. Select a non-default compiler with
+`-DCMAKE_Fortran_COMPILER=/path/to/compiler`.
+
+```
+ippl/3.4.0
+hdf5/1.10.8_slurm  
+H5hut/2.0.0rc6_slurm  
+gtest/1.13.0-1
+```
+
+## Building OPALX
+
+```bash
+git clone https://github.com/OPALX-project/OPALX.git
+cd OPALX/tools
+./gen_OPALXrevision # Note that this step is (now) optional
+```
+
+### Setting up cmake
+
+For single-configuration generators, use `-DCMAKE_BUILD_TYPE=Debug` (or
+`Release`, `RelWithDebInfo`, `MinSizeRel`). When no build type is specified, OPALX
+defaults to `RelWithDebInfo`. An existing cached value is preserved until changed
+with `-DCMAKE_BUILD_TYPE=<type>`; setting `-DCMAKE_BUILD_TYPE=` restores the default.
+The former `BUILD_TYPE` option has been removed; use `CMAKE_BUILD_TYPE` instead.
+Multi-configuration generators select the configuration at build time with
+`cmake --build <dir> --config Debug`; OPALX does not force a single build type for them.
+
+#### cmake command for CPU build
+
+Building OPALX without multi-threading (only MPI):
+```bash
+mkdir build_serial && cd build_serial
+cmake .. \
+    -DCMAKE_BUILD_TYPE=Debug \
+    -DPLATFORMS=SERIAL
+```
+
+and for multi-threading with OpenMP:
+
+```bash
+mkdir build_openmp && cd build_openmp
+cmake .. \
+    -DCMAKE_BUILD_TYPE=Debug \
+    -DPLATFORMS=OPENMP
+```
+
+In order to enable the compilation of unit tests, set `-DOPALX_ENABLE_UNIT_TESTS=ON` in the cmake command. The resulting executables will appear in `unit_tests` directory.
+
+
+#### cmake command for GPU build
+```bash
+mkdir build_cuda && cd build_cuda
+```
+
+For example, for A100 with Amper80 Architecture (Gwendolen), and the debug mode, the cmake should be something like:
+
+```bash
+cmake .. \
+    -DCMAKE_BUILD_TYPE=Debug \
+    -DPLATFORMS=CUDA \
+    -DARCH=AMPERE80
+```
+
+For the release mode, use `Release` instead of `Debug` as the argument for `-DCMAKE_BUILD_TYPE`. For other GPUs use the correct flag for their corresponding architecture. For example, for P100 or GTX 1080 with Pascal61 architecture on Merlin login node, use `-DARCH=PASCAL61` instead of `-DARCH=AMPERE80`. 
+
+#### Notes:
+
+- Use -DCMAKE_BUILD_TYPE=Release for optimized builds.
+- ARCH is required for CUDA builds so OPALX can configure Kokkos properly.
+- Distributed GPU space-charge solves require GPU-aware MPI. FFT communication and field
+  mirroring pass device buffers directly to MPI; field mirroring has no host-staging fallback.
+- All IPPL/Kokkos flags (FFT, solvers, tests, ALPINE, `Kokkos_ARCH_*`, etc.) are now set automatically.
+
+#### FFT2D5 transverse fields and reference paths
+
+For the original slice model, select `FFT2D5MODEL=ORIGINAL` with `PIPEMODE=OPEN`.
+See [model selection](docs/validation/fft2d5/model-selection.md) for defaults and scope.
+
+
+`FFT2D5` deposits charge on a reference-path mesh using laboratory positions and
+line charge. The slice Poisson field is therefore the laboratory transverse
+electric field. The magnetic field follows `B = beta * t_hat cross E / c`, so a
+comoving particle's transverse self-force is reduced by `1/gamma^2`. The
+longitudinal `PIPEMODE` approximation is separate from this transverse solve. The
+longitudinal density derivative is sampled at cell centers with the same shape
+as charge deposition: linear interpolation for `SCATTERLONGITUDINALLY=TRUE`,
+otherwise one cell. Closed-ring interpolation wraps across the path boundary.
+
+The transverse solver averages the free-space logarithmic Green function over
+each rectangular source cell, including the singular source cell, and computes
+the electric field with centered differences. This avoids a mesh-dependent
+self-cell error for thin beams. Slices share one FFT workspace. In the flat
+local models, empty slices produce zero field without an FFT solve; circular
+OPEN retains the radial field from distant charged slices.
+
+The [uniform-field ellipsoid benchmark](docs/validation/fft2d5/uniform-b-ellipsoid/README.md)
+validates curved tracking through a half-turn to within 1% in all total RMS sizes
+for its specified low-beta geometry. It also reports the larger relative errors
+in small charge-induced size changes, so this total-size criterion is not a
+claim of 1% accuracy in every space-charge response.
+
+`REFPATHFNAME` supplies Cartesian laboratory coordinates that remain fixed during
+tracking. Each solve maps the path and active particle containers into one common
+solve frame using their current reference transforms. Containers may have
+different moving reference frames; the physical path remains unchanged.
+
+The geometric mapping assumes a horizontal planar path. Circular OPEN adds
+a [thin-tube transverse curvature correction](docs/validation/fft2d5/curved-slice-radial.md)
+using two 2D slice solves and a 1D circular line integral. Its longitudinal
+field retains the local-g approximation; full curved-field and tracking
+accuracy require separate validation.
+
+For an open path, `REFPATHFNAME` must cover the full finite bunch throughout
+tracking, including particles behind the first reference-particle position.
+Particles beyond either path endpoint now cause an error before deposition;
+clamping them into an endpoint slice would concentrate charge artificially.
+If the generated design path is too short, provide an extended path explicitly.
+This coverage check does not change closed-ring wrapping.
+
+#### Further Options
+| Flag | Default | Description |
+|------|---------|-------------|
+| `OPALX_EMBED_BUILD_METADATA` | OFF | Embeds user, machine, and date metadata into `BuildInfo.h`; leave OFF to reduce rebuild churn. |
+| `OPALX_USE_INSTALLED_HDF5` | OFF | Disables the use of system-built HDF5 dependency. |
+| `OPALX_USE_INSTALLED_H5HUT` | OFF |  Disables the use of system-built H5hut dependency. |
+| `OPALX_USE_INSTALLED_GTEST` | OFF |  Disables the use of system-built GoogleTest dependency. |
+| `OPALX_ENABLE_UNIT_TESTS` | OFF | Disables building unit tests using GoogleTest. |
+| `OPALX_ENABLE_EXAMPLES` | OFF | Disables building the Example module. |
+| `OPALX_ENABLE_TESTS` | OFF | Disables building integration tests in the test/ directory. |
+| `OPALX_ENABLE_COVERAGE` | OFF | Disables code coverage instrumentation. |
+| `OPALX_ENABLE_HIP_PROFILER` | OFF | Enables the HIP Systems Profiler on HIP builds and adds the corresponding compile definition. |
+| `OPALX_ENABLE_NSYS_PROFILER` | OFF | Disables Nvidia Nsight Systems Profiler; requires CUDA platform and adds compile definition -DOPALX_ENABLE_NSYS_PROFILER. |
+| `OPALX_ENABLE_SANITIZER` | OFF | Disables sanitizer tools (e.g., AddressSanitizer). |
+| `OPALX_USE_ALTERNATIVE_VARIANT` | OFF | Disables modified variant implementation; required for CUDA 12.2 + GCC 12.3.0 compatibility. |
+| `OPALX_USE_STANDARD_FOLDERS` | OFF | Places generated binaries and libraries under the build tree `bin/` and `lib/` folders. |
+| `OPALX_ENABLE_SCRIPTS` | OFF | Disables generation of job script templates for benchmarks/tests. |
+| `OPALX_FIELD_DEBUG` | OFF | Disables FieldSolver field-dump debug code; emits field dumps during simulation when enabled. |
+| `OPALX_USE_KOKKOS_MATH_CONSTANTS` | ON | Sources `Physics.h` mathematical constants such as `pi`, `e`, and `log10e` from `Kokkos::numbers`; turn OFF to use literal fallback values. |
+
+IPPL options such as `IPPL_ENABLE_TESTS` and `IPPL_ENABLE_ALPINE` are not OPALX
+options: given on the command line or by a preset, they reach the IPPL build
+unchanged, and otherwise IPPL's defaults apply (both OFF). OPALX itself always sets
+`IPPL_ENABLE_FFT` and `IPPL_ENABLE_SOLVERS` to ON and `IPPL_PLATFORMS` to
+`OPALX_PLATFORMS`.
+
+Dependency version/ref options:
+
+| Flag | Default | Description |
+|------|---------|-------------|
+| `IPPL_GIT_TAG` | `3.4.0` | IPPL branch, tag, commit, or release version to fetch. Numeric release shorthand such as `3.4.0` is resolved to `IPPL-3.4.0` and `master` refers to the current IPPL master. |
+| `Kokkos_VERSION` | `5.2.0` | Kokkos version requested by IPPL. A plain version asks CMake to use an installed Kokkos of that version or newer; use `git.<tag>`, `git.<branch>`, or `git.<sha>` to request a source checkout ref. |
+| `Heffte_VERSION` | `2.4.0` | Heffte version requested by IPPL when FFT support is enabled. A plain version asks CMake to use an installed Heffte of that version or newer; use `git.<tag>`, `git.<branch>`, or `git.<sha>` to request a source checkout ref. |
+
+Enable flags with `-D<FLAG>=ON` during CMake configuration.
+
+### Compilation
+
+Finally, compile OPALX with 
+```bash
+make
+```
+using single thread, and
+```bash
+make -j 4
+```
+using `4` threads for example.
+
+
+## Job scripts
+To execute opalx on merlin's gpus (compile for PASCAL61), the job script should looks like
+```bash
+#!/bin/bash
+#SBATCH --error=merlin.error
+#SBATCH --output=merlin.out
+#SBATCH --time=00:10:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=2
+#SBATCH --cluster=gmerlin6
+#SBATCH --partition=gpu-short
+#SBATCH --account=merlin
+##SBATCH --exclusive
+#SBATCH --gpus=2
+#SBATCH --nodelist=merlin-g-001
+
+##unlink core
+ulimit -c unlimited
+
+srun ./opalx DriftTest-1.in  --info 10 --kokkos-map-device-id-by=mpi_rank
+```
+
+and for Gwendolen (compile for AMPERE80)
+```bash
+#!/bin/bash
+#SBATCH --error=gwendolen.error
+#SBATCH --output=gwendolen.out
+#SBATCH --time=00:02:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=2
+#SBATCH --clusters=gmerlin6
+#SBATCH --partition=gwendolen # Mandatory, as gwendolen is not the default partition
+#SBATCH --account=gwendolen   # Mandatory, as gwendolen is not the default account
+##SBATCH --exclusive
+#SBATCH --gpus=2
+
+##unlink core
+ulimit -c unlimited
+
+srun ./opalx DriftTest-1.in  --info 10 --kokkos-map-device-id-by=mpi_rank
+```
+
+The documentation has been moved to the [OPAL Landing Page](https://amas.pages.psi.ch/opal/).

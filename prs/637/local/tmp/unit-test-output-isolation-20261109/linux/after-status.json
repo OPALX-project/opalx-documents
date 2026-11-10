@@ -1,0 +1,361 @@
+{
+  "accounting": "355096|COMPLETED|0:0|00:13:37|2026-11-09T15:48:44|2026-11-09T16:02:21|merlin-g-100\n355096.batch|COMPLETED|0:0|00:13:37|2026-11-09T15:48:44|2026-11-09T16:02:21|merlin-g-100\n355096.extern|COMPLETED|0:0|00:13:37|2026-11-09T15:48:44|2026-11-09T16:02:21|merlin-g-100\n",
+  "progress": [
+    {
+      "phase": "source-verified",
+      "utc_epoch": 1794235736.903341,
+      "source_files": 1073
+    },
+    {
+      "phase": "build",
+      "utc_epoch": 1794235737.4436681,
+      "target_count": 29
+    },
+    {
+      "phase": "binaries-verified",
+      "utc_epoch": 1794236102.1884413,
+      "count": 29
+    },
+    {
+      "phase": "affected-targets",
+      "utc_epoch": 1794236102.189378
+    },
+    {
+      "phase": "fm2d-stress",
+      "utc_epoch": 1794236217.7097218
+    },
+    {
+      "phase": "manual-mpi",
+      "utc_epoch": 1794236290.4095066
+    },
+    {
+      "phase": "full-suite",
+      "utc_epoch": 1794236313.939222
+    },
+    {
+      "phase": "complete",
+      "utc_epoch": 1794236541.4124393,
+      "source_files_verified": 1073,
+      "changed_files": 30,
+      "affected_targets_passed": 29,
+      "fm2d_concurrent_pairs_passed": 20,
+      "manual_mpi_cases": [
+        {
+          "name": "checkpoint-r2",
+          "target": "TestCheckpointFile",
+          "ranks": 2,
+          "filter": null,
+          "returncode": 0,
+          "run_cases": 4,
+          "passed_cases": 4,
+          "skipped_cases": 0
+        },
+        {
+          "name": "multicontainer-rewind-r2",
+          "target": "TestMultiContainerPartBunch",
+          "ranks": 2,
+          "filter": "MultiContainerPartBunchTest.DataSink_RewindToCheckpointAppendsDiagnosticH5InPlace",
+          "returncode": 0,
+          "run_cases": 2,
+          "passed_cases": 2,
+          "skipped_cases": 0
+        },
+        {
+          "name": "orb-updater-r2",
+          "target": "TestCartesianDomainUpdaterORB",
+          "ranks": 2,
+          "filter": null,
+          "returncode": 0,
+          "run_cases": 2,
+          "passed_cases": 2,
+          "skipped_cases": 0
+        },
+        {
+          "name": "orb-load-balancing-r4",
+          "target": "TestCartesianDomainLoadBalancing",
+          "ranks": 4,
+          "filter": null,
+          "returncode": 0,
+          "run_cases": 8,
+          "passed_cases": 8,
+          "skipped_cases": 0
+        },
+        {
+          "name": "fft2d5-reject-r2",
+          "target": "TestFFT2D5Numerics",
+          "ranks": 2,
+          "filter": "TestSolve2d5.Configuration_MultipleRanksRejected",
+          "returncode": 0,
+          "run_cases": 2,
+          "passed_cases": 2,
+          "skipped_cases": 0
+        }
+      ],
+      "full_suite": {
+        "returncode": 8,
+        "targets": 137,
+        "passed": 136,
+        "failed": [
+          "TestGaussian"
+        ],
+        "known_gaussian_failure_retained": true
+      },
+      "production_library_unchanged": true,
+      "source_and_test_binaries_unchanged_during_checks": true,
+      "prior_archive_unchanged": true
+    }
+  ],
+  "fm2d": [
+    {
+      "iteration": 1,
+      "returncode": 0
+    },
+    {
+      "iteration": 2,
+      "returncode": 0
+    },
+    {
+      "iteration": 3,
+      "returncode": 0
+    },
+    {
+      "iteration": 4,
+      "returncode": 0
+    },
+    {
+      "iteration": 5,
+      "returncode": 0
+    },
+    {
+      "iteration": 6,
+      "returncode": 0
+    },
+    {
+      "iteration": 7,
+      "returncode": 0
+    },
+    {
+      "iteration": 8,
+      "returncode": 0
+    },
+    {
+      "iteration": 9,
+      "returncode": 0
+    },
+    {
+      "iteration": 10,
+      "returncode": 0
+    },
+    {
+      "iteration": 11,
+      "returncode": 0
+    },
+    {
+      "iteration": 12,
+      "returncode": 0
+    },
+    {
+      "iteration": 13,
+      "returncode": 0
+    },
+    {
+      "iteration": 14,
+      "returncode": 0
+    },
+    {
+      "iteration": 15,
+      "returncode": 0
+    },
+    {
+      "iteration": 16,
+      "returncode": 0
+    },
+    {
+      "iteration": 17,
+      "returncode": 0
+    },
+    {
+      "iteration": 18,
+      "returncode": 0
+    },
+    {
+      "iteration": 19,
+      "returncode": 0
+    },
+    {
+      "iteration": 20,
+      "returncode": 0
+    }
+  ],
+  "manual_mpi": [
+    {
+      "name": "checkpoint-r2",
+      "target": "TestCheckpointFile",
+      "ranks": 2,
+      "filter": null,
+      "returncode": 0,
+      "run_cases": 4,
+      "passed_cases": 4,
+      "skipped_cases": 0
+    },
+    {
+      "name": "multicontainer-rewind-r2",
+      "target": "TestMultiContainerPartBunch",
+      "ranks": 2,
+      "filter": "MultiContainerPartBunchTest.DataSink_RewindToCheckpointAppendsDiagnosticH5InPlace",
+      "returncode": 0,
+      "run_cases": 2,
+      "passed_cases": 2,
+      "skipped_cases": 0
+    },
+    {
+      "name": "orb-updater-r2",
+      "target": "TestCartesianDomainUpdaterORB",
+      "ranks": 2,
+      "filter": null,
+      "returncode": 0,
+      "run_cases": 2,
+      "passed_cases": 2,
+      "skipped_cases": 0
+    },
+    {
+      "name": "orb-load-balancing-r4",
+      "target": "TestCartesianDomainLoadBalancing",
+      "ranks": 4,
+      "filter": null,
+      "returncode": 0,
+      "run_cases": 8,
+      "passed_cases": 8,
+      "skipped_cases": 0
+    },
+    {
+      "name": "fft2d5-reject-r2",
+      "target": "TestFFT2D5Numerics",
+      "ranks": 2,
+      "filter": "TestSolve2d5.Configuration_MultipleRanksRejected",
+      "returncode": 0,
+      "run_cases": 2,
+      "passed_cases": 2,
+      "skipped_cases": 0
+    }
+  ],
+  "full_suite": {
+    "returncode": 8,
+    "targets": 137,
+    "passed": 136,
+    "failed": [
+      "TestGaussian"
+    ],
+    "known_gaussian_failure_retained": true
+  },
+  "terminal": {
+    "source_files_verified": 1073,
+    "changed_files": 30,
+    "affected_targets_passed": 29,
+    "fm2d_concurrent_pairs_passed": 20,
+    "manual_mpi_cases": [
+      {
+        "name": "checkpoint-r2",
+        "target": "TestCheckpointFile",
+        "ranks": 2,
+        "filter": null,
+        "returncode": 0,
+        "run_cases": 4,
+        "passed_cases": 4,
+        "skipped_cases": 0
+      },
+      {
+        "name": "multicontainer-rewind-r2",
+        "target": "TestMultiContainerPartBunch",
+        "ranks": 2,
+        "filter": "MultiContainerPartBunchTest.DataSink_RewindToCheckpointAppendsDiagnosticH5InPlace",
+        "returncode": 0,
+        "run_cases": 2,
+        "passed_cases": 2,
+        "skipped_cases": 0
+      },
+      {
+        "name": "orb-updater-r2",
+        "target": "TestCartesianDomainUpdaterORB",
+        "ranks": 2,
+        "filter": null,
+        "returncode": 0,
+        "run_cases": 2,
+        "passed_cases": 2,
+        "skipped_cases": 0
+      },
+      {
+        "name": "orb-load-balancing-r4",
+        "target": "TestCartesianDomainLoadBalancing",
+        "ranks": 4,
+        "filter": null,
+        "returncode": 0,
+        "run_cases": 8,
+        "passed_cases": 8,
+        "skipped_cases": 0
+      },
+      {
+        "name": "fft2d5-reject-r2",
+        "target": "TestFFT2D5Numerics",
+        "ranks": 2,
+        "filter": "TestSolve2d5.Configuration_MultipleRanksRejected",
+        "returncode": 0,
+        "run_cases": 2,
+        "passed_cases": 2,
+        "skipped_cases": 0
+      }
+    ],
+    "full_suite": {
+      "returncode": 8,
+      "targets": 137,
+      "passed": 136,
+      "failed": [
+        "TestGaussian"
+      ],
+      "known_gaussian_failure_retained": true
+    },
+    "production_library_unchanged": true,
+    "source_and_test_binaries_unchanged_during_checks": true,
+    "prior_archive_unchanged": true
+  },
+  "build_tail": [
+    "[ 64%] Built target lapacke_obj",
+    "[ 64%] Built target lapacke",
+    "[ 83%] Built target hdf5-shared",
+    "[ 85%] Built target H5hut",
+    "[100%] Built target opalx",
+    "[100%] Building CXX object unit_tests/AbsBeamline/CMakeFiles/TestRFCavity.dir/TestRFCavity.cpp.o",
+    "[100%] Linking CXX executable TestRFCavity",
+    "[100%] Built target TestRFCavity"
+  ],
+  "job_tail": [
+    "{\"name\": \"checkpoint-r2\", \"target\": \"TestCheckpointFile\", \"ranks\": 2, \"filter\": null, \"returncode\": 0, \"run_cases\": 4, \"passed_cases\": 4, \"skipped_cases\": 0}",
+    "{\"name\": \"multicontainer-rewind-r2\", \"target\": \"TestMultiContainerPartBunch\", \"ranks\": 2, \"filter\": \"MultiContainerPartBunchTest.DataSink_RewindToCheckpointAppendsDiagnosticH5InPlace\", \"returncode\": 0, \"run_cases\": 2, \"passed_cases\": 2, \"skipped_cases\": 0}",
+    "{\"name\": \"orb-updater-r2\", \"target\": \"TestCartesianDomainUpdaterORB\", \"ranks\": 2, \"filter\": null, \"returncode\": 0, \"run_cases\": 2, \"passed_cases\": 2, \"skipped_cases\": 0}",
+    "{\"name\": \"orb-load-balancing-r4\", \"target\": \"TestCartesianDomainLoadBalancing\", \"ranks\": 4, \"filter\": null, \"returncode\": 0, \"run_cases\": 8, \"passed_cases\": 8, \"skipped_cases\": 0}",
+    "{\"name\": \"fft2d5-reject-r2\", \"target\": \"TestFFT2D5Numerics\", \"ranks\": 2, \"filter\": \"TestSolve2d5.Configuration_MultipleRanksRejected\", \"returncode\": 0, \"run_cases\": 2, \"passed_cases\": 2, \"skipped_cases\": 0}",
+    "{\"phase\": \"full-suite\", \"utc_epoch\": 1794236313.939222}",
+    "{\"returncode\": 8, \"targets\": 137, \"passed\": 136, \"failed\": [\"TestGaussian\"], \"known_gaussian_failure_retained\": true}",
+    "{\"phase\": \"complete\", \"utc_epoch\": 1794236541.4124393, \"source_files_verified\": 1073, \"changed_files\": 30, \"affected_targets_passed\": 29, \"fm2d_concurrent_pairs_passed\": 20, \"manual_mpi_cases\": [{\"name\": \"checkpoint-r2\", \"target\": \"TestCheckpointFile\", \"ranks\": 2, \"filter\": null, \"returncode\": 0, \"run_cases\": 4, \"passed_cases\": 4, \"skipped_cases\": 0}, {\"name\": \"multicontainer-rewind-r2\", \"target\": \"TestMultiContainerPartBunch\", \"ranks\": 2, \"filter\": \"MultiContainerPartBunchTest.DataSink_RewindToCheckpointAppendsDiagnosticH5InPlace\", \"returncode\": 0, \"run_cases\": 2, \"passed_cases\": 2, \"skipped_cases\": 0}, {\"name\": \"orb-updater-r2\", \"target\": \"TestCartesianDomainUpdaterORB\", \"ranks\": 2, \"filter\": null, \"returncode\": 0, \"run_cases\": 2, \"passed_cases\": 2, \"skipped_cases\": 0}, {\"name\": \"orb-load-balancing-r4\", \"target\": \"TestCartesianDomainLoadBalancing\", \"ranks\": 4, \"filter\": null, \"returncode\": 0, \"run_cases\": 8, \"passed_cases\": 8, \"skipped_cases\": 0}, {\"name\": \"fft2d5-reject-r2\", \"target\": \"TestFFT2D5Numerics\", \"ranks\": 2, \"filter\": \"TestSolve2d5.Configuration_MultipleRanksRejected\", \"returncode\": 0, \"run_cases\": 2, \"passed_cases\": 2, \"skipped_cases\": 0}], \"full_suite\": {\"returncode\": 8, \"targets\": 137, \"passed\": 136, \"failed\": [\"TestGaussian\"], \"known_gaussian_failure_retained\": true}, \"production_library_unchanged\": true, \"source_and_test_binaries_unchanged_during_checks\": true, \"prior_archive_unchanged\": true}"
+  ],
+  "affected_tail": [
+    "\tTestCartesianDomainUpdaterORB",
+    "",
+    "100% tests passed out of 29",
+    "",
+    "Label Time Summary:",
+    "unit    = 207.79 sec*proc (29 tests)",
+    "",
+    "Total Test time (real) = 115.47 sec"
+  ],
+  "full_suite_tail": [
+    "parser    =   2.89 sec*proc (1 test)",
+    "unit      = 611.27 sec*proc (137 tests)",
+    "",
+    "Total Test time (real) = 226.64 sec",
+    "",
+    "The following tests FAILED:",
+    "\t 31 - TestGaussian (Failed)                             unit",
+    "Errors while running CTest"
+  ]
+}

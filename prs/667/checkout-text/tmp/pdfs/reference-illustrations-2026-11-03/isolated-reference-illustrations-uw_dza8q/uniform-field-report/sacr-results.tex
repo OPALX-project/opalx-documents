@@ -1,0 +1,57 @@
+\clearpage
+\subsection{Multi-point straight-limit checks}
+The study uses 33 interior points per geometry: the centre, axis and midplane
+points, signed off-axis points, and points near the ends and boundary. The
+largest normalized ellipsoidal radius is 0.911. Three geometries are checked:
+a 5 mm sphere, the previous $(5,50,0.5)$ mm ellipsoid, and a
+$(5,2500,0.5)$ mm ellipsoid. Each value in the table is a maximum over all
+33 points, expressed as a percentage of the corresponding component scale.
+\tabfile{sacrflat}
+\reportfigure{sacr-flat-limit}{Straight-limit SACR fields versus Dubin at all
+33 points per geometry. The dashed identity line is the exact ellipsoid
+field. Lower panels retain signed residuals, including zero-field targets;
+normalization uses $E_{i,*}$ rather than the local field value.}{fig:sacr-flat}
+Angular quadrature starts at 128 nodes and refines to at most 4096 where
+needed. The largest measured straight-limit difference is
+$3.97\times10^{-14}E_{i,*}$. The largest last-refinement change over the full
+study is $3.64\times10^{-9}E_{i,*}$, below the requested $10^{-8}E_{i,*}$
+criterion. These are sampled field checks, not a uniform error bound over the
+entire charge distribution.
+Dubin's coefficients set component scales and quadrature stopping criteria;
+the fields themselves come from the Coulomb integral. A separate scalar
+implementation agrees with the vectorized calculation within
+$1.68\times10^{-14}E_{i,*}$.
+
+\clearpage
+\subsection{Radius convergence to Dubin}
+For the 5 m tapered source, $a_0=5$ mm, $b=2.5$ m and $c_0=0.5$ mm are fixed
+while $R$ varies from 2 to 2000 m and infinity. The same 33 material points
+are used at each radius. The finite-radius difference contains the physical
+change from a curved source to a straight ellipsoid; it is not an SACR error.
+\reportfigure{sacr-radius-limit}{Convergence of the 5 m SACR source toward the
+straight Dubin field. Solid curves show $\max_{\bm\xi}|\delta_i|$ over the 33
+points; dashed curves show the separate last quadrature-refinement changes.
+The $R=\infty$ checks are reported in the preceding table, not placed at an
+artificial finite coordinate on this logarithmic axis.}{fig:sacr-radius}
+\tabfile{sacrradius}
+At $R=2$ m, the largest curvature differences are 0.3859\% radial,
+0.4112\% tangential and 0.002801\% vertical, on the component scales defined
+in \cref{eq:sacr-error}. All three decrease toward the straight limit. At
+2000 m the vertical difference remains about 7.7 times the last-refinement
+change; no universal $1/R^2$ rate is assumed.
+
+An independent tangential endpoint integral agrees with the surface field
+within $6.97\times10^{-15}E_{s,*}$ across 99 comparisons. Symmetry checks retain
+the expected tangential/vertical zeros. At three interior points with $R=2$ m,
+Cartesian finite differences use $\bm F=4\pi\eps\bm E/\rho$, whose exact
+interior identities are $\nabla\cdot\bm F=4\pi$ and
+$\nabla\times\bm F=\bm0$. The maximum errors are
+$|\nabla\cdot\bm F/(4\pi)-1|=5.20\times10^{-12}$ and
+$|\nabla\times\bm F|/(4\pi)=5.23\times10^{-12}$.
+An independent volume integral at the bend centre, outside the source, agrees
+with the boundary integral within $6.88\times10^{-13}$ relative.
+
+This validates SACR's static field operator on the tested tapered family.
+\Cref{sec:frozen} treats constant-section fields and their OPALX comparison.
+A fixed prescribed tube does not supply a tracking reference after space
+charge deforms its density.

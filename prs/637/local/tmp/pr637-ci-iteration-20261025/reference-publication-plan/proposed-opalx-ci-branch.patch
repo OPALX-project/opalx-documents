@@ -1,0 +1,33 @@
+diff --git a/ci/cscs/config/openmp.conf b/ci/cscs/config/openmp.conf
+--- a/ci/cscs/config/openmp.conf
++++ b/ci/cscs/config/openmp.conf
+@@ -3,6 +3,6 @@
+ # NightlyBuildX configuration for OPALX regression tests on Eiger (OpenMP).
+ 
+ branch="master"
+-regtests_branch="master"
++regtests_branch="codex/pr637-reference-refresh"
+ architecture="cpu-zen2-openmp"
+ do_unittests='yes'
+diff --git a/ci/cscs/config/cuda.conf b/ci/cscs/config/cuda.conf
+--- a/ci/cscs/config/cuda.conf
++++ b/ci/cscs/config/cuda.conf
+@@ -3,6 +3,6 @@
+ # NightlyBuildX configuration for OPALX regression tests on Daint GH200 (CUDA).
+ 
+ branch="master"
+-regtests_branch="master"
++regtests_branch="codex/pr637-reference-refresh"
+ architecture="gpu-cuda-gh200"
+ do_unittests='yes'
+diff --git a/ci/cscs/config/rocm.conf b/ci/cscs/config/rocm.conf
+--- a/ci/cscs/config/rocm.conf
++++ b/ci/cscs/config/rocm.conf
+@@ -3,6 +3,6 @@
+ # NightlyBuildX configuration for OPALX regression tests on Beverin (ROCm).
+ 
+ branch="master"
+-regtests_branch="master"
++regtests_branch="codex/pr637-reference-refresh"
+ architecture="gpu-rocm-mi300"
+ do_unittests='yes'

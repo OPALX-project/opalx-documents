@@ -1,0 +1,191 @@
+[
+  {
+    "directory": "16-cell-steps10000-scale1",
+    "case": "16-cell",
+    "dt_s": 2.1043771043771044e-10,
+    "steps": 10000,
+    "stations": 16,
+    "hits_including_initial": 59,
+    "initial_hits": 2,
+    "physical_hits": 57,
+    "initial_old_x_y_z_px_py_pz": [
+      4.4,
+      0.0,
+      0.0,
+      0.0,
+      0.16044470156470977,
+      0.0
+    ],
+    "actual_energy_MeV": 11.999998886718801,
+    "radius_min_m": 4.249208114049818,
+    "radius_max_m": 4.622710474684704
+  },
+  {
+    "directory": "16-cell-steps10000-scale1-vertical",
+    "case": "16-cell",
+    "dt_s": 2.1043771043771044e-10,
+    "steps": 10000,
+    "stations": 16,
+    "hits_including_initial": 59,
+    "initial_hits": 2,
+    "physical_hits": 57,
+    "initial_old_x_y_z_px_py_pz": [
+      4.4,
+      0.0,
+      0.001,
+      0.0,
+      0.16044470156470977,
+      0.0
+    ],
+    "actual_energy_MeV": 11.999998886718801,
+    "radius_min_m": 4.249209043780396,
+    "radius_max_m": 4.622682646656916
+  },
+  {
+    "directory": "16-cell-steps20000-scale0.5-refined",
+    "case": "16-cell",
+    "dt_s": 1.0520778537611783e-10,
+    "steps": 20000,
+    "stations": 16,
+    "hits_including_initial": 59,
+    "initial_hits": 2,
+    "physical_hits": 57,
+    "initial_old_x_y_z_px_py_pz": [
+      4.4,
+      0.0,
+      0.0,
+      0.0,
+      0.16044470156470977,
+      0.0
+    ],
+    "actual_energy_MeV": 11.999998886718801,
+    "radius_min_m": 4.249207333694122,
+    "radius_max_m": 4.62270844360826
+  },
+  {
+    "directory": "16-cell-steps20000-scale0.5-vertical-refined",
+    "case": "16-cell",
+    "dt_s": 1.0520778537611783e-10,
+    "steps": 20000,
+    "stations": 16,
+    "hits_including_initial": 59,
+    "initial_hits": 2,
+    "physical_hits": 57,
+    "initial_old_x_y_z_px_py_pz": [
+      4.4,
+      0.0,
+      0.001,
+      0.0,
+      0.16044470156470977,
+      0.0
+    ],
+    "actual_energy_MeV": 11.999998886718801,
+    "radius_min_m": 4.249208267227394,
+    "radius_max_m": 4.622680521189657
+  },
+  {
+    "directory": "55deg-d-off-steps10000-scale1-negative-pr",
+    "case": "55deg-d-off",
+    "dt_s": 2.1043771043771044e-10,
+    "steps": 10000,
+    "stations": 16,
+    "hits_including_initial": 63,
+    "initial_hits": 2,
+    "physical_hits": 61,
+    "initial_old_x_y_z_px_py_pz": [
+      4.163263702279026,
+      0.0,
+      0.001,
+      -0.017567795069157878,
+      0.15948001390957067,
+      0.0
+    ],
+    "actual_energy_MeV": 11.999998886718801,
+    "radius_min_m": 4.131004226858888,
+    "radius_max_m": 4.185251147142901
+  },
+  {
+    "directory": "fourfold-steps10000-scale1-valid",
+    "case": "fourfold",
+    "dt_s": 4.1788549937317174e-10,
+    "steps": 10000,
+    "stations": 4,
+    "hits_including_initial": 17,
+    "initial_hits": 2,
+    "physical_hits": 15,
+    "initial_old_x_y_z_px_py_pz": [
+      4.0,
+      0.0,
+      0.001,
+      -0.0087,
+      0.07955668483652201,
+      0.0
+    ],
+    "actual_energy_MeV": 2.9999997190185437,
+    "radius_min_m": 3.9455552209917473,
+    "radius_max_m": 4.309208935841344
+  },
+  {
+    "directory": "fourfold-steps20000-scale0.5-valid-refined",
+    "case": "fourfold",
+    "dt_s": 2.0894274968658587e-10,
+    "steps": 20000,
+    "stations": 4,
+    "hits_including_initial": 17,
+    "initial_hits": 2,
+    "physical_hits": 15,
+    "initial_old_x_y_z_px_py_pz": [
+      4.0,
+      0.0,
+      0.001,
+      -0.0087,
+      0.07955668483652201,
+      0.0
+    ],
+    "actual_energy_MeV": 2.9999997190185437,
+    "radius_min_m": 3.9455547219619667,
+    "radius_max_m": 4.309213613553732
+  },
+  {
+    "directory": "55deg-d-off-steps20000-scale0.5-negative-pr-refined",
+    "case": "55deg-d-off",
+    "dt_s": 1.0520778537611783e-10,
+    "steps": 20000,
+    "stations": 16,
+    "hits_including_initial": 63,
+    "initial_hits": 2,
+    "physical_hits": 61,
+    "initial_old_x_y_z_px_py_pz": [
+      4.163263702279026,
+      0.0,
+      0.001,
+      -0.017567795069157878,
+      0.15948001390957067,
+      0.0
+    ],
+    "actual_energy_MeV": 11.999998886718801,
+    "radius_min_m": 4.131004522515872,
+    "radius_max_m": 4.185252117581511
+  },
+  {
+    "directory": "16-cell-steps40000-scale0.25-quarter",
+    "case": "16-cell",
+    "dt_s": 5.260389268805892e-11,
+    "steps": 40000,
+    "stations": 16,
+    "hits_including_initial": 59,
+    "initial_hits": 2,
+    "physical_hits": 57,
+    "initial_old_x_y_z_px_py_pz": [
+      4.4,
+      0.0,
+      0.0,
+      0.0,
+      0.16044470156470977,
+      0.0
+    ],
+    "actual_energy_MeV": 11.999998886718801,
+    "radius_min_m": 4.24920687531908,
+    "radius_max_m": 4.622710069749839
+  }
+]

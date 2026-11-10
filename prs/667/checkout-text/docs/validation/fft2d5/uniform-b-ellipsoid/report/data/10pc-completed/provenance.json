@@ -1,0 +1,67 @@
+{
+  "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+  "analysis_sha256": "ea446bf73b4289e3540349924862f67a5befb341e62fd8bf02d3c6decdb7c64c",
+  "helper_sha256": {
+    "ellipsoid_model.py": "fa868b75bf1d0dade70cd41b7ee5182cafdf87711d94d73d471325572b960708",
+    "analyze_opalx.py": "37da5b461c1d8571b83f8915242b9236679dac7b9b52a983ad96b15f9dacdfe1",
+    "analyze_stat.py": "6e0f80e7dc0e1073995a5ca29221c51c8ee4a14520468711266ca2237354b073"
+  },
+  "model_checks": {
+    "energy_max_relative_drift": 5.891243048949946e-11,
+    "canonical_Lz_max_relative_drift": 6.938494223618363e-11,
+    "max_sum_D_error": 4.440892098500626e-16,
+    "upper_bound_particle_beta": 0.010508504780230441,
+    "min_det_A_m3": 1.2500000000000005e-07
+  },
+  "cases": {
+    "fft_coarse": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/strong-charge/completed-study/runs/fft-coarse-10pc/manifest.json",
+      "manifest_sha256": "27554ebe381f881f079c80462e55c728d6a85fcb6faac6277d7a7bb36efd6fa9",
+      "stat_sha256": "cc404c920f4ab17985e15b9c60e7ce181acfb70a2e53c974b2ff8a92fb10d31d",
+      "input_sha256": "aeb317c0feff3a3d32bc6fd5b9eb3868dc8642bfaf1d0e2cd68d31740099c85f",
+      "source_sha256": "da5607b38e39c45ca899b7d1577b1c682e3575c8f431435c978b15d04b78070a",
+      "returncode": 0
+    },
+    "fft_fine": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/strong-charge/completed-study/runs/fft-fine-10pc/manifest.json",
+      "manifest_sha256": "f2b3476c86f515fd879593d44f89a00c7e461c68fb9c692e17d630b15f7f1353",
+      "stat_sha256": "d9160f6fa19431579af29c658577bc9d68402c45dc268259add001f657d9beb8",
+      "input_sha256": "376a32245fdda4aa37cb9ab4675ed0b19abc41ed9483604d69fd05e03887ceb1",
+      "source_sha256": "da5607b38e39c45ca899b7d1577b1c682e3575c8f431435c978b15d04b78070a",
+      "returncode": 0
+    },
+    "open": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/strong-charge/completed-study/runs/open-10pc/manifest.json",
+      "manifest_sha256": "61a4d7711ac12f9436980ceb04f314d8c5edeaa08f6a6bd7cec3010ec06c605c",
+      "stat_sha256": "1117eaebc5f8a5d24f226c7dde8d42761e81ce2d727b87224fff1447c67cad0d",
+      "input_sha256": "c9130a57865a423c1c4e1708ea36884f8c0da4807dda9d5622cce47c51e91222",
+      "source_sha256": "da5607b38e39c45ca899b7d1577b1c682e3575c8f431435c978b15d04b78070a",
+      "returncode": 0
+    },
+    "zero128": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/strong-charge/completed-study/runs/zero128/manifest.json",
+      "manifest_sha256": "bf092f7a151b60946855ce3788a84e8f7b5d8f52c6860ca7d5b9f3f248057e80",
+      "stat_sha256": "d8d9677b9f124d4a7f1bfb4e689cd27b91b13aa0065b22dc44e8ca032282163a",
+      "input_sha256": "f4e7ddf7c9ba09f2b21d915b0ac960a40286a8912122213343b556ec3dedae1e",
+      "source_sha256": "da5607b38e39c45ca899b7d1577b1c682e3575c8f431435c978b15d04b78070a",
+      "returncode": 0
+    },
+    "zero256": {
+      "manifest": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/strong-charge/completed-study/runs/zero256/manifest.json",
+      "manifest_sha256": "c7a6d321dc8bf3607c5b4a89eb340f23a8cf216743653bd17825fd1249a2ee2f",
+      "stat_sha256": "157725c674a01687c8854b40389549c9a2085e6f84ee499afea82b9ebbd4a24f",
+      "input_sha256": "4f90f473b05df430d1b52540aa01a6a5f72de0afee494dc01bc69a302726206c",
+      "source_sha256": "da5607b38e39c45ca899b7d1577b1c682e3575c8f431435c978b15d04b78070a",
+      "returncode": 0
+    }
+  },
+  "result_csv_sha256": {
+    "summary.csv": "e54839f2ad4d85a82b8a12f42684dbf9563b1f988167ff5a8edda4568ff1446d",
+    "all_step_comparisons.csv": "c9bd306943775769a473038532cd0978b0abf414d57f49f75d03361523d1c8bb",
+    "refinement_curves.csv": "0c57181df99c748a59ac963f43be5367d582c3f38ad26c2f995b9c70b6ff80ba",
+    "refinement_summary.csv": "dbda382d9dc5f37d118dd5243b418a7cb27097fc0cc62ddc48113f8ea6f80cc3",
+    "growth_summary.csv": "d668153f2a4e9bbc0251e6358aba32a15ab18b14e71f46c519e9077fa972c0a3",
+    "snapshot_clearance.csv": "c6c0dfaf3d916f7c9e41cc2af2a49ad267746ec58ae6b0b7fbb621b114243b7b",
+    "all_step_growth.csv": "77fd1a8da6643819c67f3e31b023194245868101964061c3685357e4d0e29317"
+  }
+}

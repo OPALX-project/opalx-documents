@@ -1,0 +1,18 @@
+Fix FFT2D5 frames, transverse cell fields and workspace reuse
+
+Map particles and the laboratory reference path into a shared solve frame,
+restoring coordinates and moments on success or failure. Integrate the 2D
+logarithmic Green function over each source cell and retain the convolution
+potential halo for centered boundary fields.
+
+Reuse one slice solver workspace and skip exactly empty density slices while
+clearing stale fields. Keep nonzero neutral sources active.
+
+Bring the matching frame and independent numerical unit tests into the normal
+CTest targets. Preserve the explicit ORIGINAL model selection and document the
+checks. The solver/test changes are carried over from fd6ba8dc5; no experimental
+finite-source or curvature operator is included.
+
+Validation: configuration, algorithm and numerics CTest targets pass with 1 and
+4 OpenMP threads; the two-rank unsupported-configuration rejection test passes.
+The source matches the build used for the published benchmark repeat.

@@ -1,0 +1,3 @@
+gpus,previous_complete_step_ms,steady_sc_saving_ms,estimated_complete_step_ms,steps_per_turn,dt_s,estimated_minutes_per_turn,method
+1,13.416266666666669,3.790242424242424,9.626024242424245,393240,3e-12,63.088962884848506,Prior unprofiled 100/1000-step complete-step calibration minus measured 99-solve steady SC saving; assumes non-SC tracking time unchanged; not a fresh calibration
+2,14.068588888888888,3.775282828282828,10.29330606060606,393240,3e-12,67.46232792121212,Prior unprofiled 100/1000-step complete-step calibration minus measured 99-solve steady SC saving; assumes non-SC tracking time unchanged; not a fresh calibration

@@ -1,0 +1,19 @@
+from pathlib import Path
+import datetime,json,shutil
+source=Path('/tmp/pr637-a9-xml-provenance')
+target=Path('/Users/adelmann/git/opalx-master/tmp/pr637-ci-iteration-20261025/ci-checkout-provenance-a9d38caa')
+for f in source.iterdir():shutil.copy2(f,target/f.name)
+reports=[json.loads((source/f'{n}-provenance.json').read_text()) for n in ['openmp','mi300','gh200']]
+lines=['# PR 637 external checkout provenance','',f"Updated: {datetime.datetime.now(datetime.timezone.utc).isoformat()}.",'','Source: `a9d38caa4f88433a5de1508b3d5c7d01bdfea95a`. Public GitLab artifacts were read without credentials, login or access workarounds. No CI, source, maintained fixtures or references were changed; no rerun or publication was launched. References remain local.','','## Direct checkout evidence','','| Backend | Job | Artifact | Source guard | Regression checkout | Comparisons |','|---|---|---|---|---|---|']
+for r in reports:
+ if r['accepted_current_result']:
+  c=r['comparison_counts'];lines.append(f"| {r['backend_job']} | {r['job_id']} | [XML]({r['xml_url']}) | Exact a9 SHA | `{r['revisions']['tests_full']}` | {c.get('passed',0)} passed, {c.get('failed',0)} failed, {c.get('broken',0)} broken |")
+ else:lines.append(f"| {r['backend_job']} | {r['job_id']} | Not available at {r['queried_utc']} | Pending | Not claimed | Not claimed |")
+lines+=['','Each accepted XML explicitly reports `Revisions/code_full` equal to the complete source SHA above and `Revisions/tests_full` equal to the complete regression checkout SHA shown. These are actual job results, rather than an inference from current remote HEAD. Runtime/build provenance is separately checked by the CI monitoring agent.','']
+for r in reports:
+ if not r['accepted_current_result']:continue
+ m=r['run_metadata'];lines += [f"### {r['backend_job']}",'',f"- Artifact architecture path: `{r['architecture_from_job_path']}`; job `{r['job_id']}`.",f"- XML `Date/start`: `{r['date_start']}` (no UTC offset encoded). Queried `{r['queried_utc']}`.",f"- XML SHA256: `{r['xml_sha256']}`.",f"- MPI ranks: {m['mpi_ranks']}; OpenMP threads: {m['omp_threads']}.",'']
+lines += ['Raw-stat coverage: see [RAW_STATS_LIMITATION.md](RAW_STATS_LIMITATION.md). Current OpenMP and MI300 artifacts omit simulation statistics, so no pass against the local reference draft is inferred from PNGs or XML deltas.','','The five non-passing comparisons are the previously diagnosed stale-reference checks: FodoCell-multipoleT-fromfile `rms_x` and `emit_y` fail; ScalingFFABasicPlacements `mean_x`, `mean_y` and `mean_s` are broken because the old reference has one row versus ten current simulation rows. No additional mismatch appears in the accepted current XMLs. Adjacent parsed JSON preserves every failed comparison, tolerance and delta.','','## Metadata limitations','','XML architecture/backend fields are `unknown`, and device is `none`; backend association comes from the specific job and architecture artifact path, not those incomplete fields. This record does not use XML device metadata to establish GPU execution.','','`run_tests` records `run-state.json` only when all unit and regression failed/broken counts are zero. Failed suites can legitimately omit it. The correct old failed OpenMP path returned 404. The exact external NightlyBuildX runner SHA is not present in the always-generated XML and is not inferred from current remote main. Local runner clone `5539fa31b56d4952d923e6641557d6683c68725a` establishes parser semantics, not the external checkout SHA.','','The old completed OpenMP job `17451643780` is retained separately as a parser/provenance demonstration only. It records source `23f04f6c8e57f497e6f1a722038f9e1cef010803` and regression `737547e6ae38cf3001d6bc45cf38dd1a47d78402`; it is not current a9 evidence.','']
+(target/'README.md').write_text('\n'.join(lines))
+shutil.copy2('/tmp/pr637-save-xml-provenance-report.py',target/'save_report.py')
+print(target/'README.md')

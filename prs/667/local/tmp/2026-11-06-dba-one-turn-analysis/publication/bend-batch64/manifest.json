@@ -1,0 +1,53 @@
+{
+  "case": "bend-batch64",
+  "status": "complete",
+  "binary": "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/opalx",
+  "binary_sha256": "6bd5c3a499e54c8201ac788e6c036e56d6add6c77b76967e2ce156e937f21d65",
+  "source_identity": {
+    "head": "daaf914b0cd1bc28de3b57812fad899e09badc3e",
+    "binary_sha256": "6bd5c3a499e54c8201ac788e6c036e56d6add6c77b76967e2ce156e937f21d65",
+    "source_patch_sha256": "6ec1004cfd31f34b83d3dc81404a1edcf17204226d4da946d5f03afeb0a82b90",
+    "uncommitted_fix": "Named occupancy functor; validated CUDA launch fix",
+    "dependencies": {
+      "ippl": "d6216553e39dcf4405849c027517cc3401fefee5",
+      "heffte": "4d8d4597b479d1e4709a2b1b4cd7d8922600045f",
+      "kokkos": "d9397f95a04a0334d327647e64ab7f1882ca0664"
+    }
+  },
+  "input_sha256": "1a613fdd8e70ed774bbfbe797980cbbe3f140a0759456cd9e8bf9b5e17810aa4",
+  "job_id": "354992",
+  "hostname": "merlin-g-100.psi.ch",
+  "mpi_ranks": 1,
+  "batch_size": 64,
+  "omp_threads": 1,
+  "particles": 1048576,
+  "mesh": [
+    512,
+    512,
+    512
+  ],
+  "charge_C": 1e-11,
+  "steps": 100,
+  "dt_s": 3.3356409519815204e-07,
+  "longitudinal": "OPEN; SCATTERLONGITUDINALLY=TRUE",
+  "source_distribution_sha256": "c96c7ba5d152b8956155c297d7016c466d7be6835374632816956958de885329",
+  "argv": [
+    "srun",
+    "--ntasks=1",
+    "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/one-turn-and-bend/opalx",
+    "case.in",
+    "--info",
+    "1",
+    "--2D5BatchSize",
+    "64"
+  ],
+  "native_returncode": 0,
+  "elapsed_s": 116.94090824690647,
+  "completed": true,
+  "final_time_s": 3.3356409519815225e-05,
+  "final_s_m": 8.003012482143527,
+  "final_global_step": 99,
+  "retained_snapshots": 100,
+  "retained_particles": 1048576,
+  "retained_charge_C": 1e-11
+}

@@ -1,0 +1,33 @@
+Running main() from /Users/adelmann/git/opalx/build-omp/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 12 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 12 tests from FFT2D5AlgorithmTest
+[ RUN      ] FFT2D5AlgorithmTest.WarmupAndFirstPhysicalSolveHaveSeparateTimers
+[       OK ] FFT2D5AlgorithmTest.WarmupAndFirstPhysicalSolveHaveSeparateTimers (1 ms)
+[ RUN      ] FFT2D5AlgorithmTest.LazyInitializationSkipsEmptySlices
+[       OK ] FFT2D5AlgorithmTest.LazyInitializationSkipsEmptySlices (0 ms)
+[ RUN      ] FFT2D5AlgorithmTest.RejectsFixedCartesianDomain
+[       OK ] FFT2D5AlgorithmTest.RejectsFixedCartesianDomain (0 ms)
+[ RUN      ] FFT2D5AlgorithmTest.RestoresTrackerFrameMoments
+[       OK ] FFT2D5AlgorithmTest.RestoresTrackerFrameMoments (0 ms)
+[ RUN      ] FFT2D5AlgorithmTest.LabPathFieldsSurviveReferenceFrameChanges
+[       OK ] FFT2D5AlgorithmTest.LabPathFieldsSurviveReferenceFrameChanges (0 ms)
+[ RUN      ] FFT2D5AlgorithmTest.RigidPlanarRotationPreservesLocalFields
+[       OK ] FFT2D5AlgorithmTest.RigidPlanarRotationPreservesLocalFields (0 ms)
+[ RUN      ] FFT2D5AlgorithmTest.ActiveContainersShareLabPathAcrossReferencePoses
+[       OK ] FFT2D5AlgorithmTest.ActiveContainersShareLabPathAcrossReferencePoses (0 ms)
+[ RUN      ] FFT2D5AlgorithmTest.CoverageFailureRestoresReferenceCoordinatesAndTimeSteps
+[       OK ] FFT2D5AlgorithmTest.CoverageFailureRestoresReferenceCoordinatesAndTimeSteps (0 ms)
+[ RUN      ] FFT2D5AlgorithmTest.ExplicitBatchSizesMatchSerialFullSolveAndBoundaryModes
+[       OK ] FFT2D5AlgorithmTest.ExplicitBatchSizesMatchSerialFullSolveAndBoundaryModes (3 ms)
+[ RUN      ] FFT2D5AlgorithmTest.HierarchyMatchesExhaustiveSegmentAndCoordinatesExactly
+[       OK ] FFT2D5AlgorithmTest.HierarchyMatchesExhaustiveSegmentAndCoordinatesExactly (42 ms)
+[ RUN      ] FFT2D5AlgorithmTest.PreparedProjectionsMatchUncachedStagesAfterSourceChanges
+[       OK ] FFT2D5AlgorithmTest.PreparedProjectionsMatchUncachedStagesAfterSourceChanges (1 ms)
+[ RUN      ] FFT2D5AlgorithmTest.RepeatedSolveReplacesFieldsAndPreservesInactiveContainer
+[       OK ] FFT2D5AlgorithmTest.RepeatedSolveReplacesFieldsAndPreservesInactiveContainer (0 ms)
+[----------] 12 tests from FFT2D5AlgorithmTest (52 ms total)
+
+[----------] Global test environment tear-down
+[==========] 12 tests from 1 test suite ran. (73 ms total)
+[  PASSED  ] 12 tests.

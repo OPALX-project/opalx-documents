@@ -1,0 +1,49 @@
+{
+  "case": "failure",
+  "ranks": 1,
+  "returncode": 156,
+  "timeout": false,
+  "elapsed_s": 4.225077301962301,
+  "passed": true,
+  "command": [
+    "mpiexec",
+    "-n",
+    "1",
+    "--bind-to",
+    "none",
+    "/usr/bin/python3",
+    "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/rank_gpu_runtime_attempt2.py",
+    "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/opalx",
+    "Cyclotron-RF-Stop.in",
+    "--info",
+    "2"
+  ],
+  "binary_sha256": "6cd248ee531a5e36318335a82949041c01fb3e50189e40a9683bec11174823de",
+  "gpu_mapping": [
+    {
+      "rank": 0,
+      "local_rank": 0,
+      "pid": 3807058,
+      "host": "merlin-g-100.psi.ch",
+      "inherited_cuda_visible_devices": "0,1",
+      "selected_cuda_visible_device": "0",
+      "cuda_runtime_library": "/opt/psi/Programming/cuda/13.2.1/targets/x86_64-linux/lib/libcudart.so.13.2.75",
+      "probe_cuda_runtime_library": "/opt/psi/Programming/cuda/13.2.1/targets/x86_64-linux/lib/libcudart.so.13.2.75",
+      "uuid_api": "cudaGetDeviceProperties(logical0).uuid, compiled against installed headers",
+      "probe_binary_sha256": "e1367fc48d216389292e3df46f8bddfe04f0a2cd518b77903eb4040056fd21f1",
+      "kokkos_logical_device_id": 0,
+      "executable": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/opalx",
+      "runtime_device_count": 1,
+      "cuda_runtime_version": 13020,
+      "compiled_cudart_version": 13020,
+      "gpu_uuid": "GPU-dbbd7375-8fc1-093d-f86b-ae1f64b87448"
+    }
+  ],
+  "mapping_ok": true,
+  "captured_failures": [
+    "OPAL-X> SINGLEGAP failure rank=0 id=0 cause=field-support gap-index=-1 t[s]=0.000000e+00 Rlab[m]=( -6.984201e-01 , 1.000035e+01 , 1.913732e+00 ) Plab[beta*gamma]=( -3.690638e-01 , -7.821739e-05 , -1.519270e-01 )"
+  ],
+  "failed_log_tail": [],
+  "input_sha256": "72016817ba4040d1483d9c0b8e411920933ac6c3afadd5fe676d4da9b077b662",
+  "particle_sha256": "384a1df37d509c39fbb46bf61d8b79af6b29fed47b8cc91b65a21e75c4dabca5"
+}

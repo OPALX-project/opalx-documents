@@ -1,0 +1,2071 @@
+[
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-one-rank/input.sha256",
+    "sha256": "76a02678a4eaae53705481ab05823aa888d12e66bda3ba91a4094f257ddd47b8",
+    "bytes": 399,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-one-rank/input.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-one-rank/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-one-rank/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-one-rank/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-one-rank/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-one-rank/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-one-rank/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-one-rank/run.log",
+    "sha256": "2f7cf2c9adf4db1dc9b6b117068444e93531a8a9faff4900265987b183491cb3",
+    "bytes": 10960,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-one-rank/started.txt",
+    "sha256": "360193a5678ca15318c768c6a7d889058c792f63fb949932f65f6a7abd8951c4",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-one-rank/started.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/Cyclotron-RF-Stop.h5",
+    "sha256": "891d2ba9e94d3cd72d27db9433e324a69d400e338b3223d3d53eecb002b004d8",
+    "bytes": 4459,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/Cyclotron-RF-Stop.in",
+    "sha256": "16c873c594639cd3c1449d2202fbe032b5728a4000266e510baccc1fb7ec6796",
+    "bytes": 3385,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/accepted-before-failure.hist",
+    "sha256": "25fd257efd0960d2d569f2568ebd9027620da99987222ccfc79b24c5c38169c5",
+    "bytes": 1959,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/accepted-before-failure.hist"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/accepted-before-failure.loss",
+    "sha256": "ddbc0f8f94d891fdc3995959dd9e5bfe07dca6643b949d7036abd9f1fb94baae",
+    "bytes": 171,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/accepted-before-failure.loss"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/accepted-before-failure.peaks",
+    "sha256": "916eaf2c85c1b35756cd1eef1d4a335e8066ced9e2a6b66db2fa63665bc6fd29",
+    "bytes": 37,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/accepted-before-failure.peaks"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/case.tsv",
+    "sha256": "a81da9927c1eaa4cd2fce8efa0c35a2b11dbea09c01249b4cf3e1588fb956fca",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/case.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/command.txt",
+    "sha256": "8cb88e680e205f27b763044b29f93834ee6aa58d57d37a771c722e03f5d7d00b",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/command.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "27c5465b6be8017625e594305299cd98d5ce74cf1d2be5667ccc2fd0b80546cc",
+    "bytes": 3162,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "d894d7493618c258ce9bd87c8164fb08657816893e784acbe2381399cc08a0bc",
+    "bytes": 8467,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/executable-after.sha256",
+    "sha256": "350ddbe07764df53339f0a68f90462318bdecf108dc5e231b50fa8e239a5f3bc",
+    "bytes": 122,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/executable-after.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/executable.sha256",
+    "sha256": "350ddbe07764df53339f0a68f90462318bdecf108dc5e231b50fa8e239a5f3bc",
+    "bytes": 122,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/executable.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/exit-code.txt",
+    "sha256": "bffd0dd9a9df95a5c8638ab09986006e880e735d525c70549a867cd57b70f100",
+    "bytes": 4,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/finished.txt",
+    "sha256": "c3b14d563756ddfe0e9b5668ac8ae25630c9265696f648743702dfd5551dbf8e",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/input.sha256",
+    "sha256": "3b93b48cba5bfee14ac8a24af1eb155d53456a65e9a5963716f988536bd04b24",
+    "bytes": 399,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/input.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/run.log",
+    "sha256": "1b322cfa31a6508fb9f5644a69f037fb2519ab792c8dc620672b15eddf098801",
+    "bytes": 11007,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/started.txt",
+    "sha256": "8b06c263b0971a877eb4ca70f91bb900d04cd942bc785119f31ad5967d995b11",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-one-rank/started.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/Cyclotron-RF-Stop.h5",
+    "sha256": "17c31ff5b4254d4dc70cf72af191a6ec26fcc99751449f21d205ba9d931973cf",
+    "bytes": 4459,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/Cyclotron-RF-Stop.in",
+    "sha256": "16c873c594639cd3c1449d2202fbe032b5728a4000266e510baccc1fb7ec6796",
+    "bytes": 3385,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/accepted-before-failure.hist",
+    "sha256": "25fd257efd0960d2d569f2568ebd9027620da99987222ccfc79b24c5c38169c5",
+    "bytes": 1959,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/accepted-before-failure.hist"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/accepted-before-failure.loss",
+    "sha256": "ddbc0f8f94d891fdc3995959dd9e5bfe07dca6643b949d7036abd9f1fb94baae",
+    "bytes": 171,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/accepted-before-failure.loss"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/accepted-before-failure.peaks",
+    "sha256": "916eaf2c85c1b35756cd1eef1d4a335e8066ced9e2a6b66db2fa63665bc6fd29",
+    "bytes": 37,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/accepted-before-failure.peaks"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/case.tsv",
+    "sha256": "a7e2e74bf6695bb28322352e571457548d414eaec7b4f2c7adbaef6375586390",
+    "bytes": 58,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/case.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/command.txt",
+    "sha256": "80b7a3c91a560652148abb0c573492eca7b2b693a2ba3873e48e5393ec64987c",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/command.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "27c5465b6be8017625e594305299cd98d5ce74cf1d2be5667ccc2fd0b80546cc",
+    "bytes": 3162,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "fc44cd1f18a57a0245a3cdf2d640d8b63b316e34f39af29cdd26acf335caf7d0",
+    "bytes": 8467,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/executable-after.sha256",
+    "sha256": "350ddbe07764df53339f0a68f90462318bdecf108dc5e231b50fa8e239a5f3bc",
+    "bytes": 122,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/executable-after.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/executable.sha256",
+    "sha256": "350ddbe07764df53339f0a68f90462318bdecf108dc5e231b50fa8e239a5f3bc",
+    "bytes": 122,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/executable.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/exit-code.txt",
+    "sha256": "bffd0dd9a9df95a5c8638ab09986006e880e735d525c70549a867cd57b70f100",
+    "bytes": 4,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/finished.txt",
+    "sha256": "c3b14d563756ddfe0e9b5668ac8ae25630c9265696f648743702dfd5551dbf8e",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/input.sha256",
+    "sha256": "3b93b48cba5bfee14ac8a24af1eb155d53456a65e9a5963716f988536bd04b24",
+    "bytes": 399,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/input.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/run.log",
+    "sha256": "c64510ad9ddcd6f4e57b0bde0ed4f5d08ceaa59430a0456cd330e08d3bfe28a0",
+    "bytes": 12328,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/started.txt",
+    "sha256": "c3b14d563756ddfe0e9b5668ac8ae25630c9265696f648743702dfd5551dbf8e",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-probe-verified-two-ranks/started.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/Cyclotron-RF-Stop.h5",
+    "sha256": "b059681e74d8ddd35b7c7deaba8f887c60088657bbdf429d25323860a1cbdba0",
+    "bytes": 4459,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/Cyclotron-RF-Stop.in",
+    "sha256": "3aaa062d7f5b0cfbbfc687652abc498c9c4ffcd9e38d61ee0b6afbe73fe8180a",
+    "bytes": 3368,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/accepted-before-failure.hist",
+    "sha256": "61aac2db2272d2f10d4e011171ff22df386637d8288bff01ee4ad4be2f78a183",
+    "bytes": 994,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/accepted-before-failure.hist"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/accepted-before-failure.peaks",
+    "sha256": "ab59fd23f64555064dab07f6dee6b410b4b80b655d32610c75277c6fc7fb4d9d",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/accepted-before-failure.peaks"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/case.tsv",
+    "sha256": "371a303bd28b43011c06dae16fac10127cd9db845c753b42cc1814d88bcca500",
+    "bytes": 129,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/case.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/command.txt",
+    "sha256": "80b7a3c91a560652148abb0c573492eca7b2b693a2ba3873e48e5393ec64987c",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/command.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "0dd00e5cf4aa2597550986c5a86542d3e850b96bfd1482ad4387beb4c36c3832",
+    "bytes": 3145,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "fc44cd1f18a57a0245a3cdf2d640d8b63b316e34f39af29cdd26acf335caf7d0",
+    "bytes": 8467,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/exit-code.txt",
+    "sha256": "bffd0dd9a9df95a5c8638ab09986006e880e735d525c70549a867cd57b70f100",
+    "bytes": 4,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/finished.txt",
+    "sha256": "03487ba916558c626e0b1454dd23f32228c8790db54fbf371f065a65a6ad41eb",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/input.sha256",
+    "sha256": "76a02678a4eaae53705481ab05823aa888d12e66bda3ba91a4094f257ddd47b8",
+    "bytes": 399,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/input.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/run.log",
+    "sha256": "57d7ad3db829e92f63c30f8f025df0db6106d7c69101b05542e7e7699302d417",
+    "bytes": 12278,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/started.txt",
+    "sha256": "e548a2c78a59989c62b821403f3dfa5307de4fd8bcbcfb637c7861c57c2b45eb",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/failure-two-ranks/started.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/final-particles.csv",
+    "sha256": "e362a89eacfc915983928a7d439b65c6439156dfd3da0cc619f0df9ad1d55049",
+    "bytes": 1687,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/final-particles.csv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/integration-checks.tsv",
+    "sha256": "ad7b2a7fdb693b4ae561213053fbb0e7fc06fd64df0499d48a684227108693a1",
+    "bytes": 1513,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/integration-checks.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/Cyclotron-RF-Stop.h5",
+    "sha256": "1ffa63c491106f359f9bfe16e60da5b37372fbdeca040a7b45694fe4c652c830",
+    "bytes": 152607,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/Cyclotron-RF-Stop.in",
+    "sha256": "33dc8fcd0b1585bc1ab8f64fd86e523f24eddb5b9e47a499d2ef4fddfe497aa4",
+    "bytes": 3263,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/Cyclotron-RF-Stop.stat",
+    "sha256": "0cb7d314dfe0950a0835d74c0454af08f9d4623eacb21013b6f2c74f295644d3",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/case.tsv",
+    "sha256": "e6eb8b95d21c8b1ec07607025e6af75a48594ce6bee5c9e19ee6561252dbb57c",
+    "bytes": 45,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/case.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/command.txt",
+    "sha256": "8cb88e680e205f27b763044b29f93834ee6aa58d57d37a771c722e03f5d7d00b",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/command.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "83c23263ce47d102f8749d66cbae98fa67fdeb2be3948ac32de686da2328d4af",
+    "bytes": 3040,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "d894d7493618c258ce9bd87c8164fb08657816893e784acbe2381399cc08a0bc",
+    "bytes": 8467,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/exit-code.txt",
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "bytes": 2,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/final-particles.csv",
+    "sha256": "0a6888daff698ca0aad31dedaa2ab6b92d2cd456d5e05a5b05664a4b03d881e6",
+    "bytes": 385,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/final-particles.csv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/final-stat-row.txt",
+    "sha256": "4b47c1bfd706bb5ba7859cfbda34bcae65bfca075079bdd3e5d9f98e3f1a0e9a",
+    "bytes": 1345,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/final-stat-row.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/final-state.h5dump",
+    "sha256": "82b26d4ddb89b8696360eb5723e3b971cdb83b560606c2c2fa8e80a1ea994f31",
+    "bytes": 1645,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/final-state.h5dump"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/finished.txt",
+    "sha256": "360193a5678ca15318c768c6a7d889058c792f63fb949932f65f6a7abd8951c4",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/input.sha256",
+    "sha256": "f4e8c20dd6fd2e0e50deaa32a7756c72ca0f0a40de84c479f8c46d622b3e28ec",
+    "bytes": 399,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/input.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/run.log",
+    "sha256": "ecd2ff37903aa4ee75cd9a8b4afe6cd7b198f66a6ec801e61a5f9dc18e530a62",
+    "bytes": 15720,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/run.log"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/started.txt",
+    "sha256": "2310558a4e311ea9cffe0d21a534228ec64646953dad9c1435903ebfaa33f5e6",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/started.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/timing.dat",
+    "sha256": "9e8f5ee4528775347a38038cbc69c2761ba1e664174caad359d56e72c3c9a9a9",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-one-rank/timing.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/Cyclotron-RF-Stop.h5",
+    "sha256": "33a655e17d4e725b42af4cb6797f458fb052bba04198b3225e913c15a4acbc49",
+    "bytes": 152607,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/Cyclotron-RF-Stop.in",
+    "sha256": "33dc8fcd0b1585bc1ab8f64fd86e523f24eddb5b9e47a499d2ef4fddfe497aa4",
+    "bytes": 3263,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/Cyclotron-RF-Stop.stat",
+    "sha256": "420b87517718cb9724aab094483d91f6ca9f993995798690cb0c731e86cef807",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/case.tsv",
+    "sha256": "942c11d43a65c3b92198e2c5f21cc81b0ca4d404993874ea29b5e817ebdba0cd",
+    "bytes": 46,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/case.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/command.txt",
+    "sha256": "80b7a3c91a560652148abb0c573492eca7b2b693a2ba3873e48e5393ec64987c",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/command.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "83c23263ce47d102f8749d66cbae98fa67fdeb2be3948ac32de686da2328d4af",
+    "bytes": 3040,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "fc44cd1f18a57a0245a3cdf2d640d8b63b316e34f39af29cdd26acf335caf7d0",
+    "bytes": 8467,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/exit-code.txt",
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "bytes": 2,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/final-particles.csv",
+    "sha256": "bcb9257407f104ddbbeab878f48ad4cc355ba897200a804fdca6f958bd9c4ff4",
+    "bytes": 386,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/final-particles.csv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/final-stat-row.txt",
+    "sha256": "954ef9ce73f9196c2da759226b384aa763fc9308b179844f01b52b942c85ea06",
+    "bytes": 1345,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/final-stat-row.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/final-state.h5dump",
+    "sha256": "17ad3e361ea1a61270a35dc0dcebd39302bfc17ef9f8c2a7fe9a3bd92b6d31a9",
+    "bytes": 1646,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/final-state.h5dump"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/finished.txt",
+    "sha256": "360193a5678ca15318c768c6a7d889058c792f63fb949932f65f6a7abd8951c4",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/input.sha256",
+    "sha256": "f4e8c20dd6fd2e0e50deaa32a7756c72ca0f0a40de84c479f8c46d622b3e28ec",
+    "bytes": 399,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/input.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/run.log",
+    "sha256": "1a17561e1521a77f06690b8bed3dc2d45785ae38d147c789c05c531e37a21ab7",
+    "bytes": 17854,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/run.log"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/started.txt",
+    "sha256": "360193a5678ca15318c768c6a7d889058c792f63fb949932f65f6a7abd8951c4",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/started.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/timing.dat",
+    "sha256": "74caa41eaa264494a8b4c7a0c2b3807824bc50246b7abc552afe37e206252599",
+    "bytes": 1217,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/one-proton-two-ranks/timing.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/rank-and-particle-differences.tsv",
+    "sha256": "f2e5b791b7c5f07b163b84669e4981819165ca78aaa186536161eb873c32ef2c",
+    "bytes": 537,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/rank-and-particle-differences.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/run-manual.sh",
+    "sha256": "6693e5fbcc02910986a8b016857e298b5c8eeb44eae9bfae384d95c1183a868e",
+    "bytes": 2123,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/run-manual.sh"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/run-summary.tsv",
+    "sha256": "52c1f6db4b74a73ebccc6e81f2f36f3af17a6e685e088019ee90ad81992f9bed",
+    "bytes": 135,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/run-summary.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/source-head.txt",
+    "sha256": "76bcf28219d926bfde2c38f6f2ed11804fa6e34b245fad8347a3496975c833ca",
+    "bytes": 41,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/source-head.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/source.diff",
+    "sha256": "453824c078c726fb44d67170fdd66ee99aea8a5261ad572fb7a85335d48b089c",
+    "bytes": 23684,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/source.diff"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/source.sha256",
+    "sha256": "2d0a74c6976459ed76f60d671951dc8143fd1cc26e26ebc591b7e000e8955131",
+    "bytes": 606,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/source.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/Cyclotron-RF-Stop.h5",
+    "sha256": "8c816159264a0e3ec04541d801c41167d21aaf83a96ba3d375c291147d60148a",
+    "bytes": 152607,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/Cyclotron-RF-Stop.in",
+    "sha256": "193749c32b3c2803fbd0c1e545d4d40b2ae2d37eca5e578208de3914dbc28b03",
+    "bytes": 3263,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/Cyclotron-RF-Stop.stat",
+    "sha256": "08814a3223c48d5ae0942d10e5a930b2c2948cc5045bf3deb481c1f9339922d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/case.tsv",
+    "sha256": "adba17dee198d4f3538f1479bccec78fe661205bc4b1a972e764347b8a046a3e",
+    "bytes": 46,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/case.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/command.txt",
+    "sha256": "8cb88e680e205f27b763044b29f93834ee6aa58d57d37a771c722e03f5d7d00b",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/command.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "6a2d2aca37189637c1a1390b71f15da64a3804b0300feb9008184f43ad435c24",
+    "bytes": 3040,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "d894d7493618c258ce9bd87c8164fb08657816893e784acbe2381399cc08a0bc",
+    "bytes": 8467,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/exit-code.txt",
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "bytes": 2,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/final-particles.csv",
+    "sha256": "6867f3e84a74a637fb490328105a85d2560f54d7faa53e49eded6f0bfc1bf6fd",
+    "bytes": 646,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/final-particles.csv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/final-stat-row.txt",
+    "sha256": "5315186f0d0d488ce8357dbcf0f51acaf219e95a4cd3eeccbcb52fc3da981745",
+    "bytes": 1345,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/final-stat-row.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/final-state.h5dump",
+    "sha256": "cb49b9b170f74ebfda17c495dd09293c2f4de36a474247a95e61efc0ce3b4353",
+    "bytes": 1802,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/final-state.h5dump"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/finished.txt",
+    "sha256": "360193a5678ca15318c768c6a7d889058c792f63fb949932f65f6a7abd8951c4",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/input.sha256",
+    "sha256": "17762f8627fcba71579eb86ff849ab8668f0b1a294fb86d07a48264e72a3dbeb",
+    "bytes": 399,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/input.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/proton.dat",
+    "sha256": "e48082ce10016c1a497328b01dbcef0e45c43405b97b17007c7c0fd67611ba83",
+    "bytes": 101,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/run.log",
+    "sha256": "c48f081a243812c72ef7e548c982d37069e62e9bd4bb601c717ef07790b5742a",
+    "bytes": 15714,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/run.log"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/started.txt",
+    "sha256": "360193a5678ca15318c768c6a7d889058c792f63fb949932f65f6a7abd8951c4",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/started.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/timing.dat",
+    "sha256": "5f07c44f1fee897d30b34662ed16af21a1f1c1e4a0e4da252dbfcb10633b2546",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-one-rank/timing.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/Cyclotron-RF-Stop.h5",
+    "sha256": "8c816159264a0e3ec04541d801c41167d21aaf83a96ba3d375c291147d60148a",
+    "bytes": 152607,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/Cyclotron-RF-Stop.in",
+    "sha256": "193749c32b3c2803fbd0c1e545d4d40b2ae2d37eca5e578208de3914dbc28b03",
+    "bytes": 3263,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/Cyclotron-RF-Stop.stat",
+    "sha256": "0bec56fb07d1a8c12599ea259bdf801143233176ac8a6392d210c0586482974a",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/case.tsv",
+    "sha256": "07f4085b953840abde6ecd92175940496396d7c9110e4fb6115440bf079c0e91",
+    "bytes": 47,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/case.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/command.txt",
+    "sha256": "80b7a3c91a560652148abb0c573492eca7b2b693a2ba3873e48e5393ec64987c",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/command.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "6a2d2aca37189637c1a1390b71f15da64a3804b0300feb9008184f43ad435c24",
+    "bytes": 3040,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "fc44cd1f18a57a0245a3cdf2d640d8b63b316e34f39af29cdd26acf335caf7d0",
+    "bytes": 8467,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/exit-code.txt",
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "bytes": 2,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/final-particles.csv",
+    "sha256": "ee2c4ef90a22580ca598398b908d7707920c017d686d27193aaba96b9e96bc50",
+    "bytes": 648,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/final-particles.csv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/final-stat-row.txt",
+    "sha256": "5315186f0d0d488ce8357dbcf0f51acaf219e95a4cd3eeccbcb52fc3da981745",
+    "bytes": 1345,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/final-stat-row.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/final-state.h5dump",
+    "sha256": "c65a214aff5f6715de6acc93af3235247806d0439cefec2061dfa23ae8526174",
+    "bytes": 1803,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/final-state.h5dump"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/finished.txt",
+    "sha256": "360193a5678ca15318c768c6a7d889058c792f63fb949932f65f6a7abd8951c4",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/input.sha256",
+    "sha256": "17762f8627fcba71579eb86ff849ab8668f0b1a294fb86d07a48264e72a3dbeb",
+    "bytes": 399,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/input.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/proton.dat",
+    "sha256": "e48082ce10016c1a497328b01dbcef0e45c43405b97b17007c7c0fd67611ba83",
+    "bytes": 101,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/run.log",
+    "sha256": "bd96143aaa339695dd8527d0af6dc29acb9d9a7a6180f47b58e3a1ee40ebab40",
+    "bytes": 17850,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/run.log"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/started.txt",
+    "sha256": "360193a5678ca15318c768c6a7d889058c792f63fb949932f65f6a7abd8951c4",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/started.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/timing.dat",
+    "sha256": "0f6692146bb8a9181ce2baddfc056bdfac35c3a8191b931d743fb0d9fa32ae95",
+    "bytes": 1217,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration/two-protons-two-ranks/timing.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/README.md",
+    "sha256": "51147c073b86a98f04e3a183b43b365b6d2853d7456ffc7fb4ac8248607f37c9",
+    "bytes": 1220,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/readme.md"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/REPORT.md",
+    "sha256": "55d51fc24a72e0c5301f739c1d331eca634966e46a905c4526e7b0ed051d2bc3",
+    "bytes": 5538,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/report.md"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/analyse-manual.sh",
+    "sha256": "d463f3bfa8d681f7e407ffa947d2baab1e405ae6297868771f1cdace2f4b7e52",
+    "bytes": 3355,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/analyse-manual.sh"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/executable-after.sha256",
+    "sha256": "6e7bc0a8f098698bcc116303c8be6a6387a5969dc456462853c62c27c59f00ce",
+    "bytes": 122,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/executable-after.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/executable.sha256",
+    "sha256": "6e7bc0a8f098698bcc116303c8be6a6387a5969dc456462853c62c27c59f00ce",
+    "bytes": 122,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/executable.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/extract-final.awk",
+    "sha256": "2e45a0530d007030f21d77398cf39a74cc6e55ba2be26fd0dd82d249a3a8cf81",
+    "bytes": 1401,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/extract-final.awk"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/Cyclotron-RF-Stop.h5",
+    "sha256": "4cbcd66233e9744ea63b885f733e1c2fbaca47593dc167b078b0a62b43b4be6f",
+    "bytes": 4459,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/Cyclotron-RF-Stop.in",
+    "sha256": "16c873c594639cd3c1449d2202fbe032b5728a4000266e510baccc1fb7ec6796",
+    "bytes": 3385,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/accepted-before-failure.hist",
+    "sha256": "25fd257efd0960d2d569f2568ebd9027620da99987222ccfc79b24c5c38169c5",
+    "bytes": 1959,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/accepted-before-failure.hist"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/accepted-before-failure.loss",
+    "sha256": "ddbc0f8f94d891fdc3995959dd9e5bfe07dca6643b949d7036abd9f1fb94baae",
+    "bytes": 171,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/accepted-before-failure.loss"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/accepted-before-failure.peaks",
+    "sha256": "916eaf2c85c1b35756cd1eef1d4a335e8066ced9e2a6b66db2fa63665bc6fd29",
+    "bytes": 37,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/accepted-before-failure.peaks"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/case.tsv",
+    "sha256": "32e5e630032d2c1c95d9a107781c39d9e0ffa8802a33b4e827c53444f05a3c18",
+    "bytes": 42,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/case.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/command.txt",
+    "sha256": "8cb88e680e205f27b763044b29f93834ee6aa58d57d37a771c722e03f5d7d00b",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/command.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "27c5465b6be8017625e594305299cd98d5ce74cf1d2be5667ccc2fd0b80546cc",
+    "bytes": 3162,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "d894d7493618c258ce9bd87c8164fb08657816893e784acbe2381399cc08a0bc",
+    "bytes": 8467,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/exit-code.txt",
+    "sha256": "bffd0dd9a9df95a5c8638ab09986006e880e735d525c70549a867cd57b70f100",
+    "bytes": 4,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/finished.txt",
+    "sha256": "f235659030c060bd4250eab1802f8dc39efb59f1753bbef1fc50c8752095f5bb",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/input.sha256",
+    "sha256": "3b93b48cba5bfee14ac8a24af1eb155d53456a65e9a5963716f988536bd04b24",
+    "bytes": 399,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/input.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/run.log",
+    "sha256": "755b9e5c505df94666049d24e6dd27ea2c20e090caf928c03c0b77a5073da699",
+    "bytes": 11005,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/started.txt",
+    "sha256": "f235659030c060bd4250eab1802f8dc39efb59f1753bbef1fc50c8752095f5bb",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-one-rank/started.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/Cyclotron-RF-Stop.h5",
+    "sha256": "4cbcd66233e9744ea63b885f733e1c2fbaca47593dc167b078b0a62b43b4be6f",
+    "bytes": 4459,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/Cyclotron-RF-Stop.in",
+    "sha256": "16c873c594639cd3c1449d2202fbe032b5728a4000266e510baccc1fb7ec6796",
+    "bytes": 3385,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/accepted-before-failure.hist",
+    "sha256": "25fd257efd0960d2d569f2568ebd9027620da99987222ccfc79b24c5c38169c5",
+    "bytes": 1959,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/accepted-before-failure.hist"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/accepted-before-failure.loss",
+    "sha256": "ddbc0f8f94d891fdc3995959dd9e5bfe07dca6643b949d7036abd9f1fb94baae",
+    "bytes": 171,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/accepted-before-failure.loss"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/accepted-before-failure.peaks",
+    "sha256": "916eaf2c85c1b35756cd1eef1d4a335e8066ced9e2a6b66db2fa63665bc6fd29",
+    "bytes": 37,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/accepted-before-failure.peaks"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/case.tsv",
+    "sha256": "f7db17e954e7f28854d47887c1958fd7a227b577b8612e650ff8918d8acddfb8",
+    "bytes": 43,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/case.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/command.txt",
+    "sha256": "80b7a3c91a560652148abb0c573492eca7b2b693a2ba3873e48e5393ec64987c",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/command.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "27c5465b6be8017625e594305299cd98d5ce74cf1d2be5667ccc2fd0b80546cc",
+    "bytes": 3162,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "fc44cd1f18a57a0245a3cdf2d640d8b63b316e34f39af29cdd26acf335caf7d0",
+    "bytes": 8467,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/exit-code.txt",
+    "sha256": "bffd0dd9a9df95a5c8638ab09986006e880e735d525c70549a867cd57b70f100",
+    "bytes": 4,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/finished.txt",
+    "sha256": "998e60a0e343f3f9e62f3a02ab51653ab016b842978147b30eea64e593d6fd7a",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/input.sha256",
+    "sha256": "3b93b48cba5bfee14ac8a24af1eb155d53456a65e9a5963716f988536bd04b24",
+    "bytes": 399,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/input.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/run.log",
+    "sha256": "74e957e1f15777c84ea57bbad0cb9978e4e04f5cd7933aa30b3e665fa6dc0330",
+    "bytes": 12326,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/started.txt",
+    "sha256": "f235659030c060bd4250eab1802f8dc39efb59f1753bbef1fc50c8752095f5bb",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/failure-two-ranks/started.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/final-particles.csv",
+    "sha256": "6e053414a49675dd9d16d9d3f013b7fd14200b50927cf127038bdea24b3af07d",
+    "bytes": 1693,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/final-particles.csv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/integration-checks.tsv",
+    "sha256": "c4a77da2245fb8049018254479d74c748317756f8c7be1af84514002c2c16ac8",
+    "bytes": 1216,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/integration-checks.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/Cyclotron-RF-Stop.h5",
+    "sha256": "0021566dab6d300c5ec31d662aaea2c0116bb616c2d2c2542120cf9654f453ce",
+    "bytes": 152607,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/Cyclotron-RF-Stop.in",
+    "sha256": "33dc8fcd0b1585bc1ab8f64fd86e523f24eddb5b9e47a499d2ef4fddfe497aa4",
+    "bytes": 3263,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/Cyclotron-RF-Stop.stat",
+    "sha256": "dca1417d6bca95b6abfba2f3e022962b54c95e7f5ba03aa6d0dee2fbda7619f5",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/case.tsv",
+    "sha256": "e6eb8b95d21c8b1ec07607025e6af75a48594ce6bee5c9e19ee6561252dbb57c",
+    "bytes": 45,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/case.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/command.txt",
+    "sha256": "8cb88e680e205f27b763044b29f93834ee6aa58d57d37a771c722e03f5d7d00b",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/command.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "83c23263ce47d102f8749d66cbae98fa67fdeb2be3948ac32de686da2328d4af",
+    "bytes": 3040,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "d894d7493618c258ce9bd87c8164fb08657816893e784acbe2381399cc08a0bc",
+    "bytes": 8467,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/exit-code.txt",
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "bytes": 2,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/final-particles.csv",
+    "sha256": "c5d7c0636ca4c065f2759c75daa8b7246f9717c749c01db21c2150ae2ad80286",
+    "bytes": 386,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/final-particles.csv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/final-stat-row.txt",
+    "sha256": "fac446286ab2fc83fe3f283d14c6e1c58786fbbfb2f9b1b6994a5c5b18bc830e",
+    "bytes": 1345,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/final-stat-row.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/final-state.h5dump",
+    "sha256": "a262ab6ccceeb06a40a928bc8c0fffc4b84ff5bcbb3930566a58c0f8dcd3a18e",
+    "bytes": 1658,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/final-state.h5dump"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/finished.txt",
+    "sha256": "63f686aec0cae45716a210c3d5586c7a9fe0fbb8b307d61779c46af1024c0401",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/input.sha256",
+    "sha256": "f4e8c20dd6fd2e0e50deaa32a7756c72ca0f0a40de84c479f8c46d622b3e28ec",
+    "bytes": 399,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/input.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/run.log",
+    "sha256": "4b8a26e4d65dd49abec0aeff08ed60adf3fe5ed9a77e0f092e1889e44faaca55",
+    "bytes": 15719,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/run.log"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/started.txt",
+    "sha256": "c14005f7feb0af406ee209b3ce86c61cbac697cc73af6d6398594cd3afb6de31",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/started.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/timing.dat",
+    "sha256": "cd7e0057f8d8f0bc8988468c6cd2660ec5278372e12730d26d6d59beff956f2a",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-one-rank/timing.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/Cyclotron-RF-Stop.h5",
+    "sha256": "65f9ff87d63f13030657fb8e885a23a39436530c8f02f3cb6cdace6c3502b0cb",
+    "bytes": 152607,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/Cyclotron-RF-Stop.in",
+    "sha256": "33dc8fcd0b1585bc1ab8f64fd86e523f24eddb5b9e47a499d2ef4fddfe497aa4",
+    "bytes": 3263,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/Cyclotron-RF-Stop.stat",
+    "sha256": "60fdbea970bab4dd666df0b55723d230918e0b66e7f51a41852217f61fe4901b",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/case.tsv",
+    "sha256": "942c11d43a65c3b92198e2c5f21cc81b0ca4d404993874ea29b5e817ebdba0cd",
+    "bytes": 46,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/case.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/command.txt",
+    "sha256": "80b7a3c91a560652148abb0c573492eca7b2b693a2ba3873e48e5393ec64987c",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/command.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "83c23263ce47d102f8749d66cbae98fa67fdeb2be3948ac32de686da2328d4af",
+    "bytes": 3040,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "fc44cd1f18a57a0245a3cdf2d640d8b63b316e34f39af29cdd26acf335caf7d0",
+    "bytes": 8467,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/exit-code.txt",
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "bytes": 2,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/final-particles.csv",
+    "sha256": "a4c6665d3c8c1c0c5279522b356a521bbf33e3da944326119e7925424e4a4889",
+    "bytes": 387,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/final-particles.csv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/final-stat-row.txt",
+    "sha256": "32de507b1e03178bf87b9a10d0606b1219d1eb2b72488cc300ffa53f35fc9211",
+    "bytes": 1345,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/final-stat-row.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/final-state.h5dump",
+    "sha256": "309d1567458594a215829e5f42b2149e22bf8bb921c06b3187713e81e14780d7",
+    "bytes": 1659,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/final-state.h5dump"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/finished.txt",
+    "sha256": "63f686aec0cae45716a210c3d5586c7a9fe0fbb8b307d61779c46af1024c0401",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/input.sha256",
+    "sha256": "f4e8c20dd6fd2e0e50deaa32a7756c72ca0f0a40de84c479f8c46d622b3e28ec",
+    "bytes": 399,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/input.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/run.log",
+    "sha256": "b9812348ee6ed1cf342c5dde8c5b38b77763ff8ed9dfd14657c34f5a950936b9",
+    "bytes": 17851,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/run.log"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/started.txt",
+    "sha256": "63f686aec0cae45716a210c3d5586c7a9fe0fbb8b307d61779c46af1024c0401",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/started.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/timing.dat",
+    "sha256": "325c1f880c655be203e7623f5aa5704f21f6cd94450a4f330e3226e2c7957e50",
+    "bytes": 1217,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/one-proton-two-ranks/timing.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/rank-and-particle-differences.tsv",
+    "sha256": "e72d56515b5e93dd0c9ea30ee1d0629e4209d805e42ce4b473ec13a77eb2b607",
+    "bytes": 538,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/rank-and-particle-differences.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/run-manual.sh",
+    "sha256": "6693e5fbcc02910986a8b016857e298b5c8eeb44eae9bfae384d95c1183a868e",
+    "bytes": 2123,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/run-manual.sh"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/run-summary.tsv",
+    "sha256": "52c1f6db4b74a73ebccc6e81f2f36f3af17a6e685e088019ee90ad81992f9bed",
+    "bytes": 135,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/run-summary.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/source-head.txt",
+    "sha256": "76bcf28219d926bfde2c38f6f2ed11804fa6e34b245fad8347a3496975c833ca",
+    "bytes": 41,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/source-head.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/source.diff",
+    "sha256": "35a04ab9342b8445901e1e197ae68ea62f3b9d09cbea95121ef0ccaaa3f5f16c",
+    "bytes": 25828,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/source.diff"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/source.sha256",
+    "sha256": "be2d579839a600a9f8b15e0fc6e8051372750093ecf33912a6b01e0182ca6c03",
+    "bytes": 606,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/source.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/Cyclotron-RF-Stop.h5",
+    "sha256": "704f689aee4bef75faea1e39f6effb3f8e7ad65cde85f8ef0e629f458ed59842",
+    "bytes": 152607,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/Cyclotron-RF-Stop.in",
+    "sha256": "193749c32b3c2803fbd0c1e545d4d40b2ae2d37eca5e578208de3914dbc28b03",
+    "bytes": 3263,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/Cyclotron-RF-Stop.stat",
+    "sha256": "241b299178c2603857a59f3350269eb890e935508ccb942c94d5607873f6e6a2",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/case.tsv",
+    "sha256": "adba17dee198d4f3538f1479bccec78fe661205bc4b1a972e764347b8a046a3e",
+    "bytes": 46,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/case.tsv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/command.txt",
+    "sha256": "8cb88e680e205f27b763044b29f93834ee6aa58d57d37a771c722e03f5d7d00b",
+    "bytes": 99,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/command.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "6a2d2aca37189637c1a1390b71f15da64a3804b0300feb9008184f43ad435c24",
+    "bytes": 3040,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "d894d7493618c258ce9bd87c8164fb08657816893e784acbe2381399cc08a0bc",
+    "bytes": 8467,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/exit-code.txt",
+    "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "bytes": 2,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/exit-code.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/final-particles.csv",
+    "sha256": "dc6985136554cc90c3ec524bc6131a08f36c5943bd6e1ed37760d9d65dbce685",
+    "bytes": 648,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/final-particles.csv"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/final-stat-row.txt",
+    "sha256": "94b19869c714597d191126e4d2abd3b20eedee452bd579410fc0a97f18dbc0db",
+    "bytes": 1345,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/final-stat-row.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/final-state.h5dump",
+    "sha256": "4d600807676b0fb5cc983fb9ff77fba21fa648a3427996106e4f9d9c167131ad",
+    "bytes": 1816,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/final-state.h5dump"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/finished.txt",
+    "sha256": "63f686aec0cae45716a210c3d5586c7a9fe0fbb8b307d61779c46af1024c0401",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/finished.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/input.sha256",
+    "sha256": "17762f8627fcba71579eb86ff849ab8668f0b1a294fb86d07a48264e72a3dbeb",
+    "bytes": 399,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/input.sha256"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/proton.dat",
+    "sha256": "e48082ce10016c1a497328b01dbcef0e45c43405b97b17007c7c0fd67611ba83",
+    "bytes": 101,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/run.log",
+    "sha256": "92fc698c8d147de79171e31bda20984d36b3f3bf1dbeb7354010487ad2bffeb8",
+    "bytes": 15713,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/run.log"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/started.txt",
+    "sha256": "63f686aec0cae45716a210c3d5586c7a9fe0fbb8b307d61779c46af1024c0401",
+    "bytes": 21,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/started.txt"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/timing.dat",
+    "sha256": "7914374cf5f4c945e1a40134cc62390a875f91caef80380aa8d32e2edf596fe2",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-one-rank/timing.dat"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-two-ranks/Cyclotron-RF-Stop.h5",
+    "sha256": "65e723286e3f68aabf1e9740259b5da0308b3dacb1025ff5fd0141fe4c68483e",
+    "bytes": 152607,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-two-ranks/Cyclotron-RF-Stop.in",
+    "sha256": "193749c32b3c2803fbd0c1e545d4d40b2ae2d37eca5e578208de3914dbc28b03",
+    "bytes": 3263,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-two-ranks/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-two-ranks/Cyclotron-RF-Stop.stat",
+    "sha256": "3a952c34982c87e4399c413f865cccbc2963664b84566b6a7daeccb3b8204bcf",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-followup-20261025/rf-integration-accumulated/two-protons-two-ranks/cyclotron-rf-stop.stat"
+  }
+]

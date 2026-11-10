@@ -1,0 +1,50 @@
+{
+  "name": "zero256",
+  "solver": "none",
+  "charge_C": 0.0,
+  "assigned_charge_C": 1e-13,
+  "steps": 256,
+  "mesh": [
+    8,
+    8,
+    8
+  ],
+  "expected_particles": 98304,
+  "initial_phase_rad": 0.2,
+  "orbit_radius_m": 1.0,
+  "omega_rad_per_s": 2997924.58,
+  "Bz_T": 0.03129738805598163,
+  "distribution": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/ellipsoid-98304.dist",
+  "source_npz": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/ellipsoid-98304.npz",
+  "directory": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/strong-charge/completed-study/runs/zero256",
+  "h5": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/strong-charge/completed-study/runs/zero256/uniform-b.h5",
+  "dt_s": 4.0934473084993785e-09,
+  "field_geometry": "one uniform Cartesian map",
+  "fieldmap": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/uniform-by.g4blmap",
+  "fieldmap_sha256": "4f3df35fa2bb8decc61f0007eb11ca38eb00805d033ac2e8805e8e3ba7755741",
+  "source_sha256": "da5607b38e39c45ca899b7d1577b1c682e3575c8f431435c978b15d04b78070a",
+  "input_sha256": "4f90f473b05df430d1b52540aa01a6a5f72de0afee494dc01bc69a302726206c",
+  "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+  "binary": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/strong-charge/completed-study/bin/opalx",
+  "pipe_size_m": null,
+  "snapshot_interval_steps": 16,
+  "refpath_sha256": null,
+  "initial_semiaxes_m": [
+    0.005,
+    0.05,
+    0.0005
+  ],
+  "omp_threads": 4,
+  "mpi_ranks": 1,
+  "purpose": "Completed same-executable 10 pC fine-grid and 3D OPEN comparison",
+  "status": "exited",
+  "command": [
+    "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/strong-charge/completed-study/bin/opalx",
+    "uniform-b.in",
+    "--info",
+    "4"
+  ],
+  "returncode": 0,
+  "elapsed_s": 2.9241019999972195,
+  "binary_sha256_after": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+}

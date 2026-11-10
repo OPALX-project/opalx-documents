@@ -1,0 +1,183 @@
+{
+  "adapter_sha256": "686a2a9ab71d409f1fc62f5ae84fbefcb842620b2304460d372369a45cce3d8f",
+  "runs": [
+    {
+      "run": "native-16-cell-ascii-r1",
+      "crossings": 57,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 1,
+      "max_decoded_input_delta": 3.009265538105056e-36
+    },
+    {
+      "run": "native-16-cell-final-source-hdf5-r1",
+      "crossings": 57,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-16-cell-hdf5-r1",
+      "crossings": 57,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-16-cell-hdf5-r2",
+      "crossings": 57,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-16-cell-linked-final-hdf5-r1",
+      "crossings": 57,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-16-cell-matched-ascii-r1",
+      "crossings": 57,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 1,
+      "max_decoded_input_delta": 1.504632769052528e-36
+    },
+    {
+      "run": "native-16-cell-matched-hdf5-r1",
+      "crossings": 57,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-16-cell-matched-hdf5-r2",
+      "crossings": 57,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-16-cell-matched-quarter-hdf5-r1",
+      "crossings": 57,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-16-cell-matched-refined-hdf5-r1",
+      "crossings": 57,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-16-cell-matched-vertical-hdf5-r1",
+      "crossings": 57,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-16-cell-matched-vertical-refined-hdf5-r1",
+      "crossings": 57,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-16-cell-refined-hdf5-r1",
+      "crossings": 57,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-16-cell-vertical-hdf5-r1",
+      "crossings": 57,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-16-cell-vertical-refined-hdf5-r1",
+      "crossings": 57,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-55deg-d-off-matched-hdf5-r1",
+      "crossings": 61,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-55deg-d-off-matched-refined-hdf5-r1",
+      "crossings": 61,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-fourfold-hdf5-r1",
+      "crossings": 10,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-fourfold-matched-ascii-r1",
+      "crossings": 15,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 2,
+      "max_decoded_input_delta": 1.2037062152420224e-35
+    },
+    {
+      "run": "native-fourfold-matched-hdf5-r1",
+      "crossings": 15,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-fourfold-matched-hdf5-r2",
+      "crossings": 15,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-fourfold-matched-hdf5-r2-repeat",
+      "crossings": 15,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-fourfold-matched-refined-hdf5-r1",
+      "crossings": 15,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-fourfold-refined-hdf5-r1",
+      "crossings": 10,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    },
+    {
+      "run": "native-fourfold-turn-label-debug",
+      "crossings": 15,
+      "frame_transform_exact_against_archived_conversion": true,
+      "correctly_rounded_ascii_tokens_changed": 0,
+      "max_decoded_input_delta": 0.0
+    }
+  ],
+  "converted_crossings": 1087,
+  "correctly_rounded_ascii_tokens_changed": 4,
+  "result": "General transform exactly reproduces archived conversion for identical decoded input. Updated ASCII reader separately matches correctly rounded decimal parsing. HDF5 unchanged. No simulation rerun."
+}

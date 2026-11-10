@@ -1,0 +1,180 @@
+{
+  "case": "triangle-cell-z8192-final",
+  "initialization_valid": true,
+  "full": {
+    "case": "triangle-cell-z8192-final",
+    "binary_sha256": "70383ff72345d869db40d42d2ff5aee8ceaa2f1f4fa656fcf2e8fc75e35647c1",
+    "input_sha256": "f72013c9b55f47d1d094be1d9a0bf47eb2d8b08c010e305b1eed24fdcf2d103f",
+    "native_h5_sha256": "4aa4edfae59e7f64c0fbbec2b7ebf5703f419faf9c472c5ab990ec51986d6460",
+    "native_checkpoint_sha256": "04ae3646a66654837007ac2fa40adb6ee4c69cecc9ba5f7f5b90e27f3308d76c",
+    "particles": 4976691,
+    "source_particles": 4976640,
+    "exact_ids": true,
+    "input_total_q_C": 1.0000102478780863e-11,
+    "output_total_q_C": 1.0000102478780863e-11,
+    "input_source_q_C": 1.0000000000000001e-11,
+    "output_source_q_C": 1.0000000000000001e-11,
+    "input_marker_q_C": 1.0247878086419753e-16,
+    "output_marker_q_C": 1.0247878086419753e-16,
+    "header_charge_C": [
+      1.5646046652223797e-16
+    ],
+    "input_q_min_C": 5.740251888743815e-25,
+    "input_q_max_C": 4.380915440160075e-18,
+    "output_q_min_C": 5.740251888743815e-25,
+    "output_q_max_C": 4.380915440160075e-18,
+    "q_preserved_by_id": true,
+    "q_max_relative_change": 0.0,
+    "q_input_sha256": "af3513bc41318d31d6f4b87f47e15a4b8d808be46ede11bae1721833c39a90f6",
+    "q_output_checkpoint_sha256": "af3513bc41318d31d6f4b87f47e15a4b8d808be46ede11bae1721833c39a90f6",
+    "m_preserved_by_id": true,
+    "m_max_relative_change": 0.0,
+    "m_input_sha256": "028e6d3ac00d6ec41941babe31500e1d567a1335fef70f71a5be91edc2531f88",
+    "m_output_checkpoint_sha256": "028e6d3ac00d6ec41941babe31500e1d567a1335fef70f71a5be91edc2531f88",
+    "input_q_over_m_proton_pass": true,
+    "output_q_over_m_proton_pass": true,
+    "independent_cell_charge_L1_relative_error": 1.5381669689767822e-09,
+    "independent_cross_J_relative_error": 0.0,
+    "input_analytic_profile_q_pass": true,
+    "J_weighted_transverse_mean_pass": true,
+    "input_weighted_mean_uy_s_m": [
+      3.1250982902889385e-06,
+      -2.665897346924407e-21,
+      1.269144311247666e-15
+    ],
+    "input_weighted_second_uy_s_m2": [
+      6.253322354076933e-06,
+      6.272169021691954e-08,
+      1.0416667461397084
+    ],
+    "expected_mean_u_m": 3.125e-06,
+    "expected_second_s_m2": 1.0416666666666667,
+    "source_Q_normalization_pass": true,
+    "longitudinal_second_moment_pass": true,
+    "marker_q_pass": true,
+    "max_frozen_motion_residual_m": 1.195746796971678e-15,
+    "frame_motion_pass": true,
+    "initialization_valid": true
+  },
+  "companion": {
+    "case": "triangle-cell-z8192-final-probes",
+    "binary_sha256": "70383ff72345d869db40d42d2ff5aee8ceaa2f1f4fa656fcf2e8fc75e35647c1",
+    "input_sha256": "35d9cbf4c3db694b07d7f182192f2a0d239bdc570a4fc97705fcd3cbb414ddbb",
+    "native_h5_sha256": "7f91e5d6173ef2d34f26b5ffcb18c6f4df44bbad5c99c6cfeca2cb9a4394abdb",
+    "native_checkpoint_sha256": "bfb60ffe1dc024d7d5b289ef541807bb2e106e4fdaa7d24e761cd8e759395ea7",
+    "particles": 51,
+    "source_particles": 0,
+    "exact_ids": true,
+    "input_total_q_C": 1.0247878086419753e-16,
+    "output_total_q_C": 1.0247878086419753e-16,
+    "input_source_q_C": 0.0,
+    "output_source_q_C": 0.0,
+    "input_marker_q_C": 1.0247878086419753e-16,
+    "output_marker_q_C": 1.0247878086419753e-16,
+    "header_charge_C": [
+      1.0247878086419752e-16
+    ],
+    "input_q_min_C": 2.0093878600823042e-18,
+    "input_q_max_C": 2.0093878600823042e-18,
+    "output_q_min_C": 2.0093878600823042e-18,
+    "output_q_max_C": 2.0093878600823042e-18,
+    "q_preserved_by_id": true,
+    "q_max_relative_change": 0.0,
+    "q_input_sha256": "b5b246fe2621ac383d2e21988855504f883f43cf0c6d6040a9e575f7ef14b037",
+    "q_output_checkpoint_sha256": "b5b246fe2621ac383d2e21988855504f883f43cf0c6d6040a9e575f7ef14b037",
+    "m_preserved_by_id": true,
+    "m_max_relative_change": 0.0,
+    "m_input_sha256": "92cee1af0bf1645dea13df749323dc245fdf2857bedac5ddcec017f967709d9b",
+    "m_output_checkpoint_sha256": "92cee1af0bf1645dea13df749323dc245fdf2857bedac5ddcec017f967709d9b",
+    "input_q_over_m_proton_pass": true,
+    "output_q_over_m_proton_pass": true,
+    "input_analytic_profile_q_pass": true,
+    "source_Q_normalization_pass": true,
+    "J_weighted_transverse_mean_pass": true,
+    "longitudinal_second_moment_pass": true,
+    "marker_q_pass": true,
+    "max_frozen_motion_residual_m": 8.881784197001252e-16,
+    "frame_motion_pass": true,
+    "initialization_valid": true
+  },
+  "reference_path": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/triangle_fields_reference.csv",
+  "reference_sha256": "2797950954a4ed8c5bb3ef7f7fcc608c9237d57afdcfe0aea14304f278360450",
+  "reference_charge_C": 1e-11,
+  "comparison_interpretable": true,
+  "field_metrics": [
+    {
+      "target_set": "original43",
+      "component": "r",
+      "nonzero_points": 43,
+      "max_relative_error_percent": 0.06612867321210254,
+      "worst_nonzero_point": "axis_r_-0.9",
+      "max_symmetry_zero_absolute_error_V_m": null
+    },
+    {
+      "target_set": "original43",
+      "component": "y",
+      "nonzero_points": 28,
+      "max_relative_error_percent": 0.08660317071518624,
+      "worst_nonzero_point": "axis_y_-0.9",
+      "max_symmetry_zero_absolute_error_V_m": 3.936002334795241e-13
+    },
+    {
+      "target_set": "original43",
+      "component": "s",
+      "nonzero_points": 34,
+      "max_relative_error_percent": 0.08298988977866581,
+      "worst_nonzero_point": "axis_s_-0.998",
+      "max_symmetry_zero_absolute_error_V_m": 2.0906486195945393e-11
+    },
+    {
+      "target_set": "closer_end_diagnostics8",
+      "component": "r",
+      "nonzero_points": 8,
+      "max_relative_error_percent": 0.004583495279798765,
+      "worst_nonzero_point": "extra_axis_-0.0500",
+      "max_symmetry_zero_absolute_error_V_m": null
+    },
+    {
+      "target_set": "closer_end_diagnostics8",
+      "component": "y",
+      "nonzero_points": 0,
+      "max_relative_error_percent": null,
+      "worst_nonzero_point": null,
+      "max_symmetry_zero_absolute_error_V_m": 1.5495085544244281e-13
+    },
+    {
+      "target_set": "closer_end_diagnostics8",
+      "component": "s",
+      "nonzero_points": 8,
+      "max_relative_error_percent": 0.730949043752869,
+      "worst_nonzero_point": "extra_axis_+2.4990",
+      "max_symmetry_zero_absolute_error_V_m": null
+    },
+    {
+      "target_set": "all51",
+      "component": "r",
+      "nonzero_points": 51,
+      "max_relative_error_percent": 0.06612867321210254,
+      "worst_nonzero_point": "axis_r_-0.9",
+      "max_symmetry_zero_absolute_error_V_m": null
+    },
+    {
+      "target_set": "all51",
+      "component": "y",
+      "nonzero_points": 28,
+      "max_relative_error_percent": 0.08660317071518624,
+      "worst_nonzero_point": "axis_y_-0.9",
+      "max_symmetry_zero_absolute_error_V_m": 3.936002334795241e-13
+    },
+    {
+      "target_set": "all51",
+      "component": "s",
+      "nonzero_points": 42,
+      "max_relative_error_percent": 0.730949043752869,
+      "worst_nonzero_point": "extra_axis_+2.4990",
+      "max_symmetry_zero_absolute_error_V_m": 2.0906486195945393e-11
+    }
+  ],
+  "failure": null,
+  "script_sha256": "263e19eb6aac391e030f6083241646f7305b83a5df73859b3c758baf3097b39d"
+}

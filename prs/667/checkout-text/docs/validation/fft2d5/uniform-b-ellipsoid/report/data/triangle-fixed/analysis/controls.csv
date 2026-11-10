@@ -1,0 +1,11 @@
+case_a,case_b,kind,points,max_change_axis_scale_percent,max_local_relative_difference_percent
+fixed64,fixed128,matched mesh,144,0.025104610133670574,0.025104610133670574
+fixed128,fixed256,matched mesh,144,0.1372888955760918,0.1372888955760918
+fixed128,fixed-wide256,numerical width at fixed physical radius,144,5.398454236843868e-12,5.398454236843868e-12
+fixed128,physical-b10mm,physical pipe radius,144,36.75513601355776,49.999721265624025
+fixed256,slice-repeat-r1,OPALX versus PyORBIT slices,144,0.446837567087526,0.446837567087526
+fixed256,rb-repeat-r1,OPALX versus PyORBIT Baartman,144,0.1673852739111944,0.1673852739111944
+slice-repeat-r1,slice-repeat-r2,PyORBIT MPI,144,2.520413965466538e-12,2.699289088579404e-12
+m128-source16384,legacy128,repeat historical result,144,7.322824359125753e-13,
+slice-512x512x128-nr32np64-r1,slice-repeat-r1,repeat historical result,144,1.702982409099012e-14,
+rb-128x128x256-ns65536-r1,rb-repeat-r1,repeat historical result,144,1.702982409099012e-14,

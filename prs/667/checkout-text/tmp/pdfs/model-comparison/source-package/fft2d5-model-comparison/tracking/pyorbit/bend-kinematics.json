@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "source": "native teapotbase.cc bend1/bend2/bend3/bend4, no field or solver patch",
+  "initial_material_uys_m": [
+    [
+      -0.01,
+      0.0,
+      -1.0
+    ],
+    [
+      -0.0001,
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      0.003,
+      0.0
+    ],
+    [
+      0.0001,
+      0.0,
+      -0.5
+    ],
+    [
+      0.01,
+      0.0,
+      1.0
+    ]
+  ],
+  "radius_m": 2.0,
+  "advance_m": 1.0,
+  "steps": 10,
+  "expected_linear_u": "u0*cos(phi)",
+  "expected_linear_xp": "-u0*sin(phi)/R",
+  "expected_linear_phase_shift_m": "-u0*sin(phi)",
+  "xp_definition": "p_radial/p_sync; confirmed by native linac drift and SynchPartRedefinition energy transform",
+  "outputs": {
+    "linear_bend1": {
+      "state": [
+        [
+          -0.008775825618903731,
+          0.0023971276930210166,
+          0.0,
+          0.0,
+          -0.9952057446139578,
+          0.0
+        ],
+        [
+          -8.775825618903733e-05,
+          2.397127693021017e-05,
+          0.0,
+          0.0,
+          0.5000479425538601,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.003,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          8.775825618903733e-05,
+          -2.397127693021017e-05,
+          0.0,
+          0.0,
+          -0.5000479425538601,
+          0.0
+        ],
+        [
+          0.008775825618903731,
+          -0.0023971276930210166,
+          0.0,
+          0.0,
+          0.9952057446139578,
+          0.0
+        ]
+      ],
+      "maximum_difference_from_linear_formula": 3.3306690738754696e-16,
+      "sync_time_s": 3.335640951981521e-06
+    },
+    "native_body": {
+      "state": [
+        [
+          -0.008781574208474283,
+          0.0023971286451143167,
+          0.0,
+          0.0,
+          -0.9952057381185093,
+          0.0
+        ],
+        [
+          -8.77588308718233e-05,
+          2.3971277016313735e-05,
+          0.0,
+          0.0,
+          0.5000479425540367,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.003,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          8.775768150980979e-05,
+          -2.397127684429064e-05,
+          0.0,
+          0.0,
+          -0.5000479425536934,
+          0.0
+        ],
+        [
+          0.008770080587465917,
+          -0.002397126924883059,
+          0.0,
+          0.0,
+          0.9952057415626352,
+          0.0
+        ]
+      ],
+      "maximum_difference_from_linear_formula": 5.748589570555435e-06,
+      "sync_time_s": 3.3356409519815234e-06
+    }
+  },
+  "native_library": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package/orbit/core/teapot_base.cpython-311-darwin.so",
+  "native_library_sha256": "0a06f175d8ff7203bb690aefebff6d149445ef188a5797d3e3458aa0c31a9695"
+}

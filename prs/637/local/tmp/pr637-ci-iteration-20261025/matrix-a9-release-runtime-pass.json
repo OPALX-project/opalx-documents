@@ -1,0 +1,190 @@
+{
+  "observed_at_utc": "2026-10-25T21:47:41.613992+00:00",
+  "sha": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+  "complete": false,
+  "pipelines": [
+    {
+      "backend": "GH200",
+      "project_id": 82981356,
+      "pipeline_id": 2987151470,
+      "sha": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+      "pipeline_status": "running",
+      "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/pipelines/2987151470",
+      "missing_jobs": [],
+      "unexpected_jobs": [],
+      "complete": false,
+      "jobs": [
+        {
+          "id": 17451990419,
+          "name": "opalx-build-cuda13-sm90-debug",
+          "stage": "opalx_build",
+          "status": "success",
+          "failure_reason": null,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17451990419"
+        },
+        {
+          "id": 17451990420,
+          "name": "opalx-build-cuda13-sm90-release",
+          "stage": "opalx_build",
+          "status": "success",
+          "failure_reason": null,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17451990420"
+        },
+        {
+          "id": 17451990424,
+          "name": "opalx-regression-cuda13-sm90-release",
+          "stage": "opalx_regression",
+          "status": "running",
+          "failure_reason": null,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17451990424"
+        },
+        {
+          "id": 17451990421,
+          "name": "opalx-test-cuda13-sm90-debug-1-rank",
+          "stage": "opalx_test",
+          "status": "running",
+          "failure_reason": null,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17451990421"
+        },
+        {
+          "id": 17451990422,
+          "name": "opalx-test-cuda13-sm90-release-1-rank",
+          "stage": "opalx_test",
+          "status": "success",
+          "failure_reason": null,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17451990422"
+        },
+        {
+          "id": 17451990423,
+          "name": "opalx-test-cuda13-sm90-release-4-ranks",
+          "stage": "opalx_test",
+          "status": "success",
+          "failure_reason": null,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17451990423"
+        }
+      ]
+    },
+    {
+      "backend": "OpenMP",
+      "project_id": 83034039,
+      "pipeline_id": 2987151576,
+      "sha": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+      "pipeline_status": "failed",
+      "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/pipelines/2987151576",
+      "missing_jobs": [],
+      "unexpected_jobs": [],
+      "complete": false,
+      "jobs": [
+        {
+          "id": 17451990954,
+          "name": "opalx-build-openmp-debug",
+          "stage": "opalx_build",
+          "status": "success",
+          "failure_reason": null,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17451990954"
+        },
+        {
+          "id": 17451990955,
+          "name": "opalx-build-openmp-release",
+          "stage": "opalx_build",
+          "status": "success",
+          "failure_reason": null,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17451990955"
+        },
+        {
+          "id": 17451990959,
+          "name": "opalx-regression-openmp-release",
+          "stage": "opalx_regression",
+          "status": "failed",
+          "failure_reason": "script_failure",
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17451990959"
+        },
+        {
+          "id": 17451990956,
+          "name": "opalx-test-openmp-debug-1-rank",
+          "stage": "opalx_test",
+          "status": "success",
+          "failure_reason": null,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17451990956"
+        },
+        {
+          "id": 17451990957,
+          "name": "opalx-test-openmp-release-1-rank",
+          "stage": "opalx_test",
+          "status": "success",
+          "failure_reason": null,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17451990957"
+        },
+        {
+          "id": 17451990958,
+          "name": "opalx-test-openmp-release-4-ranks",
+          "stage": "opalx_test",
+          "status": "success",
+          "failure_reason": null,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17451990958"
+        }
+      ]
+    },
+    {
+      "backend": "MI300",
+      "project_id": 83033814,
+      "pipeline_id": 2987151523,
+      "sha": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+      "pipeline_status": "failed",
+      "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/pipelines/2987151523",
+      "missing_jobs": [],
+      "unexpected_jobs": [],
+      "complete": false,
+      "jobs": [
+        {
+          "id": 17451990678,
+          "name": "opalx-build-rocm6_3-debug",
+          "stage": "opalx_build",
+          "status": "success",
+          "failure_reason": null,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/jobs/17451990678"
+        },
+        {
+          "id": 17451990679,
+          "name": "opalx-build-rocm6_3-release",
+          "stage": "opalx_build",
+          "status": "success",
+          "failure_reason": null,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/jobs/17451990679"
+        },
+        {
+          "id": 17451990683,
+          "name": "opalx-regression-rocm6_3-mi300-release",
+          "stage": "opalx_regression",
+          "status": "failed",
+          "failure_reason": "script_failure",
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/jobs/17451990683"
+        },
+        {
+          "id": 17451990680,
+          "name": "opalx-test-rocm6_3-debug-1-rank",
+          "stage": "opalx_test",
+          "status": "success",
+          "failure_reason": null,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/jobs/17451990680"
+        },
+        {
+          "id": 17451990681,
+          "name": "opalx-test-rocm6_3-release-1-rank",
+          "stage": "opalx_test",
+          "status": "success",
+          "failure_reason": null,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/jobs/17451990681"
+        },
+        {
+          "id": 17451990682,
+          "name": "opalx-test-rocm6_3-release-4-ranks",
+          "stage": "opalx_test",
+          "status": "success",
+          "failure_reason": null,
+          "web_url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/jobs/17451990682"
+        }
+      ]
+    }
+  ]
+}

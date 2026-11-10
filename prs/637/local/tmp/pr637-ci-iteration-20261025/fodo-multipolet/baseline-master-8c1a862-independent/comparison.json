@@ -1,0 +1,24 @@
+{
+  "baseline_revision": "8c1a862369fb05034bb27aa1111d63a7b1e16c02",
+  "baseline_executable_sha256": "de8fd16697d9dcaeae8af96fdeac25c936e1a9ff2ddf7729806c2b1ea19d9d17",
+  "head_run_executable_sha256": "26ae4cdec13aa24bcacea47942ad8a0a86b3cddb9a65f8dc37f3847ba76f04a8",
+  "fresh_current_executable_sha256": "e4e8b35004a178b0f8fc2d3cd3bd644874d1043ffcce537e64275f37f9a0a9cc",
+  "MPI_ranks": 1,
+  "OMP_NUM_THREADS": 1,
+  "rows": 2001,
+  "numeric_columns": 47,
+  "input_hashes_unchanged": true,
+  "all_numeric_data_identical_to_existing_head_run": false,
+  "all_numeric_data_identical_to_fresh_current_draft": false,
+  "existing_checks_pass": {
+    "rms_x": true,
+    "rms_y": true,
+    "rms_s": true,
+    "emit_x": true,
+    "emit_y": true,
+    "emit_s": true,
+    "energy": true
+  },
+  "max_absolute_numeric_difference": 6.460527945950645e-10,
+  "limitation": "Confirms FODO mismatch predates PR637; independent analytic field/support evidence is separate."
+}

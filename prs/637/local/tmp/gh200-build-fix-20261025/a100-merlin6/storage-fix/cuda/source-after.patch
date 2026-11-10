@@ -1,0 +1,245 @@
+diff --git a/src/PartBunch/PartBunch.cpp b/src/PartBunch/PartBunch.cpp
+index fcf38f323..007cf40e8 100644
+--- a/src/PartBunch/PartBunch.cpp
++++ b/src/PartBunch/PartBunch.cpp
+@@ -15,6 +15,17 @@
+ 
+ #undef doDEBUG
+ 
++namespace cyclotron_probe::detail {
++    void HistoryDeleter::operator()(History* history) const { delete history; }
++
++    HistoryPtr makeHistory() { return HistoryPtr(new History()); }
++
++    void initializeHistory(History& history, size_type capacity) {
++        history.resize(capacity);
++        Kokkos::deep_copy(history.getView(), State{});
++    }
++}  // namespace cyclotron_probe::detail
++
+ /**
+  * @copybrief PartBunch::PartBunch
+  */
+diff --git a/src/PartBunch/ParticleContainer.hpp b/src/PartBunch/ParticleContainer.hpp
+index 97677b7ee..f3d6a8b5c 100644
+--- a/src/PartBunch/ParticleContainer.hpp
++++ b/src/PartBunch/ParticleContainer.hpp
+@@ -48,6 +48,26 @@ using ParticleAttrib = ippl::ParticleAttrib<T>;
+ 
+ using size_type = ippl::detail::size_type;
+ 
++namespace cyclotron_probe::detail {
++    using History = ippl::ParticleAttrib<State>;
++
++    /** Keep attribute destruction and its virtual CUDA methods in libopalx.
++     * An inline default deleter can instantiate a competing attribute vtable in
++     * executable consumers of ParticleContainer, selecting unregistered kernels.
++     */
++    struct HistoryDeleter {
++        void operator()(History* history) const;
++    };
++
++    using HistoryPtr = std::unique_ptr<History, HistoryDeleter>;
++
++    /// Construct storage in the same library module as its CUDA kernels.
++    HistoryPtr makeHistory();
++
++    /// Initialize registered storage, preserving the existing allocation semantics.
++    void initializeHistory(History& history, size_type capacity);
++}  // namespace cyclotron_probe::detail
++
+ #include "Processes/GlobalProcesses/GlobalProcess.h"
+ 
+ /**
+@@ -186,17 +206,16 @@ public:
+      */
+     ParticleAttrib<cyclotron_probe::State>& probeHistory(std::size_t index) {
+         while (probeHistories_m.size() <= index) {
+-            auto attribute = std::make_unique<ParticleAttrib<cyclotron_probe::State>>();
++            auto attribute = cyclotron_probe::detail::makeHistory();
+             this->addAttribute(*attribute);
+-            attribute->resize(this->R.size());
+-            Kokkos::deep_copy(attribute->getView(), cyclotron_probe::State{});
++            cyclotron_probe::detail::initializeHistory(*attribute, this->R.size());
+             probeHistories_m.push_back(std::move(attribute));
+         }
+         return *probeHistories_m[index];
+     }
+ 
+ private:
+-    std::vector<std::unique_ptr<ParticleAttrib<cyclotron_probe::State>>> probeHistories_m;
++    std::vector<cyclotron_probe::detail::HistoryPtr> probeHistories_m;
+ 
+ public:
+     ParticleContainer(
+diff --git a/src/Structure/LossDataSink.cpp b/src/Structure/LossDataSink.cpp
+index 54d5ecdab..b9f57c917 100644
+--- a/src/Structure/LossDataSink.cpp
++++ b/src/Structure/LossDataSink.cpp
+@@ -606,10 +606,8 @@ LossDataSink::~LossDataSink() noexcept(false) {
+     if (H5file_m) {
+         closeFile();
+     }
+-
+-    if (ippl::Comm != nullptr) {
+-        ippl::Comm->barrier();
+-    }
++    // save() closes and synchronizes successful writes explicitly. An idle
++    // sink must also be destructible on just one rank during exception unwinding.
+ }
+ 
+ void LossDataSink::openH5(h5_int32_t mode) {
+diff --git a/src/Structure/LossDataSink.h b/src/Structure/LossDataSink.h
+index f026eaf6a..e5fda0630 100644
+--- a/src/Structure/LossDataSink.h
++++ b/src/Structure/LossDataSink.h
+@@ -87,9 +87,12 @@ namespace std {
+ }  // namespace std
+ enum class CollectionType : unsigned short { SPATIAL = 0, TEMPORAL };
+ 
+-/*
+-  - In the destructor we do ALL the file handling
+-  - h5hut_mode_m defines h5hut or ASCII
++/** @brief Collect particle records and write them through collective save().
++ *
++ * save() closes output files and synchronizes successful writes. Destruction of
++ * an idle sink does not communicate, so it is safe during rank-local unwinding.
++ * The fallback close of a still-open parallel HDF5 file remains collective:
++ * rank-local exceptions during an active save require coordinated error handling.
+  */
+ class LossDataSink {
+ public:
+diff --git a/unit_tests/Algorithms/TestCyclotronProbe.cpp b/unit_tests/Algorithms/TestCyclotronProbe.cpp
+index 1d0c2bd77..e676c82fa 100644
+--- a/unit_tests/Algorithms/TestCyclotronProbe.cpp
++++ b/unit_tests/Algorithms/TestCyclotronProbe.cpp
+@@ -328,6 +328,47 @@ TEST_F(CyclotronProbeTest, AsciiEmptyRanksMigrationFramesAndTurnGroups) {
+     }
+ }
+ 
++TEST_F(CyclotronProbeTest, CapacityGrowthPreservesArmedHistoryAndNewParticleIds) {
++    Options::asciidump = false;
++    const auto c       = config("growth");
++    auto pc            = container();
++    position(pc, -1, 1);
++    const auto ids = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), pc->ID.getView());
++    std::int64_t expectedId = ippl::Comm->rank() == 0 ? ids(0) : 0;
++    MPI_Bcast(&expectedId, 1, MPI_INT64_T, 0, ippl::Comm->getCommunicator());
++    CyclotronProbeRecorder recorder({c});
++    recorder.initialize({pc});
++    recorder.observe(pc, 0, 0, 0);
++
++    // Grow registered history after arming a particle. Reallocation must keep
++    // its previous endpoint; new IDs must initialize without inventing a hit.
++    const auto oldCapacity = pc->R.size();
++    pc->createParticles(ippl::Comm->rank() == 0 ? oldCapacity + 1 : 0);
++    if (ippl::Comm->rank() == 0) EXPECT_GT(pc->R.size(), oldCapacity);
++    position(pc, 1, 1);
++    recorder.observe(pc, 2e-9, 0, 0);
++    recorder.save();
++
++    h5_prop_t props = H5CreateFileProp();
++    auto comm       = ippl::Comm->getCommunicator();
++    H5SetPropFileMPIOCollective(props, &comm);
++    auto file = H5OpenFile((c.output + ".h5").c_str(), H5_O_RDONLY, props);
++    H5CloseProp(props);
++    ASSERT_NE(file, static_cast<h5_file_t>(H5_ERR));
++    EXPECT_EQ(H5GetNumSteps(file), 1);
++    ASSERT_EQ(H5SetStep(file, 0), H5_SUCCESS);
++    // Read the global count before setting a one-particle view on every rank.
++    EXPECT_EQ(H5PartGetNumParticles(file), 1);
++    ASSERT_EQ(H5PartSetView(file, 0, 0), H5_SUCCESS);
++    h5_int64_t readId = -1;
++    EXPECT_EQ(H5PartReadDataInt64(file, "id", &readId), H5_SUCCESS);
++    EXPECT_EQ(readId, expectedId);
++    double time = 0;
++    EXPECT_EQ(H5PartReadDataFloat64(file, "time", &time), H5_SUCCESS);
++    EXPECT_NEAR(time, 1e-9, 1e-24);
++    H5CloseFile(file);
++}
++
+ TEST_F(CyclotronProbeTest, CollectiveErrorsAndFreshOutputGuard) {
+     Options::asciidump = true;
+     auto c             = config("errors");
+diff --git a/unit_tests/Structure/CMakeLists.txt b/unit_tests/Structure/CMakeLists.txt
+index 73a4a4f43..32950f7c5 100644
+--- a/unit_tests/Structure/CMakeLists.txt
++++ b/unit_tests/Structure/CMakeLists.txt
+@@ -7,5 +7,8 @@ add_opalx_test(TestDirichletPlaneWriter USE_GTEST_MAIN)
+ add_opalx_test(TestLaser USE_GTEST_MAIN)
+ add_opalx_test(TestBeam USE_GTEST_MAIN)
+ add_opalx_test(TestLossDataSink USE_GTEST_MAIN)
++add_opalx_test(TestLossDataSinkMPI
++              SOURCES TestLossDataSink.cpp NUM_PROCS 2 TIMEOUT 60 USE_GTEST_MAIN
++              ARGS --gtest_filter=LossDataSinkTest.EmptySinkDestructionIsRankLocal:LossDataSinkTest.EmptySinkUnwindingIsRankLocal)
+ add_opalx_test(TestCheckpointFile USE_GTEST_MAIN)
+ add_opalx_test(TestMeshGenerator USE_GTEST_MAIN)
+diff --git a/unit_tests/Structure/TestLossDataSink.cpp b/unit_tests/Structure/TestLossDataSink.cpp
+index a5d913c82..3f37e359c 100644
+--- a/unit_tests/Structure/TestLossDataSink.cpp
++++ b/unit_tests/Structure/TestLossDataSink.cpp
+@@ -48,6 +48,10 @@
+  *    - rewind physically compacts discarded steps
+  *    - repeated rewind and append cycles do not grow the file
+  *
++ * 9. Rank-local idle-sink cleanup (also run by TestLossDataSinkMPI)
++ *    - normal destruction and exception unwinding require no peer participation
++ *    - ASCII and HDF5-configured sinks that have not opened files are covered
++ *
+  * ---------------------------------------------------------------------------
+  * Notes
+  * ---------------------------------------------------------------------------
+@@ -244,6 +248,53 @@ namespace {
+         bool oldComputePercentiles_m = false;
+     };
+ 
++    TEST_F(LossDataSinkTest, EmptySinkDestructionIsRankLocal) {
++        const MPI_Comm comm = ippl::Comm->getCommunicator();
++        const int rank      = ippl::Comm->rank();
++        // Rank 1 waits for a message, not a collective. A destructor barrier
++        // would deadlock before rank 0 can send the completion token.
++        for (const bool hdf5 : {false, true}) {
++            int completed = 0;
++            if (rank == 0) {
++                {
++                    LossDataSink sink(hdf5 ? "test_idle_h5_sink" : "test_idle_ascii_sink", hdf5);
++                }
++                completed = 1;
++                if (ippl::Comm->size() > 1) {
++                    MPI_Send(&completed, 1, MPI_INT, 1, 817, comm);
++                }
++            } else if (rank == 1) {
++                MPI_Recv(&completed, 1, MPI_INT, 0, 817, comm, MPI_STATUS_IGNORE);
++            }
++            if (rank < 2) EXPECT_EQ(completed, 1);
++        }
++    }
++
++    TEST_F(LossDataSinkTest, EmptySinkUnwindingIsRankLocal) {
++        const MPI_Comm comm = ippl::Comm->getCommunicator();
++        const int rank      = ippl::Comm->rank();
++        for (const bool hdf5 : {false, true}) {
++            int caught = 0;
++            if (rank == 0) {
++                try {
++                    LossDataSink sink(
++                            hdf5 ? "test_unwind_h5_sink" : "test_unwind_ascii_sink", hdf5);
++                    throw std::runtime_error("rank-local probe failure");
++                } catch (const std::runtime_error& error) {
++                    caught = std::string(error.what()) == "rank-local probe failure";
++                }
++                if (ippl::Comm->size() > 1) {
++                    MPI_Send(&caught, 1, MPI_INT, 1, 818, comm);
++                }
++            } else if (rank == 1) {
++                // The peer must receive the original exception's completion
++                // token without entering a destructor or cleanup collective.
++                MPI_Recv(&caught, 1, MPI_INT, 0, 818, comm, MPI_STATUS_IGNORE);
++            }
++            if (rank < 2) EXPECT_EQ(caught, 1);
++        }
++    }
++
+     TEST_F(LossDataSinkTest, AddParticleRejectsTurnInformationAfterPlainParticle) {
+         LossDataSink sink;
+ 

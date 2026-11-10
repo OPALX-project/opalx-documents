@@ -1,0 +1,20 @@
+{
+  "completed": true,
+  "build": {
+    "branch": "codex/fft2d5-explicit-original-model",
+    "head": "ccfdc1055b2721d2308761d45a3030b29ef70e11",
+    "binary": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+    "binary_sha256": "4fd718db8dea11088409158506cd61761eb35f7a0e6a15638fba235c433ba0eb",
+    "source_patch_sha256": "885e59c8a4fe5c3751b0077db53051f7467667af1a4d0fee77b799b68ef6764a",
+    "source_changes": "Committed fd6 FFT2D5 frame/Poisson/workspace fixes restored in current branch; no experimental modes.",
+    "configuration": "/Users/adelmann/git/opalx/build-omp/CMakeCache.txt"
+  },
+  "runtimes_seconds": {
+    "ZeroSC": 7.892739499977324,
+    "10pC": 1268.023610165983
+  },
+  "largest_rms_difference_percent": 1.5979650575638286e-07,
+  "largest_charged_emittance_difference_percent": 5.974464344094704e-07,
+  "published_reference_commit": "691d1480bcb27275b8d6b913dd77851f498cb47b",
+  "DBA_runs_started": false
+}

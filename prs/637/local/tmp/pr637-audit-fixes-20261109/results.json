@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "base_head": "b1551b9c337c0c57dd21a4e2e26ccaff10fdfc93",
+  "source_id": "3320cf6fc490a8be7dc2a33468b35cd99804cf179fd13d07f4d62d00e4bc2ae3",
+  "files": {
+    "src/AbsBeamline/CyclotronSector.h": "dd23c7e1b12bd11a3dc6c466f5bbf3c32ef010fdff11c7226624d2114222261e",
+    "src/Algorithms/ParallelTracker.cpp": "35f3c51889eacd093c01cb30e66e443c488e11e094b1d39e9244cd80d3a1bd3b",
+    "src/Algorithms/ParallelTracker.h": "b293e5e731b0ba09bae119f5dd80143996e3a4c049e8248f7bb36e580cf785f5",
+    "src/Algorithms/TrackReferenceStep.h": "742f0496925d2ef4b2b67dd28090001cef749b858609a694877a1e1de286df16",
+    "unit_tests/AbsBeamline/TestCyclotronSector.cpp": "073868a409933e383d8249872db20e73aa11bb25b06b96da28331e28d1f9a839",
+    "unit_tests/Algorithms/TestRFEventStep.cpp": "e89923b165e91cb2321a236e54a7f57bd7e941c0727cbedfcab0c176145dc438"
+  },
+  "committed": false,
+  "pushed": false,
+  "index_empty": true,
+  "cpu_focused_targets": 9,
+  "cuda_targets": 6,
+  "cuda_case_executions": 111,
+  "cuda_skips": 0,
+  "exact_before_after_bunch_cases": 4,
+  "cpu_dispatch_failure_guards": 8,
+  "gpu_actual_tracker_cases": 4,
+  "cpu_binary_sha256": "1b24f376cf40132bd529d1313f2a84dc7d87da3d40806a2daba06686727fd98b",
+  "gpu_binary_sha256": "6cd248ee531a5e36318335a82949041c01fb3e50189e40a9683bec11174823de",
+  "max_gpu_cpu_position_m": 6.866740249328318e-15,
+  "max_gpu_cpu_momentum_mc": 3.219646771412954e-15,
+  "numerical_tolerance_changes": false,
+  "issue": "https://github.com/OPALX-project/OPALX/issues/674",
+  "pr": "https://github.com/OPALX-project/OPALX/pull/637",
+  "native_archive_sha256": "99b376a4cc223d61bf29dc3411f3501f654c91e029564812e17d9a59ac16492c",
+  "tracker_archive_sha256": "0f50f331268b8a039dc48878f92c5532b6e2bcc8d4411fd1ac64587274920f6c",
+  "limitations": [
+    "GPU actual-tracker integrations use TYPE=NONE and zero bunch charge; CPU checks include charged PIC. These are correctness checks, not production throughput or mesh convergence.",
+    "Failure logging selects the first device claimant rather than lowest local index. Existing abort156 behavior remains; issue672 covers graceful shutdown.",
+    "First tracker launcher attempt355082 failed before OPALX started due an incorrect metadata API. Corrected typed-properties launcher355083 passed all cases; failed evidence retained."
+  ]
+}

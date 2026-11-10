@@ -1,0 +1,90 @@
+{
+  "status": "complete: loss-data fix and relevant checks pass; separate Gaussian failure remains",
+  "head": "b1551b9c337c0c57dd21a4e2e26ccaff10fdfc93",
+  "changed_this_task": [
+    "unit_tests/Structure/TestLossDataSink.cpp"
+  ],
+  "fixed_source_sha256": "c5f55848a0a2435d5256c9a12bbf7cd3bb09a2dafaf8eb983965bb1a8b8145b6",
+  "existing_audit_hashes_unchanged": {
+    "src/AbsBeamline/CyclotronSector.h": true,
+    "src/Algorithms/ParallelTracker.cpp": true,
+    "src/Algorithms/ParallelTracker.h": true,
+    "src/Algorithms/TrackReferenceStep.h": true,
+    "unit_tests/AbsBeamline/TestCyclotronSector.cpp": true,
+    "unit_tests/Algorithms/TestRFEventStep.cpp": true
+  },
+  "macos": {
+    "baseline_isolated": "17/17 single-rank cases pass; two-rank subset passes",
+    "baseline_concurrent": "rewind case failed: HDF5 file missing",
+    "fixed_concurrent_repetitions": {
+      "TestLossDataSink": 50,
+      "TestLossDataSinkMPI": 50
+    },
+    "fixed_related_ctest_targets": "5/5 pass"
+  },
+  "limitations": [
+    "Full Linux suite136/137, with separate unbounded Gaussian maximum check failure; do not claim full-suite pass",
+    "Linux uses RHEL8/GCC14.3/Kokkos5.2.2 versus CI Ubuntu26/GCC15.2/Kokkos5.2.0; HDF5/H5hut match",
+    "Linux reproduced the same rewind case with missing files rather than literal CI{8}; concurrency race is verified",
+    "no production code or numerical tolerance changes for this fix",
+    "no staging, commit or push"
+  ],
+  "linux_baseline": {
+    "job_id": 355089,
+    "platform": "Linux Debug/OpenMP, Merlin6/gwendolen",
+    "isolated_ctest_targets": "2/2 pass",
+    "concurrent_first_iteration": "fails in RewindH5RemovesCheckpointAndLaterStepsBeforeAppend and KeepsEveryStepBeforeCheckpoint (raw logs pending retrieval)",
+    "metadata_wrapper_note": "Post-test binary hashing used incorrect CPU build paths and exited1; fix wrapper paths before after-validation; no baseline rebuild needed"
+  },
+  "linux_fixed": {
+    "verified_binary_full_suite_job": 355092,
+    "full_ctest_targets_passed": 136,
+    "full_ctest_targets_total": 137,
+    "loss_data_targets": "both pass",
+    "separate_failure": {
+      "case": "GaussianTest.largeCutoffDisablesTruncation",
+      "line": 369,
+      "actual_maximum": 5.571777596050304,
+      "assertion": "globMax[d] < 5.5",
+      "code_or_tolerance_changed": false
+    },
+    "production_library": "byte-identical to baseline",
+    "binary_provenance": "both test objects relinked after fixed source; ELF hashes changed; old fixed filename literals absent; new owned directory label present",
+    "final_related_stress_job": 355093,
+    "final_related_stress": "complete:5/5 related targets and100 concurrent pairs pass,0 skips",
+    "final_related_stress_job_terminal": "355093 COMPLETED0:0",
+    "gaussian_isolated_rerun": "same assertion failed with same maximum; source/binary/seed/library unchanged"
+  },
+  "root_independent_verification": {
+    "archive_sha256": "3260c12c40b93741ad335e48b5f908d860db4c0cc6f88c04f85df9988e793bb2",
+    "linux_build_type": "Debug",
+    "linux_platform": "OPENMP",
+    "source_files_verified_against_current_checkout": 1072,
+    "only_new_task_source_change": "unit_tests/Structure/TestLossDataSink.cpp",
+    "fixed_test_sha256": "c5f55848a0a2435d5256c9a12bbf7cd3bb09a2dafaf8eb983965bb1a8b8145b6",
+    "baseline_isolated_targets": 2,
+    "baseline_concurrent_rewind_case_failed": true,
+    "linux_related_targets_passed": 5,
+    "linux_concurrent_pair_iterations": 100,
+    "linux_concurrent_target_executions": 200,
+    "native_gtest_case_executions_in_stress": 2500,
+    "stress_skips": 0,
+    "full_suite_passed": 136,
+    "full_suite_total": 137,
+    "full_suite_failed": [
+      "TestGaussian"
+    ],
+    "production_library_byte_identical": true,
+    "fixed_binaries_rebuilt_and_verified": true,
+    "no_source_or_tolerance_edits_for_Gaussian": true,
+    "terminal_verification": {
+      "source_files_verified": 1072,
+      "library_unchanged": true,
+      "gaussian_binary_unchanged": true,
+      "pair_iterations": 100,
+      "pair_failures": 0
+    }
+  },
+  "jobs_terminal": true,
+  "working_tree": "seven unstaged source/test files: six pre-existing audit fixes plus this one-file test fix; nothing committed or pushed"
+}

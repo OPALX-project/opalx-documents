@@ -1,0 +1,50 @@
+[
+  {
+    "backend": "GH200",
+    "job": 17521960308,
+    "url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757981/-/jobs/17521960308",
+    "evidence": [
+      "2026-10-27T23:52:15.314556Z 01O Error>     P3M supports BINS only with MAXBINS=1 (single-bin rest-frame correction); multi-bin P3M is not implemented yet.",
+      "2026-10-27T23:52:15.314558Z 01O Error>     P3M supports BINS only with MAXBINS=1 (single-bin rest-frame correction); multi-bin P3M is not implemented yet.",
+      "2026-10-27T23:52:15.314573Z 01O ['./AWAGun-binned-p3m-emittedfromfile.local'] exited with code 134",
+      "2026-10-28T00:00:10.397677Z 01O Error>     PROBE currently requires cyclotron-sector particle tracking; FFA probes are deferred.",
+      "2026-10-28T00:00:10.397679Z 01O Error>     PROBE currently requires cyclotron-sector particle tracking; FFA probes are deferred.",
+      "2026-10-28T00:00:10.397704Z 01O ['./ScalingFFARealisticLattice.local'] exited with code 134",
+      "2026-10-28T00:01:00.813892Z 01O ['./AWAGun-binned-p3m-emittedfromfile.local'] exited with code 134",
+      "2026-10-28T00:01:00.814599Z 01O ['./ScalingFFARealisticLattice.local'] exited with code 134",
+      "2026-10-28T00:01:00.814694Z 01O Summary: 394 / 394 tests passed "
+    ]
+  },
+  {
+    "backend": "OpenMP",
+    "job": 17521961922,
+    "url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757983/-/jobs/17521961922",
+    "evidence": [
+      "2026-10-27T23:14:15.972303Z 01O Error>     P3M supports BINS only with MAXBINS=1 (single-bin rest-frame correction); multi-bin P3M is not implemented yet.",
+      "2026-10-27T23:14:15.972304Z 01O Error>     P3M supports BINS only with MAXBINS=1 (single-bin rest-frame correction); multi-bin P3M is not implemented yet.",
+      "2026-10-27T23:14:15.972313Z 01O ['./AWAGun-binned-p3m-emittedfromfile.local'] exited with code 156",
+      "2026-10-27T23:19:14.300707Z 01O Error>     PROBE currently requires cyclotron-sector particle tracking; FFA probes are deferred.",
+      "2026-10-27T23:19:14.300708Z 01O Error>     PROBE currently requires cyclotron-sector particle tracking; FFA probes are deferred.",
+      "2026-10-27T23:19:14.300717Z 01O ['./ScalingFFARealisticLattice.local'] exited with code 156",
+      "2026-10-27T23:20:11.547527Z 01O ['./AWAGun-binned-p3m-emittedfromfile.local'] exited with code 156",
+      "2026-10-27T23:20:11.548195Z 01O ['./ScalingFFARealisticLattice.local'] exited with code 156",
+      "2026-10-27T23:20:11.548281Z 01O Summary: 394 / 394 tests passed "
+    ]
+  },
+  {
+    "backend": "MI300",
+    "job": 17521961344,
+    "url": "https://gitlab.com/cscs-ci/ci-testing/webhook-ci/mirrors/6151408209445194/694321096757982/-/jobs/17521961344",
+    "evidence": [
+      "2026-10-27T23:12:37.808666Z 01O Error>     P3M supports BINS only with MAXBINS=1 (single-bin rest-frame correction); multi-bin P3M is not implemented yet.",
+      "2026-10-27T23:12:37.808668Z 01O Error>     P3M supports BINS only with MAXBINS=1 (single-bin rest-frame correction); multi-bin P3M is not implemented yet.",
+      "2026-10-27T23:12:37.808676Z 01O ['./AWAGun-binned-p3m-emittedfromfile.local'] exited with code 156",
+      "2026-10-27T23:24:00.333148Z 01O Error>     PROBE currently requires cyclotron-sector particle tracking; FFA probes are deferred.",
+      "2026-10-27T23:24:00.333150Z 01O Error>     PROBE currently requires cyclotron-sector particle tracking; FFA probes are deferred.",
+      "2026-10-27T23:24:00.333158Z 01O ['./ScalingFFARealisticLattice.local'] exited with code 156",
+      "2026-10-27T23:25:19.927099Z 01O ['./AWAGun-binned-p3m-emittedfromfile.local'] exited with code 156",
+      "2026-10-27T23:25:19.927483Z 01O ['./ScalingFFARealisticLattice.local'] exited with code 156",
+      "2026-10-27T23:25:19.927530Z 01O Summary: 394 / 394 tests passed "
+    ]
+  }
+]

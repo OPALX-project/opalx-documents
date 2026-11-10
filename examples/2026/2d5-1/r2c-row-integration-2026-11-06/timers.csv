@@ -1,0 +1,161 @@
+backend,ranks,version,timer,seconds,count
+cpu,1,before,2D5 Initialize,0.00899929,1
+cpu,1,before,2D5 Warmup,0.0164967,1
+cpu,1,before,2D5 Plan,0.00271829,2
+cpu,1,before,2D5 Green Init,0.000601792,1
+cpu,1,before,2D5 First Solve,0.0990894,1
+cpu,1,before,2D5 Solve,9.70294,99
+cpu,1,before,2D5 Geometry,1.56744,100
+cpu,1,before,2D5 Migration,0.0,0
+cpu,1,before,2D5 Scatter,0.300516,100
+cpu,1,before,2D5 Rho Halo,0.0,0
+cpu,1,before,2D5 Poisson,7.27625,100
+cpu,1,before,2D5 Line density,0.245302,100
+cpu,1,before,2D5 E Halo,0.0,0
+cpu,1,before,2D5 Gather,0.250098,100
+cpu,1,before,2D5 Pack,1.07298,800
+cpu,1,before,2D5 FFT Rho,2.53802,800
+cpu,1,before,2D5 Convolution,0.210258,800
+cpu,1,before,2D5 FFT Back,2.44025,800
+cpu,1,before,2D5 Extract,0.0,0
+cpu,1,before,2D5 Field,0.559113,800
+cpu,1,rows,2D5 Initialize,0.00867771,1
+cpu,1,rows,2D5 Warmup,0.0151315,1
+cpu,1,rows,2D5 Plan,0.00327312,3
+cpu,1,rows,2D5 Green Init,0.000612625,1
+cpu,1,rows,2D5 First Solve,0.084379,1
+cpu,1,rows,2D5 Solve,8.09705,99
+cpu,1,rows,2D5 Geometry,1.58259,100
+cpu,1,rows,2D5 Migration,0.0,0
+cpu,1,rows,2D5 Scatter,0.302171,100
+cpu,1,rows,2D5 Rho Halo,0.0,0
+cpu,1,rows,2D5 Poisson,5.62526,100
+cpu,1,rows,2D5 Line density,0.251989,100
+cpu,1,rows,2D5 E Halo,0.0,0
+cpu,1,rows,2D5 Gather,0.256056,100
+cpu,1,rows,2D5 Pack,1.09563,800
+cpu,1,rows,2D5 FFT Rho,1.55041,800
+cpu,1,rows,2D5 Convolution,0.41249,800
+cpu,1,rows,2D5 FFT Back,1.54784,800
+cpu,1,rows,2D5 Extract,0.0,0
+cpu,1,rows,2D5 Field,0.569488,800
+cpu,2,before,2D5 Initialize,0.00659387,1
+cpu,2,before,2D5 Warmup,0.0163168,1
+cpu,2,before,2D5 Plan,0.00230946,1
+cpu,2,before,2D5 Green Init,0.000754333,1
+cpu,2,before,2D5 First Solve,0.0776097,1
+cpu,2,before,2D5 Solve,6.4651,99
+cpu,2,before,2D5 Geometry,1.58621,200
+cpu,2,before,2D5 Migration,0.814302,100
+cpu,2,before,2D5 Scatter,0.357587,100
+cpu,2,before,2D5 Rho Halo,0.0577059,100
+cpu,2,before,2D5 Poisson,4.37909,100
+cpu,2,before,2D5 Line density,0.120168,100
+cpu,2,before,2D5 E Halo,0.122277,100
+cpu,2,before,2D5 Gather,0.129327,100
+cpu,2,before,2D5 Pack,0.605172,400
+cpu,2,before,2D5 FFT Rho,1.54151,400
+cpu,2,before,2D5 Convolution,0.107133,400
+cpu,2,before,2D5 FFT Back,1.50457,400
+cpu,2,before,2D5 Extract,0.0,0
+cpu,2,before,2D5 Field,0.281576,400
+cpu,2,rows,2D5 Initialize,0.00676212,1
+cpu,2,rows,2D5 Warmup,0.0143265,1
+cpu,2,rows,2D5 Plan,0.0031645,2
+cpu,2,rows,2D5 Green Init,0.000763208,1
+cpu,2,rows,2D5 First Solve,0.062516,1
+cpu,2,rows,2D5 Solve,5.13961,99
+cpu,2,rows,2D5 Geometry,1.57867,200
+cpu,2,rows,2D5 Migration,0.808547,100
+cpu,2,rows,2D5 Scatter,0.33877,100
+cpu,2,rows,2D5 Rho Halo,0.0475962,100
+cpu,2,rows,2D5 Poisson,3.0532,100
+cpu,2,rows,2D5 Line density,0.122553,100
+cpu,2,rows,2D5 E Halo,0.0985555,100
+cpu,2,rows,2D5 Gather,0.128085,100
+cpu,2,rows,2D5 Pack,0.595548,400
+cpu,2,rows,2D5 FFT Rho,0.800872,400
+cpu,2,rows,2D5 Convolution,0.206452,400
+cpu,2,rows,2D5 FFT Back,0.840285,400
+cpu,2,rows,2D5 Extract,0.0,0
+cpu,2,rows,2D5 Field,0.283068,400
+gpu,1,before,2D5 Initialize,0.0145551,1
+gpu,1,before,2D5 Warmup,0.038436,1
+gpu,1,before,2D5 Plan,0.022117,2
+gpu,1,before,2D5 Green Init,0.000293097,1
+gpu,1,before,2D5 First Solve,0.121546,1
+gpu,1,before,2D5 Solve,8.83491,99
+gpu,1,before,2D5 Geometry,0.402302,100
+gpu,1,before,2D5 Migration,0.0,0
+gpu,1,before,2D5 Scatter,0.0524204,100
+gpu,1,before,2D5 Rho Halo,0.0,0
+gpu,1,before,2D5 Poisson,7.28844,100
+gpu,1,before,2D5 Line density,1.15711,100
+gpu,1,before,2D5 E Halo,0.0,0
+gpu,1,before,2D5 Gather,0.00404001,100
+gpu,1,before,2D5 Pack,0.0360706,800
+gpu,1,before,2D5 FFT Rho,3.57081,800
+gpu,1,before,2D5 Convolution,0.0195238,800
+gpu,1,before,2D5 FFT Back,3.56758,800
+gpu,1,before,2D5 Extract,0.0,0
+gpu,1,before,2D5 Field,0.0385137,800
+gpu,1,rows,2D5 Initialize,0.0139495,1
+gpu,1,rows,2D5 Warmup,0.0332816,1
+gpu,1,rows,2D5 Plan,0.0228805,3
+gpu,1,rows,2D5 Green Init,0.00030569,1
+gpu,1,rows,2D5 First Solve,0.0325791,1
+gpu,1,rows,2D5 Solve,1.88314,99
+gpu,1,rows,2D5 Geometry,0.4108,100
+gpu,1,rows,2D5 Migration,0.0,0
+gpu,1,rows,2D5 Scatter,0.052662,100
+gpu,1,rows,2D5 Rho Halo,0.0,0
+gpu,1,rows,2D5 Poisson,0.232093,100
+gpu,1,rows,2D5 Line density,1.16406,100
+gpu,1,rows,2D5 E Halo,0.0,0
+gpu,1,rows,2D5 Gather,0.00401988,100
+gpu,1,rows,2D5 Pack,0.0363758,800
+gpu,1,rows,2D5 FFT Rho,0.0433291,800
+gpu,1,rows,2D5 Convolution,0.0215823,800
+gpu,1,rows,2D5 FFT Back,0.0373461,800
+gpu,1,rows,2D5 Extract,0.0,0
+gpu,1,rows,2D5 Field,0.0378935,800
+gpu,2,before,2D5 Initialize,0.0144651,1
+gpu,2,before,2D5 Warmup,0.0405674,1
+gpu,2,before,2D5 Plan,0.00653056,1
+gpu,2,before,2D5 Green Init,0.0179643,1
+gpu,2,before,2D5 First Solve,0.467007,1
+gpu,2,before,2D5 Solve,5.02032,99
+gpu,2,before,2D5 Geometry,0.418074,200
+gpu,2,before,2D5 Migration,0.189179,100
+gpu,2,before,2D5 Scatter,0.999366,100
+gpu,2,before,2D5 Rho Halo,0.363882,100
+gpu,2,before,2D5 Poisson,3.83699,100
+gpu,2,before,2D5 Line density,0.589375,100
+gpu,2,before,2D5 E Halo,0.168255,100
+gpu,2,before,2D5 Gather,0.00300633,100
+gpu,2,before,2D5 Pack,0.0186499,400
+gpu,2,before,2D5 FFT Rho,1.79265,400
+gpu,2,before,2D5 Convolution,0.0100479,400
+gpu,2,before,2D5 FFT Back,1.7908,400
+gpu,2,before,2D5 Extract,0.0,0
+gpu,2,before,2D5 Field,0.0194641,400
+gpu,2,rows,2D5 Initialize,0.0144039,1
+gpu,2,rows,2D5 Warmup,0.0253193,1
+gpu,2,rows,2D5 Plan,0.00479295,2
+gpu,2,rows,2D5 Green Init,0.0129185,1
+gpu,2,rows,2D5 First Solve,0.410339,1
+gpu,2,rows,2D5 Solve,1.5219,99
+gpu,2,rows,2D5 Geometry,0.42777,200
+gpu,2,rows,2D5 Migration,0.190385,100
+gpu,2,rows,2D5 Scatter,0.991673,100
+gpu,2,rows,2D5 Rho Halo,0.351275,100
+gpu,2,rows,2D5 Poisson,0.282039,100
+gpu,2,rows,2D5 Line density,0.594225,100
+gpu,2,rows,2D5 E Halo,0.153534,100
+gpu,2,rows,2D5 Gather,0.00305635,100
+gpu,2,rows,2D5 Pack,0.0186941,400
+gpu,2,rows,2D5 FFT Rho,0.0223428,400
+gpu,2,rows,2D5 Convolution,0.0116668,400
+gpu,2,rows,2D5 FFT Back,0.0191536,400
+gpu,2,rows,2D5 Extract,0.0,0
+gpu,2,rows,2D5 Field,0.0193061,400

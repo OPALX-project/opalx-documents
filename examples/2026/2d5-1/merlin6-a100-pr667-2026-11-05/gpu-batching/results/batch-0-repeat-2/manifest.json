@@ -1,0 +1,41 @@
+{
+  "head": "6301c2cab10bf164e6d1ea60de5d0d25cdd0ca8a",
+  "binary_sha256": "103fa00f29f177c8fbf1b9d1cb006801631a32e6c5c5af4d004c6fc5d3ee1242",
+  "preserved_binary_sha256": "5457c6bd1197b5151a95e295936234e148d7263eb6d5dc99690408609334c17e",
+  "source_patch_sha256": "930961876ea0b5db2f7e4f226e98ad3477fd66185ed9a1d24b0eee02a4503554",
+  "job_id": "354979",
+  "mpi_ranks": 1,
+  "omp_threads": 1,
+  "hostname": "merlin-g-100.psi.ch",
+  "input_sha256": "f6b5ce075a32fa8ea4968738f26970089a3bb4acd06b11b3cced252dd21c9b3a",
+  "checkpoint_sha256": "4d6adf38da35d9168f9cdb10847786eb1ea64d27e13e521211173901037e19f5",
+  "ippl_sha": "d6216553e39dcf4405849c027517cc3401fefee5",
+  "heffte_sha": "4d8d4597b479d1e4709a2b1b4cd7d8922600045f",
+  "kokkos_sha": "d9397f95a04a0334d327647e64ab7f1882ca0664",
+  "batch": 0,
+  "repeat": 2,
+  "profile": false,
+  "elapsed_s": 59.05512620089576,
+  "main_s": 56.2548,
+  "orbit_s": 39.1622,
+  "tracking_s": 17.092600000000004,
+  "errors": {
+    "x": 3.2507330161024584e-13,
+    "y": 5.334274688628682e-17,
+    "z": 2.0650148258027912e-13,
+    "px": 1.0600409439120995e-12,
+    "py": 7.241386310030684e-16,
+    "pz": 9.726802696619075e-13,
+    "q": 0.0
+  },
+  "argv": [
+    "srun",
+    "--ntasks=1",
+    "/psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/src/opalx",
+    "case.in",
+    "--info",
+    "1",
+    "--restart",
+    "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/dba-initial-state.h5"
+  ]
+}

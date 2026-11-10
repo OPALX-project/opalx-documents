@@ -1,0 +1,736 @@
+{
+  "baseline_binary_sha256": "58bd5db212d2dc3e62c8fdf62a51fb2dca456580eabf9452c595ea448777f9d5",
+  "new_binary_sha256": "a9026934deaf44ccc7000f917678ca97c40ef55516850770c070553f7d85cdf8",
+  "cases": {
+    "none": {
+      "input_files": {
+        "Cyclotron-RF-Stop.in": {
+          "baseline_sha256": "0eafda92517b6c47a7c094ef31a03445dd738c60ba7a7db6bf28d37c1a4c5222",
+          "new_sha256": "0eafda92517b6c47a7c094ef31a03445dd738c60ba7a7db6bf28d37c1a4c5222",
+          "identical": true
+        },
+        "bunch.dat": {
+          "baseline_sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+          "new_sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+          "identical": true
+        },
+        "bfield.dat": {
+          "baseline_sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+          "new_sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+          "identical": true
+        },
+        "rffield1.dat": {
+          "baseline_sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+          "new_sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+          "identical": true
+        },
+        "rffield2.dat": {
+          "baseline_sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+          "new_sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+          "identical": true
+        }
+      },
+      "step_groups": [
+        "Step#0"
+      ],
+      "final_particle_count": 256,
+      "datasets": {
+        "id": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "int64",
+          "after_dtype": "int64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "x": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "y": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "z": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "px": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "py": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "pz": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "q": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        }
+      },
+      "attributes": {
+        "TIME": {
+          "shape": [
+            1
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "GlobalTrackStep": {
+          "shape": [
+            1
+          ],
+          "before_dtype": "int64",
+          "after_dtype": "int64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "RefPartR": {
+          "shape": [
+            3
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "RefPartP": {
+          "shape": [
+            3
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "SPOS": {
+          "shape": [
+            1
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        }
+      },
+      "all_exact": true
+    },
+    "near-zero": {
+      "input_files": {
+        "Cyclotron-RF-Stop.in": {
+          "baseline_sha256": "7f0e20887e9fd94ff3d24c996b6557ac3ef4e2cb6e7f8d90f87c7a725b0f1d09",
+          "new_sha256": "7f0e20887e9fd94ff3d24c996b6557ac3ef4e2cb6e7f8d90f87c7a725b0f1d09",
+          "identical": true
+        },
+        "bunch.dat": {
+          "baseline_sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+          "new_sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+          "identical": true
+        },
+        "bfield.dat": {
+          "baseline_sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+          "new_sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+          "identical": true
+        },
+        "rffield1.dat": {
+          "baseline_sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+          "new_sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+          "identical": true
+        },
+        "rffield2.dat": {
+          "baseline_sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+          "new_sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+          "identical": true
+        }
+      },
+      "step_groups": [
+        "Step#0"
+      ],
+      "final_particle_count": 256,
+      "datasets": {
+        "id": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "int64",
+          "after_dtype": "int64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "x": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "y": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "z": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "px": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "py": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "pz": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "q": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        }
+      },
+      "attributes": {
+        "TIME": {
+          "shape": [
+            1
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "GlobalTrackStep": {
+          "shape": [
+            1
+          ],
+          "before_dtype": "int64",
+          "after_dtype": "int64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "RefPartR": {
+          "shape": [
+            3
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "RefPartP": {
+          "shape": [
+            3
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "SPOS": {
+          "shape": [
+            1
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        }
+      },
+      "all_exact": true
+    },
+    "charged-one": {
+      "input_files": {
+        "Cyclotron-RF-Stop.in": {
+          "baseline_sha256": "f11be86f9527274c0110b9e7a28b96b71d01c32b7f2fdde192889f152d315b24",
+          "new_sha256": "f11be86f9527274c0110b9e7a28b96b71d01c32b7f2fdde192889f152d315b24",
+          "identical": true
+        },
+        "bunch.dat": {
+          "baseline_sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+          "new_sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+          "identical": true
+        },
+        "bfield.dat": {
+          "baseline_sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+          "new_sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+          "identical": true
+        },
+        "rffield1.dat": {
+          "baseline_sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+          "new_sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+          "identical": true
+        },
+        "rffield2.dat": {
+          "baseline_sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+          "new_sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+          "identical": true
+        }
+      },
+      "step_groups": [
+        "Step#0"
+      ],
+      "final_particle_count": 256,
+      "datasets": {
+        "id": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "int64",
+          "after_dtype": "int64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "x": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "y": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "z": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "px": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "py": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "pz": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "q": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        }
+      },
+      "attributes": {
+        "TIME": {
+          "shape": [
+            1
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "GlobalTrackStep": {
+          "shape": [
+            1
+          ],
+          "before_dtype": "int64",
+          "after_dtype": "int64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "RefPartR": {
+          "shape": [
+            3
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "RefPartP": {
+          "shape": [
+            3
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "SPOS": {
+          "shape": [
+            1
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        }
+      },
+      "all_exact": true
+    },
+    "charged-two": {
+      "input_files": {
+        "Cyclotron-RF-Stop.in": {
+          "baseline_sha256": "f11be86f9527274c0110b9e7a28b96b71d01c32b7f2fdde192889f152d315b24",
+          "new_sha256": "f11be86f9527274c0110b9e7a28b96b71d01c32b7f2fdde192889f152d315b24",
+          "identical": true
+        },
+        "bunch.dat": {
+          "baseline_sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+          "new_sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+          "identical": true
+        },
+        "bfield.dat": {
+          "baseline_sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+          "new_sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+          "identical": true
+        },
+        "rffield1.dat": {
+          "baseline_sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+          "new_sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+          "identical": true
+        },
+        "rffield2.dat": {
+          "baseline_sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+          "new_sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+          "identical": true
+        }
+      },
+      "step_groups": [
+        "Step#0"
+      ],
+      "final_particle_count": 256,
+      "datasets": {
+        "id": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "int64",
+          "after_dtype": "int64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "x": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "y": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "z": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "px": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "py": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "pz": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "q": {
+          "shape": [
+            256
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        }
+      },
+      "attributes": {
+        "TIME": {
+          "shape": [
+            1
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "GlobalTrackStep": {
+          "shape": [
+            1
+          ],
+          "before_dtype": "int64",
+          "after_dtype": "int64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "RefPartR": {
+          "shape": [
+            3
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "RefPartP": {
+          "shape": [
+            3
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        },
+        "SPOS": {
+          "shape": [
+            1
+          ],
+          "before_dtype": "float64",
+          "after_dtype": "float64",
+          "exact": true,
+          "byte_identical": true,
+          "changed_values": 0,
+          "max_abs_delta": 0.0
+        }
+      },
+      "all_exact": true
+    }
+  },
+  "all_exact": true,
+  "numerical_tolerance_used": false,
+  "note": "Each before/after comparison uses the same rank count and sorted stable IDs. Cross-rank physical-state-set differences are checked separately by the existing integration driver; no tolerance was used or widened in this before/after comparison.",
+  "all_byte_identical": true,
+  "current_binary_matches_new_runs": true,
+  "baseline_libopalx_static": true
+}

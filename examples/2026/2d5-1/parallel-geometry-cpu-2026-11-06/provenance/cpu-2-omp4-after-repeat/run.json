@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/opt/homebrew/bin/mpirun",
+    "--oversubscribe",
+    "--map-by",
+    "slot",
+    "--bind-to",
+    "none",
+    "-n",
+    "2",
+    "/Users/adelmann/git/opalx/build-omp/src/opalx",
+    "case.in",
+    "--info",
+    "1",
+    "--2D5BatchSize",
+    "64",
+    "--restart",
+    "/Users/adelmann/git/opalx/tmp/2026-11-05-merlin6-a100/payload/assets/dba-initial-state.h5"
+  ],
+  "ranks": 2,
+  "omp_threads": 4,
+  "returncode": 0,
+  "wall_seconds": 6.501077499997336,
+  "binary_sha256": "e77830e07e695f84baa45db5dc5c67a1fcafdb92dc84e4cec9254a38c0853e1c",
+  "source_base_commit": "a8ce134afa4e79c97e1611635e029579564ada35",
+  "mode": "after"
+}

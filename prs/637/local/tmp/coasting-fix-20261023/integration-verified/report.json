@@ -1,0 +1,43 @@
+{
+  "executable_sha256": "a415d1957a328b402a442dd11cdd0f6b0bd04b4a70dc8b6683a0022a0efe7d19",
+  "cases": [
+    {
+      "fixture": "Cyclotron-Coasting",
+      "ascii": false,
+      "hits": 20,
+      "phase_space_identical": true,
+      "time_steps_reference_identical": true,
+      "input_sha256": "903ad12133731683f29d2bcb237e336623a61ed2baf6ecd2f1c42e2df3880754"
+    },
+    {
+      "fixture": "Cyclotron-Coasting",
+      "ascii": true,
+      "hits": 20,
+      "phase_space_identical": true,
+      "time_steps_reference_identical": true,
+      "input_sha256": "39fdd120f305fcd8e8bfb8201d1ee2d8413f112a6ac792c0144ed885bb826cef"
+    },
+    {
+      "fixture": "Cyclotron-RF-Stop",
+      "ascii": false,
+      "hits": 1,
+      "phase_space_identical": true,
+      "time_steps_reference_identical": true,
+      "input_sha256": "0092dbd732bdf2b566cba53cf9ac08f034e9ae1735f3d886b348b093c3c223a1"
+    },
+    {
+      "fixture": "Cyclotron-RF-Stop",
+      "ascii": true,
+      "hits": 1,
+      "phase_space_identical": true,
+      "time_steps_reference_identical": true,
+      "input_sha256": "1b7aec44055d0e364eed1f52f168ea7408f8191e21217e2f5b7ca6c8c79a35e1"
+    }
+  ],
+  "rejections_checked": [
+    "step-zero",
+    "degenerate",
+    "noncyclotron",
+    "reused-output"
+  ]
+}

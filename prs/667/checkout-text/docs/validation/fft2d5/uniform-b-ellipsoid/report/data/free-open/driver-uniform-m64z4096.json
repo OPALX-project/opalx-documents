@@ -1,0 +1,23 @@
+{
+  "returncode": 0,
+  "elapsed_s": 49.43291745800525,
+  "children_max_rss_bytes": 6671106048,
+  "command": [
+    "/Users/adelmann/.venv-h6/bin/python",
+    "run_study.py",
+    "uniform-m64z4096",
+    "--profile",
+    "uniform",
+    "--mesh",
+    "64",
+    "32",
+    "4096",
+    "--ns",
+    "2560",
+    "--nrad",
+    "16",
+    "--nphi",
+    "64",
+    "--run"
+  ]
+}

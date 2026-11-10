@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "geometry": "exact circular metric J=1+u/R",
+  "radius_m": 2.0,
+  "checks": [
+    {
+      "profile": "uniform",
+      "target_m": [
+        0.006,
+        0.004,
+        1.25
+      ],
+      "difference_step_m": 2e-05,
+      "metric": 1.003,
+      "divergence_V_m2": 179.75103572673433,
+      "rho_over_epsilon_V_m2": 179.75103572341598,
+      "relative_divergence_error": 1.8460788453467103e-11,
+      "curl_V_m2": [
+        4.8983108340934153e-11,
+        -1.609223787210623e-10,
+        2.220446049250313e-11
+      ],
+      "max_curl_over_rho_epsilon": 8.952514686406289e-13
+    },
+    {
+      "profile": "triangle",
+      "target_m": [
+        0.006,
+        0.004,
+        1.25
+      ],
+      "difference_step_m": 2e-05,
+      "metric": 1.003,
+      "divergence_V_m2": 179.75103572674203,
+      "rho_over_epsilon_V_m2": 179.75103572341598,
+      "relative_divergence_error": 1.8503643062217634e-11,
+      "curl_V_m2": [
+        3.507527601698257e-12,
+        -8.832420170246102e-09,
+        1.3877787807814457e-12
+      ],
+      "max_curl_over_rho_epsilon": 4.913696399411351e-11
+    }
+  ]
+}

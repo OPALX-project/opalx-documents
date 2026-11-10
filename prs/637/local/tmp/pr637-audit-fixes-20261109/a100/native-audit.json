@@ -1,0 +1,193 @@
+{
+  "job_id": 355081,
+  "state": "COMPLETED",
+  "accounting": [
+    "355081|COMPLETED|0:0|00:32:21",
+    "355081.batch|COMPLETED|0:0|00:32:21",
+    "355081.extern|COMPLETED|0:0|00:32:21"
+  ],
+  "source_id": "3320cf6fc490a8be7dc2a33468b35cd99804cf179fd13d07f4d62d00e4bc2ae3",
+  "base_head": "b1551b9c337c0c57dd21a4e2e26ccaff10fdfc93",
+  "source_files_verified": 1072,
+  "current_intended_files_verified": 6,
+  "ctest": {
+    "name": "Linux-g++",
+    "tests": "6",
+    "failures": "0",
+    "disabled": "0",
+    "skipped": "0",
+    "hostname": "merlin-g-100.psi.ch",
+    "time": "29",
+    "timestamp": "2026-11-09T12:38:34"
+  },
+  "gtest_run_executions": 111,
+  "gtest_ok_executions": 111,
+  "gtest_skipped": 0,
+  "new_failure_capture_run_ok": 3,
+  "extended_sector_test_run_ok": 3,
+  "per_case_executions": {
+    "CyclotronTest.MapUnitsDerivativesSeamAndSharedStorage": 3,
+    "CyclotronTest.WedgeBoundsAndOffPlaneField": 3,
+    "CyclotronTest.RejectsTruncatedMap": 3,
+    "CyclotronTest.EightRotatedSectorsOwnEverySeamExactlyOnce": 3,
+    "CyclotronTest.DeviceParticleFieldMatchesHostIncludingTrim": 3,
+    "CyclotronTest.MirroredCoilHasTailsAndZeroStrengthIsIdentity": 3,
+    "CyclotronTest.CountsDirectedReturnsWithoutInitialOrOppositeCrossing": 3,
+    "CyclotronTest.SpatialWedgeCandidatesAreConservativeAcrossFramesAndSeams": 3,
+    "CyclotronTest.SpatialSelectionRestoresOmittedDeviceFieldAndPreservesOtherCandidates": 3,
+    "CyclotronTest.DeviceBunchTransportUsesIndividualArrivalTimesAndThreeDimensionalEnergy": 3,
+    "RFEventStepTest.ConcurrentFailuresKeepOneCoherentRecordAndAllowResetAndReuse": 3,
+    "RFEventStepTest.OrdersDistinctGapImpulsesByArrivalRatherThanDescriptorIndex": 3,
+    "RFEventStepTest.EqualArrivalSelectsLaterGapAndDoesNotRepeatAtItsPlane": 3,
+    "RFEventStepTest.AStepStartingOnTheGapPlaneDoesNotApplyADuplicateImpulse": 3,
+    "RFEventStepTest.EndpointCrossingAppliesACompleteKickAtTheNominalEnd": 3,
+    "RFEventStepTest.FiniteProfilesClipAnEarlierPlaneWithoutDiscardingALaterGap": 3,
+    "RFEventStepTest.StopsAfterACompleteKickWithoutAdvancingTheRemainder": 3,
+    "RFEventStepTest.FailedBisectionReportsItsGapWithoutCommittingTrialMotion": 3,
+    "RFEventStepTest.ARejectedLaterKickKeepsEarlierAcceptedEventsForTheCallerToRollback": 3,
+    "RFEventStepTest.ReferenceTerminalDurationIncludesACoincidentRoundoffShortParticle": 3,
+    "RFEventStepTest.TerminalEndpointIncludesAccumulatedFrameArithmeticOnlyWithinItsBudget": 3,
+    "RFEventStepTest.RejectsUnrepresentableTerminalAccumulationWithoutChangingOrdinarySteps": 3,
+    "RFEventStepTest.TerminalEndpointRoundoffBoundScalesWithLaboratoryCoordinates": 3,
+    "RFEventStepTest.TerminalEndpointDoesNotKickLaterRecedingOrUnsupportedParticles": 3,
+    "RFEventStepTest.TerminalKickMeetsReferenceEnergyForOneOrTwoDistributedProtons": 3,
+    "CyclotronProbeTest.DeviceCrossingsClippingDirectionsAndIds": 3,
+    "CyclotronProbeTest.EndpointDuplicatesInitialPlaneJitterAndInvalidInput": 3,
+    "CyclotronProbeTest.StationaryRefreshPreservesArmingAndResumedCrossingTime": 3,
+    "CyclotronProbeTest.ConfigurationValidationAndLegacyMapping": 3,
+    "CyclotronProbeTest.InputConvertsMillimetresAndIgnoresPathLength": 3,
+    "CyclotronProbeTest.AsciiEmptyRanksMigrationFramesAndTurnGroups": 3,
+    "CyclotronProbeTest.FfaStationsPreserveNativeFrameAndHistoryWithoutRadialSummaries": 3,
+    "CyclotronProbeTest.CapacityGrowthPreservesArmedHistoryAndNewParticleIds": 3,
+    "CyclotronProbeTest.CollectiveErrorsAndFreshOutputGuard": 3,
+    "CyclotronProbeTest.Hdf5ContainsCrossingUnitsChargeMassAndStableId": 3,
+    "CyclotronProbeTest.RepeatedFlushAppendsHitsAndRetainsCumulativeSummaries": 3,
+    "CyclotronProbeTest.FailedCollectiveReferenceTrialFlushesOnlyAcceptedProbeHits": 3
+  },
+  "mapping": {
+    "TestRFEventStep": [
+      {
+        "rank": 0,
+        "local_rank": 0,
+        "pid": 3788096,
+        "host": "merlin-g-100.psi.ch",
+        "inherited_cuda_visible_devices": "0,1",
+        "selected_cuda_visible_device": "0",
+        "gpu_uuid": "GPU-dbbd7375-8fc1-093d-f86b-ae1f64b87448",
+        "pci_bus_id": "00000000:87:00.0",
+        "kokkos_logical_device_id": 0,
+        "executable": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestRFEventStep"
+      }
+    ],
+    "TestRFEventStepMPI": [
+      {
+        "rank": 0,
+        "local_rank": 0,
+        "pid": 3788249,
+        "host": "merlin-g-100.psi.ch",
+        "inherited_cuda_visible_devices": "0,1",
+        "selected_cuda_visible_device": "0",
+        "gpu_uuid": "GPU-dbbd7375-8fc1-093d-f86b-ae1f64b87448",
+        "pci_bus_id": "00000000:87:00.0",
+        "kokkos_logical_device_id": 0,
+        "executable": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestRFEventStepMPI"
+      },
+      {
+        "rank": 1,
+        "local_rank": 1,
+        "pid": 3788250,
+        "host": "merlin-g-100.psi.ch",
+        "inherited_cuda_visible_devices": "0,1",
+        "selected_cuda_visible_device": "1",
+        "gpu_uuid": "GPU-ddaf526c-0266-266a-8606-0f82d8aa1f8d",
+        "pci_bus_id": "00000000:B7:00.0",
+        "kokkos_logical_device_id": 0,
+        "executable": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestRFEventStepMPI"
+      }
+    ],
+    "TestCyclotronSector": [
+      {
+        "rank": 0,
+        "local_rank": 0,
+        "pid": 3787858,
+        "host": "merlin-g-100.psi.ch",
+        "inherited_cuda_visible_devices": "0,1",
+        "selected_cuda_visible_device": "0",
+        "gpu_uuid": "GPU-dbbd7375-8fc1-093d-f86b-ae1f64b87448",
+        "pci_bus_id": "00000000:87:00.0",
+        "kokkos_logical_device_id": 0,
+        "executable": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestCyclotronSector"
+      }
+    ],
+    "TestCyclotronSectorMPI": [
+      {
+        "rank": 0,
+        "local_rank": 0,
+        "pid": 3787892,
+        "host": "merlin-g-100.psi.ch",
+        "inherited_cuda_visible_devices": "0,1",
+        "selected_cuda_visible_device": "0",
+        "gpu_uuid": "GPU-dbbd7375-8fc1-093d-f86b-ae1f64b87448",
+        "pci_bus_id": "00000000:87:00.0",
+        "kokkos_logical_device_id": 0,
+        "executable": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestCyclotronSectorMPI"
+      },
+      {
+        "rank": 1,
+        "local_rank": 1,
+        "pid": 3787893,
+        "host": "merlin-g-100.psi.ch",
+        "inherited_cuda_visible_devices": "0,1",
+        "selected_cuda_visible_device": "1",
+        "gpu_uuid": "GPU-ddaf526c-0266-266a-8606-0f82d8aa1f8d",
+        "pci_bus_id": "00000000:B7:00.0",
+        "kokkos_logical_device_id": 0,
+        "executable": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestCyclotronSectorMPI"
+      }
+    ],
+    "TestCyclotronProbe": [
+      {
+        "rank": 0,
+        "local_rank": 0,
+        "pid": 3788376,
+        "host": "merlin-g-100.psi.ch",
+        "inherited_cuda_visible_devices": "0,1",
+        "selected_cuda_visible_device": "0",
+        "gpu_uuid": "GPU-dbbd7375-8fc1-093d-f86b-ae1f64b87448",
+        "pci_bus_id": "00000000:87:00.0",
+        "kokkos_logical_device_id": 0,
+        "executable": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestCyclotronProbe"
+      }
+    ],
+    "TestCyclotronProbeMPI": [
+      {
+        "rank": 0,
+        "local_rank": 0,
+        "pid": 3788484,
+        "host": "merlin-g-100.psi.ch",
+        "inherited_cuda_visible_devices": "0,1",
+        "selected_cuda_visible_device": "0",
+        "gpu_uuid": "GPU-dbbd7375-8fc1-093d-f86b-ae1f64b87448",
+        "pci_bus_id": "00000000:87:00.0",
+        "kokkos_logical_device_id": 0,
+        "executable": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestCyclotronProbeMPI"
+      },
+      {
+        "rank": 1,
+        "local_rank": 1,
+        "pid": 3788485,
+        "host": "merlin-g-100.psi.ch",
+        "inherited_cuda_visible_devices": "0,1",
+        "selected_cuda_visible_device": "1",
+        "gpu_uuid": "GPU-ddaf526c-0266-266a-8606-0f82d8aa1f8d",
+        "pci_bus_id": "00000000:B7:00.0",
+        "kokkos_logical_device_id": 0,
+        "executable": "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestCyclotronProbeMPI"
+      }
+    ]
+  },
+  "mapping_qualification": "Native job selected distinct CUDA_VISIBLE_DEVICES ordinal tokens per rank and recorded NVML UUIDs via nvidia-smi; runtime UUID API was not queried in this native launcher. The follow-on tracker launcher uses the executable CUDA runtime for stronger physical UUID confirmation.",
+  "archive_sha256": "99b376a4cc223d61bf29dc3411f3501f654c91e029564812e17d9a59ac16492c",
+  "binary_hashes": "6cd248ee531a5e36318335a82949041c01fb3e50189e40a9683bec11174823de  /data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/opalx\n4f4078bd63fc8ec6acf7adbbbd4bdc7316acf7eb1552ba4fdb3c43080b18cfb6  /data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/lib/libopalx.so\nf37cb3660d5fd225729e818ae3648102e459b8e51ee6d5bc231069d2da19c4df  /data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestRFEventStep\n1a749a1375cb990796f283abb8ceb1a4bf894f43a8cd987a02724c92722a60b6  /data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestRFEventStepMPI\nfbf4f452612b947687405e4b696c5da4a6073b11c2bf93048c59b3be194f0b8e  /data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestCyclotronSector\n5367c69b2e44ed98bda20e6e840cae44bda704c40b1528c01f341cb2429494ff  /data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestCyclotronSectorMPI\n1b6b42107e1b6bf908465ab19406f9259f5310ba76b93a2d8f713f1b5ef602e3  /data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestCyclotronProbe\ne080dc46ea2b84854fc20da12a38e2ccdf7d7d11069bb36110e3822fd8acafab  /data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestCyclotronProbeMPI\n",
+  "build_warnings": []
+}

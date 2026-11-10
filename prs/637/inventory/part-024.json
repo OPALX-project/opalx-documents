@@ -1,0 +1,985 @@
+[
+  {
+    "original": "tmp/terminal-rf-roundoff-20261110/stale-executable-r2/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/terminal-rf-roundoff-20261110/stale-executable-r2/rffield1.dat"
+  },
+  {
+    "original": "tmp/terminal-rf-roundoff-20261110/stale-executable-r2/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/terminal-rf-roundoff-20261110/stale-executable-r2/rffield2.dat"
+  },
+  {
+    "original": "tmp/terminal-rf-roundoff-20261110/stale-executable-r2/run.log",
+    "sha256": "a82972b520c5511d231c4bc4ce67bfcbd5262c6d01c9a2d6f7e41ef6115a914f",
+    "bytes": 16863,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/terminal-rf-roundoff-20261110/stale-executable-r2/run.log"
+  },
+  {
+    "original": "tmp/terminal-rf-roundoff-20261110/stale-executable-r2/timing.dat",
+    "sha256": "3118b4f23bd8f2be9beb23aacf2aa37a9e0047253b73c2110f18731daa3857b3",
+    "bytes": 1217,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/terminal-rf-roundoff-20261110/stale-executable-r2/timing.dat"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/LOCAL_RESULTS.json",
+    "sha256": "4f375d02d9c2b1c8a6f0c578759fb68d033226359c1de588934403d8cb2f3d7f",
+    "bytes": 694,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/local_results.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/REPORT.md",
+    "sha256": "ff468a77c97ba011270eff9953e8dafcf97e2eff26a6338091843bf09b635648",
+    "bytes": 6393,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/report.md"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/RESULTS.json",
+    "sha256": "825e5d4c832103867652baa798ef05c924401ca0746bf249db9eb76da113f408",
+    "bytes": 2381,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/results.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/ROOT_VERIFICATION.json",
+    "sha256": "dd01315e03fb6274d217a4f4725a6393df02d7255592d73dafd0e4735840a5e9",
+    "bytes": 1018,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/root_verification.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/STATE.md",
+    "sha256": "cb983f3c261b4489ae5be7e5f9979c03ff44a54d7012afaa6a22af52dd8a8e26",
+    "bytes": 4244,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/state.md"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/abs-elements.md",
+    "sha256": "e856fd461055e5641c74c7c06658dff4b4c0687c390c46d93da1c4e18e9e2663",
+    "bytes": 3156,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/abs-elements.md"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/baseline-diff.patch",
+    "sha256": "583163d6781c94fb455f9dc8f732898e0cf015451c652c5d92173991cd06dc50",
+    "bytes": 34888,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/baseline-diff.patch"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/baseline-files.json",
+    "sha256": "5daae309e92e75fb4937f990cb298c5dfce660f925f1304025b44f3e83c52f62",
+    "bytes": 783,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/baseline-files.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/build-local-final.log",
+    "sha256": "b5b11a94be9e4bc245648f156acee916a0e1360c2da8e6e711bcad01c85c4799",
+    "bytes": 13066,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/build-local-final.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/build-local.log",
+    "sha256": "feecdac7cab419fabe8d1469f975e7eef0121ecb0274f49d04da5cbf9d0906a4",
+    "bytes": 8997,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/build-local.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/build-rf-local.log",
+    "sha256": "58b72be6baae74e07c4aaf866de6439e2c99351e189e55543e17e6dcdf192233",
+    "bytes": 704,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/build-rf-local.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/fields.json",
+    "sha256": "5eb410919f419fc830b3975149a7868385318d7ebdeb46b6e7f225354daa617f",
+    "bytes": 1218,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/fields.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/fields.md",
+    "sha256": "1f85ce372a40949621cbb5d9b769831d0ab599167b3c1c700b6c5f6be543f866",
+    "bytes": 1502,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/fields.md"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/implicit-writer-audit.md",
+    "sha256": "4486b7660640c9770d8feccd44fd65d5c9c5e7a31d2c69f90e90cd394e9cfa61",
+    "bytes": 3401,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/implicit-writer-audit.md"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/intended-files.json",
+    "sha256": "a5dd41a24dff549aef660cbe72d0b1245234b0ace144efc8b2c23da17b0e427b",
+    "bytes": 5528,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/intended-files.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/isolation.patch",
+    "sha256": "8a2d3657287272f4ac0e0377e8f2ffef75ac91fd4c5c323fdbd13fd76054ee32",
+    "bytes": 80530,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/isolation.patch"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/REPORT.md",
+    "sha256": "98accd01a86a6053e8d5a83e92570b83cff9e77ad94a9c7a4a1e0afb59076df5",
+    "bytes": 3355,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/report.md"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/STATE.md",
+    "sha256": "d21c40a5031455e41d5c47461f8ed6acabbb6ecbe172ee6a9f4fe2645b464a8b",
+    "bytes": 3662,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/state.md"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/after-status.json",
+    "sha256": "750fe9bea61e960c127cae1df26091b12c1c877eb29fdda2ddd9cc09b351320e",
+    "bytes": 11408,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/after-status.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/after-status.log",
+    "sha256": "76b0d2c002bbe59140164e925fdbcba296eaae2243b9c084989b78e21820f7fb",
+    "bytes": 9450,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/after-status.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/after-submission.json",
+    "sha256": "b76e4d485588dc0aceb21cc8e53a250279aa5575b620ecf7a4dbdfc5aafe42b8",
+    "bytes": 588,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/after-submission.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/after-submission.log",
+    "sha256": "f1c1bc5c57cfab4b2139e6a5810cc5cba8f1a354288a2eb10c4a587f540c53c2",
+    "bytes": 574,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/after-submission.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/after-submit-dependency-rejected.log",
+    "sha256": "e5f6e8e0bb4aefe4b8bcf2c85887a03a743e1a9ce29a00f0a1d941abb8639b2f",
+    "bytes": 1362,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/after-submit-dependency-rejected.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/after-upload.log",
+    "sha256": "94dbeecfedf57900fced12d73898498aca6d71ec748d21eae0e0cf23f3c901ad",
+    "bytes": 219,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/after-upload.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/after.sbatch",
+    "sha256": "dc2e5e827512b1713de948f67adf3a42d3e0d20252431db1285b83fdda4534b6",
+    "bytes": 928,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/after.sbatch"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/audit.json",
+    "sha256": "eddb172dfc223abf7a8fdec03d6ba358985f4d7c99976581bedd2e018f958d74",
+    "bytes": 3699,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/audit.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/audit_linux.py",
+    "sha256": "9131389c653d8c2a679c5dd77acecf6747e5b108ccdf726d01d9eb417a5709f8",
+    "bytes": 6262,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/audit_linux.py"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before/inventory.json",
+    "sha256": "0a554c5cca2ab93fc8ab1987f41dbc25fbb0d2b03ba49b44622160d0206e2d3f",
+    "bytes": 117271,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/before/inventory.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before/isolated.log",
+    "sha256": "15a86473ff1a62628e41348e6cf29f1ab3260c3843c25f0a5c31c2bf30e9216e",
+    "bytes": 7808,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/before/isolated.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before/isolated.xml",
+    "sha256": "c1c235cdb3866487b73eecc47a35afdf0ebe91ef6e5063587b32de2f8a42e88b",
+    "bytes": 2878,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/before/isolated.xml"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before/parallel-001.log",
+    "sha256": "033f0ada854ba3f2a7fc40bca61fdefbe72b0c2586eeab6d69e48ff2648ece67",
+    "bytes": 16990,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/before/parallel-001.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before/parallel-summary.json",
+    "sha256": "03e20fec9354d5ce07d8cc82abdc91cc4504f82396548f13415f25d3c0699510",
+    "bytes": 4512,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/before/parallel-summary.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before/status.tsv",
+    "sha256": "e153f2d1f3ae71e6db2c2f4a03e0fe797a2a3a38b14d457cd7489089b29520c6",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/before/status.tsv"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before/terminal-verification.json",
+    "sha256": "9a334a9477864d4e57a455a36ab55d4f425ebe325874ca94825faace1ecf02b6",
+    "bytes": 113,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/before/terminal-verification.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before-plan.json",
+    "sha256": "d65bfaa72cff2763f7d778d88056b299ca3fe4365cd7d19640dab2d6ec75d853",
+    "bytes": 847,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/before-plan.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before-retrieve.log",
+    "sha256": "c5aea4f80836c92884e661bf5b0c1063a2ca381a92c63ff4d46493237b57fbc8",
+    "bytes": 288,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/before-retrieve.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before-status.json",
+    "sha256": "6c0cf3d8ac312636e8830ce429654789e6c86c8c0220d11a805ff052ccda5f37",
+    "bytes": 5317,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/before-status.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before-status.log",
+    "sha256": "94f3da7b3422892bc03d575f17d335c290d80f5fbe0f63e6e46cc64bd06f3c8d",
+    "bytes": 5581,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/before-status.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before-submission.json",
+    "sha256": "110ebc5fe25335fc23301df7b3fa190f5efd2d56804cdeabe928d89c5ba148ac",
+    "bytes": 336,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/before-submission.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before-submission.log",
+    "sha256": "39870343627608c5c572255f4ccd55a06f0792a3d0e96982bebc3aa01c28a46a",
+    "bytes": 330,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/before-submission.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before.sbatch",
+    "sha256": "465867f1c28c64350da522ab8458e4ec8f9d42fa9d4cf8a8e816e3602186ebd8",
+    "bytes": 1986,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/before.sbatch"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before.sbatch.upload.log",
+    "sha256": "94dbeecfedf57900fced12d73898498aca6d71ec748d21eae0e0cf23f3c901ad",
+    "bytes": 219,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/before.sbatch.upload.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before_parallel.py",
+    "sha256": "1cb21e20948b15e6bca7ae72d40590b06acb4af1dc39de416d025f6d0363b6aa",
+    "bytes": 762,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/before_parallel.py"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/before_parallel.py.upload.log",
+    "sha256": "94dbeecfedf57900fced12d73898498aca6d71ec748d21eae0e0cf23f3c901ad",
+    "bytes": 219,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/before_parallel.py.upload.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/inventory.log",
+    "sha256": "84b187bb1be66265f33a4edb85c9ab70162da297e0fe8f5e94ae1b4e59f7fbd3",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/inventory.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/monitor_after.py",
+    "sha256": "f1cbb22db75179e0ad1e86ea0c0084b4b6bc189fd863b01a7747d86d7ddedfa3",
+    "bytes": 1957,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/monitor_after.py"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/affected.log",
+    "sha256": "17752fb626c2f8d7d2d4f7f65a56b09679eb32ecdc256448550c0aef1a8a7f88",
+    "bytes": 101451,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/affected.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/affected.xml",
+    "sha256": "92fb44e11817eede10c2eaa97dd8399fccf99b0d55f5725f9a40a5905a382581",
+    "bytes": 38030,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/affected.xml"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/binary-proof.json",
+    "sha256": "111e4796477ec95d4e9ebadfb54a4025014972946038bf6d5092a3666a2783bd",
+    "bytes": 26755,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/binary-proof.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/build.log",
+    "sha256": "186bcfb96727ffcac9db5b18abea0dd8e07c9aa4c44cbaf12f78969e5244b132",
+    "bytes": 21265,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/build.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/checkpoint-r2.log",
+    "sha256": "585c04f9bc74157e6916445c5359b4a34e6eaea712786f4c754e6f030a6a12b0",
+    "bytes": 1751,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/checkpoint-r2.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fft2d5-reject-r2.log",
+    "sha256": "f592034e521067f53ba8a528d3d0e8b61b4aa25634737915be6ae7bea2381259",
+    "bytes": 1401,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fft2d5-reject-r2.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-001.log",
+    "sha256": "af712eeed9179ca17149981c9cae4f134efc1c657cad8cf190b4d5f91ee194a6",
+    "bytes": 7808,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-001.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-002.log",
+    "sha256": "dce293df2f4674579ee3cbf296b5db019dcca45deab67c9f864437382989a56d",
+    "bytes": 7808,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-002.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-003.log",
+    "sha256": "57120ac3b1f0b98e5968a7644c014b0d10ca3176f5a0f62174b1c4b8150a0151",
+    "bytes": 7807,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-003.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-004.log",
+    "sha256": "ee67f111e8234659ec60a8ec9635c79d41fc83f4f383c7ebd683effa89417e3c",
+    "bytes": 7807,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-004.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-005.log",
+    "sha256": "3ebea3485f52e9e7df0e80131eb85652deed7965cc8b6e27a2e59a7b9eefce6b",
+    "bytes": 7808,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-005.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-006.log",
+    "sha256": "9b93e82add75f8ab7b3f6eef434eb9721407e0e025e879ba21ea15615f5dc3e0",
+    "bytes": 7807,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-006.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-007.log",
+    "sha256": "7fe5764f2e5ea6e3a54d8f5e31f1ae763a48194835a55486eb1de58f7cc6b19f",
+    "bytes": 7807,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-007.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-008.log",
+    "sha256": "48123f6e05e6f0aea35e0320955b7271985a9a1b8550784d35bfc3a4e58917d5",
+    "bytes": 7808,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-008.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-009.log",
+    "sha256": "0544f3087e7495c22fcfa02d93c1a65b57db86a6e81406d74f1241fa735e91e6",
+    "bytes": 7807,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-009.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-010.log",
+    "sha256": "1b02d2b1040ea4f6c5696d3ed66e8c9652c608173c227fdf6d0e0620a1151e0a",
+    "bytes": 7808,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-010.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-011.log",
+    "sha256": "bdec038999325fc710a0a1826167aaec2a2612365b08c1dc33a01abb589fa72c",
+    "bytes": 7808,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-011.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-012.log",
+    "sha256": "04ec0b96c464d910b55739a6e139128ab4263f7eec49f669a5a100bdec8ebe01",
+    "bytes": 7807,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-012.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-013.log",
+    "sha256": "b023b5324b541c44bac48595523649a529119376fb22d0b10dbf69acc91c51ea",
+    "bytes": 7808,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-013.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-014.log",
+    "sha256": "40a41c95f09e6e451946f53c902c07533f7c11e18a5d57ed330040359c063a8d",
+    "bytes": 7807,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-014.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-015.log",
+    "sha256": "706a77e55f133c981dc5a60eb6466fc847fd6e0a7867b5036f1328bde59f54e1",
+    "bytes": 7808,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-015.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-016.log",
+    "sha256": "cede3096dec1f3b1addb04e7095e6af37feda16c71ad895623948e82e26a0f59",
+    "bytes": 7807,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-016.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-017.log",
+    "sha256": "91a5b5fc4742b5a236b3b700a18a8cba4bf25f6adbf246d4b1d7590e99a14ef2",
+    "bytes": 7808,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-017.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-018.log",
+    "sha256": "4bf52e6bea6b6600de6807f0dc9fd99e2095925286e18ac894b849ce0c100c3c",
+    "bytes": 7807,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-018.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-019.log",
+    "sha256": "da5bbb3b8768bab6978e44f5e511e8dd22c274c35881922a6a02a72efffcc76a",
+    "bytes": 7808,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-019.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-020.log",
+    "sha256": "32299ad6dad669d4159b8aceefa5d7f88779c0330b07da65ef5a127b1161bf56",
+    "bytes": 7807,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-020.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-summary.json",
+    "sha256": "357a543604ed3a5217e2c1acc443675e93e46e2344e3d17f201a7f8c39088f05",
+    "bytes": 993,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/fm2d-summary.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/full-suite-result.json",
+    "sha256": "33ed400f31cffcd7d6178e66da808ff7daea27b443525ce0dbb5ab7a670784b9",
+    "bytes": 137,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/full-suite-result.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/full-suite.log",
+    "sha256": "dc1fd34323dd1b30a327d224ccf8c77366b9ed79e7e84d730e6ac8733b3d8d63",
+    "bytes": 17923,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/full-suite.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/full-suite.xml",
+    "sha256": "232e1ae910dc39ad77383295967a1f38eb73fc5c85f2d0609fbeb6e8b4790b4d",
+    "bytes": 175655,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/full-suite.xml"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/job.log",
+    "sha256": "6d4a2a84dd503f1454cf1723c23ccdfb712c35cfd08e7b1409ec13e988b09a34",
+    "bytes": 3991,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/job.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/manual-mpi.json",
+    "sha256": "05f2a6c3a2d11905879377925e4f04692f1b28552a89776c3968296d7b3d0707",
+    "bytes": 1169,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/manual-mpi.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/multicontainer-rewind-r2.log",
+    "sha256": "98e0f268d2d23f3bcf09acb0879f3f97298a15a5b37e6a0d1f5dd31670a8f05f",
+    "bytes": 1663,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/multicontainer-rewind-r2.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/orb-load-balancing-r4.log",
+    "sha256": "7b77cbab4080dbde52d98e89a9463d0388681d585dbaea0f14456c8362207965",
+    "bytes": 3477,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/orb-load-balancing-r4.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/orb-updater-r2.log",
+    "sha256": "df01768a700e6d79e9c0b27e2a64298bd83967c20377ab7d248c8095c379a3a0",
+    "bytes": 1341,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/orb-updater-r2.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/progress.json",
+    "sha256": "e5e6f8ba5e777466f0e3f6b95ae52674111cf352bae7bf8b2c7c726674982e8e",
+    "bytes": 2518,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/progress.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/slurm-355096.out",
+    "sha256": "6d4a2a84dd503f1454cf1723c23ccdfb712c35cfd08e7b1409ec13e988b09a34",
+    "bytes": 3991,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/slurm-355096.out"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/status.tsv",
+    "sha256": "6fd9edc8e3fdde22a77b778fa892475d417a5c3f5f466b7738f19b3a2bc20b66",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/status.tsv"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/terminal.json",
+    "sha256": "1cfa6e7c343bda031d052ee754a51154639d8de3f5914f181e908b1c055e18bb",
+    "bytes": 1730,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after/terminal.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after.sbatch",
+    "sha256": "dc2e5e827512b1713de948f67adf3a42d3e0d20252431db1285b83fdda4534b6",
+    "bytes": 928,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/after.sbatch"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/inventory.json",
+    "sha256": "0a554c5cca2ab93fc8ab1987f41dbc25fbb0d2b03ba49b44622160d0206e2d3f",
+    "bytes": 117271,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/inventory.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/isolated.log",
+    "sha256": "15a86473ff1a62628e41348e6cf29f1ab3260c3843c25f0a5c31c2bf30e9216e",
+    "bytes": 7808,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/isolated.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/isolated.xml",
+    "sha256": "c1c235cdb3866487b73eecc47a35afdf0ebe91ef6e5063587b32de2f8a42e88b",
+    "bytes": 2878,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/isolated.xml"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/job.log",
+    "sha256": "6b05f37da831dcb0de3c32417404ccf91325ac6eab1a2f32e45dc21fb82a5fc0",
+    "bytes": 12075,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/job.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/parallel-001.log",
+    "sha256": "033f0ada854ba3f2a7fc40bca61fdefbe72b0c2586eeab6d69e48ff2648ece67",
+    "bytes": 16990,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/parallel-001.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/parallel-summary.json",
+    "sha256": "03e20fec9354d5ce07d8cc82abdc91cc4504f82396548f13415f25d3c0699510",
+    "bytes": 4512,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/parallel-summary.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/slurm-355094.out",
+    "sha256": "6b05f37da831dcb0de3c32417404ccf91325ac6eab1a2f32e45dc21fb82a5fc0",
+    "bytes": 12075,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/slurm-355094.out"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/status.tsv",
+    "sha256": "e153f2d1f3ae71e6db2c2f4a03e0fe797a2a3a38b14d457cd7489089b29520c6",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/status.tsv"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/terminal-verification.json",
+    "sha256": "9a334a9477864d4e57a455a36ab55d4f425ebe325874ca94825faace1ecf02b6",
+    "bytes": 113,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before/terminal-verification.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before.sbatch",
+    "sha256": "465867f1c28c64350da522ab8458e4ec8f9d42fa9d4cf8a8e816e3602186ebd8",
+    "bytes": 1986,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before.sbatch"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before_parallel.py",
+    "sha256": "1cb21e20948b15e6bca7ae72d40590b06acb4af1dc39de416d025f6d0363b6aa",
+    "bytes": 762,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/before_parallel.py"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/build/CMakeCache.txt",
+    "sha256": "02f563fc99620b3d4a84a5b9fcfcf9a8661f4a6ada836ed0957589e637b71f2a",
+    "bytes": 106664,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/build/cmakecache.txt"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/build/unit_tests/Fields/CMakeFiles/TestFM2DDynamic.dir/flags.make",
+    "sha256": "564b760a23d02b271c6d8459971e3416b23413f8e4beb96a114390470bceff43",
+    "bytes": 3780,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/build/unit_tests/fields/cmakefiles/testfm2ddynamic.dir/flags.make"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/build/unit_tests/Fields/CMakeFiles/TestFM2DDynamic.dir/link.txt",
+    "sha256": "651bd0f41ae78ab4dc67efdbfaefa02040ff7b03136558cb3808690cbc68d1f5",
+    "bytes": 1913,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/build/unit_tests/fields/cmakefiles/testfm2ddynamic.dir/link.txt"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/build/unit_tests/Fields/CTestTestfile.cmake",
+    "sha256": "a9df34430da1cf06329710ec86f226ed371274b3a76c9f6ef061b1abc17f20cc",
+    "bytes": 6693,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/build/unit_tests/fields/ctesttestfile.cmake"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/build/unit_tests/Structure/CMakeFiles/TestCheckpointFile.dir/flags.make",
+    "sha256": "f3e10527727c79fbfce8f5c979acbb5eb14b29aaaa2f8df8f1f3149e09a25ab0",
+    "bytes": 3783,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/build/unit_tests/structure/cmakefiles/testcheckpointfile.dir/flags.make"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/build/unit_tests/Structure/CMakeFiles/TestCheckpointFile.dir/link.txt",
+    "sha256": "473006f08d239f08a60514cb6a6b28373a024895033392180c235e36b3ce1576",
+    "bytes": 1922,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/build/unit_tests/structure/cmakefiles/testcheckpointfile.dir/link.txt"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/build/unit_tests/Structure/CTestTestfile.cmake",
+    "sha256": "3c1501c48d8efaf7df52b595847336cf7e217b32b8cb2e19d1d27d1eda4a1b9a",
+    "bytes": 8760,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/build/unit_tests/structure/ctesttestfile.cmake"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/job-accounting.txt",
+    "sha256": "2d58ad1aa3acaf1844e9bd71ed04399e7b468f5d172b0e64b6a95df96cc03892",
+    "bytes": 524,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/job-accounting.txt"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/manifest.json",
+    "sha256": "9f0c25edbb6c9dcba84a46501b2853c7c954aa01bae5fb34eff9d9312cd01426",
+    "bytes": 5527,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/manifest.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/run_after.py",
+    "sha256": "d701925e5df816b1da57af53a82013326a0a9df0879232e5de3e2abe2cb92d55",
+    "bytes": 6025,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/run_after.py"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/source-update.json",
+    "sha256": "f0c86763b9407749a952be01508add6330fb63cd4511c4e0390642a3dcb4621c",
+    "bytes": 132,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/source-update.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/source-update.tgz",
+    "sha256": "b8a210ce8070a3e28270a850c57dccf304b6421d85b08debb50e0f519c89bdee",
+    "bytes": 127824,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/stage.json",
+    "sha256": "fa24deff322be8e32f938f0c5cb8e165d57cf040a14774180e98b9d8a76b28aa",
+    "bytes": 120584,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/stage.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/stage.log",
+    "sha256": "8e0efa90ebf5f28d9d52e47cad5ec724048b590ac591235d96c23e951704eb45",
+    "bytes": 1097,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/stage.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/stage_after.py",
+    "sha256": "4b5a1165236b1dc8553bfc38c6181bea6e1b9c5243a8f870cd2b8460a29e2f22",
+    "bytes": 3048,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/stage_after.py"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/remote-evidence/task-jobs-terminal.json",
+    "sha256": "b401255284eccd0a3487f7a345f94aba314696ee6d2dce58835feb1c4cf5c42a",
+    "bytes": 383,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/remote-evidence/task-jobs-terminal.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/retrieve.log",
+    "sha256": "c5aea4f80836c92884e661bf5b0c1063a2ca381a92c63ff4d46493237b57fbc8",
+    "bytes": 288,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/linux/retrieve.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/run_after.py",
+    "sha256": "d701925e5df816b1da57af53a82013326a0a9df0879232e5de3e2abe2cb92d55",
+    "bytes": 6025,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/run_after.py"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/source-update.json",
+    "sha256": "f0c86763b9407749a952be01508add6330fb63cd4511c4e0390642a3dcb4621c",
+    "bytes": 132,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/source-update.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/source-update.tgz",
+    "sha256": "b8a210ce8070a3e28270a850c57dccf304b6421d85b08debb50e0f519c89bdee",
+    "bytes": 127824,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/stage_after.py",
+    "sha256": "4b5a1165236b1dc8553bfc38c6181bea6e1b9c5243a8f870cd2b8460a29e2f22",
+    "bytes": 3048,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/stage_after.py"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/superseded-mkdtemp-source-update.json",
+    "sha256": "6721ce6f35340419f984a07c88d5e0d3a6f9a73d652350be79c4fb91b5b88415",
+    "bytes": 325,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/superseded-mkdtemp-source-update.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/superseded-mkdtemp-source-update.tgz",
+    "sha256": "f97ab76aa305e6f46b9e15504bac9b364e5303a4409149dae1e20a64a2435bc0",
+    "bytes": 122283,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/validation-evidence.json",
+    "sha256": "da9325bae5c7f723a2a1d311274419507e6afbb429ce597b46e6410e5a7b312a",
+    "bytes": 295,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/linux/validation-evidence.json"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/linux/validation-evidence.tgz",
+    "sha256": "e06d7b6d09d549b42d24260608b88633f14c1284a71fb609816c5582e0cf575f",
+    "bytes": 327445,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/local-checkpoint-copy1.log",
+    "sha256": "0e153b315bc7a60c2b8b7c184d513a673a0cb08cd74b5f12d83836b9d0433ca2",
+    "bytes": 797,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/local-checkpoint-copy1.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/local-checkpoint-copy2.log",
+    "sha256": "84a006026196b558aca54831a53edaaa8cb54160e87fa894910753927a2631e2",
+    "bytes": 797,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/local-checkpoint-copy2.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/local-fm2d-stress.log",
+    "sha256": "0fc5f42e994bfc86f888b4882abdbdcbbc9c8d78ba45b4ec3b19ddb1c8a4e4f6",
+    "bytes": 4433,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/local-fm2d-stress.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/local-full-suite.log",
+    "sha256": "1be4f2f85440f108d8270061d1b8ccaf7f1974a43f39683ef02b979d27fdac3b",
+    "bytes": 17899,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/local-full-suite.log"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/local-full-suite.xml",
+    "sha256": "51540dbcd2cc7943fa656beadca40c5865357ee4537858cff7274a8688f9c393",
+    "bytes": 171788,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/unit-test-output-isolation-20261109/local-full-suite.xml"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/physics.md",
+    "sha256": "7b51c04a39b1beaa1e2b3f841e342e92f4dccc3ad5156589493bf4e4ea1da3af",
+    "bytes": 1930,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/physics.md"
+  },
+  {
+    "original": "tmp/unit-test-output-isolation-20261109/simulation.md",
+    "sha256": "ad8fc5a9475aca31a6d35b43e2b66f37398e601ae87ccdbd47359d27f34835f2",
+    "bytes": 3007,
+    "disposition": "retained-text",
+    "archive": "local/tmp/unit-test-output-isolation-20261109/simulation.md"
+  },
+  {
+    "original": "tmp/upstream-merge-20261109/STATE.md",
+    "sha256": "05af94c7f373e6573c38d477ba56437807d7d54d899b675c19ecc78f07e7e9a0",
+    "bytes": 508,
+    "disposition": "retained-text",
+    "archive": "local/tmp/upstream-merge-20261109/state.md"
+  },
+  {
+    "original": "tmp/upstream-merge-20261109/build-extra.log",
+    "sha256": "6faee51131223965e425b2f24d16302bc8608f3f5fd0cb355e0dd2dad9f62bf5",
+    "bytes": 1468,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/upstream-merge-20261109/build-extra.log"
+  },
+  {
+    "original": "tmp/upstream-merge-20261109/build.log",
+    "sha256": "18b1651db713f38f54e556c76c362965a966824974c20dc8df5b242b742521a6",
+    "bytes": 19445,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/upstream-merge-20261109/build.log"
+  },
+  {
+    "original": "tmp/upstream-merge-20261109/configure.log",
+    "sha256": "d3e3d52002b8cb44e63a71653228bcfd730d22fcbbe24142f17327fb918f3435",
+    "bytes": 6900,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/upstream-merge-20261109/configure.log"
+  },
+  {
+    "original": "tmp/upstream-merge-20261109/parallel-r2.log",
+    "sha256": "28b8b458cb6bff69c92e8d5d65701930b918a16e7aecd963b012b3f1b0a5d0cf",
+    "bytes": 1528,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/upstream-merge-20261109/parallel-r2.log"
+  },
+  {
+    "original": "tmp/upstream-merge-20261109/tests.log",
+    "sha256": "023a85eeadea436a6056e2f96ab4731b52aa6f560ab7be731a53afdc8c2d5231",
+    "bytes": 806,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/upstream-merge-20261109/tests.log"
+  },
+  {
+    "original": "tmp/upstream-merge-20261109/tests.xml",
+    "sha256": "015d2132bd5b4d8a0718e3113af22eb83840ffb45e4632c8f3248e86630aca42",
+    "bytes": 6532,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/upstream-merge-20261109/tests.xml"
+  },
+  {
+    "original": "tools/check_cyclotron_probe.py",
+    "sha256": "cd437e6c45fec76fc4726c2d4074f7c01b758f0bb85c5d8224f6f740f7f3953b",
+    "bytes": 8738,
+    "disposition": "retained-text",
+    "archive": "local/tools/check_cyclotron_probe.py"
+  }
+]

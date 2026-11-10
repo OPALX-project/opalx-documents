@@ -1,0 +1,18 @@
+PROJECT_NAME = FFT2D5ProjectionCache
+OUTPUT_DIRECTORY = /Users/adelmann/git/opalx/tmp/2026-11-04-fft2d5-projection-cache/doxygen
+INPUT = /Users/adelmann/git/opalx/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h /Users/adelmann/git/opalx/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp /Users/adelmann/git/opalx/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
+EXTRACT_ALL = YES
+EXTRACT_PRIVATE = YES
+EXTRACT_STATIC = YES
+GENERATE_HTML = NO
+GENERATE_LATEX = NO
+GENERATE_XML = YES
+QUIET = YES
+WARN_IF_UNDOCUMENTED = NO
+WARN_IF_DOC_ERROR = YES
+WARN_LOGFILE = /Users/adelmann/git/opalx/tmp/2026-11-04-fft2d5-projection-cache/doxygen-warnings.log
+ENABLE_PREPROCESSING = YES
+MACRO_EXPANSION = YES
+EXPAND_ONLY_PREDEF = YES
+SEARCH_INCLUDES = NO
+PREDEFINED = KOKKOS_FUNCTION= KOKKOS_INLINE_FUNCTION=

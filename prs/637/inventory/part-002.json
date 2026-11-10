@@ -1,0 +1,2056 @@
+[
+  {
+    "original": "tmp/coasting-fix-20261023/integration/reject-step-zero/proton72.dat",
+    "sha256": "0c612d341099fbb07f94fb1d61d998515208178074239e1d89acbb69aee937d7",
+    "bytes": 47,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration/reject-step-zero/proton72.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration/reject-step-zero/reference/Cyclotron-Coasting.stat",
+    "sha256": "d128fab7ff24b66aa2506189421240720756f0be038c332bccdfe297516acca8",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration/reject-step-zero/reference/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration/reject-step-zero/reference/Cyclotron-Coasting.stat.md5",
+    "sha256": "07b749faf92b532a9ce8ec49d374a9ce02b44f39a2b748d9cd8f143a73d1b6fd",
+    "bytes": 58,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration/reject-step-zero/reference/cyclotron-coasting.stat.md5"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration/reject-step-zero/run.log",
+    "sha256": "e19552138de126729340e9e79c6940565097fb5afdbf1894407132090f8789bd",
+    "bytes": 3135,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/Cyclotron-Coasting.h5",
+    "sha256": "d9b8288b405de05f23fde80a308617ff7696a8e62051daf949fd623e167dfa0c",
+    "bytes": 14275,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/Cyclotron-Coasting.in",
+    "sha256": "39fdd120f305fcd8e8bfb8201d1ee2d8413f112a6ac792c0144ed885bb826cef",
+    "bytes": 3077,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/cyclotron-coasting.in"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/Cyclotron-Coasting.local",
+    "sha256": "8df3114b67fb9f49c064b7056e8941bae43c1d6d53213ef8beffc41b1434c077",
+    "bytes": 224,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/cyclotron-coasting.local"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/Cyclotron-Coasting.rt",
+    "sha256": "8da27b00f0d4127c135d322b391c1b984423b61928531fa3c91a7620fc772ab6",
+    "bytes": 741,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/cyclotron-coasting.rt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/Cyclotron-Coasting.stat",
+    "sha256": "4c7ba3931bd07739849082498b93902b756e5ac39460e1b3af96f8c5a4e5fdb0",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/data/Cyclotron-Coasting_3D.opal",
+    "sha256": "6ff9b017fd1132867eb3ef4ae4e84d90f4a28a3c41748025c1cf91ba7daf8e78",
+    "bytes": 1220,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/data/cyclotron-coasting_3d.opal"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/data/Cyclotron-Coasting_DesignPath.dat",
+    "sha256": "816901b39bd8e55aea8d7218da12d7748c99f62830ae4b273f28af85d5182dec",
+    "bytes": 296661,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/data/cyclotron-coasting_designpath.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/data/Cyclotron-Coasting_ElementPositions.py",
+    "sha256": "b17642e6df6a244449cee5d954c6daef1ef1bdc6e8dbb8b34d0d819f33e94364",
+    "bytes": 25827,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/data/cyclotron-coasting_elementpositions.py"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/data/Cyclotron-Coasting_ElementPositions.sdds",
+    "sha256": "0e538d0e2f018cb535788795dfa29102b81f757ecf8fc45b27e338a1b177b624",
+    "bytes": 7800,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/data/cyclotron-coasting_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/data/Cyclotron-Coasting_ElementPositions.txt",
+    "sha256": "0b22be2fcfbaf5d1230bdd1f8f70556774419e73de3b171dafcd89fdbe40a78f",
+    "bytes": 1360,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/data/cyclotron-coasting_elementpositions.txt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/hits.hist",
+    "sha256": "c10880d6ae1bdbc73e5f1ff8078463e570bdf03cc13219446ad8b1eec172c402",
+    "bytes": 275,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/hits.hist"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/hits.loss",
+    "sha256": "090d77221270190c330172e8bd4c7f8856ef1875ecb24f3064c0961fba10b488",
+    "bytes": 1482,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/hits.loss"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/hits.peaks",
+    "sha256": "1f25572e13275f57670a4f3422da45ef71c31f179239f86540f847b65f489f99",
+    "bytes": 205,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/hits.peaks"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/miss.hist",
+    "sha256": "8ce7f2f3b9ffebc896c2fb0f67bf8878f996a76de6729bf6c2dedc6ed5178c25",
+    "bytes": 96,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/miss.hist"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/miss.peaks",
+    "sha256": "ab59fd23f64555064dab07f6dee6b410b4b80b655d32610c75277c6fc7fb4d9d",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/miss.peaks"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/proton72.dat",
+    "sha256": "0c612d341099fbb07f94fb1d61d998515208178074239e1d89acbb69aee937d7",
+    "bytes": 47,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/proton72.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/reference/Cyclotron-Coasting.stat",
+    "sha256": "d128fab7ff24b66aa2506189421240720756f0be038c332bccdfe297516acca8",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/reference/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/reference/Cyclotron-Coasting.stat.md5",
+    "sha256": "07b749faf92b532a9ce8ec49d374a9ce02b44f39a2b748d9cd8f143a73d1b6fd",
+    "bytes": 58,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/reference/cyclotron-coasting.stat.md5"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/reverse.hist",
+    "sha256": "c10880d6ae1bdbc73e5f1ff8078463e570bdf03cc13219446ad8b1eec172c402",
+    "bytes": 275,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/reverse.hist"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/reverse.loss",
+    "sha256": "090d77221270190c330172e8bd4c7f8856ef1875ecb24f3064c0961fba10b488",
+    "bytes": 1482,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/reverse.loss"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/reverse.peaks",
+    "sha256": "1f25572e13275f57670a4f3422da45ef71c31f179239f86540f847b65f489f99",
+    "bytes": 205,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/reverse.peaks"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/run.log",
+    "sha256": "72099d6df40e33f033efbf213ea99096feebeecf09edc4262a4a4a67e5cba4ce",
+    "bytes": 17308,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/run.log"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-ascii/timing.dat",
+    "sha256": "c23a8ffe112e5c4464ff913e16b9808156a4b8c115b4178bca1649776cb7272a",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-ascii/timing.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/Cyclotron-Coasting.h5",
+    "sha256": "280a5f186edc100489d5ab12cb21f417266e05c15da2776230d4f71a3328545b",
+    "bytes": 14275,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/Cyclotron-Coasting.in",
+    "sha256": "903ad12133731683f29d2bcb237e336623a61ed2baf6ecd2f1c42e2df3880754",
+    "bytes": 3053,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/cyclotron-coasting.in"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/Cyclotron-Coasting.local",
+    "sha256": "8df3114b67fb9f49c064b7056e8941bae43c1d6d53213ef8beffc41b1434c077",
+    "bytes": 224,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/cyclotron-coasting.local"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/Cyclotron-Coasting.rt",
+    "sha256": "8da27b00f0d4127c135d322b391c1b984423b61928531fa3c91a7620fc772ab6",
+    "bytes": 741,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/cyclotron-coasting.rt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/Cyclotron-Coasting.stat",
+    "sha256": "34b6b4952ea9e6e31ac8b94bf750d669d1ed61b46a8ae4b783f7e5a460928521",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/data/Cyclotron-Coasting_3D.opal",
+    "sha256": "85ac6d20161765b26daf26b4f5e0a3d98577e0b8462cf46b922add978eb742e8",
+    "bytes": 1196,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/data/cyclotron-coasting_3d.opal"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/data/Cyclotron-Coasting_DesignPath.dat",
+    "sha256": "816901b39bd8e55aea8d7218da12d7748c99f62830ae4b273f28af85d5182dec",
+    "bytes": 296661,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/data/cyclotron-coasting_designpath.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/data/Cyclotron-Coasting_ElementPositions.py",
+    "sha256": "b17642e6df6a244449cee5d954c6daef1ef1bdc6e8dbb8b34d0d819f33e94364",
+    "bytes": 25827,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/data/cyclotron-coasting_elementpositions.py"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/data/Cyclotron-Coasting_ElementPositions.sdds",
+    "sha256": "0e538d0e2f018cb535788795dfa29102b81f757ecf8fc45b27e338a1b177b624",
+    "bytes": 7800,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/data/cyclotron-coasting_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/data/Cyclotron-Coasting_ElementPositions.txt",
+    "sha256": "0b22be2fcfbaf5d1230bdd1f8f70556774419e73de3b171dafcd89fdbe40a78f",
+    "bytes": 1360,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/data/cyclotron-coasting_elementpositions.txt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/hits.h5",
+    "sha256": "2749233154fe37d4d7f6dfd113ba421be17c78e97fce4971fed7680ac28abdb8",
+    "bytes": 13779,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/hits.hist",
+    "sha256": "c10880d6ae1bdbc73e5f1ff8078463e570bdf03cc13219446ad8b1eec172c402",
+    "bytes": 275,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/hits.hist"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/hits.peaks",
+    "sha256": "1f25572e13275f57670a4f3422da45ef71c31f179239f86540f847b65f489f99",
+    "bytes": 205,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/hits.peaks"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/miss.hist",
+    "sha256": "8ce7f2f3b9ffebc896c2fb0f67bf8878f996a76de6729bf6c2dedc6ed5178c25",
+    "bytes": 96,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/miss.hist"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/miss.peaks",
+    "sha256": "ab59fd23f64555064dab07f6dee6b410b4b80b655d32610c75277c6fc7fb4d9d",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/miss.peaks"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/proton72.dat",
+    "sha256": "0c612d341099fbb07f94fb1d61d998515208178074239e1d89acbb69aee937d7",
+    "bytes": 47,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/proton72.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/reference/Cyclotron-Coasting.stat",
+    "sha256": "d128fab7ff24b66aa2506189421240720756f0be038c332bccdfe297516acca8",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/reference/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/reference/Cyclotron-Coasting.stat.md5",
+    "sha256": "07b749faf92b532a9ce8ec49d374a9ce02b44f39a2b748d9cd8f143a73d1b6fd",
+    "bytes": 58,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/reference/cyclotron-coasting.stat.md5"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/reverse.h5",
+    "sha256": "2749233154fe37d4d7f6dfd113ba421be17c78e97fce4971fed7680ac28abdb8",
+    "bytes": 13779,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/reverse.hist",
+    "sha256": "c10880d6ae1bdbc73e5f1ff8078463e570bdf03cc13219446ad8b1eec172c402",
+    "bytes": 275,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/reverse.hist"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/reverse.peaks",
+    "sha256": "1f25572e13275f57670a4f3422da45ef71c31f179239f86540f847b65f489f99",
+    "bytes": 205,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/reverse.peaks"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/run.log",
+    "sha256": "20f8955b9422fe51b5cc42bf24bb83f85bce974f35884c72b257ec1cc80fea50",
+    "bytes": 17306,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/run.log"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-hdf5/timing.dat",
+    "sha256": "224042c3f34bc6fb2d7f09a3f45cb68807117ce4faabec637c2d15c1af46f2f2",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-hdf5/timing.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-off/Cyclotron-Coasting.h5",
+    "sha256": "3e062efbcfd83f24e56ec5b77f95b576e9cc9941519c507ada881c6083291d96",
+    "bytes": 14275,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-off/Cyclotron-Coasting.in",
+    "sha256": "d915829eff1bd16262be08f20e748a5da202740f7c0121de000f7115a0ce5a2c",
+    "bytes": 2777,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-off/cyclotron-coasting.in"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-off/Cyclotron-Coasting.local",
+    "sha256": "8df3114b67fb9f49c064b7056e8941bae43c1d6d53213ef8beffc41b1434c077",
+    "bytes": 224,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-off/cyclotron-coasting.local"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-off/Cyclotron-Coasting.rt",
+    "sha256": "8da27b00f0d4127c135d322b391c1b984423b61928531fa3c91a7620fc772ab6",
+    "bytes": 741,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-off/cyclotron-coasting.rt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-off/Cyclotron-Coasting.stat",
+    "sha256": "9b18ac6e03a7c80b40119934d5dd24ecdf7aff8923be4279f1e1d23d1fb5ca25",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-off/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-off/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-off/data/Cyclotron-Coasting_3D.opal",
+    "sha256": "4c33b08699ff3df8afa2d650d40cc695b6a81eca0498a992a5bc39e5776015c4",
+    "bytes": 920,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-off/data/cyclotron-coasting_3d.opal"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-off/data/Cyclotron-Coasting_DesignPath.dat",
+    "sha256": "816901b39bd8e55aea8d7218da12d7748c99f62830ae4b273f28af85d5182dec",
+    "bytes": 296661,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-off/data/cyclotron-coasting_designpath.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-off/data/Cyclotron-Coasting_ElementPositions.py",
+    "sha256": "b17642e6df6a244449cee5d954c6daef1ef1bdc6e8dbb8b34d0d819f33e94364",
+    "bytes": 25827,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-off/data/cyclotron-coasting_elementpositions.py"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-off/data/Cyclotron-Coasting_ElementPositions.sdds",
+    "sha256": "0e538d0e2f018cb535788795dfa29102b81f757ecf8fc45b27e338a1b177b624",
+    "bytes": 7800,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-off/data/cyclotron-coasting_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-off/data/Cyclotron-Coasting_ElementPositions.txt",
+    "sha256": "0b22be2fcfbaf5d1230bdd1f8f70556774419e73de3b171dafcd89fdbe40a78f",
+    "bytes": 1360,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-off/data/cyclotron-coasting_elementpositions.txt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-off/proton72.dat",
+    "sha256": "0c612d341099fbb07f94fb1d61d998515208178074239e1d89acbb69aee937d7",
+    "bytes": 47,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-off/proton72.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-off/reference/Cyclotron-Coasting.stat",
+    "sha256": "d128fab7ff24b66aa2506189421240720756f0be038c332bccdfe297516acca8",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-off/reference/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-off/reference/Cyclotron-Coasting.stat.md5",
+    "sha256": "07b749faf92b532a9ce8ec49d374a9ce02b44f39a2b748d9cd8f143a73d1b6fd",
+    "bytes": 58,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-off/reference/cyclotron-coasting.stat.md5"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-off/run.log",
+    "sha256": "abcf0556106785bff10280a3dce2bef4e29c0593d264a0e48d98c3f063dfdd8b",
+    "bytes": 17255,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-off/run.log"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-Coasting-off/timing.dat",
+    "sha256": "f4ddc8978ff2a273989f73bbc2b589a5eed87beef2f7d870624ac00c599a56d0",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-coasting-off/timing.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/Cyclotron-RF-Stop.h5",
+    "sha256": "fd660ae7f383b6d6600564bd90e4fcf6e51119a3d7ab74224b429965fba63bba",
+    "bytes": 14275,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/Cyclotron-RF-Stop.in",
+    "sha256": "1b7aec44055d0e364eed1f52f168ea7408f8191e21217e2f5b7ca6c8c79a35e1",
+    "bytes": 3572,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/Cyclotron-RF-Stop.stat",
+    "sha256": "7333a288df79d545bbe9817d8a6a9751bf92ad69812a4274cc5ec4a37f04b256",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "99bed068c10653964bc26a760bd16bc33a389f43fbcef76d1af414740382a3f0",
+    "bytes": 3347,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "cacf63d557f6eab37020b18b9e79b18dc9f8ad1871b6a3b8e368648d8cbf400d",
+    "bytes": 8467,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/hits.hist",
+    "sha256": "ba5ba0d743e007c7b6c23d84e7548c055eb6fcbeed0ab1236d9ab8a2b7f50b5b",
+    "bytes": 274,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/hits.hist"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/hits.loss",
+    "sha256": "e4cbf385e82bf157a2c661bffa2c449b302b5fc2bbe366f05967d889ee8b70ae",
+    "bytes": 164,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/hits.loss"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/hits.peaks",
+    "sha256": "6d353292b1f3cbebf8cba42c25f1be3e1bf1010721e2a145b05f6bb8226f6a70",
+    "bytes": 37,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/hits.peaks"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/miss.hist",
+    "sha256": "8ce7f2f3b9ffebc896c2fb0f67bf8878f996a76de6729bf6c2dedc6ed5178c25",
+    "bytes": 96,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/miss.hist"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/miss.peaks",
+    "sha256": "ab59fd23f64555064dab07f6dee6b410b4b80b655d32610c75277c6fc7fb4d9d",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/miss.peaks"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/proton.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/reverse.hist",
+    "sha256": "ba5ba0d743e007c7b6c23d84e7548c055eb6fcbeed0ab1236d9ab8a2b7f50b5b",
+    "bytes": 274,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/reverse.hist"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/reverse.loss",
+    "sha256": "e4cbf385e82bf157a2c661bffa2c449b302b5fc2bbe366f05967d889ee8b70ae",
+    "bytes": 164,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/reverse.loss"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/reverse.peaks",
+    "sha256": "6d353292b1f3cbebf8cba42c25f1be3e1bf1010721e2a145b05f6bb8226f6a70",
+    "bytes": 37,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/reverse.peaks"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/rffield1.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/rffield2.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/run.log",
+    "sha256": "12e195162eaa95fc4f495ecee24278036beeb9d91905c2e0c22340fca7ef3795",
+    "bytes": 15746,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/run.log"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-ascii/timing.dat",
+    "sha256": "46c8a34ab7407aa6fab1ba9adf3c39ebd87efa78d1b4ca2da59aa949c2f9a321",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-ascii/timing.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/Cyclotron-RF-Stop.h5",
+    "sha256": "1d9431f4f1d2224003dbab33d31a740f5d11da65f32fbe7502a9f60cc8fae843",
+    "bytes": 14275,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/Cyclotron-RF-Stop.in",
+    "sha256": "0092dbd732bdf2b566cba53cf9ac08f034e9ae1735f3d886b348b093c3c223a1",
+    "bytes": 3548,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/Cyclotron-RF-Stop.stat",
+    "sha256": "a18b751c20d4b3eeff927141bdd913540d798c818a95257a3414e5e4f19be1ba",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "39484e6af981cd6b52af8bea964db17a70138b56aa0d10e22597cdf84e267c00",
+    "bytes": 3323,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "cacf63d557f6eab37020b18b9e79b18dc9f8ad1871b6a3b8e368648d8cbf400d",
+    "bytes": 8467,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/hits.h5",
+    "sha256": "438b71362da3bbc5c604b8ab05f2c2796f23b4e7d55de02a446b5b655c1c3e13",
+    "bytes": 13779,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/hits.hist",
+    "sha256": "ba5ba0d743e007c7b6c23d84e7548c055eb6fcbeed0ab1236d9ab8a2b7f50b5b",
+    "bytes": 274,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/hits.hist"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/hits.peaks",
+    "sha256": "6d353292b1f3cbebf8cba42c25f1be3e1bf1010721e2a145b05f6bb8226f6a70",
+    "bytes": 37,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/hits.peaks"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/miss.hist",
+    "sha256": "8ce7f2f3b9ffebc896c2fb0f67bf8878f996a76de6729bf6c2dedc6ed5178c25",
+    "bytes": 96,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/miss.hist"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/miss.peaks",
+    "sha256": "ab59fd23f64555064dab07f6dee6b410b4b80b655d32610c75277c6fc7fb4d9d",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/miss.peaks"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/proton.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/reverse.h5",
+    "sha256": "438b71362da3bbc5c604b8ab05f2c2796f23b4e7d55de02a446b5b655c1c3e13",
+    "bytes": 13779,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/reverse.hist",
+    "sha256": "ba5ba0d743e007c7b6c23d84e7548c055eb6fcbeed0ab1236d9ab8a2b7f50b5b",
+    "bytes": 274,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/reverse.hist"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/reverse.peaks",
+    "sha256": "6d353292b1f3cbebf8cba42c25f1be3e1bf1010721e2a145b05f6bb8226f6a70",
+    "bytes": 37,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/reverse.peaks"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/rffield1.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/rffield2.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/run.log",
+    "sha256": "006a8007eda5d3da101aca4d16ff7123a0ace03ae7deaaa81b4738f5ad601abd",
+    "bytes": 15743,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/run.log"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-hdf5/timing.dat",
+    "sha256": "52ebaf362f6c6de5c272a3197fa368cc92ae8f92ac8a772e05c2c6857a0300ef",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-hdf5/timing.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/Cyclotron-RF-Stop.h5",
+    "sha256": "1d9431f4f1d2224003dbab33d31a740f5d11da65f32fbe7502a9f60cc8fae843",
+    "bytes": 14275,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/Cyclotron-RF-Stop.in",
+    "sha256": "6f84dbd204d63262382aeef71039dd1f30bcaab4c4d5345438829be4e3bfaa5c",
+    "bytes": 3272,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-off/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-off/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-off/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/Cyclotron-RF-Stop.stat",
+    "sha256": "a18b751c20d4b3eeff927141bdd913540d798c818a95257a3414e5e4f19be1ba",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-off/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "b7e94276a9db4f444ca83154efbaa0b022e729174b0a3668a78fa2fd6afaca95",
+    "bytes": 3047,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-off/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "296b7c506a7cfa7ec53cf76a49fa63a71adc06a0be6e7f548197d307c4a6a980",
+    "bytes": 885568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-off/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-off/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "cacf63d557f6eab37020b18b9e79b18dc9f8ad1871b6a3b8e368648d8cbf400d",
+    "bytes": 8467,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-off/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-off/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-off/proton.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-off/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-off/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-off/rffield1.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-off/rffield2.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/run.log",
+    "sha256": "648b5eb4e5304f86a10b7a1088cb8c06231fdff27498fdfbb9dcea7553ad04e6",
+    "bytes": 15681,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-off/run.log"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/Cyclotron-RF-Stop-off/timing.dat",
+    "sha256": "6da72bc449bbe1863244b745d070cd7b5ed812f6575afe0bc48ee90efa72080b",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/cyclotron-rf-stop-off/timing.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-degenerate/Cyclotron-Coasting.in",
+    "sha256": "6127dcdfa9b770a8ff2f1f40b0c363dc19661213ce6ecb8bf43ee90ae573ffb9",
+    "bytes": 3054,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-degenerate/cyclotron-coasting.in"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-degenerate/Cyclotron-Coasting.local",
+    "sha256": "8df3114b67fb9f49c064b7056e8941bae43c1d6d53213ef8beffc41b1434c077",
+    "bytes": 224,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-degenerate/cyclotron-coasting.local"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-degenerate/Cyclotron-Coasting.rt",
+    "sha256": "8da27b00f0d4127c135d322b391c1b984423b61928531fa3c91a7620fc772ab6",
+    "bytes": 741,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-degenerate/cyclotron-coasting.rt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-degenerate/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-degenerate/proton72.dat",
+    "sha256": "0c612d341099fbb07f94fb1d61d998515208178074239e1d89acbb69aee937d7",
+    "bytes": 47,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-degenerate/proton72.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-degenerate/reference/Cyclotron-Coasting.stat",
+    "sha256": "d128fab7ff24b66aa2506189421240720756f0be038c332bccdfe297516acca8",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-degenerate/reference/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-degenerate/reference/Cyclotron-Coasting.stat.md5",
+    "sha256": "07b749faf92b532a9ce8ec49d374a9ce02b44f39a2b748d9cd8f143a73d1b6fd",
+    "bytes": 58,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-degenerate/reference/cyclotron-coasting.stat.md5"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-degenerate/run.log",
+    "sha256": "351038f21fd329b4313836463704aa911334d2aeae0c61218ceb2adb7d1a7769",
+    "bytes": 3135,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/Cyclotron-Coasting.h5",
+    "sha256": "9d336d9c0b9552f634cae9362c828c0e9aef0c543ac3d0f91ad75b178e7bb054",
+    "bytes": 4459,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/Cyclotron-Coasting.in",
+    "sha256": "8ed719685495ec32215e9b7618d0606f7e338af78337bd4a5870948693cb3226",
+    "bytes": 3026,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/cyclotron-coasting.in"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/Cyclotron-Coasting.local",
+    "sha256": "8df3114b67fb9f49c064b7056e8941bae43c1d6d53213ef8beffc41b1434c077",
+    "bytes": 224,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/cyclotron-coasting.local"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/Cyclotron-Coasting.rt",
+    "sha256": "8da27b00f0d4127c135d322b391c1b984423b61928531fa3c91a7620fc772ab6",
+    "bytes": 741,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/cyclotron-coasting.rt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/data/Cyclotron-Coasting_3D.opal",
+    "sha256": "b2ae9f27366d76735715b52b464bfd12028a7d1473035672ef1021179971737a",
+    "bytes": 2751,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/data/cyclotron-coasting_3d.opal"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/data/Cyclotron-Coasting_ElementPositions.py",
+    "sha256": "bd8956c0edeaa051a287d65cdba23f34fba1853e28a60908ecdb469c7e31b377",
+    "bytes": 25701,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/data/cyclotron-coasting_elementpositions.py"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/data/Cyclotron-Coasting_ElementPositions.txt",
+    "sha256": "1d2d3872a454286a2ec7722184425c2fec0649d6c7a541f91f37d0a744992fd5",
+    "bytes": 170,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/data/cyclotron-coasting_elementpositions.txt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/proton72.dat",
+    "sha256": "0c612d341099fbb07f94fb1d61d998515208178074239e1d89acbb69aee937d7",
+    "bytes": 47,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/proton72.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/reference/Cyclotron-Coasting.stat",
+    "sha256": "d128fab7ff24b66aa2506189421240720756f0be038c332bccdfe297516acca8",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/reference/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/reference/Cyclotron-Coasting.stat.md5",
+    "sha256": "07b749faf92b532a9ce8ec49d374a9ce02b44f39a2b748d9cd8f143a73d1b6fd",
+    "bytes": 58,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/reference/cyclotron-coasting.stat.md5"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-noncyclotron/run.log",
+    "sha256": "900d244791a7baf63476e91f12c21cd8a914fb6e45a6076fb5cd1bbb4b75872d",
+    "bytes": 6712,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/Cyclotron-Coasting.h5",
+    "sha256": "a91ea273a918b17801dc9471147d6e2cb0155f9928adb337d70a79190fbc75cd",
+    "bytes": 195,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/Cyclotron-Coasting.in",
+    "sha256": "afa49b7f4fd7dcdd8f17929f3a3e5637e87f165024b098b27eb2a3ec3e595979",
+    "bytes": 3198,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/cyclotron-coasting.in"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/Cyclotron-Coasting.local",
+    "sha256": "8df3114b67fb9f49c064b7056e8941bae43c1d6d53213ef8beffc41b1434c077",
+    "bytes": 224,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/cyclotron-coasting.local"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/Cyclotron-Coasting.rt",
+    "sha256": "8da27b00f0d4127c135d322b391c1b984423b61928531fa3c91a7620fc772ab6",
+    "bytes": 741,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/cyclotron-coasting.rt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/Cyclotron-Coasting.stat",
+    "sha256": "0860133ed173924a58b1269741b1f1ece1919a11dae980b7b852651fb4391668",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/data/Cyclotron-Coasting_3D.opal",
+    "sha256": "4ff5d34bc56be2ace8e7bdf415bebe2c0c352a925523d2add28cc9a2953e2b92",
+    "bytes": 1341,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/data/cyclotron-coasting_3d.opal"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/data/Cyclotron-Coasting_DesignPath.dat",
+    "sha256": "816901b39bd8e55aea8d7218da12d7748c99f62830ae4b273f28af85d5182dec",
+    "bytes": 296661,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/data/cyclotron-coasting_designpath.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/data/Cyclotron-Coasting_ElementPositions.py",
+    "sha256": "b17642e6df6a244449cee5d954c6daef1ef1bdc6e8dbb8b34d0d819f33e94364",
+    "bytes": 25827,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/data/cyclotron-coasting_elementpositions.py"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/data/Cyclotron-Coasting_ElementPositions.sdds",
+    "sha256": "0e538d0e2f018cb535788795dfa29102b81f757ecf8fc45b27e338a1b177b624",
+    "bytes": 7800,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/data/cyclotron-coasting_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/data/Cyclotron-Coasting_ElementPositions.txt",
+    "sha256": "0b22be2fcfbaf5d1230bdd1f8f70556774419e73de3b171dafcd89fdbe40a78f",
+    "bytes": 1360,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/data/cyclotron-coasting_elementpositions.txt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/hits.h5",
+    "sha256": "d61c5f5c81a82a88ad8d0422bb8f3605f8f57a5f6d89d96a380133ed49cc2765",
+    "bytes": 13779,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/hits.hist",
+    "sha256": "c10880d6ae1bdbc73e5f1ff8078463e570bdf03cc13219446ad8b1eec172c402",
+    "bytes": 275,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/hits.hist"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/hits.peaks",
+    "sha256": "1f25572e13275f57670a4f3422da45ef71c31f179239f86540f847b65f489f99",
+    "bytes": 205,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/hits.peaks"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/miss.hist",
+    "sha256": "8ce7f2f3b9ffebc896c2fb0f67bf8878f996a76de6729bf6c2dedc6ed5178c25",
+    "bytes": 96,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/miss.hist"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/miss.peaks",
+    "sha256": "ab59fd23f64555064dab07f6dee6b410b4b80b655d32610c75277c6fc7fb4d9d",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/miss.peaks"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/proton72.dat",
+    "sha256": "0c612d341099fbb07f94fb1d61d998515208178074239e1d89acbb69aee937d7",
+    "bytes": 47,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/proton72.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/reference/Cyclotron-Coasting.stat",
+    "sha256": "d128fab7ff24b66aa2506189421240720756f0be038c332bccdfe297516acca8",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/reference/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/reference/Cyclotron-Coasting.stat.md5",
+    "sha256": "07b749faf92b532a9ce8ec49d374a9ce02b44f39a2b748d9cd8f143a73d1b6fd",
+    "bytes": 58,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/reference/cyclotron-coasting.stat.md5"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/reverse.h5",
+    "sha256": "d61c5f5c81a82a88ad8d0422bb8f3605f8f57a5f6d89d96a380133ed49cc2765",
+    "bytes": 13779,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/reverse.hist",
+    "sha256": "c10880d6ae1bdbc73e5f1ff8078463e570bdf03cc13219446ad8b1eec172c402",
+    "bytes": 275,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/reverse.hist"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/reverse.peaks",
+    "sha256": "1f25572e13275f57670a4f3422da45ef71c31f179239f86540f847b65f489f99",
+    "bytes": 205,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-reused-output/reverse.peaks"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-reused-output/run.log",
+    "sha256": "ef6f84bcdb9c0749af68654384ea4e883d1a4f429dfd421af18173f4109a1c8f",
+    "bytes": 20663,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-step-zero/Cyclotron-Coasting.in",
+    "sha256": "53b03d1173d516a5fe6cf2a8a315089f88ab3fac90cefaa2562c378d5a6ab025",
+    "bytes": 3051,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-step-zero/cyclotron-coasting.in"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-step-zero/Cyclotron-Coasting.local",
+    "sha256": "8df3114b67fb9f49c064b7056e8941bae43c1d6d53213ef8beffc41b1434c077",
+    "bytes": 224,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-step-zero/cyclotron-coasting.local"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-step-zero/Cyclotron-Coasting.rt",
+    "sha256": "8da27b00f0d4127c135d322b391c1b984423b61928531fa3c91a7620fc772ab6",
+    "bytes": 741,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-step-zero/cyclotron-coasting.rt"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-step-zero/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-step-zero/proton72.dat",
+    "sha256": "0c612d341099fbb07f94fb1d61d998515208178074239e1d89acbb69aee937d7",
+    "bytes": 47,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-step-zero/proton72.dat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-step-zero/reference/Cyclotron-Coasting.stat",
+    "sha256": "d128fab7ff24b66aa2506189421240720756f0be038c332bccdfe297516acca8",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-step-zero/reference/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-step-zero/reference/Cyclotron-Coasting.stat.md5",
+    "sha256": "07b749faf92b532a9ce8ec49d374a9ce02b44f39a2b748d9cd8f143a73d1b6fd",
+    "bytes": 58,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/coasting-fix-20261023/integration-verified/reject-step-zero/reference/cyclotron-coasting.stat.md5"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/reject-step-zero/run.log",
+    "sha256": "71443b3d4ed0c3fb16c97151324d2de6d85b4acadbc6d85144f6ac1d445d0733",
+    "bytes": 3135,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/integration-verified/report.json",
+    "sha256": "6d85fdbd1fd9635cb8bd4bbd4c9ee15c974652c55fbb09616763241e0408bacd",
+    "bytes": 1267,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/integration-verified/report.json"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/opalx-before",
+    "sha256": "2f7bf515102cc5d3703ce0640e08190478c99aa15773dff2af8474a11bf8cb8c",
+    "bytes": 15000376,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/run_case.py",
+    "sha256": "950cdd713340ad4fe39cdca5cbcb557cb68f0abdda31cfd54b16e4d7f99ffe25",
+    "bytes": 1533,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/run_case.py"
+  },
+  {
+    "original": "tmp/coasting-fix-20261023/summary.json",
+    "sha256": "6171060a1a2cb74d60e09fc7a7a117ba05f9f8a37f1220cda8adaa6452fa4a44",
+    "bytes": 576,
+    "disposition": "retained-text",
+    "archive": "local/tmp/coasting-fix-20261023/summary.json"
+  },
+  {
+    "original": "tmp/consolidation-20261025/__pycache__/compare_consolidation.cpython-311.pyc",
+    "sha256": "f58ddd14985b59b1dbc4c9c3f3e95e173da6d4f9768b897476efeac60850f58e",
+    "bytes": 33680,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/acceleration.h5",
+    "sha256": "412366efe6da9de844aa4f4aed9f165b775b89c2d2843c6a85a14446cef2ae29",
+    "bytes": 40497348,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/acceleration.in",
+    "sha256": "8e5a96bde740d40d82a2a42c92e53688fd4bb32afbf80a0cb2da3a457f055404",
+    "bytes": 3454,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/accelerating-pic-8-580/acceleration.in"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/acceleration.stat",
+    "sha256": "1a25c35a1088510f42a24968af1540311e092c796e47190d31da9b58c39e1dce",
+    "bytes": 1894822,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/bunch.dat",
+    "sha256": "e1fdc4c7c113bf30aef627efd31b2da02858f1124e09d01ff5bd40ddb393a27b",
+    "bytes": 606199,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/accelerating-pic-8-580/bunch.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/data/acceleration_3D.opal",
+    "sha256": "2bd3384dba70b1e0f20a2cb54e7be7d67d7ac03a054c60e789e927db89f8f4ad",
+    "bytes": 3312,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/accelerating-pic-8-580/data/acceleration_3d.opal"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/data/acceleration_DesignPath.dat",
+    "sha256": "cddf9e9c5b495a01b8498d09f1a140de162f8181438e20ad8b82d28c81890f65",
+    "bytes": 288628,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/accelerating-pic-8-580/data/acceleration_designpath.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/data/acceleration_ElementPositions.py",
+    "sha256": "95f270c70195cacf5ad144831ebc4c5c932309bf5c4b73b6b75b976f73f56973",
+    "bytes": 25883,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/accelerating-pic-8-580/data/acceleration_elementpositions.py"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/data/acceleration_ElementPositions.sdds",
+    "sha256": "644f0b52f96a66759c61cd0724112df2c46d2e9d7309765e51aa4e2af4e3bab4",
+    "bytes": 7794,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/accelerating-pic-8-580/data/acceleration_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/data/acceleration_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/accelerating-pic-8-580/data/acceleration_elementpositions.txt"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/launch.json",
+    "sha256": "36c4969aa49c32961bc23481bf568eabcd0fea443ab47fdb2cda72c8531003f7",
+    "bytes": 985,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/accelerating-pic-8-580/launch.json"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/radial.h5",
+    "sha256": "354c45aa77fa9d0ce789dcc0201f88ea30efd501fd5e1f9b5046e9472f6febce",
+    "bytes": 74640623,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/radial.hist",
+    "sha256": "da4353845ffce54204f6fcf33c1441f860d7106c4abf87b69b1671aa2516a69e",
+    "bytes": 72335,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/accelerating-pic-8-580/radial.hist"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/radial.peaks",
+    "sha256": "160bbe2311f9031771a1763e0218cd4b33ee81a8386661d9c48f8c7c7c86ac43",
+    "bytes": 3535,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/accelerating-pic-8-580/radial.peaks"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/accelerating-pic-8-580/rffield1.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/accelerating-pic-8-580/rffield2.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/run.log",
+    "sha256": "e56d78a46c60b55a385ee586455d1d765cc482548cc41eecd14651d8ae121d3a",
+    "bytes": 161693,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/accelerating-pic-8-580/run.log"
+  },
+  {
+    "original": "tmp/consolidation-20261025/accelerating-pic-8-580/timing.dat",
+    "sha256": "bed0317219055f49f6ed92d8a3526fea874f4f181247fdef53b955364d195051",
+    "bytes": 2783,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/accelerating-pic-8-580/timing.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/Cyclotron-RF-Stop.h5",
+    "sha256": "092bbcbf213ec37e7a7135e667043634a4a9477010db005c18369443a2e44fde",
+    "bytes": 30909,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/Cyclotron-RF-Stop.in",
+    "sha256": "f11be86f9527274c0110b9e7a28b96b71d01c32b7f2fdde192889f152d315b24",
+    "bytes": 3373,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/Cyclotron-RF-Stop.stat",
+    "sha256": "03791118320330644e55491489038e6611d5f1299a762cd10ab55d77ad58f459",
+    "bytes": 7837,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/bunch.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "8c6bcdb4a2cc4306ae8f5682672b152fa2fde850381f0a6a9b38be3ace074700",
+    "bytes": 3148,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "84734f16cf9c5c4fd914be8e6233dfbb397c21240d943b794bee86816361019a",
+    "bytes": 290567,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "46844f6015a89ca261653eb23437c40393917cc6fc86a181569a01291b4d98f9",
+    "bytes": 7799,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/proton.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/rffield1.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/rffield2.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/run.log",
+    "sha256": "b09fc5961b1f677d00c91c4a38ee438541f2e5f5bd08289044897ec0053502c7",
+    "bytes": 24968,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/run.log"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-one/timing.dat",
+    "sha256": "b39677fecfe8e6d52d6105f99a93f98b0ed3a377928f448a2d3b933fd7fd30fd",
+    "bytes": 2783,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-one/timing.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/Cyclotron-RF-Stop.h5",
+    "sha256": "656e02a3523c3bc0370521e0caf7301018eea79a543df047706692755304dea0",
+    "bytes": 30909,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/Cyclotron-RF-Stop.in",
+    "sha256": "f11be86f9527274c0110b9e7a28b96b71d01c32b7f2fdde192889f152d315b24",
+    "bytes": 3373,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/Cyclotron-RF-Stop.stat",
+    "sha256": "545a6957206ba656b576d4ad354daa3e631debf51624629703691fbf98a5e68d",
+    "bytes": 7837,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/bunch.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "8c6bcdb4a2cc4306ae8f5682672b152fa2fde850381f0a6a9b38be3ace074700",
+    "bytes": 3148,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "ee690b8fadab1ce99725bee6c770bc5c79e7396634411623f5632d4f0eea1091",
+    "bytes": 288633,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "3a6b8ae3a99c77e280830f67f9c8bc74d2273518343902c1192e6b92ee57d8a7",
+    "bytes": 8470,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/proton.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/rffield1.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/rffield2.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/run.log",
+    "sha256": "3fbac4f2fa6df009769d02057d735695c992d151b1aebbfa41b931376ed8dcb3",
+    "bytes": 32335,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/run.log"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/charged-two/timing.dat",
+    "sha256": "4117cdf341d3bb2429c2a720cd7ddb7c128138a4229990915ac25f9f593ceaa2",
+    "bytes": 3711,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/charged-two/timing.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/Cyclotron-RF-Stop.h5",
+    "sha256": "1c14d4b1ab67ac7c705906f79ceb8088d1df1a4a544a62c7b849bb3be48c6f51",
+    "bytes": 30909,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/Cyclotron-RF-Stop.in",
+    "sha256": "7f0e20887e9fd94ff3d24c996b6557ac3ef4e2cb6e7f8d90f87c7a725b0f1d09",
+    "bytes": 3373,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/Cyclotron-RF-Stop.stat",
+    "sha256": "b92a14c8b2441c2a460b13878982ed8c6ece6ed4f1da279fd4ddfe149a8b33c6",
+    "bytes": 7838,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/bunch.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "a91fcc6c5c36425033a0e00fdb5a60aa4be2c65ebdeaca5ca5e7d2d132655737",
+    "bytes": 3148,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "84734f16cf9c5c4fd914be8e6233dfbb397c21240d943b794bee86816361019a",
+    "bytes": 290567,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "46844f6015a89ca261653eb23437c40393917cc6fc86a181569a01291b4d98f9",
+    "bytes": 7799,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/proton.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/rffield1.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/rffield2.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/run.log",
+    "sha256": "52f12e5660c8a3a520cadf8649183356d57774e11a9bb45d6cf5790b5be76b01",
+    "bytes": 24984,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/run.log"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/near-zero/timing.dat",
+    "sha256": "0110a89845c55b930444546fda6e43334930686ebf53810a9ddee964baedc7c1",
+    "bytes": 2783,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/near-zero/timing.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/Cyclotron-RF-Stop.h5",
+    "sha256": "8ae5a2ca20460f9c5ee04ff7bd737d1182c97d321510709a1d7fb2a2099eb8c7",
+    "bytes": 30909,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/Cyclotron-RF-Stop.in",
+    "sha256": "0eafda92517b6c47a7c094ef31a03445dd738c60ba7a7db6bf28d37c1a4c5222",
+    "bytes": 3242,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/none/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/none/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/none/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/Cyclotron-RF-Stop.stat",
+    "sha256": "faa0c3ec349ee0186824a37b2b11e6032f65943ec65c7dbb49761c4417f840b4",
+    "bytes": 7838,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/none/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/none/bunch.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "cacc28a404387db3f057cebca6c7418049ce39dfdde24e46262d66a2dfdbda41",
+    "bytes": 3017,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/none/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "84734f16cf9c5c4fd914be8e6233dfbb397c21240d943b794bee86816361019a",
+    "bytes": 290567,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/none/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/none/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "46844f6015a89ca261653eb23437c40393917cc6fc86a181569a01291b4d98f9",
+    "bytes": 7799,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/none/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/none/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/none/proton.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/none/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/none/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/none/rffield1.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/none/rffield2.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/run.log",
+    "sha256": "4ea9be5ba1bdad242ae3983a667dfdb1434f202f55f5e818aa6f96428e7e127f",
+    "bytes": 15305,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/none/run.log"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/none/timing.dat",
+    "sha256": "35b9b4742bfa4de3958636c28e9697185b1087ec7b091db84fdc54529bc9e39d",
+    "bytes": 1217,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/bunch-integration/none/timing.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/bunch-integration/report.json",
+    "sha256": "56addc952b6b52a14438e5e31ec83130fa28fd2c4f7713802631190e6eabfeb2",
+    "bytes": 641,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/bunch-integration/report.json"
+  },
+  {
+    "original": "tmp/consolidation-20261025/check_repeatability.py",
+    "sha256": "905726e21ca18e3a443bfdc106f177751f0b4f0390efd3b1b7771b6b28ffae43",
+    "bytes": 3774,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/check_repeatability.py"
+  },
+  {
+    "original": "tmp/consolidation-20261025/compare_consolidation.py",
+    "sha256": "2989a928cd13c974ffa9e0b6c6c039a560f180dee7031516a2a3e05594efa25a",
+    "bytes": 18319,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/compare_consolidation.py"
+  },
+  {
+    "original": "tmp/consolidation-20261025/focused-tests.log",
+    "sha256": "be368df64cf96b613260c11fd1eaedf2594bee2a9419a4210c94afed19e31302",
+    "bytes": 1367,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/focused-tests.log"
+  },
+  {
+    "original": "tmp/consolidation-20261025/opalx-consolidated",
+    "sha256": "ff839a2b4891fdc6c18f6f41ebde16fa43a7e7403fba89bece938df61656f207",
+    "bytes": 15143768,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/parity-report.json",
+    "sha256": "d99fc58bccfa099e5ca1d79c528821c293297381bd46f1c8dbda488cb56f0fdb",
+    "bytes": 7678110,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/physical-differences.json",
+    "sha256": "36e7b6c447ab6192e04893980c6a466639cad5febfd0ed0856fd82062d91ead3",
+    "bytes": 299088,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/physical-differences.json"
+  },
+  {
+    "original": "tmp/consolidation-20261025/physical_differences.py",
+    "sha256": "700a46768eb6a571909834b92ca34a016b83925dce20638bcb4ad242f2e57ea4",
+    "bytes": 12961,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/physical_differences.py"
+  },
+  {
+    "original": "tmp/consolidation-20261025/probe-integration/Cyclotron-Coasting-ascii/Cyclotron-Coasting.h5",
+    "sha256": "e20f429f3a593abf2abe915e018b6ecb0ba659e5e77f0d2f389ae27e107eea02",
+    "bytes": 14275,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/probe-integration/Cyclotron-Coasting-ascii/Cyclotron-Coasting.in",
+    "sha256": "39fdd120f305fcd8e8bfb8201d1ee2d8413f112a6ac792c0144ed885bb826cef",
+    "bytes": 3077,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/probe-integration/cyclotron-coasting-ascii/cyclotron-coasting.in"
+  },
+  {
+    "original": "tmp/consolidation-20261025/probe-integration/Cyclotron-Coasting-ascii/Cyclotron-Coasting.local",
+    "sha256": "8df3114b67fb9f49c064b7056e8941bae43c1d6d53213ef8beffc41b1434c077",
+    "bytes": 224,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/probe-integration/cyclotron-coasting-ascii/cyclotron-coasting.local"
+  },
+  {
+    "original": "tmp/consolidation-20261025/probe-integration/Cyclotron-Coasting-ascii/Cyclotron-Coasting.rt",
+    "sha256": "8da27b00f0d4127c135d322b391c1b984423b61928531fa3c91a7620fc772ab6",
+    "bytes": 741,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/probe-integration/cyclotron-coasting-ascii/cyclotron-coasting.rt"
+  }
+]

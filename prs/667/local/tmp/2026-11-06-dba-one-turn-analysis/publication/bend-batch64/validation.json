@@ -1,0 +1,119 @@
+{
+  "completed": true,
+  "audited_snapshots": 100,
+  "all_particles_retained": true,
+  "charge_C": 1e-11,
+  "longitudinal": "OPEN",
+  "batch_size": 64,
+  "max_difference_percent_reference_peak": 6.58108035691068e-07,
+  "comparisons": [
+    {
+      "reference": "Preserved A100 serial",
+      "field": "sigma_u_m",
+      "max_absolute_difference": 5.682832676656702e-13,
+      "max_difference_percent_reference_peak": 5.682903713397102e-09
+    },
+    {
+      "reference": "Preserved A100 serial",
+      "field": "sigma_y_m",
+      "max_absolute_difference": 3.56624452191312e-14,
+      "max_difference_percent_reference_peak": 6.652850032282404e-11
+    },
+    {
+      "reference": "Preserved A100 serial",
+      "field": "sigma_s_m",
+      "max_absolute_difference": 2.382538610845586e-12,
+      "max_difference_percent_reference_peak": 1.650283807740191e-10
+    },
+    {
+      "reference": "Preserved A100 serial",
+      "field": "emit_n_u_m",
+      "max_absolute_difference": 1.5841966636220105e-18,
+      "max_difference_percent_reference_peak": 1.7527022805997724e-08
+    },
+    {
+      "reference": "Preserved A100 serial",
+      "field": "emit_n_y_m",
+      "max_absolute_difference": 5.083438454444632e-19,
+      "max_difference_percent_reference_peak": 1.9088163782823192e-08
+    },
+    {
+      "reference": "Preserved A100 serial",
+      "field": "emit_sE_m_eV",
+      "max_absolute_difference": 6.092726323458919e-10,
+      "max_difference_percent_reference_peak": 2.640336296158636e-08
+    },
+    {
+      "reference": "Published CPU ORIGINAL",
+      "field": "sigma_u_m",
+      "max_absolute_difference": 1.5899042499212257e-11,
+      "max_difference_percent_reference_peak": 1.5899241240967477e-07
+    },
+    {
+      "reference": "Published CPU ORIGINAL",
+      "field": "sigma_y_m",
+      "max_absolute_difference": 1.4769331591057977e-12,
+      "max_difference_percent_reference_peak": 2.7552274541971817e-09
+    },
+    {
+      "reference": "Published CPU ORIGINAL",
+      "field": "sigma_s_m",
+      "max_absolute_difference": 2.5297541839108817e-12,
+      "max_difference_percent_reference_peak": 1.7522538137530406e-10
+    },
+    {
+      "reference": "Published CPU ORIGINAL",
+      "field": "emit_n_u_m",
+      "max_absolute_difference": 5.94837225189907e-17,
+      "max_difference_percent_reference_peak": 6.58108035691068e-07
+    },
+    {
+      "reference": "Published CPU ORIGINAL",
+      "field": "emit_n_y_m",
+      "max_absolute_difference": 3.425245108355771e-18,
+      "max_difference_percent_reference_peak": 1.2861695929220376e-07
+    },
+    {
+      "reference": "Published CPU ORIGINAL",
+      "field": "emit_sE_m_eV",
+      "max_absolute_difference": 1.7054735401700327e-09,
+      "max_difference_percent_reference_peak": 7.390818913667038e-08
+    },
+    {
+      "reference": "Current CPU",
+      "field": "sigma_u_m",
+      "max_absolute_difference": 2.4476997685651813e-11,
+      "max_difference_percent_reference_peak": 2.44773036538598e-07
+    },
+    {
+      "reference": "Current CPU",
+      "field": "sigma_y_m",
+      "max_absolute_difference": 1.297104784692138e-12,
+      "max_difference_percent_reference_peak": 2.4197565690945037e-09
+    },
+    {
+      "reference": "Current CPU",
+      "field": "sigma_s_m",
+      "max_absolute_difference": 2.972067036921544e-12,
+      "max_difference_percent_reference_peak": 2.0586252345394267e-10
+    },
+    {
+      "reference": "Current CPU",
+      "field": "emit_n_u_m",
+      "max_absolute_difference": 4.387826708582451e-17,
+      "max_difference_percent_reference_peak": 4.85454490546005e-07
+    },
+    {
+      "reference": "Current CPU",
+      "field": "emit_n_y_m",
+      "max_absolute_difference": 5.465611613875769e-18,
+      "max_difference_percent_reference_peak": 2.0523212934943348e-07
+    },
+    {
+      "reference": "Current CPU",
+      "field": "emit_sE_m_eV",
+      "max_absolute_difference": 5.837885730386461e-10,
+      "max_difference_percent_reference_peak": 2.5298988939586295e-08
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "base_commit": "fd6ba8dc5c952ce034869dc40e963ecabef7cfa8",
+  "source_file_count": 982,
+  "source_manifest_sha256": "01056056e3843741ab5fc50a5118cdcf75e2328dc367bc5e4f2ea64051b69545",
+  "patch_sha256": "ea43305c4f6fdb1f3c1edc2910d82231d10eebccfbded480f8f5d2e113cea710",
+  "new_files": {
+    "src/SpaceCharge/FFT2D5/FFT2D5FreeSpace.cpp": "e8db67d653caeddba1cbab26ad70ad7a059011da27b4cd48876cda9a7aec08d0",
+    "src/SpaceCharge/FFT2D5/FFT2D5FreeSpace.h": "1c311451d6524fd6f03e3a97ca08b341fe74cfed0f4a1c41b16a3df9c8ffbc65",
+    "src/SpaceCharge/FFT2D5/FFT2D5FreeSpaceKernel.h": "2143ae7d2502b077f1e80b68e8b237955c415cab2a64cae29b81c41cc14b2a92",
+    "src/SpaceCharge/FFT2D5/FFT2D5Geometry.cpp": "d314a6aaff7f3f842c3b0f0f2688bf9942bbb3614df1a537b41dd488bd12ff6a",
+    "src/SpaceCharge/FFT2D5/FFT2D5Geometry.h": "ca0f6c80534e866ebc6d3756e9d0f62f6d7ca2c337fc04fd02c161eadbfd8531",
+    "unit_tests/SpaceCharge/TestFFT2D5FreeSpace.cpp": "59bb4cddfc15c7ecc8abcfceb636025a1b4b3cfc8c77f25e5235d42c4cb80c45",
+    "unit_tests/SpaceCharge/TestFFT2D5Geometry.cpp": "868fff17d935e5475643b2464a6d9fd48c24195736776d902b6231f03404171c"
+  },
+  "build_command": "cmake --build build-omp --target opalx_exe -j4",
+  "note": "Full source hash manifest preserves unrelated FFA changes. Auxiliary patch changes only no-emitter checkpoint Q/M preservation.",
+  "auxiliary_patch_sha256": "07efb78bd38c16ef5ffc7d66894d66fe1da937b37b2d8a0b249c1955bdcd4926"
+}

@@ -1,0 +1,34 @@
+71: Test command: /opt/psi/Compiler/openmpi/5.0.10_slurm/gcc/14.3.0/bin/mpiexec "-n" "1" "--bind-to" "none" "/data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestLossDataSink"
+71: [ RUN      ] LossDataSinkTest.EmptySinkDestructionIsRankLocal
+71: [       OK ] LossDataSinkTest.EmptySinkDestructionIsRankLocal (2 ms)
+71: [ RUN      ] LossDataSinkTest.EmptySinkUnwindingIsRankLocal
+71: [       OK ] LossDataSinkTest.EmptySinkUnwindingIsRankLocal (1 ms)
+71: [  PASSED  ] 15 tests.
+72: Test command: /opt/psi/Compiler/openmpi/5.0.10_slurm/gcc/14.3.0/bin/mpiexec "-n" "2" "--bind-to" "none" "/data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestLossDataSinkMPI" "--gtest_filter=LossDataSinkTest.EmptySinkDestructionIsRankLocal:LossDataSinkTest.EmptySinkUnwindingIsRankLocal"
+72: Note: Google Test filter = LossDataSinkTest.EmptySinkDestructionIsRankLocal:LossDataSinkTest.EmptySinkUnwindingIsRankLocal
+72: Note: Google Test filter = LossDataSinkTest.EmptySinkDestructionIsRankLocal:LossDataSinkTest.EmptySinkUnwindingIsRankLocal
+72: [ RUN      ] LossDataSinkTest.EmptySinkDestructionIsRankLocal
+72: [ RUN      ] LossDataSinkTest.EmptySinkDestructionIsRankLocal
+72: [       OK ] LossDataSinkTest.EmptySinkDestructionIsRankLocal (4 ms)
+72: [ RUN      ] LossDataSinkTest.EmptySinkUnwindingIsRankLocal
+72: [       OK ] LossDataSinkTest.EmptySinkDestructionIsRankLocal (3 ms)
+72: [ RUN      ] LossDataSinkTest.EmptySinkUnwindingIsRankLocal
+72: [       OK ] LossDataSinkTest.EmptySinkUnwindingIsRankLocal (0 ms)
+72: [       OK ] LossDataSinkTest.EmptySinkUnwindingIsRankLocal (0 ms)
+72: [  PASSED  ] 2 tests.
+72: [  PASSED  ] 2 tests.
+79: Test command: /opt/psi/Compiler/openmpi/5.0.10_slurm/gcc/14.3.0/bin/mpiexec "-n" "1" "--bind-to" "none" "/data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestCoordinateSystemTrafo"
+79: [  PASSED  ] 8 tests.
+97: Test command: /opt/psi/Compiler/openmpi/5.0.10_slurm/gcc/14.3.0/bin/mpiexec "-n" "1" "--bind-to" "none" "/data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestCyclotronProbe"
+97: [ RUN      ] CyclotronProbeTest.CapacityGrowthPreservesArmedHistoryAndNewParticleIds
+97: [       OK ] CyclotronProbeTest.CapacityGrowthPreservesArmedHistoryAndNewParticleIds (14 ms)
+97: [  PASSED  ] 10 tests.
+98: Test command: /opt/psi/Compiler/openmpi/5.0.10_slurm/gcc/14.3.0/bin/mpiexec "-n" "2" "--bind-to" "none" "/data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestCyclotronProbeMPI"
+98: [ RUN      ] CyclotronProbeTest.CapacityGrowthPreservesArmedHistoryAndNewParticleIds
+98: [ RUN      ] CyclotronProbeTest.CapacityGrowthPreservesArmedHistoryAndNewParticleIds
+98: [       OK ] CyclotronProbeTest.CapacityGrowthPreservesArmedHistoryAndNewParticleIds (24 ms)
+98: [       OK ] CyclotronProbeTest.CapacityGrowthPreservesArmedHistoryAndNewParticleIds (24 ms)
+98: [  PASSED  ] 10 tests.
+98: [  PASSED  ] 10 tests.
+102: Test command: /opt/psi/Compiler/openmpi/5.0.10_slurm/gcc/14.3.0/bin/mpiexec "-n" "1" "--bind-to" "none" "/data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestParticleContainer"
+102: [  PASSED  ] 21 tests.

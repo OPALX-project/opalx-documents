@@ -1,0 +1,2008 @@
+[
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/baseline-one/radial.h5",
+    "sha256": "1b82d421321293fb3437f688737790333ee69f41fcc080e8a186e567f29f3a40",
+    "bytes": 818121,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/baseline-one/radial.hist",
+    "sha256": "b171bfe53551d894f0926eaf95dc0992cb80757c6c960591623eff8bd3e50f07",
+    "bytes": 56361,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/repeatability-target-guard/baseline-one/radial.hist"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/baseline-one/radial.peaks",
+    "sha256": "f30c136b798115459269997643b3ecc1a7552eb20195be0812ab55f50ecf279f",
+    "bytes": 56,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/repeatability-target-guard/baseline-one/radial.peaks"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/baseline-one/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/repeatability-target-guard/baseline-one/rffield1.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/baseline-one/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/repeatability-target-guard/baseline-one/rffield2.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/baseline-one/run.log",
+    "sha256": "ac9a28b2b933d2718199ec643fe2d9707b63074daa0cff3ac5f13e97d13c4e2b",
+    "bytes": 10537,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/acceleration.h5",
+    "sha256": "d758ce3b31464876463c1e00feb87c7e89f6c9d101e46e055b2d4b4cf4678ad2",
+    "bytes": 610319,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/acceleration.in",
+    "sha256": "aebbb6e9288a50ea0b494f68a67e1af58418b04f9b2ad1dac2148aba06364b38",
+    "bytes": 3452,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/acceleration.in"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/acceleration.stat",
+    "sha256": "03caaa712743cc5e90cf0a63f91e932992ac7a501ed7d91648f8944b87455f5f",
+    "bytes": 34612,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/acceleration.stat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/bunch.dat",
+    "sha256": "e1fdc4c7c113bf30aef627efd31b2da02858f1124e09d01ff5bd40ddb393a27b",
+    "bytes": 606199,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/bunch.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/data/acceleration_3D.opal",
+    "sha256": "4015cbe19ab2ac74d9268ef6d5dac5e8412cedfa7124fe07f7588b4064c188a6",
+    "bytes": 3310,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/data/acceleration_3d.opal"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/data/acceleration_DesignPath.dat",
+    "sha256": "a686e7758d2d404ddebe3c3c683b04a81c164377aa4db7d0e83a95f2dee8f3bf",
+    "bytes": 288628,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/data/acceleration_designpath.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/data/acceleration_ElementPositions.py",
+    "sha256": "95f270c70195cacf5ad144831ebc4c5c932309bf5c4b73b6b75b976f73f56973",
+    "bytes": 25883,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/data/acceleration_elementpositions.py"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/data/acceleration_ElementPositions.sdds",
+    "sha256": "644f0b52f96a66759c61cd0724112df2c46d2e9d7309765e51aa4e2af4e3bab4",
+    "bytes": 7794,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/data/acceleration_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/data/acceleration_ElementPositions.txt",
+    "sha256": "975d2e73375c29179697feb231ee6d988b3f3317cb3eefafc90a35965473bced",
+    "bytes": 2210,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/data/acceleration_elementpositions.txt"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/launch.json",
+    "sha256": "8b7974db7e6e5ca6fde89b127379b6d80ee36f4ee0e355a323f4d4d56d3beaf6",
+    "bytes": 370,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/launch.json"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/radial.h5",
+    "sha256": "143d262229bc9c4ba82454aecc89e105394e28cc6242e62f0d007f000ad6691d",
+    "bytes": 818121,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/radial.hist",
+    "sha256": "b171bfe53551d894f0926eaf95dc0992cb80757c6c960591623eff8bd3e50f07",
+    "bytes": 56361,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/radial.hist"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/radial.peaks",
+    "sha256": "f30c136b798115459269997643b3ecc1a7552eb20195be0812ab55f50ecf279f",
+    "bytes": 56,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/radial.peaks"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/rffield1.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/rffield2.dat"
+  },
+  {
+    "original": "tmp/consolidation-20261025/repeatability-target-guard/consolidated-one/run.log",
+    "sha256": "214603cad585fbaadeec19d235e9007469c22a94f702e338166da47c962c08b8",
+    "bytes": 10495,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/consolidation-20261025/run_long_pic.py",
+    "sha256": "6ee978bcf6329c6003b11276e3d664735b0c7dc5ccd5fd261f9ec760d53a1a35",
+    "bytes": 1496,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/run_long_pic.py"
+  },
+  {
+    "original": "tmp/consolidation-20261025/short-parity-report.json",
+    "sha256": "7d7c4d0a50d569e53f591e58e2a4b1b99fd88ed7d6208336fbd78fce1eefba8a",
+    "bytes": 8831,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/short-parity-report.json"
+  },
+  {
+    "original": "tmp/consolidation-20261025/source-snapshot/src/Algorithms/CMakeLists.txt",
+    "sha256": "58de1302090538449ffa97707c327ab619ac68f3d80329a7e38572d5d384de95",
+    "bytes": 1718,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/source-snapshot/src/algorithms/cmakelists.txt"
+  },
+  {
+    "original": "tmp/consolidation-20261025/source-snapshot/src/Algorithms/DeviceExternalField.cpp",
+    "sha256": "0989713c35fb29b608a844ed47f5fdc35a9eb599f27d747bfc302e44576750a6",
+    "bytes": 9351,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/source-snapshot/src/algorithms/deviceexternalfield.cpp"
+  },
+  {
+    "original": "tmp/consolidation-20261025/source-snapshot/src/Algorithms/DeviceExternalField.h",
+    "sha256": "dd605553e5c94cb23125f1ad510813e4c14314c2272dc1fe3240d4eb02526a8c",
+    "bytes": 17480,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/source-snapshot/src/algorithms/deviceexternalfield.h"
+  },
+  {
+    "original": "tmp/consolidation-20261025/source-snapshot/src/Algorithms/ParallelTracker.cpp",
+    "sha256": "94967941945b469d2fa9a97a34600cd6fa443edb0832b104ed30dfddd5799dbe",
+    "bytes": 127221,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/source-snapshot/src/algorithms/paralleltracker.cpp"
+  },
+  {
+    "original": "tmp/consolidation-20261025/source-snapshot/src/Algorithms/ParallelTracker.h",
+    "sha256": "9d3a32fec4c78d85ed3d7a7bf74f9d588d5a1ed5fa2887d9ff00f6702380aa6d",
+    "bytes": 26925,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/source-snapshot/src/algorithms/paralleltracker.h"
+  },
+  {
+    "original": "tmp/consolidation-20261025/source-snapshot/src/Algorithms/TrackReferenceStep.h",
+    "sha256": "2b42a8f29c4bc05f60e7d234d434e6d059ca1b7d371c72e23c2e225c1bfe9f6b",
+    "bytes": 10563,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/source-snapshot/src/algorithms/trackreferencestep.h"
+  },
+  {
+    "original": "tmp/consolidation-20261025/source-snapshot/unit_tests/AbsBeamline/TestCyclotronSector.cpp",
+    "sha256": "6487698b924379c6b6f0fa94aca195eef99cc2882a37ef473c78a63bf1e9f86a",
+    "bytes": 17013,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/source-snapshot/unit_tests/absbeamline/testcyclotronsector.cpp"
+  },
+  {
+    "original": "tmp/consolidation-20261025/source-snapshot/unit_tests/Algorithms/CMakeLists.txt",
+    "sha256": "8530eb748dad997fec23a6142789e2385969571d72546b13fe24283022495186",
+    "bytes": 1449,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/source-snapshot/unit_tests/algorithms/cmakelists.txt"
+  },
+  {
+    "original": "tmp/consolidation-20261025/source-snapshot/unit_tests/Algorithms/TestRFEventStep.cpp",
+    "sha256": "b00c147d313a13a7e9b98b1c3725702d1cade7580faa0adc0360746bf49c62ce",
+    "bytes": 10394,
+    "disposition": "retained-text",
+    "archive": "local/tmp/consolidation-20261025/source-snapshot/unit_tests/algorithms/testrfeventstep.cpp"
+  },
+  {
+    "original": "tmp/ffa-probe-design-20261107/PERFORMANCE.md",
+    "sha256": "8287ad32922992b7c7a11a3672b64f1363881ffd21102248aa0a384f6549c901",
+    "bytes": 6326,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probe-design-20261107/performance.md"
+  },
+  {
+    "original": "tmp/ffa-probe-design-20261107/PLAN.md",
+    "sha256": "8bcafaabc537ab0aa7b8fd9cb2b47c4edb86ea2ebde0de4e3d1a8abc8c7bf371",
+    "bytes": 13574,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probe-design-20261107/plan.md"
+  },
+  {
+    "original": "tmp/ffa-probe-design-20261107/legacy-source/src/Algorithms/ParallelCyclotronTracker.cpp",
+    "sha256": "e79ff02c763b419b7ef07c06b579a4f76ba292d9a1d28ab939fb4d4b8296cfd0",
+    "bytes": 130087,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probe-design-20261107/legacy-source/src/algorithms/parallelcyclotrontracker.cpp"
+  },
+  {
+    "original": "tmp/ffa-probe-design-20261107/legacy-source/src/Classic/AbsBeamline/PluginElement.cpp",
+    "sha256": "e4ff954a0d7e2e401b84fcd066442e8c9329f664d1ab0189d951f37b99b3d843",
+    "bytes": 6705,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probe-design-20261107/legacy-source/src/classic/absbeamline/pluginelement.cpp"
+  },
+  {
+    "original": "tmp/ffa-probe-design-20261107/legacy-source/src/Classic/AbsBeamline/Probe.cpp",
+    "sha256": "28b4701cd53a7cdcebe4e92e52a1becbc5ea65c33e842deded9ffe0e446ca215",
+    "bytes": 4250,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probe-design-20261107/legacy-source/src/classic/absbeamline/probe.cpp"
+  },
+  {
+    "original": "tmp/ffa-probe-design-20261107/legacy-source/src/Classic/AbsBeamline/Ring.cpp",
+    "sha256": "780444916ccf1c306150def32c6a3f4a249d6b1150c687afafada25dfa2a8f46",
+    "bytes": 14991,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probe-design-20261107/legacy-source/src/classic/absbeamline/ring.cpp"
+  },
+  {
+    "original": "tmp/ffa-probe-design-20261107/legacy-source/src/Classic/Structure/LossDataSink.cpp",
+    "sha256": "e6282dd87c1e8157a20a344e3d8cb3f77b06e3a433bf53677be43acc5a3d5c7d",
+    "bytes": 30556,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probe-design-20261107/legacy-source/src/classic/structure/lossdatasink.cpp"
+  },
+  {
+    "original": "tmp/ffa-probe-design-20261107/legacy-source/src/Classic/Structure/PeakFinder.cpp",
+    "sha256": "ba143d5b3867d17aab86bc964c4ced64bb55890935c70100ad803cf71b7b2507",
+    "bytes": 5315,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probe-design-20261107/legacy-source/src/classic/structure/peakfinder.cpp"
+  },
+  {
+    "original": "tmp/ffa-probe-design-20261107/legacy-source/src/Elements/OpalProbe.cpp",
+    "sha256": "114a467afe492cc5ea8dce2c43267175681c4d1da1ad4d806f0cd726333d9aef",
+    "bytes": 3003,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probe-design-20261107/legacy-source/src/elements/opalprobe.cpp"
+  },
+  {
+    "original": "tmp/ffa-probe-design-20261107/legacy-source-manifest.json",
+    "sha256": "d50d9522264799ae3ce39b34317a9f4e38709775b92e7255566651d967aad3f0",
+    "bytes": 937,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probe-design-20261107/legacy-source-manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probe-design-20261107/pr667-evidence/files.json",
+    "sha256": "f631a54a0ea984aeb83c049882e907046a2627643a9d29592453d4fe0cdfc1e2",
+    "bytes": 368168,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probe-design-20261107/pr667-evidence/files.json"
+  },
+  {
+    "original": "tmp/ffa-probe-design-20261107/pr667-evidence/pr.json",
+    "sha256": "b71b08505ec023e156a861d2004c894851518e8e60319a279ffe88540bf5acf6",
+    "bytes": 40262,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probe-design-20261107/pr667-evidence/pr.json"
+  },
+  {
+    "original": "tmp/ffa-probe-design-20261107/pr667-evidence/src/PartBunch/ParticleContainer.hpp",
+    "sha256": "d050926b33dafa86ce4dd4ef892d0b843e150b0c9f1820e4a0cec3796adba68f",
+    "bytes": 43802,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probe-design-20261107/pr667-evidence/src/partbunch/particlecontainer.hpp"
+  },
+  {
+    "original": "tmp/ffa-probe-design-20261107/pr667-evidence/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp",
+    "sha256": "2c8cb2952bda07ac130ea482b1dd6347f1301ec231a577cfd8c3ef6690f767d7",
+    "bytes": 24936,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probe-design-20261107/pr667-evidence/src/spacecharge/fft2d5/fft2d5algorithm.cpp"
+  },
+  {
+    "original": "tmp/ffa-probe-design-20261107/pr667-evidence/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+    "sha256": "bcdf744fcebfbe75f51c1580e6f2b0baa45cc24a00b0d56a4309f714f6c423a9",
+    "bytes": 51411,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probe-design-20261107/pr667-evidence/src/spacecharge/fft2d5/fft2d5algorithm.h"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/PUBLISH.json",
+    "sha256": "511e5b64d563508c1cac3957e2bbdb430e67dc43ccdd8b52ac10518d90f7909a",
+    "bytes": 3032,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/publish.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/REPORT.md",
+    "sha256": "f8730a77ecb9b06120a57b7a8e6f42b0662a5ade9ee4419642d3847e55cb0e13",
+    "bytes": 11539,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/report.md"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/SCHOOL_COMPARISON.md",
+    "sha256": "f2f82cec7c45471835875519036dd261013416280487a0066da0b1f9398995c7",
+    "bytes": 7656,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/school_comparison.md"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/STATE.md",
+    "sha256": "9bd1c4f083db125f62ef7879b6bfe6904046be9329a7d2bd37ab84d15c49b0e1",
+    "bytes": 4856,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/state.md"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/__pycache__/check_school_probes.cpython-311.pyc",
+    "sha256": "1c8acc74a7f0171a540004656223c5c1c945bc1aa26af03c0965ec9844527fc3",
+    "bytes": 30401,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/REPORT.md",
+    "sha256": "c87b286cacc43ae97dec8c8871d7906f6a90db993f2f676a72139e10faeaffcc",
+    "bytes": 6691,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/report.md"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/STATE.md",
+    "sha256": "e9c382339edc410615ae33b99a126d0baeb6ab36eb17146bb862b9c5e507a841",
+    "bytes": 6693,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/state.md"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/__pycache__/audit_gpu.cpython-311.pyc",
+    "sha256": "06d1f2e3580a9f6401bdf9578a67bd5a3a639e526846bf8b955338c5c6b5c572",
+    "bytes": 11568,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/audit_gpu.py",
+    "sha256": "bb642c3119ad83221449db443d499d44244158e85b0d23d1ae1dd70f52a1186f",
+    "bytes": 3863,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/audit_gpu.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/gpu-rank-equivalence.json",
+    "sha256": "833808e85cc074fad1e2a02171f0f5c3cda0a8143d56bebf7096ba087763c925",
+    "bytes": 500,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/gpu-rank-equivalence.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/gpu-school-audit.json",
+    "sha256": "5b368cd530ad2a3f4c1101e18883b1a7b96917ca078743ce067ca517e66ecfff",
+    "bytes": 15424,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/gpu-school-audit.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/gpu-school-r1-audit.json",
+    "sha256": "14b1de021694e85a0df471cfc0a3ab4177a14440d26228c6d7dc6b241bb7761b",
+    "bytes": 7596,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/gpu-school-r1-audit.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/monitor_remote.py",
+    "sha256": "bc9edfaf001e783f16e1662e5b23148c72444a3d3a166c0a4c646fb06ad0273f",
+    "bytes": 4147,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/monitor_remote.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/native-log-audit.json",
+    "sha256": "8538dc6d45211dfe989af6de708ca8c043efc7a70b914fe66b931a11c26fb55c",
+    "bytes": 1170,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/native-log-audit.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/PROBE1.h5",
+    "sha256": "c3d551ef5110813ffe949b58a7658863aa15c68c6e6b7d26e5e2042a575eca50",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/PROBE10.h5",
+    "sha256": "b5aa80ff1475f061edc30ab698ba0179b9e8a7c40265bfbe43edbc68a6f65871",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/PROBE11.h5",
+    "sha256": "9fa5f41e2f5cf7830078f1a4244cc1ba439902052a684843e62ee05d8b5757a2",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/PROBE12.h5",
+    "sha256": "66e99a02aefbc8cdaed48274dc057a5347ce54a2581017e0274b062d4f398b95",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/PROBE13.h5",
+    "sha256": "4466f4dcc160f2ce9c5846518d9e0c49337a66fcfb75adcb663ff645c9c23f12",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/PROBE14.h5",
+    "sha256": "bbe6894083306fac52ea0c67b09c1ada654a48c9387d01f43a525e996cc55cbe",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/PROBE15.h5",
+    "sha256": "ec9a81a18faf3f559a08f9f8cb4005dfd40fa30d148f79866393eaeff9241266",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/PROBE16.h5",
+    "sha256": "fcfe583a36ecf44e479682db2b5d4ed4bc20faba064f56754935d804412fbf3a",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/PROBE2.h5",
+    "sha256": "91e329d165dfdf045cd971ad93b6b7ebb8cdb49116a29397f0f1c69bd0baa3b6",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/PROBE3.h5",
+    "sha256": "6a14f503a6858b257faf543aed14f887d366bc552db2362433deb154059dee56",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/PROBE4.h5",
+    "sha256": "db16d85c92c177c9bcf826c0d27d6da834fc7e017afd469eeb807a01f2076920",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/PROBE5.h5",
+    "sha256": "248d39099ce9d974a96adbc7b655e8286a7fa4cdb4fb1508acc10a213a6a88f8",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/PROBE6.h5",
+    "sha256": "5e1648c035432c944aa99026d3458d5509e8c626672c982a212af2a41983f67c",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/PROBE7.h5",
+    "sha256": "1088cc87a129cfdb4a50b17fc17cac8acc9a769e2d6bc92c43ac9677a74bd015",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/PROBE8.h5",
+    "sha256": "4f07ebd83f6538fa3a2c60e8a69570b905fe93bf94017d437268664f494d3936",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/PROBE9.h5",
+    "sha256": "4e600224aef5a1fe5209348366ef56aadf717a24c0ca9990a57327cc505972ee",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/data/school_3D.opal",
+    "sha256": "f95f8933fec5d4ed2afcb2ec7ff2ea888463ff1a61725db0c55bc6fec71a73c0",
+    "bytes": 48033,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/data/school_DesignPath.dat",
+    "sha256": "be339d668b5018e07e78d009e4b35e2ee7cecd22fbadd1adc6454d817642410b",
+    "bytes": 3407743,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/data/school_ElementPositions.sdds",
+    "sha256": "5192accc1786194f60cad459dfbe5b140ef0e22d75a2c0dac979a982012f650b",
+    "bytes": 102078,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/data/school_ElementPositions.txt",
+    "sha256": "ba33f2e4d4bfdbc138361e586fbd1d6ba07f982277dd510cf47bcaecb95fd803",
+    "bytes": 179775,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/gpu-mapping-rank0.json",
+    "sha256": "fd538b736cb375cdcf170cb522c968cc28827da20e5b13b5e0a4debbb66d475d",
+    "bytes": 391,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/gpu-mapping-rank0.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/inputs-after.sha256",
+    "sha256": "db0d4f027226307322c16320e5be20060a9889fef2738b5a06e7f7b2489848f5",
+    "bytes": 156,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/inputs-after.sha256"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/particles.dat",
+    "sha256": "65ca902e9907a3a48563ec34729429e71ea68433a6055ceef92b6caa60fa16d7",
+    "bytes": 67,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/run.log",
+    "sha256": "86b781d428df0c04fb8ba0df0acf2317b58e0002fccdb20abc75b72fda8028c2",
+    "bytes": 3804536,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/school.h5",
+    "sha256": "746930f9f9dcf16910bb25f0cb82257cbed24ba716c4e7992d56342c3e48c492",
+    "bytes": 14272,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/school.in",
+    "sha256": "31fee815416edc19edc318000be8a6dee28f1c2bc5df57f230cd189ede3729ea",
+    "bytes": 48105,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/school.stat",
+    "sha256": "372ba70b123dfa130f86385299c84374785da5de3a6f76a21bd355b523beb7fb",
+    "bytes": 7766,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/timing.dat",
+    "sha256": "e21db7bbde565b164802cdc67faf712aed0d4ed327435ef06a25f1f508fefdf1",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/partial-r1/gpu-school/r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/prepare_remote.py",
+    "sha256": "96f04923504457c253dd956fa9ff27f652b75e345c41598f76faf00078b9a99e",
+    "bytes": 3280,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/prepare_remote.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/rank_gpu.py",
+    "sha256": "c85f5645a444cfd5f6f2ddfea4d1adea535f86e76dd5ed38a046f12c9e986b43",
+    "bytes": 1712,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/rank_gpu.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote/junit.xml",
+    "sha256": "88509d499a5395d464c4c0d4e80e9bd4afb76a6b6c7ddeb12e1145ad76a6b381",
+    "bytes": 2885,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote/junit.xml"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote/source-verification.json",
+    "sha256": "313a1c9ac244687df3011056fc7de5cf71d13822ea5f892728cab12fdc0391ab",
+    "bytes": 171,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote/source-verification.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote/test-commands.log",
+    "sha256": "57ceb59dda3a3b784a9fc9fc9989cb5b4fac72722f105763aacfd29547aa0079",
+    "bytes": 1196,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote/test-commands.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote/tests.log",
+    "sha256": "8d3667b57a4cbd7c173d5386d7df54bb2090f49d6fce59e6c2c941d41a82ecb6",
+    "bytes": 9671,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote/tests.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/build/CMakeCache.txt",
+    "sha256": "551ccb2d2375656564f5fbecfd4138bf6ca7ba0d4fbdf1daad6944dbef989bc6",
+    "bytes": 125440,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/build/cmakecache.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/attempt1/job.log",
+    "sha256": "9431b3efe8ca8153768148fd4ed54d571679026a8d5569c550b06d8665226d21",
+    "bytes": 958,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/attempt1/job.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/attempt1/status.tsv",
+    "sha256": "398fb3a54009249fce0c5ea8904a66f3a854556252d8ffd7a962a18016c69491",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/attempt1/status.tsv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/attempt2/configure.log",
+    "sha256": "dd15fe0598cab89968ac41d0026bc7b691451f2969b70d03bf628def1c8e3d4f",
+    "bytes": 7687,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/attempt2/configure.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/attempt2/job.log",
+    "sha256": "aae6c143c4869337285ee945cefadebf45d7bbcca22ead580bf628166e968309",
+    "bytes": 8640,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/attempt2/job.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/attempt2/status.tsv",
+    "sha256": "d838f3cecb4bffcb5de39087bde5722fec1a72131166dec7ba68f6b6203cf6d7",
+    "bytes": 34,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/attempt2/status.tsv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/binaries.sha256",
+    "sha256": "9df1c7e30b8f307c103ab0dc8da54a8de45eb6c8bcd8ed462daa75dfc1348a05",
+    "bytes": 615,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/binaries.sha256"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/build.log",
+    "sha256": "be58eabb4304cf74124498d8bc38e28be697a279ace75118dfeb875e6877962a",
+    "bytes": 208879,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/build.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/configure.log",
+    "sha256": "f137bd28f86db9a6118ebebaef836be1d58de9d2eb8e40b55996936334a15b78",
+    "bytes": 20285,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/configure.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/dependency-sources.json",
+    "sha256": "0bcb06fabf4c6610ac28cfe7da8b6b7552215122cb447170742f62ed27154e55",
+    "bytes": 1340,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/dependency-sources.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/job.log",
+    "sha256": "5da6f2ff29fb16546781f14f63f4b85c82c075e676f71d445825df560a33db41",
+    "bytes": 239916,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/job.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/junit.xml",
+    "sha256": "88509d499a5395d464c4c0d4e80e9bd4afb76a6b6c7ddeb12e1145ad76a6b381",
+    "bytes": 2885,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/junit.xml"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/post-run-repositories.json",
+    "sha256": "e7ecca21bf0cbd2bba47eea88b860a759357b2df3bbf9e18f7db6470dce17b40",
+    "bytes": 661,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/post-run-repositories.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/rank_gpu.py",
+    "sha256": "c85f5645a444cfd5f6f2ddfea4d1adea535f86e76dd5ed38a046f12c9e986b43",
+    "bytes": 1712,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/rank_gpu.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/slurm-355067.out",
+    "sha256": "9431b3efe8ca8153768148fd4ed54d571679026a8d5569c550b06d8665226d21",
+    "bytes": 958,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/slurm-355067.out"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/slurm-355068.out",
+    "sha256": "aae6c143c4869337285ee945cefadebf45d7bbcca22ead580bf628166e968309",
+    "bytes": 8640,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/slurm-355068.out"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/slurm-355069.out",
+    "sha256": "5da6f2ff29fb16546781f14f63f4b85c82c075e676f71d445825df560a33db41",
+    "bytes": 239916,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/slurm-355069.out"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/slurm-school-355070.out",
+    "sha256": "7ae91d7a185b8e7bdeba8dbb0067ee9f51b16149f7c2bccd7c3557f740ef9c74",
+    "bytes": 1594,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/slurm-school-355070.out"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/source-manifest.json",
+    "sha256": "3ce9c13d5faa14afeb78f1853d8e88fb72450b57ad863a34f4602b81a777b82e",
+    "bytes": 116618,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/source-manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/source-verification.json",
+    "sha256": "313a1c9ac244687df3011056fc7de5cf71d13822ea5f892728cab12fdc0391ab",
+    "bytes": 171,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/source-verification.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/status.tsv",
+    "sha256": "c72f8d32f85867511f8fae0cd35c30a608917f484b5442254df39515a085b49e",
+    "bytes": 80,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/status.tsv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/submission-attempt2.json",
+    "sha256": "c39e827e51ce50ca01a15de4f071a6bc0c859e1f9bd074fff531225fc599bb2c",
+    "bytes": 345,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/submission-attempt2.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/submission-attempt3.json",
+    "sha256": "71128512b15058f3ec3757c0a309644d4912796964abb3ecd4d1744e59811577",
+    "bytes": 487,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/submission-attempt3.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/submission-school.json",
+    "sha256": "0e4458a7338687a9942d95b07cb47cad9c8cba9799c680e37212a9e493066977",
+    "bytes": 263,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/submission-school.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/submission.json",
+    "sha256": "51839578150b251ce839f254f119c1c1b59083b29a70aac6ed6867032b52db96",
+    "bytes": 223,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/submission.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/terminal-monitor.json",
+    "sha256": "9d244aa91c71b829d61b23f1e39e24ef7e0e880464ae3d57ab1009a3f66d7b3a",
+    "bytes": 88,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/terminal-monitor.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/test-commands.log",
+    "sha256": "57ceb59dda3a3b784a9fc9fc9989cb5b4fac72722f105763aacfd29547aa0079",
+    "bytes": 1196,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/test-commands.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/tests.log",
+    "sha256": "8d3667b57a4cbd7c173d5386d7df54bb2090f49d6fce59e6c2c941d41a82ecb6",
+    "bytes": 9671,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/evidence/tests.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/ffa-school-gpu-fixture-790abac19643.json",
+    "sha256": "5dab60addbab331d7f88961dbb9a4d0787b65ea701243f7175cfa9f25411b393",
+    "bytes": 478,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/ffa-school-gpu-fixture-790abac19643.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/fixture/cpu-reference-manifest.json",
+    "sha256": "2e598addaa2bcd69478841f59fa0bee9d907756e64be5fb9f2dda20faf0d3c62",
+    "bytes": 4631,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/fixture/cpu-reference-manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/fixture/particles.dat",
+    "sha256": "65ca902e9907a3a48563ec34729429e71ea68433a6055ceef92b6caa60fa16d7",
+    "bytes": 67,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/fixture/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/fixture/school.in",
+    "sha256": "31fee815416edc19edc318000be8a6dee28f1c2bc5df57f230cd189ede3729ea",
+    "bytes": 48105,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/fixture/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/job.log",
+    "sha256": "7ae91d7a185b8e7bdeba8dbb0067ee9f51b16149f7c2bccd7c3557f740ef9c74",
+    "bytes": 1594,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/job.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/PROBE1.h5",
+    "sha256": "c3d551ef5110813ffe949b58a7658863aa15c68c6e6b7d26e5e2042a575eca50",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/PROBE10.h5",
+    "sha256": "b5aa80ff1475f061edc30ab698ba0179b9e8a7c40265bfbe43edbc68a6f65871",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/PROBE11.h5",
+    "sha256": "9fa5f41e2f5cf7830078f1a4244cc1ba439902052a684843e62ee05d8b5757a2",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/PROBE12.h5",
+    "sha256": "66e99a02aefbc8cdaed48274dc057a5347ce54a2581017e0274b062d4f398b95",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/PROBE13.h5",
+    "sha256": "4466f4dcc160f2ce9c5846518d9e0c49337a66fcfb75adcb663ff645c9c23f12",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/PROBE14.h5",
+    "sha256": "bbe6894083306fac52ea0c67b09c1ada654a48c9387d01f43a525e996cc55cbe",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/PROBE15.h5",
+    "sha256": "ec9a81a18faf3f559a08f9f8cb4005dfd40fa30d148f79866393eaeff9241266",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/PROBE16.h5",
+    "sha256": "fcfe583a36ecf44e479682db2b5d4ed4bc20faba064f56754935d804412fbf3a",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/PROBE2.h5",
+    "sha256": "91e329d165dfdf045cd971ad93b6b7ebb8cdb49116a29397f0f1c69bd0baa3b6",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/PROBE3.h5",
+    "sha256": "6a14f503a6858b257faf543aed14f887d366bc552db2362433deb154059dee56",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/PROBE4.h5",
+    "sha256": "db16d85c92c177c9bcf826c0d27d6da834fc7e017afd469eeb807a01f2076920",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/PROBE5.h5",
+    "sha256": "248d39099ce9d974a96adbc7b655e8286a7fa4cdb4fb1508acc10a213a6a88f8",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/PROBE6.h5",
+    "sha256": "5e1648c035432c944aa99026d3458d5509e8c626672c982a212af2a41983f67c",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/PROBE7.h5",
+    "sha256": "1088cc87a129cfdb4a50b17fc17cac8acc9a769e2d6bc92c43ac9677a74bd015",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/PROBE8.h5",
+    "sha256": "4f07ebd83f6538fa3a2c60e8a69570b905fe93bf94017d437268664f494d3936",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/PROBE9.h5",
+    "sha256": "4e600224aef5a1fe5209348366ef56aadf717a24c0ca9990a57327cc505972ee",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/data/school_3D.opal",
+    "sha256": "f95f8933fec5d4ed2afcb2ec7ff2ea888463ff1a61725db0c55bc6fec71a73c0",
+    "bytes": 48033,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/data/school_DesignPath.dat",
+    "sha256": "be339d668b5018e07e78d009e4b35e2ee7cecd22fbadd1adc6454d817642410b",
+    "bytes": 3407743,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/data/school_ElementPositions.sdds",
+    "sha256": "5192accc1786194f60cad459dfbe5b140ef0e22d75a2c0dac979a982012f650b",
+    "bytes": 102078,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/data/school_ElementPositions.txt",
+    "sha256": "ba33f2e4d4bfdbc138361e586fbd1d6ba07f982277dd510cf47bcaecb95fd803",
+    "bytes": 179775,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/gpu-mapping-rank0.json",
+    "sha256": "fd538b736cb375cdcf170cb522c968cc28827da20e5b13b5e0a4debbb66d475d",
+    "bytes": 391,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/gpu-mapping-rank0.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/inputs-after.sha256",
+    "sha256": "db0d4f027226307322c16320e5be20060a9889fef2738b5a06e7f7b2489848f5",
+    "bytes": 156,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/inputs-after.sha256"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/particles.dat",
+    "sha256": "65ca902e9907a3a48563ec34729429e71ea68433a6055ceef92b6caa60fa16d7",
+    "bytes": 67,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/run.log",
+    "sha256": "86b781d428df0c04fb8ba0df0acf2317b58e0002fccdb20abc75b72fda8028c2",
+    "bytes": 3804536,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/school.h5",
+    "sha256": "746930f9f9dcf16910bb25f0cb82257cbed24ba716c4e7992d56342c3e48c492",
+    "bytes": 14272,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/school.in",
+    "sha256": "31fee815416edc19edc318000be8a6dee28f1c2bc5df57f230cd189ede3729ea",
+    "bytes": 48105,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/school.stat",
+    "sha256": "372ba70b123dfa130f86385299c84374785da5de3a6f76a21bd355b523beb7fb",
+    "bytes": 7766,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/timing.dat",
+    "sha256": "e21db7bbde565b164802cdc67faf712aed0d4ed327435ef06a25f1f508fefdf1",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/PROBE1.h5",
+    "sha256": "43de5a502a10ac2e06ff196b7f04c4e554aca743a87e4917c0ed0838993a9e82",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/PROBE10.h5",
+    "sha256": "e708d1e9ac7c5b53d09c9f271a32bf24f155d4988a2e90fe75d4c6a2f5ca591a",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/PROBE11.h5",
+    "sha256": "704573bea8945e88c9102b2f7b3e05948dd61aabe2c35db2c473d2b2f891ec06",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/PROBE12.h5",
+    "sha256": "c6e03737ba35f1f7a1d29563b6f8f3aa17a33b82019fd83c3fb2a3da2bacfade",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/PROBE13.h5",
+    "sha256": "e90378ee336f6f36873451bb3b48bb6b62fa10dfe6d8dc21db2bf44659f46358",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/PROBE14.h5",
+    "sha256": "fbaca8f0c180dd647910c70386215239fc0255e5c8f4aeeb6e793ff1c982bb6c",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/PROBE15.h5",
+    "sha256": "b58cfb5fa5a57d37219399ff3abca2fd84e797afef2b18b461cecbdbbd6e0d81",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/PROBE16.h5",
+    "sha256": "10c4fa1e94d4f07ba85f94c07ce7a620ad479118ee2f80d666796b40a84d896d",
+    "bytes": 32430,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/PROBE2.h5",
+    "sha256": "8d902a510800155dcf295a40e879ea8e2cd2338e2ccb4e249892062d2fbb277f",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/PROBE3.h5",
+    "sha256": "21ff167823d2c8a27efcd9662da5cf336e500f71bf49e16680cbbb731c4e11b6",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/PROBE4.h5",
+    "sha256": "65050225bd4722c5359d44a69132fb4af1c35699ed581a1de356d607d7c04d34",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/PROBE5.h5",
+    "sha256": "0179c77e90bf832044aefb6ae686723cdddb7af9bffd70ac08c1c62df1ab05ea",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/PROBE6.h5",
+    "sha256": "102dc2ebf5c90214c51bee066a6c7af297f8281110fec63f8fcd30543abe24b8",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/PROBE7.h5",
+    "sha256": "f97c4ea7b168b05e89b6b6c8a95e906675258862e90820f84a6a21876717c0fa",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/PROBE8.h5",
+    "sha256": "2fc71d2d8242678374763a335a782250ea5360da18b31a20b1973fd15a1e464c",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/PROBE9.h5",
+    "sha256": "c8b27c2b6bf9c6934497db5ac522e6722d3dd43b521bf540b9bc22ebb267eea2",
+    "bytes": 41757,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/data/school_3D.opal",
+    "sha256": "f95f8933fec5d4ed2afcb2ec7ff2ea888463ff1a61725db0c55bc6fec71a73c0",
+    "bytes": 48033,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/data/school_DesignPath.dat",
+    "sha256": "be339d668b5018e07e78d009e4b35e2ee7cecd22fbadd1adc6454d817642410b",
+    "bytes": 3407743,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/data/school_ElementPositions.sdds",
+    "sha256": "74230cdb9b034d03c180598dae90af8c6c596ca1097c0c2f88ac003ad30d99a6",
+    "bytes": 102078,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/data/school_ElementPositions.txt",
+    "sha256": "ba33f2e4d4bfdbc138361e586fbd1d6ba07f982277dd510cf47bcaecb95fd803",
+    "bytes": 179775,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/gpu-mapping-rank0.json",
+    "sha256": "b30edea44e2d689c808cb73724083b0e54ede7993ec72c7990fa2a9f3812f2a3",
+    "bytes": 391,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/gpu-mapping-rank0.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/gpu-mapping-rank1.json",
+    "sha256": "6528c4d6a32a43434d5a327ebde1f8f49ff324238591692467ff0a9be8a1df56",
+    "bytes": 391,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/gpu-mapping-rank1.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/inputs-after.sha256",
+    "sha256": "db0d4f027226307322c16320e5be20060a9889fef2738b5a06e7f7b2489848f5",
+    "bytes": 156,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/inputs-after.sha256"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/particles.dat",
+    "sha256": "65ca902e9907a3a48563ec34729429e71ea68433a6055ceef92b6caa60fa16d7",
+    "bytes": 67,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/run.log",
+    "sha256": "822e1ddcd3efca1259953ae88575016198d8f9a8192b2300c5f7593b57c2c006",
+    "bytes": 3917408,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/school.h5",
+    "sha256": "2097dd695c8f1e94b25f03823c5929eab0da17aa9371d723e28c0b86f0030f3b",
+    "bytes": 14272,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/school.in",
+    "sha256": "31fee815416edc19edc318000be8a6dee28f1c2bc5df57f230cd189ede3729ea",
+    "bytes": 48105,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/school.stat",
+    "sha256": "a8e90ca715170043089301a358c381076ed111cf5189a4a399175f8d57893c63",
+    "bytes": 7766,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/timing.dat",
+    "sha256": "0f8ef1a5fcda78743dab1a928f5034630a86ea0f1b19efb807986a8a26df9525",
+    "bytes": 1217,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/r2/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/status.tsv",
+    "sha256": "672a5a48ecd7f341332da3c01cfb69be656fd5d632b5dd456ba4d7bf61bef8d8",
+    "bytes": 97,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/gpu-school/status.tsv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/run-attempt3.sbatch",
+    "sha256": "bc02c0dcc422214e44473fcb5a18ffde4e5241eb3b9dba60fe7eca1d066ff7d2",
+    "bytes": 3507,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/run-attempt3.sbatch"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/run-school.sbatch",
+    "sha256": "31559ad27f3c4995e21bcb191efee0eb6714cfe32d80e3273241cc7aa163e217",
+    "bytes": 2293,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/run-school.sbatch"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/remote-final/run.sbatch",
+    "sha256": "3e218245fbe9a8d744ff708c92895813230e0744d7b6ef8d599eba6d87da7c1c",
+    "bytes": 3458,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/remote-final/run.sbatch"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/run-attempt3.sbatch",
+    "sha256": "bc02c0dcc422214e44473fcb5a18ffde4e5241eb3b9dba60fe7eca1d066ff7d2",
+    "bytes": 3507,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/run-attempt3.sbatch"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/run-school.sbatch",
+    "sha256": "31559ad27f3c4995e21bcb191efee0eb6714cfe32d80e3273241cc7aa163e217",
+    "bytes": 2293,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/run-school.sbatch"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/run.sbatch",
+    "sha256": "3e218245fbe9a8d744ff708c92895813230e0744d7b6ef8d599eba6d87da7c1c",
+    "bytes": 3458,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/run.sbatch"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/school-fixture.json",
+    "sha256": "5dab60addbab331d7f88961dbb9a4d0787b65ea701243f7175cfa9f25411b393",
+    "bytes": 478,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/a100/school-fixture.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/a100/validation-evidence.tgz",
+    "sha256": "064ed62706d7c26b1093eacc63fd972d50673c259d46faa4375f01865e5e2695",
+    "bytes": 1362377,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/adapter/STATE.md",
+    "sha256": "c4a871d404e3cb5a901d9c2cedfbd735d3abc1fcb7b99e954d22b47af0e48a32",
+    "bytes": 1108,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/adapter/state.md"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/adapter/existing-comparisons-general.json",
+    "sha256": "3cfe8b8be906aac668dc5be09a9fd8ab70f2ae8acf1e1647417886bd5db42036",
+    "bytes": 6426,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/adapter/existing-comparisons-general.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/adapter/revalidate_existing_comparisons.py",
+    "sha256": "66175c62f88ba4ab052c4adb898fce006b886566dda82665c58c54e14b5d6aba",
+    "bytes": 3874,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/adapter/revalidate_existing_comparisons.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/adapter/validate_adapter.py",
+    "sha256": "4521de110ebd5572226da688c8be54b91520317bd7daa561476bac1aa966c3c3",
+    "bytes": 14697,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/adapter/validate_adapter.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/adapter/validation-general.json",
+    "sha256": "9e42bd4172eb5c044c58a30ab258fbf20fb4f23e7b35d6c9022a52bb9cf28220",
+    "bytes": 6003,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/adapter/validation-general.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/adapter/validation.json",
+    "sha256": "6b845f6a440c74a8b70a850c69489e5d393308ba00b5aaeb3c9a5c7cf2cdae16",
+    "bytes": 897,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/adapter/validation.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/adapter-school-original/__pycache__/ffa_school_probe_adapter.cpython-311.pyc",
+    "sha256": "d7e853db9228b271ce36a9be1fc6bbe0aa6163e90dec1274d10e02f9dd4c282b",
+    "bytes": 15150,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/adapter-school-original/audit_gpu.py",
+    "sha256": "8511e87f3dc347003d0ee9b2ba3dc2445ebf64c7a5a51982bcdbad10a3d14302",
+    "bytes": 3882,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/adapter-school-original/audit_gpu.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/adapter-school-original/ffa_school_probe_adapter.md",
+    "sha256": "2900fab328d2ee26d6f6abfdb33425b70a3dc6852868e1d17e9456a72a93a319",
+    "bytes": 3184,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/adapter-school-original/ffa_school_probe_adapter.md"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/adapter-school-original/ffa_school_probe_adapter.py",
+    "sha256": "bd75198e308625f6881273d0f105ff779c2aae7a6d4cce12882b5d3687e4b790",
+    "bytes": 8476,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/adapter-school-original/ffa_school_probe_adapter.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/adapter-school-original/intended-files.json",
+    "sha256": "8ec7c8eb94783e208d2f2fe198be8c2374301d7ea60029af301cc0deed39633d",
+    "bytes": 1422,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/adapter-school-original/intended-files.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/adapter-school-original/validate_adapter.py",
+    "sha256": "3a53e4fac67c99e8d7ddfbbcc8ff15a1af444029e85a1b1bdd78bb9eadd5de95",
+    "bytes": 4952,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/adapter-school-original/validate_adapter.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/adapter-school-original/validation.json",
+    "sha256": "6b845f6a440c74a8b70a850c69489e5d393308ba00b5aaeb3c9a5c7cf2cdae16",
+    "bytes": 897,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/adapter-school-original/validation.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/bin/opalx-first",
+    "sha256": "b13e9e5354a4434826ebf9844b05ebed6c3e6534a2b48fcc867dd6329cd80ef5",
+    "bytes": 15184424,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/bin/opalx-linked-final",
+    "sha256": "58bd5db212d2dc3e62c8fdf62a51fb2dca456580eabf9452c595ea448777f9d5",
+    "bytes": 15184568,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/build-final-all.log",
+    "sha256": "fce0092c046de0403df6a093504364a9a4b689cc9c74322b8aea2609229bfb77",
+    "bytes": 12837,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/build-final-all.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/build-final-executable.log",
+    "sha256": "7be9f0d80d9276f9351e611ac73c9bd969875b0188391ee734bf0908d6ccb747",
+    "bytes": 540,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/build-final-executable.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/build-validation-fix.log",
+    "sha256": "baf4acdc109de8182e85749ed50ebe510015ffaf89dba97abf15ae76196410a8",
+    "bytes": 2074,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/build-validation-fix.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/build.log",
+    "sha256": "7218c91fb114e6dd1d4f8a32314d87eebd5893c4f5c44778c34bcf78fb97f3b4",
+    "bytes": 14078,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/build.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/check_school_probes.py",
+    "sha256": "80db334ab7619dd3b3acaaece8671513ed1729022acab6d8264264a1b54f259b",
+    "bytes": 16438,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/check_school_probes.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/PROBE1.h5",
+    "sha256": "8e8645f499d55b24ba1016a50b720c375f20ea2053301ee5bbaf6f0b648c285b",
+    "bytes": 13781,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/PROBE10.h5",
+    "sha256": "244a0005cf4f886efa5476c67529d95db43ed103f375dd1f663a4dd19a20d269",
+    "bytes": 13781,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/PROBE11.h5",
+    "sha256": "5ad797ce3107974f125b54d108f42904e886e0fcb7ff031c7c4c743ebe0ef967",
+    "bytes": 13781,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/PROBE12.h5",
+    "sha256": "5505b5bb515e1364976b25a0210b14e3775cae70f0c16274ec355c5c3b794228",
+    "bytes": 13781,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/PROBE13.h5",
+    "sha256": "9c61b24f34b392aea14e7ed8c54bc681b8b8c4329629cd0e747662f92e4aab2d",
+    "bytes": 13781,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/PROBE14.h5",
+    "sha256": "2e6518d3697b88147b1d1fabf5952ca88ba08e2d18c84f32725bbdace15c7cfd",
+    "bytes": 13781,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/PROBE15.h5",
+    "sha256": "53ada1766058954cd7622b627b61efa697c413dcaebebb16803cea3995fce581",
+    "bytes": 13781,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/PROBE16.h5",
+    "sha256": "032b56663d1c1951cd2e640fa7f10b0f1cfd87815c0fbdff63eb2033a25c396a",
+    "bytes": 13781,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/PROBE2.h5",
+    "sha256": "03d21dee1f9c61a01ad4c06f1c1367638387683fe577c44f1ac132a47d6eedb5",
+    "bytes": 13781,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/PROBE3.h5",
+    "sha256": "32078b0289bd2a671426828d35a28c33c02046d5bd05cbd6b35fbe3ef27552a3",
+    "bytes": 13781,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/PROBE4.h5",
+    "sha256": "1e2576108c405531365386306e5241c404f7af6c990e0be2dfe2db77bbcd0e27",
+    "bytes": 13781,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/PROBE5.h5",
+    "sha256": "e5279b4e1ba939084f3dc22ca297e30f48c514124422e1db53edb422394ec48f",
+    "bytes": 13781,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/PROBE6.h5",
+    "sha256": "f9879b939e29b08a9880957dd7ca5dd0b7801c3dc4dfe397ddc6c8b92715ba2b",
+    "bytes": 13781,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/PROBE7.h5",
+    "sha256": "1163a8330805780f278fa3e7bab877979a0da6c55d93c1653f526455c6557993",
+    "bytes": 13781,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/PROBE8.h5",
+    "sha256": "28ad66c2e2e64b5947e649fcd064947e7155bf8c97f541f18f3b1c47954dd084",
+    "bytes": 13781,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/PROBE9.h5",
+    "sha256": "a313939ad40bc88262a7b317bb1668e79455e477a07d47b4f882cdf93c7e3394",
+    "bytes": 13781,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/data/school_3D.opal",
+    "sha256": "9110926213de249c9d19d6bea58b25b0bae5a7e94652da9d32dec05e6b4eb964",
+    "bytes": 44403,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cof/cof-then-track/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/data/school_DesignPath.dat",
+    "sha256": "c86b3398fed386b6ab8525aa4aa22a4331584168748e11f53bdb9370c52454bb",
+    "bytes": 5622161,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cof/cof-then-track/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/data/school_ElementPositions.sdds",
+    "sha256": "438c08d7c0067c4d4b72d66d865e5a415fa9c0c5fb183c26fd96d1ba0c409fcd",
+    "bytes": 102417,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cof/cof-then-track/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/data/school_ElementPositions.txt",
+    "sha256": "ff9aaa77e7e809e9945a58c2de546b5f925b1259ddc6342a4d7ab2338480871c",
+    "bytes": 179775,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cof/cof-then-track/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/orbit.json",
+    "sha256": "80c3c9214e345c96da4a4678a9221f655f0bba5b6885fd40637982bedbc0ad8a",
+    "bytes": 1317,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/cof-then-track/orbit.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/report.json",
+    "sha256": "98221c4f1157098ed23303c83f34a85fa7b0eec23da8e6994871f2410e49e6f8",
+    "bytes": 535,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/cof-then-track/report.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/run.log",
+    "sha256": "cf3ceacdee407d9c3b56fdc4dd173718d00446132270c8974a78b9c16af9a156",
+    "bytes": 1503898,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/school.h5",
+    "sha256": "3a404f710f6f094dfb23b99acd1cc139aa53df5b3682a1c876b3b1528d92b687",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/school.in",
+    "sha256": "e92a9dbf77f0fb50236ab2e965cfe0c1223e6fe6531af1fd7a59ec88f700a279",
+    "bytes": 44475,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/cof-then-track/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/school.stat",
+    "sha256": "a4a55ec4155c2ba1be376a598a5421784cfc73c0189f126e0b35fb4d2a02c41e",
+    "bytes": 29443,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cof/cof-then-track/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/cof-then-track/timing.dat",
+    "sha256": "6b4035dee88a5dbad77c2aab8f162c46397643399d5b62564fec0720a1cfe737",
+    "bytes": 1159,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cof/cof-then-track/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/launch.json",
+    "sha256": "a2408e9b740f7fe4eef5eba0589b7df77210e82f0ad1cf41f238fa48ac8aac98",
+    "bytes": 1018,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/launch.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/off/manifest.json",
+    "sha256": "614af5ba080f3d73f737ec2cfc9813d0533e6fd360fddf0ec37608a67e7c9705",
+    "bytes": 657,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/off/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/off/orbit.json",
+    "sha256": "80c3c9214e345c96da4a4678a9221f655f0bba5b6885fd40637982bedbc0ad8a",
+    "bytes": 1317,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/off/orbit.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/off/run.log",
+    "sha256": "36d1c50c8f401c88f26e2099e9b001b819fbd2c19def004e0639e2538e338ce7",
+    "bytes": 3036,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/off/school.in",
+    "sha256": "0114930669db618f5df61226c62ef2c6b10eb0fcbb1293bc50ab2499eb878b09",
+    "bytes": 40666,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/off/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/on/manifest.json",
+    "sha256": "614af5ba080f3d73f737ec2cfc9813d0533e6fd360fddf0ec37608a67e7c9705",
+    "bytes": 657,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/on/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/on/run.log",
+    "sha256": "ed5f31fdb27232e14e0cebd83ede210d9b89c41ef80ce37ac81d1a1785757af1",
+    "bytes": 3063,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/on/school.in",
+    "sha256": "3e7d82da29fb1ed5ad162700f45106037ebdb729761fb68e03630192e133113f",
+    "bytes": 43945,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/on/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/result.json",
+    "sha256": "c4e070f9268400e537f601564055802250ab7baad223c9152265d2a1f838d0e7",
+    "bytes": 174,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/result.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/verified-off/manifest.json",
+    "sha256": "614af5ba080f3d73f737ec2cfc9813d0533e6fd360fddf0ec37608a67e7c9705",
+    "bytes": 657,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/verified-off/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/verified-off/orbit.json",
+    "sha256": "80c3c9214e345c96da4a4678a9221f655f0bba5b6885fd40637982bedbc0ad8a",
+    "bytes": 1317,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/verified-off/orbit.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/verified-off/run.log",
+    "sha256": "1184e6d34c50ba8a7a19f1d2dc932ec0d82ca0e69beb678a7a3adb92f032d693",
+    "bytes": 5171,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cof/verified-off/run.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/verified-off/school.in",
+    "sha256": "0114930669db618f5df61226c62ef2c6b10eb0fcbb1293bc50ab2499eb878b09",
+    "bytes": 40666,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/verified-off/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/verified-on/manifest.json",
+    "sha256": "614af5ba080f3d73f737ec2cfc9813d0533e6fd360fddf0ec37608a67e7c9705",
+    "bytes": 657,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/verified-on/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/verified-on/orbit.json",
+    "sha256": "80c3c9214e345c96da4a4678a9221f655f0bba5b6885fd40637982bedbc0ad8a",
+    "bytes": 1317,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/verified-on/orbit.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/verified-on/run.log",
+    "sha256": "6b829ed6be247135c4eb503b1dc0bd8db2d9bcfaddbd19e6d94cc8a1298cc6a6",
+    "bytes": 5171,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cof/verified-on/run.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/verified-on/school.in",
+    "sha256": "6664346b9826ea984cb9d89e78f346a83c9ee9c15d5287cae63ae8c291f3c8f4",
+    "bytes": 44253,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/verified-on/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cof/verified-report.json",
+    "sha256": "afb8290f9e70e7ee21f3557d701d3402fde46cf39768eb51c54776ce672bbfe2",
+    "bytes": 579,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cof/verified-report.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/comparison-summary.json",
+    "sha256": "d4004f6a179e12a1739079bb7b345af404c528caaa65943b04a9a393ad1cc368",
+    "bytes": 198100,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/comparison-summary.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/Cyclotron-Coasting.h5",
+    "sha256": "672e5fd7aafaba0b0fcc02c7b0fe0757726572ffa62806571dedb1b5596437c7",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/Cyclotron-Coasting.in",
+    "sha256": "39fdd120f305fcd8e8bfb8201d1ee2d8413f112a6ac792c0144ed885bb826cef",
+    "bytes": 3077,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/cyclotron-coasting.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/Cyclotron-Coasting.local",
+    "sha256": "8df3114b67fb9f49c064b7056e8941bae43c1d6d53213ef8beffc41b1434c077",
+    "bytes": 224,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/cyclotron-coasting.local"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/Cyclotron-Coasting.rt",
+    "sha256": "8da27b00f0d4127c135d322b391c1b984423b61928531fa3c91a7620fc772ab6",
+    "bytes": 741,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/cyclotron-coasting.rt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/Cyclotron-Coasting.stat",
+    "sha256": "f4895da64f61ba3f4734f512b11b8d9cd03f7e233736e18dd964249eba983cfe",
+    "bytes": 7775,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/data/Cyclotron-Coasting_3D.opal",
+    "sha256": "6ff9b017fd1132867eb3ef4ae4e84d90f4a28a3c41748025c1cf91ba7daf8e78",
+    "bytes": 1220,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/data/cyclotron-coasting_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/data/Cyclotron-Coasting_DesignPath.dat",
+    "sha256": "816901b39bd8e55aea8d7218da12d7748c99f62830ae4b273f28af85d5182dec",
+    "bytes": 296661,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/data/cyclotron-coasting_designpath.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/data/Cyclotron-Coasting_ElementPositions.py",
+    "sha256": "b17642e6df6a244449cee5d954c6daef1ef1bdc6e8dbb8b34d0d819f33e94364",
+    "bytes": 25827,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/data/cyclotron-coasting_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/data/Cyclotron-Coasting_ElementPositions.sdds",
+    "sha256": "9f0ff686fb2f86efe2453ae41c8b4afb4302041b7c4248101c26bb5f064f2076",
+    "bytes": 7802,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/data/cyclotron-coasting_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/data/Cyclotron-Coasting_ElementPositions.txt",
+    "sha256": "d9c3c2277600f7583d45c73e018179e54fbe3c3d633bfe7142ca2eff48cdf2fa",
+    "bytes": 37400,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/data/cyclotron-coasting_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/hits.hist",
+    "sha256": "c10880d6ae1bdbc73e5f1ff8078463e570bdf03cc13219446ad8b1eec172c402",
+    "bytes": 275,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/hits.hist"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/hits.loss",
+    "sha256": "090d77221270190c330172e8bd4c7f8856ef1875ecb24f3064c0961fba10b488",
+    "bytes": 1482,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/hits.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/hits.peaks",
+    "sha256": "1f25572e13275f57670a4f3422da45ef71c31f179239f86540f847b65f489f99",
+    "bytes": 205,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/hits.peaks"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/miss.hist",
+    "sha256": "8ce7f2f3b9ffebc896c2fb0f67bf8878f996a76de6729bf6c2dedc6ed5178c25",
+    "bytes": 96,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/miss.hist"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/miss.peaks",
+    "sha256": "ab59fd23f64555064dab07f6dee6b410b4b80b655d32610c75277c6fc7fb4d9d",
+    "bytes": 18,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/miss.peaks"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/proton72.dat",
+    "sha256": "0c612d341099fbb07f94fb1d61d998515208178074239e1d89acbb69aee937d7",
+    "bytes": 47,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/proton72.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/reference/Cyclotron-Coasting.stat",
+    "sha256": "d128fab7ff24b66aa2506189421240720756f0be038c332bccdfe297516acca8",
+    "bytes": 7773,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/reference/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/reference/Cyclotron-Coasting.stat.md5",
+    "sha256": "07b749faf92b532a9ce8ec49d374a9ce02b44f39a2b748d9cd8f143a73d1b6fd",
+    "bytes": 58,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/reference/cyclotron-coasting.stat.md5"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/reverse.hist",
+    "sha256": "c10880d6ae1bdbc73e5f1ff8078463e570bdf03cc13219446ad8b1eec172c402",
+    "bytes": 275,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/reverse.hist"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/reverse.loss",
+    "sha256": "090d77221270190c330172e8bd4c7f8856ef1875ecb24f3064c0961fba10b488",
+    "bytes": 1482,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/reverse.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/reverse.peaks",
+    "sha256": "1f25572e13275f57670a4f3422da45ef71c31f179239f86540f847b65f489f99",
+    "bytes": 205,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/reverse.peaks"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/run.log",
+    "sha256": "a16bec001857936fdc82a63c4e579f2bcb75957eac80cf3de73b10183902fa1a",
+    "bytes": 18437,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/run.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-ascii/timing.dat",
+    "sha256": "93f7c03ded42b30f5c10b0076af0328f6deb244d48c389e1097b5bc42a052161",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-ascii/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-hdf5/Cyclotron-Coasting.h5",
+    "sha256": "1fec4f2ff0370cb0237f0f3be2d4bc78284a85aac070d12ad3e99b0aee20d2ac",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-hdf5/Cyclotron-Coasting.in",
+    "sha256": "903ad12133731683f29d2bcb237e336623a61ed2baf6ecd2f1c42e2df3880754",
+    "bytes": 3053,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-hdf5/cyclotron-coasting.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-hdf5/Cyclotron-Coasting.local",
+    "sha256": "8df3114b67fb9f49c064b7056e8941bae43c1d6d53213ef8beffc41b1434c077",
+    "bytes": 224,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-hdf5/cyclotron-coasting.local"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-hdf5/Cyclotron-Coasting.rt",
+    "sha256": "8da27b00f0d4127c135d322b391c1b984423b61928531fa3c91a7620fc772ab6",
+    "bytes": 741,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-hdf5/cyclotron-coasting.rt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-hdf5/Cyclotron-Coasting.stat",
+    "sha256": "7c4d392935fb568d9c8b0bf9932937cc851ef718989341c94edb2848b30190d0",
+    "bytes": 7775,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-hdf5/cyclotron-coasting.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-hdf5/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-hdf5/data/Cyclotron-Coasting_3D.opal",
+    "sha256": "85ac6d20161765b26daf26b4f5e0a3d98577e0b8462cf46b922add978eb742e8",
+    "bytes": 1196,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-hdf5/data/cyclotron-coasting_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-hdf5/data/Cyclotron-Coasting_DesignPath.dat",
+    "sha256": "816901b39bd8e55aea8d7218da12d7748c99f62830ae4b273f28af85d5182dec",
+    "bytes": 296661,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-hdf5/data/cyclotron-coasting_designpath.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-hdf5/data/Cyclotron-Coasting_ElementPositions.py",
+    "sha256": "b17642e6df6a244449cee5d954c6daef1ef1bdc6e8dbb8b34d0d819f33e94364",
+    "bytes": 25827,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-hdf5/data/cyclotron-coasting_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/cyclotron-integration/Cyclotron-Coasting-hdf5/data/Cyclotron-Coasting_ElementPositions.sdds",
+    "sha256": "9f0ff686fb2f86efe2453ae41c8b4afb4302041b7c4248101c26bb5f064f2076",
+    "bytes": 7802,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/cyclotron-integration/cyclotron-coasting-hdf5/data/cyclotron-coasting_elementpositions.sdds"
+  }
+]

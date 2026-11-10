@@ -1,0 +1,12 @@
+{
+  "head": "a1ad007c8f3a761c39827ea0e06f19feefcc8f74",
+  "binary_sha256": "4d627521ac4f33e2ba54d7e5b605a5fc536a41673b69c58fc28e3b04cb17e1ec",
+  "source_diff_sha256": "f049d6ae288487c2e8874da79a3e7e23dbc46045ab87f9acdeef5292d77167b2",
+  "preserved_serial_sha256": "d2c0add433c40f47557d354323093f1d3949835defff5945bcb7337e7223f4d1",
+  "build_type": "Release",
+  "fftw": true,
+  "omp": true,
+  "default_batch_size": 0,
+  "cli": "--2D5BatchSize <positive integer>",
+  "ippl_source_changes": false
+}

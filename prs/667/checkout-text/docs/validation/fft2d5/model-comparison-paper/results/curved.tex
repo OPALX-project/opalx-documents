@@ -1,0 +1,24 @@
+\begin{figure}[!ht]
+\centering\includegraphics[width=\linewidth]{figures/curved-fields.pdf}
+\caption{Circular-bunch fields for the same source at $R=2$ m, with the
+same cuts and residual convention as Fig.~\ref{fig:straight-fields}.
+The correction changes the transverse field; its longitudinal field still
+uses the local $g=6.36$ closure.}\label{fig:curved-fields}\end{figure}
+\FloatBarrier
+\begin{figure}[H]
+\centering\includegraphics[width=\linewidth]{figures/curved-even-field.pdf}
+\caption{Weak radial curvature field, isolated as
+$[E_u(+u)+E_u(-u)]/2$ at $y=s=0$. The two meshes are shown separately;
+the zero line is retained.}\label{fig:even}\end{figure}
+\begin{table}[!ht]\centering\small\caption{Centre radial field in V/m; positive is outward.}\begin{tabular}{llrr}\toprule Profile&Model&$128^2\!\times512$&$256^2\!\times1024$\\\midrule
+Uniform&Original 2D5&-0.009000&-0.008949\\
+Uniform&Corrected 2D5&+0.040925&+0.040929\\
+Uniform&PyORBIT&-0.009102&-0.008310\\
+&SACR&+0.040936&+0.040936\\
+\addlinespace
+Triangle&Original 2D5&-0.017909&-0.017853\\
+Triangle&Corrected 2D5&+0.063607&+0.063576\\
+Triangle&PyORBIT&-0.018231&-0.016493\\
+&SACR&+0.063687&+0.063687\\
+\bottomrule\end{tabular}\label{tab:centre}\end{table}
+The corrected centre fields agree with SACR within 0.18\% on both meshes. Across the sampled midplane pairs, the weak-field relative errors stay below 0.68\%. The original model and matched PyORBIT retain the inward centre field. The correction repairs this transverse curvature contribution; the longitudinal discrepancy persists.

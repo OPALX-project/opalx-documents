@@ -1,0 +1,110 @@
+{
+  "queried_utc": "2026-10-25T22:01:14.592632+00:00",
+  "expected_sha": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+  "pr": {
+    "number": 637,
+    "url": "https://github.com/OPALX-project/OPALX/pull/637",
+    "state": "open",
+    "head_sha": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+    "head_ref": "615-probe-command-does-not-work",
+    "read_error": null
+  },
+  "combined_status": "failure",
+  "statuses": [
+    {
+      "context": "cscs/cscs-ci-openmp",
+      "state": "failure",
+      "description": "",
+      "target_url": "https://cicd-ext-mw.cscs.ch/ci/pipeline/results/694321096757983/83034039/2987151576?iid=2591&type=gitlab",
+      "updated_at": "2026-10-25T21:21:01Z"
+    },
+    {
+      "context": "cscs/cscs-ci-mi300",
+      "state": "failure",
+      "description": "",
+      "target_url": "https://cicd-ext-mw.cscs.ch/ci/pipeline/results/694321096757982/83033814/2987151523?iid=2595&type=gitlab",
+      "updated_at": "2026-10-25T21:27:31Z"
+    },
+    {
+      "context": "cscs/cscs-ci-gh200",
+      "state": "failure",
+      "description": "",
+      "target_url": "https://cicd-ext-mw.cscs.ch/ci/pipeline/results/694321096757981/82981356/2987151470?iid=2606&type=gitlab",
+      "updated_at": "2026-10-25T21:59:04Z"
+    }
+  ],
+  "check_runs": [
+    {
+      "id": 121288780959,
+      "name": "Build & Unit Tests",
+      "head_sha": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+      "status": "completed",
+      "conclusion": "skipped",
+      "html_url": "https://github.com/OPALX-project/OPALX/actions/runs/40233073612/job/121288780959",
+      "started_at": "2026-10-25T20:56:06Z",
+      "completed_at": "2026-10-25T20:56:00Z"
+    },
+    {
+      "id": 121288759124,
+      "name": "Check",
+      "head_sha": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+      "status": "completed",
+      "conclusion": "skipped",
+      "html_url": "https://github.com/OPALX-project/OPALX/actions/runs/40233073576/job/121288759124",
+      "started_at": "2026-10-25T20:56:01Z",
+      "completed_at": "2026-10-25T20:56:00Z"
+    },
+    {
+      "id": 121288759070,
+      "name": "Compile",
+      "head_sha": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+      "status": "completed",
+      "conclusion": "skipped",
+      "html_url": "https://github.com/OPALX-project/OPALX/actions/runs/40233073681/job/121288759070",
+      "started_at": "2026-10-25T20:56:01Z",
+      "completed_at": "2026-10-25T20:56:00Z"
+    },
+    {
+      "id": 121288758823,
+      "name": "Smoke Test (${{ matrix.test }})",
+      "head_sha": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+      "status": "completed",
+      "conclusion": "skipped",
+      "html_url": "https://github.com/OPALX-project/OPALX/actions/runs/40233073612/job/121288758823",
+      "started_at": "2026-10-25T20:56:01Z",
+      "completed_at": "2026-10-25T20:56:00Z"
+    },
+    {
+      "id": 121288758798,
+      "name": "Compile",
+      "head_sha": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+      "status": "completed",
+      "conclusion": "skipped",
+      "html_url": "https://github.com/OPALX-project/OPALX/actions/runs/40233073596/job/121288758798",
+      "started_at": "2026-10-25T20:56:01Z",
+      "completed_at": "2026-10-25T20:56:00Z"
+    },
+    {
+      "id": 121288758538,
+      "name": "Build & Unit Tests",
+      "head_sha": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+      "status": "completed",
+      "conclusion": "skipped",
+      "html_url": "https://github.com/OPALX-project/OPALX/actions/runs/40233073538/job/121288758538",
+      "started_at": "2026-10-25T20:56:01Z",
+      "completed_at": "2026-10-25T20:56:00Z"
+    },
+    {
+      "id": 121288758471,
+      "name": "Compile SYCL",
+      "head_sha": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+      "status": "completed",
+      "conclusion": "skipped",
+      "html_url": "https://github.com/OPALX-project/OPALX/actions/runs/40233073624/job/121288758471",
+      "started_at": "2026-10-25T20:56:01Z",
+      "completed_at": "2026-10-25T20:56:00Z"
+    }
+  ],
+  "status_read_error": null,
+  "checks_read_error": null
+}

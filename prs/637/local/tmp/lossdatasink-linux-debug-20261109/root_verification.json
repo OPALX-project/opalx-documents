@@ -1,0 +1,30 @@
+{
+  "archive_sha256": "3260c12c40b93741ad335e48b5f908d860db4c0cc6f88c04f85df9988e793bb2",
+  "linux_build_type": "Debug",
+  "linux_platform": "OPENMP",
+  "source_files_verified_against_current_checkout": 1072,
+  "only_new_task_source_change": "unit_tests/Structure/TestLossDataSink.cpp",
+  "fixed_test_sha256": "c5f55848a0a2435d5256c9a12bbf7cd3bb09a2dafaf8eb983965bb1a8b8145b6",
+  "baseline_isolated_targets": 2,
+  "baseline_concurrent_rewind_case_failed": true,
+  "linux_related_targets_passed": 5,
+  "linux_concurrent_pair_iterations": 100,
+  "linux_concurrent_target_executions": 200,
+  "native_gtest_case_executions_in_stress": 2500,
+  "stress_skips": 0,
+  "full_suite_passed": 136,
+  "full_suite_total": 137,
+  "full_suite_failed": [
+    "TestGaussian"
+  ],
+  "production_library_byte_identical": true,
+  "fixed_binaries_rebuilt_and_verified": true,
+  "no_source_or_tolerance_edits_for_Gaussian": true,
+  "terminal_verification": {
+    "source_files_verified": 1072,
+    "library_unchanged": true,
+    "gaussian_binary_unchanged": true,
+    "pair_iterations": 100,
+    "pair_failures": 0
+  }
+}

@@ -60,7 +60,8 @@ data["assets"].each_with_index do |asset, index|
   errors += error("destination must be lowercase without spaces: #{destination}") if destination != destination.downcase || destination.include?(" ")
   valid_category = %w[presentations reports meetings tutorials examples datasets].include?(parts[0])
   valid_year = parts.length >= 3 && (parts[1] == "undated" || parts[1].match?(/^\d{4}$/))
-  errors += error("destination must use <category>/<year>/...: #{destination}") unless valid_category && valid_year
+  valid_pr_archive = parts.length >= 3 && parts[0] == "prs" && parts[1].match?(/^\d+$/)
+  errors += error("destination must use <category>/<year>/... or prs/<number>/...: #{destination}") unless (valid_category && valid_year) || valid_pr_archive
   category_parts = asset["category"].split("/")
   errors += error("manifest category does not match destination: #{destination}") unless parts[0] == category_parts[0] && (category_parts.length == 1 || parts[2] == category_parts[1])
 

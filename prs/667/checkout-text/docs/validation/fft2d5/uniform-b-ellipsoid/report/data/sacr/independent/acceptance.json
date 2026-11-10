@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "scope": "independent local Cartesian PDE/symmetry/geometry checks; no global force or tracking claim",
+  "geometry": {
+    "a_m": 0.005,
+    "b_m": 2.5,
+    "c_m": 0.0005,
+    "radius_m": 2.0
+  },
+  "angular_nodes": 512,
+  "target_count": 3,
+  "finest_h_m": 2.5e-06,
+  "max_relative_divergence_error": 5.195510688338345e-12,
+  "max_curl_norm_over_4pi": 5.226768628824572e-12,
+  "max_symmetry_characteristic_component_error": 4.9261266362201505e-14,
+  "max_relative_vector_area_error": 2.112010489126731e-09,
+  "normalization": "F=E/(k*rho); div F=4pi and curl F=0 inside uniform source",
+  "prototype_sha256": "acb8e0ba8713b907f667eeb8d35cd3ce5efa440b0930c951b89bcc08feba3034",
+  "script_sha256": "1f685377710f3cad8a1eb33aa2ab573d021428c3aba992721bd60a3d3c938b9a"
+}

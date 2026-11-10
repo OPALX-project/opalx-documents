@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "scope": "Offline cached-data replot; no OPALX/H5 needed",
+  "inputs_unchanged": true,
+  "identical_pngs": {
+    "frozen-centre-radial.png": true,
+    "frozen-field-comparison.png": true,
+    "frozen-longitudinal-end.png": true,
+    "frozen-native-longitudinal-end.png": true,
+    "frozen-mesh-convergence.png": true
+  },
+  "copied_input_count": 8,
+  "temporary_directory": "/private/tmp/opalx-sacr-offline-3mnhg4q3",
+  "stdout": "Replotted archived frozen-field data only\n",
+  "stderr": ""
+}

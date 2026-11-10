@@ -1,0 +1,82 @@
+{
+  "cases": [
+    "uniform-cell-z2048-final",
+    "uniform-cell-z4096-final",
+    "uniform-cell-z8192-final",
+    "triangle-cell-z2048-final",
+    "triangle-cell-z4096-final",
+    "triangle-cell-z8192-final",
+    "uniform-control-source96-final",
+    "uniform-control-mesh96-final",
+    "triangle-control-source96-final",
+    "triangle-control-mesh96-final",
+    "uniform-control-path01-final"
+  ],
+  "mesh_series": {
+    "uniform": [
+      "uniform-cell-z2048-final",
+      "uniform-cell-z4096-final",
+      "uniform-cell-z8192-final"
+    ],
+    "triangle": [
+      "triangle-cell-z2048-final",
+      "triangle-cell-z4096-final",
+      "triangle-cell-z8192-final"
+    ]
+  },
+  "primary": {
+    "uniform": "uniform-cell-z8192-final",
+    "triangle": "triangle-cell-z8192-final"
+  },
+  "controls": [
+    {
+      "case_a": "uniform-cell-z8192-final",
+      "case_b": "uniform-control-source96-final",
+      "label": "Uniform source refinement",
+      "kind": "source"
+    },
+    {
+      "case_a": "uniform-control-source96-final",
+      "case_b": "uniform-control-mesh96-final",
+      "label": "Uniform transverse field mesh",
+      "kind": "field mesh"
+    },
+    {
+      "case_a": "triangle-cell-z8192-final",
+      "case_b": "triangle-control-source96-final",
+      "label": "Triangular source refinement",
+      "kind": "source"
+    },
+    {
+      "case_a": "triangle-control-source96-final",
+      "case_b": "triangle-control-mesh96-final",
+      "label": "Triangular transverse field mesh",
+      "kind": "field mesh"
+    },
+    {
+      "case_a": "uniform-cell-z8192-final",
+      "case_b": "uniform-control-path01-final",
+      "label": "Reference-path refinement",
+      "kind": "path"
+    }
+  ],
+  "qualified_cases": [
+    "uniform-cell-z8192-final",
+    "triangle-cell-z8192-final",
+    "uniform-control-source96-final",
+    "uniform-control-mesh96-final",
+    "triangle-control-source96-final",
+    "triangle-control-mesh96-final",
+    "uniform-control-path01-final"
+  ],
+  "coarse_refinement_cases": [
+    "uniform-cell-z2048-final",
+    "uniform-cell-z4096-final",
+    "triangle-cell-z2048-final",
+    "triangle-cell-z4096-final"
+  ],
+  "frozen_binary_sha256": "70383ff72345d869db40d42d2ff5aee8ceaa2f1f4fa656fcf2e8fc75e35647c1",
+  "field_operator": "finite curved OPEN electrostatic, gamma=1; direct companion subtraction",
+  "original_target_count": 43,
+  "additional_diagnostic_target_count": 8
+}

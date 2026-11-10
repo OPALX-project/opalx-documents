@@ -1,0 +1,90 @@
+{
+  "stock_manifest": {
+    "case": "optimized-1",
+    "binary": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+    "binary_sha256": "9b4a00eae1cd121dbcb00dfed6cdd46c1f34f7131f597e72973a56686f77a2c2",
+    "source_head": "01bb3835ab7442c00f71cac5fb49bf77cba85661",
+    "source_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "input_sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38",
+    "initial_state_sha256": "4d6adf38da35d9168f9cdb10847786eb1ea64d27e13e521211173901037e19f5",
+    "mpi_ranks": 1,
+    "omp_threads": 4,
+    "steps": 100,
+    "dt_s": 3e-12,
+    "charge_C": 5.602212333965894e-09,
+    "particles": 100000,
+    "mesh": [
+      64,
+      64,
+      512
+    ],
+    "baseline_manifest": {
+      "binary": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+      "binary_sha256": "4fd718db8dea11088409158506cd61761eb35f7a0e6a15638fba235c433ba0eb",
+      "initial_state_sha256": "4d6adf38da35d9168f9cdb10847786eb1ea64d27e13e521211173901037e19f5",
+      "source_npz_sha256": "97943097cf785f64019b7092bd52bbf57eca77bdfbe07cdef288d9ac5732d923",
+      "source_text_sha256": "e4ed5735e21af00d116690d0a623f13545475a3435776e52c4a4abdc4a89f9e3",
+      "reference_path_sha256": "562590c1ca8b167affb53f662843f7a0618212bac66bd1ea5b103e6c88c4f121",
+      "input_sha256": "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38",
+      "charge_C": 5.602212333965894e-09,
+      "dt_s": 3e-12,
+      "steps": 100,
+      "omp_threads": 4,
+      "mpi_ranks": 1,
+      "particles": 100000,
+      "mesh": [
+        64,
+        64,
+        512
+      ],
+      "model": "ORIGINAL",
+      "longitudinal": "NONE: matched transverse-only coasting KV/PyORBIT comparison",
+      "space_charge": true,
+      "scope": "timing pilot only; no full turn or tune validation",
+      "elapsed_seconds": 75.424346084008,
+      "returncode": 0,
+      "completed": true,
+      "peak_rss_bytes": 130138112
+    },
+    "scope": "100stepcomparisononly;no16turnrun",
+    "returncode": 0,
+    "completed": true,
+    "elapsed_seconds": 32.71143991599092
+  },
+  "rows": [
+    {
+      "case": "optimized-1",
+      "wall_s": 21.81368454202311,
+      "stock_wall_s": 32.71143991599092,
+      "speedup": 1.4995834313535505,
+      "max_lab_position_difference_m": 3.48220597723263e-13,
+      "max_lab_momentum_difference_betagamma": 7.810556438478084e-13,
+      "particles": 100000,
+      "charge_C": 5.602212333965893e-09,
+      "binary_sha256": "d2c0add433c40f47557d354323093f1d3949835defff5945bcb7337e7223f4d1"
+    },
+    {
+      "case": "optimized-2",
+      "wall_s": 21.26740075001726,
+      "stock_wall_s": 32.71143991599092,
+      "speedup": 1.5381023896850383,
+      "max_lab_position_difference_m": 3.820916727121259e-13,
+      "max_lab_momentum_difference_betagamma": 1.4423177994978273e-12,
+      "particles": 100000,
+      "charge_C": 5.602212333965893e-09,
+      "binary_sha256": "d2c0add433c40f47557d354323093f1d3949835defff5945bcb7337e7223f4d1"
+    },
+    {
+      "case": "optimized-profile",
+      "wall_s": 21.433134457969572,
+      "stock_wall_s": 32.71143991599092,
+      "speedup": 1.5262088697356953,
+      "max_lab_position_difference_m": 3.5471264247888434e-13,
+      "max_lab_momentum_difference_betagamma": 1.1412360484703805e-12,
+      "particles": 100000,
+      "charge_C": 5.602212333965893e-09,
+      "binary_sha256": "d2c0add433c40f47557d354323093f1d3949835defff5945bcb7337e7223f4d1"
+    }
+  ],
+  "numerical_bounds": "1e-9m,1e-10beta-gamma,1e-8relativeRMS/emittance; same100kIDs/input/source/charge/100steps300ps; no physics tolerance changed"
+}

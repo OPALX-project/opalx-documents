@@ -1,0 +1,26 @@
+Reduce cyclotron failure storage and stabilize unit tests
+
+Replace per-particle RF diagnostics with one persistent failure record
+per rank, claimed atomically by failing particles. Share cyclotron
+field-support checks and consolidate RF validation and device lattice
+preparation. Keep the device kernel in its public method for NVCC.
+
+Isolate generated test maps, diagnostics, checkpoints and CSV files
+in owned directories. Share paths within MPI jobs, close writers
+before cleanup and remove deletions of files the fixture never created.
+
+Replace the Gaussian test's fixed maximum with Bernstein tail-count
+and sample-size-dependent normal bounds. Preserve the sampler, seed,
+particle count and existing RMS checks. Keep tests self-contained in
+native C++ without external scripts or data dependencies.
+
+Validation:
+- 137/137 targets pass locally and on Linux Debug/OpenMP
+- Gaussian: 48 cases across one/two ranks and one/four threads
+- Concurrent file-output tests and two/four-rank checks pass
+- Focused A100 tracker/RF/probe coverage: 111 cases pass
+- Four CPU bunch comparisons remain byte-identical before and after
+- GPU external-field tracker checks pass on one/two ranks;
+  charged PIC comparisons pass on CPU
+
+Defer larger probe performance changes to #674.

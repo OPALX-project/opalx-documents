@@ -1,0 +1,18 @@
+{
+  "scope": "Illustrative dense profile, main43targets use direct quadrature",
+  "method": "PCHIP in log distance, independently evaluated midpoint checks",
+  "refinements": [
+    {
+      "nodes": 129,
+      "max_midpoint_error_normalized": 7.644586513721808e-06
+    },
+    {
+      "nodes": 257,
+      "max_midpoint_error_normalized": 9.406352589512544e-07
+    }
+  ],
+  "quadrature_double_max_normalized_change": 1.0382207653330557e-14,
+  "nphi": 512,
+  "nrad": 128,
+  "passed": true
+}

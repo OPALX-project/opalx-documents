@@ -1,0 +1,10 @@
+{
+  "gpus": 3,
+  "steps_per_turn": 393240,
+  "dt_s": 3e-12,
+  "seconds_per_complete_step": 0.01963766666666667,
+  "estimated_hours_per_turn": 2.1450877888888895,
+  "required_speedup_for_one_hour": 2.1450877888888895,
+  "calibration_job": "355045",
+  "method": "Difference of unprofiled main-minus-OrbitThreader time, 1000 vs100 steps, /900; one allocation, no repeat uncertainty measured"
+}

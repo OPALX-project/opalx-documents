@@ -1,0 +1,59 @@
+{
+  "baseline_binary_sha256": "4fd718db8dea11088409158506cd61761eb35f7a0e6a15638fba235c433ba0eb",
+  "reference_sc_kick_scale_betagamma": 5.379822039146985e-08,
+  "rows": [
+    {
+      "case": "baseline",
+      "wall_seconds": 73.65204183297465,
+      "steady_seconds_per_step": 0.718352,
+      "speedup": 1.0,
+      "time_reduction_percent": 0.0,
+      "max_lab_position_difference_m": 0.0,
+      "max_lab_momentum_difference_betagamma": 0.0,
+      "max_momentum_difference_percent_of_reference_sc_kick": 0.0,
+      "charge_C": 5.602212333965893e-09,
+      "particles": 100000,
+      "binary_sha256": "4fd718db8dea11088409158506cd61761eb35f7a0e6a15638fba235c433ba0eb"
+    },
+    {
+      "case": "optimized-1",
+      "wall_seconds": 54.85048183402978,
+      "steady_seconds_per_step": 0.5264009000000001,
+      "speedup": 1.3427783926463193,
+      "time_reduction_percent": 25.527547547944895,
+      "max_lab_position_difference_m": 3.7707181760298864e-13,
+      "max_lab_momentum_difference_betagamma": 1.7981773824160391e-12,
+      "max_momentum_difference_percent_of_reference_sc_kick": 0.0033424477042760226,
+      "charge_C": 5.602212333965893e-09,
+      "particles": 100000,
+      "binary_sha256": "a38391aa99db0cf5e6813ca96bd03dac68246e6ad1b4c204857df314edc261a3"
+    },
+    {
+      "case": "optimized-2",
+      "wall_seconds": 50.77928729203995,
+      "steady_seconds_per_step": 0.48952999999999997,
+      "speedup": 1.4504347296051983,
+      "time_reduction_percent": 31.055153355835905,
+      "max_lab_position_difference_m": 3.9198365274142983e-13,
+      "max_lab_momentum_difference_betagamma": 6.471090587319006e-15,
+      "max_momentum_difference_percent_of_reference_sc_kick": 1.2028447298500323e-05,
+      "charge_C": 5.602212333965893e-09,
+      "particles": 100000,
+      "binary_sha256": "a38391aa99db0cf5e6813ca96bd03dac68246e6ad1b4c204857df314edc261a3"
+    },
+    {
+      "case": "optimized-profile",
+      "wall_seconds": 52.425112000026274,
+      "steady_seconds_per_step": 0.5053420999999999,
+      "speedup": 1.4049000378470862,
+      "time_reduction_percent": 28.820558540774755,
+      "max_lab_position_difference_m": 4.892225724609763e-13,
+      "max_lab_momentum_difference_betagamma": 1.8005762477598172e-12,
+      "max_momentum_difference_percent_of_reference_sc_kick": 0.003346906709288312,
+      "charge_C": 5.602212333965893e-09,
+      "particles": 100000,
+      "binary_sha256": "a38391aa99db0cf5e6813ca96bd03dac68246e6ad1b4c204857df314edc261a3"
+    }
+  ],
+  "comparison": "100000IDmatched laboratory endpointvectors and all10stat RMS/emittance samples;same exactinput/checkpoint,4OMP,1MPI,100steps. Numerical-QA bounds1e-9m,1e-10beta-gamma and0.1% ofreferenceSCkick; no physics tolerance changed."
+}

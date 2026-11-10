@@ -1,0 +1,28 @@
+{
+  "checks": [
+    "exact_large_and_noncontiguous_ids",
+    "coordinate_and_momentum_mapping",
+    "native_input_unchanged",
+    "turn_labels_preserved",
+    "explicit_one_based_turn_labels",
+    "ten_column_round_trip",
+    "existing_output_refused",
+    "hdf5_batches_match_ascii",
+    "bad_ascii_width_refused",
+    "missing_file_refused",
+    "header_only_ascii_supported",
+    "invalid_geometry_refused",
+    "negative_shifted_turn_refused",
+    "overflow_shifted_turn_refused",
+    "nonfinite_record_refused",
+    "floating_point_ids_refused",
+    "missing_hdf5_dataset_refused",
+    "unequal_hdf5_datasets_refused",
+    "multiple_same_turn_crossings_retained",
+    "real_hits_ascii_hdf5_counts_and_ids",
+    "real_hits_ascii_hdf5_float_precision"
+  ],
+  "passed": 21,
+  "real_hits": 20,
+  "note": "Real pre-existing cyclotron files validate native record parsing only, not FFA physics."
+}

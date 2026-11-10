@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/opt/homebrew/bin/mpirun",
+    "--oversubscribe",
+    "--map-by",
+    "slot",
+    "--bind-to",
+    "none",
+    "-n",
+    "2",
+    "/Users/adelmann/git/opalx/build-omp/src/opalx.pre-parallel-geometry-20261106",
+    "case.in",
+    "--info",
+    "1",
+    "--2D5BatchSize",
+    "64",
+    "--restart",
+    "/Users/adelmann/git/opalx/tmp/2026-11-05-merlin6-a100/payload/assets/dba-initial-state.h5"
+  ],
+  "ranks": 2,
+  "omp_threads": 4,
+  "returncode": 0,
+  "wall_seconds": 6.703341917018406,
+  "binary_sha256": "27108289a5f7e3925a622d4273ce31c96633636de09eb45eb33c00a17b0c3839",
+  "source_base_commit": "a8ce134afa4e79c97e1611635e029579564ada35",
+  "mode": "before"
+}

@@ -1,0 +1,103 @@
+% Dubin uniform-volume ellipsoid: schematic geometry, not new numerical data.
+% Principal-axis coordinates are (u,y,s), with semiaxes (a_0,c_0,b).
+% Different display scales are used for the three physical axes.
+% No field-vector alignment with an arbitrary displacement is implied.
+\begin{tikzpicture}[
+ x=1cm,y=1cm,font=\small,>=Latex,
+ duaxis/.style={->,black!75,line width=.6pt},
+ dusource/.style={draw=blue!65!black,fill=blue!8,line width=.8pt},
+ dusurface/.style={blue!45!black,line width=.5pt},
+ duguide/.style={black!35,line width=.45pt,dashed},
+ dulabel/.style={fill=white,inner sep=2pt},
+ dutarget/.style={fill=orange!85!black,draw=white,line width=.6pt}
+]
+ \path[use as bounding box] (0,0) rectangle (16.6,10.0);
+ \node[anchor=north west,font=\bfseries\small] at (.1,9.85)
+   {(a) Uniform-volume Cartesian ellipsoid};
+ \node[anchor=north west,font=\bfseries\small] at (8.7,9.85)
+   {(b) Exact internal field is linear};
+ \node[anchor=north west,black!65] at (.1,9.25)
+   {Finite ellipsoidal boundary; constant $\rho$};
+ \node[anchor=north west,black!65] at (8.7,9.25)
+   {One principal component; positive charge};
+
+ % Oblique projection of a triaxial ellipsoid. The three display-axis vectors
+ % are S=(2.65,0), U=(-.7,-.55), Y=(0,1.2); the outer silhouette is their
+ % projected ellipse, rounded to plotting precision. All display units are cm.
+ \coordinate (duC) at (3.85,6.25);
+ \begin{scope}[shift={(duC)},rotate=3.80]
+   \draw[dusource] (0,0) ellipse[x radius=2.746,y radius=1.310];
+ \end{scope}
+ \begin{scope}[shift={(duC)}]
+   \draw[dusurface,domain=0:180,samples=70,smooth,dashed]
+     plot ({2.65*cos(\x)-.7*sin(\x)},{-.55*sin(\x)});
+   \draw[dusurface,domain=180:360,samples=70,smooth]
+     plot ({2.65*cos(\x)-.7*sin(\x)},{-.55*sin(\x)});
+   \draw[dusurface,domain=0:360,samples=90,smooth]
+     plot ({-.7*cos(\x)},{-.55*cos(\x)+1.2*sin(\x)});
+ \end{scope}
+ \draw[duaxis] ($(duC)+(-2.95,0)$) -- ($(duC)+(3.5,0)$)
+   node[right] {$s$};
+ \draw[duaxis] ($(duC)+(0,-1.45)$) -- ($(duC)+(0,1.85)$)
+   node[above] {$y$};
+ \draw[duaxis] (duC) -- ($(duC)+(-1.5,-1.18)$)
+   node[below left] {$u$};
+ \fill[black!75] (duC) circle[radius=1.3pt];
+ \node[anchor=north east,dulabel] at ($(duC)+(-.08,-.08)$) {$\bm C$};
+
+ % Semiaxis labels mark the three principal directions, rather than the
+ % semiaxes of the projected outer silhouette.
+ \draw[black!65,line width=.5pt] ($(duC)+(2.65,-.08)$) -- ($(duC)+(2.65,.08)$);
+ \node[dulabel,anchor=north] at ($(duC)+(1.85,-.12)$) {$b$};
+ \draw[black!65,line width=.5pt] ($(duC)+(-.08,1.2)$) -- ($(duC)+(.08,1.2)$);
+ \node[dulabel,anchor=west] at ($(duC)+(.09,.92)$) {$c_0$};
+ \draw[black!65,line width=.5pt] ($(duC)+(-.755,-.48)$) -- ($(duC)+(-.645,-.62)$);
+ \node[dulabel,anchor=north east] at ($(duC)+(-.76,-.63)$) {$a_0$};
+
+ % Interior material point. Only displacement is drawn; anisotropic D does
+ % not generally give E parallel to xi.
+ \coordinate (duP) at ($(duC)+(.92,.55)$);
+ \draw[->,black!75,line width=.65pt] (duC) -- (duP)
+   node[midway,above left=-1pt,dulabel] {$\bm\xi$};
+ \fill[dutarget] (duP) circle[radius=2.5pt];
+ \node[anchor=south west,dulabel] at ($(duP)+(.08,.1)$) {$\bm C+\bm\xi$};
+ \node[anchor=north west,align=left] at (.45,4.25)
+   {Elliptical sections taper to zero\\at the two longitudinal ends};
+ \draw[black!50,line width=.5pt,->] (1.15,4.35) -- ($(duC)+(-2.56,-.2)$);
+
+ % Schematic component plot. No numerical field values, slope fit or sampled
+ % simulation data enter this graphic. It is the exact interior relation.
+ \coordinate (duO) at (12.15,6.25);
+ \draw[duaxis] ($(duO)+(-3.0,0)$) -- ($(duO)+(3.35,0)$)
+   node[right] {$\xi_i$};
+ \draw[duaxis] ($(duO)+(0,-2.05)$) -- ($(duO)+(0,2.05)$)
+   node[above] {$E_i$};
+ \foreach \sign in {-1,1} {
+   \draw[duguide] ($(duO)+(\sign*2.45,0)$) -- ($(duO)+(\sign*2.45,\sign*1.6)$);
+   \draw[black!65,line width=.5pt] ($(duO)+(\sign*2.45,-.08)$) -- ($(duO)+(\sign*2.45,.08)$);
+ }
+ \draw[blue!65!black,line width=1.0pt]
+   ($(duO)+(-2.45,-1.6)$) -- ($(duO)+(2.45,1.6)$);
+ \node[anchor=north] at ($(duO)+(-2.45,-.15)$) {$-a_i$};
+ \node[anchor=north] at ($(duO)+(2.45,-.15)$) {$+a_i$};
+ \node[anchor=north east,dulabel] at ($(duO)+(-.08,-.08)$) {$0$};
+ \draw[duguide] ($(duO)+(1.25,0)$) -- ($(duO)+(1.25,.8163)$)
+   -- ($(duO)+(0,.8163)$);
+ \fill[dutarget] ($(duO)+(1.25,.8163)$) circle[radius=2.5pt];
+ \node[anchor=south west,dulabel] at ($(duO)+(1.3,.98)$)
+   {Interior point};
+ \draw[<->,black!60,line width=.5pt]
+   ($(duO)+(-2.45,-2.45)$) -- ($(duO)+(2.45,-2.45)$)
+   node[midway,below=3pt] {Internal-field domain};
+
+ \node[align=center] at (3.85,2.65)
+   {$\displaystyle\frac{u^2}{a_0^2}+\frac{y^2}{c_0^2}+\frac{s^2}{b^2}\le1$};
+ \node[align=center] at (12.2,2.65)
+   {$\displaystyle E_i=\frac{\rho}{\epsilon_0}D_i\xi_i,\qquad \sum_iD_i=1$};
+ \node[align=center,text width=7.5cm,black!65] at (3.85,1.65)
+   {Geometry schematic; the three axis scales\\are enlarged independently};
+ \node[align=center,text width=7.5cm,black!65] at (12.2,1.65)
+   {Analytic electrostatic reference; no field mesh\\The field is generally not parallel to $\bm\xi$};
+ \node[anchor=west,black!65] at (.15,.55)
+   {Principal semiaxes: $(a_u,a_y,a_s)=(a_0,c_0,b)$};
+\end{tikzpicture}

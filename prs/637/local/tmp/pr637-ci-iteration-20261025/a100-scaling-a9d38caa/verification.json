@@ -1,0 +1,83 @@
+{
+  "job": 354773,
+  "source": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+  "junit_targets": 6,
+  "native_cases": 64,
+  "target_case_counts": [
+    7,
+    3,
+    15,
+    18,
+    11,
+    10
+  ],
+  "skipped_cases": 0,
+  "two_rank_new_case_executions": 2,
+  "source_files_verified": 1015,
+  "expected_source_archive_verified": true,
+  "source_after_checks_passed": 1015,
+  "binary_hashes": "892ff495ede45e475ee503bfe91e6ffea78c4fed4d8985b3c7a41eaf52c9d015  /data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/opalx\n8e93c484cbb965215538cfd302c790376a586cca116cd27d5d65d6fc2051aef2  /data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestMultipoleTStraight\nc9472f7e7c6b0bd03bedb91f36b3adae1b3c5a1eba995d18db9ff4141ffc3026  /data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestScalingFFAMagnet\nf4ce20f795a2a7f4aafcbc814a2d8fae2b3a5c0e149b3b6585e2ee80a0066c27  /data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/lib/libopalx.so\n",
+  "dependencies_before": "dependency\tippl-src\t704932fdaa390f883524cf53588c92386294add4\ndependency\tippl-build/_deps/kokkos-src\t8e15454876298832f013ebcaf08d53825b5bda40\ndependency\tippl-build/_deps/heffte-src\t6e16996e5a3eb65c60fd62fd4d93c4b2df833033\ndependency\tgtest-src\t6910c9d9165801d8827d628cb72eb7ea9dd538c5\n",
+  "note": "This validates six native CUDA targets and one two-rank native case, not a complete CSCS pipeline or GPU end-to-end regression suite. External references remain local by explicit user request.",
+  "slurm_state": "COMPLETED",
+  "slurm_exit_code": "0:0",
+  "job_elapsed": "00:14:06",
+  "target_names": [
+    "TestMultipoleT",
+    "TestMultipoleTBase",
+    "TestMultipoleTStraight",
+    "TestScalingFFAMagnet",
+    "TestTrackReferenceStep",
+    "TestDeviceExternalField"
+  ],
+  "dependencies_after": {
+    "ippl-src": "704932fdaa390f883524cf53588c92386294add4",
+    "ippl-build/_deps/kokkos-src": "8e15454876298832f013ebcaf08d53825b5bda40",
+    "ippl-build/_deps/heffte-src": "6e16996e5a3eb65c60fd62fd4d93c4b2df833033",
+    "gtest-src": "6910c9d9165801d8827d628cb72eb7ea9dd538c5"
+  },
+  "dependencies_unchanged": true,
+  "backend": "CUDA;SERIAL",
+  "architecture": "AMPERE80 / sm_80",
+  "build_type": "Release",
+  "ctest_rank_count": 1,
+  "mpi_case_rank_count": 2,
+  "OMP_NUM_THREADS": 1,
+  "gpu_model": "NVIDIA A100-SXM4-40GB",
+  "gpus_allocated": 2,
+  "driver": "595.91.07",
+  "all_binary_hashes": [
+    [
+      "0e8d81df683ba589c8dc820bb87bb50cc4d570a349e39079335df215af46526d",
+      "/data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestMultipoleT"
+    ],
+    [
+      "2bf4cd66cd569fe3ea17ec617fff3b5db5e3e21c8c5e4175b6bf371d53ef32cf",
+      "/data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestMultipoleTBase"
+    ],
+    [
+      "8e93c484cbb965215538cfd302c790376a586cca116cd27d5d65d6fc2051aef2",
+      "/data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestMultipoleTStraight"
+    ],
+    [
+      "c9472f7e7c6b0bd03bedb91f36b3adae1b3c5a1eba995d18db9ff4141ffc3026",
+      "/data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestScalingFFAMagnet"
+    ],
+    [
+      "c95829e5beafe4bf9407819df647361da7083eb9eed28af177f94992a053a861",
+      "/data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestDeviceExternalField"
+    ],
+    [
+      "74e6c3269c40a36b684e39e864263c213572a05b3f6328c5b4929dafe0692192",
+      "/data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/TestTrackReferenceStep"
+    ],
+    [
+      "892ff495ede45e475ee503bfe91e6ffea78c4fed4d8985b3c7a41eaf52c9d015",
+      "/data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/bin/opalx"
+    ],
+    [
+      "f4ce20f795a2a7f4aafcbc814a2d8fae2b3a5c0e149b3b6585e2ee80a0066c27",
+      "/data/user/adelmann/opalx-dev/opalx-probe-615/build/gwendolen-cuda132-shared-release/lib/libopalx.so"
+    ]
+  ]
+}

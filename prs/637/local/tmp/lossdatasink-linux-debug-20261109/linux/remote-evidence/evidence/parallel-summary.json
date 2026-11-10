@@ -1,0 +1,27 @@
+{
+  "runs": [
+    {
+      "iteration": 1,
+      "returncode": 8,
+      "expected_failure": true,
+      "failure_lines": [
+        "71: [  FAILED  ] LossDataSinkTest.RewindH5RemovesCheckpointAndLaterStepsBeforeAppend (8 ms)",
+        "71: [  FAILED  ] LossDataSinkTest.RewindH5KeepsEveryStepBeforeCheckpoint (3 ms)",
+        "71: [  FAILED  ] 2 tests, listed below:",
+        "71: [  FAILED  ] LossDataSinkTest.RewindH5RemovesCheckpointAndLaterStepsBeforeAppend",
+        "71: [  FAILED  ] LossDataSinkTest.RewindH5KeepsEveryStepBeforeCheckpoint",
+        "71:  2 FAILED TESTS",
+        "[  FAILED  ] LossDataSinkTest.RewindH5RemovesCheckpointAndLaterStepsBeforeAppend (8 ms)",
+        "[  FAILED  ] LossDataSinkTest.RewindH5KeepsEveryStepBeforeCheckpoint (3 ms)",
+        "[  FAILED  ] 2 tests, listed below:",
+        "[  FAILED  ] LossDataSinkTest.RewindH5RemovesCheckpointAndLaterStepsBeforeAppend",
+        "[  FAILED  ] LossDataSinkTest.RewindH5KeepsEveryStepBeforeCheckpoint",
+        " 2 FAILED TESTS",
+        "The following tests passed:",
+        "50% tests passed, 1 tests failed out of 2",
+        "The following tests FAILED:"
+      ]
+    }
+  ],
+  "failed_runs": 1
+}

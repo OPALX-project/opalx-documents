@@ -1,0 +1,178 @@
+{
+  "identity": {
+    "branch": "codex/fft2d5-explicit-original-model",
+    "head": "6301c2cab10bf164e6d1ea60de5d0d25cdd0ca8a",
+    "binary": "/psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/src/opalx",
+    "binary_sha256": "5457c6bd1197b5151a95e295936234e148d7263eb6d5dc99690408609334c17e",
+    "slurm_job_id": "354965",
+    "cuda_visible_devices": "0",
+    "mpi_ranks": 1,
+    "omp_threads": 1,
+    "backend": "CUDA AMPERE80 / cuFFT",
+    "hostname": "merlin-g-100.psi.ch",
+    "unit_test_patch_sha256": "4554b1d44e39cc2b68e659c11ebe274b293f483a6e37deeb861088977297f010",
+    "production_source_clean": true,
+    "driver_sha256": "ef1286f949883c4549f429b4e1235c0f12f9854b58d3f02374a51d9ce072a50e",
+    "analysis_driver_sha256": "f26c0aca58c9b531737f4f5b5a8a613146d1415013f73c9dbf13420b66d351ea",
+    "dependencies": {
+      "ippl": {
+        "sha": "d6216553e39dcf4405849c027517cc3401fefee5",
+        "dirty": ""
+      },
+      "kokkos": {
+        "sha": "d9397f95a04a0334d327647e64ab7f1882ca0664",
+        "dirty": ""
+      },
+      "heffte": {
+        "sha": "4d8d4597b479d1e4709a2b1b4cd7d8922600045f",
+        "dirty": ""
+      },
+      "h5hut": {
+        "sha": "b5c74f760bc9919d409f46b5472e9eedf9a764d5",
+        "dirty": ""
+      }
+    }
+  },
+  "audited_bend_snapshots": 200,
+  "bend_comparison": [
+    {
+      "mode": "ZeroSC",
+      "field": "sigma_u_m",
+      "max_absolute_difference": 1.5317608292875207e-15,
+      "max_difference_over_published_peak": 1.5317799766566662e-13,
+      "max_pointwise_percent": 1.924062238347981e-11,
+      "endpoint_a100": 0.002826743497045093,
+      "endpoint_published": 0.002826743497044958
+    },
+    {
+      "mode": "ZeroSC",
+      "field": "sigma_y_m",
+      "max_absolute_difference": 4.3194614551822497e-16,
+      "max_difference_over_published_peak": 4.3194614551824365e-14,
+      "max_pointwise_percent": 4.319461455182436e-12,
+      "endpoint_a100": 0.01,
+      "endpoint_published": 0.009999999999999568
+    },
+    {
+      "mode": "ZeroSC",
+      "field": "sigma_s_m",
+      "max_absolute_difference": 1.5945023079666498e-12,
+      "max_difference_over_published_peak": 1.1046770984385096e-12,
+      "max_pointwise_percent": 1.1047036041045606e-10,
+      "endpoint_a100": 1.4434075439188452,
+      "endpoint_published": 1.4434075439188363
+    },
+    {
+      "mode": "ZeroSC",
+      "field": "emit_n_u_m",
+      "max_absolute_difference": 2.985605023433584e-23,
+      "max_difference_over_published_peak": 2.1942004881244401e-13,
+      "max_pointwise_percent": 1.0993196360750833e-09,
+      "endpoint_a100": 1.2946557715093274e-10,
+      "endpoint_published": 1.2946557715094885e-10
+    },
+    {
+      "mode": "ZeroSC",
+      "field": "emit_n_y_m",
+      "max_absolute_difference": 0.0,
+      "max_difference_over_published_peak": null,
+      "max_pointwise_percent": null,
+      "endpoint_a100": 0.0,
+      "endpoint_published": 0.0
+    },
+    {
+      "mode": "ZeroSC",
+      "field": "emit_sE_m_eV",
+      "max_absolute_difference": 4.4321086656531057e-13,
+      "max_difference_over_published_peak": 0.24630512124277726,
+      "max_pointwise_percent": 24.98010496710781,
+      "endpoint_a100": 2.2426491580998493e-12,
+      "endpoint_published": 1.7994382915345388e-12
+    },
+    {
+      "mode": "10pC",
+      "field": "sigma_u_m",
+      "max_absolute_difference": 1.5335411759909157e-11,
+      "max_difference_over_published_peak": 1.533560345614812e-09,
+      "max_pointwise_percent": 3.344683306801408e-07,
+      "endpoint_a100": 0.007069338733583523,
+      "endpoint_published": 0.0070693387405406805
+    },
+    {
+      "mode": "10pC",
+      "field": "sigma_y_m",
+      "max_absolute_difference": 1.4430921735364421e-12,
+      "max_difference_over_published_peak": 2.6920968975142844e-11,
+      "max_pointwise_percent": 5.145480702123802e-09,
+      "endpoint_a100": 0.05360476344135542,
+      "endpoint_published": 0.05360476344179528
+    },
+    {
+      "mode": "10pC",
+      "field": "sigma_s_m",
+      "max_absolute_difference": 1.765920742968774e-12,
+      "max_difference_over_published_peak": 1.2231786694266595e-12,
+      "max_pointwise_percent": 1.223409122508229e-10,
+      "endpoint_a100": 1.443442516879496,
+      "endpoint_published": 1.443442516881262
+    },
+    {
+      "mode": "10pC",
+      "field": "emit_n_u_m",
+      "max_absolute_difference": 5.835765342698143e-17,
+      "max_difference_over_published_peak": 6.456495834151862e-09,
+      "max_pointwise_percent": 7.356250416137991e-07,
+      "endpoint_a100": 9.038595323102452e-09,
+      "endpoint_published": 9.038595381460106e-09
+    },
+    {
+      "mode": "10pC",
+      "field": "emit_n_y_m",
+      "max_absolute_difference": 3.521813274992509e-18,
+      "max_difference_over_published_peak": 1.322430659106589e-09,
+      "max_pointwise_percent": 2.009598126320947e-07,
+      "endpoint_a100": 2.3769395011434677e-09,
+      "endpoint_published": 2.3769394986931242e-09
+    },
+    {
+      "mode": "10pC",
+      "field": "emit_sE_m_eV",
+      "max_absolute_difference": 2.3101023316485225e-09,
+      "max_difference_over_published_peak": 1.0011030721445274e-09,
+      "max_pointwise_percent": 7.235298850292726,
+      "endpoint_a100": 2.3075569321692413,
+      "endpoint_published": 2.307556929877264
+    }
+  ],
+  "analytic_zero_sc": {
+    "convention": "common time",
+    "endpoint_radial_emittance_error_percent": -0.027714908953813122,
+    "max_absolute_error_percent_analytic_peak": 0.12267375371506216
+  },
+  "dba_comparison": [
+    {
+      "case": "dba-serial-1",
+      "wall_s": 58.9764658510685,
+      "steady_s_per_step": 0.17076099999999997,
+      "max_position_difference_m": 1.7950389837477858e-12,
+      "max_momentum_difference_betagamma": 1.096070622834106e-12,
+      "max_momentum_difference_percent_peak_sc_kick": 0.002037373379806215
+    },
+    {
+      "case": "dba-serial-2",
+      "wall_s": 58.97445575310849,
+      "steady_s_per_step": 0.17104399999999997,
+      "max_position_difference_m": 1.7275263846522804e-12,
+      "max_momentum_difference_betagamma": 1.7960653571050416e-12,
+      "max_momentum_difference_percent_peak_sc_kick": 0.0033385218714248816
+    }
+  ],
+  "unsupported_batches": [
+    "dba-batch-1",
+    "dba-batch-8",
+    "dba-batch-32",
+    "dba-batch-64"
+  ],
+  "failed_cases": [],
+  "scope": "Published physical cases and current serial-slice DBA repeated on1A100/1rank. Earlier CPU implementations/timings are historical references. Batching guard retained, no GPU batching result."
+}

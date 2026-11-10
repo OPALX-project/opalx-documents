@@ -1,0 +1,31 @@
+{
+  "model": "semi-analytic curved-tube reference (SACR)",
+  "scope": "static uniform-density tapered ellipsoid family; no OPALX comparison or tracking",
+  "points_per_geometry": 33,
+  "geometries": 3,
+  "point_radius_cases": 429,
+  "field_component_values": 1287,
+  "radii_m": [
+    2.0,
+    5.0,
+    10.0,
+    20.0,
+    50.0,
+    100.0,
+    200.0,
+    500.0,
+    1000.0,
+    2000.0,
+    "infinity"
+  ],
+  "component_scale": "E_i*=4*pi*D_i*a_i in E/(k*rho) units; a_i=(a,c,b)",
+  "quadrature_tolerance_characteristic": 1e-08,
+  "largest_flat_normalized_error": 3.974664061407251e-14,
+  "largest_last_refinement_normalized_change": 3.638478864597074e-09,
+  "largest_endpoint_normalized_difference": 6.962602512208525e-15,
+  "largest_symmetry_normalized_field": 5.580589596813811e-15,
+  "largest_scalar_vectorized_normalized_difference": 1.670345928385091e-14,
+  "maximum_angular_nodes": 4096,
+  "runtime_s": 20.02004508399841,
+  "passed": true
+}

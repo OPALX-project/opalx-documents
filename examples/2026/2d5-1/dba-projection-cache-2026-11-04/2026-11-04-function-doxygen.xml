@@ -1,0 +1,50 @@
+<memberdef kind="function" id="classopalx_1_1spacecharge_1_1_f_f_t2_d5_algorithm_1a098c93130391abe45742165b179b9c3a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void opalx::spacecharge::FFT2D5Algorithm::preparePathGeometryAndProjections</definition>
+        <argsstring>(const SpaceChargeSolveContext &amp;context)</argsstring>
+        <name>preparePathGeometryAndProjections</name>
+        <qualifiedname>opalx::spacecharge::FFT2D5Algorithm::preparePathGeometryAndProjections</qualifiedname>
+        <param>
+          <type>const SpaceChargeSolveContext &amp;</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Prepare segment geometry and particle projections for one complete field solve. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This single preparation call eliminates repeated path-only calculations and the second nearest-segment search during gather. It is called by doRunSolver after <ref refid="classopalx_1_1spacecharge_1_1_f_f_t2_d5_algorithm_1a1249c7befa0615a7c2dcc544c327a9eb" kindref="member">solve()</ref> has put the reference path and every active particle container into the same Cartesian solve frame, and before coverage checking or charge deposition. Two ordered device stages are required: one geometry kernel, followed by a projection kernel for each active container. Geometry must be complete before particles search it; no global inter-block barrier is assumed inside a kernel.</para>
+<para>For path points R_i, segment i stores six doubles:<itemizedlist>
+<listitem><para>columns 0..2: d_i = R_(i+1) - R_i;</para>
+</listitem><listitem><para>column 3: d_i dot d_i;</para>
+</listitem><listitem><para>column 4: l_i = |d_i|;</para>
+</listitem><listitem><para>column 5: S_i = sum_(j&lt;i) l_j, the arc length at the segment start. The squared length, rather than its reciprocal, retains the original division in the closest-point calculation. A short single-work-item geometry kernel accumulates S_i in increasing segment order; zero-length segments contribute zero length and remain excluded from the nearest-segment search.</para>
+</listitem></itemizedlist>
+</para>
+<para>For each non-invalid particle x, search all segments in their original order:    <formula id="0">\[u_i = clamp((x-R_i)\cdot d_i / |d_i|^2,0,1),\qquad
+q_i = R_i + u_i d_i.
+\]</formula> The first strictly closest segment is retained, preserving the existing tie rule. Store its index and local coordinates (x_perp,y_perp,s), with <formula id="1">$ s=S_i+u_i l_i $</formula>. The normal remains the existing (0,1,0), the tangent is d_i/l_i and the binormal is normal cross tangent. This preserves the present path/basis approximation; it introduces no smoothing or curvature correction. Pre-summing S_i changes floating-point association relative to adding preceding lengths to u_i*l_i for every particle; small rounding differences are expected.</para>
+<para>The resulting cache is read by open-path coverage checking, deposition and gather in this doRunSolver call. Those stages do not change particle positions, momenta, ordering or the solve frame. Momentum is deliberately not cached: its local components are recomputed by the conversion used for diagnostics. Invalid particles receive a sentinel segment index and are skipped by all consumers. Inactive containers are neither projected nor modified.</para>
+<para><simplesect kind="par"><title>Lifetime and storage</title><para>Recompute geometry and every active particle projection on every complete solve, including after frame changes, particle movement, reordering or count changes. Reuse allocated views when their extents match; otherwise resize them before launching the particle kernel. Storage is O(M + N): 48*M bytes for M segments and (3*sizeof(double)+sizeof(size_t))*N bytes for local particle caches. Buffers of temporarily inactive containers may retain their previous allocation. Views are shared read-only by OpenMP workers; no N-by-M distance matrix exists. The remaining exhaustive search costs O(M*N) work, performed once per solve. Standalone scatterToGrid/gatherFromGrid diagnostic calls default to the uncached conversion, so a later probe edit or exception cannot reuse a stale projection.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Per-call container activity and tracker state. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="pre"><para>The initialized path and particles use the same aligned solve frame. </para>
+</simplesect>
+<simplesect kind="pre"><para>Inspection-only diagnostic callbacks do not move or reorder particles between preparation and the end of doRunSolver. </para>
+</simplesect>
+<simplesect kind="post"><para>Every active non-invalid particle has fresh local coordinates and a nearest-segment index. No particle position, momentum, field or dt is changed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h" line="622" column="14" bodyfile="src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp" bodystart="104" bodyend="186" />
+      </memberdef>
+    

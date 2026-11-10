@@ -1,0 +1,33 @@
+{
+  "command": [
+    "mpirun",
+    "-np",
+    "1",
+    "--map-by",
+    "slot",
+    "--bind-to",
+    "none",
+    "/psi/home/adelmann/opalx-dev/dba/validation-mpi-z-20261106/gpu_rank.sh",
+    "nsys",
+    "profile",
+    "--trace=cuda,nvtx",
+    "--sample=none",
+    "--cpuctxsw=none",
+    "--gpu-metrics-devices=none",
+    "--force-overwrite=true",
+    "--output",
+    "/psi/home/adelmann/opalx-dev/dba/validation-longitudinal-batch-20261106/gpu-1-profile/trace",
+    "/psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/src/opalx",
+    "case.in",
+    "--info",
+    "1",
+    "--2D5BatchSize",
+    "64",
+    "--restart",
+    "/psi/home/adelmann/opalx-dev/dba/validation-a100-20261105/assets/dba-initial-state.h5"
+  ],
+  "returncode": 0,
+  "wall_seconds": 19.96586228813976,
+  "job": "355047",
+  "binary_sha256": "0ce4be1d5f001fd2a4e5a1225276dc5b496c0ecd09207ba830231a1c6857fd42"
+}

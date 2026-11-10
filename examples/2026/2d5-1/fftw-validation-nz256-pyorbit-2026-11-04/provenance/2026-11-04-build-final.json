@@ -1,0 +1,15 @@
+{
+  "head": "a28af04173af9c9e122891c7b6c4f8d8d387ac16",
+  "binary_sha256": "91a50ddc25ed0ccc92ce3cfd29fef214a39818311b08505d6a840b582c80ba27",
+  "source_diff_sha256": "9b87546ec9d27975fc712fe4610b209d2583776ba6cbeaefaaea4d546511faeb",
+  "build_type": "Release",
+  "fftw": true,
+  "fftw_thread_support": true,
+  "omp_kernel_threads": 4,
+  "batch_size": 8,
+  "default_fftw_threads": 1,
+  "preserved_binary": "/Users/adelmann/git/opalx/build-omp/previous/opalx-4d627521ac4f-fftw1",
+  "preserved_binary_sha256": "4d627521ac4f33e2ba54d7e5b605a5fc536a41673b69c58fc28e3b04cb17e1ec",
+  "lazy_plans_primed_under_thread_limit": true,
+  "explicit_fftw_work_loop_team": true
+}

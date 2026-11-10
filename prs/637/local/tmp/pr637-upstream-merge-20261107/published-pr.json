@@ -1,0 +1,102 @@
+{
+  "baseRefName": "master",
+  "headRefName": "615-probe-command-does-not-work",
+  "headRefOid": "ec4319acb1d3cf676f2581f4c86c3e691ce2e22d",
+  "mergeStateStatus": "BLOCKED",
+  "mergeable": "MERGEABLE",
+  "state": "OPEN",
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-07T09:44:03Z",
+      "conclusion": "SKIPPED",
+      "detailsUrl": "https://github.com/OPALX-project/OPALX/actions/runs/42360968338/job/128369083436",
+      "name": "Build & Unit Tests",
+      "startedAt": "2026-11-07T09:44:03Z",
+      "status": "COMPLETED",
+      "workflowName": "CPU OpenMP"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-07T09:44:03Z",
+      "conclusion": "SKIPPED",
+      "detailsUrl": "https://github.com/OPALX-project/OPALX/actions/runs/42360968491/job/128369083649",
+      "name": "Build & Unit Tests",
+      "startedAt": "2026-11-07T09:44:03Z",
+      "status": "COMPLETED",
+      "workflowName": "CPU Serial"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-07T09:44:03Z",
+      "conclusion": "SKIPPED",
+      "detailsUrl": "https://github.com/OPALX-project/OPALX/actions/runs/42360968778/job/128369083757",
+      "name": "Check",
+      "startedAt": "2026-11-07T09:44:03Z",
+      "status": "COMPLETED",
+      "workflowName": "Check clang-format"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-07T09:44:03Z",
+      "conclusion": "SKIPPED",
+      "detailsUrl": "https://github.com/OPALX-project/OPALX/actions/runs/42360968571/job/128369108031",
+      "name": "Compile",
+      "startedAt": "2026-11-07T09:44:10Z",
+      "status": "COMPLETED",
+      "workflowName": "GPU CUDA"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-07T09:44:02Z",
+      "conclusion": "SKIPPED",
+      "detailsUrl": "https://github.com/OPALX-project/OPALX/actions/runs/42360968235/job/128369082676",
+      "name": "Compile",
+      "startedAt": "2026-11-07T09:44:03Z",
+      "status": "COMPLETED",
+      "workflowName": "GPU HIP"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-07T09:44:02Z",
+      "conclusion": "SKIPPED",
+      "detailsUrl": "https://github.com/OPALX-project/OPALX/actions/runs/42360968424/job/128369082796",
+      "name": "Compile SYCL",
+      "startedAt": "2026-11-07T09:44:03Z",
+      "status": "COMPLETED",
+      "workflowName": "GPU SYCL"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-07T09:44:03Z",
+      "conclusion": "SKIPPED",
+      "detailsUrl": "https://github.com/OPALX-project/OPALX/actions/runs/42360968491/job/128369083275",
+      "name": "Smoke Test (${{ matrix.test }})",
+      "startedAt": "2026-11-07T09:44:03Z",
+      "status": "COMPLETED",
+      "workflowName": "CPU Serial"
+    },
+    {
+      "__typename": "StatusContext",
+      "context": "cscs/cscs-ci-gh200",
+      "startedAt": "2026-11-07T09:44:09Z",
+      "state": "PENDING",
+      "targetUrl": "https://cicd-ext-mw.cscs.ch/ci/pipeline/results/694321096757981/82981356/3039725036?iid=2813&type=gitlab"
+    },
+    {
+      "__typename": "StatusContext",
+      "context": "cscs/cscs-ci-mi300",
+      "startedAt": "2026-11-07T09:44:11Z",
+      "state": "PENDING",
+      "targetUrl": "https://cicd-ext-mw.cscs.ch/ci/pipeline/results/694321096757982/83033814/3039725075?iid=2799&type=gitlab"
+    },
+    {
+      "__typename": "StatusContext",
+      "context": "cscs/cscs-ci-openmp",
+      "startedAt": "2026-11-07T09:44:13Z",
+      "state": "PENDING",
+      "targetUrl": "https://cicd-ext-mw.cscs.ch/ci/pipeline/results/694321096757983/83034039/3039725106?iid=2795&type=gitlab"
+    }
+  ],
+  "url": "https://github.com/OPALX-project/OPALX/pull/637"
+}

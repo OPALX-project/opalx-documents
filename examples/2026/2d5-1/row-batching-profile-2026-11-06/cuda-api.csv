@@ -1,0 +1,50 @@
+name,calls,summed_elapsed_ns,configuration
+cuCtxSetCurrent,7,831,1 GPU
+cuLaunchKernel,3168,14298121,1 GPU
+cuMemFree_v2,7,991,1 GPU
+cuMemRetainAllocationHandle,13768,18051537,1 GPU
+cuModuleUnload,7,255024,1 GPU
+cudaDeviceSynchronize_v3020,31256,639394616,1 GPU
+cudaFree_v3020,285,13577447,1 GPU
+cudaLaunchKernel_v7000,119698,550216922,1 GPU
+cudaMalloc_v3020,198,2082550,1 GPU
+cudaMemcpyAsync_v3020,198,1294472,1 GPU
+cudaMemcpy_v3020,810,14826786,1 GPU
+cudaMemsetAsync_v3020,396,2224943,1 GPU
+cudaStreamSynchronize_v3020,109082,1195196220,1 GPU
+cuCtxGetId,3565,607563,"2 GPUs, rank 0"
+cuCtxSetCurrent,6,811,"2 GPUs, rank 0"
+cuEventQuery,29315,23702558,"2 GPUs, rank 0"
+cuEventRecord,3565,9461344,"2 GPUs, rank 0"
+cuLaunchKernel,1584,7291174,"2 GPUs, rank 0"
+cuMemFree_v2,6,962,"2 GPUs, rank 0"
+cuMemHostUnregister,2,1892272,"2 GPUs, rank 0"
+cuMemRetainAllocationHandle,15612,20666631,"2 GPUs, rank 0"
+cuMemcpyDtoDAsync_v2,3565,16869508,"2 GPUs, rank 0"
+cuModuleUnload,6,216671,"2 GPUs, rank 0"
+cudaDeviceSynchronize_v3020,42465,684694521,"2 GPUs, rank 0"
+cudaFree_v3020,299,7861832,"2 GPUs, rank 0"
+cudaLaunchKernel_v7000,95379,458977904,"2 GPUs, rank 0"
+cudaMalloc_v3020,210,2949752,"2 GPUs, rank 0"
+cudaMemcpyAsync_v3020,408,4632296,"2 GPUs, rank 0"
+cudaMemcpy_v3020,1107,22609117,"2 GPUs, rank 0"
+cudaMemsetAsync_v3020,699,3107858,"2 GPUs, rank 0"
+cudaStreamSynchronize_v3020,59199,634283667,"2 GPUs, rank 0"
+cuCtxGetId,3564,601254,"2 GPUs, rank 1"
+cuCtxSetCurrent,6,791,"2 GPUs, rank 1"
+cuEventQuery,27868,23033875,"2 GPUs, rank 1"
+cuEventRecord,3564,10303014,"2 GPUs, rank 1"
+cuLaunchKernel,1584,8004635,"2 GPUs, rank 1"
+cuMemFree_v2,6,902,"2 GPUs, rank 1"
+cuMemHostUnregister,2,1921448,"2 GPUs, rank 1"
+cuMemRetainAllocationHandle,23278,30848387,"2 GPUs, rank 1"
+cuMemcpyDtoDAsync_v2,3564,19018632,"2 GPUs, rank 1"
+cuModuleUnload,6,214828,"2 GPUs, rank 1"
+cudaDeviceSynchronize_v3020,42460,682339125,"2 GPUs, rank 1"
+cudaFree_v3020,289,7299910,"2 GPUs, rank 1"
+cudaLaunchKernel_v7000,95374,495524120,"2 GPUs, rank 1"
+cudaMalloc_v3020,203,2802381,"2 GPUs, rank 1"
+cudaMemcpyAsync_v3020,402,4861906,"2 GPUs, rank 1"
+cudaMemcpy_v3020,1107,23760565,"2 GPUs, rank 1"
+cudaMemsetAsync_v3020,697,3395600,"2 GPUs, rank 1"
+cudaStreamSynchronize_v3020,59202,626976975,"2 GPUs, rank 1"

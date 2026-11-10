@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "native_runs": 4,
+  "requested_steps_per_run": 10,
+  "source_particles": 1048576,
+  "source_charge_C": 1e-11,
+  "geometries": [
+    "straight",
+    "bend"
+  ],
+  "reference_radius_m": 2.0,
+  "nominal_design_path_advance_m": 1.0,
+  "dt_s": 3.3356409519815204e-07,
+  "total_time_s": 3.3356409519815205e-06,
+  "mesh": [
+    128,
+    128,
+    512
+  ],
+  "free_transverse_box_m": [
+    0.048,
+    0.048
+  ],
+  "solver": "immutable e85 original independent 2D slices, OPEN local g=6.36",
+  "zero_control": "same source and nominal charge; TYPE=NONE disables self-fields",
+  "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf",
+  "no_build": true,
+  "no_production_source_change": true,
+  "nonlocal_3D_operator_used": false,
+  "all_counts_q_ids_time_frames_finite_passed": true,
+  "straight_zero_analytic_translation_passed": true,
+  "bend_zero_discrete_Boris_identity_passed": true,
+  "bend_moments": "exact-circle centred u,y,s plus Cartesian moments, initial+all10endpoints",
+  "native_mpi_ranks": 1,
+  "native_omp_threads": 4,
+  "selected": [
+    "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/opalx/runs/straight-ZeroSC-10steps-e85/manifest.json",
+    "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/opalx/runs/straight-10pC-10steps-e85/manifest.json",
+    "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/opalx/runs/bend-ZeroSC-10steps-e85/manifest.json",
+    "/Users/adelmann/git/OPALX-2D5/curved-study/straight-round-paper/tracking/opalx/runs/bend-10pC-10steps-e85/manifest.json"
+  ]
+}

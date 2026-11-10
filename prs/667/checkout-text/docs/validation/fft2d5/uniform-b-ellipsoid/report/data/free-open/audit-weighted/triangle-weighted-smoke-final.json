@@ -1,0 +1,178 @@
+{
+  "case": "triangle-weighted-smoke-final",
+  "initialization_valid": false,
+  "full": {
+    "case": "triangle-weighted-smoke-final",
+    "binary_sha256": "b9a4d4cda121c4f43589759bbe68d72b481eb4b6747a28b5d5186f5e9bb70a62",
+    "input_sha256": "dba4d7058e101c548833e8f37cfe0b9706ce33b61be27e1655a0596369517fd8",
+    "native_h5_sha256": "c937e5d928d96425debfa1836cfa658684637f78cf35461e1e8b060c0bdf83a7",
+    "native_checkpoint_sha256": "4f366bd60e99cc06a8ccd8acfd26679341524f8ba34a991ecee25b423e3d773b",
+    "particles": 1310771,
+    "source_particles": 1310720,
+    "exact_ids": true,
+    "input_total_q_C": 1.0000389099121094e-11,
+    "output_total_q_C": 2.0000717160711062e-11,
+    "input_source_q_C": 1.0000000000000001e-11,
+    "output_source_q_C": 1.999993896484375e-11,
+    "input_marker_q_C": 3.8909912109375004e-16,
+    "output_marker_q_C": 7.781958673149347e-16,
+    "header_charge_C": [
+      2.0000717160711066e-11
+    ],
+    "input_q_min_C": 4.6566128730096296e-23,
+    "input_q_max_C": 1.525874249637127e-17,
+    "output_q_min_C": 1.525874249637127e-17,
+    "output_q_max_C": 1.525874249637127e-17,
+    "q_preserved_by_id": false,
+    "q_max_relative_change": 327678.0000047684,
+    "q_input_sha256": "1bd8f56976a4a30ca39f95c34d68dcbb94ca0f997d31b8cb5740d7d773da9dca",
+    "q_output_checkpoint_sha256": "43b3ded6cd3db25989f1252f3141d139859b24dd3729651f074afbd8adbb4d03",
+    "m_preserved_by_id": false,
+    "m_max_relative_change": 327678.00000476843,
+    "m_input_sha256": "404ad7c2775e621f3c9975f5457afbb97365af4d134ff8d1521ba87abd857f01",
+    "m_output_checkpoint_sha256": "16ccd6e12b8422db3b952d4f2570fb8e9e32c02d299051bfc8e399480a2896fa",
+    "input_q_over_m_proton_pass": true,
+    "output_q_over_m_proton_pass": true,
+    "input_analytic_profile_q_pass": true,
+    "J_weighted_transverse_mean_pass": true,
+    "input_weighted_mean_uy_s_m": [
+      3.124946835715597e-06,
+      -6.932534366886829e-22,
+      -1.256425784963859e-16
+    ],
+    "input_weighted_second_uy_s_m2": [
+      6.250028395093294e-06,
+      6.249893671832932e-08,
+      1.0416666666860444
+    ],
+    "expected_mean_u_m": 3.125e-06,
+    "expected_second_s_m2": 1.0416666666666667,
+    "source_Q_normalization_pass": true,
+    "longitudinal_second_moment_pass": true,
+    "marker_q_pass": true,
+    "max_frozen_motion_residual_m": 1.195746796971678e-15,
+    "frame_motion_pass": true,
+    "initialization_valid": false
+  },
+  "companion": {
+    "case": "triangle-weighted-smoke-final-probes",
+    "binary_sha256": "b9a4d4cda121c4f43589759bbe68d72b481eb4b6747a28b5d5186f5e9bb70a62",
+    "input_sha256": "3cbf17b6caaac734d2df99f35a4a134ebbaee5a60adb9ea7591ab9c342645ff7",
+    "native_h5_sha256": "2ae1b13a26be2551a211be2287a7c4e864e5ac88dc1258c34ee1c1fb90382659",
+    "native_checkpoint_sha256": "b508568c50de1e7081290ed5c1dcb7b80b523ae9621bed989e3f4bf1d9154512",
+    "particles": 51,
+    "source_particles": 0,
+    "exact_ids": true,
+    "input_total_q_C": 3.8909912109375004e-16,
+    "output_total_q_C": 3.8909912109375004e-16,
+    "input_source_q_C": 0.0,
+    "output_source_q_C": 0.0,
+    "input_marker_q_C": 3.8909912109375004e-16,
+    "output_marker_q_C": 3.8909912109375004e-16,
+    "header_charge_C": [
+      3.8909912109375e-16
+    ],
+    "input_q_min_C": 7.62939453125e-18,
+    "input_q_max_C": 7.62939453125e-18,
+    "output_q_min_C": 7.62939453125e-18,
+    "output_q_max_C": 7.62939453125e-18,
+    "q_preserved_by_id": true,
+    "q_max_relative_change": 0.0,
+    "q_input_sha256": "d3110e088bfe6174aed08780740c88b81b379648cf969569c8a44d9256c33a7d",
+    "q_output_checkpoint_sha256": "d3110e088bfe6174aed08780740c88b81b379648cf969569c8a44d9256c33a7d",
+    "m_preserved_by_id": true,
+    "m_max_relative_change": 0.0,
+    "m_input_sha256": "8cf97a88837bfccca358e79b15463ea9518ff9828b11302ac8a902f2cab01c0b",
+    "m_output_checkpoint_sha256": "8cf97a88837bfccca358e79b15463ea9518ff9828b11302ac8a902f2cab01c0b",
+    "input_q_over_m_proton_pass": true,
+    "output_q_over_m_proton_pass": true,
+    "input_analytic_profile_q_pass": true,
+    "source_Q_normalization_pass": true,
+    "J_weighted_transverse_mean_pass": true,
+    "longitudinal_second_moment_pass": true,
+    "marker_q_pass": true,
+    "max_frozen_motion_residual_m": 8.881784197001252e-16,
+    "frame_motion_pass": true,
+    "initialization_valid": true
+  },
+  "reference_path": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/triangle_fields_reference.csv",
+  "reference_sha256": "2797950954a4ed8c5bb3ef7f7fcc608c9237d57afdcfe0aea14304f278360450",
+  "reference_charge_C": 1e-11,
+  "comparison_interpretable": false,
+  "field_metrics": [
+    {
+      "target_set": "original43",
+      "component": "r",
+      "nonzero_points": 43,
+      "max_relative_error_percent": 20.208019681135532,
+      "worst_nonzero_point": "axis_y_+0.5",
+      "max_symmetry_zero_absolute_error_V_m": null
+    },
+    {
+      "target_set": "original43",
+      "component": "y",
+      "nonzero_points": 28,
+      "max_relative_error_percent": 0.902924430279175,
+      "worst_nonzero_point": "axis_y_+0.5",
+      "max_symmetry_zero_absolute_error_V_m": 1.8393808472601526e-13
+    },
+    {
+      "target_set": "original43",
+      "component": "s",
+      "nonzero_points": 34,
+      "max_relative_error_percent": 1.8117811741708127,
+      "worst_nonzero_point": "axis_s_+0.998",
+      "max_symmetry_zero_absolute_error_V_m": 4.9984170624064534e-11
+    },
+    {
+      "target_set": "closer_end_diagnostics8",
+      "component": "r",
+      "nonzero_points": 8,
+      "max_relative_error_percent": 3.2099056064665246,
+      "worst_nonzero_point": "extra_axis_+0.0100",
+      "max_symmetry_zero_absolute_error_V_m": null
+    },
+    {
+      "target_set": "closer_end_diagnostics8",
+      "component": "y",
+      "nonzero_points": 0,
+      "max_relative_error_percent": null,
+      "worst_nonzero_point": null,
+      "max_symmetry_zero_absolute_error_V_m": 2.257913243500387e-13
+    },
+    {
+      "target_set": "closer_end_diagnostics8",
+      "component": "s",
+      "nonzero_points": 8,
+      "max_relative_error_percent": 6.203749267523343,
+      "worst_nonzero_point": "extra_axis_+0.0100",
+      "max_symmetry_zero_absolute_error_V_m": null
+    },
+    {
+      "target_set": "all51",
+      "component": "r",
+      "nonzero_points": 51,
+      "max_relative_error_percent": 20.208019681135532,
+      "worst_nonzero_point": "axis_y_+0.5",
+      "max_symmetry_zero_absolute_error_V_m": null
+    },
+    {
+      "target_set": "all51",
+      "component": "y",
+      "nonzero_points": 28,
+      "max_relative_error_percent": 0.902924430279175,
+      "worst_nonzero_point": "axis_y_+0.5",
+      "max_symmetry_zero_absolute_error_V_m": 2.257913243500387e-13
+    },
+    {
+      "target_set": "all51",
+      "component": "s",
+      "nonzero_points": 42,
+      "max_relative_error_percent": 6.203749267523343,
+      "worst_nonzero_point": "extra_axis_+0.0100",
+      "max_symmetry_zero_absolute_error_V_m": 4.9984170624064534e-11
+    }
+  ],
+  "failure": "Native q and/or m initialization was not preserved; field comparison is invalid and must not support acceptance.",
+  "script_sha256": "263e19eb6aac391e030f6083241646f7305b83a5df73859b3c758baf3097b39d"
+}

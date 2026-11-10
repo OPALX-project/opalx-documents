@@ -1,0 +1,40 @@
+{
+  "time": "2026-11-09T11:43:40.030794+00:00",
+  "queue": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "accounting": {
+    "returncode": 0,
+    "stdout": "355082|FAILED|1:0|00:00:15\n355082.batch|FAILED|1:0|00:00:15\n355082.extern|COMPLETED|0:0|00:00:15\n",
+    "stderr": ""
+  },
+  "status.tsv": [
+    "job\t355082",
+    "phase\trun",
+    "exit\t1"
+  ],
+  "job.log": [
+    "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestRFEventStepMPI: OK",
+    "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestCyclotronSector: OK",
+    "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestCyclotronSectorMPI: OK",
+    "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestCyclotronProbe: OK",
+    "/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/build/bin/TestCyclotronProbeMPI: OK",
+    "/usr/lib64/python3.9/tarfile.py:2288: RuntimeWarning: The default behavior of tarfile extraction has been changed to disallow common exploits (including CVE-2007-4559). By default, absolute/parent paths are disallowed and some mode bits are cleared. See https://access.redhat.com/articles/7004769 for more details.",
+    "  warnings.warn(",
+    "Verified unchanged13fixture/referencefiles",
+    "Traceback (most recent call last):",
+    "  File \"/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/run_tracker_gpu.py\", line 26, in <module>",
+    "    mapping=[json.loads((mappings/('opalx-rank'+str(rank)+'.json')).read_text()) for rank in range(ranks)]",
+    "  File \"/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/run_tracker_gpu.py\", line 26, in <listcomp>",
+    "    mapping=[json.loads((mappings/('opalx-rank'+str(rank)+'.json')).read_text()) for rank in range(ranks)]",
+    "  File \"/usr/lib64/python3.9/pathlib.py\", line 1194, in read_text",
+    "    with self.open(mode='r', encoding=encoding, errors=errors) as f:",
+    "  File \"/usr/lib64/python3.9/pathlib.py\", line 1180, in open",
+    "    return io.open(self, mode, buffering, encoding, errors, newline,",
+    "  File \"/usr/lib64/python3.9/pathlib.py\", line 1038, in _opener",
+    "    return self._accessor.open(self, flags, mode)",
+    "FileNotFoundError: [Errno 2] No such file or directory: '/data/user/adelmann/opalx-dev/pr637-audit-fixes-20261109/3320cf6fc490/gpu-integration/runs/valid-r1/gpu-mapping/opalx-rank0.json'"
+  ]
+}

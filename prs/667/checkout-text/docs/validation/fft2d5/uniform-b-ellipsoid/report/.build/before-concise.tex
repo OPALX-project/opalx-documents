@@ -1,0 +1,574 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=21mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,bm,booktabs,array,graphicx}
+\usepackage{siunitx,xcolor,enumitem,fancyhdr,caption,float}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,decorations.markings}
+\usepackage[hyphens]{url}
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,citecolor=blue!45!black]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\hypersetup{pdftitle={FFT2D5 validation in a uniform magnetic field},pdfauthor={OPALX numerical validation},pdfsubject={Thin-ellipsoid curved tracking benchmark and validation limits}}
+\sisetup{detect-all}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+\setlist{nosep,leftmargin=1.5em}
+\captionsetup{font=small,labelfont=bf}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small OPALX / FFT2D5 validation}
+\fancyhead[R]{\small Uniform-field thin-bunch test}
+\fancyfoot[C]{\thepage}
+\newcommand{\SC}{space charge}
+\newcommand{\T}{\mathsf T}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\eps}{\epsilon_0}
+\newcommand{\tabfile}[1]{\begin{center}\small\input{generated/#1.tex}\end{center}}
+\newcommand{\reportfigure}[3]{\begin{figure}[H]\centering\includegraphics[width=\linewidth]{figures/#1.pdf}\caption{#2}\label{#3}\end{figure}}
+\newcommand{\code}[1]{{\small\nolinkurl{#1}}}
+\title{\vspace{-1.4em}\textbf{FFT2D5 validation in a uniform magnetic field}\\[0.4em]
+\large A thin ellipsoid on a circular orbit: model, tracking tests and limits}
+\author{OPALX numerical validation report}
+\date{1 November 2026 \quad / \quad Working draft}
+
+\begin{document}
+\maketitle
+\vspace{-1em}
+\begin{abstract}
+Actual OPALX tracking of a cold uniform-volume ellipsoid is compared with an
+independent affine cold-fluid solution in a uniform magnetic field. The bunch
+is long along its trajectory and initially thin perpendicular to the orbit.
+With zero self-field and charges of 0.1, 0.3 and 1 pC, the fixed FFT2D5 solver
+reproduces all three total RMS sizes within 1\% at every saved time step through
+a half-turn. Independent mesh, time-step and particle-count controls support
+this result. A radius similarity scan from 2 to 0.25 m also passes this size
+criterion. However, the tangential space-charge-induced increase differs by
+32\% at 1 pC. A completed 10 pC pilot makes this limitation more visible:
+maximum total-size errors are 19.0\% radial, 5.65\% tangential and 2.59\%
+vertical. Initial-field moments, covariance and centroid diagnostics identify
+limits hidden by total RMS sizes. Strong-charge refinement and independent
+3D controls are incomplete; no converged 10 pC accuracy claim is made.
+\end{abstract}
+
+\section{Geometry and coordinate convention}
+The analytic problem uses physical coordinates $(X,Y,Z)$, a circular orbit in
+the $X$--$Y$ plane, and a uniform applied field $\bm B=B_Z\bm e_Z$.
+The identical problem is implemented in OPALX laboratory coordinates $(x,y,z)$
+by a proper rotation and a translation:
+\begin{equation}
+ \begin{pmatrix}x+R\\y\\z\end{pmatrix}
+ =T\begin{pmatrix}X\\Y\\Z\end{pmatrix},\qquad
+ T=\begin{pmatrix}1&0&0\\0&0&1\\0&-1&0\end{pmatrix},\qquad
+ T\bm B=\begin{pmatrix}0\\B_Z\\0\end{pmatrix},\quad \det T=1.
+ \label{eq:coordinates}
+\end{equation}
+\textbf{Thus the executed OPALX test has an $x$--$z$ orbit, a thin $y$ extent,
+and uniform $B_y$.} The label ``uniform $B_Z$'' refers to the physical analytic
+coordinates. A global OPALX $B_z$ would not be perpendicular to this orbit.
+In the results, $r$ denotes radial, $s$ tangential and $y$ vertical (OPALX).
+Local reference-frame RMS values are distinct from global laboratory $x,z$
+sizes, which change as the reference frame rotates.
+
+\begin{center}\small
+\begin{tabular}{ll}\toprule
+Quantity & Baseline value\\\midrule
+Species; centroid speed & Protons; $\beta_c=0.01$\\
+Orbit radius; physical field & $R=1$ m; $B_Z=B_y^{\rm OPALX}=31.2973881$ mT\\
+Initial semiaxes $(a_r,a_s,a_y)$ & $(5,50,0.5)$ mm\\
+Initial RMS sizes $(\sigma_r,\sigma_s,\sigma_y)$ & $(2.23607,22.36068,0.223607)$ mm\\
+Macroparticles; initial velocity & 98,304; rigid corotation, no random spread\\
+Duration; steps & $\pi/\Omega=1.047922511~\mu$s; 128\\
+FFT2D5 mesh; transverse box & $128\times256\times1024$; $24\times12$ mm\\
+Longitudinal approximation & Existing OPEN model, fixed $g=6.36$\\\bottomrule
+\end{tabular}
+\end{center}
+The initial centroid phase is 0.2 rad. Its orbit center in OPALX is
+$(-R,0,0)$. Orbit coverage of $180^\circ$ must be distinguished from the
+instantaneous bunch angular extent, initially about $5.7^\circ$ at $R=1$ m.
+
+\clearpage
+\section{Independent semi-analytic reference}
+\Cref{fig:test-geometry} summarizes the orbit and initial bunch geometry used
+by the independent model and OPALX. The local radial and tangential directions
+rotate with the reference particle; the thin direction is normal to the orbit.
+\begin{figure}[H]
+ \centering
+ \input{figures/test-geometry.tikz}
+ \caption{Uniform-field test geometry in OPALX coordinates. Left: the reference
+ centroid follows a clockwise half-turn when $+z$ points right and $+x$ up;
+ $+B_y$ points out of the page and corresponds to physical $B_Z$.
+ The bunch is shown at an illustrative intermediate phase, with outward
+ $\bm e_r$ and forward $\bm e_s$. Right: two initial ellipsoid projections
+ show the semiaxes, with separate magnifications. The orbital radius and bunch
+ size are not drawn to a common scale.}
+ \label{fig:test-geometry}
+\end{figure}
+The initial semiaxis hierarchy is $a_s:a_r:a_y=100:10:1$.
+The centroid starts at phase $\theta_0=0.2$ rad and advances by $\pi$ rad;
+the depicted intermediate bunch is not the initial phase. Rigid corotation
+means that each particle's initial velocity depends on its position, with no
+random velocity spread. The finite $y$ thickness allows a three-dimensional
+uniform-volume ellipsoid reference; it is not an infinitesimal charged sheet.
+
+\clearpage
+\subsection{Cold uniform-volume ellipsoid}
+For a random vector $\bm u$ uniformly distributed in the unit three-dimensional
+ball, write the physical particle position and covariance as
+\begin{equation}
+ \bm r=\bm C+A\bm u,\qquad
+ \rho=\frac{3Q}{4\pi\det A},\qquad
+ \Sigma=\left\langle(\bm r-\bm C)(\bm r-\bm C)^\T\right\rangle
+       =\frac15 AA^\T .\label{eq:affine}
+\end{equation}
+Here $A$ is dimensional (metres), $Q$ is the total bunch charge, and
+$\det A>0$. This is a uniform \emph{volume} distribution with finite thickness;
+its projection onto the orbit plane is not a uniform areal disk.
+
+The electrostatic field inside the ellipsoid is exactly linear in this model:
+\begin{equation}
+ \bm E(\bm r)=\frac{\rho}{\eps}D(A)(\bm r-\bm C),\qquad
+ AA^\T=U\operatorname{diag}(a_1^2,a_2^2,a_3^2)U^\T,\qquad
+ D=U\operatorname{diag}(D_1,D_2,D_3)U^\T .\label{eq:field}
+\end{equation}
+The dimensionless depolarization factors are evaluated using Carlson's
+symmetric elliptic integral $R_D$:
+\begin{align}
+ D_i&=\frac{a_1a_2a_3}{3}R_D(a_j^2,a_k^2,a_i^2),\qquad \sum_iD_i=1,\label{eq:carlson}\\
+ D_i&=\frac{a_1a_2a_3}{2}\int_0^\infty
+ \frac{\dd u}{(a_i^2+u)\sqrt{\prod_{\ell=1}^{3}(a_\ell^2+u)}} .
+\end{align}
+The equivalent integral provides an independent implementation check.
+Affine cold-fluid ellipsoid dynamics in a uniform field are discussed by
+Dubin~\cite{dubin}; the present benchmark has no electrostatic trap.
+
+With $q=e$, $m=m_p$, and $\Omega=qB_Z/m$, the dimensional equations are
+\begin{equation}
+ J=\begin{pmatrix}0&1&0\\-1&0&0\\0&0&0\end{pmatrix},\qquad
+ \ddot{\bm C}=\Omega J\dot{\bm C},\qquad
+ \ddot A=\frac{q\rho}{m\eps}D(A)A+\Omega J\dot A .\label{eq:model}
+\end{equation}
+The sign gives clockwise physical rotation for positive protons in positive
+$B_Z$. In OPALX, $TJT^\T$ gives acceleration proportional to $(-v_z,0,v_x)$.
+The unrotated initial conditions are
+\begin{align}
+ A(0)&=\operatorname{diag}(5,50,0.5)~\mathrm{mm},&
+ \dot A(0)&=\Omega J A(0),\\
+ \bm C(0)&=(R,0,0)^\T,&
+ \dot{\bm C}(0)&=(0,-\Omega R,0)^\T .
+\end{align}
+``Cold'' means zero random thermal spread about this deterministic velocity
+field; particles do not all have the same velocity. At $Q=0$, the ellipsoid
+rotates rigidly and its orbit-basis RMS sizes remain constant.
+
+\subsection{Accuracy, assumptions and comparison axes}
+The model assumes nonrelativistic, electrostatic, collisionless free-space
+dynamics, with no magnetic self-field, conducting boundaries or radiation.
+It is an exact affine solution of that continuum model while $A$ remains
+nonsingular, integrated numerically by DOP853. At $\beta\simeq0.01$, omitted
+relativistic and magnetic self-field terms are small; they are not declared
+zero. OPALX uses relativistic momenta and has a separately checked zero-self-field
+orbit. There is no fitted charge, field strength, time scale or $g$ in the oracle.
+
+At each STAT time, the full covariance is rotated and projected onto the
+\emph{actual OPALX reference axes}, derived from its recorded reference momentum.
+With $R_0=\exp(\theta_0J)$ and $\theta_0=0.2$ rad, the OPALX laboratory
+covariance is $\Sigma_{\rm OPALX}=T R_0AA^\T R_0^\T T^\T/5$.
+\begin{equation}
+ \sigma_i^{\rm model}(t)=\sqrt{\bm e_i^\T(t)\,\Sigma_{\rm OPALX}(t)\,\bm e_i(t)},
+ \qquad i\in\{r,s,y\} .\label{eq:projection}
+\end{equation}
+This prevents reference-phase error from being mistaken for size error.
+\tabfile{modelchecks}
+
+\clearpage
+\section{Numerics, implementation and test criteria}
+\subsection{Fixed production implementation}
+The tracking results use the native rectangular-cell-integrated two-dimensional
+logarithmic Green function, $G(\bm r)=-\log|\bm r|/(2\pi)$, including its finite
+self-cell average. Centered electric-field gradients use exterior potential
+halos obtained from the doubled free-space convolution. This also avoids
+artificial boundary self-forces. One FFT workspace is reused over slices;
+exactly empty slices are skipped after clearing staged fields, while
+zero-net-charge nonempty sources are still solved.
+
+The particle/reference-path frame repair is included: the immutable laboratory
+path and particles are transformed into a common solve frame and the particle
+frame is restored after solving, including exceptional exits. The benchmark
+uses the existing horizontal reference-path convention and longitudinal CIC.
+No additional curvature correction or change of $g$ is part of these results.
+
+The baseline reference path covers 0 to $4\pi/3$ rad (length about 4.18877 m).
+The applied field is supplied by one constant Cartesian field map; its domain
+contains the orbit and bunch. Open path endpoints must lie beyond the bunch,
+including the deposition support. A segmented dipole pilot is not used as a
+uniform-field reference because its sector seams failed that control.
+
+\subsection{Metrics and acceptance}
+The primary total-size metric is
+\begin{equation}
+ \epsilon_i=\max_{t\in\mathrm{STAT}}
+ \left|\frac{\sigma_i^{\rm OPALX}(t)}{\sigma_i^{\rm model}(t)}-1\right| .
+ \label{eq:error}
+\end{equation}
+Accepted baseline tracking requires $\epsilon_i<1\%$ in all three directions
+at every promised step, complete time coverage, unchanged particle count and
+correct assigned charge. Each independent baseline refinement must change
+every RMS curve by at most 0.5\%, and must itself remain within 1\% of the model.
+No tolerance was relaxed to obtain these results.
+
+The space-charge response is a separate, more sensitive observable:
+\begin{equation}
+ \Delta\sigma_i(Q,t)=\sigma_i(Q,t)-\sigma_i(\mathrm{SC\ off},t),\qquad
+ e_{\Delta,i}=\Delta\sigma_i^{\rm OPALX}-\Delta\sigma_i^{\rm model} .
+ \label{eq:growth}
+\end{equation}
+Its relative error uses the model increase as denominator. Near zero increase,
+absolute errors are reported instead of interpreting singular relative values.
+Matched controls use the same source, field, radius and time step.
+
+For HDF5 covariance checks, the standardized component error is
+\begin{equation}
+ e_{ij}^{\Sigma}=\frac{\Sigma_{ij}^{\rm OPALX}-\Sigma_{ij}^{\rm model}}
+ {\sigma_i^{\rm model}\sigma_j^{\rm model}} .\label{eq:covmetric}
+\end{equation}
+Cross-covariances are measured only at retained particle snapshots; they cannot
+be reconstructed from the three STAT RMS columns alone. Centroid response is
+the charged centroid minus its matched self-field-off control. The independent
+electrostatic model predicts zero charge-dependent centroid displacement.
+
+\subsection{Space-charge-off control}
+The NONE solver disables the self-field. A nominal finite assigned charge of
+0.1 pC is retained so macroparticle charge-to-mass ratios are defined. Therefore
+the control's STAT charge is \emph{not} zero; its model self-charge is zero.
+Validators distinguish these two quantities.
+
+\clearpage
+\section{Completed FFT2D5 baseline intensity scan}
+\tabfile{baseline}
+\reportfigure{baseline-rms}{All-step total RMS sizes and signed differences from
+the independent ellipsoid model. Model curves are explicitly identified;
+size axes include zero. The maximum absolute error is taken over every STAT
+sample, not only the final state.}{fig:baseline}
+All four cases complete the half-turn and preserve all 98,304 particles and
+their assigned charge. The largest baseline error is 0.90323\% in radial size
+at 1 pC. This establishes the stated total-RMS criterion for this geometry.
+It does not imply that the smaller collective increments are known to 1\%.
+
+\clearpage
+\section{Completed numerical refinements and 3D controls}
+\subsection{Independent 1 pC FFT2D5 refinements}
+\tabfile{convergence}
+\reportfigure{baseline-refinement}{Independent changes to the accepted 1 pC run.
+These are completed full-half-turn controls with the final production binary.
+Agreement with the independent model and changes relative to the baseline are
+different metrics.}{fig:convergence}
+The largest refinement-induced RMS change is 0.31101\%. Every refined run
+remains within 1\% of the model; the largest refined error is 0.98585\%.
+These are separate one-parameter controls, rather than a simultaneous
+asymptotic extrapolation of all discretizations.
+
+\subsection{Completed 3D OPEN comparisons}
+The existing three-dimensional OPEN solver provides an additional tracking
+control for the same physical source, field and independent model. Its coarse
+mesh is $32\times32\times64$; the refined 1 pC mesh is $64\times64\times128$.
+The charge-off row below uses 512 steps; charged rows use 128.
+\tabfile{open}
+At 1 pC, halving the time step changes the largest size by 0.00831\%; doubling
+particles changes it by 0.02515\%. Serial and two-rank OPEN curves differ by
+less than $3.5\times10^{-13}$ relative. These distributed OPEN checks do not
+establish distributed FFT2D5 support. Historical OPEN and development-run
+binary identities remain in their original manifests; they are not relabeled
+as runs of the final FFT2D5 binary.
+
+\clearpage
+\section{Tenfold-charge stress test: completed pilot}
+The bunch charge is increased from 1 to 10 pC at unchanged source shape, radius,
+field and half-turn duration. The model predicts final RMS sizes of
+$(5.82549,24.81866,11.59273)$ mm in $(r,s,y)$. Its maximum vertical support
+reaches 25.9 mm, so the transverse box is enlarged to $40\times64$ mm with a
+$128\times512\times1024$ mesh. The baseline box would clip the expanded bunch.
+\tabfile{strong}
+\reportfigure{strong-charge-rms}{Completed 10 pC FFT2D5 pilot versus the independent
+model. The stronger expansion exposes substantial radial and tangential
+disagreement. The 1\% baseline acceptance is not achieved.}{fig:strong}
+The maximum radial and tangential errors occur at the final time; the maximum
+vertical error occurs earlier. All 128 STAT samples, particle count, assigned
+charge and full duration are verified. All 16 retained particle snapshots have
+zero particles outside the configured transverse box and zero in its outer
+CIC half-cell; no claim is made about particle clearance at unsaved times.
+
+This is a stress result, not a converged 10 pC accuracy measurement. The
+fine-grid run and independent 10 pC OPEN control are incomplete. Moreover, the
+model's final tangential-to-vertical support ratio is only about 2.14, so the
+long-bunch approximation is stressed as the initially thin direction expands.
+The discrepancy cannot yet be assigned solely to $g$ or declared a new code bug.
+
+\clearpage
+\section{Collective growth, covariance and centroid}
+\subsection{Final increase relative to the matched control}
+\textbf{1 pC:}\tabfile{growth1}
+\textbf{10 pC pilot:}\tabfile{growth10}
+The 1 pC tangential growth error is 32.36\%, despite a total tangential-size
+error of only 0.3838\%. At 10 pC, the tangential increase is 2.45845 mm in the
+model and 3.85746 mm in OPALX. Thus the stronger-charge test does increase the
+space-charge signal and makes the model discrepancy much easier to see.
+\reportfigure{collective-growth}{Collective RMS increases relative to actual
+matched self-field-off controls. Dashed model and solid OPALX curves compare
+the response directly; lower panels show signed absolute errors in that
+increase. Size and growth axes include zero.}{fig:growth}
+
+\clearpage
+\subsection{Diagnostics beyond diagonal RMS sizes}
+\tabfile{response}
+The covariance column gives the final maximum absolute standardized component
+error from \cref{eq:covmetric}; $\rho_{rs}$ is the radial--tangential correlation.
+The centroid column is the maximum charged-minus-control displacement norm,
+using the newer matched R1 self-field-off run. It is not the raw displacement
+from a nonrelativistic reference circle.
+\reportfigure{centroid-covariance}{Space-charge response beyond total RMS sizes. The
+independent model has charge-independent centroid motion. Only retained HDF5
+times are used for cross-covariances; unavailable times are not interpolated.}{fig:response}
+For the 10 pC pilot, HDF5 and STAT RMS values agree within
+$4.3\times10^{-15}$ relative at common snapshots. This checks the diagnostic
+reconstruction but does not remove the physical/model disagreements.
+
+\clearpage
+\section{Initial self-fields and the longitudinal approximation}
+The fixed initial source is evaluated with a single tiny-time-step field solve.
+Fields are transformed into its principal axes and compared with
+\cref{eq:field}. The all-particle electric-field moment ratio and particlewise
+relative $L^2$ error are
+\begin{equation}
+ M_i=\frac{\sum_p \xi_{p,i} E_{p,i}^{\rm OPALX}}
+ {\sum_p \xi_{p,i} E_{p,i}^{\rm exact}},\qquad
+ L_i=\sqrt{\frac{\sum_p(E_{p,i}^{\rm OPALX}-E_{p,i}^{\rm exact})^2}
+ {\sum_p(E_{p,i}^{\rm exact})^2}} .
+\end{equation}
+Here $\bm\xi_p$ is the initial displacement from the centroid. Subtracting the
+applied field before evaluating a self-Lorentz-force diagnostic avoids counting
+the bending magnet as a self-field.
+\tabfile{fields}
+Historical mesh: $64\times128\times1024$, binary prefix \code{415fff3b41df}.
+Current mesh: $128\times256\times2048$, binary prefix \code{ba08fdd0b0bb}.
+\textbf{This pair changes both mesh and executable; it is not a controlled
+same-binary force-convergence study.} In particular, pointwise longitudinal
+force convergence has not been established.
+\reportfigure{initial-fields}{Initial field diagnostics. Historical and current
+frozen solves are distinguished by provenance. A near-unity field moment does
+not establish pointwise force accuracy.}{fig:fields}
+\clearpage
+\subsection{Shape-dependent longitudinal moment equivalent}
+For the initial ellipsoid with radial, tangential and vertical semiaxes
+$(a,b,c)$, matching the exact longitudinal field to the parabolic-line-density
+convention gives $g_{\rm eq}=2b^2D_s/(ac)=5.223213$. The fixed configured
+$g=6.36$ is 21.764\% larger. The current tangential moment is 21.281\% high,
+consistent with an existing longitudinal-model difference already at the source.
+For a tilted shape, the corresponding moment diagnostic is
+\begin{equation}
+ b_{\rm marg}=\sqrt{5\Sigma_{ss}},\qquad
+ g_{\rm eq}(t)=\frac{2b_{\rm marg}^3}{\det A}
+ \frac{(D\Sigma)_{ss}}{\Sigma_{ss}} .
+\end{equation}
+Here $D$ and $\Sigma$ are both expressed in the same ideal-centroid
+radial--tangential--vertical basis before taking their $ss$ components.
+It falls to 3.85049 at 1 pC and 1.90716 at 10 pC. The scalar does not reproduce
+the full tilted-ellipsoid field tensor.
+\reportfigure{longitudinal-model}{Longitudinal moment equivalent derived only
+from the independent ellipsoid model, compared with the fixed configured
+$g=6.36$. It is not fitted to OPALX and is not proposed as a scalar replacement
+for the full tensor field.}{fig:gmodel}
+The current initial mean radial
+self-electric field is $-0.3432$ V/m rather than zero; a local circular-basis
+decomposition attributes about 99.5\% of that mean to the longitudinal field
+projection. This identifies a model diagnostic, not an implemented correction.
+
+\clearpage
+\section{Completed radius similarity scan}
+Keep the source semiaxes, quiet sample and centroid $\beta$ fixed and choose
+\begin{equation}
+ B(R)=B_1\frac{1\,\mathrm m}{R},\quad
+ Q(R)=Q_1\left(\frac{1\,\mathrm m}{R}\right)^2,\quad
+ t(R)=t_1\frac{R}{1\,\mathrm m},\quad Q_1=1~\mathrm{pC}.
+\end{equation}
+With $\tau=\Omega t$ and a fixed normalization length $L$, the affine equation
+depends on $\kappa=3qQ/(4\pi\eps m\Omega^2L^3)$. Since $Q/\Omega^2$ is
+constant, the model predicts identical size-versus-angle curves. Each source's
+rigid-corotation velocities, map and path are regenerated for its radius.
+
+\tabfile{radius}
+\reportfigure{radius-similarity}{Radius similarity test: all four charged cases and their
+matched self-field-off controls complete the half-turn. The independent model
+predicts coincident size-versus-angle curves. Total-size agreement remains
+below 1\% in this scan.}{fig:radius}
+The scan uses $N_x,N_y=128,256$ and $N_s=\operatorname{round}(1100R/\mathrm m)$,
+preserving longitudinal physical spacing at about 4.09 mm. The reference path
+is padded from $-0.15$ to 4.35 rad. All saved snapshots pass transverse-box and
+CIC-edge clearance checks. The reported instantaneous bunch spans are about
+$2.9^\circ,5.7^\circ,11.5^\circ,22.7^\circ$ in descending radius order;
+these are span diagnostics, not general solver validity bounds.
+\tabfile{radiusresponse}
+The nearly constant tangential-growth bias points to an error already present
+in the longitudinal approximation. The increasing centroid response shows that
+curvature effects are not absent. The tight-radius fine-grid run is incomplete,
+so the extreme-radius result has no completed independent refinement control.
+
+\clearpage
+\section{Software verification and automated tracking checks}
+\begin{center}\small
+\begin{tabular}{p{0.31\linewidth}p{0.61\linewidth}}\toprule
+Test layer & Evidence and scope\\\midrule
+Independent model & Sphere/oblate/integral, zero-charge rotation, centroid,
+invariants, volume and tighter integration; \cref{eq:model}.\\
+C++ unit tests / CTest & 131/131 registered entries pass with one OpenMP thread.
+Kernel self-cell, anisotropy/scaling, quadrature, Gaussian force, halo/boundary,
+small grids, neutral sources, stale fields, frames/containers/exceptions.\\
+Four-thread numerical tests & 66 applicable FFT numerical tests pass; the
+multiple-rank guard test is skipped in that single-rank invocation.\\
+Two-rank FFT2D5 check & Explicit unsupported-MPI rejection passes on two ranks.
+This is a configuration guard, not distributed tracking validation.\\
+3D OPEN multi-rank control & Actual one-/two-rank tracking curves agree to
+$3.5\times10^{-13}$ relative for the checked 1 pC case.\\
+Native tracking regressions & ZeroSC and 1 pC cases registered locally in the
+companion regression tree; independent all-step validators both pass.\\
+Smoke-runner integration & ZeroSC executed through the new hook: normal
+\code{.rt} checks and independent all-step validation pass. Seven runner
+integration tests and meaningful validator corruption controls pass.\\
+Remote CI & Workflow and companion cases prepared locally; unpublished and
+not executed remotely. External CSCS runner remains on existing \code{.rt} checks.\\\bottomrule
+\end{tabular}
+\end{center}
+The two native cases are \code{FFT2D5-UniformB-ZeroSC} and
+\code{FFT2D5-UniformB-1pC}. Their validators check every one of 128 promised
+STAT rows against independent covariance predictions, plus time coverage,
+particle count, assigned charge and pinned source fixtures. Corrupting an
+intermediate RMS while retaining the final value, truncating output, losing a
+particle, changing charge/time or injecting nonfinite data must fail. The
+three final-value \code{.rt} checks complement these checks; they do not replace them.
+
+These are \emph{OPALX tracking regressions}. The solver C++ tests are unit tests.
+The new full smoke hook has been exercised on ZeroSC; the 1 pC reference has
+passed its independent validator, but has not been rerun through that hook.
+GPU execution and multi-rank FFT2D5 tracking are unverified/unsupported.
+
+\subsection{Incomplete cases excluded from acceptance}
+\begin{center}\small
+\begin{tabular}{lrrl}\toprule
+Case & STAT rows & Duration covered & Intended check\\\midrule
+10 pC fine mesh & 74/128 & 57.8125\% & $256\times1024\times1024$\\
+10 pC 3D OPEN & 240/256 & 93.7500\% & Independent strong-charge control\\
+$R=0.25$ m fine mesh & 61/128 & 47.6563\% & $256\times512\times550$\\\bottomrule
+\end{tabular}
+\end{center}
+These are partial stored outputs, not pending claims of success. They have no
+completion artifact and are excluded from completed-run comparisons. No new
+simulation was started to assemble this report.
+
+\clearpage
+\section{Conclusions and next measurements}
+The fixed implementation passes the specified 1\% \emph{total RMS size}
+criterion for the thin, low-speed 0--1 pC baseline, with independent numerical
+controls. The completed radius scan extends that observation across the tested
+2--0.25 m geometries. This is meaningful curved tracking validation with a
+rotating reference frame, not proof of a universal curved-space-charge model.
+
+The charge-dependent observables remain substantially less accurate. At 1 pC,
+tangential collective growth is 32\% high; the completed 10 pC pilot has 19\%
+radial total-size error and 57\% tangential-growth error. The current initial
+longitudinal field moment is about 21\% high. Covariance and a small nonzero
+charge-dependent centroid shift give additional failures of the independent
+electrostatic reference. These observations cannot be hidden by the successful
+baseline RMS criterion.
+
+The next measurements are to complete the 10 pC refinement and independent
+OPEN control, complete the tight-radius refinement, and repeat a controlled
+same-binary frozen-field study with adequate longitudinal sampling. Only then
+can numerical uncertainty, the fixed longitudinal approximation and the
+weakening long-bunch assumption be separated more decisively. No fitted $g$ or
+additional curvature operator is introduced here.
+
+\appendix
+\section{Reproduction and provenance}
+The main fixed implementation is saved in local commit \code{fd6ba8dc5} on
+\code{658-fft2d5-keep-particles-and-reference-path-in-a-consistent-frame}.
+Subsequent validation and reporting edits are local and uncommitted. The
+archived final FFT2D5 tracking runs identify their executable by SHA-256
+\begin{quote}\small\ttfamily
+\path{ba08fdd0b0bb1e90a64ba0fd3763a8b6d044b128c0af9b9dfd215ad0ffac8fd4}.
+\end{quote}
+Historical archived provenance records the pre-commit parent plus exact source
+hashes. It must not be read as proof that those files were unmodified at that
+parent commit. The source content was subsequently saved in the local fix commit.
+The coarse frozen solve uses a different historical binary, as labeled above.
+These hashes identify the recorded runs, not whichever executable is currently
+installed in a build directory.
+
+This report's \code{data/provenance.json} lists source paths, byte counts and
+SHA-256 hashes of copied tables, metadata, source code and logs. Figures and tables rebuild
+from those local copies, without OPALX or network access. The large particle
+HDF5 files and distributions remain in the original run tree; their manifests
+and original analysis scripts preserve case provenance.
+
+From this report directory, run \code{./build.sh}. It uses the OPALX Python
+environment by default, regenerates vector plots and tables, and invokes
+\code{latexmk -pdf}. Set \code{OPALX_REPORT_PYTHON} to another Python containing
+NumPy, pandas and Matplotlib. The PDF is copied to
+\code{output/pdf/fft2d5-uniform-field-validation.pdf} in the OPALX checkout.
+
+The existing simulation generator and model remain one directory above this
+report. For example, from that directory:
+\begin{quote}\small\ttfamily\raggedright
+python prepare\_opalx.py q1 --solver fft2d5 --charge-pc 1\newline
+\hspace*{1em}--mesh 128 256 1024 --run\newline
+python analyze\_stat.py --manifest opalx-runs/q1/manifest.json\newline
+\hspace*{1em}--require-one-percent
+\end{quote}
+Use the configured OPALX environment and executable. An existing completed run
+is preserved by the generator. Frozen fields and extended scans use their
+archived drivers listed in the evidence catalog; rebuilding the report itself
+does not launch any simulation.
+
+\clearpage
+\section{Evidence catalog}
+Paths below are relative to the report's copied \code{data/} directory unless
+marked as original run-tree paths. CSV tables and plot inputs are archived at
+full stored precision; displayed results are rounded only for presentation.
+\begin{center}\footnotesize
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.36\linewidth}>{\raggedright\arraybackslash}p{0.56\linewidth}}\toprule
+Evidence & Files / original source\\\midrule
+FFT2D5 accepted scan and refinements & \code{baseline-summary.csv},
+\code{baseline-convergence.csv}, \code{baseline-acceptance.json}; parent
+package \code{results/}.\\
+3D OPEN controls & \code{open-summary.csv}, \code{open-refinement-summary.csv},
+\code{open-convergence.json}; original \code{results/} and \code{convergence-analysis/}.\\
+10 pC pilot & \code{strong-summary.csv}, \code{strong-manifest.json}; original
+\code{strong-charge/pilot-analysis/}.\\
+Collective response & \code{growth-summary.csv}, \code{centroid-summary.csv},
+\code{covariance-snapshots.csv}; original \code{response-audit/results-q10-pilot/}.\\
+Frozen fields / longitudinal equivalent & \code{field-summary.csv},
+\code{g-evolution.csv}; original \code{response-audit/results-q10-pilot/}.\\
+Radius scan & \code{radius-summary.csv}, \code{radius-all-case-summary.csv},
+\code{analytic-geometry.csv}; original \code{radius-scan/results/}.\\
+Model checks and code & \code{model-checks.json}, \code{strong-model-checks.json},
+\code{ellipsoid_model.py}, \code{prepare_opalx.py}.\\
+Unit/build verification & \code{test-logs/fft2d5-final-*.log}; original
+\code{fft-goal/test-logs/}.\\
+Native regression validation & \code{zero-regression-validation.json},
+\code{q1-regression-validation.json}; companion \code{regression-tests-x}.\\
+Partial cases & \code{incomplete-manifests/}; original strong-charge and radius
+run directories, excluded from acceptance.\\\bottomrule
+\end{tabular}
+\end{center}
+The original run-tree root is
+\path{/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz}.
+Historical coarse FFT2D5 development runs and failed field-map/seam pilots are
+retained there. They diagnose development errors and are not substituted for
+the final-binary acceptance scan. Straight KV tests and comparisons to a
+different curvature operator are outside this report's uniform-field focus.
+
+\begin{thebibliography}{9}
+\bibitem{dubin}
+D. H. E. Dubin, ``Equilibrium and dynamics of uniform density ellipsoidal
+non-neutral plasmas,'' \emph{Physics of Fluids B} \textbf{5}, 295--324 (1993).
+\href{https://nnp.ucsd.edu/pdf_files/PFB_5_295_1993.PDF}{Author-hosted full text}.
+\end{thebibliography}
+\end{document}

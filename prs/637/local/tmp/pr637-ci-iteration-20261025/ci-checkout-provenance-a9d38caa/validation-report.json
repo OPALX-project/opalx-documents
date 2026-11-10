@@ -1,0 +1,31 @@
+{
+  "expected_source": "a9d38caa4f88433a5de1508b3d5c7d01bdfea95a",
+  "expected_tests": "737547e6ae38cf3001d6bc45cf38dd1a47d78402",
+  "backends": {
+    "openmp": {
+      "job_id": "17451990959",
+      "xml_sha256": "67c02a2c69255405ce7ffb776ea1f223c0fba64fd360ce7bd9cb0e12bb225ef5",
+      "comparison_count": 401,
+      "known_failed_or_broken_count": 5,
+      "new_failure_ids": [],
+      "source_tests_guards": "PASS"
+    },
+    "mi300": {
+      "job_id": "17451990683",
+      "xml_sha256": "f4933cfd952712d7186a060b7105ae8d527ae89a7b8eb7c2c675d4e64f72217e",
+      "comparison_count": 401,
+      "known_failed_or_broken_count": 5,
+      "new_failure_ids": [],
+      "source_tests_guards": "PASS"
+    },
+    "gh200": {
+      "job_id": "17451990424",
+      "xml_sha256": "1836ed577eb963bf6b67c56a378906960762503a7b237777fbddca5498927a33",
+      "comparison_count": 401,
+      "known_failed_or_broken_count": 5,
+      "new_failure_ids": [],
+      "source_tests_guards": "PASS"
+    }
+  },
+  "result": "PASS"
+}

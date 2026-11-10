@@ -1,0 +1,83 @@
+\clearpage
+\section{Nonlocal free-space fields of the 5 m curved beam}
+\label{sec:free-open}
+This update addresses the historical OPEN failure in \cref{sec:frozen}.
+Under the existing \code{PIPEMODE="OPEN"} interface, a new nonlocal
+three-dimensional Coulomb operator replaces the independent transverse-slice
+calculation and its local longitudinal closure. It includes finite-source
+longitudinal coupling and circular geometry. IPPL still stores uniform
+Cartesian arrays; OPALX interprets their coordinates and supplies the custom
+field operator, as detailed in \cref{sec:mapped-grid}. The conducting-pipe control in
+\cref{sec:triangle-pipe} tests a separate boundary model.
+
+\subsection{Matched uniform and triangular sources}
+Keep $L=5$ m, $R=2$ m, $(a,c)=(5,0.5)$ mm, $Q=10$ pC and
+$\beta=0.001$. Inside the fixed elliptical section, the physical densities are
+\begin{equation}
+ \rho_{\rm U}=\frac{Q}{\pi acL},\qquad
+ \rho_{\rm T}(s)=\frac{2Q}{\pi acL}
+ \left(1-\frac{2|s|}{L}\right),\quad |s|\le L/2.
+ \label{eq:free-profiles}
+\end{equation}
+Both vanish outside the finite tube; the uniform end is sharp. The physical
+charge measure is $\dd q=\rho(s)(1+u/R)\dd u\,\dd y\,\dd s$.
+No physical tail smoothing or coefficient fit enters either comparison.
+
+SACR retains the exact Coulomb geometry. For the triangular source, integration
+by parts extends \cref{eq:sacr-surface} to
+\begin{equation}
+ \bm E(\bm x)=\frac{1}{4\pi\eps}
+ \left[\oint_{\partial V}\frac{\rho'\bm n'}{|\bm x-\bm x'|}\dd S'
+ -\int_V\frac{\nabla'\rho'}{|\bm x-\bm x'|}\dd V'\right].
+ \label{eq:free-weighted-sacr}
+\end{equation}
+The end-cap term vanishes for the triangle. The longitudinal gradient term
+is integrated analytically along each filament, then by target-centred
+cross-section quadrature. Side, radial and longitudinal rules are refined
+independently. All 51 targets, including the cusp and added 1 mm and 0.1 mm
+end-distance diagnostics, retain their stated acceptance roles.
+The last nonzero-field quadrature change is below $8\times10^{-12}$ relative;
+selected independent direct volume checks agree within $6\times10^{-9}$.
+
+\subsection{One potential on a uniform reference-path coordinate grid}
+Let $\kappa=1/R$, $x=u-u'$, $v=y-y'$, $\tau=s-s'$ and
+\begin{equation}
+ \xi(\tau)=\frac{2\sin(\kappa\tau/2)}{\kappa},\qquad
+ D^2=x^2+v^2+\xi^2,\qquad
+ d^2=D^2+\xi^2[\kappa(u+u')+\kappa^2uu'].
+ \label{eq:free-distance}
+\end{equation}
+The longitudinal chord retains the full bend angle. Expanding only the small
+transverse ratio $\kappa u$ gives three translation-invariant kernels,
+\begin{align}
+ G&=D^{-1},& H&=\xi^2D^{-3},& F&=xH,\nonumber\\
+ \Phi^{(1)}&=\frac{1}{4\pi\eps}
+ \left[G*\rho_{\rm FS}-\kappa u(H*\rho_{\rm FS})
+       +\frac{\kappa}{2}(F*\rho_{\rm FS})\right],
+ &\rho_{\rm FS}&=\frac{\dd q}{\dd u\,\dd y\,\dd s}.
+ \label{eq:free-convolution}
+\end{align}
+Here $*$ denotes a three-dimensional convolution on the uniform $(u,y,s)$
+coordinate array. The curved physical geometry enters through the custom
+kernels and metric; no native curved IPPL mesh is constructed. The array
+does not fill the curved beam's global Cartesian bounding box.
+The same deposited density supplies every term; its Jacobian is not applied
+twice. Terms quadratic in the transverse metric are omitted. All three fields
+follow this common potential, $\Phi=\Phi^{(1)}$:
+\begin{equation}
+ E_u=-\partial_u\Phi,\qquad E_y=-\partial_y\Phi,\qquad
+ E_s=-\frac{\partial_s\Phi}{1+\kappa u}.
+ \label{eq:free-gradient}
+\end{equation}
+The flat singular source-cell integrals of $G,H,F$ are analytic. A smooth
+curved-minus-flat correction is integrated numerically; fourth-order centered
+differences use a two-cell potential halo. No fixed $g$ remains in OPEN.
+Direct exact-versus-expanded Coulomb integration changes the weak centre
+radial field by less than $3\times10^{-7}$ relative for both profiles. This
+checks curvature truncation separately from mesh accuracy.
+OPEN uses a smooth straight/circular coordinate map fitted to the laboratory
+path and transformed with the particles. This removes polyline sagitta and
+segment-frame jumps; unsupported path shapes are rejected.
+
+\input{generated/free-open-results.tex}
+\input{generated/free-open-pipe-control-text.tex}

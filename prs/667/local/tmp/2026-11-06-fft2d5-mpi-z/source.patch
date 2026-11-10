@@ -1,0 +1,397 @@
+diff --git a/src/PartBunch/ParticleContainer.hpp b/src/PartBunch/ParticleContainer.hpp
+index 64bf6fa2d..1c8247712 100644
+--- a/src/PartBunch/ParticleContainer.hpp
++++ b/src/PartBunch/ParticleContainer.hpp
+@@ -234,6 +234,17 @@ public:
+         }
+     }
+ 
++    /** Scratch Cartesian positions registered lazily so OPEN-style spatial migration
++     * carries them with every other particle attribute. No allocation for other solvers. */
++    ippl::ParticleAttrib<ippl::Vector<T, Dim>>& migrationPositions() {
++        if (!migrationPositions_m) {
++            migrationPositions_m = std::make_unique<ippl::ParticleAttrib<ippl::Vector<T, Dim>>>();
++            this->addAttribute(*migrationPositions_m);
++            migrationPositions_m->create(0);
++        }
++        return *migrationPositions_m;
++    }
++
+     void setupBCs(ippl::BC particleBC) { this->setParticleBC(particleBC); }
+ 
+     /// Apply coordinate transform to local particles: translate R, rotate P, E, B and Pol.
+@@ -1020,6 +1031,7 @@ public:
+     }
+ 
+ private:
++    std::unique_ptr<ippl::ParticleAttrib<ippl::Vector<T, Dim>>> migrationPositions_m;
+     std::unique_ptr<SpatialLayout_t> spatialLayout_m;
+     std::unique_ptr<P3MLayout_t> overlapLayout_m;
+ 
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
+index 044ec6a88..2535a6e6a 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.cpp
+@@ -50,11 +50,8 @@ namespace opalx::spacecharge {
+             throw OpalException(
+                     "FFT2D5Algorithm::solve", "The container activity set has the wrong size.");
+         }
+-        if (context.stepState().mpiSize != 1 || ippl::Comm->size() != 1) {
+-            throw OpalException(
+-                    "FFT2D5Algorithm::solve",
+-                    "FFT2D5 currently supports only one MPI rank. Distributed fields and ORB "
+-                    "load balancing are not implemented for this solver.");
++        if (ippl::Comm->size() > 1 && !config_m.grid.decomposition[2]) {
++            throw OpalException("FFT2D5Algorithm::solve", "Multiple ranks require PARFFTZ=TRUE.");
+         }
+         if (bunchState_m->fixedCartesianDomain().has_value()) {
+             throw OpalException(
+@@ -102,6 +99,77 @@ namespace opalx::spacecharge {
+         return result;
+     }
+ 
++    void FFT2D5Algorithm::migrateToSlabs(const SpaceChargeSolveContext& context) {
++        const auto origin = fieldStorage_m->origin();
++        const auto size = fieldStorage_m->size();
++        const auto length = referencePath_m->length();
++        for (size_t c = 0; c < particles_m.size(); ++c) {
++            if (!context.trackingActive()[c]) continue;
++            auto& pc = *particles_m[c];
++            const auto projected = projectedPositions_m[c];
++            const auto invalid = pc.InvalidMask.getView();
++            size_t outside = 0;
++            Kokkos::parallel_reduce("FFT2D5::checkMigrationDomain", pc.getLocalNum(),
++                KOKKOS_LAMBDA(size_t i, size_t& count) {
++                    if (!invalid(i) && (projected(i)[0] < origin[0] || projected(i)[0] >= origin[0]+size[0]
++                        || projected(i)[1] < origin[1] || projected(i)[1] >= origin[1]+size[1])) ++count;
++                }, outside);
++            ippl::Comm->allreduce(outside, outside, 1, std::plus<size_t>());
++            if (outside) throw OpalException("FFT2D5Algorithm::migrateToSlabs",
++                "Particle outside transverse FFT2D5 domain; enlarge PIPESIZEX/PIPESIZEY.");
++            auto saved = pc.migrationPositions().getView();
++            auto r = pc.R.getView();
++            Kokkos::parallel_for("FFT2D5::saveCartesianPositions", pc.getLocalNum(),
++                KOKKOS_LAMBDA(size_t i) {
++                    saved(i) = r(i);
++                    auto q = invalid(i) ? Vector3D_t(0.) : projected(i);
++                    q[2] = q[2] >= length ? 0. : q[2];
++                    r(i) = q;
++                });
++            Kokkos::fence();
++            pc.updateLayout(fieldStorage_m->layout(), fieldStorage_m->mesh());
++            const auto restore = [&] {
++                const auto positions = pc.R.getView();
++                const auto cartesian = pc.migrationPositions().getView();
++                Kokkos::parallel_for("FFT2D5::restoreCartesianPositions", pc.getLocalNum(),
++                    KOKKOS_LAMBDA(size_t i) { positions(i) = cartesian(i); });
++                Kokkos::fence();
++                pc.markMomentsDirty();
++            };
++            try { pc.update(); } catch (...) { restore(); throw; }
++            restore();
++        }
++        preparePathGeometryAndProjections(context);
++    }
++
++    void FFT2D5Algorithm::accumulateDensityHalos() {
++        auto& rho = fieldStorage_m->chargeDensity();
++        auto view = rho.getView();
++        const int nx = fieldStorage_m->meshSize()[0], ny = fieldStorage_m->meshSize()[1];
++        // OPEN transverse boundaries: do not wrap transverse CIC spill when the
++        // longitudinal layout is periodic. Only z ghosts enter halo accumulation.
++        Kokkos::parallel_for("FFT2D5::clearTransverseSourceHalo",
++            Kokkos::MDRangePolicy<Kokkos::Rank<3>>({0,0,0}, {view.extent(0),view.extent(1),view.extent(2)}),
++            KOKKOS_LAMBDA(size_t i,size_t j,size_t k) {
++                if (i == 0 || j == 0 || i > size_t(nx) || j > size_t(ny)) view(i,j,k)=0.;
++            });
++        Kokkos::fence();
++        rho.accumulateHalo();
++    }
++
++    void FFT2D5Algorithm::fillFieldHalos() {
++        auto& field = fieldStorage_m->electricField();
++        field.fillHalo();
++        auto view = field.getView();
++        const int nx = fieldStorage_m->meshSize()[0], ny = fieldStorage_m->meshSize()[1];
++        Kokkos::parallel_for("FFT2D5::clearTransverseFieldHalo",
++            Kokkos::MDRangePolicy<Kokkos::Rank<3>>({0,0,0}, {view.extent(0),view.extent(1),view.extent(2)}),
++            KOKKOS_LAMBDA(size_t i,size_t j,size_t k) {
++                if (i == 0 || j == 0 || i > size_t(nx) || j > size_t(ny)) view(i,j,k)=Vector3D_t(0.);
++            });
++        Kokkos::fence();
++    }
++
+     void FFT2D5Algorithm::preparePathGeometryAndProjections(
+             const SpaceChargeSolveContext& context) {
+         const auto ref = solveReferencePath_m;
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
+index b76c7ec1c..25f660563 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h
+@@ -651,6 +651,21 @@ namespace opalx::spacecharge {
+          */
+         void preparePathGeometryAndProjections(const SpaceChargeSolveContext& context);
+ 
++        /** @brief Reuse OPEN spatial migration with logical (u,v,s) ownership.
++         * Cartesian positions are saved in a registered particle attribute so IPPL
++         * migrates them, IDs, momenta and charges together. R is temporarily replaced
++         * by the prepared path projection, then restored exactly before any physics
++         * operation. Invalid particles remain invalid. All active ranks participate,
++         * including ranks with no local particles. Projection caches are rebuilt after
++         * migration because local particle order and count may change.
++         * @pre Particles and path are in the common solve frame; projections are current.
++         * @post Tracking coordinates are Cartesian, and each particle belongs to its s slab.
++         */
++        void migrateToSlabs(const SpaceChargeSolveContext& context);
++        /// Exchange slab halos while preserving open transverse boundaries.
++        void accumulateDensityHalos();
++        void fillFieldHalos();
++
+     private:
+         FFT2D5Config config_m;
+         std::vector<ParticleContainer*> particles_m;
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
+index 0e37ead88..821bac559 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.hpp
+@@ -270,6 +270,7 @@ namespace opalx::spacecharge {
+     void FFT2D5Algorithm::doRunSolver(
+             const SpaceChargeSolveContext& context, DiagnosticPolicy diagnostic) {
+         preparePathGeometryAndProjections(context);
++        if (ippl::Comm->size() > 1) migrateToSlabs(context);
+         scatterToGrid<DiagnosticPolicy>(context, diagnostic, true);
+         solvePoissons<DiagnosticPolicy>(diagnostic);
+         calculateLineDensity<DiagnosticPolicy>(diagnostic);
+@@ -336,6 +337,7 @@ namespace opalx::spacecharge {
+                                     pc->R.getView(), pc->P.getView(), ref, geometry, projectedR,
+                                     projectedSegment, pc->InvalidMask.getView(), length, tolerance},
+                             outside);
++                    ippl::Comm->allreduce(outside, outside, 1, std::plus<size_t>());
+                     if (outside != 0) {
+                         throw OpalException(
+                                 "FFT2D5Algorithm::scatterToGrid",
+@@ -370,7 +372,9 @@ namespace opalx::spacecharge {
+                 pc->unscaleDtByCharge();
+             }
+             // Handle the closed ring periodic boundary condition
+-            if (config_m.closedRing) {
++            if (ippl::Comm->size() > 1) {
++                accumulateDensityHalos();
++            } else if (config_m.closedRing) {
+                 constexpr auto firstRealZ = LineDensityFirstRealCell;
+                 const auto lastRealZ = fieldStorage_m->meshSize()[2] - 1 + LineDensityFirstRealCell;
+                 Kokkos::parallel_for(
+@@ -542,14 +546,18 @@ namespace opalx::spacecharge {
+             const auto deviceLineDensity = lineDensity_m;
+             const auto hostLineDensity   = Kokkos::create_mirror_view(lineDensity_m);
+             const auto numSlices         = fieldStorage_m->meshSize()[2];
+-            // Calculate the total charge density for each z slice
+-            for (size_t k = 0; k < numSlices + LineDensityGhostCells; ++k) {
++            Kokkos::deep_copy(hostLineDensity, 0.);
++            const auto localDomain = fieldStorage_m->layout().getLocalNDIndex();
++            for (size_t k = 0; k < size_t(localDomain[2].length()); ++k) {
+                 T sum{};
+                 Kokkos::parallel_reduce(
+-                        Policy2D_t({0, 0}, {rho3d.extent(0), rho3d.extent(1)}),
+-                        fft2d5_detail::SliceDensitySumFunctor{rho3d, k}, sum);
+-                hostLineDensity(k) = sum;
++                        Policy2D_t({1, 1}, {rho3d.extent(0)-1, rho3d.extent(1)-1}),
++                        fft2d5_detail::SliceDensitySumFunctor{rho3d, k + LineDensityFirstRealCell}, sum);
++                hostLineDensity(k + localDomain[2].first() + LineDensityFirstRealCell) = sum;
+             }
++            // Only the small 1D profile is replicated; no 3D field all-reduction.
++            if (ippl::Comm->size() > 1)
++                ippl::Comm->allreduce(hostLineDensity.data(), numSlices + LineDensityGhostCells, std::plus<T>());
+             // Set the ghost cells to the boundary conditions
+             if (config_m.closedRing) {
+                 hostLineDensity(0) = hostLineDensity(numSlices + LineDensityGhostCells - 2);
+@@ -593,7 +601,7 @@ namespace opalx::spacecharge {
+         auto e3d             = fieldStorage_m->electricField().getView();
+         const auto rho3d     = fieldStorage_m->chargeDensity().getView();
+         const auto nGhost    = fieldStorage_m->electricField().getNghost();
+-        const auto numSlices = fieldStorage_m->meshSize()[2];
++        const auto numSlices = fieldStorage_m->layout().getLocalNDIndex()[2].length();
+         fieldStorage_m->resetBackendSolves();
+         // Empty slices have exactly zero transverse field. Clear the staging grid first, including
+         // slices that were occupied on the preceding step, so skipping them cannot retain a field.
+@@ -606,7 +614,7 @@ namespace opalx::spacecharge {
+         auto occupiedHost =
+                 Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), occupiedSlices);
+         // All ranks must execute the same FFT calls, even if their local sources differ.
+-        ippl::Comm->allreduce(occupiedHost.data(), numSlices, std::greater<int>());
++        // Each rank independently solves only its owned planes.
+         bool batched = false;
+         if constexpr (std::is_same_v<DiagnosticPolicy, NullDiagnostic>) {
+             if (fieldStorage_m->batchSize() > 0) {
+@@ -617,6 +625,13 @@ namespace opalx::spacecharge {
+                 batched = true;
+             }
+         }
++        if (ippl::Comm->size() > 1 && !batched) {
++            std::vector<size_t> occupied;
++            for (size_t z = 0; z < size_t(numSlices); ++z)
++                if (occupiedHost(z)) occupied.push_back(z);
++            fieldStorage_m->solveBatchedSlices(occupied);
++            batched = true;
++        }
+         // Diagnostic policies retain the serial path and per-slice potential callbacks.
+         if (!batched) {
+             // Copy each source into the same 2D workspace, solve, and copy the resulting field
+@@ -651,7 +666,9 @@ namespace opalx::spacecharge {
+         // Set the ghost slices
+         constexpr auto leftGhost = 0;
+         const auto rightGhost    = e3d.extent(2) - 1;
+-        if (config_m.closedRing) {
++        if (ippl::Comm->size() > 1) {
++            fillFieldHalos();
++        } else if (config_m.closedRing) {
+             Kokkos::parallel_for(
+                     "Solve2d5::solvePoissons::ghostClosed",
+                     Policy({0, 0}, {e3d.extent(0), e3d.extent(1)}),
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp b/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp
+index c9c5d3fb6..826d4e06b 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.cpp
+@@ -77,10 +77,10 @@ namespace opalx::spacecharge {
+           size_m(makeSize(config, pathLength)),
+           domain_m(makeDomain3(meshSize_m)),
+           mesh_m(domain_m, spacing_m, origin_m),
+-          layout_m(MPI_COMM_WORLD, domain_m, std::array<bool, 3>{false, false, false}, true),
++          layout_m(MPI_COMM_WORLD, domain_m, config.grid.decomposition, config.closedRing),
+           sliceDomain_m(makeDomain2(meshSize_m)),
+           sliceMesh_m(sliceDomain_m, Vector2(spacing_m[0], spacing_m[1]), Vector2(0, 0)),
+-          sliceLayout_m(MPI_COMM_WORLD, sliceDomain_m, std::array<bool, 2>{false, false}) {
++          sliceLayout_m(MPI_COMM_SELF, sliceDomain_m, std::array<bool, 2>{false, false}) {
+         if (!(pathLength > 0.0)) {
+             throw OpalException(
+                     "FFT2D5FieldStorage::FFT2D5FieldStorage",
+@@ -88,6 +88,7 @@ namespace opalx::spacecharge {
+         }
+ 
+         batchSize_m = Options::fft2d5BatchSize;
++        if (ippl::Comm->size() > 1 && batchSize_m == 0) batchSize_m = 1;
+         if (batchSize_m > 0) {
+             *ippl::Info << "FFT2D5: --2D5BatchSize " << batchSize_m
+                         << " (independent transverse slices)" << endl;
+@@ -120,7 +121,8 @@ namespace opalx::spacecharge {
+         throw OpalException(
+                 "FFT2D5FieldStorage", "Batching requires the native OPALX slice solver.");
+ #else
+-        workspace_m.solver2->initialiseViews(*workspace_m.chargeDensity);
++        if (ippl::Comm->size() == 1)
++            workspace_m.solver2->initialiseViews(*workspace_m.chargeDensity);
+         workspace_m.solver2->solveBatched(
+                 chargeDensity_m, electricField_m, occupied, batchSize_m, 1 / Physics::epsilon_0);
+         backendSolves_m += occupied.size();
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h b/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h
+index c229c5d11..6820c9f08 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h
++++ b/src/SpaceCharge/FFT2D5/FFT2D5FieldStorage.h
+@@ -81,6 +81,7 @@ namespace opalx::spacecharge {
+         [[nodiscard]] const Vector3& origin() const { return origin_m; }
+         [[nodiscard]] const Vector3& size() const { return size_m; }
+         [[nodiscard]] const std::array<std::size_t, 3>& meshSize() const { return meshSize_m; }
++        [[nodiscard]] Mesh3& mesh() { return mesh_m; }
+         [[nodiscard]] Mesh2& sliceMesh() { return sliceMesh_m; }
+         [[nodiscard]] Layout2& sliceLayout() { return sliceLayout_m; }
+         [[nodiscard]] Layout3& layout() { return layout_m; }
+diff --git a/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp b/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp
+index 7f1b5f7ca..624dfb193 100644
+--- a/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp
++++ b/src/SpaceCharge/FFT2D5/FFT2D5Poisson.cpp
+@@ -203,16 +203,22 @@ void FFT2D5Poisson::determineField(const ScalarField2_t& potential, VectorField2
+ void FFT2D5Poisson::solveBatched(
+         const ScalarField3_t& density, VectorField3_t& electric, std::span<const size_t> occupied,
+         int batchSize, double coupling, ScalarField3_t* potential) {
+-    if (batchSize <= 0 || ippl::Comm->size() != 1)
++    if (batchSize <= 0)
+         throw OpalException(
+-                "FFT2D5Poisson::solveBatched", "Positive batch size and one MPI rank required.");
++                "FFT2D5Poisson::solveBatched", "Positive batch size required.");
+     const auto mesh = density.get_mesh();
+-    const size_t nx = mesh.getGridsize(0), ny = mesh.getGridsize(1), nz = mesh.getGridsize(2);
++    const size_t nx = mesh.getGridsize(0), ny = mesh.getGridsize(1), nz = density.getLayout().getLocalNDIndex()[2].length();
+     const auto spacing = mesh.getMeshSpacing();
+-    if (nx2_ != 2 * nx || ny2_ != 2 * ny || dr_[0] != spacing[0] || dr_[1] != spacing[1])
+-        throw OpalException(
+-                "FFT2D5Poisson::solveBatched",
+-                "Initialize the matching transverse workspace before batching.");
++    const bool localMPI = ippl::Comm->size() > 1;
++    if (localMPI) {
++        if (nx2_ != 2 * nx || ny2_ != 2 * ny || dr_[0] != spacing[0] || dr_[1] != spacing[1]) {
++            batchPlan_m.reset();
++            nx2_ = 2 * nx; ny2_ = 2 * ny;
++            dr_ = Vector2_t(spacing[0], spacing[1]);
++        }
++    } else if (nx2_ != 2 * nx || ny2_ != 2 * ny || dr_[0] != spacing[0] || dr_[1] != spacing[1]) {
++        throw OpalException("FFT2D5Poisson::solveBatched", "Initialize the matching workspace.");
++    }
+     for (size_t z : occupied)
+         if (z >= nz)
+             throw OpalException("FFT2D5Poisson::solveBatched", "Invalid physical slice index.");
+@@ -228,7 +234,7 @@ void FFT2D5Poisson::solveBatched(
+         const heffte::box3d<long long> outbox(
+                 {0, 0, 0}, {static_cast<long long>(ncx - 1), static_cast<long long>(ny2_ - 1), 0});
+         batchPlan_m = std::make_unique<BatchPlan>(
+-                inbox, outbox, 0, ippl::Comm->getCommunicator(),
++                inbox, outbox, 0, MPI_COMM_SELF,
+                 ippl::fft::makeHeffteOptions<BatchBackend::backend_t>(params_m));
+         batchWorkspace_m = BatchWorkspace(batchPlan_m->size_workspace() * capacity);
+         batchReal_m      = decltype(batchReal_m)("FFT2D5BatchReal", nr * capacity);
+@@ -245,12 +251,28 @@ void FFT2D5Poisson::solveBatched(
+         hostSlices(i) = occupied[i];
+     Kokkos::deep_copy(batchSlices_m, hostSlices);
+     const auto green         = batchGreen_m;
+-    const auto originalGreen = greensFnTr_m.getView();
+-    const auto ng            = greensFnTr_m.getNghost();
+-    // The native outbox is x-fastest, independent of the Field view's layout.
+-    Kokkos::parallel_for(
+-            "FFT2D5Batch::green", nc,
+-            KOKKOS_LAMBDA(size_t p) { green(p) = originalGreen(p % ncx + ng, p / ncx + ng); });
++    if (localMPI) {
++        // Every rank owns complete x-y planes. Use the same integrated kernel and
++        // normalization as makeGreensFn(), with a private heFFTe communicator.
++        const auto real = batchReal_m;
++        const auto nx2 = nx2_, ny2 = ny2_;
++        const auto dx = dr_[0], dy = dr_[1];
++        Kokkos::parallel_for("FFT2D5Batch::localGreen", nr, KOKKOS_LAMBDA(size_t p) {
++            const size_t i = p % nx2, j = p / nx2;
++            const double x = (i <= nx2 / 2 ? double(i) : double(i) - nx2) * dx;
++            const double y = (j <= ny2 / 2 ? double(j) : double(j) - ny2) * dy;
++            real(p) = cellAveragedGreensFunction(x, y, dx, dy);
++        });
++        Kokkos::fence();
++        batchPlan_m->forward(1, real.data(), green.data(), batchWorkspace_m.data(), heffte::scale::full);
++        Kokkos::fence();
++    } else {
++        const auto originalGreen = greensFnTr_m.getView();
++        const auto ng = greensFnTr_m.getNghost();
++        Kokkos::parallel_for("FFT2D5Batch::green", nc, KOKKOS_LAMBDA(size_t p) {
++            green(p) = originalGreen(p % ncx + ng, p / ncx + ng);
++        });
++    }
+     const auto source   = density.getView();
+     const auto real     = batchReal_m;
+     const auto spectrum = batchSpectrum_m;
+diff --git a/src/SpaceCharge/SpaceChargeConfig.cpp b/src/SpaceCharge/SpaceChargeConfig.cpp
+index 395c16261..05b668238 100644
+--- a/src/SpaceCharge/SpaceChargeConfig.cpp
++++ b/src/SpaceCharge/SpaceChargeConfig.cpp
+@@ -125,14 +125,9 @@ namespace opalx::spacecharge {
+ 
+         void validateFFT2D5(const FFT2D5Config& config) {
+             validateGrid(config.grid);
+-            if (std::any_of(
+-                        config.grid.decomposition.begin(), config.grid.decomposition.end(),
+-                        [](bool parallel) {
+-                            return parallel;
+-                        })) {
+-                throw OpalException(
+-                        "validateSpaceChargeConfig",
+-                        "FFT2D5 uses serial slices; set PARFFTX/PARFFTY/PARFFTZ to FALSE.");
++            if (config.grid.decomposition[0] || config.grid.decomposition[1]) {
++                throw OpalException("validateSpaceChargeConfig",
++                                    "FFT2D5 supports only longitudinal decomposition (PARFFTZ).");
+             }
+             if (!std::isfinite(config.pipeSizeX) || !std::isfinite(config.pipeSizeY)
+                 || !std::isfinite(config.beamRadius) || !(config.pipeSizeX > 0.0)

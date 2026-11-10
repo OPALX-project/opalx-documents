@@ -1,0 +1,25 @@
+{
+  "reference": "independent exact physical-profile SACR",
+  "target_relative_accuracy": 0.01,
+  "original_target_count": 43,
+  "extra_diagnostic_target_count": 8,
+  "cases": [
+    "triangle-cell-z2048-final",
+    "triangle-cell-z4096-final",
+    "triangle-cell-z8192-final",
+    "triangle-control-mesh96-final",
+    "triangle-control-source96-final",
+    "uniform-cell-z2048-final",
+    "uniform-cell-z4096-final",
+    "uniform-cell-z8192-final",
+    "uniform-control-mesh96-final",
+    "uniform-control-path01-final",
+    "uniform-control-source96-final"
+  ],
+  "original_component_scale_all_pass": false,
+  "original_pointwise_nonzero_all_pass": false,
+  "weak_centre_radial_all_pass": true,
+  "explicitly_invalid_cases": [],
+  "note": "Convergence, source sampling and MPI rank controls must also be assessed; agreement alone is not an error bound.",
+  "analysis_sha256": "fded2636d0b98a93e15a5933d676726c36abc8945d002c9e4e229b4befbd35cd"
+}

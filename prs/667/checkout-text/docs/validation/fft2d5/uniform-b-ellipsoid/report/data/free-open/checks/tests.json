@@ -1,0 +1,12 @@
+{
+  "binary_sha256": "70383ff72345d869db40d42d2ff5aee8ceaa2f1f4fa656fcf2e8fc75e35647c1",
+  "ctest_executables": 6,
+  "unit_tests_passed": 113,
+  "unit_tests_skipped": 1,
+  "skip_reason": "MultipleRanksRejected requires actual MPI size2; separate2-rank run passes both ranks.",
+  "mpi_guard_ranks": 2,
+  "ctest_pass": true,
+  "launcher_note": "Initial CTest failed before test execution because sandbox MPI slot discovery returned no slots. Re-run used PRTE mapping slot:OVERSUBSCRIBE and no binding; tests unchanged.",
+  "command": "env OMP_NUM_THREADS=2 OMP_PROC_BIND=false PRTE_MCA_rmaps_default_mapping_policy=slot:OVERSUBSCRIBE PRTE_MCA_hwloc_default_binding_policy=none ctest --test-dir build-omp -R 'FFT2D5|SpaceChargeConfig|TestCheckpointFile$' --output-on-failure",
+  "tolerance_changes": "No existing physical tolerance relaxed; new 1% ellipsoid test uses a48-cell boundary and analytic continuum reference."
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "label": "gaussian-r1-t1",
+    "ranks": 1,
+    "threads": 1,
+    "returncode": 0,
+    "native_cases_run": 8,
+    "native_cases_passed": 8,
+    "native_cases_skipped": 0,
+    "OMP_NUM_THREADS": "1",
+    "IPPL_OPENMP_THREADS": "1",
+    "KOKKOS_NUM_THREADS": "1"
+  },
+  {
+    "label": "gaussian-r1-t4",
+    "ranks": 1,
+    "threads": 4,
+    "returncode": 0,
+    "native_cases_run": 8,
+    "native_cases_passed": 8,
+    "native_cases_skipped": 0,
+    "OMP_NUM_THREADS": "4",
+    "IPPL_OPENMP_THREADS": "4",
+    "KOKKOS_NUM_THREADS": "4"
+  },
+  {
+    "label": "gaussian-r2-t1",
+    "ranks": 2,
+    "threads": 1,
+    "returncode": 0,
+    "native_cases_run": 16,
+    "native_cases_passed": 16,
+    "native_cases_skipped": 0,
+    "OMP_NUM_THREADS": "1",
+    "IPPL_OPENMP_THREADS": "1",
+    "KOKKOS_NUM_THREADS": "1"
+  },
+  {
+    "label": "gaussian-r2-t4",
+    "ranks": 2,
+    "threads": 4,
+    "returncode": 0,
+    "native_cases_run": 16,
+    "native_cases_passed": 16,
+    "native_cases_skipped": 0,
+    "OMP_NUM_THREADS": "4",
+    "IPPL_OPENMP_THREADS": "4",
+    "KOKKOS_NUM_THREADS": "4"
+  }
+]

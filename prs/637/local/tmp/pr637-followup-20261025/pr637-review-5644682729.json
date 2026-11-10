@@ -1,0 +1,40 @@
+{
+  "id": 5644682729,
+  "node_id": "PRR_kwDOQBpa7c8AAAABUHMF6Q",
+  "user": {
+    "login": "MichZampetakis",
+    "id": 63283036,
+    "node_id": "MDQ6VXNlcjYzMjgzMDM2",
+    "avatar_url": "https://avatars.githubusercontent.com/u/63283036?u=98470d0e720a4a1555c9a3545888b94cd022da27&v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/MichZampetakis",
+    "html_url": "https://github.com/MichZampetakis",
+    "followers_url": "https://api.github.com/users/MichZampetakis/followers",
+    "following_url": "https://api.github.com/users/MichZampetakis/following{/other_user}",
+    "gists_url": "https://api.github.com/users/MichZampetakis/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/MichZampetakis/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/MichZampetakis/subscriptions",
+    "organizations_url": "https://api.github.com/users/MichZampetakis/orgs",
+    "repos_url": "https://api.github.com/users/MichZampetakis/repos",
+    "events_url": "https://api.github.com/users/MichZampetakis/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/MichZampetakis/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "body": "I found two issues at a27c1b392 mainly in `src/Algorithms/ParallelTracker.cpp`:\n1. [P1] The bunch path can miss the terminal RF kick. (line 723)\n   After clipping the timestep to the reference’s gap crossing, roundoff can leave a coincident particle just before the plane, so its kick is skipped. Using `Cyclotron-RF-Stop`, one proton finishes at 73.273098 MeV on one rank, but 72.800560 MeV on two ranks. Two identical protons on one rank also finish below the 73 MeV target, despite successful completion. Terminal-event handling needs a consistent endpoint convention. The existing bunch integration check removes `EKINSTOP`, so it misses this case.\n2. [P2] Reference-trial failures discard buffered probe hits. (line 719)\n   The preliminary reference advance runs outside the exception handler that flushes probe output. I placed a probe before a deliberately unphysical RF kick: one rank preserves the accepted hit, while two ranks leave the histogram at zero and produce no hit file. This trial needs the same collective flush handling as `timeIntegration2`.\n\nLast, are the two scripts in `tools/` meant to be merged?",
+  "state": "COMMENTED",
+  "html_url": "https://github.com/OPALX-project/OPALX/pull/637#pullrequestreview-5644682729",
+  "pull_request_url": "https://api.github.com/repos/OPALX-project/OPALX/pulls/637",
+  "author_association": "CONTRIBUTOR",
+  "_links": {
+    "html": {
+      "href": "https://github.com/OPALX-project/OPALX/pull/637#pullrequestreview-5644682729"
+    },
+    "pull_request": {
+      "href": "https://api.github.com/repos/OPALX-project/OPALX/pulls/637"
+    }
+  },
+  "submitted_at": "2026-10-25T18:38:58Z",
+  "commit_id": "a27c1b392a178a67e4f0df8c10c7fe48acb111f3"
+}

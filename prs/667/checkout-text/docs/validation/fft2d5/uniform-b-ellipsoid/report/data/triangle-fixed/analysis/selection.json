@@ -1,0 +1,23 @@
+{
+  "primary_cases": {
+    "OPALX": "fixed256",
+    "PyORBIT_slice": "slice-repeat-r1",
+    "PyORBIT_Baartman": "rb-repeat-r1"
+  },
+  "before": {
+    "fields_csv": "../../analysis/fields.csv",
+    "summary_csv": "../../analysis/summary.csv",
+    "case": "source16384",
+    "label": "OPALX legacy CIRCULAR (before)",
+    "binary_sha256": "e85bc09135bef40c6e0b9a278f45d9aab05ad595f2635e7c2088526bb1de70bf"
+  },
+  "mesh_series": ["fixed64", "fixed128", "fixed256"],
+  "width_control": ["fixed128", "fixed-wide256"],
+  "physical_radius_control": ["fixed128", "physical-b10mm"],
+  "legacy_repeat": "legacy128",
+  "acceptance": "62 fixed on-axis target IDs at 1<=abs(s)<=4m, plus82 radial target IDs at s=+/-2.5m. All pointwise reference values nonzero. No cusp/end accuracy claim.",
+  "physics_tolerance_percent": 1.0,
+  "source": "Uniform-round beam with prescribed radius a=5mm, full triangular length10m,1e14protons at400MeV; physical grounded radius20mm unless explicitly identified as10mm control.",
+  "no_fit": true,
+  "new_model_scope": "Explicit pointwise local uniform-round longitudinal closure; transverse slices stay open. Legacy CIRCULAR/OPEN/PLATES retained. No new nonlocal end-field or curvature model."
+}

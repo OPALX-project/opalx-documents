@@ -1,0 +1,1998 @@
+[
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school.in",
+    "sha256": "0411ea6072ae89d5b086b22a5a80d6878c031b7c4e92753d99056b814fda444a",
+    "bytes": 42825,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school.stat",
+    "sha256": "a553b015fb0f3f9d493c83acb23675219958b9a8d5caf9fb43c33e2a59cdde33",
+    "bytes": 7768,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/timing.dat",
+    "sha256": "ce7061428d74e8c9794f90ec215c5b3017d3477528d7b44d0810ba5224e6dcdc",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-16-cell-vertical-refined-hdf5-r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/PROBE1.h5",
+    "sha256": "c7ffcf90f2d504ed93cfee8d77a9f0630697fa05ce5a27214cfe1d352285b877",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/PROBE10.h5",
+    "sha256": "17158eccc801dab83dd50ac39e87be8d1c04060ee47218028b681afd57389d58",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/PROBE11.h5",
+    "sha256": "269f80ef0f80d62b9f77036bee0cfb8e13dd5b974b5990b439b04fd86080bdd5",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/PROBE12.h5",
+    "sha256": "890b64e15283ac3317e9c8ee4e3521f2172091b790dce9e51d61ee265f1d3abf",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/PROBE13.h5",
+    "sha256": "de2d8079921af9f921f05435409830012c01603258fdf41f51e1406ff400a880",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/PROBE14.h5",
+    "sha256": "9b60749ff52808a481cd27f2820575af2075e33781278f8d5d9dbae087e1f983",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/PROBE15.h5",
+    "sha256": "3680d445bebf5a310f249884cb1d9e4563a5a01260b0f60d7fd1e8bb6b17f677",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/PROBE16.h5",
+    "sha256": "7523568fdbba52935708f11a391c0ec429fe6b3ca10abd5266a3a53acbbec7f8",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/PROBE2.h5",
+    "sha256": "58e9bf6f81d5ab35662700f291d924cce3e91ee7c39bb6d3e2325e5330d445dc",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/PROBE3.h5",
+    "sha256": "cec0ed899cd9d9f6d81d62609dbe75aa0214bc02ece5fe34b8a2b685eef892cc",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/PROBE4.h5",
+    "sha256": "87acc2da89e487ad2d42a19a7ceaba7db8b61d38ca0163a2d5db384e87c32398",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/PROBE5.h5",
+    "sha256": "8b3ff73a3279a5e3bafc3f7368560110cecba21e45e29bad937eeee3770aa882",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/PROBE6.h5",
+    "sha256": "54233e5880b74a69762a57d20613b9d6a72cd9eb0ac336f95824fbc6a60ab2ce",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/PROBE7.h5",
+    "sha256": "ff02aa9a1392ccd4eda5a156c3963a1d4d80dba662b60b888d88e21762c5cc56",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/PROBE8.h5",
+    "sha256": "8bcb670f2e03e482c36dad06eae95062cc33acbf9991a43fa604111615145298",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/PROBE9.h5",
+    "sha256": "024ec952d6174d60e217766d9e270175af986af4b666b7e462c96982bc471c2b",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/analysis.json",
+    "sha256": "db8b987a2f3d7e2d4d6482785f5a0c55a74c6a6ba159876ddd46bba9d1ba6507",
+    "bytes": 11534,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/crossing-comparison.csv",
+    "sha256": "94cc545f0fb799f82944860cabaaa47828a8af210b8b92a9aee3e9158acf704d",
+    "bytes": 24810,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/crossing-comparison.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/data/school_3D.opal",
+    "sha256": "aef36cf14e866753b66b5c98690a8399cb4fc9eaa2eacf739381cf9ce670daa4",
+    "bytes": 47957,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/data/school_DesignPath.dat",
+    "sha256": "c9e030ac02ae159f223cb86b637ee1241c6a43c6f770103f135a07002e09591e",
+    "bytes": 3274777,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/data/school_ElementPositions.sdds",
+    "sha256": "ae2383c9a4a9b4789f4ec13d99874a66cbe2ae61ac32c24b1e158b3d77f8d23d",
+    "bytes": 98791,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/data/school_ElementPositions.txt",
+    "sha256": "e78b090ba8eb6d44ea63a7376701b8955f58a89e6a230fdffe2e2db8946225b1",
+    "bytes": 179775,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/final-state.npz",
+    "sha256": "166b2d087227a4d5fa74b81f77216976326d8d530c071d688061d690f1ce738f",
+    "bytes": 3276,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/manifest.json",
+    "sha256": "8af3747e2035d7acb16bc0309e2ea49b21ec9384cfb44b63af6ce5a1d4504e2b",
+    "bytes": 4661,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/particles.dat",
+    "sha256": "dd28f8e55cb83cffdc7e89a572f1f1d857930a30cd61984964cdc3cf451fb6b7",
+    "bytes": 90,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/run.log",
+    "sha256": "5303bff0540f996c47a3f86483bfe8d1c029c36d93d2b63b6a1977650bfbec09",
+    "bytes": 3907432,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/PROBE1.loss",
+    "sha256": "71db0e13c832367a914933d107088a0dae7c09d6135e1c88b27ede9dbecb8c27",
+    "bytes": 567,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/probe1.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/PROBE10.loss",
+    "sha256": "228aad305fe40e50151a1a079998075c6dd3251faa1abe5c306420da27e763ed",
+    "bytes": 715,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/probe10.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/PROBE11.loss",
+    "sha256": "6b96e4253bfc72c0864093abacd78d23219eb07588abde8f00fd926bf3870343",
+    "bytes": 714,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/probe11.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/PROBE12.loss",
+    "sha256": "a9584fc5e6446ca3c943c84fe8ef74184e708a7ab5ec5927e1fa3ca0f6e1bfdc",
+    "bytes": 714,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/probe12.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/PROBE13.loss",
+    "sha256": "5397bfff6c5b9a339cc938d2b91d39734530bbe6a83a7b02e1de554d9e36fd8a",
+    "bytes": 724,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/probe13.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/PROBE14.loss",
+    "sha256": "1c28bd16c719ce213bc7db11d3cd2545c605cebad2ef594bb1d91aace2543329",
+    "bytes": 704,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/probe14.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/PROBE15.loss",
+    "sha256": "5d21384c740e58f617c74ab72a3aca89e4e0464418077d07c7da0c49dbf7bc15",
+    "bytes": 550,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/probe15.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/PROBE16.loss",
+    "sha256": "988232c230c367b415724d8d41ee15bc3ca1a25b321d3bfbc9fb2a3be50f5c91",
+    "bytes": 554,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/probe16.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/PROBE2.loss",
+    "sha256": "080065428ecb4010ce02a27278453710e2ae1bc2c98a6be5c730345050b47028",
+    "bytes": 712,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/probe2.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/PROBE3.loss",
+    "sha256": "8c6919fabb0a38249ce349d8cce10af31797bab62aa7724b1d66f5e98f9742fc",
+    "bytes": 704,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/probe3.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/PROBE4.loss",
+    "sha256": "322b1b2783b53dc716769b99d1631894fc5ab1f297b174dccc066ad08afa6fba",
+    "bytes": 708,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/probe4.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/PROBE5.loss",
+    "sha256": "c22f5c09ccbc1e5bdb1c7f42576f84bb09a699f7a8a9fd158f79d01dd89a3c80",
+    "bytes": 647,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/probe5.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/PROBE6.loss",
+    "sha256": "1b43fa0b5cf804aea725f5453b6cbd4f6278381a04ec223a0be4e15fb94174d8",
+    "bytes": 717,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/probe6.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/PROBE7.loss",
+    "sha256": "bab9dfe4313beb880ab4151ec188ce306aa9e0e6c377aae3129076a3ef4dd821",
+    "bytes": 709,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/probe7.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/PROBE8.loss",
+    "sha256": "e41151f60ca7d40470e46ed040c03eda8f761e8d594b6601e7f243ab5aed3ff4",
+    "bytes": 712,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/probe8.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/PROBE9.loss",
+    "sha256": "2d1c1e5e8960882f0ba7cd96a2964123882b4cb18715737065c7b682d0843275",
+    "bytes": 726,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school-frame/probe9.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school.h5",
+    "sha256": "78ce5a0c5734390b957a9bbc5fef803cf0028d7697f4d465315af7579bb9de8e",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school.in",
+    "sha256": "6ed284c72a73eec02a9b23eba81e532ec31dcf01e1cf93e12ee5720d9bf2e1e4",
+    "bytes": 48029,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school.stat",
+    "sha256": "2617379c38119b0db88d2559a2d3561da7f41b02cb67be35dd0d78e47b4b3958",
+    "bytes": 7766,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/timing.dat",
+    "sha256": "e9e8c26e36e0305707c7108c9476e4d63d6e71b576e15a3bd959e94d158ed02a",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-hdf5-r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/PROBE1.h5",
+    "sha256": "ac2818eecc647e015810ac423f2f8f1adabc651cb84674c77a57895fa9a37e6d",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/PROBE10.h5",
+    "sha256": "b9842974ad4544dc462e6b3efd043d4ac2910457ba8c873316089811a1cd1f29",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/PROBE11.h5",
+    "sha256": "2ebd2b179cc14cd59c0cb25ad81faebaa2b1cb66a9317bfb560aaeadf1f68f62",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/PROBE12.h5",
+    "sha256": "3295bf65960189788ab9ce0f988f9f6142fbb39f4703e7118f2a22634c3de0e4",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/PROBE13.h5",
+    "sha256": "30c30ac0962054c51d493be3bed71db5f2f5c81637f934cf90e973c1e39510f1",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/PROBE14.h5",
+    "sha256": "d9cc003007b6eab999655a773c99c0cf3c3ebc528ac156da7ddbf80fab62219a",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/PROBE15.h5",
+    "sha256": "44e2d7cb680b2b31a8b231df8736c3d087554833c2690085116709c2a57f9491",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/PROBE16.h5",
+    "sha256": "01e9b055f17bd4d5345a4590d7299091021605fedfba1e3f24a3441ae9b8c5ed",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/PROBE2.h5",
+    "sha256": "3c9433209f107b92138dbf12715b5d10930323694d4799c4c3138e36eaf0836a",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/PROBE3.h5",
+    "sha256": "b559785e232635f10ea6f536cc8575b0ee122a3e3b57ff745007372dddea6fd3",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/PROBE4.h5",
+    "sha256": "749b4950317c8b6329b5b15cf995b6a818b88df2cefe93f55e6f01009a3ebbc4",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/PROBE5.h5",
+    "sha256": "d2e1b6f510f23ff776835aaad0447118a7fdbb300fd25fba09f628c83dff122f",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/PROBE6.h5",
+    "sha256": "1dab0c0056999ab9e0ea46108d6e4eb7f5dbe3d3fc256840523c617e64c73b84",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/PROBE7.h5",
+    "sha256": "fe5ee1bdd412440069b8f1123c6e5c5662006214443861a2a70129e39706c1fd",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/PROBE8.h5",
+    "sha256": "1353b901ea0d9a0947a63c991f95a96c3f3010137082dbd6c6ff1d6e98e4dbdd",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/PROBE9.h5",
+    "sha256": "89c70f9c5fc5409b4de0d621f4fadd005f4e0aab0a936fdbba68e2c48ddf8283",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/analysis.json",
+    "sha256": "166d42ff7b8dbed6444258f650eb1e9b4bb240cfb7b73b2086cedeaf3e25911f",
+    "bytes": 11534,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/crossing-comparison.csv",
+    "sha256": "9df6ed3abd41e99ded7576e256b14b52315a97aab5c47b8bbd8fb6dac5027da8",
+    "bytes": 24778,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/crossing-comparison.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/data/school_3D.opal",
+    "sha256": "b269220f4f71a2dba275dcfbf8090ab7ad07fe4ed5489b747aa90912acfd963c",
+    "bytes": 47957,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/data/school_DesignPath.dat",
+    "sha256": "a0fb652f28086167a2198d175f2d13d6cc4d79b5ee9c2fdeea9991fe7a4a47b0",
+    "bytes": 3285471,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/data/school_ElementPositions.sdds",
+    "sha256": "c0173176b835f25191e97bec02734dbc387f29f53d4872af0a7a8cc9af56aa37",
+    "bytes": 106999,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/data/school_ElementPositions.txt",
+    "sha256": "e78b090ba8eb6d44ea63a7376701b8955f58a89e6a230fdffe2e2db8946225b1",
+    "bytes": 179775,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/final-state.npz",
+    "sha256": "9e3bd9625cee66567368ac27ba436365efd2292cad6cdd14a9c73fac030faf7f",
+    "bytes": 3276,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/manifest.json",
+    "sha256": "d38a93d864ef222ca408c8916bc1af7b81590b23660d748f8be4e2c67b4fbf21",
+    "bytes": 4256,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/particles.dat",
+    "sha256": "dd28f8e55cb83cffdc7e89a572f1f1d857930a30cd61984964cdc3cf451fb6b7",
+    "bytes": 90,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/run.log",
+    "sha256": "25a2841d979756fdcb1f557a0aa0744001602a748b192287d5ef815aa501e193",
+    "bytes": 3889834,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/PROBE1.loss",
+    "sha256": "a69468a3153bb72486875c3b3bd57937646300db32c146c013b06cc0bd1008ee",
+    "bytes": 565,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/probe1.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/PROBE10.loss",
+    "sha256": "7ce31276531d9209b8b58e31f7f17cd65b7b738bb05220d7bb475fe0e0250e54",
+    "bytes": 716,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/probe10.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/PROBE11.loss",
+    "sha256": "23a05e48491b67737d871da44e052c6c09503062b1e5ad9e6ab58a1c25453ca1",
+    "bytes": 711,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/probe11.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/PROBE12.loss",
+    "sha256": "87fa268b88e2687b46809f5767af3be5d9677d184ff53661824f0a4edbe4b0cd",
+    "bytes": 713,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/probe12.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/PROBE13.loss",
+    "sha256": "650beae00731e18592966c9b3b8c5c724f81d03cc5390c0bf663dd0d36a7b24b",
+    "bytes": 728,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/probe13.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/PROBE14.loss",
+    "sha256": "8121696892506431a37c43d6a7450cc74fdd954be2cbf555027a408ae8465dc6",
+    "bytes": 707,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/probe14.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/PROBE15.loss",
+    "sha256": "3a40100b3a2d13b93462256dd635649cdc8e6711d43bfb440da938d4a15e6aac",
+    "bytes": 549,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/probe15.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/PROBE16.loss",
+    "sha256": "944ee761d00c6bfe02ef9036fa93e6922eac54975c8918f959bcb6106de34d4f",
+    "bytes": 554,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/probe16.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/PROBE2.loss",
+    "sha256": "05d5dd258057df420708b6cdc25740adb2028f445654f38d8d31267b3254654b",
+    "bytes": 710,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/probe2.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/PROBE3.loss",
+    "sha256": "8fa5eb92452fb39c6e61b813cf06a008c8d1b757edfe1fa4963fa698afaff903",
+    "bytes": 706,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/probe3.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/PROBE4.loss",
+    "sha256": "f3c3f18af6d84157b890adc55d47704baa19e359cb1cda3ca31f6c4f49350c42",
+    "bytes": 708,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/probe4.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/PROBE5.loss",
+    "sha256": "f7f0f3fe0970b0069cff8a9c3df88e5b738c81f39c12d0bef585e81d8d429629",
+    "bytes": 646,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/probe5.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/PROBE6.loss",
+    "sha256": "5909a47c7f02c4f87c0127992cee969f64a747173f5fcf553a719f26a56b80fb",
+    "bytes": 714,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/probe6.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/PROBE7.loss",
+    "sha256": "beba29f4008e8e10a38b028ec64862035f726c322fa6f3b617b55ebb0aedc0a0",
+    "bytes": 712,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/probe7.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/PROBE8.loss",
+    "sha256": "68ba3988e425af6822d089f0427eaff85764b34025cb7c9d9ea106723fe71f11",
+    "bytes": 716,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/probe8.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/PROBE9.loss",
+    "sha256": "406f506e4b505284cfd4c5844368b74e343813f0f8387a23dd17fb119fdea5be",
+    "bytes": 729,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school-frame/probe9.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school.h5",
+    "sha256": "b69d76b7f36024e7112602ff2ac73ba949fd2df7697699e8a9a8c7b7ae328157",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school.in",
+    "sha256": "03616f1aa33a2b99961118df9dd6d164fe488b375133cf88d2e9baf7982d3b3d",
+    "bytes": 48029,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school.stat",
+    "sha256": "590b777ceb273644cc7db2adbcc3e770d5f12100d5b05cbb319bfbf71896c7c9",
+    "bytes": 7766,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/timing.dat",
+    "sha256": "3112bc4aa4fb333e56c386181c2145b809bea2281dfdd73b41cdbbdac0dbf141",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-55deg-d-off-matched-refined-hdf5-r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-final-tests.log",
+    "sha256": "7f66f14bf9d5f51cf82b138468468ccda9ca58a818e04ca964c0b1cb80ac07f7",
+    "bytes": 16093,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-final-tests.log"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-final-tests.xml",
+    "sha256": "e2cbf661357e8c18089ee6827d1f309f676f6c206217a92ce8bbb4cf8c967aa9",
+    "bytes": 177940,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-final-tests.xml"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/PROBE1.h5",
+    "sha256": "1dfaf559a4c6cef8cfc408dbdf2809fbb60f933bc45043822066118eddedcb51",
+    "bytes": 23108,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/PROBE2.h5",
+    "sha256": "1fba9f1759a5f83824fd1964cd8441f2cc84212b79bb008ac571bf9b7be29e39",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/PROBE3.h5",
+    "sha256": "178ad1b911370864edfbd8a2fe3202d9e7933f1e7d70710fdf141c5edafc29b1",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/PROBE4.h5",
+    "sha256": "0beebab1c6c91b55c022c822ea488882ef1b53ef29b20433f913c6572d7fae87",
+    "bytes": 23108,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/analysis.json",
+    "sha256": "4a622f05da87ff08731542b3547ab1212d212aeb10c865e2a9ca9378692e6156",
+    "bytes": 3374,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/crossing-comparison.csv",
+    "sha256": "e8ef9335682ebfc837be83ad07c8dd14906b2d4e6f81e26c087e7e469b76ae57",
+    "bytes": 4332,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/crossing-comparison.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/data/school_3D.opal",
+    "sha256": "7081f68d8b31ffa2529d9c89cceb05d1f6db95383a309c533add850d2863ff8e",
+    "bytes": 41984,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/data/school_DesignPath.dat",
+    "sha256": "5efb1dae7762c50395fd77e16ded2cfafc218a4c2315a30ec7c3a15235cda585",
+    "bytes": 5654965,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/data/school_ElementPositions.sdds",
+    "sha256": "4e9a006dc4fcd75f24935c4aef90d7eb714cbaa9e22b7e397bd4591ff8704f07",
+    "bytes": 134345,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/data/school_ElementPositions.txt",
+    "sha256": "b39043ad0d34b2a15b34a1cf4aed247c64904408d291313411abc66245b1987a",
+    "bytes": 175525,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/final-state.npz",
+    "sha256": "9a46f06cd3efd25066cd152e6e855e6ff079a5806a847773de4d6638fa750812",
+    "bytes": 3034,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/manifest.json",
+    "sha256": "3d74665a46bcecd045fe4e954d2f584382286c0b578fd55bcee27fa53bb518df",
+    "bytes": 3215,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/particles.dat",
+    "sha256": "f8c2bec3a2d8785aa10cd06be2c8ffbe2dc4321ac11c70d5886d8331560ab65b",
+    "bytes": 73,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/run.log",
+    "sha256": "93eff2af51ab2568b00e18468dd0d0a3c15829a7b9d46063581f0de5c4d7bfba",
+    "bytes": 5645378,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/school-frame/PROBE1.loss",
+    "sha256": "a7043928dcaf0b52584dba2569775071319b2a5d5f20dc8423b852677f1bce45",
+    "bytes": 410,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/school-frame/probe1.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/school-frame/PROBE2.loss",
+    "sha256": "58adc5743c28951d91a9e92e714e99d77c785e9c08f28b3abec2d240f3c5632e",
+    "bytes": 564,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/school-frame/probe2.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/school-frame/PROBE3.loss",
+    "sha256": "0652a5e0e58ecc327a99284517c1c3d09f15bd50c6469b4fa076ab12172c9241",
+    "bytes": 571,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/school-frame/probe3.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/school-frame/PROBE4.loss",
+    "sha256": "896b12eff5d99c2f3e40156c1da765c27f27feed90083d38a5aa0e7998b1b467",
+    "bytes": 414,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/school-frame/probe4.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/school.h5",
+    "sha256": "dc6ae986355a1dab6469c6e3c2339f6bb2621e267909f7700bf0a52df5279f81",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/school.in",
+    "sha256": "458a7eaac26621c9ce607602884f60c46a4c3c5bad0e004500ecccde2a3f6c9d",
+    "bytes": 42056,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/school.stat",
+    "sha256": "26c2b926508ddd90351b32065850589131f91cdc4c51b77b71353177d4778227",
+    "bytes": 7771,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/timing.dat",
+    "sha256": "1e06a0bae08dba5d5984e07191ab9f7cbc1938ab14bd1ab0bc584d0c8325916a",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-hdf5-r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/PROBE1.loss",
+    "sha256": "e5c22e3cefa54b2a05f9491fc84af436c0bc82c61fd6ce3c3134cad634b59ac2",
+    "bytes": 412,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/probe1.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/PROBE2.loss",
+    "sha256": "c01689bf9e9b9a093c0e054aab3b3814e98ba8d221ad66e0776c9a68c9d556f1",
+    "bytes": 471,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/probe2.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/PROBE3.loss",
+    "sha256": "9024236ee6ced01a8c86fcba4a687bdf7e4dd06d36524adac99d009c375a9650",
+    "bytes": 506,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/probe3.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/PROBE4.loss",
+    "sha256": "6885cbf102b5f095af18c9cdc0aa98ab4ea5d8fccadcac16b02828bace5f32ce",
+    "bytes": 466,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/probe4.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/analysis.json",
+    "sha256": "9b5ef48db47354312f994a328d6e33e6edd3f93b716933706c6414858d38579c",
+    "bytes": 3315,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/crossing-comparison.csv",
+    "sha256": "f43d74e037eb182d57f3b5b997a77bf2777865f65da853b8398eafe734322c9c",
+    "bytes": 4520,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/crossing-comparison.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/data/school_3D.opal",
+    "sha256": "537165987821424e33a5ddfc46f9e7ebf03899b0d09fbb55ebb154745b707671",
+    "bytes": 47583,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/data/school_DesignPath.dat",
+    "sha256": "0ce9145f629cf538da737e839b2027ef5caa77c4d4cf161255e049a233cb9d32",
+    "bytes": 5616735,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/data/school_ElementPositions.sdds",
+    "sha256": "9e926b7b881934a328b7de92e576493108feeefd0c0aa2e964dcbe93163d0b13",
+    "bytes": 129283,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/data/school_ElementPositions.txt",
+    "sha256": "7e7ad2316582e0052fd14ac6dd36875b0ece98a82c8ea724ef18a73c85aad81a",
+    "bytes": 175525,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/final-state.npz",
+    "sha256": "8bb7dda9cb0b59e4f1dd8b046f141226be2d3a732088b3ef5da1da969c8f804e",
+    "bytes": 3276,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/manifest.json",
+    "sha256": "5f18328db548c2320d3cb3aa97fdd0f6afc1032ae6f65aee7960534986cd331a",
+    "bytes": 3845,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/particles.dat",
+    "sha256": "f8c2bec3a2d8785aa10cd06be2c8ffbe2dc4321ac11c70d5886d8331560ab65b",
+    "bytes": 73,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/run.log",
+    "sha256": "433200156e6049d1b3f91fdf2612fcf383f02321893ac42ebd12b68779584ee4",
+    "bytes": 6502817,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/school-frame/PROBE1.loss",
+    "sha256": "87870830aef97772ec3d301eb862393b4c9ef8965501024055a9f9f3264847bb",
+    "bytes": 533,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/school-frame/probe1.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/school-frame/PROBE2.loss",
+    "sha256": "181eed0e8d904e1722d9a84518417ef2d12509973ae87f2a6ad36a44691f30b5",
+    "bytes": 622,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/school-frame/probe2.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/school-frame/PROBE3.loss",
+    "sha256": "5fcf9dfa4186ad3ac1889a864d2c2a4418b1811c7c77d1fa4316ce898e7d6fcf",
+    "bytes": 728,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/school-frame/probe3.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/school-frame/PROBE4.loss",
+    "sha256": "676065cfd47522af7a5f52196d8be2f3598277b5bde71831c16f2de67a425edb",
+    "bytes": 606,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/school-frame/probe4.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/school.h5",
+    "sha256": "ff247d50a2133f1930643400306133a30a35605d438ff0f93ea218b7082a4d13",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/school.in",
+    "sha256": "2022692a0cdec5a34f51b49a8f2670206da982d5447225c5221d42cb0f33e20a",
+    "bytes": 47655,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/school.stat",
+    "sha256": "1a32e784a46a5e03ac82775a692d749e7d7a256efde7be2cca4563d14df824d9",
+    "bytes": 7769,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/timing.dat",
+    "sha256": "eee8542df85cc2f325f09450d6a2d4457915321ce7e0698454555545b64154fd",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-ascii-r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/PROBE1.h5",
+    "sha256": "d4bf61ea2d7f394ee2486bcf0d75205dd6c3f6b5f7a7ce034d7c8c8be2bb9707",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/PROBE2.h5",
+    "sha256": "ccb299754cc07364a2497144bdc108dd2b959470ccfd55507d23d0780122bf48",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/PROBE3.h5",
+    "sha256": "728445d0c3ff599e96012023fe2875e60d3edb53a779c674e6e951bed526fe65",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/PROBE4.h5",
+    "sha256": "d2daaf3662b68551cb63a5dec8986a25fba1f1552266964e398a48bc6b20c382",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/analysis.json",
+    "sha256": "a9139f6d1f794ffb16f613ea5fcb1235e07d474ae7dabcb9219f850840c94d9a",
+    "bytes": 3503,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/crossing-comparison.csv",
+    "sha256": "6ff9c57b6aab3ae575a56bfe7711516a00e9de5568ad30b278bee2b930815a7b",
+    "bytes": 6410,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/crossing-comparison.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/data/school_3D.opal",
+    "sha256": "4e673a9d869153cf1a2145ce9f9a7cb5c8b47c0317899b868c3c62e086c7896e",
+    "bytes": 47584,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/data/school_DesignPath.dat",
+    "sha256": "0ce9145f629cf538da737e839b2027ef5caa77c4d4cf161255e049a233cb9d32",
+    "bytes": 5616735,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/data/school_ElementPositions.sdds",
+    "sha256": "9e926b7b881934a328b7de92e576493108feeefd0c0aa2e964dcbe93163d0b13",
+    "bytes": 129283,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/data/school_ElementPositions.txt",
+    "sha256": "7e7ad2316582e0052fd14ac6dd36875b0ece98a82c8ea724ef18a73c85aad81a",
+    "bytes": 175525,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/final-state.npz",
+    "sha256": "8bb7dda9cb0b59e4f1dd8b046f141226be2d3a732088b3ef5da1da969c8f804e",
+    "bytes": 3276,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/manifest.json",
+    "sha256": "6b4bb45b0215e77d5c2c7a41a0ef01d701d556cb2335dd741bd84799a5ac41c0",
+    "bytes": 3845,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/particles.dat",
+    "sha256": "f8c2bec3a2d8785aa10cd06be2c8ffbe2dc4321ac11c70d5886d8331560ab65b",
+    "bytes": 73,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/run.log",
+    "sha256": "9978f009af6a6d3d2d1f5ab1cefe3d2d9892c128503e57920513160b2e2ab0ce",
+    "bytes": 6502817,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/school-frame/PROBE1.loss",
+    "sha256": "3b6c56fb979c4b3c939ef52dca4ac7cc90264c23968e83b3dac770a73aefc5bb",
+    "bytes": 574,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/school-frame/probe1.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/school-frame/PROBE2.loss",
+    "sha256": "ff3cdb9f82dd09cd782425e409d8cd1a1b41abf66455fbcad976b5c63a092994",
+    "bytes": 736,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/school-frame/probe2.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/school-frame/PROBE3.loss",
+    "sha256": "86bf97724cc6c37c93bbda4ae48514d80fb93887d629859d8e49ab56dd5fe13a",
+    "bytes": 735,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/school-frame/probe3.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/school-frame/PROBE4.loss",
+    "sha256": "32bb007885c3a8f8e489dc7e5855116560e751f8f368a5c901b9da7cac61bc6f",
+    "bytes": 737,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/school-frame/probe4.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/school.h5",
+    "sha256": "af07afe55a6166936c452079ddb3bcaf7322cba5c84e2f70c60df5ca5b024035",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/school.in",
+    "sha256": "aadcc59e040ae3b40fd68b42186ad13200f129388f06512988d0a45fd9852c94",
+    "bytes": 47656,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/school.stat",
+    "sha256": "79164331cc706806acdc4d86af47f28faedf4c8ec2426c36d892b8142d0f5243",
+    "bytes": 7769,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/timing.dat",
+    "sha256": "35056b01330bbda1293b863dfd50cf61aaf604d316a4d1bf0a38c53a4ec50e34",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/PROBE1.h5",
+    "sha256": "539bc295385d3ac155136f7bc6b6909e4806e2d4478235df752113ad0a998af8",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/PROBE2.h5",
+    "sha256": "9a725f406935673cb756fabda70dac2cd4c473532aa8bfb872f9b0ca5f23dcee",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/PROBE3.h5",
+    "sha256": "12dbd0b93aee9403a3fc6a8042130a160f183048ffad72f483dabad5b0bb62df",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/PROBE4.h5",
+    "sha256": "4fad6550ba1c1ba026ded1e8e5d7b93c7f6fd8bf19e13db400bb2912a4307f5a",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/analysis.json",
+    "sha256": "147deaa14c724c316594b2dcfe8f401e575d67290e8ff734a289ff357b2eaffc",
+    "bytes": 3506,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/crossing-comparison.csv",
+    "sha256": "518ad226ad493056514b293a8a59e9b4cef3cb2b5d17788b46474a6eb595d97b",
+    "bytes": 6419,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/crossing-comparison.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/data/school_3D.opal",
+    "sha256": "4e673a9d869153cf1a2145ce9f9a7cb5c8b47c0317899b868c3c62e086c7896e",
+    "bytes": 47584,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/data/school_DesignPath.dat",
+    "sha256": "2959ea44ea9468a67c7da461c0b51c83e609ded9d05bc81004d062d9836e23b1",
+    "bytes": 5616807,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/data/school_ElementPositions.sdds",
+    "sha256": "64ecfdebc69b162359b64a935900842ef8ce4310842b2533d2cc204baa469583",
+    "bytes": 129283,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/data/school_ElementPositions.txt",
+    "sha256": "7e7ad2316582e0052fd14ac6dd36875b0ece98a82c8ea724ef18a73c85aad81a",
+    "bytes": 175525,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/final-state.npz",
+    "sha256": "484179f9b8b49f19887f3f9bd77eb61b7cb476e997201099c5ee50235388e196",
+    "bytes": 3276,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/manifest.json",
+    "sha256": "2b641029ccee6c4bceab7eabd9610c04abb6514711b7cf2b1edb99201f2f0179",
+    "bytes": 3843,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/particles.dat",
+    "sha256": "f8c2bec3a2d8785aa10cd06be2c8ffbe2dc4321ac11c70d5886d8331560ab65b",
+    "bytes": 73,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/run.log",
+    "sha256": "6c446945deed45f976de4b168003472d943035ffcf6016c7feac50da4bd9b489",
+    "bytes": 6697766,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/school-frame/PROBE1.loss",
+    "sha256": "e2196856c80e1985c7c822155c1322f1459a697839e770f565cbd968431374a4",
+    "bytes": 571,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/school-frame/probe1.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/school-frame/PROBE2.loss",
+    "sha256": "0723d298958685153ba7adbd6e98a474e6e20082920c0d3d3065c9f9c972945e",
+    "bytes": 738,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/school-frame/probe2.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/school-frame/PROBE3.loss",
+    "sha256": "0409588b8c17252600b08b8d6d16d39233f9ce05d18bd875d2348d2c26913a0a",
+    "bytes": 734,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/school-frame/probe3.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/school-frame/PROBE4.loss",
+    "sha256": "2d29e2fabd9ad0c4b6fa643430f979382a88406fc998404ee430d2c9c834c10a",
+    "bytes": 738,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/school-frame/probe4.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/school.h5",
+    "sha256": "b3eecfe09cb214c88021d777001ba456525d7607041dfa476fa448b3a5f6f0fc",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/school.in",
+    "sha256": "aadcc59e040ae3b40fd68b42186ad13200f129388f06512988d0a45fd9852c94",
+    "bytes": 47656,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/school.stat",
+    "sha256": "8fe30847ee4889a07b65633611b3744d06312a62ce748df7ac933682faf9f0b0",
+    "bytes": 7769,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/timing.dat",
+    "sha256": "e0381271762e00ebf6a260c856d484fba901392e30eb8421298d847a87c3ea0a",
+    "bytes": 1217,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/PROBE1.h5",
+    "sha256": "cbf6a2fe09d93cdc132ad28eb38cddf6803fd2cf8a4e278ada543b09f6cdf6ba",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/PROBE2.h5",
+    "sha256": "138190004a2fa6f8b28afe5ad464890b09d8a87a253c54372f28b05c56cff509",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/PROBE3.h5",
+    "sha256": "b9a9e2cd4000262be5aaa3b6bf9ad851bbd271af8d5445fda0b71bb81ecee24f",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/PROBE4.h5",
+    "sha256": "536df58723b3ae50582c811a20001b1e61b360dfb079f04280ed62f8d49ff1a8",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/analysis.json",
+    "sha256": "8d3dfd8558ffb434748c53ac0fe80b0129fac8d8ff731068669d177d3b275a2f",
+    "bytes": 3510,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/crossing-comparison.csv",
+    "sha256": "6ff9c57b6aab3ae575a56bfe7711516a00e9de5568ad30b278bee2b930815a7b",
+    "bytes": 6410,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/crossing-comparison.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/data/school_3D.opal",
+    "sha256": "4e673a9d869153cf1a2145ce9f9a7cb5c8b47c0317899b868c3c62e086c7896e",
+    "bytes": 47584,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/data/school_DesignPath.dat",
+    "sha256": "0ce9145f629cf538da737e839b2027ef5caa77c4d4cf161255e049a233cb9d32",
+    "bytes": 5616735,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/data/school_ElementPositions.sdds",
+    "sha256": "64ecfdebc69b162359b64a935900842ef8ce4310842b2533d2cc204baa469583",
+    "bytes": 129283,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/data/school_ElementPositions.txt",
+    "sha256": "7e7ad2316582e0052fd14ac6dd36875b0ece98a82c8ea724ef18a73c85aad81a",
+    "bytes": 175525,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/final-state.npz",
+    "sha256": "8bb7dda9cb0b59e4f1dd8b046f141226be2d3a732088b3ef5da1da969c8f804e",
+    "bytes": 3276,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/manifest.json",
+    "sha256": "014eabaa3c19afff2003c7e3a86cb4151862bfe61e83cc32e41ff209d55be45b",
+    "bytes": 3842,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/particles.dat",
+    "sha256": "f8c2bec3a2d8785aa10cd06be2c8ffbe2dc4321ac11c70d5886d8331560ab65b",
+    "bytes": 73,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/run.log",
+    "sha256": "34f6b616ea1fb2991f727c333b51e2ce1e770b8ada7e5cb899c5c7dce64e4d72",
+    "bytes": 6696178,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/school-frame/PROBE1.loss",
+    "sha256": "3b6c56fb979c4b3c939ef52dca4ac7cc90264c23968e83b3dac770a73aefc5bb",
+    "bytes": 574,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/school-frame/probe1.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/school-frame/PROBE2.loss",
+    "sha256": "ff3cdb9f82dd09cd782425e409d8cd1a1b41abf66455fbcad976b5c63a092994",
+    "bytes": 736,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/school-frame/probe2.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/school-frame/PROBE3.loss",
+    "sha256": "86bf97724cc6c37c93bbda4ae48514d80fb93887d629859d8e49ab56dd5fe13a",
+    "bytes": 735,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/school-frame/probe3.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/school-frame/PROBE4.loss",
+    "sha256": "32bb007885c3a8f8e489dc7e5855116560e751f8f368a5c901b9da7cac61bc6f",
+    "bytes": 737,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/school-frame/probe4.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/school.h5",
+    "sha256": "c2dbeb0a060c58472ee37e24c3de7a62e54d8c9ab0de1edb028e96c670388b22",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/school.in",
+    "sha256": "aadcc59e040ae3b40fd68b42186ad13200f129388f06512988d0a45fd9852c94",
+    "bytes": 47656,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/school.stat",
+    "sha256": "d193e08aece0eea3474038ae5f3527b84f33ca3b72db5406bf0e7a389d499878",
+    "bytes": 7769,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/timing.dat",
+    "sha256": "c6a1786a766c5e3a5c097ef7105e05aca4d34a11fd71bcf978ff29c3ace530fd",
+    "bytes": 1217,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-hdf5-r2-repeat/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/analysis.json",
+    "sha256": "f6416e2ec9ad6c62657c4602ba017dd528d7e2c473887d958ac59610eac62c2b",
+    "bytes": 348,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/data/school_3D.opal",
+    "sha256": "155d609a3f3c200ef51ac9ae04ed34f47773929b899dd0f557118e7207267284",
+    "bytes": 47115,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/data/school_DesignPath.dat",
+    "sha256": "0ce9145f629cf538da737e839b2027ef5caa77c4d4cf161255e049a233cb9d32",
+    "bytes": 5616735,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/data/school_ElementPositions.sdds",
+    "sha256": "9e926b7b881934a328b7de92e576493108feeefd0c0aa2e964dcbe93163d0b13",
+    "bytes": 129283,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/data/school_ElementPositions.txt",
+    "sha256": "7e7ad2316582e0052fd14ac6dd36875b0ece98a82c8ea724ef18a73c85aad81a",
+    "bytes": 175525,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/final-state.npz",
+    "sha256": "8bb7dda9cb0b59e4f1dd8b046f141226be2d3a732088b3ef5da1da969c8f804e",
+    "bytes": 3276,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/manifest.json",
+    "sha256": "874f90015a11d1342ec74fc2cb9992a7285e2becb66b63ea8f79e3d5857851a3",
+    "bytes": 3784,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/particles.dat",
+    "sha256": "f8c2bec3a2d8785aa10cd06be2c8ffbe2dc4321ac11c70d5886d8331560ab65b",
+    "bytes": 73,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/run.log",
+    "sha256": "34c540c87b1719b921e7b4877519c953a22441c7735d8c3dfca14eebbfe3d7d7",
+    "bytes": 6502809,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/school.h5",
+    "sha256": "5fd47f4fbdaf938ade65ce02603d15ed6691bd27219ede4ca09cee5b813a99bf",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/school.in",
+    "sha256": "e42d5afb323a49880692702e820a7c971b9de7c980a13483afef035e053b0857",
+    "bytes": 47186,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/school.stat",
+    "sha256": "4772f1fc7709169b5184b60641be0cc2b889f28cadef934c5e7b8cf056fe596f",
+    "bytes": 7769,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/timing.dat",
+    "sha256": "d7ee4e276c7738e35256df2f4425269e5f216251e282d693b08ca501d475e39d",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/analysis.json",
+    "sha256": "d8349113ce0e72be8741ab5e23c13a3499f93b181507f4381a38da68411d39c7",
+    "bytes": 348,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/data/school_3D.opal",
+    "sha256": "155d609a3f3c200ef51ac9ae04ed34f47773929b899dd0f557118e7207267284",
+    "bytes": 47115,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/data/school_DesignPath.dat",
+    "sha256": "0ce9145f629cf538da737e839b2027ef5caa77c4d4cf161255e049a233cb9d32",
+    "bytes": 5616735,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/data/school_ElementPositions.sdds",
+    "sha256": "64ecfdebc69b162359b64a935900842ef8ce4310842b2533d2cc204baa469583",
+    "bytes": 129283,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/data/school_ElementPositions.txt",
+    "sha256": "7e7ad2316582e0052fd14ac6dd36875b0ece98a82c8ea724ef18a73c85aad81a",
+    "bytes": 175525,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/final-state.npz",
+    "sha256": "8bb7dda9cb0b59e4f1dd8b046f141226be2d3a732088b3ef5da1da969c8f804e",
+    "bytes": 3276,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/manifest.json",
+    "sha256": "1bdacfae0a0412842cd01a48ff3e676ca8b009d625f36c397170a6d669fcf2ce",
+    "bytes": 3783,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/particles.dat",
+    "sha256": "f8c2bec3a2d8785aa10cd06be2c8ffbe2dc4321ac11c70d5886d8331560ab65b",
+    "bytes": 73,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/run.log",
+    "sha256": "d201944dc7456770aa60a7355f1e5ce6d5776d214539836d92addf30337bb950",
+    "bytes": 6696180,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/school.h5",
+    "sha256": "7c4decc5131561cee864d4d619bfc01d6cae5594814dba036f65923e4e479cad",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/school.in",
+    "sha256": "e42d5afb323a49880692702e820a7c971b9de7c980a13483afef035e053b0857",
+    "bytes": 47186,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/school.stat",
+    "sha256": "234174c02fd51be334a17cdb3d49a74e6fc204c28dd5b95727b70d8db3fc20c1",
+    "bytes": 7769,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/timing.dat",
+    "sha256": "e6b764aa3db4df7615367ee97969377b0cd59638ff76940c68f29d9d75932dad",
+    "bytes": 1217,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/analysis.json",
+    "sha256": "0eed24209531db52a9340e9d2857a19f81a98e349bde281b22f133403b2280cb",
+    "bytes": 355,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/data/school_3D.opal",
+    "sha256": "155d609a3f3c200ef51ac9ae04ed34f47773929b899dd0f557118e7207267284",
+    "bytes": 47115,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/data/school_DesignPath.dat",
+    "sha256": "0ce9145f629cf538da737e839b2027ef5caa77c4d4cf161255e049a233cb9d32",
+    "bytes": 5616735,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/data/school_ElementPositions.sdds",
+    "sha256": "64ecfdebc69b162359b64a935900842ef8ce4310842b2533d2cc204baa469583",
+    "bytes": 129283,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/data/school_ElementPositions.txt",
+    "sha256": "7e7ad2316582e0052fd14ac6dd36875b0ece98a82c8ea724ef18a73c85aad81a",
+    "bytes": 175525,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/final-state.npz",
+    "sha256": "8bb7dda9cb0b59e4f1dd8b046f141226be2d3a732088b3ef5da1da969c8f804e",
+    "bytes": 3276,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/manifest.json",
+    "sha256": "02426881d40e105d87ed2a5757206ba94fe102771c17db529e7501f932d0715b",
+    "bytes": 3783,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/particles.dat",
+    "sha256": "f8c2bec3a2d8785aa10cd06be2c8ffbe2dc4321ac11c70d5886d8331560ab65b",
+    "bytes": 73,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/run.log",
+    "sha256": "7b00dca4c0c6b2b9acb9efa9b975accb928628b91bdac9cf80189cc8dc9ee96e",
+    "bytes": 6696181,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/school.h5",
+    "sha256": "c913785aa71d8b2577af487a1fc74a680d6db1c95ecd6e5cb29476951958d2ce",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/school.in",
+    "sha256": "e42d5afb323a49880692702e820a7c971b9de7c980a13483afef035e053b0857",
+    "bytes": 47186,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/school.stat",
+    "sha256": "6dafaffceba539bece15b9659447cabd869bf0a7c4210ff7b04b39dd0069ee3f",
+    "bytes": 7769,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/timing.dat",
+    "sha256": "911a7156a6658cfdebfb284226cfda4580d43b5b44ad179aa42c0b00b9229127",
+    "bytes": 1217,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-off-r2-repeat/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/PROBE1.h5",
+    "sha256": "7c08726e29a6a0ec895847f6af9de68cce569f1b019b83416bea3259b60599fd",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/PROBE2.h5",
+    "sha256": "959a68022971dc848e6010319b554925a2b538e5bccb012578d038900e3217f3",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/PROBE3.h5",
+    "sha256": "a8513d16a54fdc3d0c7da798a0fa298fee9079fa353cd55e49074e47c0a27d85",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/PROBE4.h5",
+    "sha256": "0d8cc1196ea5e397dd77d75f1a3a17f3577862751beb9bb9e4731a4ada6ae168",
+    "bytes": 41762,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/analysis.json",
+    "sha256": "24f39ed3110e58917470382035c92bccd0b5c8dfe62f302c3aeebb0f7598d8af",
+    "bytes": 3511,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/crossing-comparison.csv",
+    "sha256": "f5a77e2526d4cdc4ed174d7a891efe74c539b7e9751ee4074300c46209b385c6",
+    "bytes": 6418,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/crossing-comparison.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/data/school_3D.opal",
+    "sha256": "4ef4a8e23736efb58fb92dfb9270df0630e3feb453dd153a1d3d2bb43c916b63",
+    "bytes": 47584,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/data/school_DesignPath.dat",
+    "sha256": "9172ea695df03737fa2b484ef8fa27d0a86ccced45e2fe9ce888d212bb6245f9",
+    "bytes": 5661405,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/data/school_ElementPositions.sdds",
+    "sha256": "9e926b7b881934a328b7de92e576493108feeefd0c0aa2e964dcbe93163d0b13",
+    "bytes": 129283,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/data/school_ElementPositions.txt",
+    "sha256": "7e7ad2316582e0052fd14ac6dd36875b0ece98a82c8ea724ef18a73c85aad81a",
+    "bytes": 175525,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/final-state.npz",
+    "sha256": "1bf4fd00496e4f10908436cfca408c13028c1aa33ffa78e69c5b44d33261b540",
+    "bytes": 3276,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/manifest.json",
+    "sha256": "045c475b69745e6f3ce7763636a1e3ea3c4438cf4b00db20788554eb9cfc3bf6",
+    "bytes": 3853,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/particles.dat",
+    "sha256": "f8c2bec3a2d8785aa10cd06be2c8ffbe2dc4321ac11c70d5886d8331560ab65b",
+    "bytes": 73,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/run.log",
+    "sha256": "b106d467b57bda306cc48da3ab338fb5f9dc3ba028dfd933ae0e874f30221a15",
+    "bytes": 6502824,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/school-frame/PROBE1.loss",
+    "sha256": "0c358c9ef52226591d7f168ecd7d828f591b96d2a0bef371d202114c4e9c479f",
+    "bytes": 573,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/school-frame/probe1.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/school-frame/PROBE2.loss",
+    "sha256": "2a7b6486ea028741f438fd1d0341f39569c4eab1482b376dd410a5a91e1fdfb7",
+    "bytes": 736,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/school-frame/probe2.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/school-frame/PROBE3.loss",
+    "sha256": "f33e5bb3ed9855dc74555457b78ff11831bb79be77f1b2b9455847db04b44e9a",
+    "bytes": 737,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/school-frame/probe3.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/school-frame/PROBE4.loss",
+    "sha256": "322b8fd7f1a0c8401ec2e08a8453acc2ddd484c84d6bca8f0fa38c933f99207e",
+    "bytes": 738,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/school-frame/probe4.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/school.h5",
+    "sha256": "a27aebc1dfd083035883ecf1f823f80cde898c41c8f61827a2a7c00073649a3d",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/school.in",
+    "sha256": "571b5a1e231c857e9b524282c09a2ba67ec84b7bd48f54001e3fbf41686b2ad2",
+    "bytes": 47656,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/school.in"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/school.stat",
+    "sha256": "1e29c1cd9d5295b36eb03816274031c8767c1001156a844be3301f9517aebcc1",
+    "bytes": 7769,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/school.stat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/timing.dat",
+    "sha256": "552819107518c72b03b59167dacd3c7ce9139126dc53c77c3e184aa654d94889",
+    "bytes": 1101,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-matched-refined-hdf5-r1/timing.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/PROBE1.h5",
+    "sha256": "577990e9596427e34a9c4ada379165b2b5cf864ce50cf2957b281cba836291fd",
+    "bytes": 23108,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/PROBE2.h5",
+    "sha256": "f89218593d31ea6f92e0e8ab32c2424aedbe4a196998e050ffbd9e04891990b2",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/PROBE3.h5",
+    "sha256": "c3f3e9395196404d97b2af573d59ea45170576760dd771006b57a61ad5277013",
+    "bytes": 32435,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/PROBE4.h5",
+    "sha256": "a89a258f059f9ea3042747a59352384b0e900e7d324f62dec4f58d3d130724da",
+    "bytes": 23108,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/analysis.json",
+    "sha256": "cad5c632a1ae97edae64d1bef80cf2d7c56d13d775da8adb9368af925649860e",
+    "bytes": 3385,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/analysis.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/crossing-comparison.csv",
+    "sha256": "751193fe4f0a34cf277de6021fad0bac5a82af33590eba833c81175b52dadb38",
+    "bytes": 4329,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/crossing-comparison.csv"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/data/school_3D.opal",
+    "sha256": "703413680b67b9dd786ed00766bdbdc2dc86a02d4fb1e9a39a1f5ab192668358",
+    "bytes": 41984,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/data/school_3d.opal"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/data/school_DesignPath.dat",
+    "sha256": "81f5d03830d09456b9a5fd63777393a0bae12dbcbf5b02bbaf8e6b148fed59c2",
+    "bytes": 5701079,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/data/school_ElementPositions.py",
+    "sha256": "37c9e52faa7e7d4a098a347afc6e7f265ccc918b5addd27de43396634f6634f2",
+    "bytes": 26691,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/data/school_elementpositions.py"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/data/school_ElementPositions.sdds",
+    "sha256": "9c49812af1e7a6faaf7ce7eeb575d422ca1b2126c10b5982a8f2048e0b9f6560",
+    "bytes": 136549,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/data/school_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/data/school_ElementPositions.txt",
+    "sha256": "b39043ad0d34b2a15b34a1cf4aed247c64904408d291313411abc66245b1987a",
+    "bytes": 175525,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/data/school_elementpositions.txt"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/final-state.npz",
+    "sha256": "0af339a66b4927351a9d5157e4d76223c2b2896e1cafde1c7b35c8fbe8267251",
+    "bytes": 3034,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/manifest.json",
+    "sha256": "df19a1ad9f52b80aa666f01f958e010b95b42213779e242598044a58fd908c7c",
+    "bytes": 3223,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/manifest.json"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/particles.dat",
+    "sha256": "f8c2bec3a2d8785aa10cd06be2c8ffbe2dc4321ac11c70d5886d8331560ab65b",
+    "bytes": 73,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/particles.dat"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/run.log",
+    "sha256": "ed7f4795827a19475f3493588f3f415b1b6e1e4c1d2f15a8c336ae70e1544535",
+    "bytes": 5644280,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/school-frame/PROBE1.loss",
+    "sha256": "78004d1eb93c2c88abc173884f6c6c8dd8d62c8a457496da3698fc15772203b7",
+    "bytes": 409,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/school-frame/probe1.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/school-frame/PROBE2.loss",
+    "sha256": "60fbec39166e0cebf145820cea3f0fe9a7030a2e294f16e0245519c4d6b84394",
+    "bytes": 563,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/school-frame/probe2.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/school-frame/PROBE3.loss",
+    "sha256": "b6f366e5d4a5b289cd983c464921231bee34c1138edea9b094ed1df7128a012a",
+    "bytes": 568,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/school-frame/probe3.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/school-frame/PROBE4.loss",
+    "sha256": "df2a2df22fdb60b0db0d41cf2bc8e63e7b732d7c8d821c12bb5a6702c4077a9f",
+    "bytes": 412,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/school-frame/probe4.loss"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/school.h5",
+    "sha256": "ef4c7f13ee6afc32a8683443a59bc2fb6ce24bdc447808e99491880f7b6b561b",
+    "bytes": 14277,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/school.in",
+    "sha256": "0059c1ccfe09c4ecd0ac86de6ef514b09a4c27e530a7fcc4ef87b06a37ade0d1",
+    "bytes": 42056,
+    "disposition": "retained-text",
+    "archive": "local/tmp/ffa-probes-implementation-20261107/native-fourfold-refined-hdf5-r1/school.in"
+  }
+]

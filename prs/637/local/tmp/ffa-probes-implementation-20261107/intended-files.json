@@ -1,0 +1,27 @@
+{
+  "base_head": "ec4319acb1d3cf676f2581f4c86c3e691ce2e22d",
+  "branch": "codex/ffa-probes-school-parity",
+  "files": {
+    "README.md": "486b7829485ffcec6df99c7cd5a439dea2bf210dffcc9a359e91b7d76a5d1260",
+    "docs/probes.md": "e3fd818f672f709ecc1782faefa85f9d7601348997d0be5278950f5cc0f1d4e4",
+    "src/AbsBeamline/Probe.h": "8380687a4692bac41cef70c91faeb2cab592b9f8c52ed55ae0d23f3b225180bd",
+    "src/Algorithms/CyclotronProbeRecorder.cpp": "2703e494ca88b3ac1a6051406a9f6b570bc162484a6b01090bfb1a2320027118",
+    "src/Algorithms/CyclotronProbeRecorder.h": "d4d0b06ac5b8e39e7e1e355f31f1fe78bb4b119017bd4d92e787f2e56f0647a2",
+    "src/Algorithms/ParallelTracker.cpp": "89d79f10534f7458c0744585af944c37ac50f83cba81d4eff5754f8cf083015b",
+    "src/Algorithms/ParallelTracker.h": "96f5aced74fbf30a3ad2502365a2d3019fc498fd0df099c172267ea42856ccf9",
+    "src/Elements/OpalProbe.cpp": "ede82fbef98e6534d3d6e015daa20142442c1e7d10971b9def297681127723f7",
+    "src/Track/CofCmd.cpp": "20133afd30a986c47956e856e7b483bd14afc62cb70476a1e0b716b3011556d6",
+    "tools/probe_frame_adapter.md": "41a41499ba4efe98e59a2d86c3ebcf7707a51e5250ef17cd902623d48cad418d",
+    "tools/probe_frame_adapter.py": "686a2a9ab71d409f1fc62f5ae84fbefcb842620b2304460d372369a45cce3d8f",
+    "unit_tests/Algorithms/TestCyclotronProbe.cpp": "c995222dcb6f50b7c761ba5ede5cf8fdc751707e5aaac668d4a9ec5e5b023857"
+  },
+  "cpp_matches_a100_snapshot": false,
+  "cpp_changes_since_a100_snapshot": {
+    "src/AbsBeamline/Probe.h": "Doxygen description only: school-coordinate -> coordinate-frame conversion. No executable C++ changes."
+  },
+  "updated": "2026-11-09",
+  "adapter_validation": "adapter/validation-general.json; adapter/existing-comparisons-general.json",
+  "published_commit": "b1551b9c337c0c57dd21a4e2e26ccaff10fdfc93",
+  "published_branch": "615-probe-command-does-not-work",
+  "pr": "https://github.com/OPALX-project/OPALX/pull/637"
+}

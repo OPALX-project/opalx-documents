@@ -1,0 +1,180 @@
+{
+  "case": "triangle-control-source96-final",
+  "initialization_valid": true,
+  "full": {
+    "case": "triangle-control-source96-final",
+    "binary_sha256": "70383ff72345d869db40d42d2ff5aee8ceaa2f1f4fa656fcf2e8fc75e35647c1",
+    "input_sha256": "cdbdd9ddb45207dcc3bbfd1ab1e7daecb8f3f29a7c9891bcc6f4abf0aebac21d",
+    "native_h5_sha256": "03e805cbb687c324c22124acc6a35503ec3cf384a5686734dd48abe96affb829",
+    "native_checkpoint_sha256": "5bf58d6332dc2c8fd9d5afa75add9e9897fbec71730a42309618fb0cc550cd03",
+    "particles": 10803251,
+    "source_particles": 10803200,
+    "exact_ids": true,
+    "input_total_q_C": 1.0000047208234597e-11,
+    "output_total_q_C": 1.0000047208234597e-11,
+    "input_source_q_C": 1.0000000000000001e-11,
+    "output_source_q_C": 1.0000000000000001e-11,
+    "input_marker_q_C": 4.72082345971564e-17,
+    "output_marker_q_C": 4.72082345971564e-17,
+    "header_charge_C": [
+      3.3963967068368666e-16
+    ],
+    "input_q_min_C": 2.7955569193862722e-43,
+    "input_q_max_C": 1.9471038804843968e-18,
+    "output_q_min_C": 2.7955569193862722e-43,
+    "output_q_max_C": 1.9471038804843968e-18,
+    "q_preserved_by_id": true,
+    "q_max_relative_change": 0.0,
+    "q_input_sha256": "5ede6946e2d93ef27e125df1b99468bfd3281e5be912c823e3169bcd3274c401",
+    "q_output_checkpoint_sha256": "5ede6946e2d93ef27e125df1b99468bfd3281e5be912c823e3169bcd3274c401",
+    "m_preserved_by_id": true,
+    "m_max_relative_change": 0.0,
+    "m_input_sha256": "be49dcc14e3f3832f2be196421a544d4b73467daa01b0cc7984f119f7ea598a1",
+    "m_output_checkpoint_sha256": "be49dcc14e3f3832f2be196421a544d4b73467daa01b0cc7984f119f7ea598a1",
+    "input_q_over_m_proton_pass": true,
+    "output_q_over_m_proton_pass": true,
+    "independent_cell_charge_L1_relative_error": 4.560702680134713e-10,
+    "independent_cross_J_relative_error": 0.0,
+    "input_analytic_profile_q_pass": true,
+    "J_weighted_transverse_mean_pass": true,
+    "input_weighted_mean_uy_s_m": [
+      3.1249619724292723e-06,
+      -1.884954344196969e-21,
+      3.084271077275794e-15
+    ],
+    "input_weighted_second_uy_s_m2": [
+      6.2511494700202715e-06,
+      6.256608483792047e-08,
+      1.041666746140027
+    ],
+    "expected_mean_u_m": 3.125e-06,
+    "expected_second_s_m2": 1.0416666666666667,
+    "source_Q_normalization_pass": true,
+    "longitudinal_second_moment_pass": true,
+    "marker_q_pass": true,
+    "max_frozen_motion_residual_m": 1.195746793285192e-15,
+    "frame_motion_pass": true,
+    "initialization_valid": true
+  },
+  "companion": {
+    "case": "triangle-control-source96-final-probes",
+    "binary_sha256": "70383ff72345d869db40d42d2ff5aee8ceaa2f1f4fa656fcf2e8fc75e35647c1",
+    "input_sha256": "599f37b522c870564e302d983154e7e16fe7667a5b7dee71f794f984ec2b5497",
+    "native_h5_sha256": "177f7ba1fce56ff444e77f243057895f350445fbdc274d9680385942b7e5d0d7",
+    "native_checkpoint_sha256": "1c1dd4f2d3323f8673b2f33b3fb71d0faeca762ef86e485b2d8045f80a36aa20",
+    "particles": 51,
+    "source_particles": 0,
+    "exact_ids": true,
+    "input_total_q_C": 4.72082345971564e-17,
+    "output_total_q_C": 4.72082345971564e-17,
+    "input_source_q_C": 0.0,
+    "output_source_q_C": 0.0,
+    "input_marker_q_C": 4.72082345971564e-17,
+    "output_marker_q_C": 4.72082345971564e-17,
+    "header_charge_C": [
+      4.7208234597156393e-17
+    ],
+    "input_q_min_C": 9.256516587677724e-19,
+    "input_q_max_C": 9.256516587677724e-19,
+    "output_q_min_C": 9.256516587677724e-19,
+    "output_q_max_C": 9.256516587677724e-19,
+    "q_preserved_by_id": true,
+    "q_max_relative_change": 0.0,
+    "q_input_sha256": "1adf35ee3012092d22906ec8a77f72b211d5b45631fd5380ae618a93c6dad1af",
+    "q_output_checkpoint_sha256": "1adf35ee3012092d22906ec8a77f72b211d5b45631fd5380ae618a93c6dad1af",
+    "m_preserved_by_id": true,
+    "m_max_relative_change": 0.0,
+    "m_input_sha256": "8ced12e38b46027c94cffb1b72895d965aa8d3a3895b42cd15960aa418e80a61",
+    "m_output_checkpoint_sha256": "8ced12e38b46027c94cffb1b72895d965aa8d3a3895b42cd15960aa418e80a61",
+    "input_q_over_m_proton_pass": true,
+    "output_q_over_m_proton_pass": true,
+    "input_analytic_profile_q_pass": true,
+    "source_Q_normalization_pass": true,
+    "J_weighted_transverse_mean_pass": true,
+    "longitudinal_second_moment_pass": true,
+    "marker_q_pass": true,
+    "max_frozen_motion_residual_m": 8.881784197001252e-16,
+    "frame_motion_pass": true,
+    "initialization_valid": true
+  },
+  "reference_path": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/reference/triangle_fields_reference.csv",
+  "reference_sha256": "2797950954a4ed8c5bb3ef7f7fcc608c9237d57afdcfe0aea14304f278360450",
+  "reference_charge_C": 1e-11,
+  "comparison_interpretable": true,
+  "field_metrics": [
+    {
+      "target_set": "original43",
+      "component": "r",
+      "nonzero_points": 43,
+      "max_relative_error_percent": 0.07394289120468714,
+      "worst_nonzero_point": "end_-0.50_-0.25_-0.996",
+      "max_symmetry_zero_absolute_error_V_m": null
+    },
+    {
+      "target_set": "original43",
+      "component": "y",
+      "nonzero_points": 28,
+      "max_relative_error_percent": 0.10143207050800501,
+      "worst_nonzero_point": "axis_y_+0.9",
+      "max_symmetry_zero_absolute_error_V_m": 1.7167142134651426e-13
+    },
+    {
+      "target_set": "original43",
+      "component": "s",
+      "nonzero_points": 34,
+      "max_relative_error_percent": 0.08680272225489721,
+      "worst_nonzero_point": "axis_s_-0.998",
+      "max_symmetry_zero_absolute_error_V_m": 1.9553431918053876e-11
+    },
+    {
+      "target_set": "closer_end_diagnostics8",
+      "component": "r",
+      "nonzero_points": 8,
+      "max_relative_error_percent": 0.014183014916838158,
+      "worst_nonzero_point": "extra_axis_-0.0100",
+      "max_symmetry_zero_absolute_error_V_m": null
+    },
+    {
+      "target_set": "closer_end_diagnostics8",
+      "component": "y",
+      "nonzero_points": 0,
+      "max_relative_error_percent": null,
+      "worst_nonzero_point": null,
+      "max_symmetry_zero_absolute_error_V_m": 3.220979675658431e-13
+    },
+    {
+      "target_set": "closer_end_diagnostics8",
+      "component": "s",
+      "nonzero_points": 8,
+      "max_relative_error_percent": 0.7341247997423648,
+      "worst_nonzero_point": "extra_axis_+2.4990",
+      "max_symmetry_zero_absolute_error_V_m": null
+    },
+    {
+      "target_set": "all51",
+      "component": "r",
+      "nonzero_points": 51,
+      "max_relative_error_percent": 0.07394289120468714,
+      "worst_nonzero_point": "end_-0.50_-0.25_-0.996",
+      "max_symmetry_zero_absolute_error_V_m": null
+    },
+    {
+      "target_set": "all51",
+      "component": "y",
+      "nonzero_points": 28,
+      "max_relative_error_percent": 0.10143207050800501,
+      "worst_nonzero_point": "axis_y_+0.9",
+      "max_symmetry_zero_absolute_error_V_m": 3.220979675658431e-13
+    },
+    {
+      "target_set": "all51",
+      "component": "s",
+      "nonzero_points": 42,
+      "max_relative_error_percent": 0.7341247997423648,
+      "worst_nonzero_point": "extra_axis_+2.4990",
+      "max_symmetry_zero_absolute_error_V_m": 1.9553431918053876e-11
+    }
+  ],
+  "failure": null,
+  "script_sha256": "263e19eb6aac391e030f6083241646f7305b83a5df73859b3c758baf3097b39d"
+}

@@ -1,0 +1,118 @@
+% Prescribed SACR sources and their distinct straight limits; no solver grid.
+% The left envelope is u=+/-a0*sqrt(1-s^2/b^2), mapped onto a circular path.
+% The midpoint source patch has a'=c'=0, so its outward normal is radial.
+% Transverse dimensions are deliberately enlarged. Connections are geometry,
+% not computed electric-field vectors or magnitudes.
+\begin{tikzpicture}[
+ x=1cm,y=1cm,font=\small,>=Latex,
+ srsource/.style={blue!65!black,line width=.8pt},
+ srthin/.style={black!45,line width=.45pt},
+ sraxis/.style={->,black!70,line width=.6pt},
+ srdim/.style={<->,black!65,line width=.55pt},
+ srlabel/.style={fill=white,inner sep=2pt},
+ srtarget/.style={fill=orange!85!black,draw=white,line width=.6pt}
+]
+ \path[use as bounding box] (0,0) rectangle (16.6,10.8);
+ \node[anchor=north west,font=\bfseries\small] at (.1,10.65)
+   {(a) Mesh-free curved-source integration};
+ \node[anchor=north west,black!65] at (.1,10.1)
+   {Prescribed geometry; uniform physical $\rho$};
+ \node[anchor=north west,black!65] at (.1,9.65)
+   {Orbit-plane view; $y$ out of the page};
+ \node[anchor=north west,font=\bfseries\small] at (8.7,10.65)
+   {(b) Two source families, two straight limits};
+
+ % Circular reference: 5 m source / 2 m radius = 143.239449 degrees.
+ \coordinate (srO) at (1.35,6.0);
+ \fill[blue!9]
+  plot[domain=-71.619724:71.619724,samples=121]
+   ({1.35+(2.65-.22*sqrt(max(0,1-(\x/71.619724)^2)))*cos(\x)},
+    {6.0+(2.65-.22*sqrt(max(0,1-(\x/71.619724)^2)))*sin(\x)})
+  -- plot[domain=71.619724:-71.619724,samples=121]
+   ({1.35+(2.65+.22*sqrt(max(0,1-(\x/71.619724)^2)))*cos(\x)},
+    {6.0+(2.65+.22*sqrt(max(0,1-(\x/71.619724)^2)))*sin(\x)}) -- cycle;
+ \foreach \side in {-1,1} {
+  \draw[srsource]
+   plot[domain=-71.619724:71.619724,samples=121]
+    ({1.35+(2.65+\side*.22*sqrt(max(0,1-(\x/71.619724)^2)))*cos(\x)},
+     {6.0+(2.65+\side*.22*sqrt(max(0,1-(\x/71.619724)^2)))*sin(\x)});
+ }
+ \draw[srthin,dashed] ($(srO)+(-71.619724:2.65)$)
+  arc[start angle=-71.619724,end angle=71.619724,radius=2.65];
+ \foreach \theta in {-60,-45,-25,25,45,60} {
+  \pgfmathsetmacro{\srwidth}{.22*sqrt(1-(\theta/71.619724)^2)}
+  \fill[blue!65!black] ($(srO)+(\theta:{2.65+\srwidth})$) circle[radius=1.2pt];
+  \fill[blue!65!black] ($(srO)+(\theta:{2.65-\srwidth})$) circle[radius=1.2pt];
+ }
+
+ % Source patch at the maximum cross-section: its normal is exactly radial.
+ \coordinate (srP) at (4.22,6.0);
+ \draw[blue!70!black,line width=2.5pt]
+  plot[domain=-4:4,samples=15]
+   ({1.35+(2.65+.22*sqrt(1-(\x/71.619724)^2))*cos(\x)},
+    {6.0+(2.65+.22*sqrt(1-(\x/71.619724)^2))*sin(\x)});
+ \fill[blue!65!black] (srP) circle[radius=1.7pt];
+ \draw[->,blue!65!black,line width=.8pt] (srP) -- (5.55,6.0)
+  node[right,black] {$\bm n'\,\dd S'$};
+ \node[anchor=north west,srlabel,align=left] at (4.35,5.7)
+  {Source patch $\bm X'$\\$s'=0$};
+ \coordinate (srT) at ($(srO)+(25:2.65)$);
+ \draw[black!65,line width=.6pt] (srP) -- (srT)
+  node[midway,left=3pt,srlabel] {$d$};
+ \fill[srtarget] (srT) circle[radius=2.7pt];
+ \node[anchor=west,srlabel] at ($(srT)+(.22,.14)$)
+  {Target $\bm X$};
+ \draw[srdim] ($(srO)+(.08,0)$) -- (3.85,6.0)
+  node[midway,above=3pt,srlabel] {$R=2\,\mathrm m$};
+ \fill[black!65] (srO) circle[radius=1.1pt];
+ \node[anchor=north,align=center] at ($(srO)+(0,-.16)$)
+  {Curvature\\centre};
+ \node[anchor=south,srlabel] at ($(srO)+(71.619724:2.65)+(0,.12)$)
+  {$s=+b$};
+ \node[anchor=north,srlabel] at ($(srO)+(-71.619724:2.65)+(0,-.08)$)
+  {$s=-b$};
+
+ % A local radial/tangential basis away from the integration target.
+ \coordinate (srB) at ($(srO)+(-42:2.65)$);
+ \draw[sraxis] (srB) -- ($(srB)+(-42:.65)$) node[below right] {$u$};
+ \draw[sraxis] (srB) -- ($(srB)+(48:.65)$)
+  node[above left,srlabel,inner sep=.5pt] {$s$};
+ \node[anchor=west,align=left] at (.15,2.65)
+  {$L=2b=5\,\mathrm m$\\$L/R=143.24^\circ$};
+ \node[anchor=west,align=left,black!65] at (.15,1.45)
+  {Surface quadrature points are schematic\\
+   Transverse thickness enlarged; no volume mesh};
+ \node[anchor=west] at (.15,.45)
+  {$d=|\bm X-\bm X'|$: physical separation};
+
+ % Family 1: fixed material semiaxes, curvature tends to zero.
+ \node[align=center] at (12.7,9.45)
+  {Ellipsoidally tapered cross-section};
+ \draw[sraxis] (8.9,8.0) -- (9.95,8.0)
+  node[midway,above=3pt,srlabel] {$R\to\infty$};
+ \draw[srsource,fill=blue!9] (12.7,8.0) ellipse[x radius=2.25,y radius=.57];
+ \draw[srthin,dashed] (12.7,8.0) ellipse[x radius=2.25,y radius=.17];
+ \draw[sraxis] (10.2,8.0) -- (15.45,8.0) node[right] {$s$};
+ \node[anchor=north] at (10.45,7.25) {$-b$};
+ \node[anchor=north] at (14.95,7.25) {$+b$};
+ \node[align=center] at (12.7,6.4)
+  {$a(s),c(s)\ \propto\ \sqrt{1-s^2/b^2}$\\[3pt]
+   Dubin ellipsoid: exact straight limit};
+
+ % Family 2: the same limit does not turn a constant-section source into an ellipsoid.
+ \node[align=center] at (12.7,4.85)
+  {Constant cross-section; sharp ends};
+ \draw[sraxis] (8.9,3.4) -- (9.95,3.4)
+  node[midway,above=3pt,srlabel] {$R\to\infty$};
+ \fill[blue!9] (10.45,2.85) rectangle (14.95,3.95);
+ \draw[srsource] (10.45,2.85) -- (14.95,2.85);
+ \draw[srsource] (10.45,3.95) -- (14.95,3.95);
+ \draw[srsource] (10.45,3.4) ellipse[x radius=.16,y radius=.55];
+ \draw[srsource,fill=blue!9] (14.95,3.4) ellipse[x radius=.16,y radius=.55];
+ \draw[srthin,dashed] (10.45,3.4) -- (14.95,3.4);
+ \node[align=center] at (12.7,2.1)
+  {Finite elliptic cylinder\\[3pt]Not the Dubin ellipsoid};
+ \node[align=center,black!65,text width=7.5cm] at (12.7,.7)
+  {Straight limits hold at fixed source lengths,\\
+   cross-section parameters and charge};
+\end{tikzpicture}

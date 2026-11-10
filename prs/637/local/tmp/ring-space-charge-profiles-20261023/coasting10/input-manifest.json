@@ -1,0 +1,22 @@
+{
+  "source": "/Users/adelmann/git/regression-tests-x/RegressionTests/Cyclotron-SC-Midpoint",
+  "particles": 262144,
+  "mesh": [
+    32,
+    32,
+    32
+  ],
+  "charge_C": 3.948667324777887e-11,
+  "current_A": 0.002,
+  "rf_Hz": 50650000.0,
+  "turns": 10,
+  "dt_s": 1.6452780519907864e-10,
+  "solver": "OPEN",
+  "greens": "STANDARD",
+  "sc_update": "MIDPOINT",
+  "hashes": {
+    "bfield.dat": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "gauss.dat": "df11b9cf5b8cd75d5b967f6e43b8eb77b99228067161364139dee4f6739ade47",
+    "coasting.in": "5ee7d3e4376b5c0a6f99de74365e388e213de196ae56ba86679f9c558332b8e8"
+  }
+}

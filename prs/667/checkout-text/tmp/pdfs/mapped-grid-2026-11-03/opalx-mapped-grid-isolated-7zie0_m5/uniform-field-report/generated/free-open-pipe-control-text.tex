@@ -1,0 +1,12 @@
+\subsection{Repeated straight conducting-pipe control}
+The same final OPALX executable reruns the independent straight benchmark in
+\cref{sec:triangle-pipe}; this does not replace the free-space SACR comparison.
+The fixed $1\le|s|\le4$ m window contains 62 axis and 82 beam-radial targets.
+Maximum pointwise relative errors are
+\tabfile{free-open-pipe-control}
+The OPALX source has 8,388,608 particles. Repeated PyORBIT one-/two-rank
+fields agree within $7\times10^{-9}\%$ of the local analytic field. The
+maximum OPALX--PyORBIT difference is 0.447\% (slices) or 0.167\%
+(Baartman). A separate native annulus/wall control has 0.00352\% maximum
+nonzero-field error and exactly zero wall field. This confirms the retained
+straight local pipe model; it supplies no curved free-space validation.

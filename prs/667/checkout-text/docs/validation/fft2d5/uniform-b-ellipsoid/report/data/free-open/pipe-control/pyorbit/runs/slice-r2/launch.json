@@ -1,0 +1,36 @@
+{
+  "argv": [
+    "mpirun",
+    "--oversubscribe",
+    "--map-by",
+    "slot",
+    "--bind-to",
+    "none",
+    "-n",
+    "2",
+    "/Users/adelmann/.venv-h6/bin/python",
+    "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/run_native.py",
+    "--source",
+    "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/common/triangle-ns8192-nr32-np64.npz",
+    "--probes",
+    "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/common/probes.csv",
+    "--out",
+    "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/pipe-control/pyorbit/runs/slice-r2",
+    "--nx",
+    "512",
+    "--nz",
+    "128",
+    "--model",
+    "slice"
+  ],
+  "returncode": 0,
+  "elapsed_s": 7.156946457980666,
+  "env": {
+    "PYTHONPATH": "/Users/adelmann/git/OPALX-2D5/curved-study/triangle-pipe/pyorbit/native-package",
+    "OMP_NUM_THREADS": "1",
+    "OMP_PROC_BIND": "false"
+  },
+  "harness_sha256": "9999de9ff21e51e63d02296a6dcc2a13944ac1888238dc94fa09292956bf73f6",
+  "launcher_sha256": "7904eabf87d13e4dac2ddfa53bbc67a26e481016bb4b5883f4b8fa8dbb215fe1",
+  "source_sha256": "5ca9a0b94c88d76fd4094f4130ac58307a463c5133a113788269cfebdfb11274"
+}

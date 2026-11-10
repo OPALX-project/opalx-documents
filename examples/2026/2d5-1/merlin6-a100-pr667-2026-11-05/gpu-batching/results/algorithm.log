@@ -1,0 +1,31 @@
+Test project /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda
+    Start 100: TestFFT2D5Algorithm
+1/1 Test #100: TestFFT2D5Algorithm ..............***Failed    5.66 sec
+Warning: program compiled against libxml 210 using older 209
+Running main() from /psi/home/adelmann/opalx-dev/dba/build/gwendolen-cuda/_deps/gtest-src/googletest/src/gtest_main.cc
+[==========] Running 11 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 11 tests from FFT2D5AlgorithmTest
+[ RUN      ] FFT2D5AlgorithmTest.LazyInitializationSkipsEmptySlices
+[merlin-g-100:3604082] *** Process received signal ***
+[merlin-g-100:3604082] Signal: Segmentation fault (11)
+[merlin-g-100:3604082] Signal code: Address not mapped (1)
+[merlin-g-100:3604082] Failing at address: (nil)
+[merlin-g-100:3604082] [ 0] /lib64/libc.so.6(+0x3fb30)[0x14597ba3fb30]
+[merlin-g-100:3604082] *** End of error message ***
+--------------------------------------------------------------------------
+prterun noticed that process rank 0 with PID 3604082 on node merlin-g-100 exited on
+signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+
+
+0% tests passed, 1 tests failed out of 1
+
+Label Time Summary:
+unit    =   5.66 sec*proc (1 test)
+
+Total Test time (real) =   5.68 sec
+
+The following tests FAILED:
+	100 - TestFFT2D5Algorithm (Failed)                      unit
+Errors while running CTest

@@ -1,0 +1,1229 @@
+diff --git a/src/Algorithms/CyclotronProbe.h b/src/Algorithms/CyclotronProbe.h
+index 90e399431..29b944e41 100644
+--- a/src/Algorithms/CyclotronProbe.h
++++ b/src/Algorithms/CyclotronProbe.h
+@@ -25,7 +25,14 @@ namespace cyclotron_probe {
+         Vector start = Vector(0.0), end = Vector(0.0);
+     };
+ 
+-    /// Trivially copyable particle attribute: migrated/sorted with its owner.
++    /** @brief Crossing memory for one particle at one cyclotron probe.
++     * The two directed observers retain previous endpoints and arming state for
++     * interpolation in either crossing direction. id identifies the particle when
++     * an array slot is reused; passages counts accepted segment crossings.
++     * This trivially copyable record is stored in an IPPL particle attribute so
++     * sorting and MPI migration carry the previous endpoints with their owner.
++     * Each probe needs an independent history because its segment and crossings differ.
++     */
+     struct State {
+         passive_probe::State forward, reverse;
+         std::int64_t id = -1;
+diff --git a/src/Algorithms/DeviceExternalField.h b/src/Algorithms/DeviceExternalField.h
+index 58231bd61..eaa6e2d18 100644
+--- a/src/Algorithms/DeviceExternalField.h
++++ b/src/Algorithms/DeviceExternalField.h
+@@ -164,10 +164,15 @@ namespace device_external {
+          * The shared event search operates on copies, so a failed particle leaves
+          * its live state intact. The caller owns bunch-level failure handling.
+          * No allocations/collectives; at most 64 gap descriptors on this path.
++         * terminalEndpoint includes a roundoff-short final gap crossing only
++         * after the reference has completed its EKINSTOP kick. frameSteps is the
++         * accepted global step count including this final step; rf_event::advance
++         * uses it only for accumulated frame-arithmetic endpoint resolution.
+          */
+         KOKKOS_INLINE_FUNCTION bool advance(
+                 Vector& position, Vector& momentum, double time, double dt, double mass,
+-                rf_event::Diagnostic* diagnostic = nullptr) const {
++                rf_event::Diagnostic* diagnostic = nullptr, bool terminalEndpoint = false,
++                unsigned long long frameSteps = 1) const {
+             if (gaps.extent(0) > 64 || !(dt >= 0)) {
+                 if (diagnostic)
+                     diagnostic->set(rf_event::Failure::InvalidStep, position, momentum, time);
+@@ -175,7 +180,10 @@ namespace device_external {
+             }
+             Vector r = position, p = momentum;
+             EventPolicy policy{*this};
+-            if (!rf_event::advance(r, p, time, dt, mass, policy, diagnostic).success) return false;
++            if (!rf_event::advance(
++                         r, p, time, dt, mass, policy, diagnostic, terminalEndpoint, frameSteps)
++                         .success)
++                return false;
+             position = r;
+             momentum = p;
+             return true;
+@@ -187,10 +195,11 @@ namespace device_external {
+          */
+         KOKKOS_INLINE_FUNCTION bool advanceWithSelfFields(
+                 Vector& r, Vector& p, const Vector& e, const Vector& b, double t, double dt,
+-                double mass, rf_event::Diagnostic* diagnostic = nullptr) const {
++                double mass, rf_event::Diagnostic* diagnostic = nullptr,
++                bool terminalEndpoint = false, unsigned long long frameSteps = 1) const {
+             Vector x = r, v = p;
+             BorisPusher().kick(x, v, e, b, .5 * dt, mass, 1);
+-            if (!advance(x, v, t, dt, mass, diagnostic)) return false;
++            if (!advance(x, v, t, dt, mass, diagnostic, terminalEndpoint, frameSteps)) return false;
+             BorisPusher().kick(x, v, e, b, .5 * dt, mass, 1);
+             r = x;
+             p = v;
+diff --git a/src/Algorithms/ParallelTracker.cpp b/src/Algorithms/ParallelTracker.cpp
+index 16a9f69d9..8e51613b7 100644
+--- a/src/Algorithms/ParallelTracker.cpp
++++ b/src/Algorithms/ParallelTracker.cpp
+@@ -710,15 +710,39 @@ void ParallelTracker::execute() {
+ 
+             // Localize the reference terminal event before the PIC predictor and
+             // gather, so every particle and self-field uses the accepted duration.
+-            if (kineticEnergyStop_m > 0 && hasCyclotronGaps()
+-                && !(bareTracking_m && ippl::Comm->size() == 1
+-                     && itsBunch_m->getTotalNumAllContainers() == 1)) {
+-                const auto pc       = particleContainers.front();
+-                pendingReferenceR_m = pc->getRefPartR();
+-                pendingReferenceP_m = pc->getRefPartP();
+-                const double actual = advanceCyclotronGaps(
+-                        pendingReferenceR_m, pendingReferenceP_m, itsBunch_m->getT(),
+-                        itsBunch_m->getdT(), pc->getReference()->getM(), true);
++            if (kineticEnergyStop_m > 0 && hasCyclotronGaps()) {
++                const auto pc = particleContainers.front();
++                // Trial only on root, then publish success/failure before any
++                // rank enters PIC or particle collectives. A failed trial must
++                // flush previously accepted probe endpoints on every rank.
++                const double actual = track_reference::collectiveTerminalStep(
++                        ippl::Comm->getCommunicator(),
++                        [&] {
++                            pendingReferenceR_m = pc->getRefPartR();
++                            pendingReferenceP_m = pc->getRefPartP();
++                            return advanceCyclotronGaps(
++                                    pendingReferenceR_m, pendingReferenceP_m, itsBunch_m->getT(),
++                                    itsBunch_m->getdT(), pc->getReference()->getM(), true);
++                        },
++                        [&] {
++                            if (cyclotronRecorder) cyclotronRecorder->save();
++                        });
++                // All ranks use the same outgoing reference state, terminal
++                // decision and duration, including the one-particle host path.
++                double reference[7]{};
++                if (ippl::Comm->rank() == 0) {
++                    for (unsigned d = 0; d < 3; ++d) {
++                        reference[d]     = pendingReferenceR_m(d);
++                        reference[3 + d] = pendingReferenceP_m(d);
++                    }
++                    reference[6] = energyTargetReached_m ? 1. : 0.;
++                }
++                MPI_Bcast(reference, 7, MPI_DOUBLE, 0, ippl::Comm->getCommunicator());
++                for (unsigned d = 0; d < 3; ++d) {
++                    pendingReferenceR_m(d) = reference[d];
++                    pendingReferenceP_m(d) = reference[3 + d];
++                }
++                energyTargetReached_m    = reference[6] != 0;
+                 pendingEnergyReference_m = true;
+                 if (actual < itsBunch_m->getdT()) {
+                     terminalStepDt_m = actual;
+@@ -1091,7 +1115,7 @@ bool ParallelTracker::hasCyclotronGaps() {
+ 
+ double ParallelTracker::advanceCyclotronGaps(
+         Vector_t<double, 3>& r, Vector_t<double, 3>& p, double t, double dt, double mass,
+-        bool report) {
++        bool report, bool terminalEndpoint, unsigned long long frameSteps) {
+     const auto all = itsOpalBeamline_m.getElements();
+     std::vector<std::shared_ptr<ElementBase>> gaps;
+     for (const auto& element : all) {
+@@ -1161,20 +1185,27 @@ double ParallelTracker::advanceCyclotronGaps(
+             *gmsg << level2 << "Cyclotron gap " << gaps[j]->getName() << " t=" << time
+                   << " s K=" << (std::sqrt(1 + dot(momentum, momentum)) - 1) * mass * 1e-6 << " MeV"
+                   << endl;
+-        if (kineticEnergyStop_m > 0
++        // Only the reference owns EKINSTOP. An off-reference physical particle
++        // may exceed the target earlier and must still finish the common step,
++        // exactly like particles transported by the device EventPolicy.
++        if (report && kineticEnergyStop_m > 0
+             && (std::sqrt(1 + dot(momentum, momentum)) - 1) * mass >= kineticEnergyStop_m) {
+-            if (report) {
+-                energyTargetReached_m = true;
+-                *gmsg << level1 << "EKINSTOP reached after complete gap kick " << gaps[j]->getName()
+-                      << " at t=" << time
+-                      << " s; K=" << (std::sqrt(1 + dot(momentum, momentum)) - 1) * mass * 1e-6
+-                      << " MeV" << endl;
+-            }
++            energyTargetReached_m = true;
++            *gmsg << level1 << "EKINSTOP reached after complete gap kick " << gaps[j]->getName()
++                  << " at t=" << time
++                  << " s; K=" << (std::sqrt(1 + dot(momentum, momentum)) - 1) * mass * 1e-6
++                  << " MeV" << endl;
+             return true;
+         }
+         return false;
+     };
+-    return rf_event::advance(r, p, t, dt, mass, policy).duration;
++    const auto result =
++            rf_event::advance(r, p, t, dt, mass, policy, nullptr, terminalEndpoint, frameSteps);
++    if (!result.success)
++        throw OpalException(
++                "ParallelTracker",
++                "Invalid SINGLEGAP event step or terminal roundoff accumulation.");
++    return result.duration;
+ }
+ 
+ /**
+@@ -1217,9 +1248,8 @@ void ParallelTracker::timeIntegration1(BorisPusher& pusher) {
+  * @copybrief ParallelTracker::timeIntegration2
+  */
+ void ParallelTracker::timeIntegration2(BorisPusher& pusher) {
+-    // Preserve the established single-particle event endpoint convention. At an
+-    // RF impulse a sub-ulp arrival difference can otherwise place the particle
+-    // on the opposite side of the reference's terminal discontinuity.
++    // Retain host transport for a bare single particle. EKINSTOP duration and
++    // the inclusive terminal RF endpoint are shared with the device bunch path.
+     if (hasCyclotronGaps() && bareTracking_m && ippl::Comm->size() == 1
+         && itsBunch_m->getNumParticleContainers() == 1
+         && itsBunch_m->getTotalNumAllContainers() == 1) {
+@@ -1241,27 +1271,13 @@ void ParallelTracker::timeIntegration2(BorisPusher& pusher) {
+         const auto& toLab            = pc->getToLabTrafo();
+         Vector_t<double, 3> position = toLab.transformTo(r(0)), momentum = toLab.rotateTo(p(0));
+         const double requestedDt = itsBunch_m->getdT();
+-        double actualDt          = requestedDt;
+-        if (kineticEnergyStop_m > 0) {
+-            // Establish the reference's stopping time before incrementT(). Keep
+-            // the ordinary post-step frame update, publishing this pending state
+-            // there. The physical particle is advanced independently below.
+-            pendingReferenceR_m = pc->getRefPartR();
+-            pendingReferenceP_m = pc->getRefPartP();
+-            actualDt            = advanceCyclotronGaps(
+-                    pendingReferenceR_m, pendingReferenceP_m, itsBunch_m->getT(), requestedDt,
+-                    pc->getReference()->getM(), true);
+-            pendingEnergyReference_m = true;
+-        }
++        // The preliminary reference trial has already selected the common
++        // duration. Include its terminal endpoint even if a coordinate round trip
++        // places this otherwise coincident particle a few ulps before the plane.
+         advanceCyclotronGaps(
+-                position, momentum, itsBunch_m->getT(), itsBunch_m->getdT(),
+-                pc->getReference()->getM(), false);
+-        if (energyTargetReached_m) {
+-            // Only the terminal step changes dt; subsequent steps are disabled
+-            // after writing diagnostics. No fractional RF impulse is introduced.
+-            itsBunch_m->setdT(actualDt);
+-            pc->dt = actualDt;
+-        }
++                position, momentum, itsBunch_m->getT(), requestedDt, pc->getReference()->getM(),
++                false, energyTargetReached_m,
++                static_cast<unsigned long long>(itsBunch_m->getGlobalTrackStep()) + 1);
+         r(0) = toLab.transformFrom(position);
+         p(0) = toLab.rotateFrom(momentum);
+         Kokkos::deep_copy(pc->R.getView(), r);
+@@ -1320,7 +1336,12 @@ void ParallelTracker::timeIntegration2(BorisPusher& pusher) {
+                    b = pc->B.getView();
+         const device_external::Rigid frame{toLab.getOrigin(), toLab.getRotationMatrix()};
+         const double time = itsBunch_m->getT(), mass = pc->getReference()->getM();
+-        const bool charged = !bareTracking_m;
++        const bool charged          = !bareTracking_m;
++        const bool terminalEndpoint = energyTargetReached_m;
++        // The common clock includes every accepted reference-frame composition;
++        // accumulation depends on their count, not on the timestep duration.
++        const auto frameSteps =
++                static_cast<unsigned long long>(itsBunch_m->getGlobalTrackStep()) + 1;
+         const bool predicted =
+                 charged && spaceChargeFieldUpdate_m == SpaceChargeFieldUpdate::MIDPOINT;
+         Kokkos::View<rf_event::Diagnostic*> diagnostics("cyclotron_failures", pc->getLocalNum());
+@@ -1339,10 +1360,10 @@ void ParallelTracker::timeIntegration2(BorisPusher& pusher) {
+                     const bool ok  = charged ? lattice.advanceWithSelfFields(
+                                                       position, momentum, frame.vectorTo(e(i)),
+                                                       frame.vectorTo(b(i)), time, actualDt, mass,
+-                                                      &diagnostic)
++                                                      &diagnostic, terminalEndpoint, frameSteps)
+                                              : lattice.advance(
+                                                       position, momentum, time, actualDt, mass,
+-                                                      &diagnostic);
++                                                      &diagnostic, terminalEndpoint, frameSteps);
+                     diagnostics(i) = diagnostic;
+                     if (!ok) {
+                         ++failed;
+diff --git a/src/Algorithms/ParallelTracker.h b/src/Algorithms/ParallelTracker.h
+index 9f56cd745..d8598bd33 100644
+--- a/src/Algorithms/ParallelTracker.h
++++ b/src/Algorithms/ParallelTracker.h
+@@ -152,8 +152,8 @@ private:
+     SpectralTunes::Settings tuneSettings_m;
+     bool hasCyclotronGaps();
+     std::optional<device_external::CyclotronLattice> cyclotronBunchLattice_m;
+-    /** Host-only event integration for the initial one-proton RF milestone.
+-     * R/P are in the tracking frame, t/dt in seconds. Splits Boris steps at
++    /** Host-only event integration for the reference and a bare single proton.
++     * R/P are in the laboratory frame, t/dt in seconds. Splits Boris steps at
+      * directed gap-plane roots and applies full kicks in time order. Field
+      * queries use spatial support, not the threader's nominal closed orbit.
+      * Assumes distinct gap planes and a single unpolarized median-plane proton.
+@@ -164,10 +164,16 @@ private:
+      * On target completion the outgoing state is immediately after that complete
+      * kick; the remainder magnetic drift is deliberately omitted. With report=true
+      * the reference marks energyTargetReached_m and emits the terminal diagnostic.
++     * Physical particles (report=false) finish the entire supplied duration even
++     * if their own energy exceeds the reference target at an earlier gap.
++     * terminalEndpoint applies the shared roundoff-inclusive final endpoint policy
++     * to physical particles after that reference stop, never to reference trials.
++     * frameSteps counts accepted frame updates including this step; it budgets
++     * accumulated coordinate arithmetic in the terminal-only rf_event allowance.
+      */
+     double advanceCyclotronGaps(
+             Vector_t<double, 3>& r, Vector_t<double, 3>& p, double t, double dt, double mass,
+-            bool report);
++            bool report, bool terminalEndpoint = false, unsigned long long frameSteps = 1);
+     double kineticEnergyStop_m = 0;      ///< Optional reference kinetic-energy target [eV].
+     bool energyTargetReached_m = false;  ///< Latched only by the reference's complete kick.
+     /// Energy-mode reference is precomputed so the final bunch clock uses its substep.
+diff --git a/src/Algorithms/TrackReferenceStep.cpp b/src/Algorithms/TrackReferenceStep.cpp
+index ca79a616a..0cc5bff23 100644
+--- a/src/Algorithms/TrackReferenceStep.cpp
++++ b/src/Algorithms/TrackReferenceStep.cpp
+@@ -60,6 +60,12 @@ track_reference::State track_reference::advanceResolvedInBeamline(
+ 
+ double track_reference::collectiveTerminalStep(
+         MPI_Comm communicator, const std::function<double()>& search) {
++    return collectiveTerminalStep(communicator, search, {});
++}
++
++double track_reference::collectiveTerminalStep(
++        MPI_Comm communicator, const std::function<double()>& search,
++        const std::function<void()>& onFailure) {
+     int rank = 0;
+     MPI_Comm_rank(communicator, &rank);
+     double duration = 0;
+@@ -68,14 +74,14 @@ double track_reference::collectiveTerminalStep(
+         try {
+             duration = search();
+             if (!(duration > 0) || !std::isfinite(duration))
+-                throw std::runtime_error("Invalid terminal-turn duration");
++                throw std::runtime_error("Invalid terminal-event duration");
+         } catch (const OpalException& exception) {
+             error = exception.where() + ": " + exception.what();
+         } catch (const std::exception& exception) {
+             error = exception.what();
+-            if (error.empty()) error = "Terminal-turn reference trial failed";
++            if (error.empty()) error = "Terminal-event reference trial failed";
+         } catch (...) {
+-            error = "Unknown failure during terminal-turn reference trial";
++            error = "Unknown failure during terminal-event reference trial";
+         }
+     }
+     int length = static_cast<int>(error.size());
+@@ -83,7 +89,8 @@ double track_reference::collectiveTerminalStep(
+     if (length > 0) {
+         error.resize(length);
+         MPI_Bcast(error.data(), length, MPI_CHAR, 0, communicator);
+-        throw OpalException("ParallelTracker::terminalTurn", error);
++        if (onFailure) onFailure();
++        throw OpalException("ParallelTracker::terminalEvent", error);
+     }
+     MPI_Bcast(&duration, 1, MPI_DOUBLE, 0, communicator);
+     return duration;
+diff --git a/src/Algorithms/TrackReferenceStep.h b/src/Algorithms/TrackReferenceStep.h
+index dcc91dfef..ec6b172b5 100644
+--- a/src/Algorithms/TrackReferenceStep.h
++++ b/src/Algorithms/TrackReferenceStep.h
+@@ -3,6 +3,7 @@
+ #define OPALX_TRACK_REFERENCE_STEP_H
+ 
+ #include <mpi.h>
++#include <Kokkos_NumericTraits.hpp>
+ #include <algorithm>
+ #include <cmath>
+ #include <functional>
+@@ -49,11 +50,38 @@ namespace rf_event {
+      * modify r/p before a later failure. Policies must keep trial transport free
+      * of irreversible side effects. The algorithm owns no allocations or
+      * collectives; host policies may allocate their visited storage.
++     *
++     * terminalEndpoint opts into a right-closed final RF event after the reference
++     * has met EKINSTOP. Independent host/device/frame arithmetic can leave a
++     * coincident particle just before that plane. Only a clearly upstream,
++     * approaching particle whose final signed distance is within 64*N*epsilon*L
++     * receives the full endpoint kick. Here N=max(1,frameSteps) counts accepted
++     * frame updates including this final step, and L=max(1 m, |r_d|, |endR_d|)
++     * over laboratory components d. Each step performs drift, rigid-frame round
++     * trips and plane subtraction; the factor 64 conservatively budgets their
++     * accumulated arithmetic error to first order, assuming 64*N*epsilon << 1
++     * (a nonfinite factor or factor >=1 is rejected). Arrivals within this
++     * allowance are numerically unresolved and receive a complete kick by the
++     * terminal convention; this can include a physically later particle within
++     * the allowance. Crossings beyond the allowance are excluded.
++     * This allowance describes numerical endpoint resolution, not magnetic/PIC
++     * discretization error or a bound on integration accuracy. It grows with the
++     * number of frame updates even if dt shrinks. Ordinary steps keep strict
++     * crossing signs. The caller must stop after this terminal step; no position
++     * projection, extra drift, fractional impulse or persistent visit state is used.
+      */
+     template <class Policy>
+     KOKKOS_INLINE_FUNCTION Result
+     advance(Vector& r, Vector& p, double time, double dt, double mass, Policy& policy,
+-            Diagnostic* diagnostic = nullptr) {
++            Diagnostic* diagnostic = nullptr, bool terminalEndpoint = false,
++            unsigned long long frameSteps = 1) {
++        const double accumulatedRoundoff =
++                64 * Kokkos::epsilon_v<double> * static_cast<double>(frameSteps ? frameSteps : 1);
++        if (terminalEndpoint
++            && (!Kokkos::isfinite(accumulatedRoundoff) || !(accumulatedRoundoff < 1))) {
++            if (diagnostic) diagnostic->set(Failure::InvalidStep, r, p, time);
++            return {false, 0};
++        }
+         double remaining = dt;
+         while (remaining > 0) {
+             Vector endR = r, endP = p;
+@@ -65,9 +93,22 @@ namespace rf_event {
+             int selected    = -1;
+             for (size_t j = 0; j < policy.count(); ++j) {
+                 if (policy.visited(j)) continue;
+-                if (!(policy.distance(j, r) < 0) || policy.distance(j, endR) < 0) continue;
++                const double startDistance = policy.distance(j, r);
++                const double endDistance   = policy.distance(j, endR);
++                double scale               = 1.;
++                if (terminalEndpoint)
++                    for (unsigned d = 0; d < 3; ++d)
++                        scale = Kokkos::fmax(
++                                scale, Kokkos::fmax(Kokkos::abs(r(d)), Kokkos::abs(endR(d))));
++                const double roundoff      = terminalEndpoint ? accumulatedRoundoff * scale : 0;
++                const bool roundedEndpoint = terminalEndpoint && startDistance < -roundoff
++                                             && endDistance < 0 && endDistance >= -roundoff
++                                             && endDistance > startDistance;
++                if (!(startDistance < 0) || (endDistance < 0 && !roundedEndpoint)) continue;
+                 double low = 0, high = remaining;
+-                for (int iteration = 0; iteration < 40; ++iteration) {
++                // A roundoff-short endpoint is accepted at the common final time;
++                // a real bracket retains the existing forty-iteration localization.
++                for (int iteration = 0; iteration < (roundedEndpoint ? 0 : 40); ++iteration) {
+                     const double mid = 0.5 * (low + high);
+                     Vector trialR = r, trialP = p;
+                     if (!policy.magnetic(trialR, trialP, mid, time, mass)) {
+@@ -219,8 +260,16 @@ namespace track_reference {
+ 
+     /** Run a side-effect-free event search on rank zero and broadcast its duration
+      * or diagnostic before any particle kernels/collectives execute. All ranks
+-     * must call together; failures become OpalException on every rank.
++     * must call together; failures become OpalException on every rank. If given,
++     * onFailure runs on every rank after the diagnostic broadcast and before
++     * throwing. This allows collective flushing of already accepted probe hits
++     * when a terminal reference trial fails, without recording trial states.
+      */
+     double collectiveTerminalStep(MPI_Comm, const std::function<double()>& search);
++
++    /// Internal overload for collective accepted-output cleanup after a failed trial.
++    double collectiveTerminalStep(
++            MPI_Comm, const std::function<double()>& search,
++            const std::function<void()>& onFailure);
+ }  // namespace track_reference
+ #endif
+diff --git a/src/PartBunch/PartBunch.cpp b/src/PartBunch/PartBunch.cpp
+index 007cf40e8..31369dd72 100644
+--- a/src/PartBunch/PartBunch.cpp
++++ b/src/PartBunch/PartBunch.cpp
+@@ -15,6 +15,10 @@
+ 
+ #undef doDEBUG
+ 
++// This existing libopalx translation unit owns the probe attribute lifecycle.
++// Keep these definitions non-template and out of line: moving new, resize/reset
++// or delete back into ParticleContainer.hpp can reintroduce executable-side
++// attribute vtables and CUDA helpers (see HistoryDeleter's ownership contract).
+ namespace cyclotron_probe::detail {
+     void HistoryDeleter::operator()(History* history) const { delete history; }
+ 
+@@ -22,6 +26,8 @@ namespace cyclotron_probe::detail {
+ 
+     void initializeHistory(History& history, size_type capacity) {
+         history.resize(capacity);
++        // Registration supplies getView()'s live count; spare capacity is not a
++        // set of active histories. Reset only the newly registered live entries.
+         Kokkos::deep_copy(history.getView(), State{});
+     }
+ }  // namespace cyclotron_probe::detail
+diff --git a/src/PartBunch/ParticleContainer.hpp b/src/PartBunch/ParticleContainer.hpp
+index f3d6a8b5c..ad2496f9e 100644
+--- a/src/PartBunch/ParticleContainer.hpp
++++ b/src/PartBunch/ParticleContainer.hpp
+@@ -49,22 +49,50 @@ using ParticleAttrib = ippl::ParticleAttrib<T>;
+ using size_type = ippl::detail::size_type;
+ 
+ namespace cyclotron_probe::detail {
++    /// The real IPPL attribute: sorting, deletion and MPI migration carry State with its particle.
+     using History = ippl::ParticleAttrib<State>;
+ 
+-    /** Keep attribute destruction and its virtual CUDA methods in libopalx.
+-     * An inline default deleter can instantiate a competing attribute vtable in
+-     * executable consumers of ParticleContainer, selecting unregistered kernels.
++    /** @brief Stateless ownership policy keeping history implementation in libopalx.
++     *
++     * ParticleContainer is a header-defined template used by both libopalx and its
++     * executable consumers. Inline construction, resize or default deletion of
++     * History can instantiate its virtual-function table and CUDA storage/migration
++     * methods in both modules. In shared CUDA builds, symbol interposition can then
++     * select an executable helper whose kernel stub was not registered with CUDA,
++     * causing cudaErrorInvalidResourceHandle during resize or MPI serialization.
++     *
++     * A factory alone is insufficient: std::default_delete<History> still places
++     * the delete expression in each consumer's container destructor. This complete,
++     * stateless deleter type lets unique_ptr retain exclusive ownership while its
++     * operator() is defined only in PartBunch.cpp, together with makeHistory() and
++     * initializeHistory(). Keep all three definitions out of line so the normal
++     * attribute lifecycle is instantiated inside libopalx.
++     *
++     * This policy adds no per-particle state. The pointee remains IPPL's registered
++     * History attribute, with its existing data layout and migration methods.
+      */
+     struct HistoryDeleter {
+         void operator()(History* history) const;
+     };
+ 
++    /// Exclusive owner; IPPL retains non-owning base pointers to the registered attribute.
+     using HistoryPtr = std::unique_ptr<History, HistoryDeleter>;
+ 
+-    /// Construct storage in the same library module as its CUDA kernels.
++    /** @brief Construct history storage in the library that owns its CUDA kernels.
++     * The caller registers the returned attribute with IPPL before initialization.
++     */
+     HistoryPtr makeHistory();
+ 
+-    /// Initialize registered storage, preserving the existing allocation semantics.
++    /** @brief Allocate and reset a newly registered history attribute.
++     * @pre addAttribute() has bound the attribute to the container's live particle count;
++     *      getView() dereferences that count to select the live range.
++     * @param history New attribute whose active entries have no previous probe endpoint.
++     * @param capacity Allocated particle capacity (R.size()), possibly larger than the live count.
++     *
++     * Resize uses the existing preserving operation; reset covers only the live range.
++     * Later IPPL growth must preserve armed histories, so this reset helper is only
++     * for initial registration, never for extending an existing history.
++     */
+     void initializeHistory(History& history, size_type capacity);
+ }  // namespace cyclotron_probe::detail
+ 
+@@ -200,13 +228,21 @@ public:
+     /// (enabled per beam when the BEAM has POLARIZATION set).
+     bool hasSpin() const { return spinEnabled_m; }
+ 
+-    /** Optional diagnostic storage; IPPL migrates and sorts it with R/P/ID.
+-     * Histories remain in laboratory coordinates when the tracking frame changes.
+-     * Reused/new particle slots are recognized by their stable ID in update().
++    /** @brief Return the independent per-particle history for one probe index.
++     * Crossing interpolation needs a particle's previous endpoint even after IPPL
++     * changes its local array index or owning rank. Registering History alongside
++     * R/P/ID makes sorting, deletion and migration keep these records aligned.
++     * Histories remain in laboratory coordinates when the tracking frame changes;
++     * update() uses stable IDs to recognize reused/new particle slots.
++     *
++     * The factory and custom owner preserve the shared-library CUDA boundary
++     * documented by cyclotron_probe::detail::HistoryDeleter. Keep allocation,
++     * initialization and deletion in those out-of-line helpers.
+      */
+     ParticleAttrib<cyclotron_probe::State>& probeHistory(std::size_t index) {
+         while (probeHistories_m.size() <= index) {
+             auto attribute = cyclotron_probe::detail::makeHistory();
++            // Bind the live count before initializeHistory() obtains a getView() subview.
+             this->addAttribute(*attribute);
+             cyclotron_probe::detail::initializeHistory(*attribute, this->R.size());
+             probeHistories_m.push_back(std::move(attribute));
+diff --git a/src/Structure/LossDataSink.cpp b/src/Structure/LossDataSink.cpp
+index b9f57c917..d63fa6559 100644
+--- a/src/Structure/LossDataSink.cpp
++++ b/src/Structure/LossDataSink.cpp
+@@ -606,8 +606,11 @@ LossDataSink::~LossDataSink() noexcept(false) {
+     if (H5file_m) {
+         closeFile();
+     }
+-    // save() closes and synchronizes successful writes explicitly. An idle
+-    // sink must also be destructible on just one rank during exception unwinding.
++    // save() owns normal file close and synchronization. Do not add a barrier
++    // here: a rank can unwind after a probe kernel/serialization exception while
++    // its peers wait for migration data. A destructor collective would hide the
++    // original exception behind a deadlock. The fallback close above still needs
++    // coordinated ranks if a failed save left a parallel HDF5 file open.
+ }
+ 
+ void LossDataSink::openH5(h5_int32_t mode) {
+@@ -748,10 +751,28 @@ void LossDataSink::save(unsigned int numSets, OpalData::OpenMode openMode) {
+     ippl::Comm->allreduce(localHas, globalHas, 1, std::plus<int>());
+     hasPolData_m = (globalHas > 0);
+ 
+-    namespace fs = std::filesystem;
++    fileName_m = outputName_m + (h5hut_mode_m ? ".h5" : ".loss");
++    // Header output contains collectives, including hasTurnInformations(). A
++    // rank-local exists() check can observe the file another rank just created
++    // and skip that header, shifting every subsequent collective. Let rank 0
++    // decide before any file is opened, for both ASCII and parallel HDF5.
++    int createOutput = 0;
++    if (ippl::Comm->rank() == 0) {
++        if (openMode == OpalData::OpenMode::WRITE) {
++            createOutput = 1;
++        } else {
++            std::error_code error;
++            const bool exists = std::filesystem::exists(fileName_m, error);
++            createOutput      = error ? -1 : static_cast<int>(!exists);
++        }
++    }
++    MPI_Bcast(&createOutput, 1, MPI_INT, 0, ippl::Comm->getCommunicator());
++    if (createOutput < 0) {
++        throw GeneralOpalException(
++                "LossDataSink::save", "Rank 0 cannot inspect output file '" + fileName_m + "'.");
++    }
+     if (h5hut_mode_m) {
+-        fileName_m = outputName_m + std::string(".h5");
+-        if (openMode == OpalData::OpenMode::WRITE || !fs::exists(fileName_m)) {
++        if (createOutput) {
+             openH5();
+             writeHeaderH5();
+         } else {
+@@ -767,8 +788,7 @@ void LossDataSink::save(unsigned int numSets, OpalData::OpenMode openMode) {
+         closeFile();
+ 
+     } else {
+-        fileName_m = outputName_m + std::string(".loss");
+-        if (openMode == OpalData::OpenMode::WRITE || !fs::exists(fileName_m)) {
++        if (createOutput) {
+             openASCII();
+             writeHeaderASCII();
+         } else {
+diff --git a/src/Structure/LossDataSink.h b/src/Structure/LossDataSink.h
+index e5fda0630..1ce2ab1a7 100644
+--- a/src/Structure/LossDataSink.h
++++ b/src/Structure/LossDataSink.h
+@@ -89,6 +89,10 @@ enum class CollectionType : unsigned short { SPATIAL = 0, TEMPORAL };
+ 
+ /** @brief Collect particle records and write them through collective save().
+  *
++ * save() uses rank 0's file-creation decision on all ranks before opening files
++ * or entering collective header output; filesystem inspection failures are also
++ * published collectively. This keeps create/append ordering consistent even when
++ * filesystem metadata becomes visible at different times on different ranks.
+  * save() closes output files and synchronizes successful writes. Destruction of
+  * an idle sink does not communicate, so it is safe during rank-local unwinding.
+  * The fallback close of a still-open parallel HDF5 file remains collective:
+diff --git a/unit_tests/Algorithms/CMakeLists.txt b/unit_tests/Algorithms/CMakeLists.txt
+index e8423bca4..40c490c31 100644
+--- a/unit_tests/Algorithms/CMakeLists.txt
++++ b/unit_tests/Algorithms/CMakeLists.txt
+@@ -12,6 +12,7 @@ add_opalx_test(TestSpectralTunes USE_GTEST_MAIN)
+ add_opalx_test(TestOneTurnMap USE_GTEST_MAIN)
+ add_opalx_test(TestTrackReferenceStep USE_GTEST_MAIN)
+ add_opalx_test(TestRFEventStep USE_GTEST_MAIN)
++add_opalx_test(TestRFEventStepMPI SOURCES TestRFEventStep.cpp NUM_PROCS 2 USE_GTEST_MAIN)
+ add_opalx_test(TestDeviceExternalField USE_GTEST_MAIN)
+ add_opalx_test(TestBorisStepControl USE_GTEST_MAIN)
+ add_opalx_test(TestExperimentalBoundarySample USE_GTEST_MAIN)
+diff --git a/unit_tests/Algorithms/TestCyclotronProbe.cpp b/unit_tests/Algorithms/TestCyclotronProbe.cpp
+index e676c82fa..402ce02a7 100644
+--- a/unit_tests/Algorithms/TestCyclotronProbe.cpp
++++ b/unit_tests/Algorithms/TestCyclotronProbe.cpp
+@@ -5,11 +5,13 @@
+ #include <limits>
+ #include <sstream>
+ #include "Algorithms/CyclotronProbeRecorder.h"
++#include "Algorithms/TrackReferenceStep.h"
+ #include "Attributes/Attributes.h"
+ #include "BeamlineCore/ProbeRep.h"
+ #include "Elements/OpalProbe.h"
+ #include "PartBunch/ParticleContainer.hpp"
+ #include "Structure/LossDataSink.h"
++#include "Utilities/OpalException.h"
+ #include "Utilities/Options.h"
+ #include "ValueDefinitions/RealVariable.h"
+ #include "gtest/gtest.h"
+@@ -474,3 +476,64 @@ TEST_F(CyclotronProbeTest, RepeatedFlushAppendsHitsAndRetainsCumulativeSummaries
+     EXPECT_EQ(total, 2);
+     EXPECT_EQ(rows(c.output + ".peaks").size(), 2u);
+ }
++
++TEST_F(CyclotronProbeTest, FailedCollectiveReferenceTrialFlushesOnlyAcceptedProbeHits) {
++    Options::asciidump = true;
++    const auto c       = config("reference-trial-failure");
++    auto pc            = container();
++    position(pc, -1, 1);
++    CyclotronProbeRecorder recorder({c});
++    recorder.initialize({pc});
++    recorder.observe(pc, 0, 0, 4);
++    position(pc, 1, 1);
++    recorder.observe(pc, 2e-9, 0, 4);
++    // The accepted crossing is still buffered. Only root executes a reference
++    // trial; all ranks, including empty ranks, must flush before seeing its
++    // error. This is the production failure-cleanup overload used by TRACK.
++    int trials = 0, flushes = 0;
++    EXPECT_THROW(
++            track_reference::collectiveTerminalStep(
++                    ippl::Comm->getCommunicator(),
++                    [&]() -> double {
++                        ++trials;
++                        throw OpalException("SINGLEGAP", "Unphysical reference RF kick");
++                    },
++                    [&] {
++                        ++flushes;
++                        recorder.save();
++                    }),
++            OpalException);
++    EXPECT_EQ(trials, ippl::Comm->rank() == 0 ? 1 : 0);
++    EXPECT_EQ(flushes, 1);
++    if (ippl::Comm->rank() == 0) {
++        const auto hits = rows(c.output + ".loss");
++        EXPECT_EQ(hits.size(), 1u);
++        if (hits.size() == 1) {
++            EXPECT_EQ(hits.front().size(), 10u);
++            if (hits.front().size() == 10) {
++                EXPECT_EQ(hits.front()[7], 4);
++                EXPECT_NEAR(hits.front()[9], 1e-9, 1e-24);
++            }
++        }
++        double total = 0;
++        for (const auto& row : rows(c.output + ".hist"))
++            total += row[0];
++        EXPECT_EQ(total, 1);
++    }
++    // Successful trials do not flush and a repeat explicit save cannot duplicate
++    // the accepted hit. A failed, unobserved trial never becomes a new endpoint.
++    EXPECT_DOUBLE_EQ(
++            track_reference::collectiveTerminalStep(
++                    ippl::Comm->getCommunicator(),
++                    [] {
++                        return 1e-9;
++                    },
++                    [&] {
++                        ++flushes;
++                        recorder.save();
++                    }),
++            1e-9);
++    EXPECT_EQ(flushes, 1);
++    recorder.save();
++    if (ippl::Comm->rank() == 0) EXPECT_EQ(rows(c.output + ".loss").size(), 1u);
++}
+diff --git a/unit_tests/Algorithms/TestRFEventStep.cpp b/unit_tests/Algorithms/TestRFEventStep.cpp
+index 710c04931..86fd8812f 100644
+--- a/unit_tests/Algorithms/TestRFEventStep.cpp
++++ b/unit_tests/Algorithms/TestRFEventStep.cpp
+@@ -1,5 +1,7 @@
+ // Copyright (c) 2026, Paul Scherrer Institute, Villigen PSI, Switzerland
++#include <limits>
+ #include "Algorithms/TrackReferenceStep.h"
++#include "Fields/CyclotronRFProfile.h"
+ #include "Ippl.h"
+ #include "gtest/gtest.h"
+ 
+@@ -18,12 +20,13 @@ namespace {
+         int acceptedCount = 0, order = 0, magneticCalls = 0;
+         int stopAfter = 0, failedKick = -1;
+         bool failBisection = false;
++        double speed       = 1e7;
+ 
+         KOKKOS_INLINE_FUNCTION size_t count() const { return number; }
+         KOKKOS_INLINE_FUNCTION bool magnetic(Vector& r, Vector&, double h, double, double) {
+             ++magneticCalls;
+             if (failBisection && h > .4e-9 && h < .6e-9) return false;
+-            r(2) += 1e7 * h;
++            r(2) += speed * h;
+             return true;
+         }
+         KOKKOS_INLINE_FUNCTION double distance(size_t j, const Vector& r) const {
+@@ -47,6 +50,56 @@ namespace {
+         }
+     };
+ 
++    // In-memory flat voltage profile exercises the actual proton RF energy
++    // impulse, without an input deck, external data or an OPALX process.
++    template <class Profile>
++    struct ProtonGapPolicy {
++        Profile profile;
++        bool stopAtKick = false, visitedGap = false;
++        KOKKOS_INLINE_FUNCTION size_t count() const { return 1; }
++        KOKKOS_INLINE_FUNCTION bool magnetic(Vector& r, Vector& p, double h, double, double) {
++            r += (Physics::c * h / Kokkos::sqrt(1 + dot(p, p))) * p;
++            return true;
++        }
++        KOKKOS_INLINE_FUNCTION double distance(size_t, const Vector& r) const {
++            return r(2) - .003;
++        }
++        KOKKOS_INLINE_FUNCTION bool supports(size_t, const Vector& r) const {
++            return Kokkos::abs(r(0)) <= 1;
++        }
++        KOKKOS_INLINE_FUNCTION bool kick(size_t, const Vector&, Vector& p, double t, double m) {
++            return CyclotronRFKick{500000, 1, 0, 0, 1}.apply(profile, .5, t, m, p);
++        }
++        KOKKOS_INLINE_FUNCTION bool visited(size_t) const { return visitedGap; }
++        KOKKOS_INLINE_FUNCTION void markVisited(size_t) { visitedGap = true; }
++        KOKKOS_INLINE_FUNCTION bool accepted(size_t, const Vector&, const Vector&, double) const {
++            return stopAtKick;
++        }
++    };
++
++    struct ProtonResult {
++        Vector position, momentum;
++        rf_event::Result result;
++        bool kicked;
++    };
++
++    // Namespace scope also keeps the result type and launch operator accessible
++    // to NVCC: generated GTest TestBody methods are private.
++    struct TerminalProtonKernel {
++        Kokkos::View<double**> profile;
++        Kokkos::View<ProtonResult*> output;
++        Vector start, initialP;
++        double duration;
++        unsigned long long frameSteps = 1;
++        KOKKOS_INLINE_FUNCTION void operator()(size_t i) const {
++            Vector r = start, p = initialP;
++            ProtonGapPolicy<decltype(profile)> policy{profile};
++            const auto result = rf_event::advance(
++                    r, p, startTime, duration, mass, policy, nullptr, true, frameSteps);
++            output(i) = {r, p, result, policy.visitedGap};
++        }
++    };
++
+     struct Snapshot {
+         Vector r = Vector(0), p = Vector(1, 0, 1);
+         DevicePolicy policy;
+@@ -54,22 +107,28 @@ namespace {
+         rf_event::Diagnostic diagnostic;
+     };
+ 
+-    Snapshot onDevice(DevicePolicy policy) {
++    Snapshot onDevice(
++            DevicePolicy policy, double dt = nominalStep, bool terminalEndpoint = false,
++            Vector initialR = Vector(0), unsigned long long frameSteps = 1) {
+         Kokkos::View<Snapshot*> result("RF event scheduling result", 1);
+         Kokkos::parallel_for(
+                 "RF event scheduling", 1, KOKKOS_LAMBDA(size_t i) {
+                     Snapshot state;
+                     state.policy = policy;
++                    state.r      = initialR;
+                     state.result = rf_event::advance(
+-                            state.r, state.p, startTime, nominalStep, mass, state.policy,
+-                            &state.diagnostic);
++                            state.r, state.p, startTime, dt, mass, state.policy, &state.diagnostic,
++                            terminalEndpoint, frameSteps);
+                     result(i) = state;
+                 });
+         return Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), result)(0);
+     }
+ 
+-    Snapshot onHost(DevicePolicy policy) {
++    Snapshot onHost(
++            DevicePolicy policy, double dt = nominalStep, bool terminalEndpoint = false,
++            Vector initialR = Vector(0), unsigned long long frameSteps = 1) {
+         Snapshot state;
++        state.r      = initialR;
+         state.policy = policy;
+         auto& test   = state.policy;
+         rf_event::HostPolicy host;
+@@ -96,7 +155,8 @@ namespace {
+             return test.accepted(j, r, p, t);
+         };
+         state.result = rf_event::advance(
+-                state.r, state.p, startTime, nominalStep, mass, host, &state.diagnostic);
++                state.r, state.p, startTime, dt, mass, host, &state.diagnostic, terminalEndpoint,
++                frameSteps);
+         return state;
+     }
+ 
+@@ -252,3 +312,213 @@ TEST_F(RFEventStepTest, ARejectedLaterKickKeepsEarlierAcceptedEventsForTheCaller
+     EXPECT_EQ(state.policy.mask, 2);
+     expectSameExecution(onHost(policy), state);
+ }
++
++TEST_F(RFEventStepTest, ReferenceTerminalDurationIncludesACoincidentRoundoffShortParticle) {
++    DevicePolicy policy;
++    policy.number    = 1;
++    policy.plane[0]  = .003;
++    policy.stopAfter = 1;
++    // Replay the actual host event duration, including subtraction roundoff in
++    // dt-remaining, rather than choosing a convenient hand-written final time.
++    const auto reference = onHost(policy);
++    ASSERT_TRUE(reference.result.success);
++    ASSERT_EQ(reference.policy.acceptedCount, 1);
++    const double duration = reference.result.duration;
++    policy.stopAfter      = 0;
++    const Vector particleStart(
++            0, 0, policy.plane[0] - policy.speed * duration - 4 * Kokkos::epsilon_v<double>);
++    const auto strict = onDevice(policy, duration, false, particleStart);
++    ASSERT_TRUE(strict.result.success);
++    ASSERT_LT(strict.r(2), policy.plane[0]);
++    EXPECT_EQ(strict.policy.acceptedCount, 0);  // Exposes the original missed kick.
++    const auto terminal = onDevice(policy, duration, true, particleStart);
++    ASSERT_TRUE(terminal.result.success);
++    EXPECT_DOUBLE_EQ(terminal.result.duration, duration);
++    EXPECT_EQ(terminal.policy.acceptedCount, 1);
++    EXPECT_DOUBLE_EQ(terminal.p(0), reference.p(0));  // Whole impulse, never a fraction.
++    EXPECT_NEAR(terminal.policy.arrival[0], startTime + duration, 3e-21);
++    EXPECT_DOUBLE_EQ(terminal.r(2), strict.r(2));  // No position projection or extra drift.
++    expectSameExecution(onHost(policy, duration, true, particleStart), terminal);
++}
++
++TEST_F(RFEventStepTest, TerminalEndpointIncludesAccumulatedFrameArithmeticOnlyWithinItsBudget) {
++    DevicePolicy policy;
++    policy.number                           = 1;
++    policy.plane[0]                         = .01;
++    constexpr unsigned long long frameSteps = 1468;
++    // The actual RF-stop fixture accumulates about 150 fm of signed plane
++    // deficit over 1468 frame updates. A one-step arithmetic budget cannot
++    // represent that history, even when the final step itself is very short.
++    const Vector accumulated(0, 0, -150e-15);
++    const auto singleStep = onDevice(policy, nominalStep, true, accumulated);
++    EXPECT_TRUE(singleStep.result.success);
++    EXPECT_EQ(singleStep.policy.acceptedCount, 0);
++    const auto terminal = onDevice(policy, nominalStep, true, accumulated, frameSteps);
++    EXPECT_TRUE(terminal.result.success);
++    EXPECT_EQ(terminal.policy.acceptedCount, 1);
++    EXPECT_DOUBLE_EQ(terminal.p(0), 3);
++    EXPECT_DOUBLE_EQ(terminal.result.duration, nominalStep);
++    expectSameExecution(onHost(policy, nominalStep, true, accumulated, frameSteps), terminal);
++    const auto ordinary = onDevice(policy, nominalStep, false, accumulated, frameSteps);
++    EXPECT_TRUE(ordinary.result.success);
++    EXPECT_EQ(ordinary.policy.acceptedCount, 0);
++
++    // Four times the accumulated arithmetic allowance is a resolvably later
++    // crossing and must not acquire a terminal kick at the reference stop.
++    const Vector later(0, 0, -256. * static_cast<double>(frameSteps) * Kokkos::epsilon_v<double>);
++    const auto miss = onDevice(policy, nominalStep, true, later, frameSteps);
++    EXPECT_TRUE(miss.result.success);
++    EXPECT_LT(miss.r(2), policy.plane[0]);  // A later crossing is still upstream.
++    EXPECT_EQ(miss.policy.acceptedCount, 0);
++    EXPECT_DOUBLE_EQ(miss.p(0), 1);
++    expectSameExecution(onHost(policy, nominalStep, true, later, frameSteps), miss);
++}
++
++TEST_F(RFEventStepTest, RejectsUnrepresentableTerminalAccumulationWithoutChangingOrdinarySteps) {
++    DevicePolicy policy;
++    policy.number            = 1;
++    policy.plane[0]          = .01;
++    constexpr auto excessive = std::numeric_limits<unsigned long long>::max();
++    const auto rejected      = onDevice(policy, nominalStep, true, Vector(0), excessive);
++    EXPECT_FALSE(rejected.result.success);
++    EXPECT_DOUBLE_EQ(rejected.result.duration, 0);
++    EXPECT_EQ(rejected.diagnostic.failure, rf_event::Failure::InvalidStep);
++    EXPECT_EQ(rejected.policy.magneticCalls, 0);
++    EXPECT_EQ(rejected.policy.acceptedCount, 0);
++    EXPECT_DOUBLE_EQ(rejected.r(2), 0);
++    EXPECT_DOUBLE_EQ(rejected.p(0), 1);
++    expectSameExecution(onHost(policy, nominalStep, true, Vector(0), excessive), rejected);
++
++    const Vector late(0, 0, -150e-15);
++    const auto ordinary = onDevice(policy, nominalStep, false, late, excessive);
++    EXPECT_TRUE(ordinary.result.success);
++    EXPECT_EQ(ordinary.policy.acceptedCount, 0);
++    EXPECT_DOUBLE_EQ(ordinary.p(0), 1);
++    expectSameExecution(onHost(policy, nominalStep, false, late, excessive), ordinary);
++}
++
++TEST_F(RFEventStepTest, TerminalEndpointRoundoffBoundScalesWithLaboratoryCoordinates) {
++    DevicePolicy policy;
++    policy.number     = 1;
++    policy.plane[0]   = .01;
++    policy.minimum[0] = -2e6;
++    policy.maximum[0] = 2e6;
++    const Vector start(1e6, 0, -4e6 * Kokkos::epsilon_v<double>);
++    const auto state = onDevice(policy, nominalStep, true, start);
++    ASSERT_TRUE(state.result.success);
++    ASSERT_LT(state.r(2), policy.plane[0]);
++    EXPECT_EQ(state.policy.acceptedCount, 1);
++    EXPECT_DOUBLE_EQ(state.result.duration, nominalStep);
++    EXPECT_DOUBLE_EQ(state.p(0), 3);
++    expectSameExecution(onHost(policy, nominalStep, true, start), state);
++}
++
++TEST_F(RFEventStepTest, TerminalEndpointDoesNotKickLaterRecedingOrUnsupportedParticles) {
++    DevicePolicy policy;
++    policy.number   = 1;
++    policy.plane[0] = .01;
++    const Vector late(0, 0, -128 * Kokkos::epsilon_v<double>);
++    const auto later = onDevice(policy, nominalStep, true, late);
++    ASSERT_TRUE(later.result.success);
++    EXPECT_EQ(later.policy.acceptedCount, 0);
++    EXPECT_DOUBLE_EQ(later.p(0), 1);
++    expectSameExecution(onHost(policy, nominalStep, true, late), later);
++
++    policy.minimum[0] = .1;
++    policy.maximum[0] = .2;
++    const Vector rounded(0, 0, -4 * Kokkos::epsilon_v<double>);
++    const auto unsupported = onDevice(policy, nominalStep, true, rounded);
++    EXPECT_TRUE(unsupported.result.success);
++    EXPECT_EQ(unsupported.policy.acceptedCount, 0);
++    expectSameExecution(onHost(policy, nominalStep, true, rounded), unsupported);
++
++    policy.minimum[0]   = -1;
++    policy.maximum[0]   = 1;
++    policy.plane[0]     = 0;
++    policy.speed        = -2 * Kokkos::epsilon_v<double> / nominalStep;
++    const auto receding = onDevice(policy, nominalStep, true, rounded);
++    EXPECT_TRUE(receding.result.success);
++    EXPECT_EQ(receding.policy.acceptedCount, 0);
++    expectSameExecution(onHost(policy, nominalStep, true, rounded), receding);
++
++    policy.speed          = 0;
++    const auto stationary = onDevice(policy, nominalStep, true, rounded);
++    EXPECT_TRUE(stationary.result.success);
++    EXPECT_EQ(stationary.policy.acceptedCount, 0);
++    expectSameExecution(onHost(policy, nominalStep, true, rounded), stationary);
++    const auto onPlane = onDevice(policy, nominalStep, true, Vector(0));
++    EXPECT_TRUE(onPlane.result.success);
++    EXPECT_EQ(onPlane.policy.acceptedCount, 0);
++}
++
++TEST_F(RFEventStepTest, TerminalKickMeetsReferenceEnergyForOneOrTwoDistributedProtons) {
++    Kokkos::View<double**> profile("flat RF voltage profile", 2, 3);
++    auto hostProfile = Kokkos::create_mirror_view(profile);
++    for (unsigned i = 0; i < 2; ++i) {
++        hostProfile(i, 0) = i;
++        hostProfile(i, 1) = 1;
++        hostProfile(i, 2) = 0;
++    }
++    Kokkos::deep_copy(profile, hostProfile);
++    constexpr double initialEnergy = 72.8e6, targetEnergy = 73e6;
++    const double gamma = 1 + initialEnergy / mass;
++    const Vector initialP(0, 0, std::sqrt(gamma * gamma - 1));
++    const double duration =
++            track_reference::collectiveTerminalStep(ippl::Comm->getCommunicator(), [&] {
++                Vector r(0), p = initialP;
++                ProtonGapPolicy<decltype(hostProfile)> reference{hostProfile, true};
++                const auto result =
++                        rf_event::advance(r, p, startTime, nominalStep, mass, reference);
++                if (!result.success || !reference.visitedGap)
++                    throw std::runtime_error("Reference proton missed RF gap");
++                return result.duration;
++            });
++    const double speed                      = Physics::c * initialP(2) / gamma;
++    constexpr unsigned long long frameSteps = 1468;
++    const Vector start(0, 0, .003 - speed * duration - 150e-15);
++    for (int total : {1, 2}) {
++        const int local = total / ippl::Comm->size()
++                          + (ippl::Comm->rank() < total % ippl::Comm->size() ? 1 : 0);
++        Kokkos::View<ProtonResult*> output("terminal proton states", local);
++        Kokkos::parallel_for(
++                "terminal proton RF kick", local,
++                TerminalProtonKernel{profile, output, start, initialP, duration, frameSteps});
++        const auto result = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), output);
++        int localKicks    = 0;
++        for (int i = 0; i < local; ++i) {
++            EXPECT_TRUE(result(i).result.success);
++            EXPECT_TRUE(result(i).kicked);
++            localKicks += result(i).kicked ? 1 : 0;
++            EXPECT_DOUBLE_EQ(result(i).result.duration, duration);
++            const double energy =
++                    (std::sqrt(1 + dot(result(i).momentum, result(i).momentum)) - 1) * mass;
++            EXPECT_GE(energy, targetEnergy);
++            // Eight gamma ulps expressed in eV, below 2 micro-eV for a proton;
++            // this checks the full analytic gain, not just crossing the target.
++            EXPECT_NEAR(
++                    energy, initialEnergy + 500000 * std::cos(startTime + duration),
++                    8 * Kokkos::epsilon_v<double> * mass);
++            EXPECT_DOUBLE_EQ(result(i).momentum(0), 0);
++            EXPECT_DOUBLE_EQ(result(i).momentum(1), 0);
++        }
++        int globalKicks = 0;
++        MPI_Allreduce(
++                &localKicks, &globalKicks, 1, MPI_INT, MPI_SUM, ippl::Comm->getCommunicator());
++        EXPECT_EQ(globalKicks, total);
++    }
++
++    // A physical particle can exceed the target before the reference's common
++    // final time. Its policy must finish the supplied duration after that kick,
++    // rather than applying an individual energy stop and leaving its position
++    // behind the bunch clock.
++    Kokkos::View<ProtonResult*> continuing("off-reference proton state", 1);
++    Kokkos::parallel_for(
++            "off-reference proton RF kick", 1,
++            TerminalProtonKernel{profile, continuing, Vector(0), initialP, nominalStep});
++    const auto end = Kokkos::create_mirror_view_and_copy(Kokkos::HostSpace(), continuing);
++    EXPECT_TRUE(end(0).result.success);
++    EXPECT_TRUE(end(0).kicked);
++    EXPECT_DOUBLE_EQ(end(0).result.duration, nominalStep);
++    EXPECT_GT(end(0).position(2), .003);
++    EXPECT_GE((std::sqrt(1 + dot(end(0).momentum, end(0).momentum)) - 1) * mass, targetEnergy);
++}
+diff --git a/unit_tests/Structure/CMakeLists.txt b/unit_tests/Structure/CMakeLists.txt
+index 32950f7c5..3c0cf9059 100644
+--- a/unit_tests/Structure/CMakeLists.txt
++++ b/unit_tests/Structure/CMakeLists.txt
+@@ -9,6 +9,6 @@ add_opalx_test(TestBeam USE_GTEST_MAIN)
+ add_opalx_test(TestLossDataSink USE_GTEST_MAIN)
+ add_opalx_test(TestLossDataSinkMPI
+               SOURCES TestLossDataSink.cpp NUM_PROCS 2 TIMEOUT 60 USE_GTEST_MAIN
+-              ARGS --gtest_filter=LossDataSinkTest.EmptySinkDestructionIsRankLocal:LossDataSinkTest.EmptySinkUnwindingIsRankLocal)
++              ARGS --gtest_filter=LossDataSinkTest.EmptySinkDestructionIsRankLocal:LossDataSinkTest.EmptySinkUnwindingIsRankLocal:LossDataSinkTest.AsciiCreationDecisionIsCollectiveAcrossFileViews:LossDataSinkTest.OutputInspectionFailureIsCollective)
+ add_opalx_test(TestCheckpointFile USE_GTEST_MAIN)
+ add_opalx_test(TestMeshGenerator USE_GTEST_MAIN)
+diff --git a/unit_tests/Structure/TestLossDataSink.cpp b/unit_tests/Structure/TestLossDataSink.cpp
+index 3f37e359c..f61233fef 100644
+--- a/unit_tests/Structure/TestLossDataSink.cpp
++++ b/unit_tests/Structure/TestLossDataSink.cpp
+@@ -52,6 +52,11 @@
+  *    - normal destruction and exception unwinding require no peer participation
+  *    - ASCII and HDF5-configured sinks that have not opened files are covered
+  *
++ * 10. Collective output creation (also run by TestLossDataSinkMPI)
++ *    - asymmetric metadata views cannot change collective header ordering
++ *    - append preserves the existing header across repeated flushes
++ *    - rank 0 filesystem inspection errors reach all ranks before output opens
++ *
+  * ---------------------------------------------------------------------------
+  * Notes
+  * ---------------------------------------------------------------------------
+@@ -68,12 +73,15 @@
+  */
+ 
+ #include <gtest/gtest.h>
++#include <unistd.h>
+ 
+ #include "Ippl.h"
+ 
+ #include <cmath>
+ #include <cstddef>
+ #include <filesystem>
++#include <fstream>
++#include <memory>
+ #include <stdexcept>
+ #include <string>
+ #include <utility>
+@@ -86,6 +94,8 @@
+ #include "Utilities/GeneralOpalException.h"
+ #include "Utilities/Options.h"
+ 
++extern Inform* gmsg;
++
+ namespace {
+ 
+     Vector_t<double, 3> makeVector(double x, double y, double z) {
+@@ -221,9 +231,33 @@ namespace {
+             int argc    = 0;
+             char** argv = nullptr;
+             ippl::initialize(argc, argv);
++            savedMessage_m = gmsg;
++            message_m      = std::make_unique<Inform>("LossDataSinkTest");
++            gmsg           = message_m.get();
++        }
++
++        static void TearDownTestSuite() {
++            gmsg = savedMessage_m;
++            message_m.reset();
++            ippl::finalize();
+         }
+ 
+-        static void TearDownTestSuite() { ippl::finalize(); }
++        std::string temporaryDirectory(const std::string& suffix) {
++            std::string path;
++            if (ippl::Comm->rank() == 0) {
++                path = (std::filesystem::temp_directory_path()
++                        / ("opalx-loss-sink-" + std::to_string(getpid()) + '-' + suffix))
++                               .string();
++                std::filesystem::create_directories(path);
++            }
++            const MPI_Comm comm = ippl::Comm->getCommunicator();
++            int length          = static_cast<int>(path.size());
++            MPI_Bcast(&length, 1, MPI_INT, 0, comm);
++            path.resize(length);
++            MPI_Bcast(path.data(), length, MPI_CHAR, 0, comm);
++            temporaryDirectories_m.push_back(path);
++            return path;
++        }
+ 
+         void SetUp() override {
+             oldComputePercentiles_m     = Options::computePercentiles;
+@@ -240,11 +274,17 @@ namespace {
+                 std::filesystem::remove("test_monitor_checkpoint_missing_step.h5");
+                 std::filesystem::remove("test_monitor_checkpoint_compaction.h5");
+                 std::filesystem::remove("test_monitor_checkpoint_compaction.h5.opalx-rewind.tmp");
++                for (const auto& directory : temporaryDirectories_m) {
++                    std::filesystem::remove_all(directory);
++                }
+             }
+             ippl::Comm->barrier();
+         }
+ 
+     private:
++        inline static std::unique_ptr<Inform> message_m;
++        inline static Inform* savedMessage_m = nullptr;
++        std::vector<std::string> temporaryDirectories_m;
+         bool oldComputePercentiles_m = false;
+     };
+ 
+@@ -295,6 +335,90 @@ namespace {
+         }
+     }
+ 
++    TEST_F(LossDataSinkTest, AsciiCreationDecisionIsCollectiveAcrossFileViews) {
++        const int rank       = ippl::Comm->rank();
++        const int owner      = ippl::Comm->size() > 1 ? 1 : 0;
++        const auto directory = temporaryDirectory("creation-decision");
++        for (const bool rootHasFile : {false, true}) {
++            const auto base = directory + (rootHasFile ? "/append" : "/create");
++            const auto peer = base + "-peer-view";
++            if (rank == 0) {
++                std::ofstream existing((rootHasFile ? base : peer) + ".loss");
++                existing << "# existing header\n";
++            }
++            ippl::Comm->barrier();
++
++            LossDataSink sink(base, false);
++            // Only rank 0 writes ASCII. Give peers the opposite file-existence
++            // view to model metadata becoming visible between rank-local stat()
++            // calls. This deterministically exercises the creation race without
++            // sleeps, external fixtures, or changing the public sink interface.
++            if (rank != 0) sink.outputName_m = peer;
++            for (int batch = 0; batch < 2; ++batch) {
++                if (rank == owner) {
++                    sink.addParticle(
++                            makeParticle(batch + 1, makeVector(batch, 0, 0), makeVector(0, 0, 1)),
++                            std::make_pair(batch, static_cast<short>(0)));
++                }
++                sink.save(1, OpalData::OpenMode::APPEND);
++            }
++
++            if (rank == 0) {
++                std::ifstream output(base + ".loss");
++                EXPECT_TRUE(output.is_open());
++                std::string line;
++                std::size_t headers = 0, records = 0;
++                while (std::getline(output, line)) {
++                    if (line.empty()) continue;
++                    if (line.front() == '#') {
++                        ++headers;
++                        EXPECT_EQ(line == "# existing header", rootHasFile);
++                    } else {
++                        ++records;
++                    }
++                }
++                EXPECT_EQ(headers, 1u);
++                EXPECT_EQ(records, 2u);
++                if (!rootHasFile) {
++                    std::ifstream sentinel(peer + ".loss");
++                    EXPECT_TRUE(std::getline(sentinel, line));
++                    EXPECT_EQ(line, "# existing header");
++                    EXPECT_FALSE(std::getline(sentinel, line));
++                } else {
++                    EXPECT_FALSE(std::filesystem::exists(peer + ".loss"));
++                }
++            }
++        }
++    }
++
++    TEST_F(LossDataSinkTest, OutputInspectionFailureIsCollective) {
++        const int rank       = ippl::Comm->rank();
++        const int owner      = ippl::Comm->size() > 1 ? 1 : 0;
++        const auto directory = temporaryDirectory("inspection-failure");
++        if (rank == 0) {
++            // ELOOP is a deterministic stat() error on both Linux and macOS.
++            // A missing parent or a regular-file parent can instead be reported
++            // as an ordinary absent file by std::filesystem::exists().
++            std::filesystem::create_symlink("loop", directory + "/loop");
++        }
++        ippl::Comm->barrier();
++        for (const bool hdf5 : {false, true}) {
++            const auto suffix = hdf5 ? "-h5" : "-ascii";
++            LossDataSink sink(directory + "/loop/output" + suffix, hdf5);
++            if (rank != 0) sink.outputName_m = directory + "/peer-view" + suffix;
++            if (rank == owner) {
++                sink.addParticle(makeParticle(1, makeVector(0, 0, 0), makeVector(0, 0, 1)));
++            }
++            // Even ranks whose local metadata inspection would succeed must
++            // receive rank 0's failure before opening a file or entering I/O.
++            EXPECT_THROW(sink.save(1, OpalData::OpenMode::APPEND), GeneralOpalException);
++        }
++        if (rank == 0) {
++            EXPECT_FALSE(std::filesystem::exists(directory + "/peer-view-ascii.loss"));
++            EXPECT_FALSE(std::filesystem::exists(directory + "/peer-view-h5.h5"));
++        }
++    }
++
+     TEST_F(LossDataSinkTest, AddParticleRejectsTurnInformationAfterPlainParticle) {
+         LossDataSink sink;
+ 

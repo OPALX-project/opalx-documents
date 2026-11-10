@@ -1,0 +1,37 @@
+{
+  "TestCyclotronProbe": {
+    "mpi_ranks": 1,
+    "running_per_process": [
+      12
+    ],
+    "passed_per_process": [
+      12
+    ],
+    "skipped_per_process": [
+      0
+    ],
+    "ffa_runs": 1,
+    "ffa_passes": 1,
+    "command": "/opt/psi/Compiler/openmpi/5.0.10_slurm/gcc/14.3.0/bin/mpiexec \"-n\" \"1\" \"--bind-to\" \"none\" \"/data/user/adelmann/opalx-dev/ffa-probes-20261107/790abac19643/build/bin/TestCyclotronProbe\"",
+    "mapping_note": "Two GPUs allocated; native CTest rank-to-GPU mapping not captured. School integration has explicit mapping."
+  },
+  "TestCyclotronProbeMPI": {
+    "mpi_ranks": 2,
+    "running_per_process": [
+      12,
+      12
+    ],
+    "passed_per_process": [
+      12,
+      12
+    ],
+    "skipped_per_process": [
+      0,
+      0
+    ],
+    "ffa_runs": 2,
+    "ffa_passes": 2,
+    "command": "/opt/psi/Compiler/openmpi/5.0.10_slurm/gcc/14.3.0/bin/mpiexec \"-n\" \"2\" \"--bind-to\" \"none\" \"/data/user/adelmann/opalx-dev/ffa-probes-20261107/790abac19643/build/bin/TestCyclotronProbeMPI\"",
+    "mapping_note": "Two GPUs allocated; native CTest rank-to-GPU mapping not captured. School integration has explicit mapping."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "job_id": 355092,
+  "cluster": "gmerlin6",
+  "remote_root": "/data/user/adelmann/opalx-dev/lossdatasink-linux-debug-20261109/baseline-3320cf6fc490",
+  "dependency": "afterany:355091",
+  "superseded_job": 355091,
+  "superseded_state_before_cancel": "RUNNING",
+  "reason": "old binary objects remained newer than copy2-preserved source mtime; explicit fixed-target rebuild and artifact verification before final tests",
+  "submitted": "2026-11-09T13:41:07.577958+00:00"
+}

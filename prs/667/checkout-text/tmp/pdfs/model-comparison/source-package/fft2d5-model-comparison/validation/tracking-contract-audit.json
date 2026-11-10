@@ -1,0 +1,96 @@
+{
+  "date": "2026-11-04",
+  "source_checks": [
+    {
+      "geometry": "straight",
+      "particles": 1048576,
+      "physical_charge_C": 1e-11,
+      "material_mean_m": [
+        -5.429162727364232e-19,
+        -2.4154294272007823e-20,
+        0.0
+      ],
+      "material_std_m": [
+        0.01,
+        0.01,
+        1.4433756729320566
+      ],
+      "source_json_sha256": "1885e96a3ea18475410e4ac231367b76834ad991e61ffa5384a3cb7e513fc452",
+      "source_npz_sha256": "b63b7905c15a30a509169603bd67f18f9835aae620b2bd8fdeef04c30326218d",
+      "FROMFILE_all_values_identical": true,
+      "physical_J_moments_passed": true,
+      "literal_geometry_and_tangent_momenta_passed": true
+    },
+    {
+      "geometry": "bend",
+      "particles": 1048576,
+      "physical_charge_C": 1e-11,
+      "material_mean_m": [
+        4.999999999999947e-05,
+        -4.171327072497722e-20,
+        0.0
+      ],
+      "material_std_m": [
+        0.009999874999218741,
+        0.01,
+        1.4433756729320566
+      ],
+      "source_json_sha256": "05e2b4556bc8dd2b57cb3e828be3800463d09908755c4b43e336855aa462ef86",
+      "source_npz_sha256": "4cf23b08e775af54ab1b4d0cd25d090793d36d0735c6c0bd332ddc1af3939c59",
+      "FROMFILE_all_values_identical": true,
+      "physical_J_moments_passed": true,
+      "literal_geometry_and_tangent_momenta_passed": true
+    }
+  ],
+  "straight_cases": [
+    {
+      "code": "opalx",
+      "charge_case": "ZeroSC",
+      "initial_plus_ten_endpoints": true,
+      "same_initial_source_hash": true,
+      "time_step_s": 3.335640951981521e-07,
+      "final_position_hash": "40238ddbc6e07fbd7f5428cd5b8d032e49cab87c72e5ed4d5042b0241370d002",
+      "zeroSC_position_residual_m": 4.440892098500626e-15,
+      "zeroSC_momentum_residual_betagamma": 0.0,
+      "direct_H5_frame_and_all_native_q_passed": true
+    },
+    {
+      "code": "opalx",
+      "charge_case": "10pC",
+      "initial_plus_ten_endpoints": true,
+      "same_initial_source_hash": true,
+      "time_step_s": 3.335640951981521e-07,
+      "final_position_hash": "3a766c1a06a27f3baf4a3d66e198a45f62dc736c66b68ea077181175a23a3f04",
+      "direct_H5_frame_and_all_native_q_passed": true
+    },
+    {
+      "code": "pyorbit",
+      "charge_case": "ZeroSC",
+      "initial_plus_ten_endpoints": true,
+      "same_initial_source_hash": true,
+      "time_step_s": 3.335640951981521e-07,
+      "final_position_hash": "f7fbee2e049a3486b48bc25b968160d4cdd144fa263d3b5c1b5885dc735f50af",
+      "zeroSC_position_residual_m": 2.220446049250313e-16,
+      "zeroSC_momentum_residual_betagamma": 0.0,
+      "longitudinal_step_encoding_recovers_g": 6.360000000000001
+    },
+    {
+      "code": "pyorbit",
+      "charge_case": "10pC",
+      "initial_plus_ten_endpoints": true,
+      "same_initial_source_hash": true,
+      "time_step_s": 3.335640951981521e-07,
+      "final_position_hash": "5462d52ff5479141ca3e09c58237190fa0d43f30eb154c37a83ff8f72f6a1a9e",
+      "longitudinal_step_encoding_recovers_g": 6.360000000000001
+    }
+  ],
+  "no_native_runs": true,
+  "no_production_edits": true,
+  "passed": true,
+  "limits": [
+    "Only the initial uniform sources and completed straight ten-step controls are audited here.",
+    "Native PyORBIT transverse kicks retain their documented missing transverse-work update; this is a method difference.",
+    "A ten-step code-to-code screen is not convergence, full finite-source field validation, or a curved transport certificate.",
+    "The curved source tangent momenta have common rigidity: off-axis particles do not initially follow concentric circles of radius R+u."
+  ]
+}

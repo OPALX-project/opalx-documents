@@ -1,0 +1,272 @@
+{
+  "same_baseline_four_threads": {
+    "left": "/Users/adelmann/git/opalx-master/tmp/consolidation-20261025/repeatability/baseline-four-a",
+    "right": "/Users/adelmann/git/opalx-master/tmp/consolidation-20261025/repeatability/baseline-four-b",
+    "snapshots": {
+      "Step#0": {
+        "id": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "x": {
+          "exact": false,
+          "max_absolute_difference": 8.215260069444064e-14
+        },
+        "y": {
+          "exact": false,
+          "max_absolute_difference": 1.6150275561344074e-15
+        },
+        "z": {
+          "exact": false,
+          "max_absolute_difference": 8.17887424453545e-14
+        },
+        "px": {
+          "exact": false,
+          "max_absolute_difference": 1.8169710527815575e-14
+        },
+        "py": {
+          "exact": false,
+          "max_absolute_difference": 4.552564922266633e-16
+        },
+        "pz": {
+          "exact": false,
+          "max_absolute_difference": 6.494804694057166e-15
+        },
+        "TIME": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "RefPartR": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "RefPartP": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        }
+      },
+      "Step#1": {
+        "id": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "x": {
+          "exact": false,
+          "max_absolute_difference": 2.592648318255897e-13
+        },
+        "y": {
+          "exact": false,
+          "max_absolute_difference": 8.464149520159836e-15
+        },
+        "z": {
+          "exact": false,
+          "max_absolute_difference": 2.562635433717153e-13
+        },
+        "px": {
+          "exact": false,
+          "max_absolute_difference": 4.8253935569508855e-14
+        },
+        "py": {
+          "exact": false,
+          "max_absolute_difference": 2.562566044778114e-15
+        },
+        "pz": {
+          "exact": false,
+          "max_absolute_difference": 1.7208456881689926e-14
+        },
+        "TIME": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "RefPartR": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "RefPartP": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        }
+      }
+    }
+  },
+  "old_new_one_thread": {
+    "left": "/Users/adelmann/git/opalx-master/tmp/consolidation-20261025/repeatability/baseline-one",
+    "right": "/Users/adelmann/git/opalx-master/tmp/consolidation-20261025/repeatability/consolidated-one",
+    "snapshots": {
+      "Step#0": {
+        "id": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "x": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "y": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "z": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "px": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "py": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "pz": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "TIME": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "RefPartR": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "RefPartP": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        }
+      },
+      "Step#1": {
+        "id": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "x": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "y": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "z": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "px": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "py": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "pz": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "TIME": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "RefPartR": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "RefPartP": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        }
+      }
+    }
+  },
+  "original_baseline_repeat_four_threads": {
+    "left": "/Users/adelmann/git/opalx-master/tmp/ring-space-charge-profiles-20261023/accelerating-pic-8-580",
+    "right": "/Users/adelmann/git/opalx-master/tmp/consolidation-20261025/repeatability/baseline-four-a",
+    "snapshots": {
+      "Step#0": {
+        "id": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "x": {
+          "exact": false,
+          "max_absolute_difference": 8.083724661878122e-14
+        },
+        "y": {
+          "exact": false,
+          "max_absolute_difference": 1.1882855810441129e-15
+        },
+        "z": {
+          "exact": false,
+          "max_absolute_difference": 8.161353537428084e-14
+        },
+        "px": {
+          "exact": false,
+          "max_absolute_difference": 2.118661149297374e-14
+        },
+        "py": {
+          "exact": false,
+          "max_absolute_difference": 3.5510331654331484e-16
+        },
+        "pz": {
+          "exact": false,
+          "max_absolute_difference": 6.8833827526759706e-15
+        },
+        "TIME": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "RefPartR": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "RefPartP": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        }
+      },
+      "Step#1": {
+        "id": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "x": {
+          "exact": false,
+          "max_absolute_difference": 2.815074562345643e-13
+        },
+        "y": {
+          "exact": false,
+          "max_absolute_difference": 8.553921460041636e-15
+        },
+        "z": {
+          "exact": false,
+          "max_absolute_difference": 2.7032022453798987e-13
+        },
+        "px": {
+          "exact": false,
+          "max_absolute_difference": 4.150905964436791e-14
+        },
+        "py": {
+          "exact": false,
+          "max_absolute_difference": 2.4957249808443827e-15
+        },
+        "pz": {
+          "exact": false,
+          "max_absolute_difference": 1.8263168755083825e-14
+        },
+        "TIME": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "RefPartR": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        },
+        "RefPartP": {
+          "exact": true,
+          "max_absolute_difference": 0.0
+        }
+      }
+    }
+  }
+}

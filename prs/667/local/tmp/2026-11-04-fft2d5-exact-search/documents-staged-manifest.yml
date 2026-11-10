@@ -1,0 +1,1334 @@
+schema-version: 1
+assets:
+  - title: MuE4 analytical trails — featured movie
+    date: "2026-10-30"
+    category: tutorials/features
+    source: 2026-10-30-mue4_analytical-trails.mp4, supplied in the local manual checkout
+    destination: tutorials/2026/features/2026-10-30-mue4_analytical-trails.mp4
+    description: MuE4 analytical-trails movie featured in the manual news strip.
+    status: experimental
+    sha256: 381915d4d8bc43665e318843416f1f91234641ecfd35d401c22866126c6264aa
+  - title: Physics Manual chapters 28–35 — recovered sandbox Python scripts
+    date: "2026-10-30"
+    category: examples/physics-audit
+    source: old-opal/opalx sandbox map-2, map-3, cyclotron and DBA-ring studies; exact file hashes in bundled SOURCE-MANIFEST.json
+    destination: examples/2026/physics-audit/2026-10-30-physics-manual-sandbox-python.tar.gz
+    description: 45 unchanged Python scripts and helpers with original directory layout and per-file SHA-256 provenance; no recovered script executed or tested. Inputs, results and executables are excluded.
+    status: experimental
+    sha256: 01bffb84785e706366e76be692859847161b34c44a3aebdfc3262d11c57ff008
+  - title: BeamBeam experiments 1–4 — runnable inputs and scripts
+    date: "2026-10-06"
+    category: examples/beam-beam
+    source: OPALX sandbox experiments 1–4 and shared scripts at 492bd6c08, including local study files identified by the bundled SHA-256 manifest
+    destination: examples/2026/beam-beam/2026-10-06-beam-beam-experiments.tar.gz
+    description: Source-only bundle preserving the shared launcher and cross-experiment helpers; excludes generated results, plots, caches, binaries and Python environments.
+    status: experimental
+    sha256: 34317cc36b2635dfacb325c6ce6fdb7da5231525da510ed07741b174b58bf9b3
+  - title: OPALX space-charge class diagram
+    date: "2026-09-07"
+    category: reports/design
+    source: 2026.09.07 Class Diagram Solver Refactor/SpaceCharge Dir Class Diagram.pdf
+    destination: reports/2026/design/2026-09-07-opalx-space-charge-class-diagram.pdf
+    description: Class ownership and dependency diagram for space-charge setup, runtime dispatch, CartesianPIC3D, Poisson adapters, and FFT2D5.
+    status: current
+    sha256: 6c530bf2a74f8837b15f16d6b7bd1f90f472b95d98cc0da412a9a3d568db4f3c
+  - title: OPALX space-charge solver flow
+    date: "2026-09-07"
+    category: reports/design
+    source: 2026.09.07 Class Diagram Solver Refactor/SpaceCharge Program Flow Diagram.pdf
+    destination: reports/2026/design/2026-09-07-opalx-space-charge-solver-flow.pdf
+    description: Per-call execution flow for runtime dispatch through CartesianPIC3D and FFT2D5 space-charge algorithms.
+    status: current
+    sha256: 4fb74ec42d9f2a516ccf4a329e11ad2ad87f2919413e9e4dea3be757dd7355cc
+  - title: A CUDA Extended-Lambda Linkage Bug
+    date: "2026-07-14"
+    category: reports/bugs
+    source: main.pdf
+    destination: reports/2026/bugs/2026-07-14-cuda-extended-lambda-linkage-bug.pdf
+    description: Investigation of an NVCC linkage bug affecting Kokkos extended lambdas instantiated across multiple CUDA translation units.
+    status: current
+    sha256: 1e85cca94d85f999f5162a06aa8b4b2bbb47fd582f358ff21b3841a246c73eea
+  - title: OPALX overview
+    date: "2026-04-06"
+    category: presentations/features
+    source: Manual/sections/appendices/developer-build/opalx-overview.pdf
+    destination: presentations/2026/features/2026-04-06-opalx-overview.pdf
+    description: Introductory overview of the OPALX project.
+    status: current
+    sha256: 6b48c340207c7d59efa232b5d01472ccf8ed9e71f39da43109bcc86682515013
+  - title: OpalElement layout proposal
+    date: "2026-04-30"
+    category: reports/design
+    source: PhysicsManual/etc/Proposal-Jon-OpalElementLayout.pdf
+    destination: reports/2026/design/2026-04-30-opal-element-layout-proposal.pdf
+    description: Design proposal for the OPALX element layout.
+    status: experimental
+    sha256: cde7ee429c168bee3d2a2945bdf8591007b3767a7973569ba105f56dc275cc5b
+  - title: Gamma-gamma benchmark reference data
+    date: "2026-04-25"
+    category: datasets/gamma-gamma
+    source: PhysicsManual/sections/gamma-gamma/figures/reference-data/*.csv
+    destination: datasets/2026/gamma-gamma/2026-04-25-gamma-gamma-reference-data.tar.gz
+    description: OPALX and CAIN histogram data used by the linear Compton benchmark figures.
+    status: experimental
+    sha256: 3c3384444ffe7cceffb8e7b680205bd4aeef4da368749e80260e59cef692b837
+
+  - title: "FFT2D5 benchmark \u2014 analytic_zero_sc.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/analytic_zero_sc.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 5cbe319724ec63b522d4459cb39f0e72ff8055ed5c61ae3e0522f442ff2644e1
+
+  - title: "FFT2D5 benchmark \u2014 emittance.png"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/emittance.png
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: c07b9d9568fc7b73273d2c87438f8ad6f1362d0020dbb318d8f36ea143b8310d
+
+  - title: "FFT2D5 benchmark \u2014 inputs/check_bend_kinematics.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/check_bend_kinematics.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 90aef6151ab1f3783587e7d5669b2021ff49880dbb769bfa02d2f8c7904a73b6
+
+  - title: "FFT2D5 benchmark \u2014 inputs/integer-roll-check.json"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/integer-roll-check.json
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 681ffdd8db74600d726530d6a01e5f250393d30e08c48ae420c68f906ea27ef0
+
+  - title: "FFT2D5 benchmark \u2014 inputs/opalx-10pC-100steps.in"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/opalx-10pc-100steps.in
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 86c07aed2d0467c4775ca4edb857e785821853c40c7c29052788379c9adf0500
+
+  - title: "FFT2D5 benchmark \u2014 inputs/provenance.json"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/provenance.json
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 72ee1af7216af026b410a15db89cd2adc9d301afb0e0d7bb6be8c3ad6e94c8b8
+
+  - title: "FFT2D5 benchmark \u2014 inputs/pyorbit-10pC-100steps.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/pyorbit-10pc-100steps.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 153f1811b82084914c9f29cde09f21172a4861334cc04ae5ad955fa7fc8284bc
+
+  - title: "FFT2D5 benchmark \u2014 inputs/pyorbit-command.json"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/pyorbit-command.json
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: c690982a9985471755444c2502690eddd6894f5ecfcd342ff38c789a720641fd
+
+  - title: "FFT2D5 benchmark \u2014 inputs/readme.md"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/readme.md
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 8aea0c52cd4ee193eed829357280493b1ec2d3bcf05580ea4cefe5d7f2867125
+
+  - title: "FFT2D5 benchmark \u2014 inputs/source.json"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/inputs/source.json
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 05e2b4556bc8dd2b57cb3e828be3800463d09908755c4b43e336855aa462ef86
+
+  - title: "FFT2D5 benchmark \u2014 plot_results.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/plot_results.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 56e957a72b8fbd6064b94ca9b9533e1be6ad123f56ac97df280994b4b6969358
+
+  - title: "FFT2D5 benchmark \u2014 readme.md"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/readme.md
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: a01abccf2979f75b49903bcea8486b49a51ed488ca45d6cd2c4964c58469b84a
+
+  - title: "FFT2D5 benchmark \u2014 results.csv"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/results.csv
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 971318196299035cadf6274be60717464e96ae96aeb28a1a643e9833e4e9ca7b
+
+  - title: "FFT2D5 benchmark \u2014 rms.png"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/rms.png
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: ea9453b69b833c990d2236af099bdc5810b7556851f9174c6589fd5b0164c24e
+
+  - title: "FFT2D5 benchmark \u2014 sampling-audit/check.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/sampling-audit/check.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: c25967eee554f0d65277edb3467961484887188d875bc8d0742d09f16271ec80
+
+  - title: "FFT2D5 benchmark \u2014 sampling-audit/plot.py"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/sampling-audit/plot.py
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 2af7ebe42f1ccc40d779310257f1741fce4f4429123ce88a2a3386e4c9b9b155
+
+  - title: "FFT2D5 benchmark \u2014 sampling-audit/references.csv"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/sampling-audit/references.csv
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 6dccab464bf57fbb92227540ec6c6b8d92a44dd0904ffe4fd52cc7bf3e362f76
+
+  - title: "FFT2D5 benchmark \u2014 sampling-audit/zero-sc-conventions.png"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/sampling-audit/zero-sc-conventions.png
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: f99acdc0273039026195a956b7e9b2ed5825291d3333a66168c90f82321d6779
+
+  - title: "FFT2D5 benchmark \u2014 series.csv"
+    date: null
+    category: examples/2d5-1
+    source: "OPALX PR 667 reference benchmark; archived 2026-11-04 from /Users/adelmann/git/opalx/docs/validation/fft2d5/original-model-selection"
+    destination: examples/2026/2d5-1/series.csv
+    description: "Supporting benchmark artifact; see examples/2026/2d5-1/readme.md for provenance, sampling conventions and limits."
+    status: experimental
+    sha256: 4c23813f576712ae766ace1a992a329f0662d77749b48e1ee3597cd6e7c96694
+
+  - title: "FFT2D5 performance — 2026-11-04-readme.md"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/2026-11-04-readme.md"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "9ef6cce95f7df20598d9d7243fa2c68741230b190eb748054bcf27d804824573"
+
+  - title: "FFT2D5 performance — 2026-11-04-source-map.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/2026-11-04-source-map.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "c1acc30647e29ed77e21910ad141d3c6b1da16b04536b1d91060aeb235df3bd3"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-analyze.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-analyze.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "0a9ed05199df2c213035eaea68ccda04370a892d80ad5c2a3e40072c1e2c213e"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-baseline.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-baseline.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "85e33f9a21cab8026f5be862344363c9d635e76662191febc48b894ceaa2ccf0"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-baseline.manifest.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-baseline.manifest.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "7ca15b3b572d3eaf6366797c4636e5a92571fb50e7985e99b06dbbcc0d183b46"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-build-final.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-build-final.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "be58f0c0a7cc342c479ced815d7303a53ec88052ce4b49f3ab1d9b0c45e0d0a9"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-comparison.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-comparison.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "79f9f91c9183e735b4084e9a8dc8499c28b44ebd37fa643ded98005ba8b1d44a"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-comparison.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-comparison.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "cbd4fc4afdba2c5cf311aa33b370aab12a3ef1ea2eb1580414230c7d5d27498a"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-ctest-final-omp1.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-ctest-final-omp1.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "cc853bef28927149228e9a0cf6de270a46345eee39cebbd3fb35ba8a8edb7b94"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-ctest-final-omp4.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-ctest-final-omp4.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "4a154ff405e89910ee0cf7a2d743a1a0bfb9f11416836f2a2031a0f72d838af2"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-doxyfile"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-doxyfile"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "a437cf203c15dee3a64d90c30b89ced16dd3e99f0eab1dfa981d54e691a2d66a"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-doxygen-warnings.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-doxygen-warnings.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-kernel-comparison.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-kernel-comparison.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "07c309b884cf71b58376a716443179f78e347fa8e93621fcd528f6c1221ac672"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-mpi2-rejection.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-mpi2-rejection.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "009bdeebaf07a9569e8f7ade217b7b11d9dcf37c6b46b5694c323fe38334187a"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-optimized-1.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-optimized-1.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "88527046e9373f9e34d0ae52891c8cad334ab0cb56789211203b02a8fc03c8b1"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-optimized-1.manifest.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-optimized-1.manifest.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "1a546f4d298aa791acb8d8531417a8ef070241eb601f6dfa1a409e8ad0c2a6c0"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-optimized-2.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-optimized-2.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "c234a6b8f0fae46f3372faff4e349c4518aa9f84f21e9d4e95670ff1ca3b265a"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-optimized-2.manifest.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-optimized-2.manifest.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "fb8c0a1a2d5f04b6b0308474b9187649e2cbdca5d0b6a510d35a388b78ed0854"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-optimized-kernel-timings.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-optimized-kernel-timings.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "e9c31cf888f3d60e7c7076427efda981f3a76afa79f4c5412084976329c03336"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-optimized-profile.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-optimized-profile.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "c3ce3b241dde646fed0ae0fc54aa63396ad1c1ded45b10d1d3d525db01572ccf"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-optimized-profile.manifest.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-optimized-profile.manifest.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "1f8ba0292546445e7effa81f03e71dd27a7552aa3b67b6f2cb45edfa23d78660"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-pilot.in"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-pilot.in"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-readme.md"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-readme.md"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "e5515e61ecaabffd904992b1d52bcc5347f73ea7e808e10266559efc9775eb6e"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-replot.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-replot.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "8459027d49a2aad1e6c807c27206a85e8c738ee4eb42bf7840c8a7c846ec3a3b"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-run-pilot.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-run-pilot.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "3427aca3eceac10fbee9867fd38d8610197879edee790c0c27103e82d7b5bedd"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-runtime.pdf"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-runtime.pdf"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "19064ce5551089e21d0d05aa5eac9634e96eefb75a389a7be802430acf884e5a"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-runtime.png"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-runtime.png"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "5609652591fb25b54bb18abb76592a285917d57f4311fed2eef0d44974a26948"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-source.patch"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-source.patch"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "af52ec6c874d20a405d2cfc4cac9bf27c162b153e69f9839ac9c51659cae2c60"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-stat-comparison.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-stat-comparison.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "9320c10ee43cecebcd1746e0aade37e84cc9501863dc56b7d15cd8ec5dfb5dcb"
+
+  - title: "FFT2D5 performance — cache-initial/2026-11-04-tests-final.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-initial/2026-11-04-tests-final.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "b9e0ff3e82a6729ccdc83b234575133e3b5a16a9c9db9a6fec207ee058197229"
+
+  - title: "FFT2D5 performance — cache-retiming/2026-11-04-analyze_fft2d5_retiming.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-retiming/2026-11-04-analyze_fft2d5_retiming.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "b03ef109f17f74eff334c37b981b964f6ef28bd9699cb6aeedbf9e8c49cd9009"
+
+  - title: "FFT2D5 performance — cache-retiming/2026-11-04-endpoint-audit.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-retiming/2026-11-04-endpoint-audit.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "0f0fcb1c42eee50bedc923353ba4d1a4603c2f2e252193d2f75bdc621d88a4b7"
+
+  - title: "FFT2D5 performance — cache-retiming/2026-11-04-kernel-summary.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-retiming/2026-11-04-kernel-summary.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "e00e127f1972369e68d4b68569f84d695e9e581859e90505d3b330f04d095609"
+
+  - title: "FFT2D5 performance — cache-retiming/2026-11-04-main-thread-sample-summary.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-retiming/2026-11-04-main-thread-sample-summary.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "87ec8d56ff600f618f3cce237eda7036237d40954882387dec625199112ecc03"
+
+  - title: "FFT2D5 performance — cache-retiming/2026-11-04-openmp-worker-sample-summary.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-retiming/2026-11-04-openmp-worker-sample-summary.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "671fcee46b10bdb77adbc0add0dbcb04c3958f72da4b8ab80be21eeb5c136a2f"
+
+  - title: "FFT2D5 performance — cache-retiming/2026-11-04-readme.md"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-retiming/2026-11-04-readme.md"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "b32164f81d68b00216cbb78aa801941418d2a1f51cea44f69bdefd1732f60ff0"
+
+  - title: "FFT2D5 performance — cache-retiming/2026-11-04-run_dba_projection_cache_retiming.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-retiming/2026-11-04-run_dba_projection_cache_retiming.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "8ff85e40e521ed752b8233347122e10b30dd8b8de06fd16fac7cdb60265e89e4"
+
+  - title: "FFT2D5 performance — cache-retiming/2026-11-04-run_fft2d5_retiming.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-retiming/2026-11-04-run_fft2d5_retiming.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "eae1c6e4f054cd149576d9a578c50851b991d2b77bee4dca9bebea1d8d9196c3"
+
+  - title: "FFT2D5 performance — cache-retiming/2026-11-04-summary.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-retiming/2026-11-04-summary.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "692847682754058724bca9bdd3153e3cc62437f7a6b1512073f1944dc069103c"
+
+  - title: "FFT2D5 performance — cache-retiming/kernel/2026-11-04-kernel-timings.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-retiming/kernel/2026-11-04-kernel-timings.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "ebb24485d7ecd9c8b5a7625b6e4891238e6374ec4d3be457e8d3d1b02a97a241"
+
+  - title: "FFT2D5 performance — cache-retiming/kernel/2026-11-04-manifest.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-retiming/kernel/2026-11-04-manifest.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "717a7e643ac7f1789aac90ef2820d7e81bc21e2148c8f6c7aee7a3bacd5a0b41"
+
+  - title: "FFT2D5 performance — cache-retiming/kernel/2026-11-04-run.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-retiming/kernel/2026-11-04-run.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "134fdb18c6ef576dbe8724f03385896cbaa8bfa364e3df8490fdb8d18a739323"
+
+  - title: "FFT2D5 performance — cache-retiming/optimized-1/2026-11-04-manifest.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-retiming/optimized-1/2026-11-04-manifest.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "70f54ff8f38257813aa2cd62291aee7ecf471a3787595fb8a273859f7937b549"
+
+  - title: "FFT2D5 performance — cache-retiming/optimized-1/2026-11-04-run.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-retiming/optimized-1/2026-11-04-run.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "c6763c32c11f2fbe21b9abb8a6e54d5351a66766a65bc0e21f884be5a8a6c379"
+
+  - title: "FFT2D5 performance — cache-retiming/sample/2026-11-04-manifest.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-retiming/sample/2026-11-04-manifest.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "dda325c1c00ce5e04012f595969ae8b6e30cfb57079612af6dfaaee322c92194"
+
+  - title: "FFT2D5 performance — cache-retiming/sample/2026-11-04-run.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/cache-retiming/sample/2026-11-04-run.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "6180debfefd97309357d143742e4a86d4c0abf912c01812b1bf44974934530d3"
+
+  - title: "FFT2D5 performance — fftw-build/2026-11-04-analyze_dba_fftw_pilot.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-build/2026-11-04-analyze_dba_fftw_pilot.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "429b39f8953406dd0eae95e8b65e9ad5ef4d4e53ea638ad1a6d70ae65fa2a360"
+
+  - title: "FFT2D5 performance — fftw-build/2026-11-04-before.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-build/2026-11-04-before.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "969d5e4e24a76a5a4b776cb226484056a8e32b3f3cd6ef48ac3afe90fb173f78"
+
+  - title: "FFT2D5 performance — fftw-build/2026-11-04-build-final.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-build/2026-11-04-build-final.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "3b54475db1261ca00513d86dc98fc7673e6a3b0948238d80a8a824d0c2ed19cf"
+
+  - title: "FFT2D5 performance — fftw-build/2026-11-04-comparison.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-build/2026-11-04-comparison.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "8dd40f167a1742233a9972c28cd648e8610709ac9c92b98b40d035152df06569"
+
+  - title: "FFT2D5 performance — fftw-build/2026-11-04-comparison.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-build/2026-11-04-comparison.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "f5868add9ce761afe9db2b433345e78784b8c9f21152e9d526d27c1fea8ba3fe"
+
+  - title: "FFT2D5 performance — fftw-build/2026-11-04-ctest-omp1.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-build/2026-11-04-ctest-omp1.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "84f3fb4ac52f41cf88c6a071070f1f5e0cf1ff506b7a4bea2c841785a054b0b4"
+
+  - title: "FFT2D5 performance — fftw-build/2026-11-04-ctest-omp4.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-build/2026-11-04-ctest-omp4.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "5b7f689105292f442f00014822adb20cc552738cfe089347e5e1739d952d1981"
+
+  - title: "FFT2D5 performance — fftw-build/2026-11-04-mpi2-rejection.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-build/2026-11-04-mpi2-rejection.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "a1c4663c711fd94e28c590e46671d563bc6a5ce17d108e0aa11162260d2d150c"
+
+  - title: "FFT2D5 performance — fftw-build/2026-11-04-opalx-configure.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-build/2026-11-04-opalx-configure.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "776f33f2f19ccbcce5dc0a4d560def7ff5661afc7372456a82ad25d419dbd31e"
+
+  - title: "FFT2D5 performance — fftw-build/2026-11-04-readme.md"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-build/2026-11-04-readme.md"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "8961cf359bf355f096c388bc26c5440125c00893a1a1d31c57645f8fb0c3d447"
+
+  - title: "FFT2D5 performance — fftw-build/2026-11-04-run_dba_fftw_pilot.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-build/2026-11-04-run_dba_fftw_pilot.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "bf33788677cf526b26a5d66a7e0d068dc171bc9157bd7f44173cfeb17c420899"
+
+  - title: "FFT2D5 performance — fftw-build/2026-11-04-stat-comparison.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-build/2026-11-04-stat-comparison.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "7f5b8b07354f5551c61d584f504843927e38d4341756c69023147ecafa197b1a"
+
+  - title: "FFT2D5 performance — fftw-build/optimized-1/2026-11-04-case.in"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-build/optimized-1/2026-11-04-case.in"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+
+  - title: "FFT2D5 performance — fftw-build/optimized-1/2026-11-04-manifest.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-build/optimized-1/2026-11-04-manifest.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "70da1ac3a9ca4e5f39e0b7c6af50bd8af724ec6a877c0c2e19baef0007850f29"
+
+  - title: "FFT2D5 performance — fftw-build/optimized-1/2026-11-04-run.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-build/optimized-1/2026-11-04-run.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "ee1317bac8c721c3b3339b8bfd86913bf983fb84defcf3a393d7d3b4e5c6cabf"
+
+  - title: "FFT2D5 performance — fftw-profile/2026-11-04-analyze_fft2d5_fftw_profile.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/2026-11-04-analyze_fft2d5_fftw_profile.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "4bcc077eb9d7166293f9939b65a38c57cb64944c149e2118dbd35aa005305292"
+
+  - title: "FFT2D5 performance — fftw-profile/2026-11-04-endpoint-audit.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/2026-11-04-endpoint-audit.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "e38b1e0e8d65bd56eb062f15b3324c90eb251c817088ba33d07e55ba7d11f77b"
+
+  - title: "FFT2D5 performance — fftw-profile/2026-11-04-fftw-profile.pdf"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/2026-11-04-fftw-profile.pdf"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "0d1ba943b0ef80ae03d1fb9ddb07ccb25c715ff2bf7419027a4036ca368666af"
+
+  - title: "FFT2D5 performance — fftw-profile/2026-11-04-fftw-profile.png"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/2026-11-04-fftw-profile.png"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "6f84395e1d55525a3a59a8159c6302cad8341b7256ad9022a25506df5af3c089"
+
+  - title: "FFT2D5 performance — fftw-profile/2026-11-04-kernel-summary.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/2026-11-04-kernel-summary.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "05d5b518a6bf5b9e7c427232240763b9d13a24e9ddeba3ba6abfafdcc3576957"
+
+  - title: "FFT2D5 performance — fftw-profile/2026-11-04-main-thread-sample-summary.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/2026-11-04-main-thread-sample-summary.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "bbb70eb5b02cb92e27a1a8dc499a381c9a8f7d2b0f705377005d42d3d31ed132"
+
+  - title: "FFT2D5 performance — fftw-profile/2026-11-04-openmp-worker-sample-summary.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/2026-11-04-openmp-worker-sample-summary.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "7df84620a133e9805f1cc4055861a3e4c24f10bef0f8c7d10fd7e0002e79aeb4"
+
+  - title: "FFT2D5 performance — fftw-profile/2026-11-04-plot_fft2d5_fftw_profile.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/2026-11-04-plot_fft2d5_fftw_profile.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "646f198f5be69f043aca819c355d2c8b30055024df20cca5c0a5a16ce5518acd"
+
+  - title: "FFT2D5 performance — fftw-profile/2026-11-04-readme.md"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/2026-11-04-readme.md"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "1ac461ca2858b7c83fee38a7f08d74533635cae0c7c00dabfdc56b19c2ae7d89"
+
+  - title: "FFT2D5 performance — fftw-profile/2026-11-04-run_fft2d5_fftw_profile.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/2026-11-04-run_fft2d5_fftw_profile.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "c7afbe55b053a42bb6692e6531f567463ab24543e8bde3db8e920e6bcfad1701"
+
+  - title: "FFT2D5 performance — fftw-profile/2026-11-04-stat-audit.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/2026-11-04-stat-audit.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "02bac6e224c49a1029528f07a4b7277914d5a796f3fcaecdb6ab8b5d7d0035e3"
+
+  - title: "FFT2D5 performance — fftw-profile/2026-11-04-summary.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/2026-11-04-summary.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "01480668b194b2d304a15d616a4dab8d62eff26fc1d2face964688ed46df60ef"
+
+  - title: "FFT2D5 performance — fftw-profile/kernel/2026-11-04-case.in"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/kernel/2026-11-04-case.in"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+
+  - title: "FFT2D5 performance — fftw-profile/kernel/2026-11-04-kernel-timings.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/kernel/2026-11-04-kernel-timings.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "abc58ef662633ac80c6eb0afce8e85fa5788c1596032cb0a150994e2eb398495"
+
+  - title: "FFT2D5 performance — fftw-profile/kernel/2026-11-04-manifest.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/kernel/2026-11-04-manifest.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "01670b191f89403b76ddb236f82fcd3237a85715d35198e1e6e46e69b892bd93"
+
+  - title: "FFT2D5 performance — fftw-profile/kernel/2026-11-04-run.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/kernel/2026-11-04-run.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "deef3da6b4198fd6e4d348dc4b146ab68c34af8d7a97561ba20263951ba6e5d8"
+
+  - title: "FFT2D5 performance — fftw-profile/sample/2026-11-04-case.in"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/sample/2026-11-04-case.in"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+
+  - title: "FFT2D5 performance — fftw-profile/sample/2026-11-04-manifest.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/sample/2026-11-04-manifest.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "77f059b7eeebff082d709fc07f8972e26ca0619036de007b7504dcc15cc9040d"
+
+  - title: "FFT2D5 performance — fftw-profile/sample/2026-11-04-run.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/fftw-profile/sample/2026-11-04-run.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "5aae72a709c775a2cb901551305a263b61e2a76a59cd962fe8eddb81669d8a4c"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-analyze_dba_exact_search_pilot.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-analyze_dba_exact_search_pilot.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "811f44d6da2438fa90fc10af130d1dac29fa4c28f98677c7f18746ab979402eb"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-analyze_fft2d5_hierarchy_profile.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-analyze_fft2d5_hierarchy_profile.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "9c9cb6912a03bbd1bbadd90df415a0a6ca90875fbfd1f8118e151cfde0ceee6c"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-build-final.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-build-final.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "de296746c865fa0a0d8d4e69b4622b02553b282c31d667802f223129262ebeeb"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-comparison.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-comparison.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "bc795a3c620301bc2646c20b06f8b17ef345ec70d55c52aad3e6a07978f91138"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-comparison.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-comparison.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "32ece6d2abd7f9e9fd38840dd009d128ef1d6a817fd42495b4b1d53fa1b850cb"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-ctest-omp1.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-ctest-omp1.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "50ccc2cd07fc888286102caad0b5549bb5e2f5f9b0bf620cf30f56cbdd6fd3b6"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-ctest-omp4.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-ctest-omp4.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "382d649cea8a72606bfc052dc7208d08280cbe5e6c3c2736b42fa4367ca1e86f"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-doxygen-warnings.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-doxygen-warnings.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-endpoint-audit.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-endpoint-audit.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "e6eca5f95a45cd838fead026b0490ce7c5e3c581e7e5eca1afa3834ce0bded72"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-exact-final-omp4.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-exact-final-omp4.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "694475168228f14f251f774109c91feabd3a475e4dde52253bcecc833d947c0e"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-exact-search-comparison.pdf"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-exact-search-comparison.pdf"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "ad14a808ba75fe94696d3e768ffa588ee13550cd6318234090d9c0e877eb46f9"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-exact-search-comparison.png"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-exact-search-comparison.png"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "7ecd0efaebedaf6e54f1968f4938cd36060fa61fad471b353ec6dfb658ef90b9"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-fftw-profile-with-hierarchy.pdf"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-fftw-profile-with-hierarchy.pdf"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "c08ef2cea78e00fb64541dcc08b1063285fa9b49c625cdee6bf04ad0c5c773df"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-fftw-profile-with-hierarchy.png"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-fftw-profile-with-hierarchy.png"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "2fb4e26a1f678b945e27b54a5db50ab01159da6489e0c15c554160a1e41637c3"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-kernel-comparison.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-kernel-comparison.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "2f412fbcf20050d1dc1aa9e1990e3dcbf175d7a6a20e6524feb339d08ab6dd1e"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-kernel-summary.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-kernel-summary.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "7b8c1f9739774468b5110da7b1172197aea42227db6eb7236791b09a15ce6a14"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-main-thread-sample-summary.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-main-thread-sample-summary.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "eccc84bdee1bfc41f824e543cfd68b6558755925481c50d9c8bbe707fd10cc96"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-mpi2-rejection.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-mpi2-rejection.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "fa58a2993cdd8456fe3d461d4ab4d91e41d98b178537f28e3b2e4493d4e59e56"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-openmp-worker-sample-summary.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-openmp-worker-sample-summary.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "ebd6de90d6c8655fcd75519d2d09c2dc6e974d7003457f16c980e04f92acdbc6"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-plot_dba_exact_search.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-plot_dba_exact_search.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "5459b4e5e879c6885eee7560e0e900a14a7c18781b1ecfe00774bc7460315993"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-plot_fft2d5_profile_with_hierarchy.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-plot_fft2d5_profile_with_hierarchy.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "034b0363c2b87e154a7cfcd24d648f3647893e4faad6aeb2ee8caeaf694a221b"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-readme.md"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-readme.md"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "9eebf9b58f76360e08cfee7ee71a501980cd10d7a8e892eb7e7199659efcbaf2"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-run_dba_exact_search_pilot.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-run_dba_exact_search_pilot.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "7ace2e6467cd0e3602e380cebfaa6d8ef7939024f1994c560f3c203ce4302f3c"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-run_fft2d5_hierarchy_sample.py"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-run_fft2d5_hierarchy_sample.py"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "b29dd19204d630c7b0bd182d85bdc9928cd3ee39b00041d91e85485e1e50dbe5"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-source.patch"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-source.patch"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "016a4170cc752380ec1e3f1852d4e5c11dbad59ac0a6ae557e9967af6f7e5c1f"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-stat-audit.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-stat-audit.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "9bfce8136a16313db95d100298cbb83bc6b6b6d7936c4eb59447d5f7e5f61638"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-stat-comparison.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-stat-comparison.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "b1a213d48944a419f70f3e3e57fbb7ef9072124cc2430143d774947dbf935685"
+
+  - title: "FFT2D5 performance — hierarchy/2026-11-04-summary.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/2026-11-04-summary.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "b3e3b3b4687047bda50362f26fb2535fd4f0467373991e9b27526238b310fd0e"
+
+  - title: "FFT2D5 performance — hierarchy/optimized-1/2026-11-04-case.in"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/optimized-1/2026-11-04-case.in"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+
+  - title: "FFT2D5 performance — hierarchy/optimized-1/2026-11-04-manifest.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/optimized-1/2026-11-04-manifest.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "ebf388a9c48c348631f107c51ea8d2d41b294a3650b65ace145642e5a58b9d0a"
+
+  - title: "FFT2D5 performance — hierarchy/optimized-1/2026-11-04-run.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/optimized-1/2026-11-04-run.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "8e79b182c9f08e2590bcb63272a88c590ee33daf06ad44b43211cd465e3465de"
+
+  - title: "FFT2D5 performance — hierarchy/optimized-2/2026-11-04-case.in"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/optimized-2/2026-11-04-case.in"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+
+  - title: "FFT2D5 performance — hierarchy/optimized-2/2026-11-04-manifest.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/optimized-2/2026-11-04-manifest.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "f85742c7adb36388add2260023b762a509cd7d5d431fa8f1b48fc8f51ba72658"
+
+  - title: "FFT2D5 performance — hierarchy/optimized-2/2026-11-04-run.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/optimized-2/2026-11-04-run.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "4533b2d5e33442a4dfb2b511fc9269012c89b66ad4ea58f4fa938f1abdaf3ede"
+
+  - title: "FFT2D5 performance — hierarchy/optimized-profile/2026-11-04-case.in"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/optimized-profile/2026-11-04-case.in"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "f6692da8991aadf01282f7811183427c78e649ac5266c3b11bb5ecf813185f38"
+
+  - title: "FFT2D5 performance — hierarchy/optimized-profile/2026-11-04-kernel-timings.csv"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/optimized-profile/2026-11-04-kernel-timings.csv"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "a419ba471f5cc13e4b6483cec2ed88b2d8388547b563589c027dcec01b68f2e4"
+
+  - title: "FFT2D5 performance — hierarchy/optimized-profile/2026-11-04-manifest.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/optimized-profile/2026-11-04-manifest.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "54c354abbdd7b5bb63da6963fb9c8d5c9483436b4d9f13d13df0c2e9598617bf"
+
+  - title: "FFT2D5 performance — hierarchy/optimized-profile/2026-11-04-run.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/optimized-profile/2026-11-04-run.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "e5299453f79ffa0dd843677e3d4bc64dccda2ba863c2e778737e926a6c7df9e3"
+
+  - title: "FFT2D5 performance — hierarchy/sample/2026-11-04-cpu-sample.txt"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/sample/2026-11-04-cpu-sample.txt"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "148d05d5d83992d20dccabcba1811142612f632bd3e8f24a51376b0da4b66173"
+
+  - title: "FFT2D5 performance — hierarchy/sample/2026-11-04-manifest.json"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/sample/2026-11-04-manifest.json"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "9df4ba3c7c21a188918522a8fc56e83ee7707988d7383caa482b0d0bb66a75fc"
+
+  - title: "FFT2D5 performance — hierarchy/sample/2026-11-04-run.log"
+    date: "2026-11-04"
+    category: "examples/2d5-1"
+    source: "DBA 100-step profiling and exact-search validation; original layouts and hashes in the source-map asset"
+    destination: "examples/2026/2d5-1/dba-solver-performance-2026-11-04/hierarchy/sample/2026-11-04-run.log"
+    description: "Projection reuse, Release FFTW build and exact nearest-segment hierarchy: inputs, provenance, numerical checks and timing/CPU profiles. No IPPL changes or 16-turn runs."
+    status: "experimental"
+    sha256: "34e2702b41ec150d8118124261e4d261366319935f38f1b1cc3bf5cace75dbf7"

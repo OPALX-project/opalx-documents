@@ -1,0 +1,55 @@
+{
+  "name": "R0p25-baseQ1-grid2",
+  "solver": "fft2d5",
+  "charge_C": 1.6e-11,
+  "assigned_charge_C": 1.6e-11,
+  "steps": 128,
+  "mesh": [
+    256,
+    512,
+    550
+  ],
+  "expected_particles": 98304,
+  "initial_phase_rad": 0.2,
+  "orbit_radius_m": 0.25,
+  "orbit_center_opal_m": [
+    -0.25,
+    0.0,
+    0.0
+  ],
+  "omega_rad_per_s": 11991698.32,
+  "Bz_T": 0.12518955222392653,
+  "distribution": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/radius-scan/assets/ellipsoid-98304-R0p25.dist",
+  "source_npz": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/radius-scan/assets/ellipsoid-98304-R0p25.npz",
+  "directory": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/radius-scan/runs/R0p25-baseQ1-grid2",
+  "h5": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/radius-scan/runs/R0p25-baseQ1-grid2/uniform-b.h5",
+  "dt_s": 2.0467236542496893e-09,
+  "pipe_size_m": [
+    0.024,
+    0.012
+  ],
+  "reference_path_limits_rad": [
+    -0.15,
+    4.35
+  ],
+  "snapshot_interval_steps": 8,
+  "field_geometry": "one uniform Cartesian map",
+  "fieldmap": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/radius-scan/assets/uniform-by-R0p25-0p024-0p012.g4blmap",
+  "fieldmap_sha256": "a346a104f1857f452f377585d9cdc43a6e8ea7b074c6140014332c01765ddee5",
+  "source_sha256": "9bd87a5b72aa6dad3b0961c1e591501a661b79bd8af602a12642accfeb38a5d2",
+  "input_sha256": "1279955ee10eee0ff3f77a6f8710e6162255014c3d182c77d7e71750f11e61f3",
+  "binary_sha256": "ba08fdd0b0bb1e90a64ba0fd3763a8b6d044b128c0af9b9dfd215ad0ffac8fd4",
+  "binary": "/Users/adelmann/git/opalx/build-omp/src/opalx",
+  "reference_path": "/Users/adelmann/git/OPALX-2D5/curved-study/uniform-bz/radius-scan/assets/reference-R0p25-m0p15-4p35-0p01.dat",
+  "reference_path_sha256": "c83aaf9f59926c2f218dbd772f430e7d47304ab58658d8a88c94eebfe5590934",
+  "reference_path_points": 451,
+  "study": "curvature similarity",
+  "base_charge_C": 1e-12,
+  "dimensionless_charge_ratio": 1.0,
+  "initial_semiaxes_m": [
+    0.005,
+    0.05,
+    0.0005
+  ],
+  "intended_longitudinal_cell_m": 0.004090909090909091
+}

@@ -1,0 +1,11 @@
+# ScalingFFA field-superposition correction
+
+The old apply methods replaced the complete accumulated magnetic field with this element's contribution. A candidate element outside its own support therefore erased existing nonzero fields. The reference integrator independently sums contributions, so initially identical particles diverged from their reference.
+
+The correction distinguishes element application (add) from raw field lookup (replace). A namespace-scope internal shared launcher chooses only the final store, preserving the existing Cartesian/cylindrical field formulas, local SI units, support, summation traversal, device allocations and kernel count. Its public struct method is necessary because NVCC forbids extended device lambdas enclosed by a private member method; friendship grants only the original private coordinate/rotation helper access. ScalingFFAMagnet public signatures and data state remain unchanged. Scalar/reference application adds a separately calculated contribution too.
+
+The native regression first failed against the old implementation, then passed after correction. It uses actual particle views, seeded nonzero B/E, two overlapping magnets, a second magnet excluding a point still in the first, radial/azimuthal exclusions, scalar/reference parity and preserved raw-getter overwrite. It requires no external files/scripts/processes. One-rank OpenMP2 runs pass39 native cases across ScalingFFAMagnet, TrackReferenceStep and DeviceExternalField, and the new case passes on two MPI ranks.
+
+An unchanged1000-step one-rank manual ScalingFFABasicPlacements fixture completed with final mean particle/reference separation7.93e-13m (old named master1.222m). Ten sampled rows retain all10 particles; maximum mean separation8.33e-13m, charge error7.89e-31C and energy range8.46e-13MeV. Exact hashes, logs, trajectory.csv, analysis.json and reproducible manual analysis are adjacent.
+
+Limits: this is one fixed-resolution fixture sampled every100 steps. It does not establish arbitrary FFA lattice accuracy, convergence or actual CUDA/HIP execution. Backend build/runtime validation and reference publication remain with the parent task. No tolerance, fixture or maintained reference edits were made here.

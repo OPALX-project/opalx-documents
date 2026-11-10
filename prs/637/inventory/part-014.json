@@ -1,0 +1,2069 @@
+[
+  {
+    "original": "tmp/old-opal-comparison-20261023/smoke/acceleration.stat",
+    "sha256": "28c5fd09885b971f9b7ce2689b2d83a05a57118cc0492659c43f77826c828427",
+    "bytes": 9158,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/smoke/acceleration.stat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/smoke/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/smoke/bunch.dat",
+    "sha256": "825571547f070a4275da3d1380010f190f8bacd9c1fea6f75157084c75d29e7a",
+    "bytes": 602086,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/smoke/bunch.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/smoke/manifest.json",
+    "sha256": "d5cfd87a08f7d02f0829e34d66d03ce8d94fab67d5d772dfba23d760afd2eff9",
+    "bytes": 583,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/smoke/manifest.json"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/smoke/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/smoke/rffield1.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/smoke/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/smoke/rffield2.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/smoke/run.log",
+    "sha256": "fbf5e0fb8f9a46e8e7ad9dbf32518fcd6395f1609c1f379a4b54da0c0c190011",
+    "bytes": 23338,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/smoke/run.log"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/smoke/timing.dat",
+    "sha256": "2bc34f2a3cd52d05d81186863bddedf348d0bb3f5f564c294594d99dbc149e3d",
+    "bytes": 2523,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/old-opal-comparison-20261023/smoke/timing.dat"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/stage.py",
+    "sha256": "916213dfe306dc40be1c2eef69bac559156de3423d9b22a6835746e0274f0793",
+    "bytes": 2424,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/stage.py"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/summary.json",
+    "sha256": "d0e2703400abb4a0ef81fd8ac38acef6043a0fcd82ba5269e12a84fb308c9398",
+    "bytes": 7497,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/summary.json"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/summed-line-densities.csv",
+    "sha256": "d49e20e5648e16283a341a9ae275fb891e03d19da08bf2222e1dfbc91b40302f",
+    "bytes": 30414,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/summed-line-densities.csv"
+  },
+  {
+    "original": "tmp/old-opal-comparison-20261023/turn-comparison.csv",
+    "sha256": "a106374d0994371fc7e5789377c9804fc38312da206f3655002d0fdad308f037",
+    "bytes": 1849,
+    "disposition": "retained-text",
+    "archive": "local/tmp/old-opal-comparison-20261023/turn-comparison.csv"
+  },
+  {
+    "original": "tmp/pr637-audit-20261109/AUDIT.md",
+    "sha256": "edb81b5031f0043fb7d204edbbf09a9a42f80fc1dcf92382da296e3c4db784d4",
+    "bytes": 8602,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-20261109/audit.md"
+  },
+  {
+    "original": "tmp/pr637-audit-20261109/STATE.json",
+    "sha256": "317145a84dbe4f93a9598b18894a5c6d869c62148b86a65774a2004e65ef0459",
+    "bytes": 7449,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-20261109/state.json"
+  },
+  {
+    "original": "tmp/pr637-audit-20261109/probe-sizes.cpp",
+    "sha256": "3e275dfc5227a516ba49f61d0ef9e4e1a198b719c66ae1c7578696d4e551cada",
+    "bytes": 257,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-20261109/probe-sizes.cpp"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/CPU_RESULTS.json",
+    "sha256": "54e52163cc1eb6b51a0d50d72cf3b54c5811ebdc951d4ea6f51b6a00a56518a1",
+    "bytes": 441,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/cpu_results.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/REPORT.md",
+    "sha256": "ca8d6f1e17b53355bff6fc1727a647be9b3e0ea4b021453b9c5c674a29a2b39f",
+    "bytes": 5326,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/report.md"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/RESULTS.json",
+    "sha256": "5f6c269fe3e7311ed93fee3c6572b6af0c7845835952b4d37740998d030a7406",
+    "bytes": 2330,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/results.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/STATE.md",
+    "sha256": "1cbfb8f2d403a5181ac75aa94f7d316f38443f1145f7e0c93524baec03bc845f",
+    "bytes": 4169,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/state.md"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/REPORT.md",
+    "sha256": "6914fb7f0de9e18786746bd2d6283ee9544705ffde4ded91d69bbe400ea95beb",
+    "bytes": 3955,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/report.md"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/STATE.md",
+    "sha256": "0d5b8a2ca582b66742a334eee766e0b24c2e4f980851755f1f664a2832f84f2b",
+    "bytes": 5943,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/state.md"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/archive-remote.log",
+    "sha256": "c503dac6c19e9b927bdde9a878cc937534adedeaaa8029a0f61553cbe96df8eb",
+    "bytes": 378,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/archive-remote.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/audit_native.py",
+    "sha256": "75c6cf11f91b9614718beb24929663557d469e4476ce1f4fea72b857fdefb63b",
+    "bytes": 3785,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/audit_native.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/audit_tracker_gpu.py",
+    "sha256": "8de437ef466cc63a2cfe0f3f3f348051c26cb707ce24a947519dfaa8ba8c1560",
+    "bytes": 4366,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/audit_tracker_gpu.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/audit_tracker_gpu_final.py",
+    "sha256": "95cb69a98833e1556eff049644101697d7a0fce445b0962a61d47227c252359e",
+    "bytes": 4189,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/audit_tracker_gpu_final.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/audit_tracker_gpu_legacy_path.py",
+    "sha256": "6e4466ddac08c546423399a4574d8edf663f1074ab9eba72c1ad3897e6d93aab",
+    "bytes": 3898,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/audit_tracker_gpu_legacy_path.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/availability.json",
+    "sha256": "63c2730aa2e032da61dc9696a7874cf47e978dc8541687eaf7f1df1196e8c781",
+    "bytes": 752,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/availability.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/cuda_metadata_attempt2.cpp",
+    "sha256": "07f62d5b062ecd3840c062e39ffd8b02425fc51ad95d01a64791bc093a7db6d4",
+    "bytes": 1380,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/cuda_metadata_attempt2.cpp"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/gpu-integration-fixture.json",
+    "sha256": "cc369981abeb85708b18d72f02f8f7978c241f187c19641f6a54420f57bc30a2",
+    "bytes": 1570,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/gpu-integration-fixture.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/gpu-integration-fixture.tar.gz",
+    "sha256": "559eb9abc34b6b3323be9ed1838759807e233b25937005b083b40678c7ef9943",
+    "bytes": 996309,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/latest-status.json",
+    "sha256": "f68263feb74d06b47d498f7fb2345992299f9a14fe0729ce88ac5b3117de520c",
+    "bytes": 1903,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/latest-status.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/monitor_remote.py",
+    "sha256": "fad45ab33f004b8552cf07c552b1502722322eb9a79eabdde6390904e329b7d7",
+    "bytes": 4254,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/monitor_remote.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/monitor_tracker.py",
+    "sha256": "3879277df2cb7807995ba2bafdd5f0f9de27ba03f4b87445de7a8dd708bcf718",
+    "bytes": 3884,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/monitor_tracker.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/monitor_tracker_attempt2.py",
+    "sha256": "4d05fd644a384920279a1a10604973afe8b82c35e1af91d85bea625ab8b7e525",
+    "bytes": 4082,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/monitor_tracker_attempt2.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/native-audit.json",
+    "sha256": "1ca083fcc27e66cd5be93cae2c97ee2d38e76021debe177cea61e2b8571f8852",
+    "bytes": 10133,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/native-audit.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/prepare_remote.py",
+    "sha256": "c49e8327ff6ae4c1595ca20b2869a5340c430320733e871fd31850e786a50e6f",
+    "bytes": 3762,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/prepare_remote.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/rank_gpu.py",
+    "sha256": "5ddac3962d48cd852982ce5b5f187d1cb6e30dcf5a2a6d3684c64ecd298097ca",
+    "bytes": 1477,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/rank_gpu.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/rank_gpu_runtime.py",
+    "sha256": "4dcf88e9ec2306c19e888e415fbb6a4a9e6691869b13c913087e152349c78e99",
+    "bytes": 2700,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/rank_gpu_runtime.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/rank_gpu_runtime_attempt2.py",
+    "sha256": "aa4c763dfb1077a7d42b07ffa6e98a07fb026883455911308d66344246445560",
+    "bytes": 2423,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/rank_gpu_runtime_attempt2.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/binaries.sha256",
+    "sha256": "a41869e1d49b1c712eab8bdf251c1603c12645907d6da582ac32906b5a7fc544",
+    "bytes": 1305,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/binaries.sha256"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/build.log",
+    "sha256": "ed98eb0aeb6dfa4610c0a144e7a1bfbbc12704df8e73fd81d3a6b12149898958",
+    "bytes": 212246,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/build.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/configure.log",
+    "sha256": "8da5527985865df56622d676772adf271b6b889ca88b84dba3cbb53ba692f79b",
+    "bytes": 18612,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/configure.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/dependency-sources.json",
+    "sha256": "b150fbc1770d25544990287187e1a87ca5178bc532c538442fc83136cdf05ca2",
+    "bytes": 1909,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/dependency-sources.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/TestCyclotronProbe-rank0.json",
+    "sha256": "ba55697609470eda3c07baf1e8de746f944251f5cf5a1f731b579a00c758872a",
+    "bytes": 413,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/testcyclotronprobe-rank0.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/TestCyclotronProbeMPI-rank0.json",
+    "sha256": "c9af3926bb04084108eeb4df006f64f947c14284492a317d597fe7b804be8ec4",
+    "bytes": 416,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/testcyclotronprobempi-rank0.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/TestCyclotronProbeMPI-rank1.json",
+    "sha256": "34a98f9c18a262817f4d90fa89d14264e97b24f20f38060b3e1c528c4d7937ec",
+    "bytes": 416,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/testcyclotronprobempi-rank1.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/TestCyclotronSector-rank0.json",
+    "sha256": "1292cde33a1489202cfd1b1daf26617d7fe0788c298cd546276b02a34306f07b",
+    "bytes": 414,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/testcyclotronsector-rank0.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/TestCyclotronSectorMPI-rank0.json",
+    "sha256": "05a4e30d7e7a3c727e30a4c36df9ca99d31448b3cee59d0ce212cedb491b4dd5",
+    "bytes": 417,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/testcyclotronsectormpi-rank0.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/TestCyclotronSectorMPI-rank1.json",
+    "sha256": "68a3d293199e70a0340f5dd7d8ed98a411f91fc35044b96eee2ed76923040464",
+    "bytes": 417,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/testcyclotronsectormpi-rank1.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/TestRFEventStep-rank0.json",
+    "sha256": "73603406927cb05a54086046deea1f3182af393a108fc84d104dd80cae91226f",
+    "bytes": 410,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/testrfeventstep-rank0.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/TestRFEventStepMPI-rank0.json",
+    "sha256": "80b4f6ed79f79e240dfdea0c320b2d5c246f579f76466aa700384f75d331a5ed",
+    "bytes": 413,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/testrfeventstepmpi-rank0.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/TestRFEventStepMPI-rank1.json",
+    "sha256": "204fc224059e15903f04fde07a69d3f5ee9a0aba7e86df905772b1cbf3006caf",
+    "bytes": 413,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/gpu-mapping/testrfeventstepmpi-rank1.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/job.log",
+    "sha256": "e6d3849f2dd5964a2f06668c812a01e5b5a2c2577d82b6efae511620a70fc9f3",
+    "bytes": 264903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/job.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/junit.xml",
+    "sha256": "488fe4bfaf52557588412549df8e1243de4cc121c2452797bf7858a54bae3bf1",
+    "bytes": 8225,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/junit.xml"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/prepare.log",
+    "sha256": "bf26464ed7de37ebd19518a3aae5ceebcb20004c978c74a37e41384533eae5c7",
+    "bytes": 2986,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/prepare.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/slurm-355081.out",
+    "sha256": "e6d3849f2dd5964a2f06668c812a01e5b5a2c2577d82b6efae511620a70fc9f3",
+    "bytes": 264903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/slurm-355081.out"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/source-manifest.json",
+    "sha256": "7a576692c71f5cd7815bdd6e09b1c3f67e8e782d6a71959f1426e15212b35907",
+    "bytes": 116662,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/source-manifest.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/source-verification.json",
+    "sha256": "13e9ac4ff92e6918b2bf3fe6a4979960b6cc256a8104daf467a0e1ae7e157089",
+    "bytes": 171,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/source-verification.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/status.tsv",
+    "sha256": "c7731aa146c79be7dfd54551632ec27ad734f1573acdf7cd2fa3df2b43a5251d",
+    "bytes": 80,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/status.tsv"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/submission.json",
+    "sha256": "5bb38ebf08e770ff3775cf90e6d18908228b0a7335d9ea9bb0ede0cecb8340d9",
+    "bytes": 265,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/submission.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/test-commands.log",
+    "sha256": "a1b433b2a35e0c35d10fe57f1f68d4dce836fe182d9ee48fb86a32ea252986ec",
+    "bytes": 3365,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/test-commands.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/tests.log",
+    "sha256": "2ffdfaa8581fea5bfdddb2b3c0d3e0c3170a7b1731e0015836ac937e8efffce8",
+    "bytes": 32964,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/evidence/tests.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/prepare_remote.py",
+    "sha256": "c49e8327ff6ae4c1595ca20b2869a5340c430320733e871fd31850e786a50e6f",
+    "bytes": 3762,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/prepare_remote.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/rank_gpu.py",
+    "sha256": "5ddac3962d48cd852982ce5b5f187d1cb6e30dcf5a2a6d3684c64ecd298097ca",
+    "bytes": 1477,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/rank_gpu.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/run.sbatch",
+    "sha256": "ae5efe594328801fb335fdb8675a609ef257f4ab4a8d7d8a1d25cc602fbe57c7",
+    "bytes": 3988,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/run.sbatch"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-native/src/source-manifest.json",
+    "sha256": "7a576692c71f5cd7815bdd6e09b1c3f67e8e782d6a71959f1426e15212b35907",
+    "bytes": 116662,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-native/src/source-manifest.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/evidence/binaries.sha256",
+    "sha256": "a41869e1d49b1c712eab8bdf251c1603c12645907d6da582ac32906b5a7fc544",
+    "bytes": 1305,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/evidence/binaries.sha256"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/evidence/submission-tracker.json",
+    "sha256": "2fd393a74b6546183234405cea2777403009c2e6283a02e1b8d657be4cc84e0c",
+    "bytes": 292,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/evidence/submission-tracker.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/cpu-reference.h5",
+    "sha256": "56972c675f412fa9826f4e3e5d8eebba81659c41d89543d2a9978bbccf096950",
+    "bytes": 30911,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/failure/Cyclotron-RF-Stop.in",
+    "sha256": "72016817ba4040d1483d9c0b8e411920933ac6c3afadd5fe676d4da9b077b662",
+    "bytes": 3241,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/failure/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/failure/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/failure/bunch.dat",
+    "sha256": "384a1df37d509c39fbb46bf61d8b79af6b29fed47b8cc91b65a21e75c4dabca5",
+    "bytes": 37908,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/failure/bunch.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/failure/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/failure/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/failure/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/failure/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/failure/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/failure/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/fixture-manifest.json",
+    "sha256": "ba3eb8bf36e999e64305711c5ef27cd0dcac0b6d8cdbd3257e4ea4d624664e38",
+    "bytes": 1482,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/fixture-manifest.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/valid/Cyclotron-RF-Stop.in",
+    "sha256": "0eafda92517b6c47a7c094ef31a03445dd738c60ba7a7db6bf28d37c1a4c5222",
+    "bytes": 3242,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/valid/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/valid/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/valid/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/valid/bunch.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/valid/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/valid/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/valid/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/valid/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/valid/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture/valid/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture-manifest.json",
+    "sha256": "ba3eb8bf36e999e64305711c5ef27cd0dcac0b6d8cdbd3257e4ea4d624664e38",
+    "bytes": 1482,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/fixture-manifest.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/job.log",
+    "sha256": "a310b77891803e1ab3280f92e7278704c44782a926d5fea35a186c1335524c9b",
+    "bytes": 2620,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/job.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/runs/valid-r1/Cyclotron-RF-Stop.in",
+    "sha256": "0eafda92517b6c47a7c094ef31a03445dd738c60ba7a7db6bf28d37c1a4c5222",
+    "bytes": 3242,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/runs/valid-r1/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/runs/valid-r1/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/runs/valid-r1/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/runs/valid-r1/bunch.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/runs/valid-r1/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/runs/valid-r1/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/runs/valid-r1/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/runs/valid-r1/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/runs/valid-r1/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/runs/valid-r1/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/runs/valid-r1/run.log",
+    "sha256": "13b490463c5290adb770751fcd433f8d215aa8740d4a8b5b4fd4a6d6cf448692",
+    "bytes": 662,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/runs/valid-r1/run.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/status.tsv",
+    "sha256": "131fd5a4c9092b82d1e1816b10827ad9a414cad6a7ec22a597430b063c82bf2a",
+    "bytes": 28,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/gpu-integration/status.tsv"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/rank_gpu_runtime.py",
+    "sha256": "4dcf88e9ec2306c19e888e415fbb6a4a9e6691869b13c913087e152349c78e99",
+    "bytes": 2700,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/rank_gpu_runtime.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/run-tracker.sbatch",
+    "sha256": "83debf3b09c49ac565fafe3f09d706070bf74e2d86169118444ac50d64fe43f5",
+    "bytes": 1996,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/run-tracker.sbatch"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/run_tracker_gpu.py",
+    "sha256": "383c411ed5831125de1eacea4cdd7d160ade1ecd9b1759e3a2f115f803e032c4",
+    "bytes": 3718,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-355082/run_tracker_gpu.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/cuda_metadata_attempt2",
+    "sha256": "e1367fc48d216389292e3df46f8bddfe04f0a2cd518b77903eb4040056fd21f1",
+    "bytes": 19536,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/cuda_metadata_attempt2.cpp",
+    "sha256": "07f62d5b062ecd3840c062e39ffd8b02425fc51ad95d01a64791bc093a7db6d4",
+    "bytes": 1380,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/cuda_metadata_attempt2.cpp"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/evidence/binaries.sha256",
+    "sha256": "a41869e1d49b1c712eab8bdf251c1603c12645907d6da582ac32906b5a7fc544",
+    "bytes": 1305,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/evidence/binaries.sha256"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/evidence/submission-tracker-attempt2.json",
+    "sha256": "7c19a93d5938d3516978eccbf23b16ab399e16ec255ec271e8d8b2b65b49cc34",
+    "bytes": 292,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/evidence/submission-tracker-attempt2.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/cpu-reference.h5",
+    "sha256": "56972c675f412fa9826f4e3e5d8eebba81659c41d89543d2a9978bbccf096950",
+    "bytes": 30911,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/failure/Cyclotron-RF-Stop.in",
+    "sha256": "72016817ba4040d1483d9c0b8e411920933ac6c3afadd5fe676d4da9b077b662",
+    "bytes": 3241,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/failure/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/failure/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/failure/bunch.dat",
+    "sha256": "384a1df37d509c39fbb46bf61d8b79af6b29fed47b8cc91b65a21e75c4dabca5",
+    "bytes": 37908,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/failure/bunch.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/failure/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/failure/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/failure/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/failure/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/failure/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/failure/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/fixture-manifest.json",
+    "sha256": "ba3eb8bf36e999e64305711c5ef27cd0dcac0b6d8cdbd3257e4ea4d624664e38",
+    "bytes": 1482,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/fixture-manifest.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/valid/Cyclotron-RF-Stop.in",
+    "sha256": "0eafda92517b6c47a7c094ef31a03445dd738c60ba7a7db6bf28d37c1a4c5222",
+    "bytes": 3242,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/valid/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/valid/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/valid/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/valid/bunch.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/valid/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/valid/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/valid/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/valid/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/valid/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture/valid/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture-manifest.json",
+    "sha256": "ba3eb8bf36e999e64305711c5ef27cd0dcac0b6d8cdbd3257e4ea4d624664e38",
+    "bytes": 1482,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/fixture-manifest.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/job.log",
+    "sha256": "e2d6a6794e021cb9b4feb5344807c9db5ba83a6f6babfb71e13869db8bcff5fa",
+    "bytes": 2944,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/job.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/metadata-probe.sha256",
+    "sha256": "b3a5f33987921b6af2b6a8a9a560ab7bd7f609841c36d4b246ca934eb08dece2",
+    "bytes": 322,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/metadata-probe.sha256"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/run-report.json",
+    "sha256": "a875e370f99e8b5b737eebc0781c3611f3aca386f854fb68e923508d506fc6d8",
+    "bytes": 10492,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/run-report.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/Cyclotron-RF-Stop.h5",
+    "sha256": "05aa4661a43d2ee743869cb9d76bce1644b2b3362d58c22017ab4c2006fca18a",
+    "bytes": 4476,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/Cyclotron-RF-Stop.in",
+    "sha256": "72016817ba4040d1483d9c0b8e411920933ac6c3afadd5fe676d4da9b077b662",
+    "bytes": 3241,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/bunch.dat",
+    "sha256": "384a1df37d509c39fbb46bf61d8b79af6b29fed47b8cc91b65a21e75c4dabca5",
+    "bytes": 37908,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/bunch.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "1c651e760ad5c1c8521dade73d80532665458a6fc439e070ec1fc06a3c4f0bea",
+    "bytes": 3016,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "51e4da66e4c9c3b4d533d8a4ad2054fe4563005d5ddf7b15316cfecb8d292ef3",
+    "bytes": 288633,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "06894f6bb3034a917bbbbad3e61d2884919165a94299e8f18301fa9bb6a99d23",
+    "bytes": 8484,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "c2265d1e31f20c2d5f4583ab618180f91502efc5f0cdcd22a47f9132a6537bb0",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/gpu-mapping/opalx-rank0.json",
+    "sha256": "f45f8398f359939b5f47db506bcd3589bcf271f5f9120f4c58ddf0eca1359aed",
+    "bytes": 869,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/gpu-mapping/opalx-rank0.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/launch.json",
+    "sha256": "9399354668aa46b80d0cdac9800dff29ec6d2f3a0da105bacfe52669dca29a6c",
+    "bytes": 2009,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/launch.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r1/run.log",
+    "sha256": "fc408776909b21631ec8d3186147a80dc88573a90426b076117510a07e4fc0b5",
+    "bytes": 11846,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/Cyclotron-RF-Stop.h5",
+    "sha256": "72cfcedd69bb624a76fd0309e241c96bf557ecb17a9d88a46b86ea52664b2f2c",
+    "bytes": 4476,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/Cyclotron-RF-Stop.in",
+    "sha256": "72016817ba4040d1483d9c0b8e411920933ac6c3afadd5fe676d4da9b077b662",
+    "bytes": 3241,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/bunch.dat",
+    "sha256": "384a1df37d509c39fbb46bf61d8b79af6b29fed47b8cc91b65a21e75c4dabca5",
+    "bytes": 37908,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/bunch.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "1c651e760ad5c1c8521dade73d80532665458a6fc439e070ec1fc06a3c4f0bea",
+    "bytes": 3016,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "51e4da66e4c9c3b4d533d8a4ad2054fe4563005d5ddf7b15316cfecb8d292ef3",
+    "bytes": 288633,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "15b29face7146841de415c019de41409d9ce2878d16493ada41fa31d6b581409",
+    "bytes": 8484,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "c2265d1e31f20c2d5f4583ab618180f91502efc5f0cdcd22a47f9132a6537bb0",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/gpu-mapping/opalx-rank0.json",
+    "sha256": "b0267aedda1410594b771370d64198bd8690ba654345f1df569a81c77f61d3be",
+    "bytes": 869,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/gpu-mapping/opalx-rank0.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/gpu-mapping/opalx-rank1.json",
+    "sha256": "d8dbc398b41f33605463e91ef1a61f4c54aaf7b95be69173fe3221fb21953b69",
+    "bytes": 869,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/gpu-mapping/opalx-rank1.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/launch.json",
+    "sha256": "4d805b541509a22af3a026e775ec428cbaf4c170231ad8db36936b6f31009144",
+    "bytes": 2954,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/launch.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/failure-r2/run.log",
+    "sha256": "ab066000060749d0fdcf76a1262d3a0f2558842dbee010f9295fe50c5a1f717c",
+    "bytes": 13672,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/Cyclotron-RF-Stop.h5",
+    "sha256": "ce26f9d3fd767bff1535f19becaa2f58386caca1390a6cdc40365f8c2f3f145c",
+    "bytes": 30926,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/Cyclotron-RF-Stop.in",
+    "sha256": "0eafda92517b6c47a7c094ef31a03445dd738c60ba7a7db6bf28d37c1a4c5222",
+    "bytes": 3242,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/Cyclotron-RF-Stop.stat",
+    "sha256": "aa0583f068a0e843cdaff385debab7e9b98372fe748e2b708bc0713f8b535345",
+    "bytes": 7855,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/bunch.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "cacc28a404387db3f057cebca6c7418049ce39dfdde24e46262d66a2dfdbda41",
+    "bytes": 3017,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "2f3c630d2d6aeed61f0e57c5d61fc863e4413cd6967d36c45b931e079ddb0cca",
+    "bytes": 288633,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "06894f6bb3034a917bbbbad3e61d2884919165a94299e8f18301fa9bb6a99d23",
+    "bytes": 8484,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "c2265d1e31f20c2d5f4583ab618180f91502efc5f0cdcd22a47f9132a6537bb0",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/gpu-mapping/opalx-rank0.json",
+    "sha256": "7dbc9b7dc237b0e1bd0d1b6a95479986daa74202ff93f66c5adb87df1a461a3e",
+    "bytes": 869,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/gpu-mapping/opalx-rank0.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/launch.json",
+    "sha256": "5ad77715ab08a7f6f2d0ebcffbe6903d4c634e30495eab9118c4e1646ddb8eed",
+    "bytes": 1784,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/launch.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/run.log",
+    "sha256": "458101e1bc275c6bad9f46f596045e1ce324cabfe46cd5c76c169d6e890a3ffd",
+    "bytes": 16602,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/run.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/timing.dat",
+    "sha256": "a6353f6815ea08ddb864131c10e69386751372fc27f5cecdb71ac2cfbac41b65",
+    "bytes": 1217,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r1/timing.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/Cyclotron-RF-Stop.h5",
+    "sha256": "3c3b4a82c0570b85f94ad6afc74eb127dd06f92d4b988850571d38632c971b54",
+    "bytes": 30926,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/Cyclotron-RF-Stop.in",
+    "sha256": "0eafda92517b6c47a7c094ef31a03445dd738c60ba7a7db6bf28d37c1a4c5222",
+    "bytes": 3242,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/Cyclotron-RF-Stop.stat",
+    "sha256": "734b552d649bf099a71063f200c8e6dddbc5620c70dbeaa7331d27114967650f",
+    "bytes": 7855,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/bunch.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "cacc28a404387db3f057cebca6c7418049ce39dfdde24e46262d66a2dfdbda41",
+    "bytes": 3017,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "2f3c630d2d6aeed61f0e57c5d61fc863e4413cd6967d36c45b931e079ddb0cca",
+    "bytes": 288633,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "15b29face7146841de415c019de41409d9ce2878d16493ada41fa31d6b581409",
+    "bytes": 8484,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "c2265d1e31f20c2d5f4583ab618180f91502efc5f0cdcd22a47f9132a6537bb0",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/gpu-mapping/opalx-rank0.json",
+    "sha256": "d73d8ec9eb664a9949b7d2c57de68f13f41c4c4c7e6e107eb7d592453bf9c2f9",
+    "bytes": 869,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/gpu-mapping/opalx-rank0.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/gpu-mapping/opalx-rank1.json",
+    "sha256": "ba1db4a0af6a6c5f13fb16767bf77119cfe211b277f8452243d573f739dcb014",
+    "bytes": 869,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/gpu-mapping/opalx-rank1.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/launch.json",
+    "sha256": "6a6e5fc86ef78635929aa821577bddad961283e9e8a0da9c8a010052513e8619",
+    "bytes": 2727,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/launch.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/run.log",
+    "sha256": "d3462a10e8a7acdac578d04ba4967d99983679987a04abf35d7361ead6a92da7",
+    "bytes": 24137,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/run.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/timing.dat",
+    "sha256": "d1237a0e4702c646d472f363dd330c310cc87455f4d49d10a4ab7131dc47d697",
+    "bytes": 2145,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/runs/valid-r2/timing.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/status.tsv",
+    "sha256": "2801a910bc3681dd572350c1b4c188c5e66fa71bfe9220ae5b556aaa0f79c668",
+    "bytes": 43,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/gpu-integration-final/status.tsv"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/rank_gpu_runtime_attempt2.py",
+    "sha256": "aa4c763dfb1077a7d42b07ffa6e98a07fb026883455911308d66344246445560",
+    "bytes": 2423,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/rank_gpu_runtime_attempt2.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/run-tracker-attempt2.sbatch",
+    "sha256": "f58c377df5156ac5df7d3328c25df4c0c32d995ecdeb336e5f51647a5741c5c0",
+    "bytes": 2252,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/run-tracker-attempt2.sbatch"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/run_tracker_gpu_attempt2.py",
+    "sha256": "3a31fbcec1c78b9b4e2467b6800bb95912951e97fd5f480e30d9f0686c68419c",
+    "bytes": 4032,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/run_tracker_gpu_attempt2.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/tracker-gpu-audit.json",
+    "sha256": "2012cb548e89275dbc1b43f44dd4f509a99a378859479a2f5c962a488ed76031",
+    "bytes": 9552,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/remote-tracker-final/tracker-gpu-audit.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/reproducibility-check.json",
+    "sha256": "f0d72f6ea52ed57edd3f5cdc5c015c7055ee00c7b17c8b67d88686482a4814f3",
+    "bytes": 1571,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/reproducibility-check.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/run-tracker-attempt2.sbatch",
+    "sha256": "f58c377df5156ac5df7d3328c25df4c0c32d995ecdeb336e5f51647a5741c5c0",
+    "bytes": 2252,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/run-tracker-attempt2.sbatch"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/run-tracker.sbatch",
+    "sha256": "83debf3b09c49ac565fafe3f09d706070bf74e2d86169118444ac50d64fe43f5",
+    "bytes": 1996,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/run-tracker.sbatch"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/run.sbatch",
+    "sha256": "ae5efe594328801fb335fdb8675a609ef257f4ab4a8d7d8a1d25cc602fbe57c7",
+    "bytes": 3988,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/run.sbatch"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/run_tracker_gpu.py",
+    "sha256": "383c411ed5831125de1eacea4cdd7d160ade1ecd9b1759e3a2f115f803e032c4",
+    "bytes": 3718,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/run_tracker_gpu.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/run_tracker_gpu_attempt2.py",
+    "sha256": "3a31fbcec1c78b9b4e2467b6800bb95912951e97fd5f480e30d9f0686c68419c",
+    "bytes": 4032,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/run_tracker_gpu_attempt2.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/setup.log",
+    "sha256": "56b5aca3d3104b61369c6fbebe304731e3a5888d0df1cf90c7b94888ef76c668",
+    "bytes": 1714,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/setup.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/snapshot_source.py",
+    "sha256": "deacec2eef6dfddf2984e75173e6172745aa001d4d738ea92723174614476086",
+    "bytes": 1962,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/snapshot_source.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/source-3320cf6fc490.tar.gz",
+    "sha256": "85722baa2123dc044f6d88dab95e6e2813e18d0ba75eab4d1c353a9e3f3ce22d",
+    "bytes": 2043695,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/source-663f93a30bef.tar.gz",
+    "sha256": "b0cce501c3e3141cf7fd296e9c8eb06406109e3b86794d14affaa3753681ecb8",
+    "bytes": 2043601,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/source-manifest.json",
+    "sha256": "7a576692c71f5cd7815bdd6e09b1c3f67e8e782d6a71959f1426e15212b35907",
+    "bytes": 116662,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/source-manifest.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/status-history.jsonl",
+    "sha256": "1c90f40fc17611e77bac7f35135afa5ac88231418fee1e10c7d91756ed630d53",
+    "bytes": 36719,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/status-history.jsonl"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/submission-plan.json",
+    "sha256": "753de2510fc3d1c6ac0ec4506a7973e861788d25f95e3cdc36494295e302261b",
+    "bytes": 493,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/submission-plan.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/submission-tracker-attempt2.json",
+    "sha256": "7c19a93d5938d3516978eccbf23b16ab399e16ec255ec271e8d8b2b65b49cc34",
+    "bytes": 292,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/submission-tracker-attempt2.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/submission-tracker.json",
+    "sha256": "2fd393a74b6546183234405cea2777403009c2e6283a02e1b8d657be4cc84e0c",
+    "bytes": 292,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/submission-tracker.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/submission.json",
+    "sha256": "f444a328753a68593358f0ab951229f9dc55fb4529f0417be2db04cef6f4fcc3",
+    "bytes": 377,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/submission.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/submit_tracker.py",
+    "sha256": "f68a98bedb0df46b5775d5fff71221e59d180f8ca6333d6d333fb5c9d7ee3f56",
+    "bytes": 2400,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/submit_tracker.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/submit_tracker_attempt2.py",
+    "sha256": "3deefae93f775425f249728d71ee69d8dd9b4cc5065673fc6a07bfde31ec55d4",
+    "bytes": 2445,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/submit_tracker_attempt2.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/summary.json",
+    "sha256": "cfa3d1a3116e79acfd794cdfad2d326c347d95690ea14edf3ccde52423d0161b",
+    "bytes": 3430,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/summary.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/superseded-663f93a30bef/prepare_remote.py",
+    "sha256": "048cb2ddf736d42c5e76c1ccbe949cd96cbc9508d57bbda0c5a4dfc2e2013b4a",
+    "bytes": 3762,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/superseded-663f93a30bef/prepare_remote.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/superseded-663f93a30bef/rank_gpu.py",
+    "sha256": "5ddac3962d48cd852982ce5b5f187d1cb6e30dcf5a2a6d3684c64ecd298097ca",
+    "bytes": 1477,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/superseded-663f93a30bef/rank_gpu.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/superseded-663f93a30bef/run.sbatch",
+    "sha256": "89c85e6db7a6666002a39e23fe1bdedf9fa6272d9c4c4a1a13852316c6248734",
+    "bytes": 3987,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/superseded-663f93a30bef/run.sbatch"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/superseded-663f93a30bef/source-manifest.json",
+    "sha256": "2b7ce24945e3bc16025045a51dfb791d6a429b77e4c0b2c31afa402b1894b9f6",
+    "bytes": 116656,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/superseded-663f93a30bef/source-manifest.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/superseded-663f93a30bef/status.json",
+    "sha256": "6af7893e775a8eb9ed76cd3750b9ea72b65a2dac9ea7fac1ef3f6fd37ced9a43",
+    "bytes": 433,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/superseded-663f93a30bef/status.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/superseded-663f93a30bef/submission-plan.json",
+    "sha256": "b5c701f9d13778b16d654f430972c1449d04d0e0536b5c0633871df01769c182",
+    "bytes": 493,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/superseded-663f93a30bef/submission-plan.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/terminal.json",
+    "sha256": "8d9edf92238ae96899a779244ada5a2eef29d2beefa5d213f9555732e7389b2c",
+    "bytes": 364,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/terminal.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-355082-failure.json",
+    "sha256": "111c449a0cf37cc51dd52647f6aeb61d8a7b5db23caaa715aecaec1158c73dac",
+    "bytes": 755,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/tracker-355082-failure.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-archive-remote.log",
+    "sha256": "e4aaf4bcd22fa657db45e7c26659e0320f56c78592bd77b40a1c7d21ac7a6279",
+    "bytes": 386,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/tracker-archive-remote.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-attempt2-archive-remote.log",
+    "sha256": "7b6b13517df66708780c4cef9c44c6c6f3f5848f70f7566abfb094c06db73157",
+    "bytes": 392,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/tracker-attempt2-archive-remote.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-attempt2-latest-status.json",
+    "sha256": "d2dd4bbe98a21d97c41e5f516fbf9f38cbd84022162822316a57519853bfdeed",
+    "bytes": 13670,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/tracker-attempt2-latest-status.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-attempt2-status-history.jsonl",
+    "sha256": "f905c267de39c917b99e5e4b3e29c0f93f54474afc09dac5d09ca2c09d0c2acb",
+    "bytes": 11154,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/tracker-attempt2-status-history.jsonl"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-attempt2-submission.log",
+    "sha256": "ac6fa88ff66bbb74821e1b9408b56dcb9216659ddada35e8a86f0ec65f628234",
+    "bytes": 566,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/tracker-attempt2-submission.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-attempt2-terminal.json",
+    "sha256": "efd7666a44a21ab59c4d19685f185905f7ca357892341afaf7dd3f6d12ca4340",
+    "bytes": 364,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/tracker-attempt2-terminal.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-attempt2-upload.log",
+    "sha256": "94dbeecfedf57900fced12d73898498aca6d71ec748d21eae0e0cf23f3c901ad",
+    "bytes": 219,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/tracker-attempt2-upload.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-audit-reproducibility.log",
+    "sha256": "2012cb548e89275dbc1b43f44dd4f509a99a378859479a2f5c962a488ed76031",
+    "bytes": 9552,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/tracker-audit-reproducibility.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-fetch-355082.log",
+    "sha256": "94dbeecfedf57900fced12d73898498aca6d71ec748d21eae0e0cf23f3c901ad",
+    "bytes": 219,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/tracker-fetch-355082.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-final-validation-evidence.tgz",
+    "sha256": "0f50f331268b8a039dc48878f92c5532b6e2bcc8d4411fd1ac64587274920f6c",
+    "bytes": 3379696,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-gpu-audit.json",
+    "sha256": "2012cb548e89275dbc1b43f44dd4f509a99a378859479a2f5c962a488ed76031",
+    "bytes": 9552,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/tracker-gpu-audit.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-gpu-audit.log",
+    "sha256": "2012cb548e89275dbc1b43f44dd4f509a99a378859479a2f5c962a488ed76031",
+    "bytes": 9552,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/tracker-gpu-audit.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-latest-status.json",
+    "sha256": "164a1480413831367998c6c0ccf568e3ffc429b1650596fba4c5cff0f4838ca4",
+    "bytes": 2500,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/tracker-latest-status.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-object-verification.json",
+    "sha256": "3281a41950932314691b6a49e29786837a14b9b725dda46ffa8b0e377e3801bb",
+    "bytes": 395,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/tracker-object-verification.json"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-status-history.jsonl",
+    "sha256": "822cc0530de0901c2361879160fe59a4036f2f1e54cc4119293ff62ba20cd439",
+    "bytes": 2356,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/tracker-status-history.jsonl"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-submission.log",
+    "sha256": "2492ea319bc4d4eab935222f9c2bfd827053962fa00c10c24ca4d09d7b09cc35",
+    "bytes": 566,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/a100/tracker-submission.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/tracker-validation-evidence-355082.tgz",
+    "sha256": "ca09d14668deac811c9f2340536f31e28e60663e308e686e008453e277dd9dd6",
+    "bytes": 1516399,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/upload_and_submit.py",
+    "sha256": "159c638364d5710a7c277b54ddd1a4b5bd0bbff7df1152c29ad0f88d2dc590e7",
+    "bytes": 2828,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/a100/upload_and_submit.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/a100/validation-evidence.tgz",
+    "sha256": "99b376a4cc223d61bf29dc3411f3501f654c91e029564812e17d9a59ac16492c",
+    "bytes": 173665,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/audit-fixes.patch",
+    "sha256": "086ee9daef99d86769fb4a2b960db9363f389549346df6f42b9db9ba85932bfe",
+    "bytes": 31443,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/audit-fixes.patch"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/build-final.log",
+    "sha256": "1e854633c8aa4e7723bac4a77004140c464724044037f48e92807c8598e1ff32",
+    "bytes": 6336,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/build-final.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/build.log",
+    "sha256": "3490d825f5f257ff98f794fc8484ef46331f14923f10d57da19ee199d8ed63a0",
+    "bytes": 8231,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/build.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/Cyclotron-RF-Stop.h5",
+    "sha256": "cf0428a8d189796d3cea776de7400a5e34ed545cfa0419acb7e003796e7d8bc8",
+    "bytes": 30911,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/Cyclotron-RF-Stop.in",
+    "sha256": "f11be86f9527274c0110b9e7a28b96b71d01c32b7f2fdde192889f152d315b24",
+    "bytes": 3373,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/Cyclotron-RF-Stop.stat",
+    "sha256": "9609765f35ee80502c50c3d5d0fa332b17546cb6818da4e4f07951679018f8b8",
+    "bytes": 7839,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/bunch.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "8c6bcdb4a2cc4306ae8f5682672b152fa2fde850381f0a6a9b38be3ace074700",
+    "bytes": 3148,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "84734f16cf9c5c4fd914be8e6233dfbb397c21240d943b794bee86816361019a",
+    "bytes": 290567,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "f873713307c275721cb79d7114cadf36f481225184bd3a33647c95bc26667ffd",
+    "bytes": 7801,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/run.log",
+    "sha256": "6a161dbebbe8a6b18855005832f8e913d98aff036e9ba4018c9a5be860b0a4bf",
+    "bytes": 25013,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/run.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/timing.dat",
+    "sha256": "503b9c7c9d4b221bebe6907f65f7b484a9a57ad1768433a0eed7046c59fb163e",
+    "bytes": 2783,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-one/timing.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/Cyclotron-RF-Stop.h5",
+    "sha256": "213785382925016327d1400ee0b8d1db424a6a32680e22fbd79c8ac2a3780ee0",
+    "bytes": 30911,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/Cyclotron-RF-Stop.in",
+    "sha256": "f11be86f9527274c0110b9e7a28b96b71d01c32b7f2fdde192889f152d315b24",
+    "bytes": 3373,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/Cyclotron-RF-Stop.stat",
+    "sha256": "0908479557f2f6268b5106f2c9c044f91da17529ece7ffe0b31ab1a4a3782030",
+    "bytes": 7839,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/bunch.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "8c6bcdb4a2cc4306ae8f5682672b152fa2fde850381f0a6a9b38be3ace074700",
+    "bytes": 3148,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "ee690b8fadab1ce99725bee6c770bc5c79e7396634411623f5632d4f0eea1091",
+    "bytes": 288633,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "5f2a439ab64682b00468953577efc51277d623568c5ad63621ea05394f978b6d",
+    "bytes": 8472,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/run.log",
+    "sha256": "a4643ddb8eae0daace80476a75b362336a98be9ab5e90179e9f13522525442ca",
+    "bytes": 32367,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/run.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/timing.dat",
+    "sha256": "d4363d58ec96e4f0c820933e5bbc2e3d7787fb146f6d366e732a6c714ba1603d",
+    "bytes": 3711,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/charged-two/timing.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/Cyclotron-RF-Stop.h5",
+    "sha256": "2c0ae1fc0fc8ef697a8efcd64c89e97718c007c9471283a41a6e736e27a09246",
+    "bytes": 30911,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/Cyclotron-RF-Stop.in",
+    "sha256": "7f0e20887e9fd94ff3d24c996b6557ac3ef4e2cb6e7f8d90f87c7a725b0f1d09",
+    "bytes": 3373,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/Cyclotron-RF-Stop.stat",
+    "sha256": "5e9ffd845dbc23a6319faae2ac484a9f57ce42ed413dc1d778a03abadcd9a179",
+    "bytes": 7840,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/bunch.dat",
+    "sha256": "9ff858ad11fc477d6b9e12d9c8d066cdae69b0dc3f47ba0bd2558590e2e70e52",
+    "bytes": 37907,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/bunch.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/data/Cyclotron-RF-Stop_3D.opal",
+    "sha256": "a91fcc6c5c36425033a0e00fdb5a60aa4be2c65ebdeaca5ca5e7d2d132655737",
+    "bytes": 3148,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/data/cyclotron-rf-stop_3d.opal"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/data/Cyclotron-RF-Stop_DesignPath.dat",
+    "sha256": "84734f16cf9c5c4fd914be8e6233dfbb397c21240d943b794bee86816361019a",
+    "bytes": 290567,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/data/cyclotron-rf-stop_designpath.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/data/Cyclotron-RF-Stop_ElementPositions.py",
+    "sha256": "fe91b2912caa3094c00724f38c5ded60130993d83a37eb11426546ff2e370794",
+    "bytes": 25903,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/data/cyclotron-rf-stop_elementpositions.py"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/data/Cyclotron-RF-Stop_ElementPositions.sdds",
+    "sha256": "f873713307c275721cb79d7114cadf36f481225184bd3a33647c95bc26667ffd",
+    "bytes": 7801,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/data/cyclotron-rf-stop_elementpositions.sdds"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/data/Cyclotron-RF-Stop_ElementPositions.txt",
+    "sha256": "902f087325a954d17587b70d5aad9b0422a9a5f2c8901624265d92c399a0acf5",
+    "bytes": 38250,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/data/cyclotron-rf-stop_elementpositions.txt"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/proton.dat",
+    "sha256": "5ee8f37a669d08c1ca46f86e6e7caab9817d76032ce41ad05a8a4000d80a6399",
+    "bytes": 59,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/proton.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/reference/Cyclotron-RF-Stop.stat",
+    "sha256": "80eb0fc69ffe9b116fb9a4f61a764799ec0091c83b2f83cd6a1200a8e99917d6",
+    "bytes": 7772,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/reference/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/reference/Cyclotron-RF-Stop.stat.md5",
+    "sha256": "d37f7af16dc4b474fe4924ce87649d9751e7b5d42f41d3524fc29ae65f995d16",
+    "bytes": 57,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/reference/cyclotron-rf-stop.stat.md5"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/rffield1.dat",
+    "sha256": "ace4ff9c468874a99a5389a7b9deb4aed9f3620c76f6176880e605d34cf4465b",
+    "bytes": 439,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/rffield1.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/rffield2.dat",
+    "sha256": "7e7b3201abbbffddc02a181b103b24e56e12e79585b933c5705067efad2de5c2",
+    "bytes": 581,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/rffield2.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/run.log",
+    "sha256": "6b7c1d6cc18c91a34bbb4085305f945ada82dec88f7a2f40119cbda2b9bb48d7",
+    "bytes": 25009,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/run.log"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/timing.dat",
+    "sha256": "05cf7064753c214cb112905e6f881a7c625753f5114c35ed101921c3bf0f1c74",
+    "bytes": 2783,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/near-zero/timing.dat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/none/Cyclotron-RF-Stop.h5",
+    "sha256": "8bb40c30bef4ac8bcad97a3568f88005f8c54038b23b0ca2a0f9c559645c881c",
+    "bytes": 30911,
+    "disposition": "excluded-large-binary-or-generated"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/none/Cyclotron-RF-Stop.in",
+    "sha256": "0eafda92517b6c47a7c094ef31a03445dd738c60ba7a7db6bf28d37c1a4c5222",
+    "bytes": 3242,
+    "disposition": "retained-text",
+    "archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/none/cyclotron-rf-stop.in"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/none/Cyclotron-RF-Stop.local",
+    "sha256": "f383f4fc78819db6eb2c7b3045087dfe207454802606955d6e9b611546f75a01",
+    "bytes": 223,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/none/cyclotron-rf-stop.local"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/none/Cyclotron-RF-Stop.rt",
+    "sha256": "53dbbf39f7221bcd1dff85e6bbc2025159dc7cf24a550ee1f1094aef33d991e1",
+    "bytes": 754,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/none/cyclotron-rf-stop.rt"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/none/Cyclotron-RF-Stop.stat",
+    "sha256": "4c47f2c89a1105825be578e7c974a32e95491bee4eaad074315e355c2821db5e",
+    "bytes": 7840,
+    "disposition": "removed-generated-output-during-compaction",
+    "removed_archive": "local/tmp/pr637-audit-fixes-20261109/bunch-baseline/none/cyclotron-rf-stop.stat"
+  },
+  {
+    "original": "tmp/pr637-audit-fixes-20261109/bunch-baseline/none/bfield.dat",
+    "sha256": "0bd65560cfe7c92df55e64a17058d6d856cc3b75d4737a2a100bcbbe97b0d305",
+    "bytes": 1257715,
+    "disposition": "excluded-large-binary-or-generated"
+  }
+]

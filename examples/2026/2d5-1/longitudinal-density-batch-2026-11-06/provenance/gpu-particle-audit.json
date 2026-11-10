@@ -1,0 +1,56 @@
+[
+  {
+    "backend": "gpu",
+    "ranks": 1,
+    "steps": 100,
+    "max_position_m": 3.4129247162130336e-13,
+    "max_momentum": 1.0905770544833097e-12,
+    "particles": 100000,
+    "charge_C": 5.602212333965893e-09
+  },
+  {
+    "backend": "gpu",
+    "ranks": 1,
+    "steps": 1000,
+    "max_position_m": 1.9017439521242093e-12,
+    "max_momentum": 2.2219596172810467e-12,
+    "particles": 100000,
+    "charge_C": 5.602212333965893e-09
+  },
+  {
+    "backend": "gpu",
+    "ranks": 2,
+    "steps": 100,
+    "max_position_m": 3.363608154962841e-13,
+    "max_momentum": 4.6440416041734096e-15,
+    "particles": 100000,
+    "charge_C": 5.602212333965893e-09
+  },
+  {
+    "backend": "gpu",
+    "ranks": 2,
+    "steps": 1000,
+    "max_position_m": 1.5126573777546775e-12,
+    "max_momentum": 2.255419325228367e-12,
+    "particles": 100000,
+    "charge_C": 5.602212333965893e-09
+  },
+  {
+    "backend": "gpu",
+    "ranks": 3,
+    "steps": 100,
+    "max_position_m": 2.5517471519550723e-13,
+    "max_momentum": 4.427829555622071e-15,
+    "particles": 100000,
+    "charge_C": 5.602212333965893e-09
+  },
+  {
+    "backend": "gpu",
+    "ranks": 3,
+    "steps": 1000,
+    "max_position_m": 1.6386719047682986e-12,
+    "max_momentum": 3.3756088675701835e-12,
+    "particles": 100000,
+    "charge_C": 5.602212333965893e-09
+  }
+]

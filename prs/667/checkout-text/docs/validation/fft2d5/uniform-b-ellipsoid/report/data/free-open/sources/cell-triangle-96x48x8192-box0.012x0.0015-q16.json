@@ -1,0 +1,52 @@
+{
+  "profile": "triangle",
+  "path": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/cell-triangle-96x48x8192-box0.012x0.0015-q16.h5",
+  "probe_checkpoint": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/cell-triangle-96x48x8192-box0.012x0.0015-q16-probes.h5",
+  "path_sha256": "cdbdd9ddb45207dcc3bbfd1ab1e7daecb8f3f29a7c9891bcc6f4abf0aebac21d",
+  "probe_checkpoint_sha256": "599f37b522c870564e302d983154e7e16fe7667a5b7dee71f794f984ec2b5497",
+  "sha256": "cdbdd9ddb45207dcc3bbfd1ab1e7daecb8f3f29a7c9891bcc6f4abf0aebac21d",
+  "ns": 5120,
+  "nrad": 96,
+  "nphi": 48,
+  "ncross": 2110,
+  "source_particles": 10803200,
+  "probe_particles": 51,
+  "total_particles": 10803251,
+  "nominal_charge_C": 1e-11,
+  "source_charge_C": 1.0000000000000001e-11,
+  "macrocharge_C": 9.256516587677724e-19,
+  "full_charge_C": 1.0000047208234598e-11,
+  "probe_charge_C": 4.72082345971564e-17,
+  "q_dataset_sha256": "5ede6946e2d93ef27e125df1b99468bfd3281e5be912c823e3169bcd3274c401",
+  "m_dataset_sha256": "be49dcc14e3f3832f2be196421a544d4b73467daa01b0cc7984f119f7ea598a1",
+  "probe_q_dataset_sha256": "1adf35ee3012092d22906ec8a77f72b211d5b45631fd5380ae618a93c6dad1af",
+  "probe_m_dataset_sha256": "8ced12e38b46027c94cffb1b72895d965aa8d3a3895b42cd15960aa418e80a61",
+  "source_mesh": [
+    96,
+    48,
+    8192
+  ],
+  "source_box_m": [
+    0.012,
+    0.0015
+  ],
+  "cell_area_gauss_order": 16,
+  "integrated_cross_J_m2": 7.853981635769033e-06,
+  "exact_cross_J_m2": 7.853981633974484e-06,
+  "cross_area_relative_error": 2.2848922753837542e-10,
+  "profile_long_integral_m": 2.5,
+  "normalization_density_C_m3": 5.092958177776965e-07,
+  "layout": "physical-cell-charge",
+  "longitudinal_stagger": false,
+  "physical_density": "q_i=normalization times exact profile integral ds times ellipse-cell integral (1+u/R) du dy",
+  "quadrature": "occupied physical source-grid cell centres; no field fitting; partial ellipse boundary cell masses integrated",
+  "mass_policy": "m_i=q_i/e times proton mass[GeV], preserving physical proton q/m",
+  "initialization": "existing native checkpoint QM_MODE=ATTRIBUTES",
+  "generator_sha256": "833789fda37601fd56892edccb0703ca8a1afd649f16aea543475cf1eacd00a4",
+  "generator_snapshots": {
+    "cell": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/generators/833789fda37601fd56892edccb0703ca8a1afd649f16aea543475cf1eacd00a4.py",
+    "weighted": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/generators/a8f6c09106460448223ecc4080fd9152043d56b659b043b0991973ba36587e2e.py",
+    "base": "/Users/adelmann/git/OPALX-2D5/curved-study/sacr/free-r2-profiles/sources/generators/6b48bd3613451aaac40491e975e15461e0d59e0c3ec9eeda4263c25a895bcecd.py"
+  },
+  "points_sha256": "5db3d25964f7ba296bc5adaf8a102ad0ee6f5bad77f9f864fc74af4ce4eab46a"
+}

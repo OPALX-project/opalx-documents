@@ -1,0 +1,56 @@
+{
+  "research_date": "2026-11-01",
+  "scope": "Primary-literature comparison with the completed frozen-field study; no new simulation or solver change",
+  "case": {
+    "length_m": 5,
+    "bend_radius_m": 2,
+    "radial_semiaxis_m": 0.005,
+    "vertical_semiaxis_m": 0.0005,
+    "charge_C": 1e-11,
+    "beta": 0.001,
+    "profile": "Uniform physical density, constant elliptical cross-section, sharp ends, open space",
+    "local_a_over_R": 0.0025,
+    "total_angle_rad": 2.5,
+    "approximately_gamma_sigma_s_over_sigma_r": 577.35,
+    "observable": "Raw lab electric field at matched material points; not a reference-subtracted or complete Lorentz-force tracking benchmark"
+  },
+  "source_families": [
+    "Traditional independent transverse Poisson slices, with differing optional longitudinal closures",
+    "Local equivalent line-density-gradient field with profile/boundary/averaging-dependent g",
+    "Common-potential symplectic 2.5D models with longitudinal kicks and reference-scale matching",
+    "Nonlocal longitudinal impedance/Green-function methods retaining finite transverse extent",
+    "Curved-orbit remapping and curved-Poisson corrections, which are separate requirements"
+  ],
+  "interpretation": [
+    "The current hard-ended case exposes limitations of this particular local closure; it does not invalidate every method called 2.5D.",
+    "Global slenderness does not supply slow longitudinal variation at a sharp end. Changing a finite constant g cannot create the finite-width interior end-field tail where resolved lambda-prime vanishes.",
+    "The cited PyHEADTAIL paper uses 6.36 in one free-space example. The accompanying thesis gives a shape-dependent free-space g0. Neither establishes a universal OpenG0=6.36 for our elliptical source.",
+    "Round-pipe on-axis, transverse-average, equivalent-ellipsoid and constant-density-radius-variation g conventions differ and must not be mixed.",
+    "The native transverse refinement is stable and bulk fields are close on the stated characteristic scale. That scale is unsuitable as the sole accuracy criterion for the much smaller midpoint curvature field.",
+    "Small a/R is a local condition, distinct from total bunch angle L/R. The 143-degree extent alone does not invalidate a local Frenet expansion.",
+    "Qiang's 2025 published paper and updated 2026 preprint must be distinguished. The latter adds explicit r0 matching to the 3D longitudinal Gaussian field.",
+    "The displayed regularized curvature correction has zero radial derivative on axis. This is our mathematical inference, not a stated intentional reference-force subtraction. Quantitative finite-arc hoop-field comparison needs matched global boundary conditions and field/force conventions.",
+    "Numerical vacuum padding and physical outer matching are different issues. The exact matched straight constant-tube and padding controls have not yet been run.",
+    "The new accepted FFA paper has only an accessible abstract here. Its detailed parameters and quantitative accuracy are not inferred from that abstract or from an older proceedings paper."
+  ],
+  "additional_primary_reference": {
+    "authors": "M. J. L. de Hoon, E. P. Lee, J. J. Barnard, A. Friedman",
+    "title": "Cold phase fluid model of the longitudinal dynamics of space-charge-dominated beams",
+    "publication": "Physics of Plasmas 10, 855-861 (2003)",
+    "doi": "10.1063/1.1541015",
+    "institutional_preprint": "https://escholarship.org/uc/item/9n40q129",
+    "original_manuscript_access": "https://www.researchgate.net/publication/234991093_Cold_phase_fluid_model_of_the_longitudinal_dynamics_of_space-charge-dominated_beams",
+    "version": "Original author-uploaded March 2002 LBNL manuscript read; 2003 journal metadata verified",
+    "relevant_locations": "Sections I-III, Eqs. 4-16",
+    "scope_limit": "Straight circularized beam in circular conducting pipe; transverse-averaged longitudinal field. Its R is pipe radius, not our bending radius."
+  },
+  "proposed_controls_not_run": [
+    "Identical finite constant-section tube in straight geometry, then change vacuum padding at fixed cell spacing and alignment",
+    "Positive long/smooth-profile benchmarks with an independent full-field reference and correctly derived g or reference scale; include transverse averages and raw point fields",
+    "Curvature-only absolute-field comparison with global physical matching, followed by a controlled nonlocal longitudinal model if finite ends matter",
+    "Self-consistent tracking only after field-level scope and accuracy are documented"
+  ],
+  "evidence_files": ["longitudinal/evidence.json", "curvature/evidence.json", "scope/evidence.json"],
+  "current_report_operation": "Literature extension in progress; report agent owns report source and has been instructed to run one new PDF edit marker before authoring",
+  "no_new_runs_or_code_changes": true
+}

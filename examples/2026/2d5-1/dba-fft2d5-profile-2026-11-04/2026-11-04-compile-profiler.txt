@@ -1,0 +1,4 @@
+cd /Users/adelmann/git/opalx
+/usr/bin/clang++ -std=c++17 -O2 -dynamiclib -I build-omp/_deps/ippl-build/_deps/kokkos-src/core/src build-omp/profiling/fft2d5/kernel_timer.cpp -o build-omp/profiling/fft2d5/libkernel_timer.dylib
+
+Only the profiling library is compiled. The OPALX executable is unchanged. The archived C++ source can be copied to the source path above if needed.
