@@ -54718,7 +54718,7 @@ assets:
     description: Historical experimental source, test, patch or provenance text; not
       a validated current solver.
     status: archived
-    sha256: 109269e40b0d747a3a79eb8aefded713e80cdaca37ed72405a15d4a89099015e
+    sha256: c7af77da514ef8e0fca854e7a090ae8803c1c1c0159b662f15c7f618f949255c
   - title: PR 667 preserved build records — patches/tracked-changes.patch
     date: null
     category: prs
@@ -54968,7 +54968,7 @@ assets:
     description: Historical experimental source, test, patch or provenance text; not
       a validated current solver.
     status: archived
-    sha256: beadaa407686178b2ba992bc437f44018c585ac295f9c858d4959e25cc77a8ea
+    sha256: 4b93ca77b57d759befc1bc31ff5beaff78d35dc4c03b693679576597175e765d
   - title: PR 667 preserved build records — sources/src/absbeamline/scalingffasupport.h
     date: null
     category: prs
@@ -55088,4 +55088,86 @@ assets:
     description: Historical experimental source, test, patch or provenance text; not
       a validated current solver.
     status: archived
-    sha256: 049ce678321880f743e8e6fad5ff7343b22f46824b7d77dac9d3f1405c6bc975
+    sha256: 62e47da8d783c55c9955d1de60c304151b5c36d301ec48a7de435043f31d4b12
+
+  - title: PR 667 before-switch snapshot — src/spacecharge/fft2d5/fft2d5algorithm.h
+    date: null
+    category: prs
+    source: /Users/adelmann/git/opalx-original-model-switch-record/before/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h;
+      modification date and checksum in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/before/src/spacecharge/fft2d5/fft2d5algorithm.h
+    description: Historical source snapshot before the original-model switch; not current
+      production code
+    status: archived
+    sha256: 3ef4f518b7b9f1c5efffcb4f02c2551ef3822b865b5a19041092b749a263f9ea
+  - title: PR 667 before-switch snapshot — src/spacecharge/spacechargeconfig.h
+    date: null
+    category: prs
+    source: /Users/adelmann/git/opalx-original-model-switch-record/before/src/SpaceCharge/SpaceChargeConfig.h;
+      modification date and checksum in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/before/src/spacecharge/spacechargeconfig.h
+    description: Historical source snapshot before the original-model switch; not current
+      production code
+    status: archived
+    sha256: 0633327e937ba0262eec6fbd4f652e66ca96a870ec8bf5bcda05019bc9e1ca5f
+  - title: PR 667 before-switch snapshot — src/spacecharge/spacechargeconfigbuilder.cpp
+    date: null
+    category: prs
+    source: /Users/adelmann/git/opalx-original-model-switch-record/before/src/SpaceCharge/SpaceChargeConfigBuilder.cpp;
+      modification date and checksum in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/before/src/spacecharge/spacechargeconfigbuilder.cpp
+    description: Historical source snapshot before the original-model switch; not current
+      production code
+    status: archived
+    sha256: 1b298282d3cd4171c4d3e097752e9a4ab883c58a177e790ced752a9017284cf6
+  - title: PR 667 before-switch snapshot — src/structure/fieldsolvercmd.cpp
+    date: null
+    category: prs
+    source: /Users/adelmann/git/opalx-original-model-switch-record/before/src/Structure/FieldSolverCmd.cpp;
+      modification date and checksum in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/before/src/structure/fieldsolvercmd.cpp
+    description: Historical source snapshot before the original-model switch; not current
+      production code
+    status: archived
+    sha256: 101515fb9b2b59dd5c529a76c9b875992e21444d5cb484fd008b98d0177ebc54
+  - title: PR 667 before-switch snapshot — src/structure/fieldsolvercmd.h
+    date: null
+    category: prs
+    source: /Users/adelmann/git/opalx-original-model-switch-record/before/src/Structure/FieldSolverCmd.h;
+      modification date and checksum in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/before/src/structure/fieldsolvercmd.h
+    description: Historical source snapshot before the original-model switch; not current
+      production code
+    status: archived
+    sha256: c31eb37f754754ef4f22bb877bbf13677bd018da468f73efe34d85d74b847f15
+  - title: PR 667 before-switch snapshot — unit_tests/spacecharge/testfft2d5algorithm.cpp
+    date: null
+    category: prs
+    source: /Users/adelmann/git/opalx-original-model-switch-record/before/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp;
+      modification date and checksum in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/before/unit_tests/spacecharge/testfft2d5algorithm.cpp
+    description: Historical source snapshot before the original-model switch; not current
+      production code
+    status: archived
+    sha256: b045f6159dea00d035ee2e07b7530960fa58266e0e6cadd207f19f0cd58e0ef1
+  - title: PR 667 before-switch snapshot — unit_tests/spacecharge/testspacechargeconfig.cpp
+    date: null
+    category: prs
+    source: /Users/adelmann/git/opalx-original-model-switch-record/before/unit_tests/SpaceCharge/TestSpaceChargeConfig.cpp;
+      modification date and checksum in prs/667/local/build-records/inventory.json
+    destination: prs/667/local/build-records/before/unit_tests/spacecharge/testspacechargeconfig.cpp
+    description: Historical source snapshot before the original-model switch; not current
+      production code
+    status: archived
+    sha256: 0a7c53ef059d6c6cbf07d278a261ab201ecb5ecf5bf0b05660522e130d08abc9
+
+  - title: PR 667 local record cleanup audit log
+    date: null
+    category: prs
+    source: /Users/adelmann/git/opalx-record-cleanup.json; moved unchanged on 2026-11-10
+    destination: prs/667/local/build-records/provenance/opalx-record-cleanup.json
+    description: Historical cleanup decisions, preserved SHA-256 digests, archive migration
+      and follow-up issue. Paths and publication status describe their recorded historical
+      state.
+    status: archived
+    sha256: de0e77aab8ea9f6320d0fa34143662655abf6e0833455ef18d8b2a8d2e91bcd5

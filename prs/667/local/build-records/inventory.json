@@ -443,6 +443,76 @@
       "origin": {
         "path": "/Users/adelmann/git/opalx-original-model-switch-record/provenance.json"
       }
+    },
+    {
+      "destination": "prs/667/local/build-records/before/src/spacecharge/fft2d5/fft2d5algorithm.h",
+      "size": 29334,
+      "sha256": "3ef4f518b7b9f1c5efffcb4f02c2551ef3822b865b5a19041092b749a263f9ea",
+      "origin": {
+        "path": "/Users/adelmann/git/opalx-original-model-switch-record/before/src/SpaceCharge/FFT2D5/FFT2D5Algorithm.h",
+        "mtime_utc": "2026-11-03T21:30:33.357563+00:00"
+      },
+      "description": "Historical source snapshot before the original-model switch; not current production code"
+    },
+    {
+      "destination": "prs/667/local/build-records/before/src/spacecharge/spacechargeconfig.h",
+      "size": 7049,
+      "sha256": "0633327e937ba0262eec6fbd4f652e66ca96a870ec8bf5bcda05019bc9e1ca5f",
+      "origin": {
+        "path": "/Users/adelmann/git/opalx-original-model-switch-record/before/src/SpaceCharge/SpaceChargeConfig.h",
+        "mtime_utc": "2026-11-02T20:46:10.131548+00:00"
+      },
+      "description": "Historical source snapshot before the original-model switch; not current production code"
+    },
+    {
+      "destination": "prs/667/local/build-records/before/src/spacecharge/spacechargeconfigbuilder.cpp",
+      "size": 18350,
+      "sha256": "1b298282d3cd4171c4d3e097752e9a4ab883c58a177e790ced752a9017284cf6",
+      "origin": {
+        "path": "/Users/adelmann/git/opalx-original-model-switch-record/before/src/SpaceCharge/SpaceChargeConfigBuilder.cpp",
+        "mtime_utc": "2026-11-02T20:44:42.981402+00:00"
+      },
+      "description": "Historical source snapshot before the original-model switch; not current production code"
+    },
+    {
+      "destination": "prs/667/local/build-records/before/src/structure/fieldsolvercmd.cpp",
+      "size": 13710,
+      "sha256": "101515fb9b2b59dd5c529a76c9b875992e21444d5cb484fd008b98d0177ebc54",
+      "origin": {
+        "path": "/Users/adelmann/git/opalx-original-model-switch-record/before/src/Structure/FieldSolverCmd.cpp",
+        "mtime_utc": "2026-11-02T21:48:06.608470+00:00"
+      },
+      "description": "Historical source snapshot before the original-model switch; not current production code"
+    },
+    {
+      "destination": "prs/667/local/build-records/before/src/structure/fieldsolvercmd.h",
+      "size": 5504,
+      "sha256": "c31eb37f754754ef4f22bb877bbf13677bd018da468f73efe34d85d74b847f15",
+      "origin": {
+        "path": "/Users/adelmann/git/opalx-original-model-switch-record/before/src/Structure/FieldSolverCmd.h",
+        "mtime_utc": "2026-11-02T20:46:10.137985+00:00"
+      },
+      "description": "Historical source snapshot before the original-model switch; not current production code"
+    },
+    {
+      "destination": "prs/667/local/build-records/before/unit_tests/spacecharge/testfft2d5algorithm.cpp",
+      "size": 28254,
+      "sha256": "b045f6159dea00d035ee2e07b7530960fa58266e0e6cadd207f19f0cd58e0ef1",
+      "origin": {
+        "path": "/Users/adelmann/git/opalx-original-model-switch-record/before/unit_tests/SpaceCharge/TestFFT2D5Algorithm.cpp",
+        "mtime_utc": "2026-11-03T21:37:55.400758+00:00"
+      },
+      "description": "Historical source snapshot before the original-model switch; not current production code"
+    },
+    {
+      "destination": "prs/667/local/build-records/before/unit_tests/spacecharge/testspacechargeconfig.cpp",
+      "size": 26011,
+      "sha256": "0a7c53ef059d6c6cbf07d278a261ab201ecb5ecf5bf0b05660522e130d08abc9",
+      "origin": {
+        "path": "/Users/adelmann/git/opalx-original-model-switch-record/before/unit_tests/SpaceCharge/TestSpaceChargeConfig.cpp",
+        "mtime_utc": "2026-11-02T20:46:10.144586+00:00"
+      },
+      "description": "Historical source snapshot before the original-model switch; not current production code"
     }
   ],
   "notes": [
@@ -450,6 +520,7 @@
     "Original metadata is historical and may reference previously deleted executables or logs.",
     "Identical source members from both archives map to one destination.",
     "All original archive members in untracked-code.tar.gz, including ScalingFFASupport.h, are represented.",
-    "Mixed conversion-tool material in untracked-work.tar.gz remains outside this archive."
+    "Mixed conversion-tool material in untracked-work.tar.gz remains outside this archive.",
+    "Seven before/ source snapshots added on 2026-11-10, byte-verified before removing the original-model-switch record."
   ]
 }

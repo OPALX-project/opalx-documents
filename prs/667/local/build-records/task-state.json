@@ -26,7 +26,42 @@
   ],
   "retained_mixed_archive": "/Users/adelmann/git/opalx-checkout-667-record/untracked-work.tar.gz",
   "remaining_risks": [
-    "Historical code was not compiled or numerically revalidated; do not apply directly to current sources.",
-    "Full repository validator has seven pre-existing unrelated uncataloged files."
-  ]
+    "Historical experimental code has not been revalidated numerically.",
+    "New before-switch snapshots and follow-up records are not yet committed or pushed."
+  ],
+  "cleanup_followup": {
+    "status": "complete",
+    "goal": "Archive seven before-switch snapshots and remove four authorized record directories",
+    "date": "2026-11-10",
+    "snapshots": [
+      "prs/667/local/build-records/before/src/spacecharge/fft2d5/fft2d5algorithm.h",
+      "prs/667/local/build-records/before/src/spacecharge/spacechargeconfig.h",
+      "prs/667/local/build-records/before/src/spacecharge/spacechargeconfigbuilder.cpp",
+      "prs/667/local/build-records/before/src/structure/fieldsolvercmd.cpp",
+      "prs/667/local/build-records/before/src/structure/fieldsolvercmd.h",
+      "prs/667/local/build-records/before/unit_tests/spacecharge/testfft2d5algorithm.cpp",
+      "prs/667/local/build-records/before/unit_tests/spacecharge/testspacechargeconfig.cpp"
+    ],
+    "next_step": "None",
+    "keep": [
+      "opalx-build-667-record",
+      "opalx-checkout-667-record"
+    ],
+    "removed_directories": [
+      "opalx-local-build-record",
+      "opalx-original-model-pr-record",
+      "opalx-658-build-record",
+      "opalx-original-model-switch-record"
+    ],
+    "verification": [
+      "Seven snapshots byte-identical to originals",
+      "All other meaningful files in deleted directories have byte-identical document archive copies",
+      "Repository validation passed before deletion",
+      "Both retained directories still exist"
+    ],
+    "discarded_metadata": [
+      "Finder .DS_Store",
+      "Historical original-status-before.bin Git-status listing"
+    ]
+  }
 }

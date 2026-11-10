@@ -1,0 +1,153 @@
+//
+// Class FieldSolverCmd
+//   The class for the OPAL FIELDSOLVER command.
+//   Stores parsed mesh, boundary, and algorithm attributes. SpaceCharge owns
+//   their conversion and solver compatibility validation.
+//
+// Copyright (c) 200x - 2022, Paul Scherrer Institut, Villigen PSI, Switzerland
+//
+// All rights reserved
+//
+// This file is part of OPAL.
+//
+// OPAL is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// You should have received a copy of the GNU General Public License
+// along with OPAL. If not, see <https://www.gnu.org/licenses/>.
+//
+#ifndef OPAL_FieldSolver_HH
+#define OPAL_FieldSolver_HH
+
+#include <string>
+#include "AbstractObjects/Definition.h"
+#include "Algorithms/PartData.h"
+#include "Attributes/Attributes.h"
+#include "PartBunch/BCHandler.hpp"
+#include "Structure/BinningCmd.h"
+
+#include "Ippl.h"
+
+enum class FieldSolverCmdType : short { NONE = -1, FFT = 0, OPEN = 1, CG = 2, P3M = 3, FFT2D5 = 4 };
+
+// The attributes of class FieldSolverCmd.
+namespace FIELDSOLVER {
+    enum {
+        TYPE,                   // The field solver name
+        BINS,                   // Name of BINNING definition or NONE
+        NX,                     // mesh size in x
+        NY,                     // mesh size in y
+        NZ,                     // mesh size in z
+        PARFFTX,                // parallelized grid in x
+        PARFFTY,                // parallelized grid in y
+        PARFFTZ,                // parallelized grid in z
+        BCFFTX,                 // Poisson-domain boundary in x
+        BCFFTY,                 // Poisson-domain boundary in y
+        BCFFTZ,                 // Poisson-domain boundary in z
+        GREENSF,                // Green function for OPEN; P3M selects its kernel internally
+        P3MRCUT,                // P3M particle-particle cutoff radius [m]
+        P3MRCUTCELLS,           // P3M cutoff in units of the largest mesh spacing
+        BBOXINCR,               // how much the boundingbox is increased
+        PIPEMODE,               // Longitudinal geometry/profile model [FFT2D5 only]
+        BEAMR,                  // Beam radius in metres [FFT2D5 only]
+        PIPERADIUS,             // Physical circular-pipe radius in metres [FFT2D5 only]
+        CLOSEDRING,             // TRUE if the ring is closed [FFT2D5 only]
+        PIPESIZEX,              // Full horizontal numerical width in metres [FFT2D5 only]
+        PIPESIZEY,              // Full vertical numerical width in metres [FFT2D5 only]
+        REFPATHFNAME,           // Reference path file name [FFT2D5 only]
+        SCATTERLONGITUDINALLY,  // Scatter charge between longitudinal slices [FFT2D5 only]
+        SIZE
+    };
+}
+
+/** @brief Parsed FIELDSOLVER attributes; solver compatibility is validated in SpaceCharge. */
+class FieldSolverCmd : public Definition {
+public:
+    /// Exemplar constructor.
+    FieldSolverCmd();
+
+    virtual ~FieldSolverCmd();
+
+    /// Make clone.
+    virtual FieldSolverCmd* clone(const std::string& name);
+
+    /// Find named FieldSolverCmd.
+    static FieldSolverCmd* find(const std::string& name);
+
+    std::string getType() const;
+    std::string getBinsName() const;
+    BinningCmd* getBinningCmd() const;
+    std::string getGreensFunction() const;
+    double getP3MCutoff() const;
+    /// P3M cutoff in units of the largest mesh spacing (default 2 when RCUT is not given).
+    double getP3MCutoffCells() const;
+    /// Whether RCUT or RCUT_CELLS was set in the input, rather than left at its default.
+    bool hasP3MCutoff() const;
+    bool hasP3MCutoffCells() const;
+
+    /// Returns solver boundary conditions handler object.
+    BCHandler<3> constructBCHandler() const;
+
+    /// Return meshsize
+    double getNX() const;
+
+    /// Return meshsize
+    double getNY() const;
+
+    /// Return meshsize
+    double getNZ() const;
+
+    void setNX(double);
+
+    void setNY(double);
+
+    void setNZ(double);
+
+    double getBoxIncr() const;
+
+    /// Update the field solver data.
+    virtual void update();
+
+    /// Execute (init) the field solver data.
+    virtual void execute();
+
+    bool hasBinningCmd() const { return getBinningCmd() != nullptr; }
+
+    FieldSolverCmdType getFieldSolverCmdType() const;
+
+    ippl::Vector<bool, 3> getDomainDecomposition() const;
+
+    Inform& printInfo(Inform& os) const;
+
+    std::string getPipeMode() const;
+    double getBeamRadius() const;
+    double getPipeRadius() const;
+    bool hasPipeRadius() const;
+    bool getClosedRing() const;
+    bool getScatterLongitudinally() const;
+    double getPipeSizeX() const;
+    double getPipeSizeY() const;
+    std::string getRefPathFileName() const;
+    void setPipeMode(const std::string& pipeMode);
+    void setBeamRadius(double beamRadius);
+    void setPipeRadius(double pipeRadius);
+    void setClosedRing(bool closedRing);
+    void setScatterLongitudinally(bool val);
+    void setPipeSizeX(double pipeSizeX);
+    void setPipeSizeY(double pipeSizeY);
+    void setRefPathFileName(const std::string& refPathFileName);
+
+private:
+    // Not implemented.
+    FieldSolverCmd(const FieldSolverCmd&);
+    void operator=(const FieldSolverCmd&);
+
+    // Clone constructor.
+    FieldSolverCmd(const std::string& name, FieldSolverCmd* parent);
+};
+
+inline Inform& operator<<(Inform& os, const FieldSolverCmd& fs) { return fs.printInfo(os); }
+
+#endif  // OPAL_FieldSolverCmd_HH

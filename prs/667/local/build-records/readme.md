@@ -16,3 +16,10 @@ Paths and filenames here are lowercase; the inventory retains original names.
 The larger `~/git/opalx-checkout-667-record/untracked-work.tar.gz` also holds
 unrelated conversion-tool work and remains in place. Repository assets are
 cataloged individually in `manifest.yml` with SHA-256 digests.
+
+## Before-switch snapshots
+
+`before/` preserves seven original source/test snapshots from
+`~/git/opalx-original-model-switch-record/before/`. Original paths, modification
+dates and SHA-256 digests are recorded in `inventory.json`. These snapshots
+are historical context and are not instructions to overwrite current sources.
