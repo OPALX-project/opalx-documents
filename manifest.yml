@@ -5,9 +5,9 @@ assets:
     category: tutorials/ffa
     source: FFA25-school OPALX course sources; Docker-default notebook and standalone-bundle helper checks, packaged on 2026-11-17
     destination: tutorials/2026/ffa/2026-11-17-ffa26-melbourne.zip
-    description: Eleven source files with the opalx/ layout, including four Python helpers, the School notebook, five native inputs and the probe particle distribution; excludes generated results and build products.
+    description: "Eight source files with the opalx/ layout: the School notebook, four Python helpers and three core native ring inputs; excludes optional probe and space-charge inputs, generated results and build products."
     status: current
-    sha256: a27e22437e966f27a2ae149ff0ae2bca57ea57b8b45bc4aa9f95cec62f6ace17
+    sha256: b3ad7d711e2a45897ae11c72418e1ab75806a9e389b67f7f0fc143ff8ef91b5a
 
   - title: MuE4 analytical trails — featured movie
     date: "2026-10-30"
