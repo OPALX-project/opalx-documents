@@ -14,3 +14,7 @@
 *.opal filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 *.mov filter=lfs diff=lfs merge=lfs -text
+
+# Preserve byte-exact PR693 input snapshots and the user's original TeX backup.
+prs/693/data/production-f8ac63538915/*.in whitespace=-blank-at-eof
+prs/693/drafts/before-production-f8ac63538915/*.tex whitespace=-blank-at-eol

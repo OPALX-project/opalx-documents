@@ -1,0 +1,17 @@
+{
+  "source_head": "f8ac635389152f906f0df022978e6a834e671ba0",
+  "production_jobs": [
+    24039424,
+    24039425,
+    24039426
+  ],
+  "analysis_job": 24039716,
+  "lattice_sha256": "af0edd9b76e407a4db9a896fe85602e0661193b76c89dd3781d3e954d1440b6e",
+  "MAXYPOWER": 5,
+  "magnet_references": 80,
+  "comment_is_stale": true,
+  "note": "Header comment says MAX_Y_POWER=2, but REAL MAXYPOWER=5 is used by all80magnets; checksum af0edd... matches production preflight manifest.",
+  "old_presentation_preserved": "drafts/before-production-f8ac63538915",
+  "footprints": "Copied without modification from completed LUMI analysis production-f8ac63538915/emittance-XX/paper-comparison.pdf",
+  "comparison": "Minimum accepted central-cohort tune minus native bare, not median; vertical PIC value not available numerically in paper text"
+}

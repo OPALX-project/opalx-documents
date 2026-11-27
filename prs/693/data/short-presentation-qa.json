@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "date": "2026-11-26",
+  "pages": 6,
+  "source_head": "f8ac635389152f906f0df022978e6a834e671ba0",
+  "production_jobs": [
+    24039424,
+    24039425,
+    24039426
+  ],
+  "analysis_job": 24039716,
+  "pdf_sha256": "ffeb75793b42ac67fb5f96bb2298845b34b2fba91aa846bb3cb32da268ccefb2",
+  "checks": [
+    "All six rendered slides inspected; same16:9Beamer theme",
+    "Final slides2/3 inspected at1200px after final content change",
+    "No overflow/missing-character warnings",
+    "Table values checked against validated JSON and extracted PDF text",
+    "Only OPALX and paper comparison; no old-build/median/turn-window table",
+    "Three new footprint PDF assets copied verbatim from LUMI",
+    "Blue bare-tune circle; no zero-current vertical line or right-panel reference lines",
+    "Shared lattice scalar MAXYPOWER5 verified for80references; stalecomment2notused",
+    "Previous user annotations/source/PDF backed up",
+    "Published PDF rerendered: all six pages inspected; clean-checkout LaTeX build passed; repository manifest validation passed"
+  ],
+  "rendered_images": "/Users/adelmann/git/opalx/output/prab-production-20261126/deck-build/final-{1..6}.png",
+  "previous_pdf_sha256": "10afbb3b689e7e07d63b401d61e1cda0ce5c8a63dc1f7b517ef209773141e5dd",
+  "publication_review_date": "2026-11-27"
+}

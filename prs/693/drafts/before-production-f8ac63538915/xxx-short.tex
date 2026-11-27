@@ -1,0 +1,100 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,tabularx,array}
+\definecolor{navy}{HTML}{16324F}
+\definecolor{muted}{HTML}{536272}
+\setbeamercolor{structure}{fg=navy}
+\setbeamercolor{frametitle}{fg=navy}
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=7mm,text margin right=7mm}
+\setbeamertemplate{footline}{\leavevmode\hbox{\begin{beamercolorbox}[wd=.85\paperwidth,ht=2.6ex,dp=1.1ex,leftskip=5mm]{author in head/foot}\color{muted}\scriptsize OPALX \enspace|\enspace KV tune-shift benchmark\end{beamercolorbox}\begin{beamercolorbox}[wd=.15\paperwidth,ht=2.6ex,dp=1.1ex,rightskip=5mm]{date in head/foot}\hfill\color{muted}\scriptsize\insertframenumber/\inserttotalframenumber\end{beamercolorbox}}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\src}[1]{\par\vfill{\color{muted}\scriptsize #1\par}}
+\newcommand{\epsunit}{\ensuremath{\pi\,\mathrm{mm\,mrad}}}
+\renewcommand{\arraystretch}{1.15}
+\title{OPALX KV tune-shift benchmark}
+\author{OPALX}
+\date{25 November 2026}
+\begin{document}
+\begin{frame}{OPALX: benchmark parameters}
+\small
+\begin{tabularx}{\linewidth}{lY}
+\toprule Parameter & Value used \\
+\midrule
+Lattice and reference radius & 16 FD cells; $R_0=12.0$ m \\
+Field index and spiral angle & $k=7.630003$; $49.973388^\circ$ \\
+Nominal F / D fields & $+1.650$ T / $-0.7673721$ T \\
+F / D widths; F--D gap & $5.9083^\circ$ / $2.95415^\circ$; $2.38755^\circ$ \\
+Fringe & Product of sigmoids; $W_0=1.17W$, steepness $16/W_0$ \\
+Beam and population & Protons, $300$ MeV; $2.08\times10^{13}$ protons/bunch \\
+Transverse beam & KV; equal-plane emittance cases $50,70,90$ \epsunit \\
+Timestep & $0.02$ ns \\
+Mesh & $128\times128$ transverse; 763 full-ring longitudinal cells \\
+Longitudinal resolution & $127.9945$ cells across the initial 12 m bunch \\
+\bottomrule
+\end{tabularx}\par
+\vspace{3mm}
+\footnotesize Table I supplies the machine values, timestep and target mesh counts. Exact lattice and fringe values come from the public PyFFA configuration.
+\src{Zhou et al., Phys. Rev. Accel. Beams \textbf{29}, 113301 (2026), Table I and Fig. 6; \href{https://doi.org/10.1103/q1xb-z29j}{doi:10.1103/q1xb-z29j}. PyFFA revision \texttt{2cca56b5}.}
+\end{frame}
+
+\begin{frame}{Input that we needed to infer}
+\small
+\begin{tabularx}{\linewidth}{lY}
+\toprule Quantity & OPALX choice \\
+\midrule
+Bunch length and cut & Gaussian $\sigma_s=1.5$ m; truncate at $\pm4\sigma_s$ \\
+Sampling & $131\,072$ macroparticles \\
+Initial energy spread & Zero \\
+Transverse mesh extent & ($0.4\times0.4$ m$^2$)  {\color{red} follow beam}\\
+Magnetic expansion & (2) {\color{red} 5} order \\
+Turns for tune calculation & (10)  {\color{red} 200}  \\ 
+Emittance convention & Numeric rms $\epsilon=(50,70,90)\times10^{-6}$ m rad; no extra $\pi$ \\
+\bottomrule
+\end{tabularx}\par
+\vspace{3mm}
+\footnotesize These are guessed settings, {\color{red} red} now resolved. 
+\end{frame}
+
+%\begin{frame}{OPALX tunes and tune shifts over fit windows}
+%The following tables report central-bunch medians. A median is not the maximum-depression endpoint used to describe the theoretical core.
+%\small
+%\begin{center}\setlength{\tabcolsep}{7pt}\renewcommand{\arraystretch}{1.08}\input{generated/short-windows.tex}\end{center}
+%\vspace{2mm}
+%\footnotesize $\Delta Q_i=Q_i-Q_{i0}$, with $(Q_{x0},Q_{y0})=(3.2331550664,2.8132163500)$. Vertical $y$ corresponds to the paper's $z$.
+%\src{Medians from eight probe samples per particle revolution. Fit windows start two revolutions after the first crossing and retain the fixed per-axis core cohort. All windows reuse the same tracking histories.}
+%\end{frame}
+
+\begin{frame}{Comparison with the paper}
+\small
+\begin{center}\setlength{\tabcolsep}{5pt}\input{generated/short-paper.tex}\end{center}
+
+
+\begin{itemize}
+\item OPALX uses eight-turn medians of accepted central-bunch tunes ($|s_{\rm initial}|<0.15$ m).
+\item This is our analysis choice: medians reduce sensitivity to extreme fitted tunes.
+\item the paper uses the rounded bare horizontal tune $3.233$.
+\item its numerical vertical tune values are not specified in the paper.
+\item The paper does not specify how its PIC core tunes were extracted. We cannot establish that it used medians or the same statistic.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{OPALX KV footprint: $50$ \epsunit}
+\centering
+\includegraphics[width=\linewidth,height=.79\textheight,keepaspectratio]{figures/opalx-50-footprint-hull.pdf}
+\src{Left: lowest accepted tune in each 0.25 m initial slice (maximum depression); sensitive to extreme fitted tunes. Dashed curve: paper's theoretical peak scaled by the adopted Gaussian profile, not digitized paper data. Right: OPALX density with approximate visible-color convex hull from Zhou et al., Fig. 6 (CC BY 4.0); magenta dashed, no fitting or rescaling. Blue circle: bare tune.}
+\end{frame}
+
+\begin{frame}{OPALX KV footprint: $70$ \epsunit}
+\centering
+\includegraphics[width=\linewidth,height=.79\textheight,keepaspectratio]{figures/opalx-70-footprint-hull.pdf}
+\src{Left: lowest accepted tune in each 0.25 m initial slice (maximum depression); sensitive to extreme fitted tunes. Dashed curve: paper's theoretical peak scaled by the adopted Gaussian profile, not digitized paper data. Right: OPALX density with approximate visible-color convex hull from Zhou et al., Fig. 6 (CC BY 4.0); magenta dashed, no fitting or rescaling. Blue circle: bare tune.}
+\end{frame}
+
+\begin{frame}{OPALX KV footprint: $90$ \epsunit}
+\centering
+\includegraphics[width=\linewidth,height=.79\textheight,keepaspectratio]{figures/opalx-90-footprint-hull.pdf}
+\src{Left: lowest accepted tune in each 0.25 m initial slice (maximum depression); sensitive to extreme fitted tunes. Dashed curve: paper's theoretical peak scaled by the adopted Gaussian profile, not digitized paper data. Right: OPALX density with approximate visible-color convex hull from Zhou et al., Fig. 6 (CC BY 4.0); magenta dashed, no fitting or rescaling. Blue circle: bare tune.}
+\end{frame}
+\end{document}

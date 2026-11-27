@@ -1,0 +1,145 @@
+{
+  "source_url": "https://journals.aps.org/prab/pdf/10.1103/q1xb-z29j",
+  "citation": "Kai Zhou et al., Space charge modeling method in2.5D for scaling fixed-field alternating-gradient accelerators, Phys.Rev.Accel.Beams29,113301(2026), Fig6, DOI10.1103/q1xb-z29j",
+  "license": "CC BY4.0",
+  "source_pdf_sha256": "7a720c11c27c262580f8d12be3c42582e22c64b2e1900ce78cbd366e34116791",
+  "method": "600dpi Poppler rendering; frame/tick affine calibration; select saturated pixels within RGB Euclidean distance8 of256-sample viridis palette with white alpha blending, alpha0.04..1; saturation channel range>=12; convex hull of selected pixel centers. Excludes grayscale resonance lines/text and red theoretical line/stars by color. Explicit masks exclude the printed upper-left legend rectangle and the blue bare-tune circle and the upper-right resonance-label region; the underlying occluded data cannot be recovered. No density cut or endpoint anchoring.",
+  "limitations": "Rasterized published image, not raw numerical particles or a probability contour. Rendered pixel-scale ~0.001 tune, but original embedded2092x560 JPEG implies source pixels ~0.0026 tune per panel. Compression, overlapping annotations and threshold add uncertainty; sparse faint points can be lost. This is an approximate visible-color hull, not an exact particle hull. Convex hull fills concavities and is sensitive to visible outliers; no rescaling or fitting to OPALX data.",
+  "panels": [
+    {
+      "emittance": 50,
+      "frame_pixels_600dpi": [
+        636.5,
+        1565.0,
+        391.0,
+        1355.0
+      ],
+      "data_limits": [
+        2.3,
+        3.3,
+        1.9,
+        2.9
+      ],
+      "selected_color_pixels": 21162,
+      "hull_vertices": 19,
+      "nominal_pixel_scale_Qx": 0.0010770059235325794,
+      "nominal_pixel_scale_Qy": 0.001037344398340249,
+      "threshold_sensitivity": [
+        {
+          "rgb_distance_tolerance": 6,
+          "pixels": 15936,
+          "Qx_min": 2.7539579967689822,
+          "Qx_max": 3.2526117393645664,
+          "Qy_min": 2.279668049792531,
+          "Qy_max": 2.841908713692946
+        },
+        {
+          "rgb_distance_tolerance": 8,
+          "pixels": 21162,
+          "Qx_min": 2.7539579967689822,
+          "Qx_max": 3.2526117393645664,
+          "Qy_min": 2.279668049792531,
+          "Qy_max": 2.841908713692946
+        },
+        {
+          "rgb_distance_tolerance": 10,
+          "pixels": 26007,
+          "Qx_min": 2.7485729671513193,
+          "Qx_max": 3.2526117393645664,
+          "Qy_min": 2.279668049792531,
+          "Qy_max": 2.841908713692946
+        }
+      ]
+    },
+    {
+      "emittance": 70,
+      "frame_pixels_600dpi": [
+        2058.5,
+        2987.5,
+        391.0,
+        1355.0
+      ],
+      "data_limits": [
+        2.3,
+        3.3,
+        1.9,
+        2.9
+      ],
+      "selected_color_pixels": 14562,
+      "hull_vertices": 21,
+      "nominal_pixel_scale_Qx": 0.001076426264800861,
+      "nominal_pixel_scale_Qy": 0.001037344398340249,
+      "threshold_sensitivity": [
+        {
+          "rgb_distance_tolerance": 6,
+          "pixels": 10978,
+          "Qx_min": 2.8861141011840687,
+          "Qx_max": 3.2520990312163613,
+          "Qy_min": 2.429045643153527,
+          "Qy_max": 2.8564315352697096
+        },
+        {
+          "rgb_distance_tolerance": 8,
+          "pixels": 14562,
+          "Qx_min": 2.8861141011840687,
+          "Qx_max": 3.2520990312163613,
+          "Qy_min": 2.429045643153527,
+          "Qy_max": 2.8564315352697096
+        },
+        {
+          "rgb_distance_tolerance": 10,
+          "pixels": 17780,
+          "Qx_min": 2.8861141011840687,
+          "Qx_max": 3.2520990312163613,
+          "Qy_min": 2.4186721991701243,
+          "Qy_max": 2.8564315352697096
+        }
+      ]
+    },
+    {
+      "emittance": 90,
+      "frame_pixels_600dpi": [
+        3489.0,
+        4417.5,
+        390.0,
+        1354.0
+      ],
+      "data_limits": [
+        2.3,
+        3.3,
+        1.9,
+        2.9
+      ],
+      "selected_color_pixels": 11774,
+      "hull_vertices": 14,
+      "nominal_pixel_scale_Qx": 0.0010770059235325794,
+      "nominal_pixel_scale_Qy": 0.001037344398340249,
+      "threshold_sensitivity": [
+        {
+          "rgb_distance_tolerance": 6,
+          "pixels": 9062,
+          "Qx_min": 2.9408185245018847,
+          "Qx_max": 3.2693053311793214,
+          "Qy_min": 2.512033195020747,
+          "Qy_max": 2.875103734439834
+        },
+        {
+          "rgb_distance_tolerance": 8,
+          "pixels": 11774,
+          "Qx_min": 2.9408185245018847,
+          "Qx_max": 3.2693053311793214,
+          "Qy_min": 2.512033195020747,
+          "Qy_max": 2.875103734439834
+        },
+        {
+          "rgb_distance_tolerance": 10,
+          "pixels": 14118,
+          "Qx_min": 2.9408185245018847,
+          "Qx_max": 3.2693053311793214,
+          "Qy_min": 2.512033195020747,
+          "Qy_max": 2.875103734439834
+        }
+      ]
+    }
+  ]
+}
